@@ -13,15 +13,15 @@ helpviewer_keywords:
 - viewing statistics properties
 - statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ab4cc68a4fbc9e737498d68433de2effd9fe805
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: ea35cef5c24a73ca8f0e08b055429097bf7d5179
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457183"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506516"
 ---
 # <a name="view-statistics-properties"></a>Visualizzare le proprietà delle statistiche
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "86457183"
   
 #### <a name="to-view-statistics-properties"></a>Per visualizzare le proprietà delle statistiche  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il database in cui si desidera creare una nuova statistica.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il database in cui si desidera creare una nuova statistica.  
   
 2.  Fare clic sul segno più per espandere la cartella **Tabelle** .  
   
@@ -97,7 +97,7 @@ ms.locfileid: "86457183"
      Numero medio di byte per valore per tutte le colonne chiave nell'oggetto statistiche.  
   
      **String Index**  
-     Il valore Yes indica che l'oggetto statistiche contiene statistiche di riepilogo delle stringhe per migliorare le stime relative alla cardinalità per i predicati della query che utilizzano l'operatore LIKE, ad esempio `WHERE ProductName LIKE '%Bike'`. Le statistiche di riepilogo delle stringhe vengono archiviate separatamente rispetto all'istogramma e vengono create nella prima colonna chiave dell'oggetto statistiche quando tale colonna è di tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**o **ntext**.  
+     Il valore Yes indica che l'oggetto statistiche contiene statistiche di riepilogo delle stringhe per migliorare le stime relative alla cardinalità per i predicati della query che utilizzano l'operatore LIKE, ad esempio `WHERE ProductName LIKE '%Bike'`. Le statistiche di riepilogo delle stringhe vengono archiviate separatamente rispetto all'istogramma e vengono create nella prima colonna chiave dell'oggetto statistiche quando tale colonna è di tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text** o **ntext**.  
   
      **Espressione filtro**  
      Predicato per il subset di righe della tabella incluso nell'oggetto statistiche. NULL = statistiche non filtrate.  
@@ -139,7 +139,7 @@ ms.locfileid: "86457183"
   
 #### <a name="to-view-statistics-properties"></a>Per visualizzare le proprietà delle statistiche  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "86457183"
   
 #### <a name="to-find-all-of-the-statistics-on-a-table-or-view"></a>Per trovare tutte le statistiche su una tabella o una vista  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

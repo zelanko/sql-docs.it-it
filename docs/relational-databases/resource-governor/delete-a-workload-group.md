@@ -11,14 +11,14 @@ helpviewer_keywords:
 - workload groups [SQL Server], delete
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 160f7f998aa42ed86a9f46d9fab70e38ac1b2d02
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 27708e9a4b5a6d0a2863595e7ee25dccf77e5d2f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457901"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506601"
 ---
 # <a name="delete-a-workload-group"></a>Eliminare un gruppo di carico di lavoro
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "86457901"
 ##  <a name="delete-a-workload-group-using-object-explorer"></a><a name="DelWGObjEx"></a> Eliminare un gruppo di carico di lavoro utilizzando Esplora oggetti  
  **Per eliminare un gruppo di carico di lavoro utilizzando Esplora oggetti**  
   
-1.  In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire Esplora oggetti ed espandere in modo ricorsivo il nodo **Gestione** fino a **Pool di risorse**incluso.  
+1.  In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire Esplora oggetti ed espandere in modo ricorsivo il nodo **Gestione** fino a **Pool di risorse** incluso.  
   
 2.  Espandere in modo ricorsivo **Pool di risorse** fino al nodo **Gruppi del carico di lavoro** incluso nel pool di risorse in cui è contenuto il gruppo di carico di lavoro da eliminare.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "86457901"
 ##  <a name="delete-a-workload-group-using-resource-governor-properties"></a><a name="DelWGRGProp"></a> Eliminare un gruppo di carico di lavoro utilizzando Proprietà di Resource Governor  
  **Per eliminare un gruppo di carico di lavoro utilizzando la pagina Proprietà di Resource Governor**  
   
-1.  In Esplora oggetti espandere in modo ricorsivo il nodo **Gestione** fino a **Pool di risorse**compreso.  
+1.  In Esplora oggetti espandere in modo ricorsivo il nodo **Gestione** fino a **Pool di risorse** compreso.  
   
 2.  Fare clic con il pulsante destro del mouse sul pool di risorse in cui è contenuto il gruppo di carico di lavoro da eliminare, quindi fare clic su **Proprietà**. Viene aperta la pagina **Proprietà di Resource Governor** .  
   

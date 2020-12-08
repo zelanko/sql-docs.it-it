@@ -11,16 +11,16 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 342af018f28b52909adf59f830737036637ab589
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 775e979eb8141f025cb787ac79d409b211945cbe
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499296"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595119"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importare documenti JSON in SQL Server
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
 Questo articolo descrive come importare file JSON in SQL Server. Attualmente esistono moltissimi documenti JSON archiviati in file. Le applicazioni registrano informazioni in file JSON, i sensori generano informazioni archiviate in file JSON e così via. È importante essere in grado di leggere i dati JSON archiviati in file, caricare i dati in SQL Server e quindi analizzarli.
 

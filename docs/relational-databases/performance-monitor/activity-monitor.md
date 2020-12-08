@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server]
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: d634a2e790edb01747014e930e677e18a1f8b0a3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 747cad801170aa9ef2e4907e96dde1b20ddc268e
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243812"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506048"
 ---
 # <a name="activity-monitor"></a>Monitoraggio attività
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

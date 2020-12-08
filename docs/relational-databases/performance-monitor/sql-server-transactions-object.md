@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 0a7d51ee275f234de0be33a5bfa618684ee2e07e
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2f86c13a6f4cc6672b457653f6d923b63245fbc7
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458766"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505546"
 ---
 # <a name="sql-server-transactions-object"></a>Oggetto Transactions di SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "86458766"
   
 |Contatori dell'oggetto Transactions di SQL Server|Descrizione|  
 |--------------------------------------|-----------------|  
-|**Spazio disponibile in tempdb (KB)**|Spazio disponibile in **tempdb**espresso in KB. Lo spazio disponibile deve essere sufficiente per contenere sia l'archivio delle versioni del livello di isolamento dello snapshot che tutti i nuovi oggetti temporanei creati in questa istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
+|**Spazio disponibile in tempdb (KB)**|Spazio disponibile in **tempdb** espresso in KB. Lo spazio disponibile deve essere sufficiente per contenere sia l'archivio delle versioni del livello di isolamento dello snapshot che tutti i nuovi oggetti temporanei creati in questa istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Tempo massimo esecuzione transazione**|Durata in secondi dall'inizio della transazione che è stata attiva più a lungo di tutte le altre transazioni correnti. Questo contatore mostra attività solo quando il database è nel livello di isolamento dello snapshot Read committed. Non registra attività se il database si trova in un altro livello di isolamento.|  
 |**Transazioni di versione non snapshot**|Numero di transazioni attualmente attive che non usano il livello di isolamento dello snapshot e hanno apportato modifiche ai dati che hanno generato versioni di riga nell'archivio delle versioni di riga di **tempdb** .|  
 |**Transazioni snapshot**|Numero delle transazioni attualmente attive che utilizzano il livello di isolamento dello snapshot.<br /><br /> Nota: il contatore dell'oggetto **Transazioni snapshot** risponde al primo accesso ai dati, non quando viene eseguita l'istruzione `BEGIN TRANSACTION`.|  

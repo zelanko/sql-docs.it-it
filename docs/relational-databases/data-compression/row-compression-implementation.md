@@ -12,15 +12,15 @@ helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbe2358e2be461666378cc18c5a735a71574f17a
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 829229371dfecd55a56fdbb9a6530635a6170904
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456243"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506355"
 ---
 # <a name="row-compression-implementation"></a>Implementazione della compressione di riga
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "86456243"
   
 -   Riduzione dell'overhead di metadati associati al record. Tali metadati rappresentano informazioni su colonne e sui relativi offset e lunghezze. In alcuni casi, l'overhead di metadati potrebbe essere maggiore del formato di archiviazione obsoleto.  
   
--   Uso del formato di archiviazione a lunghezza variabile per i tipi numerici (come **integer**, **decimal**e **float**) e i tipi basati su quello numerico (come **datetime** e **money**).  
+-   Uso del formato di archiviazione a lunghezza variabile per i tipi numerici (come **integer**, **decimal** e **float**) e i tipi basati su quello numerico (come **datetime** e **money**).  
   
 -   Archiviazione di stringhe di caratteri a lunghezza fissa utilizzando un formato a lunghezza variabile senza archiviare i caratteri vuoti.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "86456243"
 |**bit**|Sì|L'overhead di metadati aumenta questo valore a 4 bit.|  
 |**smallmoney**|Sì|Rappresenta i dati Integer utilizzando un numero intero di 4 byte. Il valore della valuta viene moltiplicato per 10.000 e il valore intero risultante viene archiviato rimuovendo tutte le cifre dopo il separatore decimale. e un'ottimizzazione dell'archiviazione analoga a quella associata ai tipi Integer.|  
 |**money**|Sì|Rappresenta i dati Integer utilizzando un Integer a 8 byte. Il valore della valuta viene moltiplicato per 10.000 e il valore intero risultante viene archiviato rimuovendo tutte le cifre dopo il separatore decimale. A questo tipo sono associati un intervallo maggiore rispetto a **smallmoney**. e un'ottimizzazione dell'archiviazione analoga a quella associata ai tipi Integer.|  
-|**float**|Sì|Il byte meno significativi con zeri non sono archiviati. La compressione**float** si applica soprattutto per valori non frazionari in mantissa.|  
-|**real**|Sì|Il byte meno significativi con zeri non sono archiviati. La compressione**real** si applica soprattutto per valori non frazionari in mantissa.|  
+|**float**|Sì|Il byte meno significativi con zeri non sono archiviati. La compressione **float** si applica soprattutto per valori non frazionari in mantissa.|  
+|**real**|Sì|Il byte meno significativi con zeri non sono archiviati. La compressione **real** si applica soprattutto per valori non frazionari in mantissa.|  
 |**smalldatetime**|No|Rappresenta i dati Integer usando due numeri interi a 2 byte. Per una data, sono necessari due 2 byte. La data rappresenta il numero di giorni dall'1/1/1901. Poiché a partire dal 1902 è necessario utilizzare 2 byte, dopo tale data non viene ottenuto alcun risparmio in termini di spazio.<br /><br /> L'ora rappresenta il numero di minuti a partire dalla mezzanotte. Per i valori di ora appena successivi alle 04.00, viene utilizzato il secondo byte.<br /><br /> Se un tipo di dati **smalldatetime** viene usato solo per rappresentare una data (caso comune), l'ora è 0.0. La compressione consente di risparmiare 2 byte archiviando l'ora nel formato con byte più significativo per la compressione di riga.|  
 |**datetime**|Sì|Rappresenta i dati Integer utilizzando due numeri interi di 4 byte. Il numero intero rappresenta il numero di giorni con data di base 1/1/1900. I primi 2 byte possono rappresentare gli anni fino al 2079. In questo caso la compressione consente di risparmiare sempre 2 byte fino a quella data. Ogni valore intero rappresenta 3,33 millisecondi. Poiché la compressione esaurisce i primi 2 byte nei i primi cinque minuti e deve utilizzare il quarto byte dopo le 16.00, a partire da tale ora è possibile risparmiare solo 1 byte in termini di spazio. Quando **datetime** viene compresso come qualsiasi altro numero intero, la compressione consente di risparmiare 2 byte nell'archiviazione della data.|  
 |**date**|No|Rappresenta i dati Integer usando 3 byte. In questo modo è possibile rappresentare la data a partire dall'1/1/0001. Poiché per le date contemporanee la compressione di riga utilizza tutti i 3 byte, non viene ottenuto alcun risparmio in termini di spazio.|  

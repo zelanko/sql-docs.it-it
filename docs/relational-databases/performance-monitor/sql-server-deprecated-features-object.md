@@ -14,14 +14,14 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a833e7029697693a6620ce5196a10b6ef95acc8f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4e6e6ae53bfc9cf3c6c702e9caf8a1a9bdaf29a1
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890921"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505722"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Oggetto SQL Server:Deprecated Features
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
 |CREATE TRIGGER WITH APPEND|È stata rilevata un'istruzione CREATE TRIGGER con la clausola WITH APPEND. Ricreare l'intero trigger. Si verifica una volta per ogni utilizzo in un'istruzione DDL.|  
 |CREATE_DROP_DEFAULT|È stata rilevata la sintassi CREATE DEFAULT o DROP DEFAULT. Riscrivere il comando usando l'opzione DEFAULT di CREATE TABLE o ALTER TABLE. Si verifica una volta per ogni compilazione.|  
 |CREATE_DROP_RULE|È stata rilevata la sintassi CREATE RULE. Riscrivere il comando usando vincoli. Si verifica una volta per ogni compilazione.|  
-|Tipi di dati: text, ntext o image|Sono stati rilevati i tipi di dati **text**, **ntext**o **image** . Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext**e **image** . Si verifica una volta per ogni query.|  
+|Tipi di dati: text, ntext o image|Sono stati rilevati i tipi di dati **text**, **ntext** o **image** . Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext** e **image** . Si verifica una volta per ogni query.|  
 ||Numero totale di volte in cui il livello di compatibilità di un database è stato modificato in 80. Pianificare l'aggiornamento del database e dell'applicazione prima della versione successiva. Si verifica anche quando viene avviato un database con livello di compatibilità 80.|  
 |Livello di compatibilità 100, 110 del database. 120|Numero totale di volte in cui il livello di compatibilità di un database è stato modificato. Pianificare l'aggiornamento del database e dell'applicazione per una versione successiva. Si verifica anche quando viene avviato un database con livello di compatibilità deprecato.|  
 |DATABASE_MIRRORING|Rilevamento di riferimenti alla funzionalità di mirroring del database. Pianificare l'aggiornamento dei gruppi di disponibilità AlwaysOn oppure, se si esegue un'edizione di SQL Server che non supporta questi gruppi, pianificare la migrazione al log shipping.|  
@@ -266,10 +266,10 @@ La tabella seguente descrive l'oggetto prestazione **Deprecated Features** di SQ
 |sysusers|Sono stati rilevati riferimenti a sysusers. Utilizzare sys.database_principals. Si verifica una volta per ogni compilazione.|  
 |Hint di tabella senza WITH|È stata rilevata un'istruzione che usano hint di tabella ma non la parola chiave WITH. Modificare le istruzioni in modo che includano la parola WITH. Si verifica una volta per ogni compilazione.|  
 |Opzione di tabella text in row|Sono stati rilevati riferimenti all'opzione di tabella 'text in row'. Utilizzare sp_tableoption 'large value types out of row'. Si verifica una volta per ogni query.|  
-|TEXTPTR|Sono stati rilevati riferimenti alla funzione TEXTPTR. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext**e **image** . Si verifica una volta per ogni query.|  
-|TEXTVALID|Sono stati rilevati riferimenti alla funzione TEXTVALID. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext**e **image** . Si verifica una volta per ogni query.|  
+|TEXTPTR|Sono stati rilevati riferimenti alla funzione TEXTPTR. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext** e **image** . Si verifica una volta per ogni query.|  
+|TEXTVALID|Sono stati rilevati riferimenti alla funzione TEXTVALID. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext** e **image** . Si verifica una volta per ogni query.|  
 |timestamp|Numero totale di volte in cui è stato rilevato il tipo di dati deprecato **timestamp** in un'istruzione DDL. In alternativa, usare il tipo di dati **rowversion** .|  
-|UPDATETEXT o WRITETEXT|È stata rilevata l'istruzione UPDATETEXT o WRITETEXT. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext**e **image** . Si verifica una volta per ogni query.|  
+|UPDATETEXT o WRITETEXT|È stata rilevata l'istruzione UPDATETEXT o WRITETEXT. Riscrivere le applicazioni in modo che utilizzino il tipo di dati **varchar(max)** e rimuovere la sintassi dei tipi di dati **text**, **ntext** e **image** . Si verifica una volta per ogni query.|  
 |USER_ID|Sono stati rilevati riferimenti alla funzione USER_ID. Usare la funzione DATABASE_PRINCIPAL_ID. Si verifica una volta per ogni compilazione.|  
 |Utilizzo di OLEDB per server collegati||  
 |Formato di archiviazione vardecimal|È stato rilevato l'utilizzo del formato di archiviazione **vardecimal** . Usare la compressione dei dati.|  

@@ -3,18 +3,18 @@ title: 'White paper: Diagnosticare e risolvere una contesa di latch'
 description: Questo articolo offre un'analisi dettagliata della diagnosi e della risoluzione della contesa di latch in SQL Server. Questo articolo è stato pubblicato originariamente dal team SQLCAT di Microsoft.
 ms.date: 09/30/2020
 ms.prod: sql
-ms.reviewer: jroth
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b438bd466023844f7396a5ef71e9c8e0f916005
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: 3a1ce0e4a54810730935b4a93aef72edfa404d88
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384310"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506452"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>Diagnosticare e risolvere una contesa di latch in SQL Server
 
@@ -87,13 +87,13 @@ Usare l'oggetto **SQL Server:Latches** e i contatori associati in Monitor presta
 
 ## <a name="latch-wait-types"></a>Tipi di attesa latch
 
-SQL Server tiene traccia delle informazioni cumulative sull'attesa, a cui è possibile accedere usando la vista DMW *sys.dm_os_wait_stats*. SQL Server usa tre tipi di attesa latch definiti dal corrispondente "wait_type" nella vista DMV *sys.dm_os_wait_stats* :
+SQL Server tiene traccia delle informazioni cumulative sull'attesa, a cui è possibile accedere usando la vista DMW *sys.dm_os_wait_stats*. SQL Server usa tre tipi di attesa latch definiti dal corrispondente "wait_type" nella vista DMV *sys.dm_os_wait_stats*:
 
-* **Latch di buffer (BUF):** usato per garantire la coerenza delle pagine di indice e di dati per gli oggetti utente. Vengono usati anche per proteggere l'accesso alle pagine di dati usate da SQL Server per gli oggetti di sistema. Ad esempio, le pagine che gestiscono le allocazioni sono protette da latch di buffer, incluse le pagine PFS (Page Free Space), GAM (Global Allocation Map), SGAM (Shared Global Allocation Map) e IAM (Index Allocation Map). I latch di buffer sono indicati in *sys.dm_os_wait_stats* con *wait_type* * *PAGELATCH\_\** _.
+* **Latch di buffer (BUF):** usato per garantire la coerenza delle pagine di indice e di dati per gli oggetti utente. Vengono usati anche per proteggere l'accesso alle pagine di dati usate da SQL Server per gli oggetti di sistema. Ad esempio, le pagine che gestiscono le allocazioni sono protette da latch di buffer, incluse le pagine PFS (Page Free Space), GAM (Global Allocation Map), SGAM (Shared Global Allocation Map) e IAM (Index Allocation Map). I latch di buffer sono indicati in *sys.dm_os_wait_stats* con *wait_type* **PAGELATCH\_\** _.
 
-_ **Latch non di buffer (non-BUF):** usato per garantire la coerenza di qualsiasi struttura in memoria diversa dalle pagine del pool di buffer. Le attese di latch non di buffer saranno indicate come *wait_type* * *LATCH\_\** _.
+_ **Latch non di buffer (non-BUF):** usato per garantire la coerenza di qualsiasi struttura in memoria diversa dalle pagine del pool di buffer. Le attese di latch non di buffer saranno indicate come *wait_type* **LATCH\_\** _.
 
-_ **Latch di I/O:** un subset di latch di buffer che garantisce la coerenza delle stesse strutture protette dai latch di buffer quando queste strutture richiedono il caricamento nel pool di buffer con un'operazione di I/O. I latch di I/O impediscono a un altro thread di caricare la stessa pagina nel pool di buffer con un latch non compatibile. È associato a un *wait_type* * *PAGEIOLATCH\_\** _.
+_ **Latch di I/O:** un subset di latch di buffer che garantisce la coerenza delle stesse strutture protette dai latch di buffer quando queste strutture richiedono il caricamento nel pool di buffer con un'operazione di I/O. I latch di I/O impediscono a un altro thread di caricare la stessa pagina nel pool di buffer con un latch non compatibile. È associato a un *wait_type* **PAGEIOLATCH\_\** _.
 
    > [!NOTE]
    > Se si osserva un numero elevato di attese PAGEIOLATCH, significa che SQL Server è in attesa del sottosistema di I/O. Anche se una certa quantità di attese PAGEIOLATCH è un comportamento normale e previsto, se il tempo medio delle attese PAGEIOLATCH è costantemente superiore a 10 millisecondi (ms), è consigliabile determinare per quale motivo il sottosistema di I/O è sotto pressione.
@@ -163,35 +163,35 @@ Come indicato in precedenza, la contesa di latch costituisce un problema solo qu
 
 3. Determinare la proporzione di quelli correlati ai latch.
 
-Le informazioni cumulative sull'attesa sono disponibili nella vista DMV *sys.dm_os_wait_stats*. Il tipo più comune di contesa di latch è la contesa di latch di buffer, riconoscibile dall'aumento dei tempi di attesa dei latch con *wait_type* * *PAGELATCH\_\** _. I latch non di buffer sono raggruppati nel tipo di attesa _*LATCH\**_. Come illustra il diagramma seguente, è consigliabile innanzitutto esaminare le attese del sistema usando le viste a gestione dinamica _sys.dm_os_wait_stats* per determinare la percentuale del tempo di attesa complessivo causato dai latch di buffer o non di buffer. Se si notano latch non di buffer, è necessario esaminare anche la vista DMV *sys.dm_os_latch_stats*.
+Le informazioni cumulative sull'attesa sono disponibili nella vista DMV *sys.dm_os_wait_stats*. Il tipo più comune di contesa di latch è la contesa di latch di buffer, riconoscibile dall'aumento dei tempi di attesa dei latch con *wait_type* **PAGELATCH\_\** _. I latch non di buffer sono raggruppati nel tipo di attesa _*LATCH\**_. Come illustra il diagramma seguente, è consigliabile innanzitutto esaminare le attese del sistema usando le viste a gestione dinamica _sys.dm_os_wait_stats* per determinare la percentuale del tempo di attesa complessivo causato dai latch di buffer o non di buffer. Se si notano latch non di buffer, è necessario esaminare anche la vista DMV *sys.dm_os_latch_stats*.
 
 Il diagramma seguente descrive la relazione tra le informazioni restituite dalle viste DMV *sys.dm_os_wait_stats* e *sys.dm_os_latch_stats*.
 
 ![Attese latch](./media/diagnose-resolve-latch-contention/image7.png)
 
-Per altre informazioni sulla vista DMV *sys.dm_os_wait_stats* , vedere [sys.dm_os_wait_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) nella guida di SQL Server.
+Per altre informazioni sulla vista DMV *sys.dm_os_wait_stats*, vedere [sys.dm_os_wait_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) nella guida di SQL Server.
 
-Per altre informazioni sulla vista DMV *sys.dm_os_latch_stats* , vedere [sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md) nella guida di SQL Server.
+Per altre informazioni sulla vista DMV *sys.dm_os_latch_stats*, vedere [sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md) nella guida di SQL Server.
 
 Le misure seguenti del tempo di attesa latch indicano che l'eccessiva contesa di latch sta compromettendo le prestazioni dell'applicazione:
 
-* **Il tempo medio di attesa latch di pagina aumenta costantemente con la velocità effettiva** : se i tempi medi di attesa latch di pagina aumentano costantemente con la velocità effettiva e se i tempi medi di attesa latch di buffer superano i tempi di risposta del disco previsti, è consigliabile esaminare le attività in attesa correnti usando la vista DMV *sys.dm_os_waiting_tasks*. Le medie possono essere fuorvianti se analizzate separatamente, quindi è importante esaminare il sistema in tempo reale quando possibile, per comprendere le caratteristiche del carico di lavoro. In particolare, controllare se sono presenti lunghe attese per richieste PAGELATCH_EX e/o PAGELATCH_SH in qualsiasi pagina. Seguire questa procedura per diagnosticare l'aumento dei tempi medi di attesa latch di pagina con la velocità effettiva:
+* **Il tempo medio di attesa latch di pagina aumenta costantemente con la velocità effettiva**: se i tempi medi di attesa latch di pagina aumentano costantemente con la velocità effettiva e se i tempi medi di attesa latch di buffer superano i tempi di risposta del disco previsti, è consigliabile esaminare le attività in attesa correnti usando la vista DMV *sys.dm_os_waiting_tasks*. Le medie possono essere fuorvianti se analizzate separatamente, quindi è importante esaminare il sistema in tempo reale quando possibile, per comprendere le caratteristiche del carico di lavoro. In particolare, controllare se sono presenti lunghe attese per richieste PAGELATCH_EX e/o PAGELATCH_SH in qualsiasi pagina. Seguire questa procedura per diagnosticare l'aumento dei tempi medi di attesa latch di pagina con la velocità effettiva:
 
    * Usare gli script di esempio di [Eseguire una query di sys.dm_os_waiting_tasks con i risultati ordinati per ID sessione](#waiting-tasks-script1) o di [Calcolare le attese in un periodo di tempo](#calculate-waits-over-a-time-period) per esaminare le attività in attesa correnti e misurare il tempo medio di attesa latch. 
    * Usare lo script di esempio di [Eseguire una query dei descrittori di buffer per determinare quali oggetti causano la contesa di latch](#query-buffer-descriptors) per determinare l'indice e la tabella sottostante in cui si verifica la contesa. 
    * Misurare il tempo medio di attesa latch di pagina con il contatore di Monitor prestazioni **MSSQL%NomeIstanza%\\Statistiche relative all'attesa\\Attese latch pagina\\Tempo di attesa medio** oppure eseguendo la vista DMV *sys.dm_os_wait_stats*.
 
    > [!NOTE]
-   > Per calcolare il tempo di attesa medio per un particolare tempo di attesa (restituito da *sys.dm_os_wait_stats* come *wt_:type* ), dividere il tempo di attesa totale (restituito come *wait_time_ms* ) per il numero di attività in attesa (restituito come *waiting_tasks_count* ).
+   > Per calcolare il tempo di attesa medio per un particolare tempo di attesa (restituito da *sys.dm_os_wait_stats* come *wt_:type*), dividere il tempo di attesa totale (restituito come *wait_time_ms*) per il numero di attività in attesa (restituito come *waiting_tasks_count*).
 
-* **Percentuale del tempo di attesa totale impiegato per i tipi di attesa latch durante il picco di carico** : se il tempo medio di attesa latch come percentuale del tempo di attesa complessivo aumenta in linea con il carico dell'applicazione, la contesa di latch potrebbe compromettere le prestazioni e deve essere analizzata.
+* **Percentuale del tempo di attesa totale impiegato per i tipi di attesa latch durante il picco di carico**: se il tempo medio di attesa latch come percentuale del tempo di attesa complessivo aumenta in linea con il carico dell'applicazione, la contesa di latch potrebbe compromettere le prestazioni e deve essere analizzata.
 
    Misurare le attese latch di pagina e le attese latch non di pagina con i contatori delle prestazioni di [Oggetto Statistiche attesa di SQL Server](./performance-monitor/sql-server-wait-statistics-object.md), quindi confrontare i valori di questi contatori delle prestazioni con quelli dei contatori delle prestazioni associati a CPU, I/O, memoria e velocità effettiva della rete. Transazioni/sec e richieste batch/sec, ad esempio, sono due misure valide di utilizzo delle risorse.
 
    > [!NOTE]
    > Il tempo di attesa relativo per ogni tipo di attesa non è incluso nella vista DMV *sys.dm_os_wait_stats* perché questa DMW misura i tempi di attesa dall'ultimo avvio dell'istanza di SQL Server o dall'ultima reimpostazione delle statistiche di attesa cumulative tramite DBCC SQLPERF. Per calcolare il tempo di attesa relativo per ogni tipo di attesa, creare uno snapshot di *sys.dm_os_wait_stats* prima del picco di carico e dopo il picco di carico e quindi calcolare la differenza. A questo scopo, può essere usato lo script di esempio di [Calcolare le attese in un periodo di tempo](#calculate-waits-over-a-time-period).
 
-   Solo per un **ambiente non di produzione** , pulire la vista DMV *sys.dm_os_wait_stats* con il comando seguente:
+   Solo per un **ambiente non di produzione**, pulire la vista DMV *sys.dm_os_wait_stats* con il comando seguente:
    
    ```sql
    dbcc SQLPERF ('sys.dm_os_wait_stats', 'CLEAR')
@@ -202,15 +202,15 @@ Le misure seguenti del tempo di attesa latch indicano che l'eccessiva contesa di
    dbcc SQLPERF ('sys.dm_os_latch_stats', 'CLEAR')
    ```
 
-* **La velocità effettiva non aumenta e, in alcuni casi, diminuisce, man mano che aumentano il carico dell'applicazione e il numero di CPU disponibili per SQL Server** : questa situazione è stata illustrata in [Esempio di contesa di latch](#example-of-latch-contention).
+* **La velocità effettiva non aumenta e, in alcuni casi, diminuisce, man mano che aumentano il carico dell'applicazione e il numero di CPU disponibili per SQL Server**: questa situazione è stata illustrata in [Esempio di contesa di latch](#example-of-latch-contention).
 
-* **L'utilizzo della CPU non aumenta man mano che aumenta il carico di lavoro dell'applicazione** : se l'utilizzo della CPU nel sistema non aumenta man mano che aumenta la concorrenza causata dalla velocità effettiva dell'applicazione, significa che SQL Server è in attesa di un evento e deve essere considerato un sintomo della contesa di latch.
+* **L'utilizzo della CPU non aumenta man mano che aumenta il carico di lavoro dell'applicazione**: se l'utilizzo della CPU nel sistema non aumenta man mano che aumenta la concorrenza causata dalla velocità effettiva dell'applicazione, significa che SQL Server è in attesa di un evento e deve essere considerato un sintomo della contesa di latch.
 
 Analizzare la causa radice. Anche se ognuna delle condizioni precedenti è vera, è tuttavia possibile che la causa radice dei problemi di prestazioni sia un'altra. In realtà, nella maggior parte dei casi, l'utilizzo non ottimale della CPU è causato da altri tipi di attese, ad esempio il blocco sui blocchi, le attese correlate all'I/O o i problemi della rete. Come regola generale, è sempre preferibile risolvere l'attesa della risorsa che rappresenta la percentuale maggiore del tempo di attesa complessivo prima di procedere a un'analisi più approfondita.
 
 ## <a name="analyzing-current-wait-buffer-latches"></a>Analisi dei latch di buffer di attesa correnti
 
-La contesa di latch di buffer si manifesta come aumento dei tempi di attesa dei latch con *wait_type* * *PAGELATCH\_\** _ o _*PAGEIOLATCH\_\**_ come visualizzato nelle viste a gestione dinamica _sys.dm_os_wait_stats*. Per esaminare il sistema in tempo reale, eseguire la query seguente su un sistema per aggiungere le viste DMV *sys.dm_os_wait_stats* , *sys.dm_exec_sessions* e *sys.dm_exec_requests*. I risultati possono essere usati per determinare il tipo di attesa corrente per le sessioni in esecuzione nel server.
+La contesa di latch di buffer si manifesta come aumento dei tempi di attesa dei latch con *wait_type* **PAGELATCH\_\** _ o _*PAGEIOLATCH\_\**_ come visualizzato nelle viste a gestione dinamica _sys.dm_os_wait_stats*. Per esaminare il sistema in tempo reale, eseguire la query seguente su un sistema per aggiungere le viste DMV *sys.dm_os_wait_stats*, *sys.dm_exec_sessions* e *sys.dm_exec_requests*. I risultati possono essere usati per determinare il tipo di attesa corrente per le sessioni in esecuzione nel server.
 
 ```sql
 SELECT wt.session_id, wt.wait_type
@@ -257,7 +257,7 @@ Le statistiche esposte da questa query sono descritte di seguito:
 | **Max_wait_time_ms** | Tempo massimo, espresso in millisecondi, trascorso da una richiesta nell'attesa di questo tipo di latch. |
 
 > [!NOTE]
-> I valori restituiti da questa DMV sono cumulativi a partire dall'ultimo riavvio del server o dall'ultima reimpostazione della vista DMV, quindi in un sistema in esecuzione da molto tempo alcune statistiche, ad esempio *Max_wait_time_ms* , raramente saranno utili. Il comando seguente può essere usato per reimpostare le statistiche relative all'attesa per questa DMV:
+> I valori restituiti da questa DMV sono cumulativi a partire dall'ultimo riavvio del server o dall'ultima reimpostazione della vista DMV, quindi in un sistema in esecuzione da molto tempo alcune statistiche, ad esempio *Max_wait_time_ms*, raramente saranno utili. Il comando seguente può essere usato per reimpostare le statistiche relative all'attesa per questa DMV:
 >
 > ```sql
 > DBCC SQLPERF ('sys.dm_os_latch_stats', CLEAR)
@@ -482,7 +482,7 @@ Il partizionamento delle tabelle in SQL Server può essere usato per attenuare u
    > [!NOTE]
    > Non è sempre necessario un allineamento 1:1 tra il numero di partizioni e il numero di core CPU. In molti casi può trattarsi di un valore inferiore al numero di core CPU. Avere più partizioni può comportare un sovraccarico maggiore per le query che devono eseguire la ricerca in tutte le partizioni e in questi casi sarà preferibile un minor numero di partizioni. Nel test di SQLCAT sui sistemi con 64 e 128 CPU logiche con carichi di lavoro dei clienti reali, sono state sufficienti 32 partizioni per risolvere una contesa di latch eccessiva e raggiungere gli obiettivi di scalabilità. In ultima analisi, il numero ideale di partizioni deve essere determinato tramite test. 
 
-4. Usare il comando **CREATE_PARTITION_SCHEME** :
+4. Usare il comando **CREATE_PARTITION_SCHEME**:
 
    * Associare la funzione di partizione ai filegroup. 
    * Aggiungere alla tabella una colonna hash di tipo tinyint o smallint. 

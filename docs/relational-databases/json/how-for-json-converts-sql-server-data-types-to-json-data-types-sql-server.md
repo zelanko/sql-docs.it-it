@@ -13,27 +13,27 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d010978b7c660b43a5fe6487ac57e0d6143b282
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7a9b6cb32af496b70a48ef4d32f3692b7b863b28
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499298"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595116"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>Modalità di conversione di FOR JSON dei tipi di dati SQL Server in tipi di dati JSON (SQL Server)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sqlserver2016-asdb.md)]
 
   La clausola **FOR JSON** usa le regole seguenti per convertire i tipi di dati SQL Server in tipi JSON nell'output JSON.  
   
 |Category|Tipo di dati di SQL Server|Tipo di dati JSON|  
 |--------------|--------------|---------------|  
-|Tipi stringa e carattere|char, nchar, varchar, nvarchar|string|  
-|Tipi numerici|int, bigint, float, decimal, numeric|d'acquisto|  
+|Tipi stringa e carattere|char, nchar, varchar, nvarchar|stringa|  
+|Tipi numerici|int, bigint, float, decimal, numeric|Numero|  
 |Tipo bit|bit|Booleano (true o false)|  
-|Tipi data e ora|date, datetime, datetime2, time, datetimeoffset|string|  
+|Tipi data e ora|date, datetime, datetime2, time, datetimeoffset|stringa|  
 |Tipi binari|varbinary, binary, image, timestamp, rowversion|Stringa con codifica BASE64|  
-|Tipi CLR|geometry, geography, altri tipi CLR|Non supportato. Questi tipi restituiscono un errore.<br /><br /> Nell'istruzione SELECT usare CAST o CONVERT, oppure una proprietà o un metodo CLR, per convertire i dati di origine in un tipo di dati SQL Server convertibile correttamente in un tipo JSON. Usare ad esempio **STAsText()** per il tipo geometry o **ToString()** per qualsiasi tipo CLR. Il tipo del valore di output JSON è quindi derivato dal tipo restituito della conversione che si usa nell'istruzione SELECT.|  
-|Altri tipi|uniqueidentifier, money|string|  
+|Tipi CLR|geometry, geography, altri tipi CLR|Non supportata. Questi tipi restituiscono un errore.<br /><br /> Nell'istruzione SELECT usare CAST o CONVERT, oppure una proprietà o un metodo CLR, per convertire i dati di origine in un tipo di dati SQL Server convertibile correttamente in un tipo JSON. Usare ad esempio **STAsText()** per il tipo geometry o **ToString()** per qualsiasi tipo CLR. Il tipo del valore di output JSON è quindi derivato dal tipo restituito della conversione che si usa nell'istruzione SELECT.|  
+|Altri tipi|uniqueidentifier, money|stringa|  
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Altre informazioni su JSON in SQL Server e nel database SQL di Azure  
   

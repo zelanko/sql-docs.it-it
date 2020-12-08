@@ -13,14 +13,14 @@ helpviewer_keywords:
 - workload groups [SQL Server], move
 - Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a3ff2eff8f72499506aa129b064690693f1b14ff
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 03ad7743638779aa1afc05359be45da377f997b7
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456704"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506577"
 ---
 # <a name="move-a-workload-group"></a>Spostare un gruppo di carico di lavoro
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "86456704"
   
 5.  I pool di risorse disponibili sono visualizzati nella finestra. Fare clic sul nome del pool di risorse in cui si desidera spostare il gruppo di carico di lavoro, quindi fare clic su **OK** per eseguire l'operazione.  
   
-6.  Questa operazione non viene completata fino a quando non si fa clic su **OK**. Quando si fa clic su **OK**viene eseguita l'istruzione ALTER RESOURCE GOVERNOR RECONFIGURE.  
+6.  Questa operazione non viene completata fino a quando non si fa clic su **OK**. Quando si fa clic su **OK** viene eseguita l'istruzione ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
 7.  Se l'operazione di creazione o riconfigurazione del pool di risorse o gruppo di carico di lavoro non viene completata, viene visualizzato un messaggio di riepilogo degli errori sotto il titolo della pagina delle proprietà. Per visualizzare un messaggio di errore dettagliato, fare clic sulla freccia GIÙ sul messaggio di errore.  
   

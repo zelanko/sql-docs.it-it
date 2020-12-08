@@ -11,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data compression [SQL Server], disabling
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0fd426cecf7fa74e3f45ee13e9d508c6f36a4bb7
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c2b557b1fe9c73c9672eb2a02afc2fb27c5ae0ea
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86459043"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506365"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Disabilitare la compressione in una tabella o un indice
 
@@ -72,14 +72,14 @@ ms.locfileid: "86459043"
   
      Le opzioni seguenti sono disponibili nella pagina **Seleziona tipo di compressione** :  
   
-     Casella di controllo**Usa lo stesso tipo di compressione per tutte le partizioni**  
-     Selezionare questa opzione per configurare la stessa impostazione di compressione per tutte le partizioni. La casella di selezione viene abilitata e la colonna **Tipo di compressione** nella griglia viene disabilitata. Se viene selezionata, le opzioni nell'elenco adiacente sono **Nessuno**, **Riga**e **Pagina**.  
+     Casella di controllo **Usa lo stesso tipo di compressione per tutte le partizioni**  
+     Selezionare questa opzione per configurare la stessa impostazione di compressione per tutte le partizioni. La casella di selezione viene abilitata e la colonna **Tipo di compressione** nella griglia viene disabilitata. Se viene selezionata, le opzioni nell'elenco adiacente sono **Nessuno**, **Riga** e **Pagina**.  
   
      **Numero partizioni**  
      Elenca tutte le partizioni nella tabella o nell'indice. Questa colonna è di sola lettura.  
   
      **Tipo di compressione**  
-     Selezionare l'opzione di compressione per ciascuna partizione. Questa opzione non è disponibile se **Usa lo stesso tipo di compressione per tutte le partizioni** è selezionata. Le opzioni nell'elenco sono **Nessuno**, **Riga**e **Pagina**.  
+     Selezionare l'opzione di compressione per ciascuna partizione. Questa opzione non è disponibile se **Usa lo stesso tipo di compressione per tutte le partizioni** è selezionata. Le opzioni nell'elenco sono **Nessuno**, **Riga** e **Pagina**.  
   
      **Limite**  
      Visualizza il limite della partizione. Questa colonna è di sola lettura.  
@@ -98,10 +98,10 @@ ms.locfileid: "86459043"
   
 6.  Nella pagina **Seleziona un'opzione di output** specificare il modo in cui si desidera completare l'attività. Selezionare **Crea script** per creare uno script SQL in base alle pagine precedenti della procedura guidata. Selezionare **Esegui immediatamente** per creare la nuova tabella partizionata dopo aver completato tutte le pagine rimanenti della procedura guidata. Selezionare **Pianifica** per creare la nuova tabella partizionata in un momento predeterminato nel futuro.  
   
-     Se si seleziona **Crea script**, in **Opzioni di scripting**sono disponibili le opzioni seguenti:  
+     Se si seleziona **Crea script**, in **Opzioni di scripting** sono disponibili le opzioni seguenti:  
   
      **Genera script nel file**  
-     Genera lo script come file con estensione sql. Immettere un nome di file e il percorso nella casella **Nome file** o fare clic su **Sfoglia** per aprire la finestra di dialogo **Percorso file script** . In **Salva con nome**selezionare **Testo Unicode** o **Testo ANSI**.  
+     Genera lo script come file con estensione sql. Immettere un nome di file e il percorso nella casella **Nome file** o fare clic su **Sfoglia** per aprire la finestra di dialogo **Percorso file script** . In **Salva con nome** selezionare **Testo Unicode** o **Testo ANSI**.  
   
      **Genera script negli Appunti**  
      Salva lo script negli Appunti.  
@@ -127,7 +127,7 @@ ms.locfileid: "86459043"
   
     4.  Se si seleziona **Periodica**:  
   
-        1.  In **Frequenza**nell'elenco **Ricorrenza** specificare la frequenza di occorrenza:  
+        1.  In **Frequenza** nell'elenco **Ricorrenza** specificare la frequenza di occorrenza:  
   
             -   Se si seleziona **Giornaliera**, nella casella **Ogni** immettere la frequenza in base alla quale si ripete la pianificazione del processo nei giorni.  
   
@@ -139,25 +139,25 @@ ms.locfileid: "86459043"
   
                 -   Se si sceglie **Ogni**, selezionare il giorno specifico della settimana del mese in cui si desidera sia eseguita la pianificazione del processo e la frequenza in base alla quale si ripete questa pianificazione nei mesi. Ad esempio, se si vuole che la pianificazione del processo sia eseguita l'ultimo giorno feriale del mese a mesi alterni, selezionare **Giorno**, selezionare **ultimo** nel primo elenco e **giorno feriale** nel secondo elenco, quindi immettere "2" nell'ultima casella. Nei primi due elenchi è anche possibile selezionare **primo**, **secondo**, **terzo** o **quarto**, nonché i giorni della settimana specifici, ad esempio: domenica o mercoledì. Si noti che il numero più grande consentito nell'ultima casella è "99".  
   
-        2.  In **Frequenza giornaliera**specificare la frequenza in base alla quale si ripete la pianificazione del processo in quel determinato giorno:  
+        2.  In **Frequenza giornaliera** specificare la frequenza in base alla quale si ripete la pianificazione del processo in quel determinato giorno:  
   
             -   Se si seleziona **Una sola volta alle**, immettere l'ora specifica del giorno in cui deve essere eseguita la pianificazione del processo nella casella **Una sola volta alle** . Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
-            -   Se si seleziona **Ogni**specificare la frequenza in base alla quale la pianificazione del processo viene eseguita durante il giorno scelto in **Frequenza**. Ad esempio, se si vuole che la pianificazione del processo sia ripetuta ogni 2 ore durante il giorno scelto per questa pianificazione, selezionare **Ogni**, immettere "2" nella prima casella e quindi selezionare **ora/e** nell'elenco. In questo elenco è anche possibile selezionare **minuto/i** e **secondo/i**. Si noti che il numero più grande consentito nella prima casella è "100".  
+            -   Se si seleziona **Ogni** specificare la frequenza in base alla quale la pianificazione del processo viene eseguita durante il giorno scelto in **Frequenza**. Ad esempio, se si vuole che la pianificazione del processo sia ripetuta ogni 2 ore durante il giorno scelto per questa pianificazione, selezionare **Ogni**, immettere "2" nella prima casella e quindi selezionare **ora/e** nell'elenco. In questo elenco è anche possibile selezionare **minuto/i** e **secondo/i**. Si noti che il numero più grande consentito nella prima casella è "100".  
   
                  Nella casella **A partire dalle** immettere l'ora in cui dovrebbe iniziare l'esecuzione della pianificazione del processo. Nella casella **Fino alle** immettere l'ora in cui dovrebbe terminare la ripetizione della pianificazione del processo. Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
-        3.  In **Durata**di **Data inizio**immettere la data in cui si desidera sia avviata l'esecuzione della pianificazione del processo. Selezionare **Data fine** o **Nessuna data di fine** per indicare quando dovrebbe terminare l'esecuzione della pianificazione del processo. Se si seleziona **Data fine**immettere la data in cui si desidera venga terminata l'esecuzione della pianificazione del processo.  
+        3.  In **Durata** di **Data inizio** immettere la data in cui si desidera sia avviata l'esecuzione della pianificazione del processo. Selezionare **Data fine** o **Nessuna data di fine** per indicare quando dovrebbe terminare l'esecuzione della pianificazione del processo. Se si seleziona **Data fine** immettere la data in cui si desidera venga terminata l'esecuzione della pianificazione del processo.  
   
     5.  Se si seleziona **Singola occorrenza**, in **Singola occorrenza**, nella casella **Data** immettere la data in cui verrà eseguita la pianificazione del processo. Nella casella **Ora** immettere l'ora in cui verrà eseguita la pianificazione del processo. Immettere l'ora, il minuto e il secondo del giorno, nonché AM o PM.  
   
-    6.  In **Descrizione**in **Riepilogo**verificare che tutte le impostazioni della pianificazione del processo siano corrette.  
+    6.  In **Descrizione** in **Riepilogo** verificare che tutte le impostazioni della pianificazione del processo siano corrette.  
   
     7.  Fare clic su **OK**.  
   
      Dopo aver completato questa pagina, fare clic su **Avanti**.  
   
-7.  In **Verificare le selezioni** nella pagina **Controlla riepilogo**espandere tutte le opzioni disponibili per verificare che tutte le impostazioni siano corrette. Se tutte le impostazioni sono corrette, fare clic su **Fine**.  
+7.  In **Verificare le selezioni** nella pagina **Controlla riepilogo** espandere tutte le opzioni disponibili per verificare che tutte le impostazioni siano corrette. Se tutte le impostazioni sono corrette, fare clic su **Fine**.  
   
 8.  Nella pagina **Stato Compressione guidata** monitorare le informazioni sullo stato delle azioni della Creazione guidata partizione. A seconda delle opzioni selezionate nella procedura guidata, la pagina di stato può contenere una o più azioni. Nella casella superiore viene visualizzato lo stato complessivo della procedura guidata e viene indicato il numero di messaggi di stato, di errore e di avviso restituiti durante l'esecuzione della procedura guidata.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "86459043"
      Fornisce tutti i messaggi di errore o di avviso restituiti dal processo.  
   
      **Report**  
-     Crea un report contenente i risultati della Creazione guidata partizione. Le opzioni sono **Visualizza report**, **Salva report su file**, **Copia report negli Appunti**e **Invia report per posta elettronica**.  
+     Crea un report contenente i risultati della Creazione guidata partizione. Le opzioni sono **Visualizza report**, **Salva report su file**, **Copia report negli Appunti** e **Invia report per posta elettronica**.  
   
      **Visualizza report**  
      Apre la finestra di dialogo **Visualizza report** in cui è contenuto un report di testo dello stato della Creazione guidata partizione.  
@@ -196,7 +196,7 @@ ms.locfileid: "86459043"
   
 #### <a name="to-disable-compression-on-a-table"></a>Per disabilitare la compressione in una tabella  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "86459043"
   
 #### <a name="to-disable-compression-on-an-index"></a>Per disabilitare la compressione in un indice  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
