@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c452310bbc2813cb3d11ced51f680c7a1f66e5e0
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: af8f519e7fec6a440fcdce44ccebbcfab2f0e0a9
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235388"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443199"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -148,7 +148,7 @@ ALTER DATABASE { database_name | CURRENT }
 > Questa opzione non è disponibile in un database indipendente.
 
 CURRENT   
-**Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
 
 Specifica che il database corrente in uso deve essere modificato.
 
@@ -166,7 +166,7 @@ Quando si creano database con regole di confronto diverse da quelle predefinite,
 Per altre informazioni sui nomi di regole di confronto Windows e SQL, vedere [COLLATE](~/t-sql/statements/collations.md).
 
 **\<delayed_durability_option> ::=**    
-**Si applica a** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.
+**Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.
 
 Per altre informazioni, vedere [Opzioni di ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) e [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).
 
@@ -263,7 +263,7 @@ GO
 
 Nell'esempio seguente viene creato un database denominato `testdb` con le regole di confronto `SQL_Latin1_General_CP1_CI_A`S, quindi vengono modificate le regole di confronto del database `testdb` in `COLLATE French_CI_AI`.
 
-**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 USE master;
@@ -950,7 +950,7 @@ Fornisce la sintassi e le informazioni correlate per la modifica degli attributi
 
 ## <a name="syntax"></a>Sintassi
 
-### <a name="sql-pool"></a>[Pool SQL](#tab/sqlpool)
+### <a name="dedicated-sql-pool"></a>[Pool SQL dedicato](#tab/sqlpool)
 ```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -974,7 +974,7 @@ ALTER DATABASE { database_name | CURRENT }
           | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
-### <a name="sql-on-demand-preview"></a>[SQL su richiesta (anteprima)](#tab/sqlod)
+### <a name="serverless-sql-pool"></a>[Pool SQL serverless](#tab/sqlod)
 ```syntaxsql
 ALTER DATABASE { database_name | Current } 
 { 

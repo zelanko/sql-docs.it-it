@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69379b9af3dc126713cb2bbd3172003692a7d4de
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 52f465b4cfdcb2ff771a71c1ef956af78b522358
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042214"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442880"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Uso della copia bulk con il driver JDBC
 
@@ -364,9 +364,9 @@ La versione del driver v8.4.1 aggiunge la nuova proprietà di connessione `sendT
 
 Quando questa proprietà di connessione è impostata su `false` i tipi di dati **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME** e **TIME** vengono inviati come i rispettivi tipi anziché come valori stringa.
 
-L'invio dei tipi di dati temporali come i rispettivi tipi consente all'utente di inviare dati in tali colonne per Azure Synapse Analytics (SQL DW), operazione che prima non era possibile perché il driver convertiva i dati in valori stringa. L'invio di dati stringa in colonne temporali funziona per SQL Server perché SQL Server esegue la conversione implicita, ma lo stesso non vale con Azure Synapse Analytics (SQL DW).
+L'invio dei tipi di dati temporali come i rispettivi tipi consente all'utente di inviare dati in tali colonne per Azure Synapse Analytics, operazione che prima non era possibile perché il driver convertiva i dati in valori stringa. L'invio di dati stringa in colonne temporali funziona per SQL Server perché SQL Server esegue automaticamente la conversione implicita, ma lo stesso non vale con Azure Synapse Analytics.
 
-Anche senza impostare questa stringa di connessione su 'false', a partire da **v8.4.1** e versioni successive, i tipi di dati **MONEY** e **SMALLMONEY** verranno inviati come tipi di dati **MONEY** / **SMALLMONEY** anziché come **DECIMAL**, e ciò consente anche la copia bulk di questi tipi di dati in Azure Synapse Analytics (SQL DW).
+Anche senza impostare questa stringa di connessione su "false", a partire da **v8.4.1** e versioni successive, i tipi di dati **MONEY** e **SMALLMONEY** verranno inviati come tipi di dati **MONEY** / **SMALLMONEY** anziché come **DECIMAL**, e ciò consente anche la copia bulk di questi tipi di dati in Azure Synapse Analytics.
 
 ### <a name="extended-bulk-copy-for-azure-data-warehouse-limitations"></a>Limitazioni della copia bulk estesa per Azure Data Warehouse
 

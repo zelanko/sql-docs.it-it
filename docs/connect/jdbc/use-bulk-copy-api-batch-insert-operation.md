@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 14074b0136baf800b038e4b113325e81d65dc3e7
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943030"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442597"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Uso dell'API di copia bulk per un'operazione di inserimento batch
 
@@ -71,7 +71,7 @@ Se la query ha esito negativo a causa di errori non correlati a "SQL Server", il
 
 ## <a name="example"></a>Esempio
 
-Di seguito è riportato un esempio di codice che illustra il caso d'uso per un'operazione di inserimento batch in Azure Synapse Analytics (SQL DW) di un migliaio di righe, per entrambi gli scenari (normale e API di copia bulk).
+Di seguito è riportato un esempio di codice che illustra il caso d'uso per un'operazione di inserimento batch in Azure Synapse Analytics di un migliaio di righe, per entrambi gli scenari (API normale e API di copia bulk).
 
 ```java
     public static void main(String[] args) throws Exception

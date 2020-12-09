@@ -2,7 +2,7 @@
 title: Finestra di dialogo Accesso a SQL Server (OLE DB) | Microsoft Docs
 description: Quando si tenta di connettersi senza specificare informazioni sufficienti, OLE DB Driver per SQL Server visualizza la finestra di dialogo Accesso a SQL Server.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: 403c134c6e627ba1eb6c18cd2ba5341e54d65975
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 97b52f8c1e4560c5fe1654d8e81d2ac00cdb6257
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727255"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506385"
 ---
 # <a name="sql-server-login-dialog-box"></a>Finestra di dialogo di accesso a SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,10 +35,10 @@ Quando si tenta di connettersi senza specificare informazioni sufficienti, il dr
 |Opzione|Descrizione|
 |---   |---        |
 |Server|Nome di un'istanza di SQL Server in rete. Selezionare un nome di server o di istanza nell'elenco oppure digitarlo nella casella **Server**. Facoltativamente, è possibile creare un alias del server nel computer client tramite **Gestione configurazione SQL Server** e digitarlo nella casella **Server**. <br/><br/>È possibile immettere "(locale)" quando si usa lo stesso computer in cui è presente SQL Server. È quindi possibile connettersi a un'istanza locale di SQL Server anche in caso di esecuzione di una versione non in rete di SQL Server.<br/><br/>Per altre informazioni sui nomi dei server per i diversi tipi di rete, vedere [Installazione di SQL Server](../../../database-engine/install-windows/install-sql-server.md).|
-|Modalità di autenticazione|Dall'elenco a discesa è possibile selezionare le opzioni di autenticazione seguenti:<br/><ul><li>`Windows Authentication:` Autenticazione per SQL Server con le credenziali dell'account di Windows dell'utente attualmente connesso.</li><li>`SQL Server Authentication:` Autenticazione con ID di accesso e password.</li><li>`Active Directory - Integrated:` Autenticazione integrata con un'identità di Azure Active Directory. Questa modalità può essere usata anche per l'autenticazione di Windows per SQL Server.</li><li>`Active Directory - Password:` Autenticazione di ID utente e password con un'identità di Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` Autenticazione interattiva con un'identità di Azure Active Directory. Questa modalità supporta l'autenticazione a più fattori (MFA) di Azure.</li></ul>|
+|Modalità di autenticazione|Dall'elenco a discesa è possibile selezionare le opzioni di autenticazione seguenti:<br/><ul><li>`Windows Authentication:` Autenticazione per SQL Server con le credenziali dell'account di Windows dell'utente attualmente connesso.</li><li>`SQL Server Authentication:` Autenticazione con ID di accesso e password.</li><li>`Active Directory - Integrated:` Autenticazione integrata con un'identità di Azure Active Directory. Questa modalità può essere usata anche per l'autenticazione di Windows per SQL Server.</li><li>`Active Directory - Password:` Autenticazione di ID utente e password con un'identità di Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` Autenticazione interattiva con un'identità di Azure Active Directory. Questa modalità supporta l'autenticazione a più fattori (MFA) di Azure.</li><li>`Active Directory - Service Principal:` Autenticazione con entità servizio di Azure Active Directory. L'**ID utente** deve essere impostato sull'ID applicazione (client). La **password** deve essere impostata sul segreto client dell'applicazione.</li></ul>|
 |SPN server|Se si utilizza una connessione trusted, è possibile specificare un nome dell'entità servizio (SPN) per il server.|
-|ID accesso|Immettere l'ID di accesso da usare per la connessione. La casella di testo ID accesso è abilitata solo se `Authentication Mode` è impostata su `SQL Server Authentication`, `Active Directory - Password` o `Active Directory - Universal with MFA support`.|
-|Password|Specifica la password usata per la connessione. La casella di testo della password è abilitata solo se `Authentication Mode` è impostata su `SQL Server Authentication` o `Active Directory - Password`.|
+|ID accesso|Immettere l'ID di accesso da usare per la connessione. La casella di testo ID accesso è abilitata solo se `Authentication Mode` è impostata su `SQL Server Authentication`, `Active Directory - Password`, `Active Directory - Universal with MFA support` o `Active Directory - Service Principal`.|
+|Password|Specifica la password usata per la connessione. La casella di testo della password è abilitata solo se `Authentication Mode` è impostata su `SQL Server Authentication`, `Active Directory - Password` o `Active Directory - Service Principal`.|
 |Opzioni|Visualizza o nasconde il gruppo **Opzioni**. Il pulsante **Opzioni** è abilitato se per **Server** è specificato un valore.|
 |Comando Cambia password|Quando questa opzione è selezionata, abilita le caselle di testo **Nuova password** e **Conferma nuova password**.|
 |Nuova password|Consente di specificare la nuova password.|

@@ -1,19 +1,19 @@
 ---
 title: Note sulla versione per OLE DB Driver
 description: Questo articolo sulle note sulla versione descrive le modifiche in ogni versione di Microsoft OLE DB Driver per SQL Server.
-ms.date: 05/25/2020
+ms.date: 12/01/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 2e957fdb91720c46f5065f4b671c14b757a7cb0f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: e66856d7eac47bca5fe7093cbec02d9414c585ef
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726928"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523080"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Note sulla versione per il driver Microsoft OLE DB per SQL Server
 
@@ -27,6 +27,34 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## <a name="1850"></a>18.5.0
+![download](../../ssms/media/download-icon.png) [Scaricare il programma di installazione x64](https://go.microsoft.com/fwlink/?linkid=2135577)  
+![download](../../ssms/media/download-icon.png) [Scaricare il programma di installazione x86](https://go.microsoft.com/fwlink/?linkid=2135722)  
+
+Resa disponibile: 1 dicembre 2020
+
+Se è necessario scaricare il programma di installazione in una lingua diversa da quella rilevata, è possibile usare questi collegamenti diretti.  
+    Per il driver x64: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40a)  
+    Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x804) | [Cinese (tradizionale)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x40a)  
+
+### <a name="features-added"></a>Funzionalità aggiunte
+
+| Funzionalità aggiunta | Dettagli |
+| :------------ | :------ |
+| Supporto per [individuazione e classificazione dei dati SQL](../../relational-databases/security/sql-data-discovery-and-classification.md) | [Uso della classificazione dei dati](features/using-data-classification.md) |
+| Supporto per l'autenticazione con entità servizio di Azure Active Directory (`ActiveDirectoryServicePrincipal`) | [Uso di Azure Active Directory](features/using-azure-active-directory.md) |
+
+### <a name="bugs-fixed"></a>Bug risolti
+
+| Bug risolto | Dettagli |
+| :-------- | :------ |
+| Risoluzione di un problema con caratteri null incorporati. | Correzione di un bug per cui il driver restituisce una lunghezza non corretta delle stringhe con caratteri null incorporati. |
+| Correzione di una perdita di memoria nell'interfaccia [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md). | Correzione di una perdita di memoria nell'interfaccia [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) che interessa le operazioni di copia bulk del tipo di dati `sql_variant`. |
+| Correzione dei bug che causano la restituzione di valori non corretti per le proprietà `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD` e `SSPROP_MUTUALLYAUTHENTICATED`. | Le versioni precedenti del driver restituiscono valori troncati della proprietà `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD`. Inoltre, nel caso dell'autenticazione `ActiveDirectoryIntegrated` il valore restituito della proprietà `SSPROP_MUTUALLYAUTHENTICATED` è `VARIANT_FALSE` anche quando entrambi i lati vengono reciprocamente autenticati.|
+| Correzione di un bug di inserimento della tabella remota del server collegato. | Correzione di un bug che causa l'esito negativo dell'inserimento della tabella remota del server collegato se l'[opzione di configurazione del server NOCOUNT](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) è stata abilitata. |
+
+## <a name="previous-releases"></a>Versioni precedenti
 
 ## <a name="1840"></a>18.4.0
 ![download](../../ssms/media/download-icon.png) [Scaricare il programma di installazione x64](https://go.microsoft.com/fwlink/?linkid=2129954)  
@@ -52,12 +80,10 @@ Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?link
 | Correzione di diversi bug nell'interfaccia [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) | Alcuni bug che interessano le tabelle codici multibyte fanno sì che l'interfaccia indichi prematuramente la fine del flusso durante l'operazione di lettura.|
 | Correzione di una perdita di memoria nell'interfaccia [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) | Correzione di una perdita di memoria nell'interfaccia [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) quando è abilitata la proprietà `SSPROP_IRowsetFastLoad`. |
 | Correzione di un bug in scenari che includono un tipo di dati `sql_variant` e stringhe non ASCII. | L'esecuzione di determinati scenari che includono un tipo di dati `sql_variant` e stringhe non ASCII può causare il danneggiamento dei dati. Per informazioni dettagliate, vedere: [Problemi noti](ole-db-data-types/ssvariant-structure.md#known-issues). |
-| Correzione di problemi relativi al pulsante *Test connessione* nella [finestra di dialogo di configurazione di UDL](help-topics/data-link-pages.md) | Il pulsante *Test connessione* nella [finestra di dialogo di configurazione di UDL](help-topics/data-link-pages.md) applica ora le proprietà di inizializzazione impostate nella scheda *Tutte*. |
-| Correzione della gestione del valore predefinito della proprietà `SSPROP_INIT_PACKETSIZE` | Correzione di un errore imprevisto quando la proprietà `SSPROP_INIT_PACKETSIZE` è impostata sul valore predefinito `0`. Per informazioni su questa proprietà, vedere [Proprietà di inizializzazione e autorizzazione](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
-| Correzione dei problemi di overflow del buffer in [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) | Correzione dei problemi di overflow del buffer quando si usano file di dati in formato non valido. |
-| Correzione dei problemi di accessibilità | Correzione dei problemi di accessibilità nell'interfaccia utente del programma di installazione e nella [finestra di dialogo di accesso a SQL Server](help-topics/sql-server-login-dialog.md) (lettura di contenuto, tabulazioni). |
-
-## <a name="previous-releases"></a>Versioni precedenti
+| Correzione di problemi relativi al pulsante *Test connessione* nella [finestra di dialogo di configurazione di UDL](help-topics/data-link-pages.md). | Il pulsante *Test connessione* nella [finestra di dialogo di configurazione di UDL](help-topics/data-link-pages.md) applica ora le proprietà di inizializzazione impostate nella scheda *Tutte*. |
+| Correzione della gestione del valore predefinito della proprietà `SSPROP_INIT_PACKETSIZE`. | Correzione di un errore imprevisto quando la proprietà `SSPROP_INIT_PACKETSIZE` è impostata sul valore predefinito `0`. Per informazioni su questa proprietà, vedere [Proprietà di inizializzazione e autorizzazione](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
+| Correzione dei problemi di overflow del buffer in [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md). | Correzione dei problemi di overflow del buffer quando si usano file di dati in formato non valido. |
+| Correzione dei problemi di accessibilità. | Correzione dei problemi di accessibilità nell'interfaccia utente del programma di installazione e nella [finestra di dialogo di accesso a SQL Server](help-topics/sql-server-login-dialog.md) (lettura di contenuto, tabulazioni). |
 
 ## <a name="1830"></a>18.3.0
 
@@ -74,7 +100,7 @@ Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?link
 
 | Funzionalità aggiunta | Dettagli |
 | :------------ | :------ |
-| Supporto dell'autenticazione di Azure Active Directory (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Uso di Azure Active Directory](features/using-azure-active-directory.md). |
+| Supporto dell'autenticazione di Azure Active Directory (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`) | [Uso di Azure Active Directory](features/using-azure-active-directory.md) |
 | Includere Azure Active Directory Authentication Library (adal.dll) nel programma di installazione | Ora incluso nell'installazione dei driver di base, il programma di installazione di OLE DB aggiornerà le installazioni esistenti di Microsoft Active Directory Authentication Library per SQL Server, rimuovendo l'applicazione dall'elenco delle applicazioni installate in Windows. |
 | &nbsp; | &nbsp; |
 
@@ -102,7 +128,7 @@ Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?link
 
 | Funzionalità aggiunta | Dettagli |
 | :------------ | :------ |
-| Supporto per gli aggiornamenti del driver dai supporti rimovibili di SQL Server. | Questo miglioramento consente gli aggiornamenti dei driver direttamente dai supporti rimovibili di SQL Server. |
+| Supporto per gli aggiornamenti del driver dai supporti rimovibili di SQL Server | Questo miglioramento consente gli aggiornamenti dei driver direttamente dai supporti rimovibili di SQL Server. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1822"></a>18.2.2
@@ -138,8 +164,8 @@ Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?link
 
 | Funzionalità aggiunta | Dettagli |
 | :------------ | :------ |
-| Supporto per la codifica server UTF-8. | [Supporto di UTF-8 in OLE DB Driver per SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md). |
-| Supporto dell'autenticazione di Azure Active Directory. | [Uso di Azure Active Directory](features/using-azure-active-directory.md). |
+| Supporto per la codifica server UTF-8 | [Supporto UTF-8 in OLE DB Driver for SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
+| Supporto dell'autenticazione di Azure Active Directory | [Uso di Azure Active Directory](features/using-azure-active-directory.md) |
 | &nbsp; | &nbsp; |
 
 ## <a name="1810"></a>18.1.0
@@ -157,7 +183,7 @@ Per il driver x86: [Cinese (semplificato)](https://go.microsoft.com/fwlink/?link
 
 | Funzionalità aggiunta | Dettagli |
 | :------------ | :------ |
-| Supporto per la parola chiave della stringa di connessione `UseFMTONLY` e per la proprietà di inizializzazione `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` controlla la modalità di recupero dei metadati durante la connessione a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br/><br/>Per altre informazioni, vedere: [Uso delle parole chiave delle stringhe di connessione con OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Supporto per la parola chiave della stringa di connessione `UseFMTONLY` e per la proprietà di inizializzazione `SSPROP_INIT_USEFMTONLY` | `UseFMTONLY` controlla la modalità di recupero dei metadati durante la connessione a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br/><br/>Per altre informazioni, vedere: [Uso delle parole chiave delle stringhe di connessione con OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed-in-1810"></a>Bug risolti nella versione 18.1.0

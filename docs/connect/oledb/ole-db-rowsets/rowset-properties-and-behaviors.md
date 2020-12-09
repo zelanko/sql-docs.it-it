@@ -2,7 +2,7 @@
 title: Proprietà e comportamenti dei set di righe (OLE DB Driver)
 description: Di seguito sono elencate le proprietà del set di righe di OLE DB Driver per SQL Server, inclusi il nome e la descrizione della proprietà.
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b5d42db2a329290f13917b754a89232e30ae52ed
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: ff19eb334fceba0b49a88fd1f812ad5b320c762f
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88859996"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504739"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Proprietà e comportamenti dei set di righe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Di seguito sono elencate le proprietà dei set di righe in OLE DB Driver per SQL Server.  
+  Di seguito sono elencate le proprietà dei set di righe in OLE DB Driver per SQL Server:
   
 |ID proprietà|Descrizione|  
 |-----------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "88859996"
 |DBPROP_BOOKMARKTYPE|R/W (L/S): Sola lettura<br /><br /> Predefinito: DBPROPVAL_BMK_NUMERIC<br /><br /> Descrizione: OLE DB Driver per SQL Server implementa solo i segnalibri numerici. Un segnalibro di OLE DB Driver per SQL Server è un intero senza segno a 32 bit di tipo DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Questa proprietà del set di righe non viene implementata da OLE DB Driver per SQL Server. Il tentativo di lettura o scrittura del valore della proprietà genera un errore.|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: OLE DB Driver per SQL Server supporta il recupero e lo scorrimento a ritroso in set di righe non sequenziali. Il driver OLE DB per SQL Server crea un set di righe supportato dal cursore quando DBPROP_CANFETCHBACKWARDS o DBPROP_CANSCROLLBACKWARDS è VARIANT_TRUE. Per altre informazioni, vedere [Set di righe e cursori SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
-|DBPROP_CANHOLDROWS|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: Per impostazione predefinita, OLE DB Driver per SQL Server restituisce DB_E_ROWSNOTRELEASED se il consumer tenta di ottenere più righe per un set di righe mentre sono presenti modifiche in sospeso su tali righe nel set di righe. È possibile modificare questo comportamento.<br /><br /> L'impostazione di DBPROP_CANHOLDROWS e DBPROP_IRowsetChange su VARIANT_TRUE produce un set di righe con segnalibro. Se entrambe le proprietà sono VARIANT_TRUE, l'interfaccia **IRowsetLocate** è disponibile nel set di righe e DBPROP_BOOKMARKS e DBPROP_LITERALBOOKMARKS sono entrambe VARIANT_TRUE.<br /><br /> I set di righe di OLE DB Driver per SQL Server che contengono segnalibri sono supportati dai cursori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|DBPROP_CANHOLDROWS|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: Per impostazione predefinita, OLE DB Driver per SQL Server restituisce DB_E_ROWSNOTRELEASED se il consumer tenta di ottenere più righe per un set di righe mentre sono presenti modifiche in sospeso sulle righe nel set di righe. È possibile modificare questo comportamento.<br /><br /> L'impostazione di DBPROP_CANHOLDROWS e DBPROP_IRowsetChange su VARIANT_TRUE produce un set di righe con segnalibro. Se entrambe le proprietà sono VARIANT_TRUE, l'interfaccia **IRowsetLocate** è disponibile nel set di righe e DBPROP_BOOKMARKS e DBPROP_LITERALBOOKMARKS sono entrambe VARIANT_TRUE.<br /><br /> I set di righe di OLE DB Driver per SQL Server che contengono segnalibri sono supportati dai cursori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |DBPROP_CHANGEINSERTEDROWS|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: questa proprietà può essere impostata solo su VARIANT_TRUE se il set di righe usa un cursore gestito da keyset.|  
 |DBPROP_COLUMNRESTRICT|R/W (L/S): Sola lettura<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: OLE DB Driver per SQL Server imposta la proprietà su VARIANT_TRUE quando una colonna in un set di righe non può essere modificata dal consumer. È possibile che le altre colonne nel set di righe siano aggiornabili e le righe stesse possano essere eliminate.<br /><br /> Quando la proprietà è VARIANT_TRUE, il consumer esamina il membro *dwFlags* della struttura DBCOLUMNINFO per determinare se è possibile o meno scrivere il valore di una singola colonna. Per le colonne modificabili, *dwFlags* indica DBCOLUMNFLAGS_WRITE.|  
 |DBPROP_COMMANDTIMEOUT|R/W (L/S): Lettura/Scrittura<br /><br /> Predefinito: 0<br /><br /> Descrizione: Per impostazione predefinita, OLE DB Driver per SQL Server non raggiunge il timeout nel metodo **ICommand::Execute**.|  
@@ -97,6 +97,7 @@ ms.locfileid: "88859996"
 |SSPROP_DEFERPREPARE|Colonna: No<br /><br /> R/W (L/S): Lettura/Scrittura<br /><br /> Digitare: VT_BOOL<br /><br /> Predefinito: VARIANT_TRUE<br /><br /> Descrizione: VARIANT_TRUE: in esecuzione preparata la preparazione del comando è posticipata fino a quando non viene chiamato **ICommand::Execute** o non viene eseguita un'operazione di metaproprietà. Se la proprietà è impostata su<br /><br /> VARIANT_FALSE: l'istruzione viene preparata quando si esegue **ICommandPrepare::Prepare**.|  
 |SSPROP_IRowsetFastLoad|Colonna: No<br /><br /> R/W (L/S): Lettura/Scrittura<br /><br /> Digitare: VT_BOOL<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: impostare questa proprietà su VARIANT_TRUE per aprire un set di righe di caricamento rapido con **IOpenRowset::OpenRowset**. Non è possibile impostare questa proprietà in **ICommandProperties::SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Colonna: No.<br /><br /> R/W (L/S): Lettura/Scrittura<br /><br /> Digitare: VT_BOOL<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: impostare questa proprietà su VARIANT_TRUE per abilitare le operazioni asincrone con l'interfaccia [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md).|  
+|SSPROP_ISSDataClassification|R/W (L/S): Lettura/Scrittura<br /><br />  Digitare: VT_BOOL<br /><br /> Predefinito: VARIANT_TRUE<br /><br /> Descrizione: OLE DB Driver per SQL Server supporta il recupero di informazioni sulla classificazione della riservatezza mediante l'interfaccia [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md).|  
 |SSPROP_MAXBLOBLENGTH|Colonna: No<br /><br /> R/W (L/S): Lettura/Scrittura<br /><br /> Digitare: VT_I4<br /><br /> Predefinito: il provider non limita le dimensioni del testo restituito dal server e il valore della proprietà è impostato sul valore massimo, ad esempio 2147483647.<br /><br /> Descrizione: OLE DB Driver per SQL Server esegue un'istruzione SET TEXTSIZE per limitare la lunghezza dei dati BLOB (Binary Large Object Block, oggetto binario di grandi dimensioni) restituiti in un'istruzione SELECT.|  
 |SSPROP_NOCOUNT_STATUS|Colonna: NoCount<br /><br /> R/W (L/S): Sola lettura<br /><br /> Digitare: VT_BOOL<br /><br /> Predefinito: VARIANT_FALSE<br /><br /> Descrizione: valore booleano che rappresenta lo stato di SET NOCOUNT ON/OFF in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> VARIANT_TRUE: con SET NOCOUNT ON<br /><br /> VARIANT_TRUE: con SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Colonna: No<br /><br /> R/W (L/S): Lettura/Scrittura<br /><br /> Digitare: VT_BSTR (da 1 a 2000 caratteri consentiti)<br /><br /> Predefinito: stringa vuota<br /><br /> Descrizione: testo del messaggio della notifica delle query. Il testo è definito dall'utente e non ha un formato definito.|  

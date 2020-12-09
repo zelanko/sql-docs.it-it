@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 40fc82cdc264951d1e776875a48b5a516b4b26a8
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f61b867b70825595a012b2167d2c63b13409a8e2
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126523"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442815"
 ---
 # <a name="connection-string-syntax"></a>Sintassi della stringa di connessione
 
@@ -69,7 +69,7 @@ L'autenticazione di Windows è il sistema consigliato per le connessioni a SQL S
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-Quando ci si connette al database SQL di Azure o ad Azure SQL Data Warehouse e si specifica un account di accesso nel formato `user@servername`, assicurarsi che il valore `servername` nell'account di accesso corrisponda al valore specificato per `Server=`.
+Quando ci si connette al database SQL di Azure o ad Azure Synapse Analytics e si specifica un account di accesso nel formato `user@servername`, assicurarsi che il valore `servername` nell'account di accesso corrisponda al valore specificato per `Server=`.
 
 > [!NOTE]
 > L'autenticazione di Windows ha la precedenza sugli account di accesso di SQL Server. Se si specifica sia Integrated Security=true sia un nome utente e una password, questi ultimi saranno ignorati e sarà usata l'autenticazione di Windows.

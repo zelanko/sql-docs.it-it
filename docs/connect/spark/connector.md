@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 059ecfb25389de1be0f8636a868e81e621e57bac
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 7450ebddf94a4378313bb1793bcefe34a88407a5
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867237"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442950"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Connettore Apache Spark: SQL Server e Azure SQL
 
@@ -44,7 +44,7 @@ Questa libreria contiene il codice sorgente per il connettore Apache Spark per S
 | Database SQL di Azure                  | Supportato                       |
 
 > [!NOTE]
-> L'uso di Azure Synapse Analytics (Azure SQL DW) non è stato testato con questo connettore. È possibile che funzioni correttamente, ma potrebbero verificarsi conseguenze impreviste.
+> L'uso di Azure Synapse Analytics non è stato testato con questo connettore. È possibile che funzioni correttamente, ma potrebbero verificarsi conseguenze impreviste.
 
 ### <a name="supported-options"></a>Opzioni supportate
 Il connettore Apache Spark per SQL Server e Azure SQL supporta le opzioni definite qui: [JDBC per origine dati SQL](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
