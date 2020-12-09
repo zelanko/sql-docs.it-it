@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6273f057b7733b787ed2ed8e8b61d23fd107fbd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d470cda4e0c5cf54bcce0827fff4e5f9b9d1acb7
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546831"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96901058"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "89546831"
 |**is_dynamic**|**bit**|1 = La variabile viene applicata quando viene eseguita l'istruzione RECONFIGURE.|  
 |**is_advanced**|**bit**|1 = la variabile viene visualizzata solo quando è impostato il **advancedoption di visualizzazione** .|  
   
- ## <a name="remarks"></a>Osservazioni
+ ## <a name="remarks"></a>Commenti
   Per un elenco di tutte le opzioni di configurazione del server, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  
@@ -53,7 +53,7 @@ ms.locfileid: "89546831"
 La vista del catalogo sys.configurations può essere utilizzata per determinare l'config_value (colonna valore), il run_value (la colonna value_in_use) e se l'opzione di configurazione è dinamica (non richiede un riavvio del motore Server o la colonna is_dynamic).
 
 > [!NOTE]
-> Il config_value nel set di risultati di sp_configure è equivalente alla colonna **sys.configurations. Value** . Il **run_value** è equivalente alla colonna **sys.configurations. value_in_use** .
+> Il config_value nel set di risultati di sp_configure è equivalente alla colonna **sys.configurations. Value** . Il **run_value** è equivalente alla colonna **sys.configurations.value_in_use** .
 
 La query seguente può essere utilizzata per determinare se i valori configurati non sono stati installati:
 
@@ -65,9 +65,10 @@ Se il valore è uguale alla modifica per l'opzione di configurazione eseguita, m
 
 Sono disponibili opzioni di configurazione in cui il valore e value_in_use potrebbero non essere uguali e si tratta di un comportamento previsto. Ad esempio:
 
-"max server memory (MB)": il valore configurato predefinito 0 viene visualizzato come value_in_use = 2147483647 "min server memory (MB)". il valore predefinito configurato di 0 può essere visualizzato come value_in_use = 8 (a 32 bit) o 16 (a 64 bit). 
+"max server memory (MB)": il valore configurato predefinito 0 viene visualizzato come **value_in_use** = 2147483647<br>
 
-In alcuni casi, il **value_in_use** sarà 0. In questa situazione, il **value_in_use** "true" è 8 (a 32 bit) o 16 (a 64 bit)
+"min server memory (MB)": il valore configurato predefinito 0 può essere visualizzato come **value_in_use** = 8 (a 32 bit) o 16 (a 64 bit). In alcuni casi, il **value_in_use** è 0. In questa situazione, il **value_in_use** "true" è 8 (a 32 bit) o 16 (a 64 bit).
+
 
 È possibile utilizzare la colonna **is_dynamic** per determinare se l'opzione di configurazione richiede un riavvio. is_dynamic = 1 indica che, quando viene eseguito il Esegui di RECONFIGURE (T-SQL), il nuovo valore diverrà effettivo "immediatamente" (in alcuni casi, il motore del server potrebbe non valutare immediatamente il nuovo valore, ma eseguirlo nel corso normale della relativa esecuzione). is_dynamic = 0 significa che il valore di configurazione modificato non verrà applicato finché il server non viene riavviato anche se è stato eseguito il comando RECONFIGURE (T-SQL).
 
