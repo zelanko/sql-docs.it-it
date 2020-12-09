@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 02fbb46968d51bc4dbe730fcc7d575793063bcff
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
+ms.openlocfilehash: b3265c99e185f4a8fcbe68e400ab1277b1e72671
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631687"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442886"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Note sulla versione dei cluster Big Data di SQL Server 2019
 
@@ -113,8 +113,10 @@ Questa versione include correzioni e miglioramenti secondari. Gli articoli segue
 - [Gestire l'accesso al cluster Big Data in modalità Active Directory](manage-user-access.md)
 - Distribuire  in modalità Active Directory
 - [Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] nel servizio Azure Kubernetes in modalità Active Directory](active-directory-deployment-aks.md)
-- [Distribuire [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] con disponibilità elevata](deployment-high-availability.md)
-- [Configurare [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](configure-cluster.md)
+- [Distribuire i cluster Big Data con il cluster privato del servizio Azure Kubernetes](private-deploy.md)
+- [Limitare il traffico in uscita dei cluster Big Data (BDC) nel cluster privato del servizio Azure Kubernetes (AKS)](private-restrict-egress-traffic.md)
+- [Distribuire un cluster Big Data di SQL Server con disponibilità elevata](deployment-high-availability.md)
+- [Configurare un cluster Big Data di SQL Server](configure-cluster.md)
 - [Configurare Apache Spark e Apache Hadoop nei cluster Big Data](configure-spark-hdfs.md)
 - [Proprietà di configurazione dell'istanza master di SQL Server](reference-config-master-instance.md)
 - [Proprietà di configurazione di Apache Spark e Apache Hadoop (HDFS)](reference-config-spark-hadoop.md)

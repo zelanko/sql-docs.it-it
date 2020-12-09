@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 11/12/2020
-ms.openlocfilehash: a45b17b98ae8c8d398eee18c7678a119cb32a4f7
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: b9bfda0507b81211feefb0fdb2505ae31f0c8c3b
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584804"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442650"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
@@ -39,7 +39,7 @@ ms.locfileid: "94584804"
 | Nuovo elemento | Dettagli | Soluzione alternativa |
 |----------|---------|------------|
 | Estensione Azure Arc | [Problema noto:](https://github.com/microsoft/azuredatastudio/issues/13319) il pulsante "Genera script nel notebook" per le distribuzioni di Arc per MIAA e PG non esegue la convalida dei campi prima di generare script per il notebook. Ciò significa che se gli utenti immettono una password errata negli input di conferma della password, potrebbero avere come risultato un notebook con il valore errato per la password.| Il pulsante "Distribuisci" funziona come previsto, gli utenti possono usare questo. |
-| Esplora oggetti | Le versioni di Azure Data Studio precedenti alla 1.24.0 presentano una modifica che causa un'interruzione in Esplora oggetti dovuta alle modifiche del motore relative a [SQL su richiesta in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Per continuare a usare Esplora oggetti in Azure Data Studio con SQL su richiesta in Azure Synapse Analytics, è necessario usare Azure Data Studio 1.24.0 o versione successiva. |
+| Esplora oggetti | Le versioni di ADS precedenti alla 1.24.0 presentano una modifica sostanziale in Esplora oggetti a causa delle modifiche del motore relative al [pool SQL serverless in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Per continuare a usare Esplora oggetti in Azure Data Studio con il pool SQL serverless in Azure Synapse Analytics, è necessario usare Azure Data Studio 1.24.0 o versione successiva. |
 
 È possibile fare riferimento al [sito dei commenti e suggerimenti per Azure Data Studio](https://github.com/microsoft/azuredatastudio) per informazioni su altri problemi noti e per inviare commenti e suggerimenti al team del prodotto.
 

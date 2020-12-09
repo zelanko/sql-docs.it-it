@@ -2,7 +2,7 @@
 title: Uso di Azure Active Directory
 description: Informazioni sui metodi di autenticazione Azure Active Directory disponibili in Microsoft OLE DB Driver per SQL Server che consentono la connessione ai database SQL di Azure.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: bace88bd8ccf42cbef96a34ddb2af2593cedd7be
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 71f95203e006141649db7b884b56d085f562974b
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727295"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96504709"
 ---
 # <a name="using-azure-active-directory"></a>Uso di Azure Active Directory
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,15 +24,20 @@ ms.locfileid: "91727295"
 
 ## <a name="purpose"></a>Scopo
 
-A partire dalla versione 18.2.1, Microsoft OLE DB Driver per SQL Server consente alle applicazioni OLE DB di connettersi a un'istanza del database SQL di Azure usando un'identità federata. I nuovi metodi di autenticazione includono:
+
+A partire dalla versione [18.2.1](../release-notes-for-oledb-driver-for-sql-server.md#1821), Microsoft OLE DB Driver per SQL Server consente alle applicazioni OLE DB di connettersi a un'istanza del database SQL di Azure usando un'identità federata. I nuovi metodi di autenticazione includono:
 - ID di accesso e password di Azure Active Directory
 - Token di accesso di Azure Active Directory
 - Autenticazione integrata di Azure Active Directory
 - ID di accesso e password di SQL
 
-La versione 18.3 aggiunge il supporto dei metodi di autenticazione seguenti:
+
+La versione [18.3.0](../release-notes-for-oledb-driver-for-sql-server.md#1830) aggiunge il supporto dei metodi di autenticazione seguenti:
 - Autenticazione interattiva di Azure Active Directory
 - Autenticazione tramite identità gestite di Azure Active Directory
+
+La versione [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) aggiunge il supporto dei metodi di autenticazione seguenti:
+- Autenticazione tramite entità servizio di Azure Active Directory
 
 > [!NOTE]
 > L'uso delle modalità di autenticazione seguenti con `DataTypeCompatibility` (o la proprietà corrispondente) impostata su `80` **non** è supportato:
@@ -41,6 +46,7 @@ La versione 18.3 aggiunge il supporto dei metodi di autenticazione seguenti:
 > - Autenticazione integrata di Azure Active Directory
 > - Autenticazione interattiva di Azure Active Directory
 > - Autenticazione tramite identità gestite di Azure Active Directory
+> - Autenticazione tramite entità servizio di Azure Active Directory
 
 ## <a name="connection-string-keywords-and-properties"></a>Parole chiave e proprietà delle stringhe di connessione
 Per supportare l'autenticazione di Azure Active Directory sono state introdotte le parole chiave della stringa di connessione seguenti:
@@ -142,6 +148,13 @@ In questa sezione vengono illustrati esempi di parole chiave della stringa di co
         > Server=[server];Database=[database];**Authentication=ActiveDirectoryMSI**;UID=[Object ID];Encrypt=yes
     - Identità gestita assegnata dal sistema:
         > Server=[server];Database=[database];**Authentication=ActiveDirectoryMSI**;Encrypt=yes
+
+### <a name="azure-active-directory-service-principal-authentication"></a>Autenticazione tramite entità servizio di Azure Active Directory
+
+- Utilizzo di `IDataInitialize::GetDataSource`:
+    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryServicePrincipal**;User ID=[Application (client) ID];Password=[Application (client) secret];Use Encryption for Data=true
+- Utilizzo di `DBPROP_INIT_PROVIDERSTRING`:
+    > Server=[server];Database=[database];**Authentication=ActiveDirectoryServicePrincipal**;UID=[Application (client) ID];PWD=[Application (client) secret];Encrypt=yes
 
 ## <a name="code-samples"></a>Esempi di codice
 
