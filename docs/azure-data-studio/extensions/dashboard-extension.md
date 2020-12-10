@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 091bf94f01c66b3f991c0457adcfa4d119d49167
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: c7402c8dd0d2d85d38536a0bcfea3ce8cd780657
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364098"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900874"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>Creare un'estensione di tipo dashboard di Azure Data Studio
 
@@ -44,7 +44,7 @@ Azure Data Studio si basa sullo stesso framework di Visual Studio Code, quindi l
 Per semplificare il processo di creazione delle estensioni, abbiamo creato un [generatore di estensioni](https://code.visualstudio.com/docs/extensions/yocode) con Yeoman. Per installarlo, eseguire il comando seguente dal prompt dei comandi:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-dashboard-extension"></a>Creare l'estensione di tipo dashboard
@@ -108,7 +108,7 @@ Di seguito vengono descritte alcune modifiche da provare:
 Per condividere l'estensione con altri utenti, è necessario inserirla in un pacchetto costituito da un unico file. L'estensione può essere pubblicata nel marketplace delle estensioni di Azure Data Studio o condivisa all'interno del team o della community. A tale scopo, è necessario installare un altro pacchetto npm dalla riga di comando.
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Modificare il file `README.md` nel modo desiderato. Passare quindi alla directory di base dell'estensione ed eseguire `vsce package`. Facoltativamente, è possibile collegare un repository con l'estensione o continuare senza. Per aggiungerne uno, aggiungere una riga simile al file `package.json`.

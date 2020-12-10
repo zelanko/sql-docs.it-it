@@ -2,19 +2,19 @@
 title: Matrice di supporto delle funzionalità dei driver
 description: Informazioni sulle funzionalità più comuni supportate nei driver per SQL Server e su dove trovare le informazioni relative.
 ms.custom: ''
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: ac2f39826768cf7fe2948a4168bd93187a93ea3c
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 4fff9c04098bd0796f714d160864e4edb93613ac
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419673"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595232"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Matrice di supporto delle funzionalità dei driver per Microsoft SQL Server
 
@@ -40,14 +40,14 @@ Sarebbe utile se tutti i driver supportassero ogni funzionalità e Microsoft si 
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Sì](ado-net/sql/sqlclient-support-always-encrypted.md) | [Sì](ado-net/sql/sqlclient-support-always-encrypted.md) | | [Sì](ado-net/sql/sqlclient-support-always-encrypted.md) |
 | [Always Encrypted con enclave sicuri](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Sì](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) | [Sì](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) | | [Sì](ado-net/sql/sqlclient-support-always-encrypted.md#enabling-always-encrypted-with-secure-enclaves) |
 | [Autenticazione tramite token di accesso di Azure Active Directory](/azure/active-directory/develop/access-tokens) | [Sì](/dotnet/api/system.data.sqlclient.sqlconnection.accesstoken) | [Sì](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [Sì](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) | [Sì](/dotnet/api/microsoft.data.sqlclient.sqlconnection.accesstoken) |
-| [Autenticazione della password di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | sì | sì | | Sì |
-| [Autenticazione integrata di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | sì | sì | | Sì |
-| [Autenticazione interattiva (MFA) di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | sì | sì | | Sì |
-| [Autenticazione tramite identità gestite di Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | Sì | sì | | |
-| [Autenticazione tramite entità servizio di Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | sì | Sì | | |
+| [Autenticazione della password di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sì](ado-net/sql/azure-active-directory-authentication.md) | [Sì](ado-net/sql/azure-active-directory-authentication.md) | | Sì |
+| [Autenticazione integrata di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sì](ado-net/sql/azure-active-directory-authentication.md) | [Sì](ado-net/sql/azure-active-directory-authentication.md) | | Sì |
+| [Autenticazione interattiva (MFA) di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sì](ado-net/sql/azure-active-directory-authentication.md) | [Sì](ado-net/sql/azure-active-directory-authentication.md) | | Sì |
+| [Autenticazione tramite identità gestite di Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | [Sì](ado-net/sql/azure-active-directory-authentication.md) | [Sì](ado-net/sql/azure-active-directory-authentication.md) | | |
+| [Autenticazione tramite entità servizio di Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | [Sì](ado-net/sql/azure-active-directory-authentication.md) | [Sì](ado-net/sql/azure-active-directory-authentication.md) | | |
 | [Autenticazione integrata di Windows](/windows-server/security/windows-authentication/windows-authentication-overview) | [Sì](ado-net/sql/authentication-sql-server.md) | [Sì](ado-net/sql/authentication-sql-server.md) | [Sì](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Sì](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [Copia bulk](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Sì](ado-net/sql/bulk-copy-operations-sql-server.md) | [Sì](ado-net/sql/bulk-copy-operations-sql-server.md) | [Sì](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [Sì](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
-| [Metadati di sensibilità e classificazione dei dati](../relational-databases/security/sql-data-discovery-and-classification.md) | sì | Sì | Sì | Sì |
+| [Metadati di sensibilità e classificazione dei dati](../relational-databases/security/sql-data-discovery-and-classification.md) | [Sì](ado-net/sql/data-classification.md) | [Sì](ado-net/sql/data-classification.md) | Sì | Sì |
 | [MARS (Multiple Active Result Sets)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [Sì](ado-net/sql/multiple-active-result-sets-mars.md) | [Sì](ado-net/sql/multiple-active-result-sets-mars.md) | [Sì](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) | [Sì](/dotnet/framework/data/adonet/sql/multiple-active-result-sets-mars) |
 | [Tipi di dati spaziali](../relational-databases/spatial/spatial-data-sql-server.md) | | sì | | Sì |
 | [Parametri con valori di tabella](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Sì](ado-net/sql/table-valued-parameters.md) | [Sì](ado-net/sql/table-valued-parameters.md) | [Sì](/dotnet/framework/data/adonet/sql/table-valued-parameters) | [Sì](/dotnet/framework/data/adonet/sql/table-valued-parameters) |
@@ -64,7 +64,7 @@ Sarebbe utile se tutti i driver supportassero ogni funzionalità e Microsoft si 
 | [Autenticazione integrata di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sì](odbc/using-azure-active-directory.md) | [Sì](odbc/using-azure-active-directory.md) | [Sì](jdbc/connecting-using-azure-active-directory-authentication.md) | [Sì](oledb/features/using-azure-active-directory.md) |
 | [Autenticazione interattiva (MFA) di Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sì](odbc/using-azure-active-directory.md) | | | [Sì](oledb/features/using-azure-active-directory.md) |
 | [Autenticazione tramite identità gestite di Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | [Sì](odbc/using-azure-active-directory.md) | [Sì](odbc/using-azure-active-directory.md) | [Sì](jdbc/connecting-using-azure-active-directory-authentication.md) | [Sì](oledb/features/using-azure-active-directory.md) |
-| [Autenticazione tramite entità servizio di Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
+| [Autenticazione tramite entità servizio di Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | | | | [Sì](oledb/features/using-azure-active-directory.md) |
 | [Autenticazione integrata di Windows](/windows-server/security/windows-authentication/windows-authentication-overview) | Sì | [Sì](odbc/linux-mac/using-integrated-authentication.md) | [Sì](jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) | Sì |
 | [Copia bulk](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Sì](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Sì](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Sì](jdbc/using-bulk-copy-with-the-jdbc-driver.md) | [Sì](oledb/features/performing-bulk-copy-operations.md) |
 | [Metadati di individuazione e classificazione dei dati](../relational-databases/security/sql-data-discovery-and-classification.md) | [Sì](odbc/data-classification.md) | [Sì](odbc/data-classification.md) | [Sì](jdbc/data-discovery-classification-sample.md) | |

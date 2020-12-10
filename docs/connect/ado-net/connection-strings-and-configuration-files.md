@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: c5610f182adaab2197b67578e51331fd6d7ce19b
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: fb290f9a795c9f64bcb2ee95c66210790a80a71d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126504"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563117"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Stringhe di connessione e file di configurazione
 
@@ -25,7 +25,7 @@ ms.locfileid: "96126504"
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-Se le stringhe di connessione vengono incorporate nel codice dell'applicazione, è possibile che si verifichino vulnerabilità della sicurezza e problemi di manutenzione. Le stringhe di connessione non crittografate compilate nel codice sorgente di un'applicazione possono essere visualizzate tramite lo strumento [Ildasm.exe (Disassembler IL)](/dotnet/docs/framework/tools/ildasm-exe-il-disassembler.md). Inoltre, se la stringa di connessione viene modificata, è necessario ricompilare l'applicazione. Per questi motivi, si consiglia di archiviare le stringhe di connessione in un file di configurazione dell'applicazione.
+Se le stringhe di connessione vengono incorporate nel codice dell'applicazione, è possibile che si verifichino vulnerabilità della sicurezza e problemi di manutenzione. Le stringhe di connessione non crittografate compilate nel codice sorgente di un'applicazione possono essere visualizzate tramite lo strumento [Ildasm.exe (Disassembler IL)](/dotnet/framework/tools/ildasm-exe-il-disassembler). Inoltre, se la stringa di connessione viene modificata, è necessario ricompilare l'applicazione. Per questi motivi, si consiglia di archiviare le stringhe di connessione in un file di configurazione dell'applicazione.
 
 ## <a name="working-with-application-configuration-files"></a>Utilizzo dei file di configurazione delle applicazioni
 
@@ -194,5 +194,5 @@ Per altre informazioni sulla protezione di applicazioni ASP.NET, vedere [Securin
 - [Generatori di stringhe di connessione](connection-string-builders.md)
 - [Protezione delle informazioni di connessione](protecting-connection-information.md)
 - [Uso delle classi di configurazione](/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Configurazione di applicazioni](/dotnet/docs/framework/configure-apps/index.md)
+- [Configurazione di applicazioni](/dotnet/framework/configure-apps/index)
 - [Amministrazione di siti Web ASP.NET](/previous-versions/aspnet/6hy1xzbw(v=vs.100))

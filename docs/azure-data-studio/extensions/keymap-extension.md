@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 127b163ff7f75b4c7ebeff37781f8a5670a47cf9
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364078"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900824"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Creare un'estensione di tipo mappatura della tastiera di Azure Data Studio
 
@@ -44,7 +44,7 @@ Azure Data Studio si basa sullo stesso framework di Visual Studio Code, quindi l
 Per semplificare il processo di creazione delle estensioni, abbiamo creato un [generatore di estensioni](https://code.visualstudio.com/docs/extensions/yocode) con Yeoman. Per installarlo, eseguire il codice riportato nel prompt dei comandi di seguito:
 
 ```console
-`npm install -g yo generator-azuredatastudio`
+npm install -g yo generator-azuredatastudio
 ```
 
 ## <a name="create-your-keymap-extension"></a>Creare l'estensione di tipo mappatura della tastiera
@@ -137,7 +137,7 @@ Le mappature della tastiera sono tra le estensioni più veloci da creare, quindi
 Per condividere l'estensione con altri utenti, è necessario inserirla in un pacchetto costituito da un unico file. Questo può essere pubblicato nel marketplace delle estensioni di Azure Data Studio o condiviso all'interno del team o della community. A tale scopo, è necessario installare un altro pacchetto npm dalla riga di comando:
 
 ```console
-`npm install -g vsce`
+npm install -g vsce
 ```
 
 Passare alla directory di base dell'estensione ed eseguire `vsce package`. Qui sono state aggiunte un paio di righe extra perché lo strumento *vsce* mostrava errori:
