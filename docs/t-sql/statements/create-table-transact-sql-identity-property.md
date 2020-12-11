@@ -22,12 +22,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f9508420a8f629a189a1d623e5ac1d310a7f940
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 309243b635cb42b3f4acc62422bdfd3eb4aff807
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257758"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443136"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (proprietà)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -57,7 +57,7 @@ IDENTITY [ (seed , increment) ]
  Valore incrementale aggiunto al valore Identity della riga caricata in precedenza.
 
  > [!NOTE]
- > In Azure Synapse Analytics i valori per l'identità non sono incrementali a causa dell'architettura distribuita del data warehouse. Per altre informazioni, vedere [Uso di IDENTITY per creare chiavi sostitutive nel pool Synapse SQL](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values).
+ > In Azure Synapse Analytics i valori per l'identità non sono incrementali a causa dell'architettura distribuita del data warehouse. Per altre informazioni, vedere [Uso di IDENTITY per creare chiavi sostitutive in un pool Synapse SQL](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values).
   
  È necessario specificare sia il valore di inizializzazione che l'incremento oppure nessuno dei due valori. In questo secondo caso, il valore predefinito è (1,1).  
   
@@ -70,16 +70,16 @@ IDENTITY [ (seed , increment) ]
   
  Tramite la proprietà Identity in una colonna non viene garantito quanto riportato di seguito:  
   
--   **Univocità del valore** . L'univocità deve essere applicata con un vincolo **PRIMARY KEY** o **UNIQUE** o un indice **UNIQUE** . - 
+-   **Univocità del valore**. L'univocità deve essere applicata con un vincolo **PRIMARY KEY** o **UNIQUE** o un indice **UNIQUE**. - 
  
 > [!NOTE]
-> Azure Synapse Analytics non supporta il vincolo **PRIMARY KEY** o **UNIQUE** né l'indice **UNIQUE** . Per altre informazioni, vedere [Uso di IDENTITY per creare chiavi sostitutive nel pool Synapse SQL](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key).
+> Azure Synapse Analytics non supporta il vincolo **PRIMARY KEY** o **UNIQUE** né l'indice **UNIQUE**. Per altre informazioni, vedere [Uso di IDENTITY per creare chiavi sostitutive in un pool Synapse SQL](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key).
 
--   **Valori consecutivi in una transazione** . In una transazione con cui vengono inserite più righe non viene garantito il recupero di valori consecutivi per le righe, perché si possono verificare altri inserimenti simultanei nella tabella. Se i valori devono essere consecutivi, nella transazione deve essere usato un blocco esclusivo sulla tabella o il livello di isolamento **SERIALIZABLE** .  
+-   **Valori consecutivi in una transazione**. In una transazione con cui vengono inserite più righe non viene garantito il recupero di valori consecutivi per le righe, perché si possono verificare altri inserimenti simultanei nella tabella. Se i valori devono essere consecutivi, nella transazione deve essere usato un blocco esclusivo sulla tabella o il livello di isolamento **SERIALIZABLE**.  
   
 -   **Valori consecutivi dopo il riavvio del server o altri errori** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe memorizzare nella cache valori Identity per motivi di prestazioni e alcuni valori assegnati possono andare persi durante un errore del database o un riavvio del server. Questo può comportare dei gap nel valore Identity al momento dell'inserimento. Se i gap non sono accettabili, l'applicazione dovrà usare un meccanismo specifico per generare i valori chiave. L'uso di un generatore di sequenze con l'opzione **NOCACHE** può limitare i gap a transazioni di cui non è mai eseguito il commit.  
   
--   **Riuso di valori** . Per una determinata proprietà Identity con valore di inizializzazione/incremento specifico, i valori Identity non vengono riusati dal motore. Se una particolare istruzione INSERT non riesce o se viene eseguito il rollback di quest'ultima, i valori Identity usati vengono persi e non saranno generati di nuovo. Questa condizione può comportare dei gap quando vengono generati i successivi valori Identity.  
+-   **Riuso di valori**. Per una determinata proprietà Identity con valore di inizializzazione/incremento specifico, i valori Identity non vengono riusati dal motore. Se una particolare istruzione INSERT non riesce o se viene eseguito il rollback di quest'ultima, i valori Identity usati vengono persi e non saranno generati di nuovo. Questa condizione può comportare dei gap quando vengono generati i successivi valori Identity.  
   
  Queste restrizioni fanno parte della progettazione per migliorare le prestazioni e perché sono accettabili in molte situazioni comuni. Se non è possibile usare valori Identity a causa di queste restrizioni, creare una tabella separata contenente un valore corrente e gestire l'accesso all'assegnazione di numeri e tabelle con l'applicazione.  
   

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a8866c438b446715f7e804688f50881e0b0eb167
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 73f9f3a39f5a30fe611c5ec839d8d2c7172206d8
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778440"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761509"
 ---
 # <a name="azure-data-studio-extensibility"></a>Estendibilità di Azure Data Studio
 
@@ -32,6 +32,9 @@ I principali punti di estendibilità principali includono:
 ## <a name="visual-studio-code-extensibility-apis"></a>API di estendibilità di Visual Studio Code
 
 La piattaforma principale di Azure Data Studio è basata su Visual Studio Code. Per informazioni dettagliate sulle API di estendibilità di Visual Studio Code, è quindi possibile vedere gli articoli [Creazione di estensioni](https://code.visualstudio.com/docs/extensions/overview) e [API di estensione](https://code.visualstudio.com/docs/extensionAPI/overview) disponibili nel sito Web Visual Studio Code.
+
+> [!NOTE]
+>  Le versioni Azure Data Studio sono allineate con una versione recente di VS Code, tuttavia il motore di VS Code incluso potrebbe non avere la versione corrente di VS Code. Ad esempio, a novembre 2020 il motore di VS Code in Azure Data Studio era 1.48, la versione corrente di VS Code è 1.51.  Il messaggio di errore "Impossibile installare l'estensione '<name>' perché non è compatibile con VS Code <version>" durante l'installazione di un'estensione è causato da un'estensione con una versione del motore di VS Code successiva definita nel manifesto del pacchetto (`package.json`). È possibile verificare la versione del motore di VS Code in Azure Data Studio tramite il menu **?** in **Informazioni**.
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>Contributi ai panelli della scheda di gestione del dashboard
 

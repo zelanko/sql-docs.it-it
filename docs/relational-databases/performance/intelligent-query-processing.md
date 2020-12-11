@@ -5,23 +5,23 @@ ms.custom: seo-dt-2019
 ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce39e398db9d3676bc9c6e2257c9847774927e26
-ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
+ms.openlocfilehash: d1171d4f3570c6bcfcf222043c5036de15c98241
+ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92134869"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96595142"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Elaborazione di query intelligenti nei database SQL
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 La famiglia di funzionalità di elaborazione di query intelligenti include funzionalità ad ampio spettro che migliorano le prestazioni di carichi di lavoro esistenti con un impegno minimo per l'implementazione. 
 
@@ -40,8 +40,8 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 La tabella seguente illustra nel dettaglio tutte le funzionalità di elaborazione di query intelligenti con i rispettivi requisiti per il livello di compatibilità del database.
 
-| **Funzionalità di elaborazione di query intelligenti** | **Supporto nel database SQL di Azure** | **Supporto in SQL Server** |**Descrizione** |
-| --- | --- | --- |--- |
+| **Funzionalità di elaborazione di query intelligenti** | **Supportata in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]** | **Supportata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** |**Descrizione** |
+| ---------------- | ------- | ------- | ---------------- |
 | [Join adattivi (modalità batch)](#batch-mode-adaptive-joins) | Sì, nel livello di compatibilità 140| Sì, a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] nel livello di compatibilità 140|I join adattivi selezionano in modo dinamico un tipo di join in fase di esecuzione in base alle righe di input effettive.|
 | [Count Distinct approssimato](#approximate-query-processing) | Sì| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|Consente di offrire il COUNT DISTINCT approssimativo per gli scenari Big Data con il vantaggio di prestazioni elevate mantenendo basso il footprint di memoria. |
 | [Modalità batch per rowstore](#batch-mode-on-rowstore) | Sì, nel livello di compatibilità 150| Sì, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] nel livello di compatibilità 150|Consente di specificare la modalità batch per i carichi di lavoro del data warehouse relazionale associati alla CPU senza richiedere gli indici columnstore.  | 
@@ -136,7 +136,7 @@ Per abilitare i commenti sulla concessione di memoria in modalità riga in [!INC
 
 L'attività di feedback delle concessioni di memoria in modalità riga sarà visibile tramite l'XEvent **memory_grant_updated_by_feedback**. 
 
-Con il feedback sulla concessione di memoria in modalità riga, vengono visualizzati due nuovi attributi di piano di query per i piani di post-esecuzione effettivi: ***IsMemoryGrantFeedbackAdjusted*** e ***LastRequestedMemory*** aggiunti all'elemento XML del piano di query *MemoryGrantInfo*. 
+Con i feedback sulla concessione di memoria in modalità riga, verranno visualizzati due nuovi attributi di piano di query per i piani di post esecuzione effettivi **_IsMemoryGrantFeedbackAdjusted_* _ e _*_LastRequestedMemory_*_, che vengono aggiunti all'elemento XML per i piani di query _MemoryGrantInfo*. 
 
 *LastRequestedMemory* mostra la memoria concessa in kilobyte (KB) dall'esecuzione della query precedente. L'attributo *IsMemoryGrantFeedbackAdjusted* consente di controllare lo stato dei commenti sulla concessione di memoria per l'istruzione all'interno di un piano di esecuzione query effettivo. I valori esposti in questo attributo sono i seguenti:
 
@@ -319,14 +319,14 @@ SELECT L_OrderKey, L_Quantity
 FROM dbo.lineitem
 WHERE L_Quantity = 5;
 
-SELECT  O_OrderKey,
+SELECT O_OrderKey,
     O_CustKey,
     O_OrderStatus,
     L_QUANTITY
 FROM    
     ORDERS,
     @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
+WHERE    O_ORDERKEY    =    L_ORDERKEY
     AND O_OrderStatus = 'O'
 OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 ```
@@ -391,7 +391,6 @@ Impostare il livello di compatibilità 150 per il database. Non sono necessarie 
 Anche se una query non accede a nessuna tabella con indici columnstore, Query Processor ora usa l'euristica per decidere se prendere in considerazione la modalità batch. L'euristica è costituita da questi controlli:
 1. Un controllo iniziale delle dimensioni delle tabelle, degli operatori usati e delle cardinalità stimate nella query di input.
 2. Checkpoint aggiuntivi, man mano che Query Optimizer individua piani nuovi e più economici per la query. Se questi piani alternativi non usano in modo significativo la modalità batch, Query Optimizer smette di esplorare le alternative in modalità batch.
-
 
 Se la modalità batch per rowstore viene usata, la modalità di esecuzione effettiva visualizzata nel piano di query è la **modalità batch**. L'operatore di analisi usa la modalità batch per gli heap su disco e gli indici albero B. Questa analisi in modalità batch può valutare i filtri bitmap in modalità batch. Nel piano è possibile vedere anche altri operatori della modalità batch. Alcuni esempi sono gli hash join, le aggregazioni basate su hash, gli ordinamenti, le aggregazioni finestra, i filtri, la concatenazione e gli operatori scalari di calcolo.
 

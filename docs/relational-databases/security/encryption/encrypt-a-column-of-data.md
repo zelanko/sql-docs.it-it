@@ -18,18 +18,18 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 882a99eafed8c913ef0edef213b09ef23a0990f7
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: 4d1fefc10f19a4b8fda411337cd4b35a6f8f2939
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439335"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442981"
 ---
 # <a name="encrypt-a-column-of-data"></a>Crittografia di una colonna di dati
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-  Questo articolo descrive come crittografare una colonna di dati tramite la crittografia simmetrica in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] con [!INCLUDE[tsql](../../../includes/tsql-md.md)]. È chiamata a volte crittografia a livello di colonna o crittografia a livello di cella. Questa funzionalità è in anteprima per Azure Synapse Analytics (SQL DW)
+  Questo articolo descrive come crittografare una colonna di dati tramite la crittografia simmetrica in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] con [!INCLUDE[tsql](../../../includes/tsql-md.md)]. È chiamata a volte crittografia a livello di colonna o crittografia a livello di cella. Questa funzionalità è in anteprima per Azure Synapse Analytics
 
 ## <a name="security"></a>Sicurezza  
   
@@ -59,9 +59,9 @@ Creare sempre una copia di backup della chiave master del database. Per altre in
   
 1. In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. Sulla barra Standard fare clic su **Nuova query** .  
+2. Sulla barra Standard fare clic su **Nuova query**.  
   
-3. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui** .  
+3. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
 
     ```sql
     USE AdventureWorks2012;  
@@ -117,9 +117,9 @@ Creare sempre una copia di backup della chiave master del database. Per altre in
   
 1. In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2. Sulla barra Standard fare clic su **Nuova query** .  
+2. Sulla barra Standard fare clic su **Nuova query**.  
   
-3. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui** .  
+3. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```sql
     USE AdventureWorks2012;  

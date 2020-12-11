@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c9edfd5b460a6a6b80900e1beced674b80bfce93
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: a72ccacd9401a8b7955eae10751c5ac67ca211ac
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195016"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523060"
 ---
 # <a name="move-system-databases"></a>Spostare i database di sistema
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92195016"
 >  Se si sposta un database di sistema e successivamente si ricompila il database master, è necessario spostare nuovamente il database di sistema, in quanto l'operazione di ricompilazione ha come conseguenza l'installazione di tutti i database di sistema nei rispettivi percorsi predefiniti.  
 
 > [!IMPORTANT]  
->  Dopo lo spostamento dei file, l'account del servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] deve avere l'autorizzazione per accedere ai file nel nuovo percorso della cartella di file.
+>  Dopo lo spostamento dei file, l'account del servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] deve avere l'autorizzazione per accedere ai file nel nuovo percorso della cartella di file. Per altre informazioni, vedere [Configurare le autorizzazioni del file system per l'accesso al motore di database](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).
     
   
 ##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> Procedura di rilocazione pianificata e manutenzione pianificata del disco  
@@ -145,7 +145,7 @@ ms.locfileid: "92195016"
 ##  <a name="moving-the-master-database"></a><a name="master"></a> Spostamento del database master  
  Per spostare il database master, effettuare le operazioni seguenti.  
   
-1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, **Microsoft SQL Server**, **Strumenti di configurazione**e quindi fare clic su **Gestione configurazione SQL Server**.  
+1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, **Microsoft SQL Server**, **Strumenti di configurazione** e quindi fare clic su **Gestione configurazione SQL Server**.  
   
 2.  Nel nodo **Servizi di SQL Server** fare clic con il pulsante destro del mouse sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio **SQL Server (MSSQLSERVER)** e scegliere **Proprietà**.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "92195016"
   
 2.  Nella finestra di dialogo **Proprietà server** selezionare **Impostazioni database**.  
   
-3.  In **Percorsi predefiniti database**selezionare il nuovo percorso sia per i file di dati sia per quelli di log.  
+3.  In **Percorsi predefiniti database** selezionare il nuovo percorso sia per i file di dati sia per quelli di log.  
   
 4.  Per completare la modifica, avviare e arrestare il servizio SQL Server.  
   

@@ -1,7 +1,7 @@
 ---
 title: 'Accedere ai dati esterni: Archiviazione BLOB di Azure - PolyBase'
 description: L'articolo usa PolyBase su un'istanza di SQL Server con Archiviazione BLOB di Azure. La tecnologia PolyBase è adatta per le query ad hoc di tabelle esterne e per l'importazione/esportazione di dati.
-ms.date: 12/13/2019
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: eb9e04b48a6eb6894e3ef8f8227d573443934ab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6621d01c9cb52d528f2d3578a128f0abada22db0
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215868"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563107"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurare PolyBase per l'accesso a dati esterni in Archiviazione BLOB di Azure
 
@@ -44,7 +44,7 @@ Configurare prima di tutto SQL Server PolyBase per usare Archiviazione BLOB di A
    GO
    ```  
 
-2. È necessario riavviare SQL Server mediante **services.msc**. Il riavvio di SQL Server comporta il riavvio di questi servizi:  
+2. Riavviare SQL Server tramite **services.msc**. Il riavvio di SQL Server comporta il riavvio di questi servizi:  
 
    - Servizio spostamento dati di PolyBase per SQL Server  
    - Motore di PolyBase per SQL Server  
@@ -55,7 +55,7 @@ Configurare prima di tutto SQL Server PolyBase per usare Archiviazione BLOB di A
 
 Per eseguire query sui dati nell'origine dati Hadoop, è necessario definire una tabella esterna da usare in query Transact-SQL. Le procedure seguenti descrivono come configurare la tabella esterna.
 
-1. Creare una chiave master nel database. Questo passaggio è necessario per crittografare il segreto delle credenziali.
+1. Creare una chiave master nel database. La chiave master è necessaria per crittografare il segreto delle credenziali.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -158,7 +158,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 ### <a name="exporting-data"></a>Esportazione di dati  
 
-La query seguente esporta i dati da SQL Server in Archiviazione BLOB di Azure. A tale scopo, è prima di tutto necessario abilitare l'esportazione di PolyBase. Creare poi una tabella esterna per la destinazione prima dell'esportazione dei dati.
+La query seguente esporta i dati da SQL Server in Archiviazione BLOB di Azure. Abilitare prima l'esportazione di PolyBase. Creare poi una tabella esterna per la destinazione prima dell'esportazione dei dati.
 
 ```sql
 -- Enable INSERT into external table  
@@ -186,6 +186,8 @@ SELECT T.* FROM Insured_Customers T1 JOIN CarSensor_Data T2
 ON (T1.CustomerKey = T2.CustomerKey)  
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
+
+Con questo metodo, l'esportazione di PolyBase può creare più file.
 
 ## <a name="view-polybase-objects-in-ssms"></a>Visualizzare gli oggetti PolyBase in SQL Server Management Studio  
 

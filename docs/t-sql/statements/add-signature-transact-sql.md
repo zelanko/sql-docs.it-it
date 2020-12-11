@@ -18,18 +18,18 @@ ms.author: vanto
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/10/2020
-ms.openlocfilehash: 0f0ed0ee3619abae19df06879fbfd1d60b22a0b0
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 1202cb470530941b23c3e0a742ea9a1715170784
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688422"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523074"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Aggiunge una firma digitale a una stored procedure, una funzione, un assembly o un trigger. Aggiunge inoltre una controfirma a una stored procedure, una funzione, un assembly o un trigger.
+Aggiunge una firma digitale a una stored procedure, una funzione, un assembly o un trigger DML. Aggiunge anche una controfirma a una stored procedure, una funzione, un assembly o un trigger DML.
 
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -83,7 +83,7 @@ Il modulo che viene firmato o controfirmato e il certificato o la chiave asimmet
 > [!CAUTION]
 > È consigliabile utilizzare la firma del modulo solo per concedere le autorizzazioni, mai per negarle o revocarle.  
   
- Non è possibile firmare funzioni inline con valori di tabella.  
+ I trigger DDL (Data Definition Language) e le funzioni inline con valori di tabella non possono essere firmati.  
   
  Le informazioni sulle firme sono visibili nella vista di catalogo sys.crypt_properties.  
   

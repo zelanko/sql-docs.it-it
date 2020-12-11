@@ -1,19 +1,19 @@
 ---
 title: Domande frequenti in PolyBase| Microsoft Docs
-description: Confrontare PolyBase e i server collegati e confrontare PolyBase nei cluster di Big Data e PolyBase nelle istanze autonome. Vengono illustrate le novità in PolyBase 2019.
-ms.date: 04/23/2019
+description: Confrontare PolyBase e i server collegati e confrontare PolyBase nei cluster Big Data e PolyBase in istanze autonome. Vengono illustrate le novità in PolyBase 2019.
+ms.date: 12/02/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 627afe62630dbca81c77bef45d8263824d8c41df
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 57d59e774c1042bf7989bcd2df4a652ed4498f0d
+ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96127849"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96563137"
 ---
 # <a name="frequently-asked-questions"></a>Domande frequenti
 
@@ -55,13 +55,13 @@ Nella tabella seguente sono evidenziate le funzionalità di PolyBase disponibili
 
 |Funzionalità |Cluster Big Data|Istanza autonoma|
 |--------------------------|--------------------------|---------|   
-|Creare un'origine dati esterna per SQL Server, Oracle, Teradata e Mongo DB |X|X |
+|Creare un'origine dati esterna per SQL Server, Oracle, Teradata e Mongo DB |X|X|
 |Creare origine dati esterna usando un driver ODBC di terze parti compatibile | | X|
 |Creare un'origine dati esterna per l'origine dati HADOOP | X| X|
 |Creare un'origine dati esterna per Archiviazione BLOB di Azure | X| X|
 |Creare una tabella esterna in un pool di dati di SQL Server | X| |
 |Creare una tabella esterna in un pool di archiviazione di SQL Server | X| |
-|Esecuzione di query con scalabilità orizzontale | X| X|
+|Esecuzione di query con scalabilità orizzontale | X| X (solo Windows) |
 
 > [!NOTE]
 >La tabella non descrive le funzionalità disponibili nella versione più recente di [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] CTP. Per informazioni sulle funzionalità disponibili, vedi le note sulla versione. Per altre informazioni sulle connessioni tramite il connettore ODBC generico, vedere la [guida pratica alla configurazione dei tipi generici ODBC](polybase-configure-odbc-generic.md).

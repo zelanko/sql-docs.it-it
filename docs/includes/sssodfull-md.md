@@ -1,1 +1,1 @@
-Pool SQL serverless (anteprima) in Azure Synapse Analytics
+Pool SQL serverless in Azure Synapse Analytics

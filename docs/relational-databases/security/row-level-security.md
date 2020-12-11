@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5ddd76c050e50576a446e8e404b889fcc8fa92d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 728650497849454ab7c30dae04317a750665a26c
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867967"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442965"
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
 
@@ -110,11 +110,11 @@ La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.
   
  Inoltre, per ogni predicato che viene aggiunto sono richieste le autorizzazioni seguenti:  
   
-- Le autorizzazioni**SELECT** e **REFERENCES** per la funzione usata come predicato.  
+- Le autorizzazioni **SELECT** e **REFERENCES** per la funzione usata come predicato.  
   
-- L'autorizzazione**REFERENCES** per la tabella di destinazione associata ai criteri.  
+- L'autorizzazione **REFERENCES** per la tabella di destinazione associata ai criteri.  
   
-- L'autorizzazione**REFERENCES** per ogni colonna della tabella di destinazione usata come argomento.  
+- L'autorizzazione **REFERENCES** per ogni colonna della tabella di destinazione usata come argomento.  
   
  I criteri di sicurezza sono applicati a tutti gli utenti, inclusi gli utenti dbo nel database. Gli utenti dbo possono modificare o eliminare i criteri di sicurezza, tuttavia tali modifiche ai criteri di sicurezza possono essere controllate. Se un utente con privilegi elevati, ad esempio sysadmin o db_owner, deve visualizzare tutte le righe per risolvere i problemi o convalidare i dati, i criteri di sicurezza devono essere scritti in modo da consentire tale operazione.  
   
@@ -208,12 +208,12 @@ CREATE TABLE Sales
  Popolare la tabella con sei righe di dati che visualizzano tre ordini per ogni rappresentante.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -302,8 +302,8 @@ Questo breve esempio crea tre utenti e una tabella esterna con sei righe. Vengon
 
 ### <a name="prerequisites"></a>Prerequisiti
 
-1. È necessario avere un pool SQL. Vedere [Creare un pool SQL Synapse](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-1. Il server che ospita il pool SQL deve essere registrato in AAD ed è necessario avere un account di archiviazione di Azure con le autorizzazioni di collaboratore al BLOB di archiviazione. Seguire i passaggi [qui](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. È necessario disporre di un pool SQL dedicato. Vedere [Creare un pool SQL dedicato](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
+1. Il server che ospita il pool SQL dedicato deve essere registrato in AAD ed è necessario avere un account di archiviazione di Azure con le autorizzazioni di collaboratore al BLOB di archiviazione. Seguire i passaggi [qui](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
 1. Creare un file system per l'account di archiviazione di Azure. Usare Storage Explorer per visualizzare l'account di archiviazione. Fare clic con il pulsante destro del mouse su contenitori e scegliere *Crea file system*.  
 
 Una volta soddisfatti i prerequisiti, creare tre account utente che dimostreranno le diverse funzionalità di accesso.
@@ -317,10 +317,10 @@ GO
 CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
---run in master and your SQL pool database
-CREATE USER Manager FOR LOGIN Manager;  
-CREATE USER Sales1  FOR LOGIN Sales1;  
-CREATE USER Sales2  FOR LOGIN Sales2 ;
+--run in master and your dedicated SQL pool database
+CREATE USER Manager FOR LOGIN Manager;  
+CREATE USER Sales1  FOR LOGIN Sales1;  
+CREATE USER Sales2  FOR LOGIN Sales2 ;
 ```
 
 Creare una tabella per contenere i dati.  

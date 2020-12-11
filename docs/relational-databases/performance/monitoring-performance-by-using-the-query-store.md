@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 4cccda1a792b8c006b758c3788d910e745e94989
-ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
+ms.openlocfilehash: 96e137f3e49ac21a38577704c2663d3de85151ff
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94418026"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505145"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
 
@@ -35,7 +35,7 @@ Per informazioni sul funzionamento di Query Store nel [!INCLUDE[ssSDS](../../inc
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Abilitazione di Archivio query
 
- Per impostazione predefinita, Query Store non è abilitato per i nuovi database di SQL Server e Azure Synapse Analytics (SQL DW) ed è abilitato per impostazione predefinita per i nuovi database di database SQL di Azure.
+ Per impostazione predefinita, Query Store non è abilitato per i nuovi database di SQL Server e Azure Synapse Analytics ed è abilitato per impostazione predefinita per i nuovi database di database SQL di Azure.
 
 ### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Usare la pagina Archivio query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
@@ -94,8 +94,8 @@ La funzionalità Archivio query viene usata in genere negli scenari seguenti:
 Query Store contiene tre archivi:
 
 - Un **archivio piani** per il salvataggio in modo permanente delle informazioni sul piano di esecuzione.
-- a **archivio statistiche runtime** : per il salvataggio in modo permanente delle informazioni sulle statistiche di esecuzione.
-- a **archivio statistiche di attesa** : per il salvataggio in modo permanente delle informazioni sulle statistiche di attesa.
+- a **archivio statistiche runtime**: per il salvataggio in modo permanente delle informazioni sulle statistiche di esecuzione.
+- a **archivio statistiche di attesa**: per il salvataggio in modo permanente delle informazioni sulle statistiche di attesa.
 
 Il numero di piani univoci che è possibile archiviare per una query nell'archivio piani è limitato dall'opzione di configurazione **max_plans_per_query** . Per migliorare le prestazioni, le informazioni vengono scritte negli archivi in modo asincrono. Per ridurre al minimo l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio delle statistiche di runtime vengono aggregate in un intervallo di tempo fisso. Per visualizzare le informazioni contenute in questi archivi, è possibile eseguire una query sulle viste del catalogo di Query Store.
 

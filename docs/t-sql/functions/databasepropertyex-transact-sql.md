@@ -21,12 +21,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d282a1dca21d2b76925c12dddf3002d159aaec64
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f7911d4f096c8b90b2ee01341405acd561c46ec9
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116520"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443131"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -90,7 +90,7 @@ Espressione che specifica il nome della proprietà del database da restituire. *
 |IsXTPSupported|Indica se il database supporta OLTP in memoria, ovvero la creazione e l'uso di tabelle ottimizzate per la memoria e moduli compilati in modo nativo.<br /><br /> Specifico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported è indipendente dall'esistenza di qualsiasi filegroup MEMORY_OPTIMIZED_DATA, necessario per la creazione di oggetti OLTP In memoria.|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: input non valido, errore o non applicabile<br /><br /> Tipo di dati di base: **int**|  
 |LastGoodCheckDbTime|Data e ora dell'ultima esecuzione con esito positivo di DBCC CHECKDB nel database specificato.<sup>1</sup> Se il comando DBCC CHECKDB non è stato eseguito in un database, viene restituito 1900-01-01 00:00:00.000.|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a partire da SP2.</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] a partire da CU9.</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] o versioni successive.</br>Database SQL di Azure.<br/><br/>Valore datetime<br /><br /> NULL: input non valido<br /><br /> Tipo di dati di base: **datetime**| 
 |LCID|Identificatore delle impostazioni locali (LCID) di Windows per le regole di confronto.|Valore LCID, in formato decimale.<br /><br /> Tipo di dati di base: **int**|  
-|MaxSizeInBytes|Dimensioni massime del database in byte.|**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br />[Database SQL di Azure e Azure Synapse Analytics (SQL DW)](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model): il valore è basato su SLO, a meno che non sia stata acquistata una risorsa di archiviazione aggiuntiva.<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model): il valore è espresso in incrementi di 1 GB fino alle dimensioni massime.<br /><br />NULL: database non avviato<br /><br /> Tipo di dati di base: **bigint**|  
+|MaxSizeInBytes|Dimensioni massime del database in byte.|**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br />[Database SQL di Azure e Azure Synapse Analytics](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model): il valore è basato su SLO, a meno che non sia stata acquistata una risorsa di archiviazione aggiuntiva.<br /><br />[vCore](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model): il valore è espresso in incrementi di 1 GB fino alle dimensioni massime.<br /><br />NULL: database non avviato<br /><br /> Tipo di dati di base: **bigint**|  
 |Ripristino|Modello di recupero del database|FULL: Modello di recupero con registrazione completa<br /><br /> BULK_LOGGED: modello con registrazione minima delle operazioni bulk<br /><br /> SIMPLE: Modello di recupero con registrazione minima<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
 |ServiceObjective|Descrive il livello di prestazioni del database nel [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] o in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|I tipi validi sono:<br /><br /> Null = database non avviato<br /><br /> Shared (per le edizioni Web/Business)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> System (per il database master)<br /><br /> Tipo di dati di base: **nvarchar(32)**|  
 |ServiceObjectiveId|ID dell'obiettivo di servizio in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|**uniqueidentifier** che identifica l'obiettivo di servizio.|  

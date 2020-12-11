@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 11462e9c55f22e16fb3e20920c104bf1047d8991
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 3ab1841c009094831ae114d701d526a1d3036dba
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523856"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535275"
 ---
 # <a name="polybase-scale-out-groups"></a>Gruppi con scalabilità orizzontale di PolyBase
 
@@ -35,11 +35,11 @@ Vedere [Get started with PolyBase](./polybase-guide.md) (Introduzione a PolyBase
   
 ## <a name="head-node"></a>Nodo head  
 
-Il nodo head contiene l'istanza di SQL Server alla quale vengono inviate le query PolyBase. Ogni gruppo di PolyBase può avere un solo nodo head. Un nodo head è un gruppo logico costituito dal motore di database SQL, dal motore PolyBase e da PolyBase Data Movement Service nell'istanza di SQL Server.
+Il nodo head contiene l'istanza di SQL Server alla quale vengono inviate le query PolyBase. Ogni gruppo di PolyBase può avere un solo nodo head. Un nodo head è un gruppo logico costituito dal motore di database SQL Server, dal motore PolyBase e da PolyBase Data Movement Service nell'istanza di SQL Server. Con SQL Server 2017 e SQL Server 2016, il nodo head deve essere un'edizione Enterprise. A partire da SQL Server 2019 il nodo head di PolyBase può essere un'edizione Enterprise o Standard.
   
-## <a name="compute-node"></a>Nodo di calcolo  
+## <a name="compute-node"></a>Nodo di calcolo
 
-Un nodo di calcolo contiene l'istanza di SQL Server che assiste nell'elaborazione delle query di scalabilità orizzontale sui dati esterni. Un nodo di calcolo è un gruppo logico costituito da SQL Server e da PolyBase Data Movement Service nell'istanza di SQL Server. Un gruppo di PolyBase può presentare più nodi di calcolo. Il nodo head e tutti i nodi di calcolo devono eseguire la stessa versione di SQL Server.
+Un nodo di calcolo contiene l'istanza di SQL Server che assiste nell'elaborazione delle query di scalabilità orizzontale sui dati esterni. Un nodo di calcolo è un gruppo logico costituito da SQL Server e da PolyBase Data Movement Service nell'istanza di SQL Server. Un gruppo di PolyBase può presentare più nodi di calcolo. Il nodo head e tutti i nodi di calcolo devono eseguire la stessa versione di SQL Server. La versione iniziale di SQL Server 2016 consentiva ai nodi di calcolo di essere un'edizione Enterprise o Standard. A partire da SQL Server 2016 SP1, tutte le edizioni di SQL Server possono essere un nodo di calcolo.
 
 ## <a name="scale-out-reads"></a>Letture con scalabilità orizzontale
 

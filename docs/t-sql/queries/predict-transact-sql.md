@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a21506caf12537eb8acab96c97fa53c62b7fadf
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ff521b8cf230bcb2113937ee6c223b55c61be02a
+ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116286"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523050"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -120,9 +120,9 @@ Il parametro DATA viene usato per specificare i dati usati per l'assegnazione de
 **RUNTIME = ONNX**
 
 > [!IMPORTANT]
-> L'argomento `RUNTIME = ONNX` è disponibile solo in [Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview) e [SQL Edge di Azure](/azure/sql-database-edge/onnx-overview).
+> L'argomento `RUNTIME = ONNX` è disponibile solo in [Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview), [Azure SQL Edge](/azure/sql-database-edge/onnx-overview) e [Azure Synapse Analytics](/azure/synapse-analytics/overview-what-is).
 
-Indica il motore di Machine Learning usato per l'esecuzione del modello. Il valore del parametro `RUNTIME` è sempre `ONNX`. In Azure SQL Edge il parametro è obbligatorio, mentre in Istanza gestita di SQL di Azure è facoltativo e viene inserito solo quando si usano i modelli ONNX.
+Indica il motore di Machine Learning usato per l'esecuzione del modello. Il valore del parametro `RUNTIME` è sempre `ONNX`. In Azure SQL Edge e Azure Synapse Analytics il parametro è obbligatorio, mentre in Istanza gestita di SQL di Azure è facoltativo e viene inserito solo quando si usano i modelli ONNX.
 
 **WITH ( <result_set_definition> )**
 
@@ -186,7 +186,7 @@ DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE mode
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+    DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
@@ -207,7 +207,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
+             DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -216,6 +216,8 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 
 Un caso d'uso comune per la stima consiste nella generazione di un punteggio per i dati di input e quindi nell'inserimento dei valori stimati in una tabella. L'esempio seguente presuppone che l'applicazione chiamante usi una stored procedure per inserire una riga contenente il valore stimato in una tabella:
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```sql
 DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
@@ -223,6 +225,20 @@ INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
 FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
+
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d, RUNTIME = ONNX) WITH(score FLOAT) AS p;
+```
+
+:::moniker-end
 
 - I risultati di `PREDICT` vengono archiviati in una tabella denominata PredictionResults. 
 - Il modello viene archiviato come colonna `varbinary(max)` nella tabella **Modelli**. Nella tabella è possibile salvare informazioni aggiuntive come l'ID e la descrizione per identificare il modello.

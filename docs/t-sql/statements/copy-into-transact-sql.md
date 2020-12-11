@@ -1,5 +1,5 @@
 ---
-title: COPY INTO (Transact-SQL) (anteprima)
+title: COPY INTO (Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Usare l'istruzione COPY in Azure Synapse Analytics per il caricamento da account di archiviazione esterni.
 ms.date: 09/25/2020
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
+ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300284"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96788000"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -45,7 +45,7 @@ Per esempi completi e argomenti di avvio rapido relativi all'istruzione COPY, ve
 
 - [Avvio rapido: Caricamento bulk di dati con l'istruzione COPY](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
 - [Avvio rapido: Esempi di utilizzo dell'istruzione COPY e dei metodi di autenticazione supportati](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [Avvio rapido: Creazione dell'istruzione COPY con l'avanzata interfaccia utente di Synapse Studio (anteprima dell'area di lavoro)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [Avvio rapido: Creazione dell'istruzione COPY con l'avanzata interfaccia utente di Synapse Studio](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>Sintassi  
 
@@ -141,9 +141,9 @@ Posizione di gestione temporanea dei file contenenti i dati. Attualmente sono su
 |  **Archiviazione BLOB di Azure**  | FIRMA DI ACCESSO CONDIVISO/IDENTITÀ DEL SERVIZIO GESTITA/ENTITÀ SERVIZIO/CHIAVE/AAD |                      FIRMA DI ACCESSO CONDIVISO/CHIAVE                       |                      FIRMA DI ACCESSO CONDIVISO/CHIAVE                       |
 | **Azure Data Lake Gen2** | FIRMA DI ACCESSO CONDIVISO/IDENTITÀ DEL SERVIZIO GESTITA/ENTITÀ SERVIZIO/CHIAVE/AAD | FIRMA DI ACCESSO CONDIVISO (blob<sup>1</sup>)/IDENTITÀ DEL SERVIZIO GESTITA (dfs<sup>2</sup>)/ENTITÀ SERVIZIO/CHIAVE/AAD | FIRMA DI ACCESSO CONDIVISO (blob<sup>1</sup>)/IDENTITÀ DEL SERVIZIO GESTITA (dfs<sup>2</sup>)/ENTITÀ SERVIZIO/CHIAVE/AAD |
 
-1: per questo metodo di autenticazione è necessario l'endpoint .blob ( **.blob** .core.windows.net) nel percorso esterno.
+1: per questo metodo di autenticazione è necessario l'endpoint .blob ( **.blob**.core.windows.net) nel percorso esterno.
 
-2: per questo metodo di autenticazione è necessario l'endpoint .dfs ( **.dfs** .core.windows.net) nel percorso esterno.
+2: per questo metodo di autenticazione è necessario l'endpoint .dfs ( **.dfs**.core.windows.net) nel percorso esterno.
 
 
 > [!NOTE]  
@@ -154,7 +154,7 @@ Posizione di gestione temporanea dei file contenenti i dati. Attualmente sono su
 - Autenticazione con firme di accesso condiviso (SAS)
   
   - *IDENTITY: costante con valore ‘Shared Access Signature’*
-  - *SECRET: La* [*firma di accesso condiviso*](/azure/storage/common/storage-sas-overview) *fornisce accesso delegato controllato alle risorse dell'account di archiviazione* .
+  - *SECRET: La* [*firma di accesso condiviso*](/azure/storage/common/storage-sas-overview) *fornisce accesso delegato controllato alle risorse dell'account di archiviazione*.
   -  Autorizzazioni minime richieste: READ e LIST
   
 - Autenticazione con [*entità servizio*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -179,7 +179,7 @@ Posizione di gestione temporanea dei file contenenti i dati. Attualmente sono su
   - Ruoli Controllo degli accessi in base al ruolo minimi richiesti: Collaboratore ai dati dei BLOB di archiviazione o Proprietario dei dati dei BLOB di archiviazione per l'utente di AAD
 
 *ERRORFILE = Percorso directory*</br>
-*ERRORFILE* si applica solo al formato CSV. Specifica la directory all'interno dell'istruzione COPY in cui scrivere le righe rifiutate e il file di errori corrispondente. È possibile specificare il percorso completo dall'account di archiviazione oppure il percorso relativo al contenitore. Se il percorso specificato non esiste, viene creato automaticamente. Viene creata una directory figlio con nome " _rejectedrows". Il carattere "_ " assicura che la directory venga ignorata da altre attività di elaborazione dati, salvo se indicata in modo esplicito nel parametro del percorso. 
+*ERRORFILE* si applica solo al formato CSV. Specifica la directory all'interno dell'istruzione COPY in cui scrivere le righe rifiutate e il file di errori corrispondente. È possibile specificare il percorso completo dall'account di archiviazione oppure il percorso relativo al contenitore. Se il percorso specificato non esiste, viene creato automaticamente. Viene creata una directory figlio con nome "_rejectedrows". Il carattere "_ " assicura che la directory venga ignorata da altre attività di elaborazione dati, salvo se indicata in modo esplicito nel parametro del percorso. 
 
 Questa directory include una cartella creata in base all'ora di inoltro del carico, con il formato AnnoMeseGiorno - OraMinutoSecondo (ad esempio 20180330-173205). In questa cartella vengono scritti due tipi di file, il file relativo al motivo (errore) e il file di dati (riga), anteponendo a ognuno i valori di queryID, distributionID e un GUID di file. Poiché i dati e il motivo si trovano in file distinti, i file corrispondenti hanno un prefisso corrispondente.
 
@@ -193,7 +193,7 @@ Se per ERRORFILE viene definito il percorso completo dell'account di archiviazio
   
 - Autenticazione con firme di accesso condiviso (SAS)
   - *IDENTITY: costante con valore ‘Shared Access Signature’*
-  - *SECRET: La* [*firma di accesso condiviso*](/azure/storage/common/storage-sas-overview) *fornisce accesso delegato controllato alle risorse dell'account di archiviazione* .
+  - *SECRET: La* [*firma di accesso condiviso*](/azure/storage/common/storage-sas-overview) *fornisce accesso delegato controllato alle risorse dell'account di archiviazione*.
   - Autorizzazioni minime richieste: READ, LIST, WRITE, CREATE, DELETE
   
 - Autenticazione con [*entità servizio*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -262,7 +262,7 @@ DATEFORMAT si applica solo al formato CSV e specifica il formato di data per il 
 *ENCODING* si applica solo al formato CSV. L'impostazione predefinita è UTF8. Specifica lo standard di codifica dei dati per i file caricati tramite il comando COPY. 
 
 *IDENTITY_INSERT = ‘ON’ | ‘OFF’*</br>
-IDENTITY_INSERT specifica se il valore o i valori Identity presenti nel file di dati importato devono essere usati per la colonna Identity. Se il valore di IDENTITY_INSERT è OFF (impostazione predefinita), i valori Identity per questa colonna vengono verificati ma non importati. SQL Data Warehouse assegna automaticamente valori univoci in base ai valori di inizializzazione e incremento specificati durante la creazione della tabella. Si noti il comportamento seguente con il comando COPY:
+IDENTITY_INSERT specifica se il valore o i valori Identity presenti nel file di dati importato devono essere usati per la colonna Identity. Se il valore di IDENTITY_INSERT è OFF (impostazione predefinita), i valori Identity per questa colonna vengono verificati ma non importati. Azure Synapse Analytics assegna automaticamente valori univoci in base ai valori di inizializzazione e incremento specificati durante la creazione della tabella. Si noti il comportamento seguente con il comando COPY:
 
 - Se IDENTITY_INSERT è OFF e la tabella contiene una colonna Identity
   - È necessario specificare un elenco di colonne che non esegue il mapping di un campo di input alla colonna Identity.
@@ -433,17 +433,6 @@ Non è necessario dividere i file Parquet e ORC perché il comando COPY divider�
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Sono previste limitazioni per il numero o le dimensioni dei file?
 Non sono previste limitazioni per il numero o le dimensioni dei file. Per assicurare prestazioni ottimali, tuttavia, è consigliabile usare file di almeno 4 MB.
 
-### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>Sono previste limitazioni per il comando COPY usando le aree di lavoro di Synapse (anteprima)?
-
-L'autenticazione con identità gestita (MSI) non è supportata con l'istruzione COPY o PolyBase (compreso quando viene usata nelle pipeline). È possibile che venga eseguito un messaggio di errore simile al seguente:
-
-*com.microsoft.sqlserver.jdbc.SQLServerException: L'identità del servizio gestita non è stata abilitata in questo server. Abilitare l'identità del servizio gestita e riprovare.*
-
-L'autenticazione con identità gestita è obbligatoria quando l'account di archiviazione è associato a una rete virtuale. È necessario usare un inserimento BCP/Bulk per caricare i dati invece del comando COPY o PolyBase se l'account di archiviazione è collegato a una rete virtuale.
-
-Questa limitazione è applicabile solo ai pool SQL che appartengono a un'area di lavoro di Synapse (anteprima). Il supporto dell'identità del servizio gestita nelle aree di lavoro di Synapse verrà abilitato in una versione futura. 
-
-Inviare feedback o problemi alla lista di distribuzione seguente: sqldwcopypreview@service.microsoft.com
 
 ## <a name="see-also"></a>Vedere anche  
 

@@ -4,7 +4,7 @@ description: Informazioni su come il motore di database di SQL Server accede all
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 125a95f14f7082a3ed806d6dfa7fcb05b6d11c81
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890767"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96505073"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastruttura di profilatura delle query
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ L'*infrastruttura del profilo delle statistiche di esecuzione query* o profilatu
 
 I seguenti metodi di raccolta delle informazioni sui piani di esecuzione per **tutte le sessioni** usano l'infrastruttura di profilatura standard:
 
--  Evento esteso ***query_post_execution_showplan***. Per abilitare gli eventi estesi, vedere [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
-- Evento traccia **Showplan XML** in [Traccia SQL](../../relational-databases/sql-trace/sql-trace.md) e [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). Per altre informazioni sull'evento traccia, vedere [Classe di evento Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md).
+-  Evento esteso **_query_post_execution_showplan_* _. Per abilitare gli eventi estesi, vedere [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
+- Evento traccia _ *Showplan XML** in [Traccia SQL](../../relational-databases/sql-trace/sql-trace.md) e [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). Per altre informazioni sull'evento traccia, vedere [Classe di evento Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md).
 
 Durante l'esecuzione di una sessione di eventi estesi che usa l'evento *query_post_execution_showplan*, viene popolata anche la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) che abilita le statistiche di query dinamiche per tutte le sessioni usando [Monitoraggio attività](../../relational-databases/performance-monitor/activity-monitor.md) o eseguendo la query direttamente nella DMV. Per altre informazioni, vedere [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md).
 
@@ -64,7 +64,7 @@ A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[s
   
 A partire [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], con l'introduzione della profilatura lightweight è stato ridotto l'overhead delle prestazioni per raccogliere informazioni sui piani di esecuzione. A differenza della profilatura standard, la profilatura lightweight non raccoglie informazioni di runtime della CPU. La profilatura lightweight continua comunque a raccogliere il totale di righe conteggio delle righe e le informazioni sull'utilizzo dell'I/O.
 
-È stato anche introdotto un nuovo evento esteso ***query_thread_profile*** che usa la profilatura lightweight. Questo evento esteso espone le statistiche di esecuzione di ogni operatore offrendo informazioni più approfondite sulle prestazioni di ogni nodo e thread. È possibile configurare una sessione di esempio che usa questo evento esteso come illustrato nell'esempio che segue:
+È stato anche introdotto un nuovo evento esteso **_query_thread_profile_* _ che usa la profilatura lightweight. Questo evento esteso espone le statistiche di esecuzione di ogni operatore offrendo informazioni più approfondite sulle prestazioni di ogni nodo e thread. È possibile configurare una sessione di esempio che usa questo evento esteso come illustrato nell'esempio che segue:
 
 ```sql
 CREATE EVENT SESSION [NodePerfStats] ON SERVER
@@ -86,7 +86,7 @@ WITH (MAX_MEMORY=4096 KB,
 > [!NOTE]
 > Per altre informazioni sull'overhead delle prestazioni della profilatura di query, vedere il post di blog [Developers Choice: Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere) (Scelta degli sviluppatori: Avanzamento delle query, sempre e dovunque). 
 
-Durante l'esecuzione di una sessione di eventi estesi che usa l'evento *query_thread_profile*, viene popolata anche la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) tramite la profilatura lightweight e vengono abilitate le statistiche di query dinamiche per tutte le sessioni usando [Monitoraggio attività](../../relational-databases/performance-monitor/activity-monitor.md) o eseguendo la query direttamente nella DMV.
+Durante l'esecuzione di una sessione di eventi estesi che usa l'evento _query_thread_profile*, viene popolata anche la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) tramite la profilatura lightweight e vengono abilitate le statistiche di query dinamiche per tutte le sessioni usando [Monitoraggio attività](../../relational-databases/performance-monitor/activity-monitor.md) o eseguendo la query direttamente nella DMV.
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Infrastruttura di profilatura delle statistiche di esecuzione query lightweight v2
 
@@ -94,7 +94,7 @@ Durante l'esecuzione di una sessione di eventi estesi che usa l'evento *query_th
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 include una versione rivista della profilatura lightweight con un overhead minimo. La profilatura lightweight può essere anche abilitata a livello globale tramite il [flag di traccia 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) per le versioni indicate nella sezione precedente *Si applica a*. Una nuova DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) viene introdotta per restituire il piano di esecuzione query per le richieste in elaborazione.
 
-A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, se la profilatura lightweight non è abilitata globalmente, è possibile usare il nuovo argomento **QUERY_PLAN_PROFILE** dell'[hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) per abilitare la profilatura a livello di query per qualsiasi sessione. Al termine dell'esecuzione di una query contenente questo nuovo hint, viene generato anche un nuovo evento esteso ***query_plan_profile*** che fornisce l'XML di un piano di esecuzione effettivo simile all'evento esteso *query_post_execution_showplan*. 
+A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, se la profilatura lightweight non è abilitata globalmente, è possibile usare il nuovo argomento **QUERY_PLAN_PROFILE** dell'[hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) per abilitare la profilatura a livello di query per qualsiasi sessione. Al termine dell'esecuzione di una query contenente questo nuovo hint, viene generato anche un nuovo evento esteso **_query_plan_profile_* che fornisce l'XML di un piano di esecuzione effettivo simile all'evento esteso _query_post_execution_showplan*. 
 
 > [!NOTE]
 > L'evento esteso *query_plan_profile* si avvale anche della profilatura leggera benché non venga usato l'hint per la query. 

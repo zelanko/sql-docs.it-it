@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05995a1205677bbeefbb2b025268af20e445a1b4
-ms.sourcegitcommit: ab68925e9869e6cf5b39efdb415ecc8e8f5b08fc
+ms.openlocfilehash: 7888360aa4d4bdfa9b9eb782226f718d8f503ff8
+ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93417422"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443104"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ Crea un'origine dati esterna per le query PolyBase. Le origini dati esterne veng
 - Virtualizzazione dati e caricamento dati con [PolyBase][intro_pb]
 - Operazioni di caricamento bulk con `BULK INSERT` o `OPENROWSET`
 
-**Si applica a** : A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
+**Si applica a**: A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
 
 ## <a name="syntax"></a>Sintassi
 
@@ -732,7 +732,7 @@ Specifica una credenziale con ambito database per l'autenticazione nell'origine 
 
 Note aggiuntive e indicazioni utili per la creazione delle credenziali:
 
-- Per caricare i dati da Archiviazione di Azure o Azure Data Lake Store (ADLS) Gen 2 in SQL DW, usare una chiave di archiviazione di Azure.
+- Per caricare i dati da Archiviazione di Azure o Azure Data Lake Store (ADLS) Gen 2 in Azure Synapse Analytics, usare una chiave di archiviazione di Azure.
 - `CREDENTIAL` è obbligatorio solo se i dati sono stati protetti. `CREDENTIAL` non è obbligatorio per i set di dati che consentono l'accesso anonimo.
 
 Per creare credenziali con ambito database, vedere [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
