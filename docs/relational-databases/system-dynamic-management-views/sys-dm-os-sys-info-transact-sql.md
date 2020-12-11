@@ -23,12 +23,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5419919b14c15615cb84d124387c98e9ba2e90a5
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 1f905eed2d4dfdbbd7167171282922739978d386
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834434"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332960"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "91834434"
 |**softnuma_configuration_desc**|**nvarchar(60)**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive.<br /><br /> DISATTIVATO = la funzionalità Soft-NUMA è disattivata<br /><br /> ON = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina automaticamente le dimensioni dei nodi NUMA per soft-NUMA<br /><br /> MANUAL = configurazione soft-NUMA manualmente|
 |**process_physical_affinity**|**nvarchar (3072)** |**Si applica a:** A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] .<br /><br />Informazioni ancora disponibili. |
 |**sql_memory_model**|**int**|**Si applica a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive.<br /><br />Specifica il modello di memoria utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per allocare memoria. Non ammette i valori NULL.<br /><br />1 = modello di memoria convenzionale<br />2 = blocco di pagine in memoria<br /> 3 = pagine di grandi dimensioni in memoria|
-|**sql_memory_model_desc**|**nvarchar(120)**|**Si applica a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive.<br /><br />Specifica il modello di memoria utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per allocare memoria. Non ammette i valori NULL.<br /><br />**CONVENTIONAL**  =  Convenzionale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Usa il modello di memoria convenzionale per allocare memoria. Si tratta di un modello di memoria SQL predefinito quando l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio non dispone dei privilegi di blocco delle pagine in memoria durante l'avvio.<br />**LOCK_PAGES**  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] USA blocco di pagine in memoria per allocare memoria. Gestione memoria SQL predefinita quando SQL Server account del servizio possiede il privilegio blocco di pagine in memoria durante SQL Server avvio.<br /> **LARGE_PAGES**  =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza pagine di grandi dimensioni in memoria per allocare memoria. SQL Server utilizza l'allocatore di pagine di grandi dimensioni per allocare memoria solo con Enterprise Edition quando l'account del servizio SQL Server dispone del privilegio blocco di pagine in memoria durante l'avvio del server e quando il flag di traccia 834 è attivato.|
+|**sql_memory_model_desc**|**nvarchar(120)**|**Si applica a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive.<br /><br />Specifica il modello di memoria utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per allocare memoria. Non ammette i valori NULL.<br /><br />  =  Convenzionale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Usa il modello di memoria convenzionale per allocare memoria. Si tratta di un modello di memoria SQL predefinito quando l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio non dispone dei privilegi di blocco delle pagine in memoria durante l'avvio.<br />  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] USA blocco di pagine in memoria per allocare memoria. Gestione memoria SQL predefinita quando SQL Server account del servizio possiede il privilegio blocco di pagine in memoria durante SQL Server avvio.<br />   =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza pagine di grandi dimensioni in memoria per allocare memoria. SQL Server utilizza l'allocatore di pagine di grandi dimensioni per allocare memoria solo con Enterprise Edition quando l'account del servizio SQL Server dispone del privilegio blocco di pagine in memoria durante l'avvio del server e quando il flag di traccia 834 è attivato.|
 |**pdw_node_id**|**int**|**Si applica a:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
 |**socket_count** |**int** | **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e versioni successive.<br /><br />Specifica il numero di socket del processore disponibili nel sistema. |  
 |**cores_per_socket** |**int** | **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e versioni successive.<br /><br />Specifica il numero di processori per socket disponibili nel sistema. |  
@@ -84,7 +84,7 @@ ms.locfileid: "91834434"
 ## <a name="permissions"></a>Autorizzazioni
 
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .   
+Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
 
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

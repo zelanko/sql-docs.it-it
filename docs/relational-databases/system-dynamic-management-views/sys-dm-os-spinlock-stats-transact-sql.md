@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 31f89519a70612ba22c2fda79218d9d92153109f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 05e8698484f9445de7a5fb3265d1e0e294dc65d7
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810107"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332075"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -42,16 +42,16 @@ Restituisce informazioni su tutte le attese di SpinLock organizzate in base al t
 |name|**nvarchar(256)**|Nome del tipo SpinLock.|  
 |conflitti|**bigint**|Numero di volte in cui un thread tenta di acquisire lo spinlock ed è bloccato perché un altro thread attualmente possiede SpinLock.|  
 |giri|**bigint**|Numero di volte in cui un thread esegue un ciclo durante il tentativo di acquisizione di SpinLock.|  
-|spins_per_collision|**real**|Rapporto di spine per collisione.|  
+|spins_per_collision|**real**|Rapporto di rotazioni per conflitto.|  
 |sleep_time|**bigint**|Quantità di tempo in millisecondi impiegato dai thread per la sospensione in caso di backoff.|  
 |backoff|**int**|Il numero di volte in cui un thread che è "Spinning" non riesce ad acquisire il spinlock e restituisce l'utilità di pianificazione.|  
 
 
 ## <a name="permissions"></a>Autorizzazioni  
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .    
+Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.    
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  
  sys.dm_os_spinlock_stats può essere utilizzato per identificare l'origine della contesa di SpinLock. In alcune situazioni, potrebbe essere possibile risolvere o ridurre la contesa di SpinLock. Si possono tuttavia presentare situazioni in cui è necessario contattare il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
@@ -72,7 +72,7 @@ GO
    
  La tabella seguente contiene brevi descrizioni di alcuni dei tipi più comuni di SpinLock.  
   
-|Tipo SpinLock|Descrizione|  
+|Tipo SpinLock|Description|  
 |-----------------|-----------------|  
 |ABR|Solo per uso interno.|
 |ADB_CACHE|Solo per uso interno.|

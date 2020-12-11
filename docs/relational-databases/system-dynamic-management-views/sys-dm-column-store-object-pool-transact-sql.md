@@ -14,12 +14,12 @@ ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ead8a41e3ac6aea721603df7bcf288dbcef80d0
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+ms.openlocfilehash: e258c1b095c4b43ebf23957a721d40c5254d6edc
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036087"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329951"
 ---
 # <a name="sysdm_column_store_object_pool-transact-sql"></a>sys.dm_column_store_object_pool (Transact-SQL)
 
@@ -27,24 +27,24 @@ ms.locfileid: "93036087"
 
  Restituisce i conteggi dei diversi tipi di utilizzo del pool di memoria oggetto per gli oggetti dell'indice columnstore.  
   
-|Nome della colonna|Tipo di dati|Descrizione|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**database_id**|int|ID del database. Questa operazione è univoca all'interno di un'istanza di un database SQL Server o di un server di database SQL di Azure. |  
-|**object_id**|int|ID dell'oggetto. L'oggetto è uno dei object_types. | 
-|**index_id**|int|ID dell'indice columnstore.|  
+|**database_id**|INT|ID del database. Questa operazione è univoca all'interno di un'istanza di un database SQL Server o di un server di database SQL di Azure. |  
+|**object_id**|INT|ID dell'oggetto. L'oggetto è uno dei object_types. | 
+|**index_id**|INT|ID dell'indice columnstore.|  
 |**partition_number**|bigint|Numero di partizione in base 1 all'interno dell'indice o heap. Ogni tabella o vista include almeno una partizione.| 
-|**column_id**|int|ID della colonna columnstore. Questo valore è NULL per DELETE_BITMAP.| 
-|**row_group_id**|int|ID di rowgroup.|
-|**object_type**|smallint|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
+|**column_id**|INT|ID della colonna columnstore. Questo valore è NULL per DELETE_BITMAP.| 
+|**row_group_id**|INT|ID di rowgroup.|
+|**object_type**|SMALLINT|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
 |**object_type_desc**|nvarchar(60)|COLUMN_SEGMENT-un segmento di colonna. `object_id` ID del segmento. Un segmento archivia tutti i valori di una colonna all'interno di un rowgroup. Se, ad esempio, una tabella contiene 10 colonne, saranno presenti 10 segmenti di colonna per ogni rowgroup. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY: dizionario globale che contiene informazioni di ricerca per tutti i segmenti di colonna della tabella.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY: un dizionario locale associato a una colonna.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY: un'altra rappresentazione del dizionario globale. Questa operazione fornisce una ricerca inversa del valore da dictionary_id. Utilizzato per creare segmenti compressi come parte del motore di tupla o del caricamento bulk.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP: bitmap che tiene traccia delle eliminazioni di segmenti. Esiste una bitmap Delete per partizione.|  
-|**access_count**|int|Numero di accessi in lettura o scrittura a questo oggetto.|  
+|**access_count**|INT|Numero di accessi in lettura o scrittura a questo oggetto.|  
 |**memory_used_in_bytes**|bigint|Memoria utilizzata da questo oggetto nel pool di oggetti.|  
 |**object_load_time**|Datetime|Tempo di clock per il momento in cui object_id è stato introdotto nel pool di oggetti.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
 
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .   
+Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
  
 ## <a name="see-also"></a>Vedere anche  
   

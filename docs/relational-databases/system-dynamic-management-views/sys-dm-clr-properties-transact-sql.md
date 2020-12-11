@@ -1,6 +1,6 @@
 ---
 description: sys.dm_clr_properties (Transact-SQL)
-title: sys. dm_clr_properties (Transact-SQL) | Microsoft Docs
+title: sys.dm_clr_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7f966cbb5570eb1efb2068d7796ccecb4463750
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e313b3e873fbd59a53306475d0641ddbe5566703
+ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551297"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330025"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
-  Restituisce una riga per ogni proprietà associata all'integrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Common Language Runtime (CLR), inclusi la versione e lo stato del CLR hosted. Il CLR hosted viene inizializzato eseguendo le istruzioni [create assembly](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)o [Drop assembly](../../t-sql/statements/drop-assembly-transact-sql.md) oppure eseguendo qualsiasi routine, tipo o trigger CLR. La vista **sys. dm_clr_properties** non specifica se l'esecuzione del codice CLR utente è stata abilitata nel server. L'esecuzione del codice CLR utente viene abilitata utilizzando la [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) stored procedure con l'opzione [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) impostata su 1.  
+  Restituisce una riga per ogni proprietà associata all'integrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Common Language Runtime (CLR), inclusi la versione e lo stato del CLR hosted. Il CLR hosted viene inizializzato eseguendo le istruzioni [create assembly](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)o [Drop assembly](../../t-sql/statements/drop-assembly-transact-sql.md) oppure eseguendo qualsiasi routine, tipo o trigger CLR. La vista **sys.dm_clr_properties** non specifica se l'esecuzione del codice CLR utente è stata abilitata nel server. L'esecuzione del codice CLR utente viene abilitata utilizzando la [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) stored procedure con l'opzione [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) impostata su 1.  
   
- La vista **sys. dm_clr_properties** contiene le colonne **Name** e **value** . Ogni riga della vista include dettagli su una proprietà del CLR hosted. È possibile utilizzare questa vista per raccogliere informazioni sul CLR hosted, ad esempio la directory di installazione di CLR, la versione di CLR e lo stato corrente del CLR hosted. La vista consente inoltre di determinare se il codice dell'integrazione con CLR non funziona a causa di problemi relativi all'installazione di CLR nel computer server.  
+ La vista **sys.dm_clr_properties** contiene le colonne **nome** e **valore** . Ogni riga della vista include dettagli su una proprietà del CLR hosted. È possibile utilizzare questa vista per raccogliere informazioni sul CLR hosted, ad esempio la directory di installazione di CLR, la versione di CLR e lo stato corrente del CLR hosted. La vista consente inoltre di determinare se il codice dell'integrazione con CLR non funziona a causa di problemi relativi all'installazione di CLR nel computer server.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "89551297"
   
  La proprietà **Version** indica la versione del .NET Framework e del CLR ospitato nel server.  
   
- La vista gestita dinamica **sys. dm_clr_properties** può restituire sei valori diversi per la proprietà **state** , che riflette lo stato del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hosted. ovvero:  
+ La **sys.dm_clr_properties** vista gestita dinamica può restituire sei valori diversi per la proprietà **state** , che riflette lo stato del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hosted. Ad esempio:  
   
 -   Mscoree is not loaded.  
   
@@ -69,15 +69,15 @@ ms.locfileid: "89551297"
   
  Lo **stato di CLR arrestato** viene visualizzato solo quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in corso l'arresto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le proprietà e i valori di questa visualizzazione potrebbero cambiare in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a causa dei miglioramenti della funzionalità di integrazione con CLR.  
   
 ## <a name="permissions"></a>Autorizzazioni  
   
 In è [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] richiesta l' `VIEW SERVER STATE` autorizzazione.   
-Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l'  **amministratore del server** o un account **amministratore Azure Active Directory** .   
+Negli obiettivi dei Servizi Basic, S0 e S1 del database SQL e per i database in pool elastici, il `Server admin` o un `Azure Active Directory admin` account è obbligatorio. Per tutti gli altri obiettivi del servizio di database SQL, `VIEW DATABASE STATE` è necessaria l'autorizzazione nel database.   
 
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  L'esempio seguente recupera informazioni relative al CLR hosted:  
   
 ```  
