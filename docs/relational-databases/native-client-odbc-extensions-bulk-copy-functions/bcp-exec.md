@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41b4fca44f8dab8d4cb2eac1211387d27004b7c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 06e9cdecd37e5fc1f78de6726384715ad7b8c9bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494144"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97406835"
 ---
 # <a name="bcp_exec"></a>bcp_exec
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ RETCODE bcp_exec (
 ## <a name="returns"></a>Restituisce  
  SUCCEED, SUCCEED_ASYNC o FAIL. La funzione **bcp_exec** restituisce esito positivo se vengono copiate tutte le righe. **bcp_exec** restituisce SUCCEED_ASYNC se un'operazione di copia bulk asincrona è ancora in attesa. **bcp_exec** restituisce esito negativo se si verifica un errore completo o se il numero di righe che generano errori raggiunge il valore specificato per BCPMAXERRS utilizzando [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md). Il valore predefinito BCPMAXERRS è 10. L'opzione BCPMAXERRS influisce solo sugli errori di sintassi rilevati dal provider durante la lettura delle righe dal file di dati, ma non delle righe inviate al server. Il server interrompe il batch quando rileva un errore con una riga. Controllare il parametro *pnRowsProcessed* per il numero di righe copiate correttamente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa funzione copia i dati da un file utente a una tabella di database o viceversa, a seconda del valore del parametro *eDirection* in [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
   
  Prima di chiamare **bcp_exec**, chiamare **bcp_init** con un nome di file utente valido. In caso contrario, viene generato un errore.  

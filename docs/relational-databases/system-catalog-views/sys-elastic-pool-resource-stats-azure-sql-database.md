@@ -18,13 +18,13 @@ ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 39db2d1bd2d3525e1dc2902c11e362d70b212ebd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: dbe893e86824ad727b7eaca96b4e01e4ded971d5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809865"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405027"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "91809865"
 |**elastic_pool_storage_limit_mb**|**bigint**|Impostazione del limite massimo di archiviazione del pool elastico corrente per questo pool elastico espresso in megabyte durante l'intervallo.|
 |**avg_allocated_storage_percent**|**Decimal (5, 2)**|Percentuale di spazio dati allocato da tutti i database nel pool elastico.  Questo è il rapporto tra lo spazio dati allocato e le dimensioni massime dei dati per il pool elastico.  Per ulteriori informazioni, vedere la pagina relativa [alla gestione dello spazio file nel database SQL](/azure/sql-database/sql-database-file-space-management)|  
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
  Questa vista è presente nel database master del server di database SQL. Per eseguire una query **sys.elastic_pool_resource_stats**, è necessario essere connessi al database master.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "91809865"
 
  È richiesta l'appartenenza al ruolo **dbmanager** .  
   
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
  Nell'esempio seguente vengono restituiti i dati di utilizzo delle risorse ordinati in base all'ora più recente per tutti i pool di database elastici nel server di database SQL corrente.  
   

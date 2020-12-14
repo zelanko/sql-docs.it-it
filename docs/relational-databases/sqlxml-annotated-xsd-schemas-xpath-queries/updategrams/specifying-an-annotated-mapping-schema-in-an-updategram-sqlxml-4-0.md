@@ -21,13 +21,13 @@ ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06299f367f987cfc716154f4d26ffb8e5e07a868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c8643c40f7b62c0a0fdc3d85d32111d05ee955f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760416"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405112"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Specifica di uno schema di mapping con annotazioni in un updategram (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "85760416"
 >  In questa documentazione si presuppone che l'utente disponga di una certa familiarità con i modelli e il supporto dello schema di mapping in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Introduzione agli schemi XSD con Annotazioni &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Per le applicazioni legacy che usano XDR, vedere la pagina relativa agli [schemi XDR con Annotazioni &#40;deprecati in SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Gestione dei tipi di dati  
- Se lo schema specifica il tipo di dati **Image**, **Binary**o **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (tramite **SQL: DataType**) e non specifica un tipo di dati XML, l'updategram presuppone che il tipo di dati XML sia **binario di base 64**. Se i dati sono di tipo **bin. base** , è necessario specificare in modo esplicito il tipo (**DT: type = bin. base** o **Type = "xsd: hexBinary"**).  
+ Se lo schema specifica il tipo di dati **Image**, **Binary** o **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (tramite **SQL: DataType**) e non specifica un tipo di dati XML, l'updategram presuppone che il tipo di dati XML sia **binario di base 64**. Se i dati sono di tipo **bin. base** , è necessario specificare in modo esplicito il tipo (**DT: type = bin. base** o **Type = "xsd: hexBinary"**).  
   
- Se lo schema specifica il tipo di dati XSD **DateTime**, **date**o **Time** , è necessario specificare anche il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati corrispondente utilizzando **SQL: DataType = "DateTime"**.  
+ Se lo schema specifica il tipo di dati XSD **DateTime**, **date** o **Time** , è necessario specificare anche il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati corrispondente utilizzando **SQL: DataType = "DateTime"**.  
   
  Quando si gestiscono parametri di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo **Money** , è necessario specificare in modo esplicito **SQL: DataType = "Money"** sul nodo appropriato nello schema di mapping.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per creare esempi funzionanti utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati nei [requisiti per l'esecuzione di esempi SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>R. Creazione di un updategram con uno schema di mapping semplice  

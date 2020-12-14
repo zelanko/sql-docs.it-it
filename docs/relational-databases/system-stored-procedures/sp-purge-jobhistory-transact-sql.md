@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c804e5fbeb61a62ae7a615d09085e0dea8ee61d0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6d65e13bdcf03aab38786b519dfaeb6e58004a27
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535030"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404226"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,14 +44,14 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_name = ] 'job_name'` Nome del processo per il quale eliminare i record della cronologia. *job_name*è di **tipo sysname**e il valore predefinito è null. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
+`[ @job_name = ] 'job_name'` Nome del processo per il quale eliminare i record della cronologia. *job_name* è di **tipo sysname** e il valore predefinito è null. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
 > [!NOTE]  
 >  I membri del ruolo predefinito del server **sysadmin** o i membri del ruolo predefinito del database **SQLAgentOperatorRole** possono eseguire **sp_purge_jobhistory** senza specificare un *job_name* o *job_id*. Quando gli utenti **sysadmin** non specificano questi argomenti, la cronologia processo per tutti i processi locali e multiserver viene eliminata entro il tempo specificato da *oldest_date*. Quando gli utenti di **SQLAgentOperatorRole** non specificano questi argomenti, la cronologia processo per tutti i processi locali viene eliminata entro il tempo specificato da *oldest_date*.  
   
-`[ @job_id = ] job_id` Numero di identificazione del processo dei record da eliminare. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi. Vedere la nota nella descrizione di ** \@ job_name** per informazioni sul modo in cui gli utenti **sysadmin** o **SQLAgentOperatorRole** possono usare questo argomento.  
+`[ @job_id = ] job_id` Numero di identificazione del processo dei record da eliminare. *job_id* è di tipo **uniqueidentifier** e il valore predefinito è null. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi. Vedere la nota nella descrizione di **\@ job_name** per informazioni sul modo in cui gli utenti **sysadmin** o **SQLAgentOperatorRole** possono usare questo argomento.  
   
-`[ @oldest_date = ] oldest_date` Il record meno recente da conservare nella cronologia. *oldest_date* è di tipo **DateTime**e il valore predefinito è null. Quando si specifica *oldest_date* , **sp_purge_jobhistory** rimuove solo i record precedenti al valore specificato.  
+`[ @oldest_date = ] oldest_date` Il record meno recente da conservare nella cronologia. *oldest_date* è di tipo **DateTime** e il valore predefinito è null. Quando si specifica *oldest_date* , **sp_purge_jobhistory** rimuove solo i record precedenti al valore specificato.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
@@ -67,7 +67,7 @@ sp_purge_jobhistory
   
  Per gli altri utenti, inclusi i membri di **SQLAgentUserRole** e i membri di **SQLAgentReaderRole**, deve essere concessa in modo esplicito l'autorizzazione Execute per **sp_purge_jobhistory**. Dopo la concessione dell'autorizzazione EXECUTE per questa stored procedure, a tali utenti è consentito eliminare solo la cronologia dei processi di cui sono proprietari.  
   
- I ruoli predefiniti del database **SQLAgentUserRole**, **SQLAgentReaderRole**e **SQLAgentOperatorRole** si trovano nel database **msdb** . Per informazioni dettagliate sulle autorizzazioni, vedere [SQL Server Agent ruoli](../../ssms/agent/sql-server-agent-fixed-database-roles.md)predefiniti del database.  
+ I ruoli predefiniti del database **SQLAgentUserRole**, **SQLAgentReaderRole** e **SQLAgentOperatorRole** si trovano nel database **msdb** . Per informazioni dettagliate sulle autorizzazioni, vedere [SQL Server Agent ruoli](../../ssms/agent/sql-server-agent-fixed-database-roles.md)predefiniti del database.  
   
 ## <a name="examples"></a>Esempi  
   

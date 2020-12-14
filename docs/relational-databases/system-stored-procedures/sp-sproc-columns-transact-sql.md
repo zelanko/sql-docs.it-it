@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 756b50b22b470ec8dcf3f54467af78e71558ea1c
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 180d57f7daacb1f7aeb6b638dba03f893340c1d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006491"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97404210"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,17 +49,17 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ## <a name="arguments"></a>Argomenti  
 `[ @procedure_name = ] 'name'` Nome della procedura utilizzata per restituire le informazioni del catalogo. *Name* è di **tipo nvarchar (** 390 **)** e il valore predefinito è%, che indica tutte le tabelle del database corrente. La ricerca con caratteri jolly è supportata.  
   
-`[ @procedure_owner = ] 'owner'` Nome del proprietario della stored procedure. *owner*è di **tipo nvarchar (** 384 **)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata. Se il *proprietario* non è specificato, vengono applicate le regole di visibilità predefinite della procedura del sistema DBMS sottostante.  
+`[ @procedure_owner = ] 'owner'` Nome del proprietario della stored procedure. *owner* è di **tipo nvarchar (** 384 **)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata. Se il *proprietario* non è specificato, vengono applicate le regole di visibilità predefinite della procedura del sistema DBMS sottostante.  
   
- Se l'utente corrente è il proprietario di una procedura avente il nome specificato, vengono restituite informazioni su tale procedura. Se il *proprietario*non è specificato e l'utente corrente non è il proprietario di una routine con il nome specificato, **sp_sproc_columns** ricerca una procedura con il nome specificato di proprietà del proprietario del database. Se tale procedura viene individuata, vengono restituite informazioni sulle colonne corrispondenti.  
+ Se l'utente corrente è il proprietario di una procedura avente il nome specificato, vengono restituite informazioni su tale procedura. Se il *proprietario* non è specificato e l'utente corrente non è il proprietario di una routine con il nome specificato, **sp_sproc_columns** ricerca una procedura con il nome specificato di proprietà del proprietario del database. Se tale procedura viene individuata, vengono restituite informazioni sulle colonne corrispondenti.  
   
-`[ @procedure_qualifier = ] 'qualifier'` Nome del qualificatore della procedura. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+`[ @procedure_qualifier = ] 'qualifier'` Nome del qualificatore della procedura. *Qualifier* è di **tipo sysname** e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
 `[ @column_name = ] 'column_name'` È una singola colonna e viene utilizzata quando si desidera una sola colonna di informazioni di catalogo. *column_name* è di **tipo nvarchar (** 384 **)** e il valore predefinito è null. Se *column_name* viene omesso, vengono restituite tutte le colonne. La ricerca con caratteri jolly è supportata. Per ottenere la massima interoperabilità, è consigliabile che nel client del gateway vengano utilizzati solo i caratteri jolly dello standard ISO, ovvero i caratteri % e _.  
   
-`[ @ODBCVer = ] 'ODBCVer'` Versione di ODBC in uso. *ODBCVer* è di **tipo int**e il valore predefinito è 2, che indica ODBC versione 2,0. Per ulteriori informazioni sulla differenza tra ODBC versione 2,0 e ODBC versione 3,0, vedere la specifica ODBC **SQLProcedureColumns** per odbc versione 3,0  
+`[ @ODBCVer = ] 'ODBCVer'` Versione di ODBC in uso. *ODBCVer* è di **tipo int** e il valore predefinito è 2, che indica ODBC versione 2,0. Per ulteriori informazioni sulla differenza tra ODBC versione 2,0 e ODBC versione 3,0, vedere la specifica ODBC **SQLProcedureColumns** per odbc versione 3,0  
   
-`[ @fUsePattern = ] 'fUsePattern'` Determina se i caratteri di sottolineatura (_), percentuale (%) e parentesi quadra ([]) vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit**e il valore predefinito è 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina se i caratteri di sottolineatura (_), percentuale (%) e parentesi quadra ([]) vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è di **bit** e il valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  Nessuno  
@@ -90,7 +90,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**SS_DATA_TYPE**|**tinyint**|Tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato dalle stored procedure estese. Per altre informazioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
   
 ## <a name="remarks"></a>Commenti  
- **sp_sproc_columns** è equivalente a **SQLProcedureColumns** in ODBC. I risultati restituiti vengono ordinati in base **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **procedure_name**e l'ordine in cui i parametri vengono visualizzati nella definizione della procedura.  
+ **sp_sproc_columns** è equivalente a **SQLProcedureColumns** in ODBC. I risultati restituiti vengono ordinati in base **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **procedure_name** e l'ordine in cui i parametri vengono visualizzati nella definizione della procedura.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  

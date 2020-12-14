@@ -1,6 +1,6 @@
 ---
 description: sys.master_files (Transact-SQL)
-title: sys. master_files (Transact-SQL) | Microsoft Docs
+title: sys.master_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ecf00931301e468f3fcaa92b95e15f778bd1607c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3bd6320435c372b99d9b88f9e0ecc7e41c41cf90
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548701"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405399"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89548701"
 |physical_name|**nvarchar(260)**|Nome del file del sistema operativo.|  
 |state|**tinyint**|Stato del file:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|Descrizione dello stato del file:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Per altre informazioni, vedere [Stati del file](../../relational-databases/databases/file-states.md).|  
-|size|**int**|Dimensioni del file corrente espresse in pagine da 8 KB. Per uno snapshot del database, il valore size corrisponde allo spazio massimo utilizzabile dallo snapshot per il file.<br /><br /> Nota: questo campo è popolato come zero per i contenitori FILESTREAM. Eseguire una query sulla vista del catalogo *sys. database_files* per le dimensioni effettive dei contenitori FILESTREAM.|  
+|size|**int**|Dimensioni del file corrente espresse in pagine da 8 KB. Per uno snapshot del database, il valore size corrisponde allo spazio massimo utilizzabile dallo snapshot per il file.<br /><br /> Nota: questo campo è popolato come zero per i contenitori FILESTREAM. Eseguire una query sulla vista del catalogo *sys.database_files* per le dimensioni effettive dei contenitori FILESTREAM.|  
 |max_size|**int**|Dimensioni massime del file espresse in pagine da 8 KB.<br /><br /> 0 = Non è consentito alcun aumento.<br /><br /> -1 = La dimensione del file aumenterà finché il disco è pieno.<br /><br /> 268435456 = La dimensione del file di log aumenterà fino al valore massimo di 2 TB.<br /><br /> Nota: i database aggiornati con una dimensione di file di log illimitata segnaleranno-1 per le dimensioni massime del file di log.|  
 |growth|**int**|0 = La dimensione del file è fissa e non aumenterà.<br /><br /> >0 = il file aumenterà automaticamente.<br /><br /> Se is_percent_growth = 0, viene applicato un incremento in unità pari a pagine da 8 KB, con un arrotondamento al blocco di 64 KB più prossimo.<br /><br /> Se is_percent_growth = 1, il valore dell'aumento di dimensioni è espresso come percentuale (numero intero).|  
 |is_media_read_onlyF|**bit**|1 = Il file si trova in un supporto con accesso in sola lettura.<br /><br /> 0 = Il file si trova in un supporto con accesso in lettura/scrittura.|  
