@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d42d51371b0641fe460150e68fe96c5eb68e09cb
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 0b5f930568e655df645cbaed140f163ada3e3afa
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412552"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96934028"
 ---
 # <a name="r-tutorial-train-and-save-model"></a>Esercitazione su R: Eseguire il training e salvare un modello
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -79,7 +79,7 @@ Quando si chiama R da T-SQL, si usa la stored procedure di sistema [sp_execute_e
   
    + Lo script R chiama la funzione R **glm** per creare il modello di regressione logistica.
   
-     La variabile binaria _tipped_ viene usata come *etichetta* o come colonna dei risultati. Il modello si adatta usando le colonne delle funzionalità seguenti:  _passenger_count_ , _trip_distance_ , _trip_time_in_secs_ e _direct_distance_.
+     La variabile binaria _tipped_ viene usata come *etichetta* o come colonna dei risultati. Il modello si adatta usando le colonne delle funzionalità seguenti:  _passenger_count_, _trip_distance_, _trip_time_in_secs_ e _direct_distance_.
   
    + Il modello sottoposto a training salvato nella variabile R `logitObj` viene serializzato e restituito come parametro di output.
 
@@ -87,7 +87,7 @@ Quando si chiama R da T-SQL, si usa la stored procedure di sistema [sp_execute_e
 
 Poiché la stored procedure include già una definizione dei dati di input, non è necessario specificare una query di input.
 
-1. Per eseguire il training e la distribuzione del modello R, chiamare la stored procedure e inserirla nella tabella di database _nyc_taxi_models_ , in modo che sia possibile farne uso per stime future:
+1. Per eseguire il training e la distribuzione del modello R, chiamare la stored procedure e inserirla nella tabella di database _nyc_taxi_models_, in modo che sia possibile farne uso per stime future:
 
    ```sql
    DECLARE @model VARBINARY(MAX);
@@ -101,7 +101,7 @@ Poiché la stored procedure include già una definizione dei dati di input, non 
 
 3. Dopo il completamento dell'istruzione, aprire la tabella *nyc_taxi_models*. L'elaborazione dei dati e l'adattamento del modello possono richiedere un po' di tempo.
 
-   È possibile notare che è stata aggiunta una nuova riga contenente il modello serializzato nella colonna _model_ e il nome del modello **TrainLog_model** nella colonna _name_.
+   È possibile notare che è stata aggiunta una nuova riga nuova contenente il modello serializzato nella colonna _model_ e il nome del modello **RTrainLogit_model** nella colonna _name_.
 
    ```text
    model                        name

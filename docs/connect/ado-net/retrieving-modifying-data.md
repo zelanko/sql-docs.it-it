@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 8fc6a8ed3cf4fec9b97b81c38fb1667588623ba7
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: d6e4d6c298c632c446e1671b5d9adabaa19e0776
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419741"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761489"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recupero e modifica di dati in ADO.NET
 
@@ -27,13 +27,23 @@ La connessione a un'origine dati e il recupero dei dati in essa contenuti sono f
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Connessione a un'origine dati](connecting-to-data-source.md) Descrive come stabilire una connessione a un'origine dati e come usare gli eventi di connessione.
+[Connessione a un'origine dati](connecting-to-data-source.md)  
+Viene descritto come stabilire una connessione a un'origine dati e come usare gli eventi di connessione.
 
-[Stringhe di connessione](connection-strings.md) Contiene argomenti che descrivono diversi aspetti dell'uso delle stringhe di connessione, tra cui le parole chiave, le informazioni di sicurezza e l'archiviazione e il recupero delle stringhe di connessione stesse.
+[Stringhe di connessione](connection-strings.md)  
+Sono inclusi argomenti in cui vengono descritti diversi aspetti relativi all'utilizzo delle stringhe di connessione, quali le parole chiave, le informazioni di sicurezza e l'archiviazione e il recupero delle stringhe di connessione.
 
-[Pool di connessioni](connection-pooling.md) Descrive i pool di connessioni per il provider di dati Microsoft SqlClient per SQL Server.
+[Pool di connessioni](connection-pooling.md)  
+Descrive i pool di connessioni per il provider di dati Microsoft SqlClient per SQL Server.
+
+[Comandi e parametri](commands-parameters.md)  
+Sono inclusi argomenti in cui viene descritto come creare comandi e compilatori di comandi, come configurare parametri e come eseguire comandi per recuperare e modificare dati.
+
+[DataAdapter e DataReader](dataadapters-datareaders.md)  
+Sono inclusi argomenti in cui vengono descritti DataReaders, DataAdapters, i parametri, la gestione di eventi DataAdapter e l'esecuzione di operazioni batch.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Mapping dei tipi di dati in ADO.NET](data-type-mappings-ado-net.md)
 - [SQL Server e ADO.NET](./sql/index.md)
+- [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)

@@ -2,18 +2,18 @@
 title: Storia dei driver per Microsoft SQL Server | Microsoft Docs
 description: In questa pagina vengono descritte le tecnologie di connessione dati storiche di Microsoft per la connessione a SQL Server.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 12/08/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f5db99b78cc5c5d251baee6028d1c9bc4e7448bf
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: dee1514230f3e0ce0f0ba4c0d3af904cc90c9720
+ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885768"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933810"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Storia dei driver per Microsoft SQL Server
 
@@ -21,7 +21,7 @@ In questa pagina vengono descritte le tecnologie di connessione dati storiche di
 
 ## <a name="odbc"></a>ODBC
 
-Sono disponibili tre generazioni distinte di driver Microsoft ODBC per SQL Server. Il primo driver ODBC "SQL Server" è ancora disponibile come parte di [Windows Data Access Components](#microsoft-or-windows-data-access-components). Non è consigliabile usare questo driver per nuovi progetti di sviluppo. A partire da SQL Server 2005, [SQL Server Native Client](#sql-server-native-client) include un'interfaccia ODBC ed è il driver ODBC disponibile in SQL Server 2005 fino a SQL Server 2012. Non è consigliabile usare questo driver per nuovi progetti di sviluppo. A partire da SQL Server 2012, [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server) è il driver che in futuro verrà aggiornato con le funzionalità server più recenti.
+Sono disponibili tre generazioni distinte di driver Microsoft ODBC per SQL Server. Il primo driver ODBC "SQL Server" è ancora disponibile come parte di [Windows Data Access Components](#microsoft-or-windows-data-access-components). Questo driver non è consigliato per nuovi progetti di sviluppo. A partire da SQL Server 2005, [SQL Server Native Client](#sql-server-native-client) include un'interfaccia ODBC ed è il driver ODBC disponibile in SQL Server 2005 fino a SQL Server 2012. Neppure questo driver è consigliato per nuovi progetti di sviluppo. A partire da SQL Server 2012, [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server) è il driver che in futuro verrà aggiornato con le funzionalità server più recenti.
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
@@ -35,11 +35,19 @@ Dopo SQL Server 2012, il driver ODBC primario per SQL Server è stato sviluppato
 
 ## <a name="ole-db"></a>OLE DB
 
-Sono disponibili tre generazioni distinte di provider Microsoft OLE DB per SQL Server. Il primo "provider Microsoft OLE DB per SQL Server" (SQLOLEDB) viene ancora fornito come parte di [Windows Data Access Components](#microsoft-or-windows-data-access-components). Questo provider non verrà aggiornato con nuove funzionalità e non è consigliabile usarlo questo driver per un nuovo sviluppo. A partire da SQL Server 2005, [SQL Server Native Client](#sql-server-native-client) include un'interfaccia del provider OLE DB (SQLNCLI) ed è il provider OLE DB disponibile con SQL Server 2005 fino a SQL Server 2017. È stato [annunciato come deprecato nel 2011](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access) e non è consigliabile usare questo driver per nuovi sviluppi. Nel 2017 la tecnologia OLE DB per l'accesso ai dati [è stata dichiarata non più deprecata ed è stato annunciato un nuovo rilascio pianificato](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server) per il 2018. Il nuovo provider OLE DB viene chiamato "Microsoft OLE DB Driver per SQL Server" (MSOLEDBSQL) ed è attualmente gestito e supportato.
+Sono disponibili tre generazioni distinte di provider Microsoft OLE DB per SQL Server. Il primo "provider Microsoft OLE DB per SQL Server" (SQLOLEDB) viene ancora fornito come parte di [Windows Data Access Components](#microsoft-or-windows-data-access-components). Questo provider non verrà aggiornato con nuove funzionalità e non è consigliabile usarlo per nuovi progetti di sviluppo. A partire da SQL Server 2005, [SQL Server Native Client](#sql-server-native-client) include un'interfaccia del provider OLE DB (SQLNCLI) ed è il provider OLE DB disponibile con SQL Server 2005 fino a SQL Server 2017. È stato [annunciato come deprecato nel 2011](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access) e non è consigliabile usare questo driver per nuovi progetti di sviluppo. Nel 2017 la tecnologia OLE DB per l'accesso ai dati [è stata dichiarata non più deprecata ed è stato annunciato un nuovo rilascio pianificato](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server) per il 2018. Il nuovo provider OLE DB viene chiamato "Microsoft OLE DB Driver per SQL Server" (MSOLEDBSQL) ed è attualmente gestito e supportato.
 
 ## <a name="adonet"></a>ADO.NET
 
-ADO.NET è stato introdotto con Microsoft .NET Framework e continua a essere sottoposto a processi di manutenzione e ottimizzazione. Si tratta di un componente principale di Microsoft .NET Framework. Per altre informazioni, vedere [Microsoft ADO.NET per SQL Server](ado-net/microsoft-ado-net-sql-server.md).
+ADO.NET è un set di classi che definisce un'interfaccia per l'accesso a qualsiasi tipo di origine dati, sia relazionale che non relazionale. ADO.NET è stato introdotto con Microsoft .NET Framework e continua a essere sottoposto a processi di manutenzione e ottimizzazione in .NET. La libreria SqlClient è un provider di dati ADO.NET che fornisce la connettività a SQL Server e a origini dati SQL di Azure.
+
+### <a name="systemdatasqlclient"></a>System.Data.SqlClient
+
+System.Data.SqlClient è incluso come parte di .NET Framework e .NET Core. Fino al 2019 ha ricevuto regolarmente gli aggiornamenti delle funzionalità. Con gli annunci relativi al [futuro di .NET Core, .NET Framework](https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/) e di [.NET in generale](https://devblogs.microsoft.com/dotnet/introducing-net-5/), è stato necessario trasferire le attività di sviluppo di SqlClient in un pacchetto esterno a .NET. System.Data.SqlClient è ancora supportato, ma non riceve gli aggiornamenti delle funzionalità e non è consigliato per nuovi progetti di sviluppo.
+
+### <a name="microsoftdatasqlclient"></a>Microsoft.Data.SqlClient
+
+Il provider di dati Microsoft SqlClient per SQL Server, [introdotto nel 2019](https://devblogs.microsoft.com/dotnet/introducing-the-new-microsoftdatasqlclient/), è un provider di dati ADO.NET che supporta applicazioni destinate a .NET Framework, .NET Core e .NET Standard. Per altre informazioni sullo spazio dei nomi Microsoft.Data.SqlClient, vedere [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-sql-server.md).
 
 ## <a name="jdbc"></a>JDBC
 
@@ -67,7 +75,7 @@ Attualmente Microsoft contribuisce a e supporta il modulo open source tedious in
 
 ## <a name="microsoft-or-windows-data-access-components"></a>Microsoft/Windows Data Access Components
 
-Microsoft/Windows Data Access Components (MDAC/WDAC) è un prodotto accluso a e supportato da Windows per la compatibilità con le versioni precedenti delle applicazioni e non fanno parte dell'attuale stack di tecnologie di SQL Server. Non verranno aggiunte altre funzionalità ai componenti di MDAC/WDAC e non è consigliabile usarli per lo sviluppo di nuove applicazioni.
+Microsoft/Windows Data Access Components (MDAC/WDAC) sono prodotti inclusi e supportati in Windows per la compatibilità con le versioni precedenti delle applicazioni e non fanno parte dell'attuale stack di tecnologie di SQL Server. Non verranno aggiunte altre funzionalità ai componenti di MDAC/WDAC e non è consigliabile usarli per lo sviluppo di nuove applicazioni.
 
 Ai fini di questo documento, è possibile dividere lo stack MDAC/WDAC nei componenti seguenti, in base alla tecnologia e ai prodotti:
 
@@ -79,8 +87,8 @@ Ai fini di questo documento, è possibile dividere lo stack MDAC/WDAC nei compon
 
 MDAC/WDAC include i seguenti componenti:
 
-* **ODBC:** Microsoft Open Database Connectivity (ODBC) è un'interfaccia del linguaggio di programmazione C che consente alle applicazioni di accedere ai dati da un'ampia gamma di sistemi di gestione di database. Le applicazioni che usano questa API sono limitate all'accesso alle origini dati relazionali.
-* **OLE DB:** OLE DB è un set di interfacce COM per l'accesso ai dati in diversi archivi dati. Sono disponibili provider OLE DB per l'accesso ai dati in database, file system, archivi di messaggi, servizi directory, flussi di lavoro e archivi documenti.
+* **ODBC:** Microsoft Open Database Connectivity (ODBC) è un'interfaccia del linguaggio di programmazione C che consente alle applicazioni di accedere ai dati da tipi diversi di sistemi di gestione di database. Le applicazioni che usano questa API sono limitate all'accesso alle origini dati relazionali.
+* **OLE DB:** OLE DB è un set di interfacce COM per l'accesso ai dati in tipi diversi di archivi dati. Sono disponibili provider OLE DB per l'accesso ai dati in database, file system, archivi di messaggi, servizi directory, flussi di lavoro e archivi documenti.
 * **ADO:** ActiveX Data Objects (ADO) offre un modello di programmazione di alto livello. Sebbene le prestazioni siano leggermente inferiori a quelle della codifica diretta in OLE DB o ODBC, ADO è semplice da apprendere e usare. Può quindi essere usato in linguaggi di script come Microsoft Visual Basic, Scripting Edition(VBScript) o Microsoft JScript.
 * **ADOMD:** ADO Multi-Dimensional (ADOMD) è destinato all'uso con i provider di dati multidimensionali, ad esempio il provider Microsoft OLAP, noto anche come provider Microsoft Analysis Services. Non sono stati apportati miglioramenti significativi alle funzionalità rispetto a MDAC 2.0.
 * **ADOX:** Le estensioni ADO per DDL e sicurezza (ADOX) consentono di creare e modificare le definizioni di un database, una tabella, un indice o una stored procedure. È possibile usare ADOX con qualsiasi provider. Il provider Microsoft OLE DB Jet offre il supporto completo per ADOX, mentre il provider OLE DB per Microsoft SQL Server offre un supporto limitato.
@@ -105,10 +113,10 @@ Questi componenti sono ancora supportati nella versione corrente di MDAC/WDAC, m
   > [!NOTE]
   > Le applicazioni SQL Server possono accedere ai file di Office System 2007 e versioni precedenti anche usando le funzionalità della connettività dei dati eterogenei e di Integrations Services in SQL Server con il driver di Office System 2007. Inoltre, le applicazioni SQL Server a 64 bit possono accedere ai file di Jet e Office System 2007 a 32 bit usando SQL Server Integration Services (SSIS) a 32 bit in Windows a 64 bit.
 
-* **MSDADS:** Con il provider Microsoft OLE DB per data shaping (MSDADS), è possibile creare relazioni gerarchiche tra chiavi, campi o set di righe in un'applicazione. Non sono stati apportati miglioramenti significativi alle funzionalità dopo MDAC 2.1. Questo provider è stato deprecato. Microsoft consiglia di usare XML anziché MSDADS.
+* **Provider Microsoft OLE DB per data shaping (MSDADS):** con MSDADS, è possibile creare relazioni gerarchiche tra chiavi, campi o set di righe in un'applicazione. Non sono stati apportati miglioramenti significativi alle funzionalità dopo MDAC 2.1. Questo provider è stato deprecato. Microsoft consiglia di usare XML anziché MSDADS.
 * **Oracle ODBC e Oracle OLE DB:** Microsoft Oracle ODBC Driver (Oracle ODBC) e il provider Microsoft OLE DB per Oracle (Oracle OLE DB) offrono l'accesso ai server di database Oracle. Vengono compilati usando Oracle Call Interface (OCI) versione 7 e offrono il supporto completo per Oracle 7. Inoltre, viene usata l'emulazione di Oracle 7 per offrire un supporto limitato per i database Oracle 8. Oracle non supporta più le applicazioni che utilizzano le chiamate OCI versione 7. Queste tecnologie sono deprecate. Se si usano origini dati Oracle, è necessario eseguire la migrazione al driver e al provider resi disponibili da Oracle.
-* **RDS:** Servizi Desktop remoto (RDS) è un meccanismo proprietario di Microsoft per l'accesso a oggetti Recordset ADO remoti in Internet o Intranet. RDS è deprecato. Non sono stati apportati miglioramenti significativi alle funzionalità di RDS dopo MDAC 2.1. Microsoft ha rilasciato .NET Framework, che offre funzionalità SOAP complete e sostituisce i componenti RDS. Tutti i componenti server RDS verranno rimossi dal sistema operativo dopo Windows 7.
-* **JRO:** Gli oggetti di replica Jet (JRO) sono deprecati. La libreria JRO viene usata all'interno di ADO con database Jet ( *.mdb) per creare e comprimere i database Jet (file MDB) ed eseguire la gestione della replica Jet. MDAC 2.7 sarà l'ultima versione. JRO non sarà disponibile nel sistema operativo Windows a 64 bit. Non è supportata nel formato di file Microsoft Access 2007 (* .accdb).
+* **Remote Data Services (RDS):** RDS è un meccanismo proprietario di Microsoft per l'accesso a oggetti Recordset ADO remoti in Internet o Intranet. RDS è deprecato. Non sono stati apportati miglioramenti significativi alle funzionalità di RDS dopo MDAC 2.1. Microsoft ha rilasciato .NET Framework, che offre funzionalità SOAP complete e sostituisce i componenti RDS. Tutti i componenti server RDS verranno rimossi dal sistema operativo dopo Windows 7.
+* **Oggetti di replica Jet (JRO):** la libreria JRO è deprecata. La libreria JRO viene usata all'interno di ADO con database Jet ( *.mdb) per creare e comprimere i database Jet (file MDB) ed eseguire la gestione della replica Jet. MDAC 2.7 sarà l'ultima versione. JRO non sarà disponibile nel sistema operativo Windows a 64 bit. Non è supportata nel formato di file Microsoft Access 2007 (* .accdb).
 * **Supporto ODBC a 16 bit:** Se si usano applicazioni a 16 bit, è necessario eseguire la migrazione a un'applicazione a 32 bit. La funzionalità a 16 bit è deprecata ed è in corso la sua rimozione dai sistemi operativi a 64 bit. Per altre informazioni, vedere l'[articolo 896458 della Knowledge Base](https://support.microsoft.com/kb/896458).
 * **Provider OLE DB semplice (MSDAOSP):** Il provider OLE DB semplice offre un framework per la creazione rapida di provider OLE DB usando dati semplici. MSDAOSP è deprecato.
 * **Libreria di cursori ODBC:** La libreria di cursori ODBC (ODBCCR32.dll) offre cursori dati limitati sul lato client. La libreria di cursori ODBC è stata deprecata. L'applicazione può usare le implementazioni del cursore sul lato server come sostituzione.
@@ -121,7 +129,7 @@ Di seguito è riportato un elenco degli scenari di supportabilità delle version
 
 * **MDAC 1.5, MDAC 2.0 e MDAC 2.1:** Queste versioni di MDAC erano versioni indipendenti rilasciate attraverso Microsoft Windows NT Option Pack, l'SDK della piattaforma Microsoft Windows o il sito Web MDAC. Queste versioni di MDAC non sono più supportate.
 * **MDAC 2.5:** Questa versione di MDAC era inclusa nel sistema operativo Windows 2000. I Service Pack di MDAC 2.5 erano inclusi nei Service Pack di Windows 2000 corrispondenti.
-* **MDAC 2.6:** MDAC 2.6 RTM, SP1 e SP2 erano inclusi rispettivamente in Microsoft SQL Server 2000 RTM, SP1 e SP2. Inoltre, questi Service Pack di MDAC sono stati rilasciati nel sito Web MDAC in conformità alla pianificazione dei rilasci dei Service Pack di Microsoft SQL Server 2000. È possibile installare questa versione di MDAC e i relativi Service Pack sulle piattaforme Windows 2000, Windows Millennium Edition, Windows NT, Windows 95 e Windows 98. Questa versione di MDAC non è più supportata.
+* **MDAC 2.6:** MDAC 2.6 RTM, SP1 e SP2 erano inclusi rispettivamente in Microsoft SQL Server 2000 RTM, SP1 e SP2. Inoltre, questi Service Pack di MDAC sono stati rilasciati nel sito Web MDAC seguendo la pianificazione dei rilasci dei Service Pack di Microsoft SQL Server 2000. È possibile installare questa versione di MDAC e i relativi Service Pack sulle piattaforme Windows 2000, Windows Millennium Edition, Windows NT, Windows 95 e Windows 98. Questa versione di MDAC non è più supportata.
 * **MDAC 2.7:** Questa versione di MDAC era inclusa nei sistemi operativi Microsoft Windows XP RTM e SP1. È possibile installare questa versione di MDAC e i relativi Service Pack sulle piattaforme Windows 2000, Windows Millennium, Windows NT e Windows 98. È possibile installare questa versione sulla piattaforma Windows XP solo usando il sistema operativo o i relativi Service Pack. Questa versione di MDAC non è più supportata.
 * **MDAC 2.8:** Questa versione di MDAC era inclusa in Windows Server 2003 e Windows XP SP2 e versioni successive. È possibile installare questa versione di MDAC e i relativi Service Pack anche in Windows 2000.
 

@@ -2,7 +2,7 @@
 title: Informazioni sul controllo della concorrenza
 description: Informazioni sul controllo della concorrenza e su come mantenere l'integrità del database quando si sviluppa un'applicazione multiutente con il driver JDBC per SQL Server.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 12/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9350c62c29acce5e56d60cfcd1fa854a7e2414cd
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: c44f52697fa8048a8c7db2286c3e69114f658152
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435300"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900944"
 ---
 # <a name="understanding-concurrency-control"></a>Informazioni sul controllo della concorrenza
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "87435300"
   Per controllo della concorrenza si intendono le diverse tecniche utilizzate per mantenere l'integrità del database quando più utenti aggiornano le righe contemporaneamente. Una concorrenza non corretta può causare problemi come letture dirty, letture fantasma e letture non ripetibili. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornisce interfacce per tutte le tecniche di concorrenza usate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per risolvere questi problemi.  
   
 > [!NOTE]  
->  Per altre informazioni sulla concorrenza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere "Gestione dell'accesso ai dati simultaneo" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Per altre informazioni sulla concorrenza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere ["Gestione dell'accesso ai dati simultaneo"](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#managing-concurrent-data-access).  
   
 ## <a name="remarks"></a>Osservazioni  
  Il driver JDBC supporta i tipi di concorrenza seguenti:  

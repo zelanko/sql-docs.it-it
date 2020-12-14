@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b26571c01db073aa2567ebbee19ff2183c47a552
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: fd95dd20cf72900a85c675c0e6b89689553d55f5
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127672"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999246"
 ---
 # <a name="before-installing-failover-clustering"></a>Operazioni preliminari all'installazione del clustering di failover
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "96127672"
   
 -   È necessario che sia abilitata l'amministrazione remota.  
   
--   Per la porta di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per verificare la configurazione di rete di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] relativa al protocollo TCP/IP per l'istanza che si desidera sbloccare. È necessario abilitare la porta TCP per IPALL se si desidera connettersi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite TCP dopo l'installazione. Per impostazione predefinita, SQL Browser è in ascolto sulla porta UDP 1434.  
+- Per le istanze di SQL Server che usano una porta non predefinita, usare la configurazione di rete di Gestione configurazione SQL Server per determinare la porta usata dall'istanza di SQL Server che si vuole sbloccare. Abilitare la porta TCP per IPALL nel firewall se ci si vuole connettere all'istanza di SQL Server usando il [servizio SQL Server Browser](../../../tools/configuration-manager/sql-server-browser-service.md), che usa un indirizzo IP diverso da quello dell'istanza in cluster e la porta UDP 1434. 
   
 -   Le operazioni di installazione del cluster di failover includono una regola che controlla l'ordine di associazione di rete. Anche se gli ordini di associazione possono sembrare corretti, è possibile che nel sistema siano presenti configurazioni di schede di rete disabilitate o fantasma. Tali configurazioni possono influire sull'ordine di associazione e causare la generazione di un avviso da parte della regola dell'ordine di associazione. Per evitare questa situazione, effettuare i passaggi seguenti per identificare e rimuovere le schede di rete disabilitate:  
   

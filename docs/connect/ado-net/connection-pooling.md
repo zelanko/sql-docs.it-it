@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 41842a2eb754aedc31bad206ad427a86bb65f00f
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 41b139d2f22a9cb3137879d96224b02eafc24bab
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126513"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761499"
 ---
 # <a name="connection-pooling"></a>Pool di connessioni
 
@@ -27,8 +27,10 @@ La connessione a un'origine dati può richiedere molto tempo. Per ridurre al min
 
 ## <a name="in-this-section"></a>Contenuto della sezione  
 
-[Pool di connessioni SQL Server (ADO.NET)](sql-server-connection-pooling.md)Viene fornita una panoramica sul pool di connessioni e ne viene descritto il funzionamento in SQL Server.
+[Pool di connessioni SQL Server (ADO.NET)](sql-server-connection-pooling.md)  
+Fornisce una panoramica sul pool di connessioni e ne descrive il funzionamento in SQL Server.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Recupero e modifica di dati in ADO.NET](retrieving-modifying-data.md)
+- [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)

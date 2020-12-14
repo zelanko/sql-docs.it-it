@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 931c36619f5eaed0159ee04db3a08eb745634698
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: f899ad41e609874cbcc22c2a3ac959c41574e0eb
+ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428278"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761529"
 ---
 # <a name="commands-and-parameters"></a>Comandi e parametri
 
@@ -29,17 +29,22 @@ Una volta stabilita una connessione a un'origine dati, è possibile eseguire i c
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Esecuzione di un comando](execute-command.md) Viene descritto l'oggetto `Command` ADO.NET e come usarlo per eseguire query e comandi su un'origine dati.
+[Esecuzione di un comando](execute-command.md)  
+Viene descritto l'oggetto `Command` di ADO.NET e viene illustrato come usarlo per eseguire query e comandi su un'origine dati.
 
-[Configurazione dei parametri](configure-parameters.md) Viene descritto l'uso dei parametri `Command`, tra cui la direzione, i tipi di dati e la sintassi dei parametri.
+[Configurazione dei parametri](configure-parameters.md)  
+Viene descritto l'uso dei parametri di `Command`, inclusa la direzione, i tipi di dati e la sintassi.
 
 [Generazione dei comandi con CommandBuilders](generate-commands-with-commandbuilders.md)  
 Viene descritto come usare compilatori di comandi per generare automaticamente i comandi INSERT, UPDATE e DELETE per un `DataAdapter` in cui è presente il comando SELECT di una singola tabella.
 
-[Recupero di un singolo valore da un database](obtain-single-value-from-database.md) Viene descritto come usare il metodo `ExecuteScalar` di un oggetto `Command` per restituire un singolo valore da una query di database.
+[Recupero di un valore singolo da un database](obtain-single-value-from-database.md)  
+Viene descritto come usare il metodo `ExecuteScalar` di un oggetto `Command` per restituire un singolo valore in una query sul database.
 
-[Utilizzo dei comandi per modificare i dati](use-commands-to-modify-data.md) Viene descritto come usare il provider di dati Microsoft SqlClient per SQL Server per eseguire stored procedure o istruzioni Data Definition Language (DDL).
+[Uso di comandi per modificare i dati](use-commands-to-modify-data.md)  
+Descrive come usare il provider di dati Microsoft SqlClient per SQL Server per eseguire stored procedure o istruzioni Data Definition Language (DDL).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Connessione a un'origine dati](connecting-to-data-source.md)
+- [Microsoft ADO.NET per SQL Server](microsoft-ado-net-sql-server.md)
