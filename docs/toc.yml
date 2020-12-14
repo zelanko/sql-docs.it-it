@@ -1836,7 +1836,7 @@
       items:
         - name: Gestione
           items:
-            - name: Create
+            - name: Creazione
               href: relational-databases/tables/create-tables-database-engine.md
             - name: Delete
               href: relational-databases/tables/delete-tables-database-engine.md
@@ -9956,6 +9956,9 @@
           href: linux/sql-server-linux-run-sql-server-agent-job.md
         - name: Configurare l'autenticazione di AD
           href: linux/sql-server-linux-active-directory-authentication.md
+          items:
+            - name: Configurare l'autenticazione di AD con adutil
+              href: linux/sql-server-linux-ad-auth-adutil-tutorial.md
         - name: Creare l'istanza del cluster di failover
           href: linux/sql-server-linux-shared-disk-cluster-configure.md
           items:
@@ -10021,6 +10024,8 @@
               href: linux/sql-server-linux-configure-msdtc-docker.md
             - name: Risolvere i problemi dei contenitori Docker
               href: linux/sql-server-linux-docker-container-troubleshooting.md
+            - name: Configurare l'autenticazione di AD con adutil
+              href: linux/sql-server-linux-containers-ad-auth-adutil-tutorial.md
         - name: Sviluppo
           href: linux/sql-server-linux-develop-overview.md
           items:
