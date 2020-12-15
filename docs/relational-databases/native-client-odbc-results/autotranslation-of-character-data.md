@@ -23,32 +23,32 @@ helpviewer_keywords:
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7c3c16222d1537c250e888e365754fd9d919f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2de8b3a1fc6b1bd6547ec413fb5d8e4e0fbca6dd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486794"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438263"
 ---
 # <a name="autotranslation-of-character-data"></a>Conversione automatica dei dati di tipo carattere
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  I dati di tipo carattere, ad esempio le variabili di tipo carattere ANSI dichiarati con SQL_C_CHAR o i dati archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando i tipi di dati **char**, **varchar**o **Text** , possono rappresentare solo un numero limitato di caratteri. I dati di tipo carattere archiviati utilizzando un byte per carattere possono rappresentare solo 256 caratteri. I valori archiviati nelle variabili SQL_C_CHAR vengono interpretati mediante la tabella codici ANSI (ACP) del computer client. I valori archiviati utilizzando i tipi di dati **char**, **varchar**o **Text** nel server vengono valutati utilizzando l'ACP del server.  
+  I dati di tipo carattere, ad esempio le variabili di tipo carattere ANSI dichiarati con SQL_C_CHAR o i dati archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando i tipi di dati **char**, **varchar** o **Text** , possono rappresentare solo un numero limitato di caratteri. I dati di tipo carattere archiviati utilizzando un byte per carattere possono rappresentare solo 256 caratteri. I valori archiviati nelle variabili SQL_C_CHAR vengono interpretati mediante la tabella codici ANSI (ACP) del computer client. I valori archiviati utilizzando i tipi di dati **char**, **varchar** o **Text** nel server vengono valutati utilizzando l'ACP del server.  
   
- Se il server e il client hanno lo stesso ACP, non si verificano problemi durante l'interpretazione dei valori archiviati negli oggetti SQL_C_CHAR, **char**, **varchar**o **Text** . Se il server e il client hanno invece diversi, SQL_C_CHAR dati dal client possono essere interpretati come un carattere diverso nel server se usati in colonne, variabili o parametri di tipo **char**, **varchar**o **Text** . Ad esempio, un byte di caratteri contenente il valore 0xA5 viene interpretato come il carattere Ñ in un computer che usa la tabella codici 437 e viene interpretato come il segno di yen (¥) in un computer che esegue la tabella codici 1252.  
+ Se il server e il client hanno lo stesso ACP, non si verificano problemi durante l'interpretazione dei valori archiviati negli oggetti SQL_C_CHAR, **char**, **varchar** o **Text** . Se il server e il client hanno invece diversi, SQL_C_CHAR dati dal client possono essere interpretati come un carattere diverso nel server se usati in colonne, variabili o parametri di tipo **char**, **varchar** o **Text** . Ad esempio, un byte di caratteri contenente il valore 0xA5 viene interpretato come il carattere Ñ in un computer che usa la tabella codici 437 e viene interpretato come il segno di yen (¥) in un computer che esegue la tabella codici 1252.  
   
  I dati Unicode vengono archiviati utilizzando due byte per carattere. Poiché tutti i caratteri estesi sono inclusi nella specifica Unicode, tutti i caratteri Unicode vengono interpretati allo stesso modo da tutti i computer.  
   
  La funzionalità AutoTranslate del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client tenta di ridurre al minimo i problemi di trasferimento dei dati di tipo carattere tra un client e un server con tabelle codici diverse. È possibile impostare AutoTranslate nella stringa di connessione di [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md), nella stringa di configurazione di [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)o quando si configurano le origini dati per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client mediante l'amministratore ODBC.  
   
- Quando AutoTranslate è impostato su "No", non vengono eseguite conversioni sui dati spostati tra SQL_C_CHAR variabili nelle colonne client e **char**, **varchar**o **Text** , variabili o parametri di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Se i dati contengono caratteri estesi e i due computer dispongono di tabelle codici diverse, gli schemi di bit potrebbero essere interpretati in modo diverso sui computer client e server. I dati verranno interpretati nello stesso modo se entrambi computer dispongono della stessa tabella codici.  
+ Quando AutoTranslate è impostato su "No", non vengono eseguite conversioni sui dati spostati tra SQL_C_CHAR variabili nelle colonne client e **char**, **varchar** o **Text** , variabili o parametri di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Se i dati contengono caratteri estesi e i due computer dispongono di tabelle codici diverse, gli schemi di bit potrebbero essere interpretati in modo diverso sui computer client e server. I dati verranno interpretati nello stesso modo se entrambi computer dispongono della stessa tabella codici.  
   
- Quando AutoTranslate è impostato su "Yes", il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client utilizza Unicode per convertire i dati spostati tra SQL_C_CHAR variabili nelle colonne client e **char**, **varchar**o **Text** , variabili o parametri di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database:  
+ Quando AutoTranslate è impostato su "Yes", il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client utilizza Unicode per convertire i dati spostati tra SQL_C_CHAR variabili nelle colonne client e **char**, **varchar** o **Text** , variabili o parametri di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database:  
   
--   Quando i dati vengono inviati da una variabile SQL_C_CHAR sul client a una colonna **char**, **varchar**o **Text** , una variabile o un parametro di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, il driver ODBC esegue prima la conversione da SQL_C_CHAR a Unicode utilizzando l'ACP del client, quindi da Unicode di nuovo a carattere utilizzando l'ACP del server.  
+-   Quando i dati vengono inviati da una variabile SQL_C_CHAR sul client a una colonna **char**, **varchar** o **Text** , una variabile o un parametro di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, il driver ODBC esegue prima la conversione da SQL_C_CHAR a Unicode utilizzando l'ACP del client, quindi da Unicode di nuovo a carattere utilizzando l'ACP del server.  
   
--   Quando i dati vengono inviati da una colonna di tipo **char**, **varchar**o **Text** , una variabile o un parametro di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database a una variabile di SQL_C_CHAR nel client, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client converte innanzitutto da carattere a Unicode utilizzando l'acp del server, quindi da Unicode a SQL_C_CHAR utilizzando l'ACP del client.  
+-   Quando i dati vengono inviati da una colonna di tipo **char**, **varchar** o **Text** , una variabile o un parametro di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database a una variabile di SQL_C_CHAR nel client, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client converte innanzitutto da carattere a Unicode utilizzando l'acp del server, quindi da Unicode a SQL_C_CHAR utilizzando l'ACP del client.  
   
  Poiché tutte le conversioni vengono eseguite dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client in esecuzione sul client, l'ACP del server deve essere una delle tabelle codici installate nel computer client.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "88486794"
   
  L'impostazione di AutoTranslate non ha effetto sulle conversioni seguenti:  
   
--   Lo stato di trasferimento dei dati tra caratteri SQL_C_CHAR variabili client e colonne, variabili o parametri Unicode **nchar**, **nvarchar**o **ntext** nei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+-   Lo stato di trasferimento dei dati tra caratteri SQL_C_CHAR variabili client e colonne, variabili o parametri Unicode **nchar**, **nvarchar** o **ntext** nei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
--   Lo stato di trasferimento dei dati tra le variabili client SQL_C_WCHAR Unicode e le colonne di tipo **char**, **varchar**o **Text** , le variabili o i parametri nei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+-   Lo stato di trasferimento dei dati tra le variabili client SQL_C_WCHAR Unicode e le colonne di tipo **char**, **varchar** o **Text** , le variabili o i parametri nei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
  I dati devono essere sempre convertiti nel passaggio da carattere a Unicode.  
   

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2cd0786cac3976bcb280422f177d19d8f86a3c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b659380d95adf9149ef22a47544446e1c1349e6b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465306"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438036"
 ---
 # <a name="mapping-data-types-odbc"></a>Mapping dei tipi di dati (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88465306"
 >  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati **timestamp** viene mappato al tipo di dati SQL_BINARY o SQL_VARBINARY ODBC perché i valori nelle colonne **timestamp** non sono valori **DateTime** , ma i valori **Binary (8)** o **varbinary (8)** che indicano la sequenza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attività nella riga. Se il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client rileva un valore SQL_C_WCHAR (Unicode) che corrisponde a un numero dispari di byte, il byte dispari finale viene troncato.  
   
 ## <a name="dealing-with-sql_variant-data-type-in-odbc"></a>Gestione del tipo di dati sql_variant in ODBC  
- La colonna **sql_variant** tipo di dati può contenere qualsiasi tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad eccezione di Large Objects (LOB), ad esempio **Text**, **ntext**e **Image**. La colonna può ad esempio contenere valori **smallint** per alcune righe, valori **float** per altre righe e valori **Char/nchar** nel resto.  
+ La colonna **sql_variant** tipo di dati può contenere qualsiasi tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad eccezione di Large Objects (LOB), ad esempio **Text**, **ntext** e **Image**. La colonna può ad esempio contenere valori **smallint** per alcune righe, valori **float** per altre righe e valori **Char/nchar** nel resto.  
   
  Il tipo di dati **sql_variant** è simile al tipo di dati **variant** in Microsoft Visual Basic®.  
   

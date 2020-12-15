@@ -1,6 +1,6 @@
 ---
-title: Trasferimento dati di parametri con valori di tabella
-description: Descrizione Trasferimento dati dei parametri con valori di tabella
+title: Trasferimento dati di parametri di Table-Valued
+description: Descrivere Trasferimento dati di parametri di Table-Valued
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.technology: native-client
@@ -11,12 +11,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/01/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0be2ffbfb7160d5be8f5ebb2a2ed688103a54b4d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 19a7f22cd26ea4988364d51ff70300cdbf42d365
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004611"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97436156"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Associazione e trasferimento dati di valori di colonna e parametri con valori di tabella
 
@@ -78,7 +79,7 @@ Per l'associazione fissa di righe, un'applicazione alloca i buffer (o le matrici
 
 Per l'associazione di righe variabile, le righe vengono trasferite in batch in fase di esecuzione e l'applicazione passa le righe al driver su richiesta. Si tratta di una procedura simile al data-at-execution per i valori di parametri singoli. Per l'associazione variabile di righe, l'applicazione effettua quanto segue:  
 
-1. Associa parametri e colonne di parametri con valori di tabella, come descritto nei passaggi da 1 a 3 della sezione precedente, "associazione di righe di parametri con valori di tabella fissa".  
+1. Associa i parametri e le colonne dei parametri con valori di tabella, come descritto nei passaggi da 1 a 3 della sezione precedente, "Fixed Table-Valued Parameter Row binding".  
 
 2. Imposta *StrLen_or_IndPtr* o SQL_DESC_OCTET_LENGTH_PTR per il passaggio di tutti i parametri con valori di tabella in fase di esecuzione al SQL_DATA_AT_EXEC. Se non viene impostato alcun oggetto, il parametro viene elaborato come descritto nella sezione precedente.  
 
