@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2172c7d17d9c3d9ebb6680fc7af0212c0a01e12
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2e55b0a69fde6e80c6c7124b9fe800c2f6818109
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526176"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97410658"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 
@@ -57,7 +57,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 0 (esito positivo) o un numero diverso da zero (esito negativo)
 
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 I metadati di crittografia per i parametri di un modulo possono diventare obsoleti, se:   
 * Sono state aggiornate le proprietà di crittografia di una colonna in una tabella a cui fa riferimento il modulo. Una colonna, ad esempio, è stata eliminata e viene aggiunta una nuova colonna con lo stesso nome, ma è stato aggiunto un tipo di crittografia diverso, una chiave di crittografia o un algoritmo di crittografia.  
@@ -82,7 +82,7 @@ Quando il modulo specificato è un trigger DDL a livello di server, richiede l' 
 
 Per i moduli definiti con la `EXECUTE AS` clausola, `IMPERSONATE` è richiesta l'autorizzazione per l'entità specificata. In genere, l'aggiornamento di un oggetto non comporta la modifica `EXECUTE AS` dell'entità, a meno che il modulo non sia stato definito con `EXECUTE AS USER` e il nome utente del server principale venga risolto in un altro utente rispetto al momento in cui è stato creato il modulo.
  
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 Nell'esempio seguente viene creata una tabella e una procedura che fa riferimento alla tabella, viene configurato Always Encrypted, quindi viene illustrata la modifica della tabella e l'esecuzione della `sp_refresh_parameter_encryption` stored procedure.  
 
