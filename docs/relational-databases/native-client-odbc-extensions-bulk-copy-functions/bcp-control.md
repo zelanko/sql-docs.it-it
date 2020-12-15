@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f84f1afbc1ede59e170e3fa4d17c9b921d2d1674
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 24aac8fe3f903ebb0cadec8f662a1cc870340d1c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499219"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473812"
 ---
 # <a name="bcp_control"></a>bcp_control
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -128,12 +128,12 @@ RETCODE bcp_control (
  Quando è impostato su TRUE, specifica che il file di input è un file Unicode.  
   
  *iValue*  
- Valore per l'oggetto *eOption*specificato. *iValue* è un valore integer (LONGLONG) di cui viene eseguito il cast a un puntatore void per consentire l'espansione futura a valori di bit 64.  
+ Valore per l'oggetto *eOption* specificato. *iValue* è un valore integer (LONGLONG) di cui viene eseguito il cast a un puntatore void per consentire l'espansione futura a valori di bit 64.  
   
 ## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa funzione imposta vari parametri di controllo per le operazioni di copia bulk, inclusi il numero di errori consentito prima dell'annullamento di una copia bulk, i numeri della prima e dell'ultima riga da copiare da un file di dati e le dimensioni del batch.  
   
  Questa funzione viene utilizzata anche per specificare l'istruzione SELECT quando si esegue una copia bulk del set di risultati di un'istruzione SELECT da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Impostare *eOption* su BCPHINTS e impostare *iValue* su un puntatore a una stringa SQLTCHAR che contiene l'istruzione SELECT.  

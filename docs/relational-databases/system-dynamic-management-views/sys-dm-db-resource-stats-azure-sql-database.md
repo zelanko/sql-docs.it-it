@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 21cef237634891d4795e46f96f63eba701f55852
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 0f1a31c5822ca8d3d7a18eed49145d37a07b49ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833707"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475012"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "91833707"
 |avg_cpu_percent|**Decimal (5, 2)**|Percentuale dell'utilizzo medio del calcolo del limite del livello del servizio.|  
 |avg_data_io_percent|**Decimal (5, 2)**|Utilizzo medio di I/O dei dati in percentuale rispetto al limite del livello di servizio. Per i database con iperscalabilità, vedere i/o [dati nelle statistiche sull'utilizzo delle risorse](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**Decimal (5, 2)**|Numero medio di scritture del log delle transazioni (in MBps) come percentuale del limite del livello di servizio.|  
-|avg_memory_usage_percent|**Decimal (5, 2)**|Percentuale dell'utilizzo medio della memoria del limite del livello del servizio.<br /><br /> Questo include la memoria usata per le pagine del pool di buffer e l'archiviazione di oggetti OLTP in memoria.|  
-|xtp_storage_percent|**Decimal (5, 2)**|Utilizzo dello spazio di archiviazione per OLTP in memoria, in percentuale rispetto al limite del livello di servizio (alla fine dell'intervallo di Reporting). Ciò include la memoria usata per l'archiviazione dei seguenti oggetti di OLTP in memoria: tabelle ottimizzate per la memoria, indici e variabili di tabella. Include inoltre la memoria utilizzata per l'elaborazione delle operazioni ALTER TABLE.<br /><br /> Restituisce 0 se OLTP in memoria non viene utilizzato nel database.|  
+|avg_memory_usage_percent|**Decimal (5, 2)**|Percentuale dell'utilizzo medio della memoria del limite del livello del servizio.<br /><br /> È inclusa la memoria utilizzata per le pagine del pool di buffer e l'archiviazione di In-Memory oggetti OLTP.|  
+|xtp_storage_percent|**Decimal (5, 2)**|Utilizzo dello spazio di archiviazione per In-Memory OLTP in percentuale del limite del livello di servizio (alla fine dell'intervallo di Reporting). Questo include la memoria usata per l'archiviazione dei seguenti oggetti di In-Memory OLTP: tabelle ottimizzate per la memoria, indici e variabili di tabella. Include inoltre la memoria utilizzata per l'elaborazione delle operazioni ALTER TABLE.<br /><br /> Restituisce 0 se In-Memory OLTP non viene utilizzato nel database.|  
 |max_worker_percent|**Decimal (5, 2)**|Numero massimo di ruoli di lavoro simultanei (richieste) in percentuale rispetto al limite del livello di servizio del database.|  
 |max_session_percent|**Decimal (5, 2)**|Numero massimo di sessioni simultanee in percentuale del limite del livello di servizio del database.|  
 |dtu_limit|**int**|Impostazione DTU database Max corrente per questo database durante questo intervallo. Per i database che usano il modello basato su vCore, questa colonna è NULL.|
@@ -56,7 +56,7 @@ ms.locfileid: "91833707"
 ## <a name="permissions"></a>Autorizzazioni
  Questa vista richiede l'autorizzazione VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
  I dati restituiti da **sys.dm_db_resource_stats** vengono espressi come percentuale dei limiti massimi consentiti per il livello di servizio o il livello di prestazioni che si sta eseguendo.
  
  Se è stato eseguito il failover del database in un altro server negli ultimi 60 minuti, la vista restituirà solo i dati per il tempo trascorso dal failover.  

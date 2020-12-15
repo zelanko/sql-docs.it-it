@@ -1,6 +1,6 @@
 ---
 description: sys.fulltext_index_fragments (Transact-SQL)
-title: sys. fulltext_index_fragments (Transact-SQL) | Microsoft Docs
+title: sys.fulltext_index_fragments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 953bf5145712d81acf0ed193719d290cc2397e43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5e0f1882c6840048e3308120e6b8768897b43d6b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88401367"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475182"
 ---
 # <a name="sysfulltext_index_fragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "88401367"
 |table_id|**int**|ID oggetto della tabella che contiene il frammento di indice full-text.|  
 |fragment_object_id|**int**|ID oggetto della tabella interna associata al frammento.|  
 |fragment_id|**int**|ID logico del frammento di indice full-text. L'ID è univoco per tutti i frammenti della tabella.|  
-|timestamp|**timestamp**|Timestamp associato alla creazione del frammento. I timestamp dei frammenti più recenti sono più grandi dei timestamp di frammenti più vecchi.|  
+| timestamp|**timestamp**|Timestamp associato alla creazione del frammento. I timestamp dei frammenti più recenti sono più grandi dei timestamp di frammenti più vecchi.|  
 |data_size|**int**|Dimensione logica del frammento, espressa in byte.|  
 |row_count|**int**|Numero di righe singole nel frammento.|  
 |status|**int**|Stato del frammento. I valori possibili sono:<br /><br /> 0 = Appena creato e non ancora utilizzato.<br /><br /> 1 = Utilizzato per operazioni di inserimento durante il popolamento o l'unione di un indice full-text.<br /><br /> 4 = Chiuso. Pronto per le query<br /><br /> 6 = Utilizzato per l'input unione e pronto per le query.<br /><br /> 8 = Contrassegnato per l'eliminazione. Non verrà utilizzato per le query e l'unione dell'origine.<br /><br /> Lo stato 4 o 6 indica che il frammento fa parte dell'indice full-text logico ed è possibile eseguirvi query. ovvero, si tratta di un frammento *Queryable* .|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile utilizzare la vista del catalogo sys.fulltext_index_fragments per eseguire una query sul numero di frammenti compresi in un indice full-text. Se si verifica un rallentamento nell'esecuzione delle query full-text, è possibile utilizzare sys.fulltext_index_fragments per eseguire query per il numero di frammenti di tipo queryable (stato = 4 o 6) nell'indice full-text, come segue:  
   
 ```  

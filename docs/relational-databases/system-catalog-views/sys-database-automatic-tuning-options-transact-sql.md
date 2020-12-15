@@ -1,5 +1,5 @@
 ---
-title: sys. database_automatic_tuning_options (Transact-SQL) | Microsoft Docs
+title: sys.database_automatic_tuning_options (Transact-SQL) | Microsoft Docs
 description: Informazioni su come visualizzare le opzioni di ottimizzazione automatica in un database SQL. Vedere autorizzazioni obbligatorie e visualizzare altre risorse disponibili.
 ms.custom: ''
 ms.date: 07/20/2017
@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4de2851505d7c5c240d792ecacdaa6bf3d1c6c3e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4da712a23dde26d12164957718c3bdfbf89eb487
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242951"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475222"
 ---
 # <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>tuning_options automatico sys. database \_ \_ (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "87242951"
 
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**nome**|**nvarchar(128)**|Nome dell'opzione di ottimizzazione automatica. Per le opzioni disponibili, fare riferimento a [ALTER DATABASE SET AUTOMATIC_TUNING &#40;&#41;Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md) .|  
+|**nome**|**nvarchar(128)**|Nome dell'opzione di ottimizzazione automatica. Per le opzioni disponibili, fare riferimento a [ALTER DATABASE SET AUTOMATIC_TUNING &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md) .|  
 |**desired_state**|**smallint**|Indica la modalità operativa desiderata per l'opzione di ottimizzazione automatica, impostata in modo esplicito dall'utente.<br />0 = OFF<br />1 = ON|  
 |**desired_state_desc**|**nvarchar(60)**|Descrizione testuale della modalità operativa desiderata dell'opzione di ottimizzazione automatica.<br />OFF<br />ON|  
 |**actual_state**|**smallint**|Indica la modalità operativa dell'opzione di ottimizzazione automatica.<br />0 = OFF<br />1 = ON|  
@@ -50,6 +50,6 @@ ms.locfileid: "87242951"
 ## <a name="see-also"></a>Vedere anche  
  [Ottimizzazione automatica](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [sys. database_query_store_options &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys. dm_db_tuning_recommendations &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [sys.database_query_store_options &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.dm_db_tuning_recommendations &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
  

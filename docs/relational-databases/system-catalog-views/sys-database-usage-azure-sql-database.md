@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f0c8809138bfad5cc9b7c4866978e7f2c111e09a
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: e80549106907d042a16197b3ecaf4d6b2dd3f6c7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809209"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475202"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Database di SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "91809209"
 ## <a name="permissions"></a>Autorizzazioni  
  L'accesso in sola lettura a questa vista è disponibile per tutti gli utenti che dispongono delle autorizzazioni per connettersi al database **Master** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La visualizzazione **sys.database_usage** restituisce una riga per ogni giorno della sottoscrizione.  
   
 ## <a name="see-also"></a>Vedere anche  

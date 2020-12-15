@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0d105ddedeafa8a82c068fce90f3e29bc4622f57
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: cb9936ce01a68055b7f050ddc7dbdb21a9802438
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834253"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474852"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (database SQL di Azure)
 
@@ -44,7 +44,7 @@ ms.locfileid: "91834253"
 |ruolo|**tinyint**|Ruolo replica geografica, uno dei seguenti:<br /><br /> 0 = primario. Il database_id fa riferimento al database primario nella relazione di replica geografica.<br /><br /> 1 = secondario.  Il database_id fa riferimento al database primario nella relazione di replica geografica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Tipo secondario, uno di:<br /><br /> 0 = nessuna connessione diretta è consentita al database secondario e il database non è disponibile per l'accesso in lettura.<br /><br /> 2 = tutte le connessioni sono consentite al database nella REPL secondaria; ication per l'accesso in sola lettura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> Tutti|  
 |last_commit|**datetimeoffset**|Ora dell'ultima transazione di cui è stato eseguito il commit nel database. Se recuperato nel database primario, indica l'ora dell'ultimo commit nel database primario. Se recuperata nel database secondario, indica l'ora dell'ultimo commit nel database secondario. Se viene recuperato nel database secondario quando il collegamento primario del collegamento di replica è inattivo, indica fino a che punto il database secondario non è stato aggiornato.|
   
 > [!NOTE]  

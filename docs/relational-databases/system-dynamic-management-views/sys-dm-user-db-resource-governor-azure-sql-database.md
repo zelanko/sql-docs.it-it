@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 2038883693288a75f9e2dbe17d80b6b9c7474343
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current
+ms.openlocfilehash: 933b7749218e71a66cdc6d0a25666be32c8badfe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753726"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474752"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
 
@@ -95,14 +95,14 @@ Restituisce le impostazioni di configurazione e capacità effettive utilizzate d
 
 Questa vista richiede l'autorizzazione VIEW DATABASE STATE.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per una descrizione della governance delle risorse nel database SQL di Azure, vedere [limiti delle risorse del database SQL](/azure/sql-database/sql-database-resource-limits-database-server).
 
 > [!IMPORTANT]
 > La maggior parte dei dati restituiti da questa DMV è destinata al consumo interno ed è soggetta a modifiche in qualsiasi momento.
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 La query seguente, eseguita nel contesto di un database utente, restituisce la velocità massima di log e il numero massimo di IOPS a livello del gruppo di carico di lavoro e del pool di risorse dell'utente. Per un singolo database, viene restituita una riga. Per un database in un pool elastico, viene restituita una riga per ogni database nel pool.
 

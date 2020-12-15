@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4d69890ba5c76c3d37ecd6accd9ba13caa7b089
-ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b1f177d09dd741eadc967a2b32a87a905e04dfb6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93036097"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475072"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,29 +55,29 @@ sys.dm_db_index_operational_stats (
 
 *database_id* | NULL | 0 | PREDEFINITA
 
-  ID del database. *database_id* è **smallint** . Gli input validi sono il numero di ID di un database, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.    
+  ID del database. *database_id* è **smallint**. Gli input validi sono il numero di ID di un database, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.    
     
- Specificare NULL per restituire informazioni per tutti i database presenti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si specifica NULL per *database_id* , è necessario specificare null anche per *object_id* , *index_id* e *partition_number* .    
+ Specificare NULL per restituire informazioni per tutti i database presenti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si specifica NULL per *database_id*, è necessario specificare null anche per *object_id*, *index_id* e *partition_number*.    
     
  È possibile specificare la funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md).    
 
 *object_id* | NULL | 0 | PREDEFINITA
 
- ID oggetto della tabella o vista in cui si trova l'indice. *object_id* è di **tipo int** .    
+ ID oggetto della tabella o vista in cui si trova l'indice. *object_id* è di **tipo int**.    
     
  Gli input validi sono il numero di ID di una tabella o vista, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.    
     
- Specificare NULL per restituire le informazioni memorizzate nella cache per tutte le tabelle e le viste nel database specificato. Se si specifica NULL per *object_id* , è necessario specificare null anche per *index_id* e *partition_number* .    
+ Specificare NULL per restituire le informazioni memorizzate nella cache per tutte le tabelle e le viste nel database specificato. Se si specifica NULL per *object_id*, è necessario specificare null anche per *index_id* e *partition_number*.    
 
 *index_id* | 0 | NULL | -1 | PREDEFINITA
 
- ID dell'indice. *index_id* è di **tipo int** . Gli input validi sono il numero di ID di un indice, 0 se *object_id* è un heap, null,-1 o default. Il valore predefinito è -1. NULL, -1 e DEFAULT sono valori equivalenti in questo contesto.    
+ ID dell'indice. *index_id* è di **tipo int**. Gli input validi sono il numero di ID di un indice, 0 se *object_id* è un heap, null,-1 o default. Il valore predefinito è -1. NULL, -1 e DEFAULT sono valori equivalenti in questo contesto.    
     
- Specificare NULL per restituire le informazioni memorizzate nella cache per tutti gli indici per una vista o tabella di base. Se si specifica NULL per *index_id* , è necessario specificare null anche per *partition_number* .    
+ Specificare NULL per restituire le informazioni memorizzate nella cache per tutti gli indici per una vista o tabella di base. Se si specifica NULL per *index_id*, è necessario specificare null anche per *partition_number*.    
 
 *partition_number* | NULL | 0 | PREDEFINITA
 
- Numero di partizione nell'oggetto. *partition_number* è di **tipo int** . Gli input validi sono la *partion_number* di un indice o di un heap, null, 0 o default. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.    
+ Numero di partizione nell'oggetto. *partition_number* è di **tipo int**. Gli input validi sono la *partion_number* di un indice o di un heap, null, 0 o default. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.    
     
  Specificare NULL per restituire informazioni memorizzate nella cache per tutte le partizioni dell'indice o dell'heap.    
     
@@ -85,7 +85,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>Tabella restituita    
     
-|Nome della colonna|Tipo di dati|Descrizione|    
+|Nome colonna|Tipo di dati|Descrizione|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|ID del database.|    
 |**object_id**|**int**|ID della tabella o vista.|    
@@ -106,11 +106,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|Conteggio cumulativo delle analisi di intervallo e tabella avviate nell'indice o nell'heap.|    
 |**singleton_lookup_count**|**bigint**|Conteggio cumulativo dei recuperi di singole righe dall'indice o heap.|    
 |**forwarded_fetch_count**|**bigint**|Conteggio delle righe recuperate tramite un record di inoltro.<br /><br /> 0 = Indici|    
-|**lob_fetch_in_pages**|**bigint**|Conteggio cumulativo delle pagine LOB recuperate dall'unità di allocazione LOB_DATA. Queste pagine contengono dati archiviati in colonne di tipo **Text** , **ntext** , **Image** , **varchar (max)** , **nvarchar (max)** , **varbinary (max)** e **XML** . Per altre informazioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
+|**lob_fetch_in_pages**|**bigint**|Conteggio cumulativo delle pagine LOB recuperate dall'unità di allocazione LOB_DATA. Queste pagine contengono dati archiviati in colonne di tipo **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** e **XML**. Per altre informazioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
 |**lob_fetch_in_bytes**|**bigint**|Conteggio cumulativo dei byte di dati LOB recuperati.|    
 |**lob_orphan_create_count**|**bigint**|Conteggio cumulativo dei valori LOB isolati (orfani) creati per le operazioni bulk.<br /><br /> 0 = Indice non cluster|    
 |**lob_orphan_insert_count**|**bigint**|Conteggio cumulativo dei valori LOB isolati (orfani) inseriti durante le operazioni bulk.<br /><br /> 0 = Indice non cluster|    
-|**row_overflow_fetch_in_pages**|**bigint**|Conteggio cumulativo delle pagine di dati di overflow della riga recuperate dall'unità di allocazione ROW_OVERFLOW_DATA.<br /><br /> Queste pagine contengono dati archiviati in colonne di tipo **varchar (n)** , **nvarchar (n)** , **varbinary (n)** e **sql_variant** di cui è stato eseguito il push all'esterno di righe.|    
+|**row_overflow_fetch_in_pages**|**bigint**|Conteggio cumulativo delle pagine di dati di overflow della riga recuperate dall'unità di allocazione ROW_OVERFLOW_DATA.<br /><br /> Queste pagine contengono dati archiviati in colonne di tipo **varchar (n)**, **nvarchar (n)**, **varbinary (n)** e **sql_variant** di cui è stato eseguito il push all'esterno di righe.|    
 |**row_overflow_fetch_in_bytes**|**bigint**|Conteggio cumulativo dei byte di dati di overflow della riga recuperati.|    
 |**column_value_push_off_row_count**|**bigint**|Conteggio cumulativo dei valori di colonna per i dati LOB e di overflow della riga spostati all'esterno di righe per adattare una riga inserita o aggiornata all'interno di una pagina.|    
 |**column_value_pull_in_row_count**|**bigint**|Conteggio cumulativo dei valori di colonna per i dati LOB e di overflow della riga esclusi dalla riga. Ciò si verifica quando un'operazione di aggiornamento libera spazio in un record e offre l'opportunità di includere uno o più valori all'esterno di righe dall'unità di allocazione LOB_DATA o ROW_OVERFLOW_DATA nell'unità di allocazione IN_ROW_DATA.|    
@@ -140,7 +140,7 @@ sys.dm_db_index_operational_stats (
     
  Utilizzare le colonne seguenti per identificare le aree di contesa.    
     
- **Per analizzare un comune modello di accesso alla partizione di tabelle o indici** , utilizzare le colonne seguenti:    
+ **Per analizzare un comune modello di accesso alla partizione di tabelle o indici**, utilizzare le colonne seguenti:    
     
 -   **leaf_insert_count**    
     
@@ -192,9 +192,9 @@ sys.dm_db_index_operational_stats (
     
 -   `CONTROL` autorizzazione per l'oggetto specificato all'interno del database    
     
--   `VIEW DATABASE STATE` autorizzazione per la restituzione di informazioni su tutti gli oggetti all'interno del database specificato, tramite il carattere jolly di oggetto @ *object_id* = null    
+-   `VIEW DATABASE STATE` autorizzazione per la restituzione di informazioni su tutti gli oggetti all'interno del database specificato, tramite il carattere jolly di oggetto @*object_id* = null    
     
--   `VIEW SERVER STATE` autorizzazione per la restituzione di informazioni su tutti i database, tramite il carattere jolly di database @ *database_id* = null    
+-   `VIEW SERVER STATE` autorizzazione per la restituzione di informazioni su tutti i database, tramite il carattere jolly di database @*database_id* = null    
     
  La concessione `VIEW DATABASE STATE` consente la restituzione di tutti gli oggetti nel database, indipendentemente dalle autorizzazioni di controllo negate per oggetti specifici.    
     
