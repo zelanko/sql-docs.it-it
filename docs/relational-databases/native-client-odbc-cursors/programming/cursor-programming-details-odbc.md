@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59e71b9d5c091be993207dbd04d08a418c58fe28
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1a2a7455b8500db174bc0b310a38b00b32f5cb38
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423893"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438604"
 ---
 # <a name="cursor-programming-details-odbc"></a>Informazioni sulla programmazione dei cursori (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88423893"
   
 -   [Utilizzo del recupero automatico con i cursori ODBC](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md)  
   
--   [Cursori fast-only &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
+-   [Cursori Forward-Only veloci &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo di cursori &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  

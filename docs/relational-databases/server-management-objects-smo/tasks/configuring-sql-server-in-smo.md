@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82b797bdf365b5b1226f63bae31047f4c6aa29c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: afb9cbc371fa962d9c7b63dea6e2a9fe82cbfae8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498554"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439742"
 ---
 # <a name="configuring-sql-server-in-smo"></a>Configurazione di SQL Server in SMO
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "88498554"
   
  Le proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.UserOptions> contengono informazioni sul comportamento delle connessioni correnti in relazione ad aritmetica, standard ANSI e transazioni.  
   
- È inoltre disponibile un set di opzioni di configurazione rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Configuration>. Contiene un set di proprietà che rappresentano le opzioni che possono essere modificate dalla stored procedure **sp_configure** . Opzioni quali il **Boost di priorità**, l' **intervallo di recupero** e le dimensioni dei **pacchetti di rete**controllano le prestazioni dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Molte di queste opzioni possono essere modificate dinamicamente, ma in alcuni casi il valore viene prima configurato, quindi modificato al riavvio dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ È inoltre disponibile un set di opzioni di configurazione rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Configuration>. Contiene un set di proprietà che rappresentano le opzioni che possono essere modificate dalla stored procedure **sp_configure** . Opzioni quali il **Boost di priorità**, l' **intervallo di recupero** e le dimensioni dei **pacchetti di rete** controllano le prestazioni dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Molte di queste opzioni possono essere modificate dinamicamente, ma in alcuni casi il valore viene prima configurato, quindi modificato al riavvio dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  È presente una proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Configuration> per ogni opzione di configurazione. È possibile modificare l'impostazione di configurazione globale utilizzando l'oggetto <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty>. Molte proprietà hanno valori massimi e minimi, anch'essi archiviati come proprietà <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty>. Queste proprietà richiedono il <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A> metodo per eseguire il commit della modifica nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Tutte le opzioni di configurazione nell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Configuration> devono essere modificate dall'amministratore del sistema.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per gli esempi di codice seguenti, è necessario selezionare l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="modifying-sql-server-configuration-options-in-visual-basic"></a>Modifica delle opzioni di configurazione di SQL Server in Visual Basic  

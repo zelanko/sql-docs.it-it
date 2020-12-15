@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1eb4580f3654b12f09b39e2fadf2167a9f9e561
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a2fbc7fe209653a142ea887999fc95310f29e30b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869330"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438354"
 ---
 # <a name="prepared-execution"></a>Esecuzione preparata
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "91869330"
   
  Per motivi di prestazioni, la preparazione dell'istruzione viene posticipata fino alla chiamata a **SQLExecute** o all'esecuzione di un'operazione di metaproprietà, ad esempio [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) o [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) in ODBC. Comportamento predefinito. Eventuali errori nell'istruzione da preparare saranno noti solo dopo l'esecuzione dell'istruzione o dell'operazione di metaproprietà. È possibile disattivare questo comportamento predefinito impostando l'attributo SQL_SOPT_SS_DEFER_PREPARE dell'istruzione specifica del driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client su SQL_DP_OFF.  
   
- In caso di preparazione posticipata, la chiamata a **SQLDescribeCol** o **SQLDescribeParam** prima di chiamare **SQLExecute** genera un round trip aggiuntivo al server. In **SQLDescribeCol**il driver rimuove la clausola WHERE dalla query e la invia al server con SET FMTONLY ON per ottenere la descrizione delle colonne del primo set di risultati restituito dalla query. In **SQLDescribeParam**il driver chiama il server per ottenere una descrizione delle espressioni o delle colonne a cui fanno riferimento i marcatori dei parametri nella query. Questo metodo presenta inoltre alcune restrizioni, ad esempio non è in grado di risolvere i parametri nelle sottoquery.  
+ In caso di preparazione posticipata, la chiamata a **SQLDescribeCol** o **SQLDescribeParam** prima di chiamare **SQLExecute** genera un round trip aggiuntivo al server. In **SQLDescribeCol** il driver rimuove la clausola WHERE dalla query e la invia al server con SET FMTONLY ON per ottenere la descrizione delle colonne del primo set di risultati restituito dalla query. In **SQLDescribeParam** il driver chiama il server per ottenere una descrizione delle espressioni o delle colonne a cui fanno riferimento i marcatori dei parametri nella query. Questo metodo presenta inoltre alcune restrizioni, ad esempio non è in grado di risolvere i parametri nelle sottoquery.  
   
  Un utilizzo eccessivo di **SQLPrepare** con il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client comporta un peggioramento delle prestazioni, soprattutto quando si è connessi a versioni precedenti di SQL Server. L'esecuzione preparata non deve essere utilizzata per le istruzioni eseguite una sola volta. L'esecuzione preparata è più lenta dell'esecuzione diretta per una singola esecuzione di un'istruzione perché richiede un round trip in rete aggiuntivo dal client al server. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene inoltre generata una stored procedure temporanea.  
   

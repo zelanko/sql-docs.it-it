@@ -17,13 +17,13 @@ ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76cdf55452ff2545063d8bc15c8347281fc46e57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9a139f5b8ab3e72ead770132a70eadf4016854fa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649266"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439622"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>Query XPath di esempio (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85649266"
  [Specifica di assi in query XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)  
  Viene illustrato come vengono specificati gli assi nelle query XPath.  
   
- [Specifica di predicati con valori booleani nelle query XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)  
+ [Specifica di Boolean-Valued predicati nelle query XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)  
  Viene illustrato come vengono specificati i predicati con valori booleani nelle query XPath.  
   
  [Specifica di operatori relazionali nelle query XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)  

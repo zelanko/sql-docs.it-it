@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8939bfbec2f309c899a527288de35a3d3ea10d09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 91301000df95b19338313d4541d7a7de4956095d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420195"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439819"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server Shared Management Objects (SMO) License Terms (Condizioni di licenza di SQL Server Shared Management Objects (SMO))
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -43,7 +43,7 @@ per il presente software, a meno che a tali prodotti non siano associate condizi
 
 **2.    ULTERIORI REQUISITI DI LICENZA E/O DIRITTI DI UTILIZZO.**
 
-&nbsp;&nbsp;**Codice distribuibile.**
+&nbsp;&nbsp;**un.    Codice distribuibile.**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i. diritto di utilizzo e distribuzione. Se si rispettano le condizioni seguenti:**
 *   Il licenziatario potrà duplicare e distribuire il formato in codice oggetto del software ("Codice Distribuibile") nei programmi che sviluppa;
@@ -86,9 +86,9 @@ per il presente software, a meno che a tali prodotti non siano associate condizi
 
 **10.   LEGGE APPLICABILE.**
 
-&nbsp;&nbsp;**a. Stati Uniti.** Qualora il software sia stato acquistato negli Stati Uniti, il presente contratto è disciplinato e interpretato esclusivamente in base alla legge dello Stato di Washington e tale legge si applica ai reclami aventi ad oggetto gli inadempimenti contrattuali, indipendentemente dai principi in materia di conflitto di legge. Tutte le altre controversie, incluse quelle aventi ad oggetto la violazione della normativa a tutela dei consumatori, la violazione delle norme in materia di concorrenza sleale e l'illecito extracontrattuale, saranno disciplinate dalla legge dello Stato di residenza del licenziatario.
+&nbsp;&nbsp;**un.    Stati Uniti.** Qualora il software sia stato acquistato negli Stati Uniti, il presente contratto è disciplinato e interpretato esclusivamente in base alla legge dello Stato di Washington e tale legge si applica ai reclami aventi ad oggetto gli inadempimenti contrattuali, indipendentemente dai principi in materia di conflitto di legge. Tutte le altre controversie, incluse quelle aventi ad oggetto la violazione della normativa a tutela dei consumatori, la violazione delle norme in materia di concorrenza sleale e l'illecito extracontrattuale, saranno disciplinate dalla legge dello Stato di residenza del licenziatario.
 
-&nbsp;&nbsp;**b. al di fuori della Stati Uniti.** Qualora il licenziatario abbia acquistato il software in qualsivoglia altro Paese, il presente contratto è disciplinato dalla legge di tale Paese.
+&nbsp;&nbsp;**b.    Al di fuori della Stati Uniti.** Qualora il licenziatario abbia acquistato il software in qualsivoglia altro Paese, il presente contratto è disciplinato dalla legge di tale Paese.
 
 **11.   EFFETTI GIURIDICI.** Con il presente contratto vengono concessi determinati diritti. Al licenziatario potranno essere concessi altri diritti ai sensi della legge del paese di residenza. Il licenziatario potrebbe, inoltre, avere ulteriori diritti direttamente nei confronti del soggetto da cui ha acquistato il software. Il presente contratto non modifica i diritti del licenziatario che la legge del Paese di residenza del licenziatario non consente di modificare.
 

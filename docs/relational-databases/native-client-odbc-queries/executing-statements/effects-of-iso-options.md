@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7903ef171ecda557c723edc2d73381a2db8fa41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 53012e9698cdd7132b6ea35a8296d84287a2767f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486847"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438374"
 ---
 # <a name="effects-of-iso-options"></a>Effetti delle opzioni ISO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

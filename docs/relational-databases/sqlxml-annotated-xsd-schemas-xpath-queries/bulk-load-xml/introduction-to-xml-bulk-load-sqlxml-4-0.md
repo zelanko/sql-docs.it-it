@@ -17,13 +17,13 @@ ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fe57f7f0376e6c9691808c224d33c1796d65812
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9bd7ea649bc00090c64b312f007b40ea15bdf9bb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762817"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439686"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Introduzione al caricamento bulk XML (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "85762817"
   
 -   Schemi XSD e XDR annotati. Per ulteriori informazioni sugli schemi XSD con annotazioni, vedere [Introduzione agli schemi XSD con Annotazioni &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Per informazioni sugli schemi XDR con annotazioni, vedere [schemi XDR con Annotazioni &#40;deprecati in SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
--   Meccanismi di inserimento bulk [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], quali l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT e l'utilità bcp. Per ulteriori informazioni, vedere [BULK INSERT &#40;&#41;Transact-SQL](../../../t-sql/statements/bulk-insert-transact-sql.md) e [utilità bcp](../../../tools/bcp-utility.md).  
+-   Meccanismi di inserimento bulk [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], quali l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT e l'utilità bcp. Per ulteriori informazioni, vedere [BULK INSERT &#40;&#41;Transact-SQL ](../../../t-sql/statements/bulk-insert-transact-sql.md) e [utilità bcp](../../../tools/bcp-utility.md).  
   
 ## <a name="streaming-of-xml-data"></a>Flusso dei dati XML  
  Poiché le dimensioni del documento XML di origine possono essere elevate, l'intero documento non viene letto in memoria per l'elaborazione del caricamento bulk. Il caricamento bulk XML interpreta invece i dati XML come un flusso e li legge. Durante la lettura dei dati, l'utilità identifica le tabelle di database, genera i record appropriati dall'origine dati XML, quindi invia i record a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per l'inserimento.  

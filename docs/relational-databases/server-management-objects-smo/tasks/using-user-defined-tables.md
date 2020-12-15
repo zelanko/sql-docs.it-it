@@ -1,6 +1,6 @@
 ---
 description: Utilizzo di tabelle definite dall'utente
-title: Utilizzo di tabelle definite dall'utente | Microsoft Docs
+title: Utilizzo di tabelle User-Defined | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58f244f5216a016633b2f186d04ef9789267b6e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8c1dd77a0558b2f4506179a4d4ebe87eba078801
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448024"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439712"
 ---
 # <a name="using-user-defined-tables"></a>Utilizzo di tabelle definite dall'utente
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88448024"
   
  La classe <xref:Microsoft.SqlServer.Management.Smo.DataType> consente di specificare il tipo di dati associato a colonne e parametri. Utilizzare questo tipo per specificare il tipo di tabella definita dall'utente come parametro per stored procedure e funzioni definite dall'utente.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
 Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   

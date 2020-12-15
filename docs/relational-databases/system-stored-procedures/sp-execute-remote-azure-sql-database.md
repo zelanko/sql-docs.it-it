@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: dd5b35e6c999f69b7adda16fd4590942cd2da63b
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: 2ab1c51c53282b5f245cf7da0d33cf4f797bf53a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810247"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439466"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -73,16 +73,16 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `ALTER ANY EXTERNAL DATA SOURCE`.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  `sp_execute_remote` i parametri devono essere specificati nell'ordine specifico, come descritto nella sezione precedente della sintassi. Se i parametri non vengono immessi in ordine, verrà visualizzato un messaggio di errore.  
   
- `sp_execute_remote` ha lo stesso comportamento di [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) per quanto riguarda i batch e l'ambito dei nomi. L'istruzione o il batch Transact-SQL nel sp_execute_remote parametro * \@ stmt* non viene compilato finché non viene eseguita l'istruzione sp_execute_remote.  
+ `sp_execute_remote` ha lo stesso comportamento di [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) per quanto riguarda i batch e l'ambito dei nomi. L'istruzione o il batch Transact-SQL nel sp_execute_remote parametro *\@ stmt* non viene compilato finché non viene eseguita l'istruzione sp_execute_remote.  
   
  `sp_execute_remote` aggiunge una colonna aggiuntiva al set di risultati denominato ' $ShardName ' contenente il nome del database remoto che ha prodotto la riga.  
   
  `sp_execute_remote` può essere utilizzato in modo analogo a [sp_executesql &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
 ### <a name="simple-example"></a>Esempio semplice  
  Nell'esempio seguente viene creata ed eseguita una semplice istruzione SELECT su un database remoto.  
   

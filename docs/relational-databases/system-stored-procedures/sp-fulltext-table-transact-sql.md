@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1117c89aec3a615b439686a065c29457e267bffe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 94ce485bc773b66010708034c6c6cd2b87f85d3e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541761"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439408"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -54,13 +54,13 @@ sp_fulltext_table
   
 `[ @action = ] 'action'` Azione da eseguire. *Action* è di **tipo nvarchar (50)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Creare**|Crea i metadati per un indice full-text per la tabella a cui fa riferimento *qualified_table_name* e specifica che i dati dell'indice full-text per questa tabella devono risiedere nella *fulltext_catalog_name*. Questa azione indica inoltre l'utilizzo di *unique_index_name* come colonna chiave full-text. Questo indice univoco deve essere già presente e definito in una colonna della tabella.<br /><br /> Nella tabella sarà possibile eseguire una ricerca full-text solo dopo il popolamento del catalogo full-text.|  
 |**Goccia**|Elimina i metadati nell'indice full-text per *qualified_table_name*. Se l'indice full-text è attivo, viene disattivato automaticamente prima dell'eliminazione. Non è necessario rimuovere le colonne prima di eliminare l'indice full-text.|  
 |**Attiva**|Attiva la possibilità di raccogliere i dati dell'indice full-text per *qualified_table_name*, dopo che sono stati disattivati. Per poter attivare un indice full-text, è necessario che l'indice includa almeno una colonna.<br /><br /> Un indice full-text viene attivato automaticamente per il popolamento non appena si aggiunge la prima colonna per l'indicizzazione. Se si elimina l'ultima colonna dell'indice, l'indice diventa inattivo. Se il rilevamento delle modifiche è attivato, l'attivazione di un indice non attivo comporta l'avvio di un nuovo processo di popolamento.<br /><br /> Si noti che in questo modo l'indice full-text non viene popolato, ma viene semplicemente registrata la tabella nel catalogo full-text del file system in modo che sia possibile recuperare le righe da *qualified_table_name* durante il popolamento dell'indice full-text successivo.|  
 |**Disattivare**|Disattiva l'indice full-text per *qualified_table_name* in modo che non sia più possibile raccogliere i dati dell'indice full-text per l' *qualified_table_name*. I metadati dell'indice full-text tuttavia vengono conservati e la tabella può essere riattivata.<br /><br /> Se il rilevamento delle modifiche è attivato, la disattivazione di un indice attivo comporta il blocco dello stato dell'indice, ovvero vengono arrestati i processi di popolamento in corso e la distribuzione delle modifiche nell'indice.|  
-|**start_change_tracking**|Avvia un popolamento incrementale dell'indice full-text. Se la tabella non include una colonna di tipo timestamp, viene avviato un popolamento completo dell'indice full-text e il rilevamento delle modifiche apportate alla tabella.<br /><br /> Il rilevamento delle modifiche full-text non tiene traccia delle operazioni WRITETEXT o UPDATETEXT eseguite su colonne con indicizzazione full-text di tipo **Image**, **Text**o **ntext**.|  
+|**start_change_tracking**|Avvia un popolamento incrementale dell'indice full-text. Se la tabella non include una colonna di tipo timestamp, viene avviato un popolamento completo dell'indice full-text e il rilevamento delle modifiche apportate alla tabella.<br /><br /> Il rilevamento delle modifiche full-text non tiene traccia delle operazioni WRITETEXT o UPDATETEXT eseguite su colonne con indicizzazione full-text di tipo **Image**, **Text** o **ntext**.|  
 |**stop_change_tracking**|Arresta il rilevamento delle modifiche apportate alla tabella.|  
 |**update_index**|Propaga nell'indice full-text il set di modifiche rilevate.|  
 |**Start_background_updateindex**|Avvia la propagazione delle modifiche rilevate nell'indice full-text.|  
@@ -69,9 +69,9 @@ sp_fulltext_table
 |**start_incremental**|Avvia un popolamento incrementale dell'indice full-text per la tabella.|  
 |**Stop**|Arresta un popolamento completo o incrementale.|  
   
-`[ @ftcat = ] 'fulltext_catalog_name'` Nome del catalogo full-text esistente valido per un'azione **create** . Per tutte le altre azioni questo parametro deve essere NULL. *fulltext_catalog_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @ftcat = ] 'fulltext_catalog_name'` Nome del catalogo full-text esistente valido per un'azione **create** . Per tutte le altre azioni questo parametro deve essere NULL. *fulltext_catalog_name* è di **tipo sysname** e il valore predefinito è null.  
   
-`[ @keyname = ] 'unique_index_name'` È una colonna a chiave singola valida, ovvero un indice non null univoco per *qualified_table_name* per un'azione **create** . Per tutte le altre azioni questo parametro deve essere NULL. *unique_index_name* è di **tipo sysname**e il valore predefinito è null.  
+`[ @keyname = ] 'unique_index_name'` È una colonna a chiave singola valida, ovvero un indice non null univoco per *qualified_table_name* per un'azione **create** . Per tutte le altre azioni questo parametro deve essere NULL. *unique_index_name* è di **tipo sysname** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

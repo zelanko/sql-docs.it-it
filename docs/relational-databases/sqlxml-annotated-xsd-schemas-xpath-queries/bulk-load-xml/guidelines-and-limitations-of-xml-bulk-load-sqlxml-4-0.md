@@ -14,13 +14,13 @@ ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fd6795105bb2540c08f1f241444b6464f131601
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b17b1990f168326ae884b4db4f1ff22a63b24e21
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762834"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439689"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Linee guida e limitazioni per il caricamento bulk XML (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "85762834"
     </AllCustomers>  
     ```  
   
-     Questi elementi vengono ignorati dal caricamento bulk XML **\<Order>** . Tuttavia, se si utilizza l'annotazione **SQL: overflow-field**nello schema per identificare una colonna come colonna di overflow, il caricamento bulk XML archivia tutti i dati non utilizzati in questa colonna.  
+     Questi elementi vengono ignorati dal caricamento bulk XML **\<Order>** . Tuttavia, se si utilizza l'annotazione **SQL: overflow-field** nello schema per identificare una colonna come colonna di overflow, il caricamento bulk XML archivia tutti i dati non utilizzati in questa colonna.  
   
 -   Le sezioni CDATA e i riferimenti a entità vengono convertiti nei rispettivi equivalenti in formato stringa prima di essere archiviati nel database.  
   

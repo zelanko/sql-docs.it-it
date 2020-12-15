@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 791ae266a82168239f7c3a9cf99ef90066e8032f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f88f345a7c30ca240acdacd35cb0e015a4699f16
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455814"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439899"
 ---
-# <a name="sql-server-native-client-commands-generating-multiple-rowset-results"></a>SQL Server Native Client comandi che generano risultati con più set di righe
+# <a name="sql-server-native-client-commands-generating-multiple-rowset-results"></a>SQL Server Native Client comandi che generano risultati Multiple-Rowset
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client può restituire più set di righe dalle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istruzioni. Tramite le istruzioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono restituiti più set di righe nelle condizioni seguenti:  

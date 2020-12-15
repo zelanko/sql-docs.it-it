@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f472c3354e2cfefe10aeeedd8935360e3a4751a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8b3a9c15979d162ca345a0d440f7093c4bd15ad9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868260"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439836"
 ---
 # <a name="overview-smo"></a>Panoramica (SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "91868260"
   
  L'esecuzione diretta è il metodo di esecuzione standard. Le istruzioni vengono inviate direttamente a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appena vengono generate. L'esecuzione dell'acquisizione rappresenta il metodo alternativo.  
   
- L'esecuzione dell'acquisizione consente di acquisire i batch [!INCLUDE[tsql](../../includes/tsql-md.md)] generalmente eseguiti, consentendo così al programmatore SMO di posticipare lo script, archiviarlo per un'esecuzione successiva o fornire un'anteprima per l'utente finale. Ad esempio, un'istruzione Create **database**, **Create Table**e **create index** può essere inviata in un unico batch e quindi eseguita come tre passaggi sequenziali. Questa funzionalità viene controllata dall'utente tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
+ L'esecuzione dell'acquisizione consente di acquisire i batch [!INCLUDE[tsql](../../includes/tsql-md.md)] generalmente eseguiti, consentendo così al programmatore SMO di posticipare lo script, archiviarlo per un'esecuzione successiva o fornire un'anteprima per l'utente finale. Ad esempio, un'istruzione Create **database**, **Create Table** e **create index** può essere inviata in un unico batch e quindi eseguita come tre passaggi sequenziali. Questa funzionalità viene controllata dall'utente tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
   
  **Provider WMI**  
   

@@ -22,13 +22,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2d11ac386a822a6e6c0d6630fcc83ba2cf61486
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cbc39f5ea259007f19a57e77601d2528730ae88f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764887"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439702"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Specifica del livello di nidificazione nelle relazioni ricorsive mediante sql:max-depth
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -172,7 +172,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  Per produrre profondità diverse delle gerarchie nel risultato, modificare il valore dell'annotazione **SQL: max-depth** nello schema ed eseguire di nuovo il modello dopo ogni modifica.  
   
- Nello schema precedente tutti gli **\<Emp>** elementi hanno esattamente lo stesso set di attributi (**EmployeeID**, **FirstName**e **LastName**). Lo schema seguente è stato leggermente modificato per restituire un attributo **ReportsTo** aggiuntivo per tutti gli **\<Emp>** elementi che fanno rapporto a un responsabile.  
+ Nello schema precedente tutti gli **\<Emp>** elementi hanno esattamente lo stesso set di attributi (**EmployeeID**, **FirstName** e **LastName**). Lo schema seguente è stato leggermente modificato per restituire un attributo **ReportsTo** aggiuntivo per tutti gli **\<Emp>** elementi che fanno rapporto a un responsabile.  
   
  Questo frammento XML, ad esempio, mostra i subalterni del dipendente 1:  
   
