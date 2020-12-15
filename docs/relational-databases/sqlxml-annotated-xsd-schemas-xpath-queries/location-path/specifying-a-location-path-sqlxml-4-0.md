@@ -17,13 +17,13 @@ ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f5793bef7a6b025198972b1be40fc9f482fd53c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9dedf4df4aa43f79ca4146da6f1183b0ee06286b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649740"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431282"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Definizione di un percorso (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "85649740"
   
 -   **Asse**  
   
-     L'asse specifica la relazione all'interno dell'albero tra i nodi selezionati dal passo e dal nodo di contesto. Gli assi **padre**, **figlio**, **attributo**e **self** sono supportati. Se un asse **figlio** viene specificato nel percorso, tutti i nodi selezionati dalla query sono gli elementi figlio del nodo di contesto. Se viene specificato un asse **padre** , il nodo selezionato corrisponde al nodo padre del nodo di contesto. Se viene specificato un asse degli **attributi** , i nodi selezionati sono gli attributi del nodo di contesto.  
+     L'asse specifica la relazione all'interno dell'albero tra i nodi selezionati dal passo e dal nodo di contesto. Gli assi **padre**, **figlio**, **attributo** e **self** sono supportati. Se un asse **figlio** viene specificato nel percorso, tutti i nodi selezionati dalla query sono gli elementi figlio del nodo di contesto. Se viene specificato un asse **padre** , il nodo selezionato corrisponde al nodo padre del nodo di contesto. Se viene specificato un asse degli **attributi** , i nodi selezionati sono gli attributi del nodo di contesto.  
   
 -   **Test di nodo**  
   
-     Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse (**figlio**, **padre**, **attributo**e **auto**) ha un tipo di nodo principale. Per l'asse degli **attributi** , il tipo di nodo principale è **\<attribute>** . Per gli assi **padre**, **figlio**e **self** , il tipo di nodo principale è **\<element>** .  
+     Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse (**figlio**, **padre**, **attributo** e **auto**) ha un tipo di nodo principale. Per l'asse degli **attributi** , il tipo di nodo principale è **\<attribute>** . Per gli assi **padre**, **figlio** e **self** , il tipo di nodo principale è **\<element>** .  
   
      Se, ad esempio, il percorso specifica **child:: Customer**, **\<Customer>** verranno selezionati gli elementi figlio del nodo di contesto. Poiché l'asse **figlio** ha **\<element>** come tipo di nodo principale, il test di nodo Customer è true se Customer è un **\<element>** nodo.  
   

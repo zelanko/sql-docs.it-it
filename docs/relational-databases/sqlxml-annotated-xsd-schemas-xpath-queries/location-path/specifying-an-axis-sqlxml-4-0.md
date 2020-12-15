@@ -21,18 +21,18 @@ ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df40d531bcb9c1fddcad5d78cd76ca98831834ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 03c0fff271ef3774116eb9c97025b1f602f7852c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649732"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97431159"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Specifica di un asse (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
     
--   L'asse specifica la relazione all'interno dell'albero tra i nodi selezionati dal passo e dal nodo di contesto. Sono supportati gli assi seguenti: **figlio**  
+-   L'asse specifica la relazione all'interno dell'albero tra i nodi selezionati dal passo e dal nodo di contesto. Sono supportati gli assi seguenti:  **figlio**  
   
      Contiene l'elemento figlio del nodo di contesto.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "85649732"
   
      Nella query XPath seguente, `child` è l'asse. `Customer` è il test del nodo.  
   
--   **padre**  
+-   **parent**  
   
      Contiene l'elemento padre del nodo di contesto.  
   

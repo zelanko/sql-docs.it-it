@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e02f07a78dc5f3022bfd1f374738f22b326ca94e
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: bd045c01439e2913179fdf2188448772f20d9f48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955862"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427357"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -65,7 +65,7 @@ RECONFIGURE
   
  Per informazioni sulle opzioni di configurazione disponibili e sulle relative impostazioni, vedere [Opzioni di configurazione del Server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-`[ @configvalue = ] 'value'` Nuova impostazione di configurazione. *value* è **int**e il valore predefinito è NULL. Il valore massimo dipende dalla singola opzione.  
+`[ @configvalue = ] 'value'` Nuova impostazione di configurazione. *value* è **int** e il valore predefinito è NULL. Il valore massimo dipende dalla singola opzione.  
   
  Per visualizzare il valore massimo per ogni opzione, vedere la colonna **Maximum** della vista del catalogo **sys.configurations** .  
   
@@ -85,7 +85,7 @@ RECONFIGURE
 |**config_value**|**int**|Valore in cui è stata impostata l'opzione di configurazione utilizzando **sp_configure** (valore in **sys.configurations. value**). Per ulteriori informazioni su queste opzioni, vedere [Opzioni di configurazione del Server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) e [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|Valore corrente dell'opzione di configurazione (valore in **sys.configurations.value_in_use**).<br /><br /> Per ulteriori informazioni, vedere [sys.configurations &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Utilizzare **sp_configure** per visualizzare o modificare le impostazioni a livello di server. Per modificare le impostazioni a livello di database, utilizzare ALTER DATABASE. Per modificare le impostazioni che interessano solo la sessione utente corrente, utilizzare l'istruzione SET.  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
@@ -102,7 +102,7 @@ RECONFIGURE
   
  L'istruzione RECONFIGURE aggiorna alcune opzioni in modo dinamico. Per altre è necessario arrestare e riavviare il server. Ad esempio, le opzioni memoria **minima** del server e memoria server **max server memory** vengono aggiornate dinamicamente nella [!INCLUDE[ssDE](../../includes/ssde-md.md)] ; pertanto, è possibile modificarle senza riavviare il server. Al contrario, per riconfigurare il valore corrente dell'opzione **Fill Factor** è necessario riavviare [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- Dopo l'esecuzione di RECONFIGURE in un'opzione di configurazione, è possibile verificare se l'opzione è stata aggiornata dinamicamente eseguendo **sp_configure '***option_name***'**. I valori nelle colonne **run_value** e **config_value** devono corrispondere per un'opzione aggiornata dinamicamente. È anche possibile verificare quali opzioni sono dinamiche osservando la colonna **is_dynamic** della vista del catalogo **sys.configurations** .  
+ Dopo l'esecuzione di RECONFIGURE in un'opzione di configurazione, è possibile verificare se l'opzione è stata aggiornata dinamicamente eseguendo **sp_configure '**_option_name_*_'_*. I valori nelle colonne **run_value** e **config_value** devono corrispondere per un'opzione aggiornata dinamicamente. È anche possibile verificare quali opzioni sono dinamiche osservando la colonna **is_dynamic** della vista del catalogo **sys.configurations** .  
  
  La modifica viene inoltre scritta nel log degli errori di SQL Server.
   

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfac86a5cb8000203873f2434212bf2b50749a6d
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d51d0f1f2e15bcf6db3be6d7afee6010e9454a4e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810097"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427353"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -44,19 +44,19 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 #### <a name="parameters"></a>Parametri  
  *table_id*  
- ID oggetto della tabella con indicizzazione full-text. Se si specifica un *table_id*non valido, viene restituito un errore. Per informazioni su come ottenere l'ID oggetto di una tabella, vedere [OBJECT_ID &#40;&#41;Transact-SQL ](../../t-sql/functions/object-id-transact-sql.md).  
+ ID oggetto della tabella con indicizzazione full-text. Se si specifica un *table_id* non valido, viene restituito un errore. Per informazioni su come ottenere l'ID oggetto di una tabella, vedere [OBJECT_ID &#40;&#41;Transact-SQL ](../../t-sql/functions/object-id-transact-sql.md).  
   
  *docid*  
  Identificatore interno del documento (DocID) corrispondente al valore della chiave. Se si specifica un valore *docid* non valido, non viene restituito alcun risultato.  
   
  *key*  
- Valore di chiave full-text dalla tabella specificata. Se si specifica un valore *key* non valido, non viene restituito alcun risultato. Per informazioni sui valori della chiave full-text, vedere [gestire gli indici full-text](../search/create-and-manage-full-text-indexes.md).  
+ Valore di chiave full-text dalla tabella specificata. Se si specifica un valore *key* non valido, non viene restituito alcun risultato. Per informazioni sui valori della chiave full-text, vedere [manage Full-Text Indexes](../search/create-and-manage-full-text-indexes.md).  
   
 > [!IMPORTANT]  
 >  Per informazioni sull'utilizzo di uno, due o tre parametri, vedere la sezione "Osservazioni" più avanti in questo argomento.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- No.  
+ Nessuno.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -70,7 +70,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="permissions"></a>Autorizzazioni  
  Questa funzione è pubblica e non richiede autorizzazioni speciali.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Nella tabella seguente viene descritto l'effetto ottenuto nel caso si utilizzino uno, due o tre parametri.  
   
 |Questo elenco di parametri...|Risultato...|  
@@ -81,13 +81,13 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
  Se si verifica una delle condizioni seguenti, viene restituito un errore:  
   
--   Si specifica un *table_id*non valido.  
+-   Si specifica un *table_id* non valido.  
   
 -   La tabella non è una tabella con indicizzazione full-text.  
   
 -   Viene rilevato il valore NULL per un parametro che può essere diverso da NULL.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   
 > [!NOTE]  
 >  Negli esempi riportati in questa sezione utilizzare la tabella `Production.ProductReview` del database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . È possibile creare questo indice eseguendo l'esempio fornito per la `ProductReview` tabella in [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  

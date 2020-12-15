@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6befa1abf7f427ab59c851fac9e51933ecc97bb7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fa2b81ce294183b005aa59de141d78945f6b3f04
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538903"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427437"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,10 +58,10 @@ sp_fulltext_pendingchanges table_id
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se non ci sono modifiche da elaborare, viene restituito un set di righe vuoto.  
   
- Le query di ricerca full-text non restituiscono righe con un valore di **stato** 0. Questo perché la riga è stata eliminata dalla tabella di base ed è in attesa di essere eliminata dall'indice full-text.  
+ Full-Text le query di ricerca non restituiscono righe con un valore di **stato** 0. Questo perché la riga è stata eliminata dalla tabella di base ed è in attesa di essere eliminata dall'indice full-text.  
   
  Per verificare il numero di modifiche in attesa per una determinata tabella, utilizzare la proprietà **TableFullTextPendingChanges** della funzione OBJECTPROPERTYEX.  
   

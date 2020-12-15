@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eac2107c22781c278e173992d8994fc68fea981
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 315abb75423d2d7fa11d70ab1b2d6897b8bbc372
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005754"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427933"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ sp_executesql [ @stmt = ] statement
  Valore per il primo parametro definito nella stringa di parametri. Il valore può essere una costante o una variabile Unicode. È necessario specificare un valore di parametro per ogni parametro incluso in \@ stmt. I valori non sono necessari se l' [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch in \@ stmt non dispone di parametri.  
   
  [ OUT | OUTPUT ]  
- Indica che si tratta di un parametro di output. i parametri di tipo **Text**, **ntext**e **Image** possono essere utilizzati come parametri di output, a meno che non si tratti di una procedura Common Language Runtime (CLR). Un parametro di output che utilizza la parola chiave OUTPUT può essere il segnaposto di un cursore, a meno che la procedura non sia una procedura CLR.  
+ Indica che si tratta di un parametro di output. i parametri di tipo **Text**, **ntext** e **Image** possono essere utilizzati come parametri di output, a meno che non si tratti di una procedura Common Language Runtime (CLR). Un parametro di output che utilizza la parola chiave OUTPUT può essere il segnaposto di un cursore, a meno che la procedura non sia una procedura CLR.  
   
  *n*  
  Segnaposto per i valori di parametri aggiuntivi. I valori possono essere solo costanti o variabili. Non sono consentite espressioni più complesse quali funzioni o espressioni compilate tramite operatori.  
