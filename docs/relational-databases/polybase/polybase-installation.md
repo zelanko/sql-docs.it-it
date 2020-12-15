@@ -10,17 +10,17 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: cb70f4f5746bace6f4f7ad097a852853fea6c3ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>= sql-server-2016'
+ms.openlocfilehash: 4fcac0794148135138194a07bce8b3ad70c0ee0e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901279"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97417077"
 ---
 # <a name="install-polybase-on-windows"></a>Installare PolyBase in Windows
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only ](../../includes/applies-to-version/sql-windows-only.md)]
 
 Per installare una versione di valutazione di SQL Server, visitare [SQL Server Valutazioni](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
    
@@ -66,7 +66,7 @@ Dopo aver installato PolyBase autonomo o in un gruppo di scalabilità orizzontal
    
 1. Eseguire il file di installazione setup.exe di SQL Server.   
    
-2. Selezionare **Installazione**e quindi scegliere **Nuova installazione di SQL Server autonomo o aggiunta di funzionalità**.  
+2. Selezionare **Installazione** e quindi scegliere **Nuova installazione di SQL Server autonomo o aggiunta di funzionalità**.  
    
 3. Nella pagina Selezione funzionalità scegliere **Servizio query PolyBase per i dati esterni**.  
 
@@ -117,7 +117,7 @@ Usare i valori in questa tabella per creare gli script di installazione. Il serv
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-ver15 "
 
 |componente di SQL Server|Parametro e valori|Descrizione|  
 |--------------------------|--------------------------|-----------------|  
@@ -193,7 +193,7 @@ Al momento dell'installazione, se si usa l'istanza di SQL Server come parte di u
 
 2. Selezionare **Sistema e sicurezza** e selezionare **Windows Firewall**.  
    
-3. Selezionare **Impostazioni avanzate**e selezionare **Regole connessioni in entrata**.  
+3. Selezionare **Impostazioni avanzate** e selezionare **Regole connessioni in entrata**.  
    
 4. Fare clic con il pulsante destro del mouse sulla regola disattivata e selezionare **Abilita regola**.  
    
