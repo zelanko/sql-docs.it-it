@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5531450e79b036138e581aa0fb8083ebb121c6f
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c4b37d6bd4acfb88aacbeb7f86186bb8a3fcf02c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670864"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484553"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,10 +46,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
 ## <a name="arguments"></a>Argomenti  
  [ @rolename =]'*Role*'  
- Nome del ruolo del database nel database corrente. *Role* è di **tipo sysname**e non prevede alcun valore predefinito.  
+ Nome del ruolo del database nel database corrente. *Role* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
  [ @membername =]'*security_account*'  
- Account di sicurezza aggiunto al ruolo. *security_account* è di **tipo sysname**e non prevede alcun valore predefinito. *security_account* può essere un utente del database, un ruolo del database, un account di accesso di Windows o un gruppo di Windows.  
+ Account di sicurezza aggiunto al ruolo. *security_account* è di **tipo sysname** e non prevede alcun valore predefinito. *security_account* può essere un utente del database, un ruolo del database, un account di accesso di Windows o un gruppo di Windows.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

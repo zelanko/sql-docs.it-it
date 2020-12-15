@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c32343c060eab0d70ba3bbc4419d30809ae745c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7e325b7e88b2958b8870151516f991f27ba79e44
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448574"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483342"
 ---
 # <a name="bcp_init"></a>bcp_init
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ Nomi Unicode e ANSI:
  Handle di connessione ODBC abilitato per la copia bulk.  
   
  *szTable*  
- Nome della tabella di database per la copia interna o esterna. Il nome può includere anche il nome del database o del proprietario, Ad esempio, **pubs. Gracie. titles**, **pubs.. i titoli, i**titoli **Gracie.** **e** i titoli sono tutti nomi di tabella validi.  
+ Nome della tabella di database per la copia interna o esterna. Il nome può includere anche il nome del database o del proprietario, Ad esempio, **pubs. Gracie. titles**, **pubs.. i titoli, i** titoli **Gracie.** **e** i titoli sono tutti nomi di tabella validi.  
   
  Se *eDirection* è DB_OUT, *szTable* può essere anche il nome di una vista di database.  
   
@@ -70,7 +70,7 @@ Nomi Unicode e ANSI:
 ## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Chiamare **bcp_init** prima di chiamare qualsiasi altra funzione di copia bulk. **bcp_init** esegue le inizializzazioni necessarie per una copia bulk dei dati tra la workstation e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  La funzione **bcp_init** deve essere fornita con un handle di connessione ODBC abilitato per l'utilizzo con le funzioni di copia bulk. Per abilitare l'handle, utilizzare [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_BCP impostato su SQL_BCP_ON per un handle di connessione allocato, ma non connesso. Il tentativo di assegnare l'attributo su un handle collegato comporta un errore.  

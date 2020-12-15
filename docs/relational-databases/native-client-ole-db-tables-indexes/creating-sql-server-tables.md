@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9943b2c5e05d9cdc90efa8752aedf933ec624db9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a777ec24b0099e6ad4c98ed4f9d42d38f785de36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87241581"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484933"
 ---
 # <a name="creating-sql-server-native-client-tables"></a>Creazione di tabelle di SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "87241581"
   
  Quando gli utenti specificano il nome della tabella nel membro *pwszName* dell'Unione *uname* nel parametro *pTableID* , il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client crea una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella con tale nome. Vengono applicati i vincoli di denominazione di tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il nome tabella può indicare una tabella permanente o una tabella temporanea locale o globale. Per altre informazioni, vedere [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md). Il parametro *ppTableID* può essere NULL.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client può generare i nomi di tabelle permanenti o temporanee. Quando il consumer imposta il parametro *pTableID* su null e imposta *ppTableID* in modo che faccia riferimento a un DBID valido \* , il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client restituisce il nome generato della tabella nel membro *pwszName* dell'Unione *UNAM* di dbid a cui punta il valore di *ppTableID*. Per creare una tabella temporanea di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB denominata provider, il consumer include la proprietà OLE DB table DBPROP_TBL_TEMPTABLE in un set di proprietà Table a cui si fa riferimento nel parametro *rgPropertySets* . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native client OLE DB le tabelle temporanee denominate dal provider sono locali.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client può generare i nomi di tabelle permanenti o temporanee. Quando il consumer imposta il parametro *pTableID* su null e imposta *ppTableID* in modo che faccia riferimento a un DBID valido \* , il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client restituisce il nome generato della tabella nel membro *pwszName* dell'Unione *UNAM* di dbid a cui punta il valore di *ppTableID*. Per creare una tabella temporanea di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB denominata provider, il consumer include la proprietà OLE DB table DBPROP_TBL_TEMPTABLE in un set di proprietà Table a cui si fa riferimento nel parametro *rgPropertySets* . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB le tabelle temporanee denominate dal provider sono locali.  
   
  **CreateTable** restituisce DB_E_BADTABLEID se il membro *eKind* del parametro *pTableID* non indica DBKIND_NAME.  
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be359426c5ea5125b2fcec991f8ed06b1732e12f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9ccfce33bc58ea146c0e7383bba00625260740b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448573"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483332"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ RETCODE bcp_moretext (
 ## <a name="returns"></a>Restituisce  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Questa funzione può essere utilizzata in combinazione con [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) e [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) per copiare i valori dei dati Long a lunghezza variabile per SQL Server in diversi blocchi più piccoli. **bcp_moretext** può essere utilizzato con colonne con i tipi di dati SQL Server seguenti: **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, tipo definito dall'utente (UDT) e XML. **bcp_moretext** non supporta le conversioni dei dati, i dati forniti devono corrispondere al tipo di dati della colonna di destinazione.  
   
  Se **bcp_bind** viene chiamato con un parametro *pData* non null per i tipi di dati supportati da **bcp_moretext**, **bcp_sendrow** invia l'intero valore di dati, indipendentemente dalla lunghezza. Se, tuttavia, **bcp_bind** dispone di un parametro *pData* null per i tipi di dati supportati, è possibile utilizzare **bcp_moretext** per copiare i dati immediatamente dopo un risultato restituito da **bcp_sendrow** a indicare che tutte le colonne associate con dati presenti sono state elaborate.  

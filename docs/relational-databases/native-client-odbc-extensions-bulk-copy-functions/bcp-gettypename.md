@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8956677e62c3f4a824e704c0905c7970cf9e913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3872736a1748dbd06e251a65d358522e7b92a630
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448575"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483373"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>Restituisce  
  Una stringa che contiene il nome del tipo SQL che corrisponde al tipo BCP. Se viene specificato un tipo BCP non valido, viene restituita una stringa vuota.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I token del tipo BCP vengono definiti nel file di intestazione sqlncli.h e nella libreria sqlncli11.lib.  
   
  Nella tabella seguente viene specificato quali sono i possibili tipi BCP, se si tratta di tipi max e l'output previsto.  
@@ -83,7 +83,7 @@ RETCODE bcp_gettypename (
 |**SQLFLTN**|Prima o dopo|**float-null**|  
 |**SQLAOPSUM**|Prima o dopo|**Sum**|  
 |**SQLAOPAVG**|Prima o dopo|**Avg**|  
-|**SQLAOPCNT**|Prima o dopo|**Numero**|  
+|**SQLAOPCNT**|Prima o dopo|**Count**|  
 |**SQLAOPMIN**|Prima o dopo|**Min**|  
 |**SQLAOPMAX**|Prima o dopo|**Max**|  
 |**SQLDATETIM4**|Prima o dopo|**smalldatetime**|  
