@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_cluster_members (Transact-SQL)
-title: sys. dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs
+title: sys.dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2019
 ms.prod: sql
@@ -22,18 +22,18 @@ helpviewer_keywords:
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c7e182c4b8efb2ecc882c0e81bb1c1863b310a1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d7c9f7b1145eec5d9c0c7f3644f18e8de7739b11
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546571"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468462"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
-  Se il nodo WSFC che ospita un'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abilitata per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] dispone di quorum WSFC, restituisce una riga per ogni membro che costituisce il quorum e lo stato di ognuno di essi. Sono inclusi tutti i nodi del cluster (restituiti con CLUSTER_ENUM_NODE tipo dalla funzione **ClusterEnum** ) e il server di controllo del disco o della condivisione file, se presente. La riga restituita per un determinato membro contiene informazioni sullo stato di quel membro. Ad esempio, per un cluster a cinque nodi con quorum di maggioranza dei nodi in cui un nodo è inattivo, quando viene eseguita una query su **sys. dm_hadr_cluster_members** da un'istanza del server abilitata per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] che risiede in un nodo con quorum, **sys. dm_hadr_cluster_members** riflette lo stato del nodo inattivo come "NODE_DOWN".  
+  Se il nodo WSFC che ospita un'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abilitata per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] dispone di quorum WSFC, restituisce una riga per ogni membro che costituisce il quorum e lo stato di ognuno di essi. Sono inclusi tutti i nodi del cluster (restituiti con CLUSTER_ENUM_NODE tipo dalla funzione **ClusterEnum** ) e il server di controllo del disco o della condivisione file, se presente. La riga restituita per un determinato membro contiene informazioni sullo stato di quel membro. Ad esempio, per un cluster a cinque nodi con quorum di maggioranza dei nodi in cui un nodo è inattivo, quando **sys.dm_hadr_cluster_members** viene eseguita una query da un'istanza del server abilitata per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] che risiede in un nodo con quorum, **sys.dm_hadr_cluster_members** riflette lo stato del nodo inattivo come "NODE_DOWN".  
   
  Se il nodo WSFC non dispone di quorum, non viene restituita alcuna riga.  
   

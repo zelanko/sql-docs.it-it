@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0e28b9c039bd620780930a2795914432bf07669
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b40e6caf31616f7dc1749a80746ea4ab2b9039ed
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535215"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468382"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @language = ] 'language'` Nome della lingua alternativa per la quale visualizzare le informazioni. *Language* è di **tipo sysname**e il valore predefinito è null. Se viene specificata la *lingua* , vengono restituite informazioni sulla lingua specificata. Se la lingua non è specificata, vengono restituite informazioni su tutte le lingue nella vista di compatibilità **sys.syslinguaggi** .  
+`[ @language = ] 'language'` Nome della lingua alternativa per la quale visualizzare le informazioni. *Language* è di **tipo sysname** e il valore predefinito è null. Se viene specificata la *lingua* , vengono restituite informazioni sulla lingua specificata. Se la lingua non è specificata, vengono restituite informazioni su tutte le lingue nella vista di compatibilità **sys.syslinguaggi** .  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

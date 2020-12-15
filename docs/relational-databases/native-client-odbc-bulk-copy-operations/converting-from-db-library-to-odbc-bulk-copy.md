@@ -1,6 +1,6 @@
 ---
 description: Conversione della copia bulk da DB-Library a ODBC
-title: Conversione dalla copia bulk DB-Library a ODBC | Microsoft Docs
+title: Conversione da DB-Library a copia bulk ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed2fce2e56d0d4bc8a1776bdc57f70446dc0919c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 488f3f1583a58431c5606fade81e9eb3f56bd076
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475773"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465032"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversione della copia bulk da DB-Library a ODBC
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,30 +32,30 @@ ms.locfileid: "88475773"
   
 -   Nelle applicazioni DB-Library un puntatore a una struttura DBPROCESS viene passato come primo parametro delle funzioni di copia bulk. Nelle applicazioni ODBC il puntatore DBPROCESS viene sostituito da un handle di connessione ODBC.  
   
--   Le applicazioni DB-Library chiamano **BCP_SETL** prima della connessione per abilitare le operazioni di copia bulk in un DBPROCESS. Le applicazioni ODBC chiamano invece [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) prima della connessione per abilitare le operazioni bulk su un handle di connessione:  
+-   DB-Library le applicazioni chiamano **BCP_SETL** prima della connessione per abilitare le operazioni di copia bulk in un DBPROCESS. Le applicazioni ODBC chiamano invece [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) prima della connessione per abilitare le operazioni bulk su un handle di connessione:  
   
     ```  
     SQLSetConnectAttr(hdbc, SQL_COPT_SS_BCP,  
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client non supporta i gestori di messaggi e di errori DB-Library. è necessario chiamare **SQLGetDiagRec** per ottenere gli errori e i messaggi generati dalle funzioni di copia bulk ODBC. Le versioni ODBC delle funzioni di copia bulk restituiscono i codici restituiti standard di copia bulk SUCCEED o FAILED, non codici restituiti di tipo ODBC, come SQL_SUCCESS o SQL_ERROR.  
+-   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client non supporta DB-Library gestori di messaggi e di errori. è necessario chiamare **SQLGetDiagRec** per ottenere gli errori e i messaggi generati dalle funzioni di copia bulk ODBC. Le versioni ODBC delle funzioni di copia bulk restituiscono i codici restituiti standard di copia bulk SUCCEED o FAILED, non codici restituiti di tipo ODBC, come SQL_SUCCESS o SQL_ERROR.  
   
 -   I valori specificati per il parametro DB-Library [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* vengono interpretati in modo diverso rispetto al parametro ODBC **bcp_bind**_cbData_ .  
   
-    |Condizione indicata|Valore *VARLEN* DB-Library|Valore ODBC *cbData*|  
+    |Condizione indicata|Valore di DB-Library *varlen*|Valore ODBC *cbData*|  
     |-------------------------|--------------------------------|-------------------------|  
     |Valori Null forniti|0|-1 (SQL_NULL_DATA)|  
     |Dati variabili forniti|-1|-10 (SQL_VARLEN_DATA)|  
     |Carattere di lunghezza zero o stringa binaria|N/D|0|  
   
-     In DB-Library, un valore *varlen* pari a-1 indica che vengono forniti dati a lunghezza variabile, che in ODBC *cbData* viene interpretato per indicare che vengono forniti solo valori null. Modificare le specifiche *VARLEN* DB-Library di-1 in SQL_VARLEN_DATA e tutte le specifiche *varlen* da 0 a SQL_NULL_DATA.  
+     In DB-Library, un valore *varlen* pari a-1 indica che vengono forniti dati a lunghezza variabile, che in ODBC *cbData* viene interpretato per indicare che vengono forniti solo valori null. Modificare le specifiche DB-Library *varlen* di-1 in SQL_VARLEN_DATA e tutte le specifiche *varlen* di 0 per SQL_NULL_DATA.  
   
--   Il **BCP_COLFMT**DB-Library_file_collen_ e ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* presentano lo stesso problema dei parametri **bcp_bind**_varlen_ e *cbData* indicati in precedenza. Modificare le specifiche di *FILE_COLLEN* DB-Library di-1 per SQL_VARLEN_DATA ed eventuali specifiche di *file_collen* da 0 a SQL_NULL_DATA.  
+-   Il DB-Library **bcp_colfmt**_file_collen_ e ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* presentano lo stesso problema dei parametri **bcp_bind**_varlen_ e *cbData* indicati in precedenza. Modificare le specifiche di DB-Library *file_collen* di-1 per SQL_VARLEN_DATA e le specifiche *file_collen* da 0 a SQL_NULL_DATA.  
   
 -   Il parametro *iValue* della funzione ODBC [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) è un puntatore void. In DB-Library *iValue* è un numero intero. Eseguire il cast dei valori per ODBC *iValue* a void *.  
   
--   L'opzione **BCP_CONTROL** BCPMAXERRS specifica il numero di righe singole che possono avere errori prima che un'operazione di copia bulk abbia esito negativo. Il valore predefinito per BCPMAXERRS è 0 (fail al primo errore) nella versione DB-Library di **bcp_control** e 10 nella versione ODBC. Le applicazioni DB-Library che dipendono dal valore predefinito 0 per terminare un'operazione di copia bulk devono essere modificate per chiamare il **BCP_CONTROL** ODBC per impostare BCPMAXERRS su 0.  
+-   L'opzione **BCP_CONTROL** BCPMAXERRS specifica il numero di righe singole che possono avere errori prima che un'operazione di copia bulk abbia esito negativo. Il valore predefinito per BCPMAXERRS è 0 (fail al primo errore) nella versione DB-Library di **bcp_control** e 10 nella versione ODBC. DB-Library le applicazioni che dipendono dal valore predefinito 0 per terminare un'operazione di copia bulk devono essere modificate per chiamare ODBC **bcp_control** per impostare BCPMAXERRS su 0.  
   
 -   La funzione ODBC **bcp_control** supporta le seguenti opzioni non supportate dalla versione DB-Library di **bcp_control**:  
   
@@ -95,11 +95,11 @@ ms.locfileid: "88475773"
   
 -   Nelle versioni ODBC delle funzioni di copia bulk il formato per l'utilizzo dei valori **DateTime** e **smalldatetime** nelle stringhe di caratteri è il formato ODBC aaaa-mm-gg hh: mm: SS. sss; i valori **smalldatetime** utilizzano il formato ODBC yyyy-mm-gg hh: mm: SS.  
   
-     Le versioni DB-Library delle funzioni di copia bulk accettano valori **DateTime** e **smalldatetime** nelle stringhe di caratteri utilizzando diversi formati:  
+     Le versioni DB-Library delle funzioni di copia bulk accettano i valori **DateTime** e **smalldatetime** nelle stringhe di caratteri utilizzando diversi formati:  
   
     -   Il formato predefinito è *mmm gg aaaa hh: Mmxx* dove *XX* è AM o PM.  
   
-    -   stringhe di caratteri **DateTime** e **smalldatetime** in qualsiasi formato supportato dalla funzione **DBConvert** di DB-Library.  
+    -   stringhe di caratteri **DateTime** e **smalldatetime** in qualsiasi formato supportato dalla DB-Library funzione **DBConvert** .  
   
     -   Quando la casella **Usa impostazioni internazionali** è selezionata nella scheda **Opzioni** DB-Library dell'utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rete client, le funzioni di copia bulk DB-Library accettano anche le date nel formato di data regionale definito per le impostazioni locali del registro di sistema del computer client.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "88475773"
   
      Se l'attributo dell'istruzione SQL_SOPT_SS_REGIONALIZE è impostato su SQL_RE_ON, le funzioni di copia bulk ODBC accettano il formato di data locale definito per le impostazioni locali del Registro di sistema del computer client.  
   
--   Quando si esegue l'output dei valori **Money** in formato carattere, le funzioni di copia bulk ODBC forniscono quattro cifre di precisione e nessun separatore virgola; Le versioni DB-Library forniscono solo due cifre di precisione e includono i separatori di virgole.  
+-   Quando si esegue l'output dei valori **Money** in formato carattere, le funzioni di copia bulk ODBC forniscono quattro cifre di precisione e nessun separatore virgola; DB-Library versioni forniscono solo due cifre di precisione e includono i separatori di virgole.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di operazioni di copia bulk &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   

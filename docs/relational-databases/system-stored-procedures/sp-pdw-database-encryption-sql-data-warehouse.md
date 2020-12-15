@@ -11,13 +11,13 @@ dev_langs:
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f8d77853846a18bd310d8afa58101cf66a24475b
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 73d1eb9fe27fa060a8bfcd13341a3908545aeed3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92258084"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468342"
 ---
 # <a name="sp_pdw_database_encryption-azure-synapse-analytics"></a>sp_pdw_database_encryption (analisi delle sinapsi di Azure)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -46,7 +46,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando Transparent Data Encryption viene abilitato utilizzando **sp_pdw_database_encryption**, il database tempdb viene eliminato, ricreato e crittografato. Per questo motivo, non è possibile abilitare la funzionalità Transparent Data Encryption in un'appliance mentre sono presenti altre sessioni attive che usano tempdb. L'abilitazione o la disabilitazione di Transparent Data Encryption in un'appliance è un'azione che modifica lo stato dell'appliance, nella maggior parte dei casi dovrebbe essere eseguita una volta nella durata dell'appliance e deve essere eseguita quando non è presente traffico nell'appliance.  
   
 ## <a name="permissions"></a>Autorizzazioni  

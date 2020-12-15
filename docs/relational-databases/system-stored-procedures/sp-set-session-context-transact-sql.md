@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 462c857e6067e6431248e86edb72d007e56d84e7
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2145297325aa71aad6a235e93254bbc2857d8afc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734610"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468292"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -44,13 +44,13 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
   
 ## <a name="arguments"></a>Argomenti  
  [ @key =] N'key '  
- Chiave da impostare, di tipo **sysname** . Le dimensioni massime della chiave sono pari a 128 byte.  
+ Chiave da impostare, di tipo **sysname**. Le dimensioni massime della chiave sono pari a 128 byte.  
   
  [ @value =]' valore '  
- Valore per la chiave specificata, di tipo **sql_variant** . L'impostazione di un valore NULL libera la memoria. Le dimensioni massime sono pari a 8.000 byte.  
+ Valore per la chiave specificata, di tipo **sql_variant**. L'impostazione di un valore NULL libera la memoria. Le dimensioni massime sono pari a 8.000 byte.  
   
  [ @read_only =] {0 | 1}  
- Flag di tipo **bit** . Se è 1, il valore per la chiave specificata non può essere modificato nuovamente in questa connessione logica. Se è 0 (impostazione predefinita), il valore può essere modificato.  
+ Flag di tipo **bit**. Se è 1, il valore per la chiave specificata non può essere modificato nuovamente in questa connessione logica. Se è 0 (impostazione predefinita), il valore può essere modificato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può impostare un contesto di sessione per la sessione.  

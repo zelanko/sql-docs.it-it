@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f23d179e0a3864d9408ab24571270007eff6254e
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: cf190b2c0a973db9e2955cd928e1b716d847d26b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810785"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467022"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,14 +51,14 @@ ms.locfileid: "91810785"
 |**default_language_lcid**|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> Indica l'identificatore LCID predefinito per questa entità.|  
 |**allow_encrypted_value_modifications**|**bit**|**Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Elimina i controlli sui metadati di crittografia nel server nelle operazioni di copia bulk. Ciò consente all'utente di eseguire la copia bulk dei dati crittografati tramite Always Encrypted, tra tabelle o database, senza decrittografare i dati. Il valore predefinito è OFF. |      
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le proprietà di *PasswordLastSetTime* sono disponibili in tutte le configurazioni supportate di SQL Server, ma le altre proprietà sono disponibili solo quando SQL Server è in esecuzione in Windows Server 2003 o versioni successive e sono abilitati sia CHECK_POLICY che CHECK_EXPIRATION. Per ulteriori informazioni, vedere [criteri password](../../relational-databases/security/password-policy.md) .
 I valori del principal_id possono essere riutilizzati nel caso in cui le entità siano state eliminate e pertanto non è sempre in aumento.
   
 ## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può visualizzare il proprio nome utente, gli utenti di sistema e i ruoli predefiniti del database. Per visualizzare altri utenti, è richiesta l'autorizzazione ALTER ANY USER o un'autorizzazione dell'utente. Per visualizzare i ruoli definiti dall'utente, è richiesta l'autorizzazione ALTER ANY ROLE o l'appartenenza al ruolo.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   
 ### <a name="a-listing-all-the-permissions-of-database-principals"></a>A: elenco di tutte le autorizzazioni delle entità di database  
  Nella query seguente vengono elencate le autorizzazioni concesse o negate in modo esplicito alle entità di database.  

@@ -1,6 +1,6 @@
 ---
 description: sys.server_permissions (Transact-SQL)
-title: sys. server_permissions (Transact-SQL) | Microsoft Docs
+title: sys.server_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/20/2019
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8f0541d743ea7feaa8991c2b085173b4c6e8f40
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bc833da8d53eadd88152e603777b4799ac30938f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88376937"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464662"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88376937"
 |**grantor_principal_id**|**int**|ID dell'entità server dell'utente che concede queste autorizzazioni.|  
 |**type**|**char (4)**|Tipo di autorizzazione per il server. Per un elenco dei tipi di autorizzazioni, vedere la tabella seguente.|  
 |**permission_name**|**nvarchar(128)**|Nome dell'autorizzazione.|  
-|**state**|**char (1)**|Stato dell'autorizzazione:<br /><br /> D = Deny<br /><br /> R = Revoke<br /><br /> G = Grant<br /><br /> W = Grant With Grant Option|  
+|**state**|**char(1)**|Stato dell'autorizzazione:<br /><br /> D = Deny<br /><br /> R = Revoke<br /><br /> G = Grant<br /><br /> W = Grant With Grant Option|  
 |**state_desc**|**nvarchar(60)**|Descrizione dello stato dell'autorizzazione:<br /><br /> NEGA<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |Tipo di autorizzazione|Nome dell'autorizzazione|Entità a protezione diretta a cui si applica|  
@@ -94,7 +94,7 @@ ms.locfileid: "88376937"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nella query seguente vengono elencate le autorizzazioni concesse o negate in modo esplicito alle entità del server.  
   
 > [!IMPORTANT]  

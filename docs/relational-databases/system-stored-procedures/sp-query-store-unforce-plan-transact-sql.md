@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7dec52b433bacd7d289708fa3e705771c07f7939
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c07d581a603c25f7d222564a67636dbe23819bb0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547458"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468352"
 ---
 # <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan (Transact-SQL)
 
@@ -44,19 +44,19 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @query_id = ] query_id` ID della query. *query_id* è di tipo **bigint**e non prevede alcun valore predefinito.  
+`[ @query_id = ] query_id` ID della query. *query_id* è di tipo **bigint** e non prevede alcun valore predefinito.  
   
-`[ @plan_id = ] plan_id` ID del piano di query che non verrà più applicato. *plan_id* è di tipo **bigint**e non prevede alcun valore predefinito.  
+`[ @plan_id = ] plan_id` ID del piano di query che non verrà più applicato. *plan_id* è di tipo **bigint** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **ALTER** per il database.
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite informazioni sulle query nell'archivio query.  
   
 ```sql  

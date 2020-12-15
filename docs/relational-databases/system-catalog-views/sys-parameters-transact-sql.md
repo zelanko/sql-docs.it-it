@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 863f360d5d5aaba7eae957d7406f5e3ec465d64f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4f9b575ae381e01233c801b963d4205b554d7f3b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548715"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467012"
 ---
 # <a name="sysparameters-transact-sql"></a>sys.parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "89548715"
 |**scale**|**tinyint**|Scala del parametro se numerica. In caso contrario 0.|  
 |**is_output**|**bit**|1 = il parametro è OUTPUT o RETURN. In caso contrario, è 0.|  
 |**is_cursor_ref**|**bit**|1 = Il parametro è un parametro di riferimento a un cursore.|  
-|**has_default_value**|**bit**|1 = il parametro ha un valore predefinito.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i valori predefiniti solo per gli oggetti CLR in questa vista del catalogo. Il valore di questa colonna è pertanto 0 per gli oggetti [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per visualizzare il valore predefinito di un parametro in un [!INCLUDE[tsql](../../includes/tsql-md.md)] oggetto, eseguire una query sulla colonna di **definizione** della vista del catalogo [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) oppure utilizzare la funzione di sistema [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .|  
+|**has_default_value**|**bit**|1 = il parametro ha un valore predefinito.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i valori predefiniti solo per gli oggetti CLR in questa vista del catalogo. Il valore di questa colonna è pertanto 0 per gli oggetti [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per visualizzare il valore predefinito di un parametro in un [!INCLUDE[tsql](../../includes/tsql-md.md)] oggetto, eseguire una query sulla colonna di **definizione** della vista del catalogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) oppure utilizzare la funzione di sistema [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .|  
 |**is_xml_document**|**bit**|1 = Il contenuto è un documento XML completo.<br /><br /> 0 = il contenuto è un frammento di documento oppure il tipo di dati della colonna non è **XML**.|  
 |**default_value**|**sql_variant**|Se **has_default_value** è 1, il valore di questa colonna corrisponde al valore predefinito per il parametro. in caso contrario, NULL.|  
 |**xml_collection_id**|**int**|Diverso da zero se il tipo di dati del parametro è **XML** e il codice XML è tipizzato. Il valore è l'ID della raccolta contenente lo spazio dei nomi XML Schema di convalida del parametro.<br /><br /> 0 = Nessuna raccolta di XML Schema.|  
@@ -60,7 +60,7 @@ ms.locfileid: "89548715"
  [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys. all_parameters &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-all-parameters-transact-sql.md)   
+ [sys.all_parameters &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-all-parameters-transact-sql.md)   
  [sys.system_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  
   
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76942f8367bb6c38da195c61fa8d428b877d0042
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 53804692b3bb27fa4be5c3ca46e516e178288846
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810077"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465272"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91810077"
   
  È necessario assegnare a **SQLDriverConnect** un *WindowHandle* valido quando un valore *DriverCompletion* richiede o potrebbe richiedere la visualizzazione della finestra di dialogo di connessione del driver. Un handle non valido restituisce SQL_ERROR.  
   
- Specificare la parola chiave DRIVER o DSN. ODBC dichiara che un driver utilizza la parola chiave più a sinistra tra le due e ignora l'altra se sono specificate entrambe. Se viene specificato il DRIVER oppure è l'oggetto più a sinistra dei due e il valore del parametro_DriverCompletion_ di **SQLDriverConnect**è SQL_DRIVER_NOPROMPT, la parola chiave server e un valore appropriato sono obbligatori.  
+ Specificare la parola chiave DRIVER o DSN. ODBC dichiara che un driver utilizza la parola chiave più a sinistra tra le due e ignora l'altra se sono specificate entrambe. Se viene specificato il DRIVER oppure è l'oggetto più a sinistra dei due e il valore del parametro _DriverCompletion_ di **SQLDriverConnect** è SQL_DRIVER_NOPROMPT, la parola chiave server e un valore appropriato sono obbligatori.  
   
  Quando si specifica SQL_DRIVER_NOPROMPT, le parole chiave di autenticazione utente devono essere presenti con valori. Il driver garantisce la presenza della stringa "Trusted_Connection=yes" o delle parole chiave UID e PWD.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "91810077"
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>Supporto di SQLDriverConnect per nomi SPN (Service Principal Name)  
  SQLDDriverConnect utilizzerà la finestra di dialogo di accesso ODBC boxwhen la richiesta di conferma è abilitata. Ciò consente di immettere i nomi SPN per il server principale e per il relativo partner di failover.  
   
- SQLDriverConnect accetterà le nuove parole chiave della stringa di connessione **ServerSPN** e **FailoverPartnerSPN**e rileverà i nuovi attributi di connessione SQL_COPT_SS_SERVER_SPN e SQL_COPT_SS_FAILOVER_PARTNER_SPN.  
+ SQLDriverConnect accetterà le nuove parole chiave della stringa di connessione **ServerSPN** e **FailoverPartnerSPN** e rileverà i nuovi attributi di connessione SQL_COPT_SS_SERVER_SPN e SQL_COPT_SS_FAILOVER_PARTNER_SPN.  
   
  Quando un attributo di connessione viene specificato più di una volta, un valore impostato a livello di programmazione ha la precedenza sul valore in un DSN e su un valore in una stringa di connessione. Un valore in un DSN ha la precedenza su un valore in una stringa di connessione.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "91810077"
   
  Per ulteriori informazioni sui nomi SPN, vedere [nomi dell'entità servizio &#40;spn&#41; nelle connessioni Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  La chiamata seguente illustra la quantità minima di dati necessari per **SQLDriverConnect**:  
   
 ```  

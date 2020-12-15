@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 043e8e62174f286ad229485ecce4e4db0990557a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e338ba67bdd2535f54e4678b4ff013c768571da8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868453"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465102"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "91868453"
   
  Quando queste opzioni sono impostate, il server chiude automaticamente il cursore quando rileva che l'ultima riga è stata recuperata. L'applicazione deve comunque chiamare [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) (SQL_CLOSE) o [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md), ma il driver non deve inviare la notifica di chiusura al server.  
   
- Se l'elenco di selezione contiene una colonna di tipo **Text**, **ntext**o **Image** , il cursore fast-only viene convertito in un cursore dinamico e **SQLGetData** è consentito.  
+ Se l'elenco di selezione contiene una colonna di tipo **Text**, **ntext** o **Image** , il cursore fast-only viene convertito in un cursore dinamico e **SQLGetData** è consentito.  
   
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  L'attributo SQL_SOPT_SS_DEFER_PREPARE determina se l'istruzione viene preparata immediatamente o rinviata fino a quando non viene eseguito **SQLExecute**, [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) o [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) . In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 e versioni precedenti questa proprietà viene ignorata (nessuna preparazione posticipata). Il valore *ValuePtr* è di tipo SQLLEN.  
@@ -134,10 +134,10 @@ ms.locfileid: "91868453"
   
 |Valore *ValuePtr*|Descrizione|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|Valore predefinito.<br /><br /> In caso di utilizzo di parametri con valori di tabella, indica che è necessario che vengano restituiti i metadati per le tabelle effettive.<br /><br /> Quando si utilizza la funzionalità colonne di tipo sparse, SQLColumns restituirà solo le colonne che non sono membri del **column_set**di tipo sparse.|  
+|SQL_SS_NAME_SCOPE_TABLE|Valore predefinito.<br /><br /> In caso di utilizzo di parametri con valori di tabella, indica che è necessario che vengano restituiti i metadati per le tabelle effettive.<br /><br /> Quando si utilizza la funzionalità colonne di tipo sparse, SQLColumns restituirà solo le colonne che non sono membri del **column_set** di tipo sparse.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indica che l'applicazione richiede metadati per un tipo di tabella, anziché una tabella effettiva. Le funzioni di catalogo devono restituire metadati per i tipi di tabella. L'applicazione passa quindi il TYPE_NAME del parametro con valori di tabella come parametro *TableName* .|  
 |SQL_SS_NAME_SCOPE_EXTENDED|Quando si utilizza la funzionalità colonne di tipo sparse, SQLColumns restituisce tutte le colonne, indipendentemente dall'appartenenza **column_set** .|  
-|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Quando si utilizza la funzionalità colonne di tipo sparse, SQLColumns restituisce solo le colonne che sono membri del **column_set**di tipo sparse.|  
+|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Quando si utilizza la funzionalità colonne di tipo sparse, SQLColumns restituisce solo le colonne che sono membri del **column_set** di tipo sparse.|  
 |SQL_SS_NAME_SCOPE_DEFAULT|Equivale a SQL_SS_NAME_SCOPE_TABLE.|  
   
  Per identificare il catalogo e lo schema per il parametro con valori di tabella, SS_TYPE_CATALOG_NAME e SS_TYPE_SCHEMA_NAME vengono utilizzati rispettivamente con i parametri *CatalogName* e *SchemaName* . Quando un'applicazione ha completato il recupero dei metadati per i parametri con valori di tabella, deve impostare nuovamente SQL_SOPT_SS_NAME_SCOPE sul valore predefinito di SQL_SS_NAME_SCOPE_TABLE.  

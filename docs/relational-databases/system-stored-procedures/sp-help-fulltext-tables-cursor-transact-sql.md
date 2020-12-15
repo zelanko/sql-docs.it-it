@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51c5f4c8e96eecd770190be5efcc42799ed3958
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ca07485062d39e2fa547e524e2b0368b19e9b577
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548049"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468402"
 ---
 # <a name="sp_help_fulltext_tables_cursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89548049"
   Utilizza un cursore per restituire un elenco di tabelle registrate per l'indicizzazione full-text.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Usare invece la nuova vista del catalogo **sys. fulltext_indexes** . Per ulteriori informazioni, vedere [sys. fulltext_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Usare invece la nuova vista del catalogo **sys.fulltext_indexes** . Per ulteriori informazioni, vedere [sys.fulltext_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ## <a name="arguments"></a>Argomenti  
 `[ @cursor_return = ] @cursor_variable OUTPUT` Variabile di output di tipo **Cursor**. Il cursore restituito è di tipo scorrevole, dinamico e di sola lettura.  
   
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Nome del catalogo full-text. *fulltext_catalog_name* è di **tipo sysname**e il valore predefinito è null. Se *fulltext_catalog_name* viene omesso o è null, vengono restituite tutte le tabelle con indicizzazione full-text associate al database. Se *fulltext_catalog_name* viene specificato, ma *table_name* viene omesso o è null, vengono recuperate le informazioni relative all'indice full-text per ogni tabella con indicizzazione full-text associata a questo catalogo. Se vengono specificati sia *fulltext_catalog_name* che *table_name* , viene restituita una riga se *table_name* è associato a *fulltext_catalog_name*; in caso contrario, viene generato un errore.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Nome del catalogo full-text. *fulltext_catalog_name* è di **tipo sysname** e il valore predefinito è null. Se *fulltext_catalog_name* viene omesso o è null, vengono restituite tutte le tabelle con indicizzazione full-text associate al database. Se *fulltext_catalog_name* viene specificato, ma *table_name* viene omesso o è null, vengono recuperate le informazioni relative all'indice full-text per ogni tabella con indicizzazione full-text associata a questo catalogo. Se vengono specificati sia *fulltext_catalog_name* che *table_name* , viene restituita una riga se *table_name* è associato a *fulltext_catalog_name*; in caso contrario, viene generato un errore.  
   
 `[ @table_name = ] 'table_name'` Nome di tabella costituito da una o due parti per il quale sono richiesti i metadati full-text. *table_name* è di **tipo nvarchar (517)** e il valore predefinito è null. Se viene specificato solo *table_name* , viene restituita solo la riga pertinente per *table_name* .  
   
@@ -69,7 +69,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni di esecuzione vengono assegnate per impostazione predefinita ai membri del ruolo **public** .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituiti i nomi delle tabelle indicizzate full-text associate al catalogo full-text `Cat_Desc`.  
   
 ```  

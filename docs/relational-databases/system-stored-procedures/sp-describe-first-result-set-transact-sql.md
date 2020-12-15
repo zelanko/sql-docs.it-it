@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cc2e3bef68a6900d5b9735ef3a5f8a050a34361
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5c95a79bb42cbc3ab32a5521682aacc8f4f9079d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548118"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466912"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Restituisce i metadati per il primo set di risultati possibile del [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Restituisce un set di risultati vuoto se il batch non restituisce risultati. Genera un errore se [!INCLUDE[ssDE](../../includes/ssde-md.md)] non è in grado di determinare i metadati per la prima query che verrà eseguita eseguendo un'analisi statica. La vista a gestione dinamica [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) restituisce le stesse informazioni.  
+  Restituisce i metadati per il primo set di risultati possibile del [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Restituisce un set di risultati vuoto se il batch non restituisce risultati. Genera un errore se [!INCLUDE[ssDE](../../includes/ssde-md.md)] non è in grado di determinare i metadati per la prima query che verrà eseguita eseguendo un'analisi statica. La vista a gestione dinamica [sys.dm_exec_describe_first_result_set &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) restituisce le stesse informazioni.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ \@tsql = ] 'Transact-SQL_batch'` Una o più [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. *Transact-SQL_batch* può essere di **tipo nvarchar (***n***)** o **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Una o più [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni. *Transact-SQL_batch* può essere di **tipo nvarchar (**_n_*_)_* o **nvarchar (max)**.  
   
 `[ \@params = ] N'parameters'`\@params fornisce una stringa di dichiarazione per i parametri del [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, che è simile a sp_executesql. I parametri possono essere di **tipo nvarchar (n)** o **nvarchar (max)**.  
   
@@ -58,7 +58,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   Se impostato su 2, ogni query viene analizzata come se venisse utilizzata per la preparazione o l'esecuzione di un cursore. Verranno restituiti nomi della vista come informazioni sulla colonna di origine.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
- **sp_describe_first_result_set** restituisce sempre lo stato zero in seguito all'esito positivo. Se la procedura genera un errore e la procedura viene chiamata come RPC, lo stato restituito viene popolato dal tipo di errore descritto nella colonna error_type di sys. dm_exec_describe_first_result_set. Se la procedura viene chiamata da [!INCLUDE[tsql](../../includes/tsql-md.md)], il valore restituito è sempre zero, anche quando si verifica un errore.  
+ **sp_describe_first_result_set** restituisce sempre lo stato zero in seguito all'esito positivo. Se la procedura genera un errore e la procedura viene chiamata come RPC, lo stato restituito viene popolato dal tipo di errore descritto nella colonna error_type di sys.dm_exec_describe_first_result_set. Se la procedura viene chiamata da [!INCLUDE[tsql](../../includes/tsql-md.md)], il valore restituito è sempre zero, anche quando si verifica un errore.  
   
 ## <a name="result-sets"></a>Set di risultati  
  Questi metadati comuni vengono restituiti come set di risultati con una riga per ogni colonna nei metadati dei risultati. Ogni riga descrive il tipo e l'ammissione di valori Null della colonna nel formato descritto nella sezione seguente. Se la prima istruzione non esiste per ogni percorso di controllo, viene restituito un set di risultati con zero righe.  
@@ -105,7 +105,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|Per uso interno.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Per uso interno.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_describe_first_result_set** garantisce che se la procedura restituisce i primi metadati del set di risultati per (un ipotetico) batch a e se tale batch (a) viene eseguito successivamente, il batch (1) genera un errore in fase di ottimizzazione, (2) genera un errore di run-time, (3) non restituisce alcun set di risultati oppure (4) restituisce un primo set di risultati con gli stessi metadati descritti da **sp_describe_first_result_set**.  
   
  Il nome, l'ammissione di valori Null e il tipo di dati possono variare. Se **sp_describe_first_result_set** restituisce un set di risultati vuoto, la garanzia è che l'esecuzione del batch non restituirà set di risultati.  
@@ -155,7 +155,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione per eseguire l' \@ argomento TSQL.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   
 ### <a name="typical-examples"></a>Esempi tipici  
   
@@ -206,8 +206,8 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
 |is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|1|b3|dbo|t|B1|0|  
-|1|2|a|dbo|t|a|1|  
+|0|1|b3|dbo|u|B1|0|  
+|1|2|a|dbo|u|a|1|  
   
  Nell'esempio in cui viene utilizzato 2 viene indicata l'esecuzione di un'analisi come se si stesse effettuando la preparazione di un cursore.  
   
@@ -401,6 +401,6 @@ N'
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_describe_undeclared_parameters &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys. dm_exec_describe_first_result_set_for_object &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sys.dm_exec_describe_first_result_set &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
  

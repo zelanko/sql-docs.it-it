@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba7ad5c6c822bff351c09d264b25310e8ca51990
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dabf2e0c4fe2f23ad5dee576c73a2bafdb67a8be
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425133"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464952"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Connessione a un'origine dati (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "88425133"
   
  Quando **SQLBrowseConnect** completa una connessione, restituisce una stringa di connessione che può essere usata nelle chiamate successive a **SQLDriverConnect**.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client restituisce sempre SQL_SUCCESS_WITH_INFO in un oggetto **SQLConnect**, **SQLDriverConnect**o **SQLBrowseConnect**riuscito. Quando un'applicazione ODBC chiama **SQLGetDiagRec** dopo avere SQL_SUCCESS_WITH_INFO, può ricevere i messaggi seguenti:  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client restituisce sempre SQL_SUCCESS_WITH_INFO in un oggetto **SQLConnect**, **SQLDriverConnect** o **SQLBrowseConnect** riuscito. Quando un'applicazione ODBC chiama **SQLGetDiagRec** dopo avere SQL_SUCCESS_WITH_INFO, può ricevere i messaggi seguenti:  
   
  5701  
  Indica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha inserito il contesto dell'utente nel database predefinito specificato nell'origine dati o nel database predefinito specificato per l'ID di accesso utilizzato nella connessione se l'origine dati non dispone di un database predefinito.  

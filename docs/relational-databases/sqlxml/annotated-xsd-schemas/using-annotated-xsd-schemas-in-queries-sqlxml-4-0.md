@@ -22,13 +22,13 @@ ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 857710f894ddc8ef2c874bdc3fed127f0625c8f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 030c1d04575c412c2cae9c69d0798e7d40e89450
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725847"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467102"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Utilizzo di schemi XSD con annotazioni in query (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -142,6 +142,6 @@ ms.locfileid: "85725847"
 </sql:xpath-query>  
 ```  
   
- Il modello specifica una query XPath ma non specifica uno schema di mapping. Questa query viene pertanto considerata una query di tipo **dbobject** in cui Production. ProductPhoto è il nome della tabella e @ProductPhotoID =' 100' è un predicato che trova una foto del prodotto con valore ID 100. @LargePhotocolonna da cui recuperare il valore.  
+ Il modello specifica una query XPath ma non specifica uno schema di mapping. Questa query viene pertanto considerata una query di tipo **dbobject** in cui Production. ProductPhoto è il nome della tabella e @ProductPhotoID =' 100' è un predicato che trova una foto del prodotto con valore ID 100. @LargePhoto colonna da cui recuperare il valore.  
   
   

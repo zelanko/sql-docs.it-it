@@ -1,6 +1,6 @@
 ---
-description: sys. query_store_wait_stats (Transact-SQL)
-title: sys. query_store_wait_stats (Transact-SQL) | Microsoft Docs
+description: sys.query_store_wait_stats (Transact-SQL)
+title: sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc28729ef4f3743e945f782fed0409057e90224a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2ab48b6155e26873c22a3b951ef65705d3addd79
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537312"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466922"
 ---
-# <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
+# <a name="sysquery_store_wait_stats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
@@ -36,8 +36,8 @@ ms.locfileid: "89537312"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Identificatore della riga che rappresenta le statistiche di attesa per il plan_id, runtime_stats_interval_id, execution_type e wait_category. È univoco solo per gli intervalli di statistiche di runtime precedenti. Per l'intervallo attualmente attivo, è possibile che siano presenti più righe che rappresentano le statistiche di attesa per il piano a cui fa riferimento plan_id, con il tipo di esecuzione rappresentato da execution_type e la categoria di attesa rappresentata da wait_category. In genere, una riga rappresenta le statistiche di attesa scaricate su disco, mentre altre rappresentano lo stato in memoria. Quindi, per ottenere lo stato effettivo per ogni intervallo è necessario aggregare le metriche, raggruppando per plan_id, runtime_stats_interval_id, execution_type e wait_category. |  
-|**plan_id**|**bigint**|Chiave esterna. Join a [sys. query_store_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|Chiave esterna. Join a [sys. query_store_runtime_stats_interval &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**plan_id**|**bigint**|Chiave esterna. Si unisce a [sys.query_store_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
+|**runtime_stats_interval_id**|**bigint**|Chiave esterna. Si unisce a [sys.query_store_runtime_stats_interval &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|I tipi di attesa sono suddivisi in categorie usando la tabella riportata di seguito, quindi il tempo di attesa viene aggregato tra le categorie di attesa. Diverse categorie di attesa richiedono un'analisi di completamento diversa per risolvere il problema, ma i tipi di attesa dalla stessa categoria portano a esperienze di risoluzione dei problemi simili e la query interessata, oltre alle attese, è la parte mancante per completare correttamente la maggior parte delle indagini.|
 |**wait_category_desc**|**nvarchar(128)**|Per la descrizione testuale del campo categoria di attesa, esaminare la tabella seguente.|
 |**execution_type**|**tinyint**|Determina il tipo di esecuzione della query:<br /><br /> 0-esecuzione regolare (completata correttamente)<br /><br /> 3-esecuzione interrotta dal client<br /><br /> 4-esecuzione interrotta eccezione|  
@@ -53,7 +53,7 @@ ms.locfileid: "89537312"
 
 "%" viene usato come carattere jolly
   
-|Valore Integer|Categoria di attesa|I tipi di attesa includono nella categoria|  
+|Valore intero|Categoria di attesa|I tipi di attesa includono nella categoria|  
 |-----------------|---------------|-----------------|  
 |**0**|**Unknown**|Sconosciuto |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
@@ -62,8 +62,8 @@ ms.locfileid: "89537312"
 |**4**|**Latch**|LATCH_%|
 |**5**|**Latch del buffer**|PAGELATCH_%|
 |**6**|**IO buffer**|PAGEIOLATCH_%|
-|**7**|**Compilazione***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|**8**|**SQL CLR**|% CLR, SQLCLR%|
+|**7**|**Compilazione** _|RESOURCE_SEMAPHORE_QUERY_COMPILE|
+|_ *8**|**SQL CLR**|% CLR, SQLCLR%|
 |**9**|**Mirroring**|DBMIRROR|
 |**10**|**Transazione**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
 |**11**|**Idle**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|

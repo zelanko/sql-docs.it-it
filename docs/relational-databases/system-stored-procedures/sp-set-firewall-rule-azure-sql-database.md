@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ed1df2288067d30f9443736b914b7560c0c6a784
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 795aeb9a03f839cae400e92060ac21056f314d2f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810478"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468282"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Database di SQL Azure)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -51,7 +51,7 @@ sp_set_firewall_rule [@name =] 'name',
 |[ @start_ip_address =]' start_ip_address '|**VARCHAR (50)**|L'indirizzo IP più basso nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o maggiori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più basso possibile è `0.0.0.0`.|  
 |[ @end_ip_address =]' end_ip_address '|**VARCHAR (50)**|L'indirizzo IP più alto nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o minori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più alto possibile è `255.255.255.255`.<br /><br /> Nota: i tentativi di connessione di Azure sono consentiti quando sia questo campo che il campo *start_ip_address* è uguale a `0.0.0.0` .|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I nomi delle impostazioni del firewall a livello di server devono essere univoci. Se il nome dell'impostazione fornito per la stored procedure esiste già nella tabella delle impostazioni del firewall, gli indirizzi IP iniziale e finale verranno aggiornati. In caso contrario, verrà creata una nuova impostazione del firewall a livello di server.  
   
  Quando si aggiunge un'impostazione del firewall a livello di server in cui gli indirizzi IP iniziale e finale sono uguali a `0.0.0.0`, si abilita l'accesso al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] da Azure. Fornire un valore al parametro *Name* che consenta di ricordare l'impostazione del firewall a livello di server.  
@@ -61,7 +61,7 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="permissions"></a>Autorizzazioni  
  Solo l'account di accesso dell'entità di livello server creato dal processo di provisioning o un'entità Azure Active Directory assegnata come amministratore può creare o modificare le regole del firewall a livello di server. Per eseguire sp_set_firewall_rule, l'utente deve essere connesso al database master.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Il codice seguente consente di creare un'impostazione del firewall a livello di server denominata `Allow Azure` che abilita l'accesso da Azure. Eseguire il comando seguente nel database master virtuale.  
   
 ```  

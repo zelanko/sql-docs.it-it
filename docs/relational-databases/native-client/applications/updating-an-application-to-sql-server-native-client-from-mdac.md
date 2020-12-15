@@ -16,12 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b74cc8b3248d566ece7a5706e616dc7623d94518
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fb360bbc4f874af32b720ea024f9322aa02dea24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004256"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469222"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Aggiornamento di un'applicazione da MDAC a SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86004256"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta l'accesso ai database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client non include l'integrazione XML. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client supporta SELECT... PER le query XML, ma non supporta altre funzionalità XML. Native client, tuttavia, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il tipo di dati **XML** introdotto in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client non include l'integrazione XML. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta SELECT... PER le query XML, ma non supporta altre funzionalità XML. Native client, tuttavia, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il tipo di dati **XML** introdotto in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta la configurazione delle librerie di rete sul lato client utilizzando solo gli attributi della stringa di connessione. Per una configurazione delle libreria di rete più completa, è necessario utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -72,11 +73,11 @@ ms.locfileid: "86004256"
   
 -   Quando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client è connesso a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive, l'errore del server 16947 viene restituito come SQL_ERROR. Tale errore si verifica quando tramite un'eliminazione o un aggiornamento posizionato non è possibile aggiornare o eliminare una riga. Con MDAC, in caso di connessione a una versione qualsiasi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'errore del server 16947 viene restituito come avviso (SQL_SUCCESS_WITH_INFO).  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client implementa l'interfaccia **IDBDataSourceAdmin** , che è un'interfaccia OLE DB facoltativa che non è stata implementata in precedenza, ma viene implementato solo il metodo **CreateDataSource** di questa interfaccia facoltativa. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa l'interfaccia **IDBDataSourceAdmin** , che è un'interfaccia OLE DB facoltativa che non è stata implementata in precedenza, ma viene implementato solo il metodo **CreateDataSource** di questa interfaccia facoltativa. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 -   Il provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client restituisce sinonimi nei set di righe degli schemi TABLES e TABLE_INFO, con TABLE_TYPE impostato su SYNONYM.  
   
--   I valori restituiti del tipo di dati **varchar (max)**, **nvarchar (max**), **varbinary (max)**, **XML**, **UDT**o altri tipi di oggetti di grandi dimensioni non possono essere restituiti alle versioni client precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Se si desidera utilizzare questi tipi come valori restituiti, è necessario utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+-   I valori restituiti del tipo di dati **varchar (max)**, **nvarchar (max**), **varbinary (max)**, **XML**, **UDT** o altri tipi di oggetti di grandi dimensioni non possono essere restituiti alle versioni client precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Se si desidera utilizzare questi tipi come valori restituiti, è necessario utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 -   A differenza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, MDAC consente l'esecuzione delle istruzioni seguenti all'inizio delle transazioni manuali e implicite. L'esecuzione deve avvenire in modalità autocommit.  
   
@@ -108,7 +109,7 @@ ms.locfileid: "86004256"
   
 -   Se si utilizza una chiamata ODBC o OLE DB per avviare le transazioni, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e MDAC presentano un comportamento diverso. Con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client le transazioni hanno inizio immediatamente, mentre con MDC si attende il primo accesso al database. Questo può influire sul comportamento di stored procedure e batch perché [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede che \@ \@ TRANCOUNT sia lo stesso dopo il completamento dell'esecuzione di un batch o stored procedure al momento dell'avvio del batch o della stored procedure.  
   
--   Con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, ITransactionLocal:: BeginTransaction provocherà immediatamente l'avvio di una transazione. Con MDAC l'avvio della transazione viene ritardato fino all'esecuzione da parte dell'applicazione di un'istruzione che ha richiesto una transazione in modalità implicita. Per ulteriori informazioni, vedere [SET IMPLICIT_TRANSACTIONS &#40;&#41;Transact-SQL ](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
+-   Con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, ITransactionLocal:: BeginTransaction provocherà immediatamente l'avvio di una transazione. Con MDAC l'avvio della transazione viene ritardato fino all'esecuzione da parte dell'applicazione di un'istruzione che ha richiesto una transazione in modalità implicita. Per altre informazioni, vedere [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
 -   È possibile che si verifichino errori quando si utilizza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il driver native client con System. Data. ODBC per accedere a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer server che espone nuove [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funzionalità o tipi di dati specifici di. System. Data. ODBC fornisce un'implementazione ODBC generica e successivamente non espone funzionalità o estensioni specifiche del fornitore. (Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il driver di Native client viene aggiornato per supportare in modo nativo le funzionalità più recenti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per aggirare questo problema, è possibile ripristinare MDAC o eseguire la migrazione a System. Data. SqlClient.  
   

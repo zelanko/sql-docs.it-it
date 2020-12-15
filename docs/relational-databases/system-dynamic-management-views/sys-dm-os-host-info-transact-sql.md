@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2c6e374061a847e168421b30971469ff60e4348
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ee91975b31d16845c56f27e872998809fb252838
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834085"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468392"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -41,7 +41,7 @@ Restituisce una riga in cui sono visualizzate le informazioni sulla versione del
 |**host_sku**|**int**|ID Windows del codice di riferimento del prodotto (SKU). Per un elenco di ID SKU e descrizioni, vedere [funzione GetProductInfo](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo). Ammette i valori Null. <br> Per Linux, restituisce NULL. |  
 |**os_language_version**|**int**|Identificatore delle impostazioni locali (LCID) Windows del sistema operativo. Per un elenco di valori e descrizioni LCID, vedere [ID delle impostazioni locali assegnati da Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Non può essere null.|  
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 Questa visualizzazione è simile a [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), aggiungendo colonne per distinguere Windows e Linux.
   
 ## <a name="security"></a>Sicurezza  
@@ -53,7 +53,7 @@ Questa visualizzazione è simile a [sys.dm_os_windows_info](../../relational-dat
 >  A partire dalla versione [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1,3, la [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] versione 17 richiede l'autorizzazione per la `SELECT` `sys.dm_os_host_info` connessione a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] . Se `SELECT` l'autorizzazione viene revocata da `public` , solo gli account di accesso con `VIEW SERVER STATE` autorizzazione possono connettersi con la versione più recente di SSMS. Altri strumenti, ad esempio, `sqlcmd.exe` possono connettersi senza `SELECT` autorizzazione `sys.dm_os_host_info` .
 
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituite tutte le colonne dalla vista **sys.dm_os_host_info** .  
   
 ```  

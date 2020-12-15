@@ -19,20 +19,20 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50b1177e65ad2ef082335fa29a180ddd8f489adf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 66fc82b8253c5bb9eeac669bf88846737b315d91
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455977"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465062"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copia bulk da variabili di programma
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   È possibile eseguire una copia bulk direttamente dalle variabili di programma. Dopo aver allocato le variabili in modo che contengano i dati per una riga e chiamando [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) per avviare la copia bulk, chiamare [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per ogni colonna per specificare il percorso e il formato della variabile di programma da associare alla colonna. Riempire ogni variabile con i dati, quindi chiamare [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) per inviare una riga di dati al server. Ripetere il processo di riempimento delle variabili e chiamando **bcp_sendrow** fino a quando tutte le righe non sono state inviate al server, quindi chiamare [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) per specificare che l'operazione è stata completata.  
   
- Il **bcp_bind**parametro_pData_ contiene l'indirizzo della variabile da associare alla colonna. I dati di ogni colonna possono essere archiviati in due modi:  
+ Il **bcp_bind** parametro _pData_ contiene l'indirizzo della variabile da associare alla colonna. I dati di ogni colonna possono essere archiviati in due modi:  
   
 -   Allocando una variabile in modo da contenere i dati.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "88455977"
   
 -   Utilizzare variabili indicatore. Non appena un nuovo valore dei dati viene spostato nella variabile dati, archiviare la lunghezza del valore nella variabile indicatore. Se viene utilizzato uno degli altri due metodi, specificare 0 per *cbIndicator*.  
   
--   Utilizzare i puntatori ai caratteri di terminazione. Caricare il **bcp_bind**parametro_pTerm_ con l'indirizzo dello schema di bit che termina i dati. Se viene utilizzato uno degli altri due metodi, specificare NULL per *pTerm*.  
+-   Utilizzare i puntatori ai caratteri di terminazione. Caricare il **bcp_bind** parametro _pTerm_ con l'indirizzo dello schema di bit che termina i dati. Se viene utilizzato uno degli altri due metodi, specificare NULL per *pTerm*.  
   
  Tutti e tre questi metodi possono essere utilizzati nella stessa chiamata di **bcp_bind** , nel qual caso viene utilizzata la specifica che comporta la copia del minor numero di dati.  
   
- Il parametro di_tipo_ **bcp_bind**utilizza gli identificatori dei tipi di dati DB-Library, non gli identificatori dei tipi di dati ODBC. Gli identificatori dei tipi di dati DB-Library sono definiti in sqlncli. h per l'utilizzo con la funzione ODBC **bcp_bind** .  
+ Il parametro di _tipo_ **bcp_bind** utilizza DB-Library identificatori del tipo di dati e non gli identificatori del tipo di dati ODBC. DB-Library identificatori del tipo di dati sono definiti in sqlncli. h per l'utilizzo con la funzione di **BCP_BIND** ODBC.  
   
  Le funzioni di copia bulk non supportano tutti i tipi di dati C ODBC. Le funzioni di copia bulk, ad esempio, non supportano la struttura ODBC SQL_C_TYPE_TIMESTAMP, pertanto utilizzare [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) o [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) per convertire i dati SQL_TYPE_TIMESTAMP odbc in una variabile SQL_C_CHAR. Se quindi si usa **bcp_bind** con un parametro di *tipo* SQLCHARACTER per associare la variabile a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonna **DateTime** , le funzioni di copia bulk convertono la clausola di escape timestamp nella variabile di tipo carattere nel formato DateTime appropriato.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "88455977"
   
 |Tipo di dati SQL ODBC|Tipo di dati C ODBC|parametro di *tipo* bcp_bind|Tipo di dati di SQL Server|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
-|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**carattere**<br /><br /> **char**|  
+|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
 |SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **character varying**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
@@ -78,7 +78,7 @@ ms.locfileid: "88455977"
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
-|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **binary varying**|  
+|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **variabili binarie**|  
 |SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
@@ -86,7 +86,7 @@ ms.locfileid: "88455977"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di tipi di dati con segno **tinyint**, unsigned **smallint**o unsigned **int** . Per evitare la perdita di valori dei dati quando si esegue la migrazione di questi tipi di dati, creare la tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il tipo di dati integer successivo più grande. Per impedire agli utenti di aggiungere in un secondo momento valori non compresi nell'intervallo consentito dal tipo di dati originale, applicare una regola alla colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per limitare i valori consentiti all'intervallo supportato dal tipo di dati originale:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di tipi di dati con segno **tinyint**, unsigned **smallint** o unsigned **int** . Per evitare la perdita di valori dei dati quando si esegue la migrazione di questi tipi di dati, creare la tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il tipo di dati integer successivo più grande. Per impedire agli utenti di aggiungere in un secondo momento valori non compresi nell'intervallo consentito dal tipo di dati originale, applicare una regola alla colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per limitare i valori consentiti all'intervallo supportato dal tipo di dati originale:  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_hash_index_stats (Transact-SQL)
-title: sys. dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e8b28d292de4d860a8e46f7a679e42d99ac8c88
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 310fb757ca9956ac3206ac3d9bff0cc99c857a87
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542261"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468482"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "89542261"
 Le catene molto lunghe possono influire significativamente sulle prestazioni delle operazioni DML sulle singole righe, incluse SELECT e INSERT. Le catene corte associate a un numero di bucket vuoto elevato indicano un valore bucket_count troppo elevato. Ne consegue un calo delle prestazioni delle analisi degli indici.  
   
 > [!WARNING]
-> **sys. dm_db_xtp_hash_index_stats** esegue l'analisi dell'intera tabella. Se nel database sono presenti tabelle di grandi dimensioni, **sys. dm_db_xtp_hash_index_stats** potrebbe richiedere molto tempo.  
+> **sys.dm_db_xtp_hash_index_stats** esegue l'analisi dell'intera tabella. Se nel database sono presenti tabelle di grandi dimensioni, **sys.dm_db_xtp_hash_index_stats** potrebbe richiedere molto tempo.  
   
-Per altre informazioni, vedere [indici hash per le tabelle ottimizzate per la memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
+Per ulteriori informazioni, vedere [hash Indexes for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Nome della colonna|Type|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|ID oggetto della tabella padre.|  
 |xtp_object_id|**bigint**|ID della tabella ottimizzata per la memoria.|  
@@ -88,7 +88,7 @@ La query seguente può essere utilizzata per risolvere i problemi relativi al nu
   ORDER BY [table], [index];  
 ``` 
 
-Per informazioni dettagliate su come interpretare i risultati di questa query, vedere [risoluzione dei problemi relativi agli indici hash per le tabelle ottimizzate per la memoria](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+Per informazioni dettagliate su come interpretare i risultati di questa query, vedere [risoluzione dei problemi relativi agli indici hash per tabelle Memory-Optimized](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Statistiche sugli indici hash per le tabelle interne
 

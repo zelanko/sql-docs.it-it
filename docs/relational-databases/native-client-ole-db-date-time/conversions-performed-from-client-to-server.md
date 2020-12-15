@@ -13,13 +13,13 @@ ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bd997af611ec04a67d937752bde8318eb70ee84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2f618eebe85de63dbcff5c7fdfad4dc1331a614a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88328017"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467662"
 ---
 # <a name="sql-server-native-client-conversions-performed-from-client-to-server"></a>Conversioni di SQL Server Native Client eseguite dal client al server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,5 +1,5 @@
 ---
-description: Tipi CLR definiti dall'utente di grandi dimensioni in SQL Server Native Client (OLE DB)
+description: Tipi di User-Defined CLR di grandi dimensioni in SQL Server Native Client (OLE DB)
 title: Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5342dcab8dee628f074963a7ddc56a0ecc1d940
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 95552d965ab09f34c134ad82dd7d84966ee65fd6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88328287"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467602"
 ---
-# <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>Tipi CLR definiti dall'utente di grandi dimensioni in SQL Server Native Client (OLE DB)
+# <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>Tipi di User-Defined CLR di grandi dimensioni in SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In questo argomento vengono illustrate le modifiche apportate a OLE DB in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client per supportare i tipi CLR (Common Language Runtime) definiti dall'utente di grandi dimensioni.  
   
- Per ulteriori informazioni sul supporto di tipi definiti dall'utente CLR di grandi dimensioni in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, vedere [tipi CLR definiti dall'utente di grandi dimensioni](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Per un esempio, vedere [Usare tipi definiti dall'utente CLR di grandi dimensioni &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Per ulteriori informazioni sul supporto di tipi definiti dall'utente CLR di grandi dimensioni in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client, vedere [tipi di User-Defined CLR di grandi dimensioni](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Per un esempio, vedere [Usare tipi definiti dall'utente CLR di grandi dimensioni &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Formato dati  
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client viene utilizzato ~0 per rappresentare la lunghezza dei valori con dimensioni illimitate nel caso di tipi di oggetti LOB. ~ 0 rappresenta anche le dimensioni dei tipi CLR definiti dall'utente che superano 8.000 byte.  

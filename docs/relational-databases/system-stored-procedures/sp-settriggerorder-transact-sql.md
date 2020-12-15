@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da6cb44163370332968c32324086b27f673b3f69
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6d8ef1360e35d084703a4f86590ade57be6a4c24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543061"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468302"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  Il **primo** e l' **ultimo** trigger devono essere due trigger diversi.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Primo**|Trigger avviato per primo.|  
 |**Ultimo**|Trigger avviato per ultimo.|  
@@ -59,17 +59,17 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 `[ @stmttype = ] 'statement_type'` Specifica l'istruzione SQL che attiva il trigger. *statement_type* è di tipo **varchar (50)** ed è possibile inserire, aggiornare, eliminare, accedere o qualsiasi [!INCLUDE[tsql](../../includes/tsql-md.md)] evento di istruzione elencato negli [eventi DDL](../../relational-databases/triggers/ddl-events.md). Non è possibile specificare gruppi di eventi.  
   
- Un trigger può essere designato come **primo** o **ultimo** trigger per un tipo di istruzione solo dopo che il trigger è stato definito come trigger per tale tipo di istruzione. Ad esempio, il trigger **TR1** può essere designato per **primo** per INSERT nella tabella **T1** se **TR1** è definito come trigger di inserimento. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Restituisce un errore se **TR1**, che è stato definito solo come trigger di inserimento, viene impostato come **primo**o **ultimo**trigger per un'istruzione Update. Per altre informazioni, vedere la sezione Osservazioni.  
+ Un trigger può essere designato come **primo** o **ultimo** trigger per un tipo di istruzione solo dopo che il trigger è stato definito come trigger per tale tipo di istruzione. Ad esempio, il trigger **TR1** può essere designato per **primo** per INSERT nella tabella **T1** se **TR1** è definito come trigger di inserimento. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Restituisce un errore se **TR1**, che è stato definito solo come trigger di inserimento, viene impostato come **primo** o **ultimo** trigger per un'istruzione Update. Per altre informazioni, vedere la sezione Osservazioni.  
   
- ** \@ namespace =** { **' database '**  |  **' server '** | NULL  
- Quando *triggername* è un trigger DDL, ** \@ lo spazio dei nomi** specifica se *triggername* è stato creato con ambito database o ambito server. Se *triggername* è un trigger LOGON, è necessario specificare il server. Per ulteriori informazioni sull'ambito del trigger DDL, vedere [trigger DDL](../../relational-databases/triggers/ddl-triggers.md). Se non è specificato o se viene specificato NULL, *triggername* è un trigger DML.  
+ **\@ namespace =** { **' database '**  |  **' server '** | NULL  
+ Quando *triggername* è un trigger DDL, **\@ lo spazio dei nomi** specifica se *triggername* è stato creato con ambito database o ambito server. Se *triggername* è un trigger LOGON, è necessario specificare il server. Per ulteriori informazioni sull'ambito del trigger DDL, vedere [trigger DDL](../../relational-databases/triggers/ddl-triggers.md). Se non è specificato o se viene specificato NULL, *triggername* è un trigger DML.  
   
 * Il SERVER si applica a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o 1 (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="dml-triggers"></a>Trigger DML  
  Può essere presente un solo **primo** e un **ultimo** trigger per ogni istruzione in una singola tabella.  
