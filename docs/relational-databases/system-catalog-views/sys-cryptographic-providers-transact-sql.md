@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 305ea4a72855dd5ba136740dcc9b4321826384ad
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f32f7ceea8a68a3ddf1693ae9f382ee066d51eb1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384804"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462842"
 ---
 # <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "94384804"
 |**provider_id**|**int**|Numero di identificazione del provider di crittografia.|  
 |**nome**|**sysname**|Nome del provider di crittografia.|  
 |**guid**|**uniqueidentifier**|GUID univoco del provider.|  
-|**version**|**nvarchar(50)**|Versione del provider nel formato ' *AA.BB.cccc.dd* '.|  
+|**version**|**nvarchar(50)**|Versione del provider nel formato '*AA.BB.cccc.dd*'.|  
 |**dll_path**|**nvarchar(512)**|Percorso della DLL che implementa l'API (Application Program Interface) dell'EKM (Extensible Key Management).|  
 |**is_enabled**|**bit**|Specifica se il provider è abilitato o meno nel server.<br /><br /> 0 = non abilitato (predefinito)<br /><br /> 1 = abilitato|  
   

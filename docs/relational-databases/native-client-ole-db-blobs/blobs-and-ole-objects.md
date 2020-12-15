@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9ab95bece59c6ecb2ed3c2df4aeb0b90ec52605
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c7661a35eae2a178df57a1c83f1e0912044f4b1c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88381202"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439962"
 ---
 # <a name="blobs-and-ole-objects-in-sql-server-native-client"></a>Oggetti BLOB e OLE in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88381202"
   
  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client può utilizzare un'interfaccia **IStorage** implementata dal consumer quando il consumer fornisce il puntatore di interfaccia in una funzione di accesso associata per la modifica dei dati.  
   
- Per i tipi di dati con valori di grandi dimensioni, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client controlla i presupposti della dimensione del tipo nelle interfacce **IROWSET** e DDL. Le colonne con tipi di dati **varchar**, **nvarchar**e **varbinary** con dimensioni massime impostate su Unlimited verranno rappresentate come Long lungo i set di righe dello schema e le interfacce che restituiscono i tipi di dati della colonna.  
+ Per i tipi di dati con valori di grandi dimensioni, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client controlla i presupposti della dimensione del tipo nelle interfacce **IROWSET** e DDL. Le colonne con tipi di dati **varchar**, **nvarchar** e **varbinary** con dimensioni massime impostate su Unlimited verranno rappresentate come Long lungo i set di righe dello schema e le interfacce che restituiscono i tipi di dati della colonna.  
   
  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client espone rispettivamente i tipi **varchar (max**), **varbinary (max)** e **nvarchar (max)** come DBTYPE_STR, DBTYPE_BYTES e DBTYPE_WSTR.  
   

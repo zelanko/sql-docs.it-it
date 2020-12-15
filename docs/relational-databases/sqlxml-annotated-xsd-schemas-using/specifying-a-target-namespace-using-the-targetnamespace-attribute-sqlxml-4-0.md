@@ -20,25 +20,25 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfa6234aae5e2744a88c4fcfb158575cb07000f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 50eda94d40b819a5cd1fd51855232a53ecfc93db
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764899"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461742"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Specifica di uno spazio dei nomi di destinazione mediante l'attributo targetNamespace (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Per la scrittura di schemi XSD, è possibile utilizzare l'attributo **TARGETNAMESPACE** XSD per specificare uno spazio dei nomi di destinazione. In questo argomento viene descritto il funzionamento degli attributi XSD **targetNamespace**, **elementFormDefault**e **attributeFormDefault** , il modo in cui influiscono sull'istanza XML generata e come vengono specificate le query XPath con gli spazi dei nomi.  
+  Per la scrittura di schemi XSD, è possibile utilizzare l'attributo **TARGETNAMESPACE** XSD per specificare uno spazio dei nomi di destinazione. In questo argomento viene descritto il funzionamento degli attributi XSD **targetNamespace**, **elementFormDefault** e **attributeFormDefault** , il modo in cui influiscono sull'istanza XML generata e come vengono specificate le query XPath con gli spazi dei nomi.  
   
  È possibile utilizzare l'attributo **xsd: targetNamespace** per inserire gli elementi e gli attributi dello spazio dei nomi predefinito in uno spazio dei nomi diverso. È inoltre possibile specificare se gli elementi e gli attributi dello schema dichiarati localmente devono essere qualificati da uno spazio dei nomi, sia in modo esplicito mediante un prefisso sia in modo implicito per impostazione predefinita. È possibile usare gli attributi **elementFormDefault** e **attributeFormDefault** sull' **\<xsd:schema>** elemento per specificare a livello globale la qualificazione di elementi e attributi locali oppure è possibile usare l'attributo **form** per specificare separatamente i singoli elementi e attributi.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-a-target-namespace"></a>R. Specificare uno spazio dei nomi di destinazione  
- Nello schema XSD seguente viene specificato uno spazio dei nomi di destinazione utilizzando l'attributo **xsd: targetNamespace** . Lo schema imposta anche i valori degli attributi **elementFormDefault** e **attributeFormDefault** su **"unqualified"** (il valore predefinito per questi attributi). Si tratta di una dichiarazione globale che interessa tutti gli elementi locali ( **\<Order>** nello schema) e gli attributi (**CustomerID**, **ContactName**e **OrderID** nello schema).  
+ Nello schema XSD seguente viene specificato uno spazio dei nomi di destinazione utilizzando l'attributo **xsd: targetNamespace** . Lo schema imposta anche i valori degli attributi **elementFormDefault** e **attributeFormDefault** su **"unqualified"** (il valore predefinito per questi attributi). Si tratta di una dichiarazione globale che interessa tutti gli elementi locali ( **\<Order>** nello schema) e gli attributi (**CustomerID**, **ContactName** e **OrderID** nello schema).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -103,7 +103,7 @@ ms.locfileid: "85764899"
   
  Questo documento di istanza definisce lo spazio dei nomi urn: MyNamespace e vi associa un prefisso (y0). Il prefisso viene applicato solo all' **\<Customer>** elemento globale. L'elemento è globale perché è dichiarato come elemento figlio dell' **\<xsd:schema>** elemento nello schema.  
   
- Il prefisso non viene applicato agli elementi e agli attributi locali poiché il valore degli attributi **elementFormDefault** e **attributeFormDefault** è impostato su **"unqualified"** nello schema. Si noti che l' **\<Order>** elemento è locale perché la relativa dichiarazione appare come elemento figlio dell' **\<complexType>** elemento che definisce l' **\<CustomerType>** elemento. Analogamente, gli attributi (**CustomerID**, **OrderID**e **ContactName**) sono locali e non globali.  
+ Il prefisso non viene applicato agli elementi e agli attributi locali poiché il valore degli attributi **elementFormDefault** e **attributeFormDefault** è impostato su **"unqualified"** nello schema. Si noti che l' **\<Order>** elemento è locale perché la relativa dichiarazione appare come elemento figlio dell' **\<complexType>** elemento che definisce l' **\<CustomerType>** elemento. Analogamente, gli attributi (**CustomerID**, **OrderID** e **ContactName**) sono locali e non globali.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>Per creare un esempio reale di questo schema  
   

@@ -1,6 +1,6 @@
 ---
-description: sys. dm_db_log_info (Transact-SQL)
-title: sys. dm_db_log_info (Transact-SQL) | Microsoft Docs
+description: sys.dm_db_log_info (Transact-SQL)
+title: sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
 author: savjani
 ms.author: pariks
 manager: ajayj
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aba965d4a0289db9ef7def58b90f15a1479cb485
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 12fe1e95cbb1c7ad26025ee52ce111cb3f835704
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447663"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440826"
 ---
-# <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-SQL)
+# <a name="sysdm_db_log_info-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Restituisce le informazioni del [file di log virtuale (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) del log delle transazioni. Nota tutti i file di log delle transazioni vengono combinati nell'output della tabella. Ogni riga nell'output rappresenta un VLF nel log delle transazioni e fornisce informazioni rilevanti per tale VLF nel log.
@@ -63,7 +63,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_create_lsn|**nvarchar (48)** |Numero di sequenza del file di [log (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) del record di log che ha creato il [file di log virtuale (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_encryptor_thumbprint|**varbinary(20)**| **Si applica a:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Mostra l'identificazione digitale del VLF se VLF è crittografato con [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md); in caso contrario, null. |
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 La `sys.dm_db_log_info` funzione a gestione dinamica sostituisce l' `DBCC LOGINFO` istruzione.    
  
 ## <a name="permissions"></a>Autorizzazioni  

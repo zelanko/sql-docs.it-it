@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581ac92066750ac578cf8103383087fddeb01e65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 60d30105f0c56224748a3c676ba4d76b73aa989b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810297"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462672"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Stored procedure di sistema (Transact-SQL)
 
@@ -40,7 +40,7 @@ ms.locfileid: "91810297"
   
 |Category|Descrizione|  
 |--------------|-----------------|  
-|[Stored procedure per la replica geografica attiva]()|Usato per gestire le configurazioni di replica geografica attiva nel database SQL di Azure|  
+|[Stored procedure Geo-Replication attive]()|Usato per gestire le configurazioni di Geo-Replication attive nel database SQL di Azure|  
 |[Stored procedure per il catalogo](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Consentono di implementare le funzioni del dizionario dei dati ODBC e di isolare le applicazioni ODBC in caso di modifiche alle tabelle di sistema sottostanti.|  
 |[Stored procedure per Change Data Capture](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Consentono di abilitare, disabilitare o creare report relativi a oggetti Change Data Capture.|  
 |[Stored procedure per cursori](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Consentono di implementare la funzionalità per le variabili di cursore.|  
@@ -75,7 +75,7 @@ ms.locfileid: "91810297"
 ## <a name="api-system-stored-procedures"></a>Stored procedure di sistema (API)  
  Gli utenti che eseguono [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per applicazioni ADO, OLE DB e ODBC possono notare che queste applicazioni utilizzano stored procedure di sistema che non vengono trattate nella Guida di riferimento a [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste stored procedure vengono utilizzate dal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB di Native client e dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client per implementare la funzionalità di un'API di database. Rappresentano il meccanismo con cui il provider o il driver comunica le richieste degli utenti a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Devono essere utilizzate solo internamente dal provider o dal driver. La chiamata in modo esplicito da un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicazione basata su non è supportata.  
   
- Le stored procedure sp_createorphan e sp_droporphans vengono utilizzate per l'elaborazione di tipo **ntext**, **Text**e **Image** di ODBC.  
+ Le stored procedure sp_createorphan e sp_droporphans vengono utilizzate per l'elaborazione di tipo **ntext**, **Text** e **Image** di ODBC.  
   
  La stored procedure sp_reset_connection viene utilizzata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il supporto di chiamate di stored procedure remote in una transazione. Questa stored procedure causa inoltre la generazione degli eventi Audit Login e Audit Logout quando una connessione viene riutilizzata da un pool di connessioni.  
   

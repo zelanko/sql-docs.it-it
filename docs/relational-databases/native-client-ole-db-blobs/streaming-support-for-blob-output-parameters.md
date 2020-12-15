@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3949d3d58a516671e4807a2dd28ae76c2c87976
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2655eb720298d356d9a9707a316c155e271fbb31
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455858"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439932"
 ---
 # <a name="streaming-support-for-blob-output-parameters-in-sql-server-native-client"></a>Supporto dello streaming per i parametri di output BLOB in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -512,6 +512,6 @@ _Exit:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [BLOB e oggetti OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
+ [Oggetti BLOB e OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
   

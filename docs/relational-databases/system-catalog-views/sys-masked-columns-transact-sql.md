@@ -1,6 +1,6 @@
 ---
-description: sys. masked_columns (Transact-SQL)
-title: sys. masked_columns (Transact-SQL) | Microsoft Docs
+description: sys.masked_columns (Transact-SQL)
+title: sys.masked_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
@@ -18,36 +18,36 @@ helpviewer_keywords:
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e8c61cfbce42517f63729f35e159b479b3120f6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5a146c289ddd50484a515413571cc67588b687d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537370"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458491"
 ---
-# <a name="sysmasked_columns-transact-sql"></a>sys. masked_columns (Transact-SQL)
+# <a name="sysmasked_columns-transact-sql"></a>sys.masked_columns (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  Utilizzare la vista **sys. masked_columns** per eseguire una query per le colonne della tabella a cui è applicata una funzione di maschera dati dinamica. Questa vista viene ereditata dalla vista **sys.columns** , che restituisce tutte le colonne della vista **sys.columns** , in aggiunta alle colonne **is_masked** e **masking_function** , che indicano se la colonna è nascosta e, in tal caso, quale funzione di maschera viene definita. Questa vista mostra solo le colonne su cui è applicata una funzione di maschera.  
+  Utilizzare la vista **sys.masked_columns** per eseguire una query per le colonne della tabella a cui è applicata una funzione di maschera dati dinamica. Questa vista viene ereditata dalla vista **sys.columns** , che restituisce tutte le colonne della vista **sys.columns** , in aggiunta alle colonne **is_masked** e **masking_function** , che indicano se la colonna è nascosta e, in tal caso, quale funzione di maschera viene definita. Questa vista mostra solo le colonne su cui è applicata una funzione di maschera.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID dell'oggetto a cui appartiene la colonna.|  
 |name|**sysname**|Nome della colonna. Valore univoco all'interno dell'oggetto.|  
 |column_id|**int**|ID della colonna. Valore univoco all'interno dell'oggetto.<br /><br /> È possibile che gli ID di colonna non siano sequenziali.|  
-|**sys. masked_columns** restituisce molte più colonne ereditate da **sys. Columns**.|variabile|Per altre definizioni di colonna, vedere [sys. columns &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) .|  
+|**sys.masked_columns** restituisce molte più colonne ereditate da **sys. Columns**.|variabile|Per altre definizioni di colonna, vedere [sys. columns &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) .|  
 |is_masked|**bit**|Indica se la colonna è mascherata. 1 indica mascherata.|  
 |masking_function|**nvarchar(4000)**|Funzione di maschera per la colonna.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ## <a name="permissions"></a>Autorizzazioni  
  In questa vista vengono restituite informazioni sulle tabelle in cui l'utente dispone di una sorta di autorizzazione per la tabella o se l'utente dispone dell'autorizzazione VIEW ANY DEFINITION.  
   
 ## <a name="example"></a>Esempio  
- La query seguente unisce **sys. masked_columns** a **sys. Tables** per restituire informazioni su tutte le colonne mascherate.  
+ La query seguente consente di unire **sys.masked_columns** a **sys. Tables** per restituire informazioni su tutte le colonne mascherate.  
   
 ```  
 SELECT tbl.name as table_name, c.name AS column_name, c.is_masked, c.masking_function  

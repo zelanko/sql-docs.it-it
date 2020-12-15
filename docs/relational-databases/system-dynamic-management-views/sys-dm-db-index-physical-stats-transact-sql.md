@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd4c4946b5e62b9e7f06ca2beea8e75732f17e43
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1e4d175fe42497d2a75c23d3ae49d60821952ccf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91833862"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458489"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,7 @@ sys.dm_db_index_physical_stats (
  *database_id* \| \| \| Valore predefinito 0 null  
  ID del database. *database_id* è **smallint**. Gli input validi sono il numero di ID di un database, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.  
   
- Specificare NULL per restituire informazioni per tutti i database presenti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si specifica NULL per *database_id*, è necessario specificare null anche per *object_id*, *index_id*e *partition_number*.  
+ Specificare NULL per restituire informazioni per tutti i database presenti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si specifica NULL per *database_id*, è necessario specificare null anche per *object_id*, *index_id* e *partition_number*.  
   
  È possibile specificare la funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Quando si utilizza DB_ID senza specificare un nome di database, il livello di compatibilità del database corrente deve essere 90 o un valore superiore.  
   
@@ -121,11 +121,11 @@ sys.dm_db_index_physical_stats (
 |offrow_regular_version_record_count|**bigint**|Conteggio dei record versione conservati all'esterno della riga di dati originale. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |offrow_long_term_version_record_count|**bigint**|Conteggio dei record versione considerati a lungo termine. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La funzione a gestione dinamica sys.dm_db_index_physical_stats sostituisce l'istruzione DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Modalità di analisi  
- La modalità di esecuzione della funzione determina il livello di analisi eseguito per ottenere i dati statistici utilizzati dalla funzione. la *modalità* è specificata come Limited, SAMPLED o detailed. La funzione consente di attraversare le catene di pagine per le unità di allocazione che costituiscono le partizioni specificate della tabella o dell'indice. sys.dm_db_index_physical_stats richiede solo un blocco di tabella preventivo condiviso (IS), indipendentemente dalla modalità in cui viene eseguito.  
+ La modalità di esecuzione della funzione determina il livello di analisi eseguito per ottenere i dati statistici utilizzati dalla funzione. la *modalità* è specificata come Limited, SAMPLED o detailed. La funzione consente di attraversare le catene di pagine per le unità di allocazione che costituiscono le partizioni specificate della tabella o dell'indice. sys.dm_db_index_physical_stats richiede solo un blocco di tabella Intent-Shared (IS), indipendentemente dalla modalità in cui viene eseguito.  
   
  La modalità LIMITED è la più veloce ed esegue l'analisi del minor numero di pagine. Per un indice, viene eseguita l'analisi delle sole pagine di livello padre dell'albero B (ovvero le pagine sopra il livello foglia). Per un heap, vengono esaminate solo le pagine associate PFS e IAM, mentre le pagine di dati vengono analizzate in modalità LIMITED.  
   

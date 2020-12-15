@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af42a0f719e490ce32c6f81ee92722a540f1271a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d1a3144ed51592d3014564d7d5b9690fed958fb9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498145"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440602"
 ---
 # <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +67,7 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
   
 -   Autorizzazione insufficiente per la tabella specificata dall'ID oggetto.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene illustrato come determinare la validità della versione specificata. È necessario ottenere la minima versione valida della tabella `dbo.Employees`, confrontandola quindi con il valore della variabile `@last_sync_version`. Se il valore di `@last_sync_version` è inferiore al valore di `@min_valid_version`, l'elenco delle righe modificate non sarà valido.  
   
 > [!NOTE]  

@@ -15,13 +15,13 @@ ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e247ae58867054a1051f58f8a17d0d1ef701b2e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3cbf84c0f5bf4f80bc3bf12d6dad91479888d595
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790667"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462902"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>Tipi di dati e comportamento del caricamento bulk XML (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85790667"
   
  In XDR:  
   
--   Se **DT: Type** è **DateTime**, **Time**, **DateTime.TZ**o **time.TZ**, è necessario specificare entrambi i tipi di dati **DT: Type** e **SQL: DataType** perché il caricamento bulk XML esegue la conversione dei dati prima di inviare i dati a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Se **DT: Type** è **DateTime**, **Time**, **DateTime.TZ** o **time.TZ**, è necessario specificare entrambi i tipi di dati **DT: Type** e **SQL: DataType** perché il caricamento bulk XML esegue la conversione dei dati prima di inviare i dati a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Se i dati XML sono di tipo **UUID**, è necessario specificare **SQL: DataType** ; è necessario anche **DT: Type = "UUID"** , a meno che i dati non siano dati di tipo stringa. Se non si specifica **DT: UUID**, il caricamento bulk XML accetta stringhe con parentesi graffe (e le rimuove se necessario).  
   

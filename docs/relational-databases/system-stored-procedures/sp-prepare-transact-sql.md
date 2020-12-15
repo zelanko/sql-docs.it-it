@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 198707a1ffda49a3ffc28d0d35eadced99e4b149
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9726ac52d0579c56de3c3ad971028cd606748726
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535063"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462682"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -44,15 +44,15 @@ sp_prepare handle OUTPUT, params, stmt, options
  Identificatore dell' *handle preparato* generato da SQL Server. *handle* è un parametro obbligatorio con un valore restituito **int** .  
   
  *params*  
- Identifica le istruzioni con parametri. La definizione *params* delle variabili viene sostituita per i marcatori di parametro nell'istruzione. *params* è un parametro obbligatorio che richiede un valore di input **ntext**, **nchar**o **nvarchar** . Immettere un valore NULL se l'istruzione non è con parametri.  
+ Identifica le istruzioni con parametri. La definizione *params* delle variabili viene sostituita per i marcatori di parametro nell'istruzione. *params* è un parametro obbligatorio che richiede un valore di input **ntext**, **nchar** o **nvarchar** . Immettere un valore NULL se l'istruzione non è con parametri.  
   
  *stmt*  
- Definisce il set di risultati del cursore. Il parametro *stmt* è obbligatorio e richiede un valore di input **ntext**, **nchar**o **nvarchar** .  
+ Definisce il set di risultati del cursore. Il parametro *stmt* è obbligatorio e richiede un valore di input **ntext**, **nchar** o **nvarchar** .  
   
  *options*  
  Parametro facoltativo tramite cui viene restituita una descrizione delle colonne dei set di risultati del cursore. *options* richiede il valore di input int seguente:  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   

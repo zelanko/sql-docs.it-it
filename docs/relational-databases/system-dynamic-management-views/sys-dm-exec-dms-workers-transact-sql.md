@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5942abbdd1710a058ec725e88d96f99c9ba21e37
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5e6209aef488fb336f65d26556732f90063ff8d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834096"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464552"
 ---
 # <a name="sysdm_exec_dms_workers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "91834096"
 |dms_step_index|`int`|Eseguire un passaggio nel piano DMS in cui è in esecuzione il thread di lavoro.|Vedere [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|`int`|Nodo su cui è in esecuzione il ruolo di lavoro.|Vedere [sys.dm_exec_compute_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|`int`|||  
-|type|`nvarchar(32)`|Tipo di thread di lavoro DMS rappresentato da questa voce.|' DIRECT_CONVERTER ',' DIRECT_READER ',' FILE_READER ',' HASH_CONVERTER ',' HASH_READER ',' ROUNDROBIN_CONVERTER ',' EXPORT_READER ',' EXTERNAL_READER ',' EXTERNAL_WRITER ',' PARALLEL_COPY_READER ',' REJECT_WRITER ',' WRITER '|  
+|tipo|`nvarchar(32)`|Tipo di thread di lavoro DMS rappresentato da questa voce.|' DIRECT_CONVERTER ',' DIRECT_READER ',' FILE_READER ',' HASH_CONVERTER ',' HASH_READER ',' ROUNDROBIN_CONVERTER ',' EXPORT_READER ',' EXTERNAL_READER ',' EXTERNAL_WRITER ',' PARALLEL_COPY_READER ',' REJECT_WRITER ',' WRITER '|  
 |status|`nvarchar(32)`|Stato di questo passaggio|' Pending ',' running ',' complete ',' failed ',' UndoFailed ',' PendingCancel ',' annullato ',' Undone ',' Aborted '|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  

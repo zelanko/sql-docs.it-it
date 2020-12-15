@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b96269437d8dd793c6a1baf0884d8a16160145d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9832373d4b6c65ba16bfa83b8ef54cba963777c0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538721"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462712"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @rolename = ] 'role'` Nome di un ruolo nel database corrente. *Role* è di **tipo sysname**e il valore predefinito è null. il *ruolo* deve esistere nel database corrente. Se *Role* non è specificato, vengono restituite informazioni su tutti i ruoli nel database corrente.  
+`[ @rolename = ] 'role'` Nome di un ruolo nel database corrente. *Role* è di **tipo sysname** e il valore predefinito è null. il *ruolo* deve esistere nel database corrente. Se *Role* non è specificato, vengono restituite informazioni su tutti i ruoli nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -54,7 +54,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 |**RoleId**|**smallint**|ID di **roleName**.|  
 |**IsAppRole**|**int**|0 = **roleName** non è un ruolo applicazione.<br /><br /> 1 = **roleName** è un ruolo applicazione.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Per visualizzare le autorizzazioni associate al ruolo, utilizzare **sp_helprotect**. Per visualizzare i membri di un ruolo del database, utilizzare **sp_helprolemember**.  
   
 ## <a name="permissions"></a>Autorizzazioni  

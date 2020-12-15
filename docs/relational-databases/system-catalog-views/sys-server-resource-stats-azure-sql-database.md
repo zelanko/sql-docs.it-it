@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 57d0a8e10eb79213de7eb29a2d18ea8837d7f908
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current
+ms.openlocfilehash: 142269f7c3cd8a5a1e764e2e48cf41f83490bd76
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809320"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464602"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -44,7 +44,7 @@ La visualizzazione **sys.server_resource_stats** ha definizioni diverse a second
 |resource_name|nvarchar(128)|Nome della risorsa.|
 |sku|nvarchar(128)|Istanza gestita livello di servizio dell'istanza. Di seguito sono indicati i valori possibili: <br><ul><li>Utilizzo generico</li></ul><ul><li>Business Critical</li></ul>|
 |hardware_generation|nvarchar(128)|Identificatore di generazione hardware: come gen 4 o gen 5|
-|virtual_core_count|int|Rappresenta il numero di core virtuali per istanza (8, 16 o 24 in anteprima pubblica)|
+|virtual_core_count|INT|Rappresenta il numero di core virtuali per istanza (8, 16 o 24 in anteprima pubblica)|
 |avg_cpu_percent|Decimal (5, 2)|Utilizzo medio del calcolo in percentuale del limite del livello di servizio Istanza gestita utilizzato dall'istanza. Viene calcolato come somma del tempo di CPU di tutti i pool di risorse per tutti i database nell'istanza e diviso per il tempo di CPU disponibile per tale livello nell'intervallo specificato.|
 |reserved_storage_mb|bigint|Archiviazione riservata per istanza (quantità di spazio di archiviazione acquistata dal cliente per l'istanza gestita)|
 |storage_space_used_mb|Decimal (18, 2)|Archiviazione usata da tutti i file di database in un'istanza gestita (inclusi i database utente e di sistema)|
@@ -59,10 +59,10 @@ La visualizzazione **sys.server_resource_stats** ha definizioni diverse a second
 ## <a name="permissions"></a>Autorizzazioni  
  Questa vista è disponibile per tutti i ruoli utente con autorizzazioni per la connessione al database **Master** .  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I dati restituiti da **sys.server_resource_stats** vengono espressi come il totale utilizzato in byte o megabyte (indicati in nomi di colonna) diversi da avg_cpu, espresso come percentuale dei limiti massimi consentiti per il livello di servizio o il livello di prestazioni in esecuzione.  
  
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono restituiti tutti i database che hanno una media di almeno l'80% di utilizzo del calcolo nell'ultima settimana.  
   
 ```sql  

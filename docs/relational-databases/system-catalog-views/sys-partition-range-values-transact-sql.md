@@ -1,6 +1,6 @@
 ---
 description: sys.partition_range_values (Transact-SQL)
-title: sys. partition_range_values (Transact-SQL) | Microsoft Docs
+title: sys.partition_range_values (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9aee483e-61f3-4613-bec6-f084161f45ac
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924640e4f30a47ecacb911567ab8f6d766bf4182
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0617f01056af48341e616f10fca1cadabdf98299
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551495"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97458509"
 ---
 # <a name="syspartition_range_values-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89551495"
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|ID della funzione di partizione per il valore limite di intervallo.|  
 |**boundary_id**|**int**|ID (ordinale in base 1) della tupla del valore limite con il primo limite a sinistra che inizia con l'ID 1.|  
-|**parameter_id**|**int**|ID del parametro della funzione a cui questo valore corrisponde. I valori in questa colonna corrispondono a quelli nella colonna **parameter_id** della vista del catalogo **sys. partition_parameters** per qualsiasi **function_id**particolare.|  
+|**parameter_id**|**int**|ID del parametro della funzione a cui questo valore corrisponde. I valori in questa colonna corrispondono a quelli nella colonna **parameter_id** della vista del catalogo **sys.partition_parameters** per ogni **function_id** particolare.|  
 |**value**|**sql_variant**|Il valore limite effettivo.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -22,13 +22,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 926f9588ad5bf9a29490a84017f3317f8ec5c424
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0e457aa6c1d1e16e96682f19898e22813254e9ef
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750778"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461802"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Conversioni di tipi di dati e annotazione sql: DataType (SQLXML 4,0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85750778"
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Tempo|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Ora|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Tutti gli altri|Nessuna conversione aggiuntiva|  
   
 > [!NOTE]  
@@ -89,15 +89,15 @@ ms.locfileid: "85750778"
 ## <a name="sqldatatype-annotation"></a>Annotazione sql:datatype  
  L'annotazione **SQL: DataType** viene utilizzata per specificare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati. questa annotazione deve essere specificata nei casi seguenti:  
   
--   Si esegue il caricamento bulk in una colonna **DateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un tipo XSD **DateTime**, **date**o **Time** . In questo caso, è necessario identificare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati della colonna tramite **SQL: DataType = "DateTime"**. Questa regola si applica anche agli updategram.  
+-   Si esegue il caricamento bulk in una colonna **DateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un tipo XSD **DateTime**, **date** o **Time** . In questo caso, è necessario identificare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati della colonna tramite **SQL: DataType = "DateTime"**. Questa regola si applica anche agli updategram.  
   
 -   Si esegue il caricamento bulk in una colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo **uniqueidentifier** e il valore XSD è un GUID che include parentesi graffe ({e}). Quando si specifica **SQL: DataType = "uniqueidentifier"**, le parentesi graffe vengono rimosse dal valore prima che venga inserito nella colonna. Se **SQL: DataType** non è specificato, il valore viene inviato con le parentesi graffe e l'inserimento o l'aggiornamento non riesce.  
   
--   Il tipo di dati XML **base64Binary** esegue il mapping a vari [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati (**Binary**, **Image**o **varbinary**). Per eseguire il mapping del tipo di dati XML **base64Binary** a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati specifico, utilizzare l'annotazione **SQL: DataType** . Questa annotazione specifica il tipo di dati esplicito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] della colonna a cui viene mappato l'attributo. Ciò risulta utile durante l'archiviazione dei dati nei database. Specificando l'annotazione **SQL: DataType** è possibile identificare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati esplicito.  
+-   Il tipo di dati XML **base64Binary** esegue il mapping a vari [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati (**Binary**, **Image** o **varbinary**). Per eseguire il mapping del tipo di dati XML **base64Binary** a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati specifico, utilizzare l'annotazione **SQL: DataType** . Questa annotazione specifica il tipo di dati esplicito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] della colonna a cui viene mappato l'attributo. Ciò risulta utile durante l'archiviazione dei dati nei database. Specificando l'annotazione **SQL: DataType** è possibile identificare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati esplicito.  
   
  È in genere consigliabile specificare **SQL: DataType** nello schema.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-xsdtype"></a>R. Definizione dell'attributo xsd:type  

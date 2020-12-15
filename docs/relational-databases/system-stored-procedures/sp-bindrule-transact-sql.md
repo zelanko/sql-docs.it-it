@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7355f421701c5eb24da58dec5037b5fb1b8317c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0616ed8334665f1c6226ad8bd28ed3e968a04be7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548314"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462722"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile associare una nuova regola a una colonna (sebbene sia preferibile usare un vincolo CHECK) o a un tipo di dati alias con **sp_bindrule** senza annullare l'associazione di una regola esistente. La regola precedente verrà infatti ignorata. Se una regola viene associata a una colonna con un vincolo CHECK esistente, vengono valutate tutte le restrizioni. Non è possibile associare una regola a un tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La regola viene applicata quando si esegue un'istruzione INSERT, non in fase di associazione. È possibile associare una regola carattere a una colonna di tipo di dati **numeric** , sebbene tale operazione di inserimento non sia valida.  
@@ -87,7 +87,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. Associazione di una regola a un tipo di dati alias  
- Supponendo che esistano la regola `rule_ssn` e il tipo di dati alias `ssn`, nell'esempio seguente viene associata la regola `rule_ssn` a `ssn`. In un'istruzione CREATE TABLE le colonne di tipo `ssn` ereditano la regola `rule_ssn`. Anche le colonne esistenti di tipo `ssn` ereditano la `rule_ssn` regola, a meno che non sia specificato **futureonly** per *futureonly_flag*o `ssn` una regola è associata direttamente a essa. Le regole associate alle colonne sono sempre prioritarie rispetto a quelle associate ai tipi di dati.  
+ Supponendo che esistano la regola `rule_ssn` e il tipo di dati alias `ssn`, nell'esempio seguente viene associata la regola `rule_ssn` a `ssn`. In un'istruzione CREATE TABLE le colonne di tipo `ssn` ereditano la regola `rule_ssn`. Anche le colonne esistenti di tipo `ssn` ereditano la `rule_ssn` regola, a meno che non sia specificato **futureonly** per *futureonly_flag* o `ssn` una regola è associata direttamente a essa. Le regole associate alle colonne sono sempre prioritarie rispetto a quelle associate ai tipi di dati.  
   
 ```  
 USE master;  

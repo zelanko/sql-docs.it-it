@@ -10,13 +10,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: e246d516d3c05b9a2c6725f7fd3e3f787066b8aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112439"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461402"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catalogo di database WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ I diversi tipi di tabelle sono organizzati in tre schemi.
 |SCHEMA|Descrizione|
 |-----------------------------|---------------------|
 |Dimension|Tabelle delle dimensioni.|
-|Fact|Tabelle dei fatti.|  
+|Fact| Tabelle dei fatti.|  
 |Integrazione|Tabelle di staging e altri oggetti necessari per ETL.|  
 
 ## <a name="tables"></a>Tabelle
@@ -46,10 +46,10 @@ WideWorldImportersDW include le tabelle delle dimensioni seguenti. La descrizion
 
 |Tabella|Tabelle di origine|
 |-----------------------------|---------------------|
-|city|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
+|City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |Data|Nuova tabella con informazioni sulle date, incluso l'anno finanziario, in base al 1 ° novembre per l'anno finanziario.|
-|Employee|`Application.People`.|
+|Dipendente|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Fornitore|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
 |PaymentMethod|`Application.PaymentMethods`.|
@@ -61,9 +61,9 @@ In WideWorldImportersDW sono presenti le tabelle dei fatti seguenti. La descrizi
 
 |Tabella|Tabelle di origine|Analisi di esempio|
 |-----------------------------|---------------------|---------------------|
-|JSON|`Sales.Orders` e `Sales.OrderLines`|Addetti alle vendite, produttività di selezione e Packer e tempo di selezione degli ordini. Inoltre, le situazioni di stock ridotte portano a back Orders.|
+|Ordine|`Sales.Orders` e `Sales.OrderLines`|Addetti alle vendite, produttività di selezione e Packer e tempo di selezione degli ordini. Inoltre, le situazioni di stock ridotte portano a back Orders.|
 |Sale|`Sales.Invoices` e `Sales.InvoiceLines`|Date di vendita, date di consegna, redditività nel tempo, redditività per venditore.|
-|Acquisto|`Purchasing.PurchaseOrderLines`|Tempo reale previsto rispetto ai lead|
+|Purchase|`Purchasing.PurchaseOrderLines`|Tempo reale previsto rispetto ai lead|
 |Transazione|`Sales.CustomerTransactions` e `Purchasing.SupplierTransactions`|Misurazione delle date del problema rispetto alle date finali e agli importi.|
 |Movement|`Warehouse.StockTransactions`|Spostamenti nel tempo.|
 |Holding azionaria|`Warehouse.StockItemHoldings`|Livelli e valore delle scorte in mano.|
@@ -72,7 +72,7 @@ In WideWorldImportersDW sono presenti le tabelle dei fatti seguenti. La descrizi
 
 Le stored procedure vengono utilizzate principalmente per il processo ETL e per scopi di configurazione.
 
-Tutte le estensioni dell'esempio sono consigliate per l' `Reports` uso dello schema per Reporting Services report e `PowerBI` dello schema per l'accesso a Power bi.
+Tutte le estensioni dell'esempio sono consigliate per l'uso dello `Reports` schema per Reporting Services report e dello `PowerBI` schema per l'accesso a Power bi.
 
 ### <a name="application-schema"></a>Schema applicazione
 
@@ -92,7 +92,7 @@ Queste procedure vengono utilizzate per configurare l'esempio. Vengono usati per
 Le procedure utilizzate nel processo ETL rientrino nelle categorie seguenti:
 - Procedure di supporto per il pacchetto ETL: tutte le procedure Get *.
 - Procedure utilizzate dal pacchetto ETL per la migrazione dei dati di gestione temporanea nelle tabelle DW-tutte le procedure di migrazione *.
-- `PopulateDateDimensionForYear`-Richiede un anno e garantisce che tutte le date dell'anno siano popolate nella `Dimension.Date` tabella.
+- `PopulateDateDimensionForYear` -Richiede un anno e garantisce che tutte le date dell'anno siano popolate nella `Dimension.Date` tabella.
 
 ### <a name="sequences-schema"></a>Schema sequences
 
@@ -101,4 +101,4 @@ Procedure per la configurazione delle sequenze nel database.
 |Procedura|Scopo|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Chiama la routine `ReseedSequenceBeyondTableValue` per tutte le sequenze.|
-|ReseedSequenceBeyondTableValue|Utilizzato per riposizionare il successivo valore di sequenza oltre il valore in una tabella che utilizza la stessa sequenza. ( `DBCC CHECKIDENT` Ad esempio per le colonne Identity equivalenti per le sequenze ma per le tabelle potenzialmente multiple).|
+|ReseedSequenceBeyondTableValue|Utilizzato per riposizionare il successivo valore di sequenza oltre il valore in una tabella che utilizza la stessa sequenza. (Ad esempio `DBCC CHECKIDENT` per le colonne Identity equivalenti per le sequenze ma per le tabelle potenzialmente multiple).|

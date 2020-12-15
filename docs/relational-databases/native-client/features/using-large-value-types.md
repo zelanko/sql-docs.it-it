@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40196c8ec895bbf6bfc8e092e82ca8704d4f803e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dce3adf92772a69875a644a2dc23344b6b139f51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243902"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461992"
 ---
 # <a name="using-large-value-types-in-sql-server-native-client"></a>Uso di tipi di valori di grandi dimensioni in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'utilizzo dei tipi di dati per valori di grandi dimensioni richiede una gestione speciale. I tipi di dati per valori di grandi dimensioni sono quelli che superano le dimensioni di riga massime di 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ha introdotto un identificatore **Max** per i tipi di dati **varchar**, **nvarchar** e **varbinary** per consentire l'archiviazione di valori di dimensioni pari a 2 ^ 31-1 byte. Le colonne della tabella e le [!INCLUDE[tsql](../../../includes/tsql-md.md)] variabili possono specificare tipi di dati **varchar (max)**, **nvarchar (max)** o **varbinary (max)** .  
+  Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'utilizzo dei tipi di dati per valori di grandi dimensioni richiede una gestione speciale. I tipi di dati per valori di grandi dimensioni sono quelli che superano le dimensioni di riga massime di 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ha introdotto un identificatore **Max** per i tipi di dati **varchar**, **nvarchar** e **varbinary** per consentire l'archiviazione di valori di dimensioni pari a 2 ^ 31-1 byte. Le colonne della tabella e le [!INCLUDE[tsql](../../../includes/tsql-md.md)] variabili possono specificare tipi di dati **varchar (max)**, **nvarchar (max)** o **varbinary (max)** .  
   
 > [!NOTE]  
 >  I tipi di dati per valori di grandi dimensioni possono presentare dimensioni massime comprese tra 1 e 8 KB oppure illimitate.  
@@ -701,7 +701,7 @@ _ExitProcessResultSet:
   
 -   Il valore "illimitato" che, nel caso di una colonna **varchar (max)** , è uguale a 0.  
   
- Le regole di conversione standard si applicano a una colonna **varchar (max)** , vale a dire che qualsiasi conversione valida per una colonna **varchar (** 2000 **)** sarà valida anche per una colonna **varchar (max)** . Ciò vale anche per le colonne **nvarchar(max)** e **varbinary(max)**.  
+ Le regole di conversione standard si applicano a una colonna **varchar (max)** , vale a dire che qualsiasi conversione valida per una colonna **varchar (** 2000 **)** sarà valida anche per una colonna **varchar (max)** . Ciò vale anche per le colonne **nvarchar(max)** e **varbinary(max)** .  
   
  L'elenco seguente riporta le funzioni API ODBC migliorate per l'utilizzo di tipi di dati per valori di grandi dimensioni:  
   

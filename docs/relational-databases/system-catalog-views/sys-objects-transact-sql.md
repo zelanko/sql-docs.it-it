@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5afb76b32d58a18725ad32170bdcaf7de45355ca
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fc2a9d5ef268d806a9e7a0f6b78df58539d69a4b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542588"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461682"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,10 +56,10 @@ ms.locfileid: "89542588"
 |is_published|**bit**|L'oggetto viene pubblicato.|  
 |is_schema_published|**bit**|Viene pubblicato solo lo schema dell'oggetto.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile applicare le funzioni predefinite [object_id](../../t-sql/functions/object-id-transact-sql.md), [object_name](../../t-sql/functions/object-name-transact-sql.md)e [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)() agli oggetti visualizzati in sys. Objects.  
   
- È disponibile una versione di questa visualizzazione con lo stesso schema, denominato [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), che Mostra gli oggetti di sistema. È disponibile un'altra visualizzazione denominata [sys. all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) che Mostra gli oggetti di sistema e utente. Le tre viste del catalogo hanno tutte la stessa struttura.  
+ È disponibile una versione di questa visualizzazione con lo stesso schema, denominato [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), che Mostra gli oggetti di sistema. È disponibile un'altra visualizzazione denominata [sys.all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) che Mostra gli oggetti di sistema e utente. Le tre viste del catalogo hanno tutte la stessa struttura.  
   
  In questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un indice esteso, ad esempio un indice XML o un indice spaziale, è considerato una tabella interna in sys.objects (type = IT e type_desc = INTERNAL_TABLE). Per un indice esteso:  
   
@@ -163,11 +163,11 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys. all_objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
+ [sys.all_objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
  [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
  [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys. internal_tables &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
+ [sys.internal_tables &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
   
   

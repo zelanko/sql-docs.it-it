@@ -23,13 +23,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84e6c1b0b5530ed33ade4a3ac4813b1a3fe6d251
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 19c9148b0e352a1b8a07bae23525df606f34f1c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750797"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461792"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Esclusione di elementi dello schema dal documento XML con sql:mapped
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "85750797"
   
  L'annotazione **SQL: mapping** accetta un valore booleano (0 = false, 1 = true). I valori possibili sono 0, 1, true e false.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>R. Specifica dell'annotazione sql:mapped  
- Si supponga di disporre di uno schema XSD di un'altra origine. Questo schema XSD è costituito da un **\<Person.Contact>** elemento con gli attributi **ContactID**, **FirstName**, **LastName**e **HomeAddress** .  
+ Si supponga di disporre di uno schema XSD di un'altra origine. Questo schema XSD è costituito da un **\<Person.Contact>** elemento con gli attributi **ContactID**, **FirstName**, **LastName** e **HomeAddress** .  
   
  Per eseguire il mapping di questo schema XSD alla tabella Person. Contact nel database AdventureWorks, **SQL: mapping** viene specificato nell'attributo **HomeAddress** perché la tabella Employees non archivia gli indirizzi Home dei dipendenti. Di conseguenza, questo attributo non viene mappato al database e non viene restituito nel documento XML risultante quando viene specificata una query XPath sullo schema di mapping.  
   

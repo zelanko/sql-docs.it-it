@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79995dc681db76f3de5b6d6af200f6f57f087464
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b3ccfa642b98165dcbdad57adac38f300063ccdb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989936"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462762"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Visualizza o modifica l'opzione di aggiornamento delle statistiche automatiche AUTO_UPDATE_STATISTICS per un indice, un oggetto statistiche, una tabella o una vista indicizzata.  
   
- Per ulteriori informazioni sull'opzione AUTO_UPDATE_STATISTICS, vedere [Opzioni ALTER DATABASE SET &#40;&#41;e statistiche Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md) . [Statistics](../../relational-databases/statistics/statistics.md)  
+ Per ulteriori informazioni sull'opzione AUTO_UPDATE_STATISTICS, vedere [Opzioni ALTER DATABASE SET &#40;&#41;e statistiche Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md) . [](../../relational-databases/statistics/statistics.md)  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,7 +57,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
 `[ @indname = ] 'statistics_name'` Nome delle statistiche per cui visualizzare o aggiornare l'opzione AUTO_UPDATE_STATISTICS. Per visualizzare le statistiche per un indice, è possibile utilizzare il nome dell'indice, in quanto un indice e l'oggetto statistiche corrispondente hanno lo stesso nome.  
   
- *statistics_name* è di **tipo sysname**e il valore predefinito è null.  
+ *statistics_name* è di **tipo sysname** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  

@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fad0e8410294ecfe477ccf24215772531260bd50
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 95e974c7a62722ea63510504d057b2e67370925b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035224"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440727"
 ---
 # <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

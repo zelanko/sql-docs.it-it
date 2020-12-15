@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 3bfb94c0a0c49603681de5cf84c40e535596c3db
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: b2926817399e0e7604279d25fe46f0a944117a49
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059459"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440786"
 ---
 # <a name="sysdm_pdw_nodes_exec_text_query_plan--transact-sql"></a>sys.dm_pdw_nodes_exec_text_query_plan (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]

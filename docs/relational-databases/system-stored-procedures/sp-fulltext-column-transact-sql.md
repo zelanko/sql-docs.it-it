@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: markingmyname
 ms.author: maghan
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55f25dad90002ea50ba797a7960f22cfee5055c8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: aadc6c5b5548b2fccb3c37fdc9eb06a9baf69dcc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543372"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440534"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -50,24 +50,24 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ## <a name="arguments"></a>Argomenti  
 `[ @tabname = ] 'qualified_table_name'` È un nome di tabella in una o due parti. La tabella deve esistere nel database corrente La tabella deve disporre di un indice full-text. *qualified_table_name* è di **tipo nvarchar (517)** e non prevede alcun valore predefinito.  
   
-`[ @colname = ] 'column_name'` Nome di una colonna in *qualified_table_name*. La colonna deve essere una colonna character, **varbinary (max)** o **Image** e non può essere una colonna calcolata. *column_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @colname = ] 'column_name'` Nome di una colonna in *qualified_table_name*. La colonna deve essere una colonna character, **varbinary (max)** o **Image** e non può essere una colonna calcolata. *column_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di creare indici full-text di dati di testo archiviati in colonne con tipo di dati **varbinary (max)** o **Image** . Le immagini non vengono indicizzate.  
   
 `[ @action = ] 'action'` Azione da eseguire. *Action* è di tipo **varchar (20)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**add**|Aggiunge *column_name* di *qualified_table_name* all'indice full-text inattivo della tabella. Questa azione abilita la colonna per l'indicizzazione full-text.|  
 |**goccia**|Rimuove *column_name* di *qualified_table_name* dall'indice full-text inattivo della tabella.|  
   
-`[ @language = ] 'language_term'` Lingua dei dati archiviati nella colonna. Per un elenco delle lingue incluse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [sys. fulltext_languages &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+`[ @language = ] 'language_term'` Lingua dei dati archiviati nella colonna. Per un elenco delle lingue incluse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [sys.fulltext_languages &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Se una colonna include dati in più lingue o in una lingua non supportata, utilizzare la lingua neutra. Il valore predefinito è specificato nell'opzione di configurazione "default full-text language".  
   
-`[ @type_colname = ] 'type_column_name'` Nome di una colonna in *qualified_table_name* che include il tipo di documento *column_name*. Questa colonna deve essere di tipo **char**, **nchar**, **varchar**o **nvarchar**. Viene utilizzato solo quando il tipo di dati di *column_name* è di tipo **varbinary (max)** o **Image**. *type_column_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @type_colname = ] 'type_column_name'` Nome di una colonna in *qualified_table_name* che include il tipo di documento *column_name*. Questa colonna deve essere di tipo **char**, **nchar**, **varchar** o **nvarchar**. Viene utilizzato solo quando il tipo di dati di *column_name* è di tipo **varbinary (max)** o **Image**. *type_column_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -83,7 +83,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente deve essere un membro del ruolo predefinito del database **db_ddladmin** o un membro del ruolo predefinito del database **db_owner** oppure il proprietario della tabella.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente la colonna `DocumentSummary` della tabella `Document` viene aggiunta all'indice full-text della tabella.  
   
 ```  

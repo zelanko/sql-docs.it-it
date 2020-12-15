@@ -1,5 +1,5 @@
 ---
-description: Uso di tipi definiti dall'utente in SQL Server Native Client
+description: Uso di tipi di User-Defined in SQL Server Native Client
 title: Uso di tipi definiti dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b56a4e3446c827ecd8372876aa54cb023827a861
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2808e712491271fe5738ba4d20ad3e7e2133a451
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448228"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461952"
 ---
-# <a name="using-user-defined-types-in-sql-server-native-client"></a>Uso di tipi definiti dall'utente in SQL Server Native Client
+# <a name="using-user-defined-types-in-sql-server-native-client"></a>Uso di tipi di User-Defined in SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] sono stati introdotti i tipi definiti dall'utente (UDT). I tipi definiti dall'utente estendono il sistema di tipi SQL consentendo di archiviare oggetti e strutture di dati personalizzate in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I tipi definiti dall'utente possono contenere più tipi di dati e possono assumere comportamenti, differenziandoli dai tipi di dati alias tradizionali costituiti da un singolo tipo di dati di sistema [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I tipi definiti dall'utente vengono definiti utilizzando uno dei linguaggi supportati da .NET Common Language Runtime (CLR) che generano codice verificabile, ovvero Microsoft Visual C#<sup>®</sup> e Visual Basic<sup>®</sup> .NET. I dati vengono esposti come campi e proprietà di una classe o struttura .NET mentre i comportamenti vengono definiti dai metodi della classe o della struttura.  
@@ -174,7 +174,7 @@ ms.locfileid: "88448228"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client aggiunge nuovi valori o modifiche a molte delle interfacce di OLE DB principali.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Interfaccia ISSCommandWithParameters  
- Per supportare i tipi definiti dall'utente tramite OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa una serie di modifiche, inclusa l'aggiunta dell'interfaccia **ISSCommandWithParameters** . Questa nuova interfaccia eredita dall'interfaccia OLE DB principale **ICommandWithParameters**. Oltre ai tre metodi ereditati da **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**e **separameterinfo**; **ISSCommandWithParameters** fornisce i metodi **GetParameterProperties** e **SetParameterProperties** utilizzati per gestire i tipi di dati specifici del server.  
+ Per supportare i tipi definiti dall'utente tramite OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa una serie di modifiche, inclusa l'aggiunta dell'interfaccia **ISSCommandWithParameters** . Questa nuova interfaccia eredita dall'interfaccia OLE DB principale **ICommandWithParameters**. Oltre ai tre metodi ereditati da **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames** e **separameterinfo**; **ISSCommandWithParameters** fornisce i metodi **GetParameterProperties** e **SetParameterProperties** utilizzati per gestire i tipi di dati specifici del server.  
   
 > [!NOTE]  
 >  L'interfaccia **ISSCommandWithParameters** usa anche la nuova struttura SSPARAMPROPS.  

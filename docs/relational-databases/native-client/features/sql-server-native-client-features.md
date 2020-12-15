@@ -15,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec878229524d048969acbf3ca1af7cca4e318084
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d192f469759ae57d01f4789aef887f4cbb60adca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008993"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462102"
 ---
 # <a name="sql-server-native-client-features"></a>Funzionalità di SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86008993"
  [Modifica del comportamento del driver ODBC quando si gestiscono le conversioni di caratteri](../../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
  Viene descritta una modifica del comportamento a partire da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client.  
   
- [Utilizzo del mirroring del database](../../../relational-databases/native-client/features/using-database-mirroring.md)  
+ [Uso del mirroring del database](../../../relational-databases/native-client/features/using-database-mirroring.md)  
  Viene illustrato il modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui Native Client supporta l'utilizzo di database con mirroring, ovvero la possibilità di gestire una copia, o mirror, di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database in un server di standby.  
   
  [Esecuzione di operazioni asincrone](../../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
@@ -40,22 +41,22 @@ ms.locfileid: "86008993"
  [Uso di MARS &#40;Multiple Active Result Set&#41;](../../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)  
  Si illustra in che modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta la funzionalità MARS (Multiple Active Result Set) che consente di eseguire e ricevere più set di risultati utilizzando una sola connessione al database.  
   
- [Utilizzo di tipi di dati XML](../../../relational-databases/native-client/features/using-xml-data-types.md)  
+ [Uso di tipi di dati XML](../../../relational-databases/native-client/features/using-xml-data-types.md)  
  Si illustra in che modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta i dati XML, ovvero un tipo di dati basato su XML che è possibile utilizzare come tipo di colonna, tipo di variabile, tipo di parametro o tipo restituito dalla funzione.  
   
- [Utilizzo dei tipi definiti dall'utente (UDT)](../../../relational-databases/native-client/features/using-user-defined-types.md)  
- Viene descritto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in che modo Native Client supporta i tipi definiti dall'utente (UDT), che estende il sistema di tipi SQL consentendo di archiviare oggetti e strutture di dati personalizzate in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database di.  
+ [Uso dei tipi definiti dall'utente](../../../relational-databases/native-client/features/using-user-defined-types.md)  
+ Viene illustrato come [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta i tipi di User-Defined (UDT), che estende il sistema di tipi SQL consentendo di archiviare oggetti e strutture di dati personalizzate in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database di.  
   
- [Utilizzo di tipi di dati per valori di grandi dimensioni](../../../relational-databases/native-client/features/using-large-value-types.md)  
+ [Uso di tipi valore di grandi dimensioni](../../../relational-databases/native-client/features/using-large-value-types.md)  
  Si illustra in che modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta i tipi di dati per valori di grandi dimensioni, ovvero i tipi di dati LOB (Large Object).  
   
- [Modifica delle password a livello di programmazione](../../../relational-databases/native-client/features/changing-passwords-programmatically.md)  
+ [Modifica delle password a livello di codice](../../../relational-databases/native-client/features/changing-passwords-programmatically.md)  
  Si illustra in che modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta la gestione delle password scadute per consentirne la modifica sul client senza il coinvolgimento dell'amministratore.  
   
- [Utilizzo dell'isolamento dello snapshot](../../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
+ [Uso dell'isolamento dello snapshot](../../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
  Si illustra in che modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta il miglioramento del controllo delle versioni delle righe che comporta a sua volta un miglioramento delle prestazioni del database evitando le situazioni di blocco in lettura/scrittura.  
   
- [Utilizzo delle notifiche delle query](../../../relational-databases/native-client/features/working-with-query-notifications.md)  
+ [Uso delle notifiche delle query](../../../relational-databases/native-client/features/working-with-query-notifications.md)  
  Si illustra in che modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta la notifica di tipo consumer per la modifica dei set di righe.  
   
  [Esecuzione di operazioni di copia bulk](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
@@ -100,7 +101,7 @@ ms.locfileid: "86008993"
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Procedure per ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Procedure per OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)   
+ [Procedure relative a OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)   
  [Installazione di SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

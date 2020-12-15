@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_virtual_address_dump (Transact-SQL)
-title: sys. dm_os_virtual_address_dump (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_virtual_address_dump (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7b24ea55-3873-42fd-a86c-441c92eb6175
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 731d180d3f269c6404c9cadf9587099d6ee48f41
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 87b213cd9a3d41e6cd0422a16c0431daeaedd1e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539275"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464562"
 ---
 # <a name="sysdm_os_virtual_address_dump-transact-sql"></a>sys.dm_os_virtual_address_dump (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89539275"
 >  Queste informazioni vengono inoltre restituite dall'API Windows **VirtualQuery** .  
   
 > [!NOTE]  
->  Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys. dm_pdw_nodes_os_virtual_address_dump**.  
+>  Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys.dm_pdw_nodes_os_virtual_address_dump**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  

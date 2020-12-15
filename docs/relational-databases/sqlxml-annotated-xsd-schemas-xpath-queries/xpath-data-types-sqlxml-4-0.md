@@ -28,19 +28,19 @@ ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 724290f48b0f33d586a797629766b36bae49ddb6
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 15b308481b6622284d6f8bdd36d474b3886570d6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332640"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460029"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipi di dati XPath (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath e XML Schema (XSD) hanno tipi di dati molto diversi. XPath, ad esempio, non include tipi di dati integer o di data, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e XSD ne includono diversi. XSD utilizza una precisione in nanosecondi per i valori di ora, mentre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza al massimo una precisione di 1/300 secondi. Di conseguenza, il mapping di un tipo di dati a un altro non è sempre possibile. Per ulteriori informazioni sul mapping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dei tipi di dati ai tipi di dati XSD, vedere [coercizione del tipo di dati e l'annotazione sql: DataType &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
- XPath è costituito da tre tipi di dati: **String**, **Number**e **Boolean**. Il tipo di dati **Number** è sempre un valore a virgola mobile a precisione doppia IEEE 754. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati **float (53)** corrisponde al **numero**XPath più vicino. Tuttavia, **float (53)** non è esattamente IEEE 754. Ad esempio, non viene utilizzato né un valore diverso da un numero (NaN, Not-a-Number) né un valore infinito. Se si tenta di convertire una stringa non numerica in un **numero** e si tenta di dividere per zero, viene restituito un errore.  
+ XPath è costituito da tre tipi di dati: **String**, **Number** e **Boolean**. Il tipo di dati **Number** è sempre un valore a virgola mobile a precisione doppia IEEE 754. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati **float (53)** corrisponde al **numero** XPath più vicino. Tuttavia, **float (53)** non è esattamente IEEE 754. Ad esempio, non viene utilizzato né un valore diverso da un numero (NaN, Not-a-Number) né un valore infinito. Se si tenta di convertire una stringa non numerica in un **numero** e si tenta di dividere per zero, viene restituito un errore.  
   
 ## <a name="xpath-conversions"></a>Conversioni XPath  
  Quando si utilizza una query XPath, ad esempio `OrderDetail[@UnitPrice > "10.0"]`, le conversioni dei tipi di dati implicite ed esplicite possono modificare impercettibilmente il significato della query. È pertanto importante comprendere le modalità di implementazione dei tipi di dati XPath. Le specifiche del linguaggio XPath, XML Path Language (XPath) versione 1,0 W3C proposed Recommendation 8 ottobre 1999, sono reperibili nel sito Web W3C all'indirizzo http://www.w3.org/TR/1999/PR-xpath-19991008.html .  
@@ -55,7 +55,7 @@ ms.locfileid: "87332640"
   
 -   Operatori aritmetici: (+, -, *, div, mod)  
   
- Ogni categoria di operatore converte in modo diverso gli operandi. Se necessario, gli operatori XPath convertono gli operandi in modo implicito. Gli operatori aritmetici convertono gli operandi in **numero**e restituiscono un valore numerico. Gli operatori booleani convertono gli operandi in un valore **booleano**e restituiscono un valore booleano. Gli operatori relazionali e gli operatori di uguaglianza restituiscono un valore booleano, ma utilizzano regole di conversione diverse a seconda dei tipi di dati originali degli operandi, come illustrato nella tabella seguente.  
+ Ogni categoria di operatore converte in modo diverso gli operandi. Se necessario, gli operatori XPath convertono gli operandi in modo implicito. Gli operatori aritmetici convertono gli operandi in **numero** e restituiscono un valore numerico. Gli operatori booleani convertono gli operandi in un valore **booleano** e restituiscono un valore booleano. Gli operatori relazionali e gli operatori di uguaglianza restituiscono un valore booleano, ma utilizzano regole di conversione diverse a seconda dei tipi di dati originali degli operandi, come illustrato nella tabella seguente.  
   
 |Operando|Operatore relazionale|Operatore di uguaglianza|  
 |-------------|-------------------------|-----------------------|  
@@ -66,15 +66,15 @@ ms.locfileid: "87332640"
 |Nessuno è un set di nodi.|Convertire entrambi gli operandi in **numero** , quindi confrontare.|Convertire entrambi gli operandi in un tipo comune e quindi eseguire il confronto. Converte in **Boolean** se una delle due è **booleana**, **numero** se è un **numero**; in caso contrario, convertire in **stringa**.|  
   
 > [!NOTE]  
->  Poiché gli operatori relazionali XPath convertono sempre gli operandi in **numero**, i confronti tra **stringhe** non sono possibili. Per includere i confronti di data, SQL Server 2000 offre questa variazione alla specifica XPath: quando un operatore relazionale confronta una **stringa** con una **stringa**, un set di nodi a una **stringa**o un set di nodi con valori di stringa in un set di nodi con valori di stringa, viene eseguito un confronto di **stringhe** (non un confronto **numerico** ).  
+>  Poiché gli operatori relazionali XPath convertono sempre gli operandi in **numero**, i confronti tra **stringhe** non sono possibili. Per includere i confronti di data, SQL Server 2000 offre questa variazione alla specifica XPath: quando un operatore relazionale confronta una **stringa** con una **stringa**, un set di nodi a una **stringa** o un set di nodi con valori di stringa in un set di nodi con valori di stringa, viene eseguito un confronto di **stringhe** (non un confronto **numerico** ).  
   
 ## <a name="node-set-conversions"></a>Conversioni dei set di nodi  
- Le conversioni dei set di nodi non sono sempre intuitive. Un set di nodi viene convertito in una **stringa** accettando il valore stringa solo del primo nodo nel set. Un set di nodi viene convertito in **numero** eseguendo la conversione in **stringa**e quindi convertendo una **stringa** in un **numero**. Un set di nodi viene convertito in un **valore booleano** verificando la relativa esistenza.  
+ Le conversioni dei set di nodi non sono sempre intuitive. Un set di nodi viene convertito in una **stringa** accettando il valore stringa solo del primo nodo nel set. Un set di nodi viene convertito in **numero** eseguendo la conversione in **stringa** e quindi convertendo una **stringa** in un **numero**. Un set di nodi viene convertito in un **valore booleano** verificando la relativa esistenza.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegue la selezione della posizione nei set di nodi: la query XPath `Customer[3]`, ad esempio, indica il terzo cliente. Questo tipo di selezione della posizione non è supportato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pertanto, le conversioni node-set-to-**String** o node-set-to-**Number** descritte dalla specifica XPath non sono implementate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza le semantiche "any" dove la specifica XPath specifica la semantica "first". Ad esempio, in base alla specifica XPath W3C, la query XPath `Order[OrderDetail/@UnitPrice > 10.0]` Seleziona gli ordini con il primo **OrderDetail** con un **PrezzoUnitario** maggiore di 10,0. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa query XPath seleziona gli ordini con qualsiasi **OrderDetail** con un **PrezzoUnitario** maggiore di 10,0.  
   
- La conversione in un **valore booleano** genera un test di esistenza; Pertanto, la query XPath `Products[@Discontinued=true()]` equivale all'espressione SQL "Products. Discontinued is not null", non all'espressione SQL "Products. Discontinued = 1". Per rendere la query equivalente all'ultima espressione SQL, convertire innanzitutto il set di nodi in un tipo non**booleano** , ad esempio **Number**. Ad esempio: `Products[number(@Discontinued) = true()]`.  
+ La conversione in un **valore booleano** genera un test di esistenza; Pertanto, la query XPath `Products[@Discontinued=true()]` equivale all'espressione SQL "Products. Discontinued is not null", non all'espressione SQL "Products. Discontinued = 1". Per rendere la query equivalente all'ultima espressione SQL, convertire innanzitutto il set di nodi in un tipo non **booleano** , ad esempio **Number**. Ad esempio: `Products[number(@Discontinued) = true()]`.  
   
  Poiché la maggior parte degli operatori viene definita come TRUE se gli operatori sono TRUE per tutti i nodi nel set di nodi o per uno di essi, queste operazioni restituiscono sempre FALSE se il set di nodi è vuoto. In questo modo, se A è vuoto, sia `A = B` sia `A != B` sono FALSE e `not(A=B)` e `not(A!=B)` sono TRUE.  
   
@@ -93,10 +93,10 @@ ms.locfileid: "87332640"
 |Nonebin.base64bin.hex|N/D|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
 |number, int, float, i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|Numero|CONVERT(float(53), EmployeeID)|  
-|id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|Stringa|CONVERT(nvarchar(4000), EmployeeID, 126)|  
+|id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/D (in XPath non è disponibile alcun tipo di dati equivalente al tipo di dati XDR fixed14.4).|CONVERT(money, EmployeeID)|  
-|date|Stringa|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
-|time<br /><br /> time.tz|Stringa|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
+|Data|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  Le conversioni di data e ora sono progettate per funzionare se il valore viene archiviato nel database utilizzando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati **DateTime** o una **stringa**. Si noti che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati **DateTime** non utilizza il **fuso orario** e ha una precisione inferiore rispetto al tipo di dati **Time** XML. Per includere il tipo di dati **TimeZone** o la precisione aggiuntiva, archiviare i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando un tipo **stringa** .  
   
@@ -143,7 +143,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  `N'E-' + CONVERT(nvarchar(4000), Employees.EmployeeID, 126) = N'E-1'`  
   
- Poiché **EmployeeID** è uno dei valori del tipo di dati **ID** (**IDREF**, **IDREFS**, **NMTOKEN**, **NMTOKENS**e così via) nello schema XSD, **EmployeeID** viene convertito nel tipo di dati XPath **stringa** utilizzando le regole di conversione descritte in precedenza.  
+ Poiché **EmployeeID** è uno dei valori del tipo di dati **ID** (**IDREF**, **IDREFS**, **NMTOKEN**, **NMTOKENS** e così via) nello schema XSD, **EmployeeID** viene convertito nel tipo di dati XPath **stringa** utilizzando le regole di conversione descritte in precedenza.  
   
  `CONVERT(nvarchar(4000), Employees.EmployeeID, 126)`  
   

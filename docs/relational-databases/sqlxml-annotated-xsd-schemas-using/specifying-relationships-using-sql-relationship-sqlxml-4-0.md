@@ -29,13 +29,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15274c3b46ac7b0dfb3e9f43fad0dd1174f5fbbf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6c050a6b34781fc6312e7d410aeccace29e3dc84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775758"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461762"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Definizione di relazioni tramite sql:relationship (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "85775758"
  **Parent**  
  Specifica la relazione padre (tabella). Si tratta di un attributo facoltativo. Se non è specificato, il nome della tabella padre viene ottenuto dalle informazioni presenti nella gerarchia padre-figlio del documento. Se lo schema specifica due gerarchie padre-figlio che utilizzano gli stessi **\<sql:relationship>** elementi padre ma diversi, non è necessario specificare l'attributo parent in **\<sql:relationship>** . Queste informazioni vengono ottenute dalla gerarchia nello schema.  
   
- **parent-key**  
+ **chiave padre**  
  Specifica la chiave padre dell'elemento padre. Se la chiave padre è costituita da più colonne, i valori vengono specificati con uno spazio tra l'uno e l'altro. Tra i valori specificati per la chiave multicolonna e la chiave figlio corrispondente viene applicato un mapping posizionale.  
   
  **Figlio**  
@@ -75,7 +75,7 @@ ms.locfileid: "85775758"
   
  Per produrre una nidificazione appropriata nel risultato, è consigliabile specificare **SQL: key-fields** in tutti gli schemi.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>R. Specifica dell'annotazione sql:relationship in un elemento  

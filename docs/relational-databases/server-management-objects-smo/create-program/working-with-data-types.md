@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99ac0e206244404d1f4155acdd10c0a35df6e719
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1939f6608b6175463103fce2a69a3d5936346605
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420305"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463002"
 ---
 # <a name="working-with-data-types"></a>Utilizzo dei tipi di dati
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88420305"
   
 -   Usare uno dei membri statici della <xref:Microsoft.SqlServer.Management.Smo.DataType> classe, ad esempio **int**. In questo modo verrà restituita un'istanza di un <xref:Microsoft.SqlServer.Management.Smo.DataType> oggetto.  
   
- L'oggetto <xref:Microsoft.SqlServer.Management.Smo.DataType> include diverse proprietà che definiscono il tipo di dati. La proprietà <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> specifica, ad esempio, il tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I valori costanti che rappresentano i tipi di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono elencati nell'enumerazione <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>. Tale enumerazione si riferisce a tipi di dati quali **varchar**, **nchar**, **currency**, **integer**, **float**e **datetime**.  
+ L'oggetto <xref:Microsoft.SqlServer.Management.Smo.DataType> include diverse proprietà che definiscono il tipo di dati. La proprietà <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> specifica, ad esempio, il tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I valori costanti che rappresentano i tipi di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono elencati nell'enumerazione <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>. Tale enumerazione si riferisce a tipi di dati quali **varchar**, **nchar**, **currency**, **integer**, **float** e **datetime**.  
   
  Quando viene stabilito il tipo di dati, è necessario impostare proprietà specifiche per i dati. Se, ad esempio, i dati sono di tipo **nchar** , è necessario impostare la lunghezza dei dati di stringa nella proprietà **Length** . La stessa operazione è richiesta anche nel caso dei valori numerici, per i quali è necessario specificare la precisione e la scala.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88420305"
   
  L'enumerazione <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> contiene un elenco di tutti i tipi di dati supportati in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
 Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
   

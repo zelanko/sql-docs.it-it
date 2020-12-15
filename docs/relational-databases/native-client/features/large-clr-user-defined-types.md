@@ -1,5 +1,5 @@
 ---
-description: Tipi CLR definiti dall'utente di grandi dimensioni in SQL Server Native Client
+description: Tipi di User-Defined CLR di grandi dimensioni in SQL Server Native Client
 title: Tipi CLR definiti dall'utente di grandi dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b841020b73ea7dde90eca5a0b693bb1f943fa4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 039b57d8eaaee8004dda5988cb877c4ec7ccc037
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498924"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463372"
 ---
-# <a name="large-clr-user-defined-types-in-sql-server-native-client"></a>Tipi CLR definiti dall'utente di grandi dimensioni in SQL Server Native Client
+# <a name="large-clr-user-defined-types-in-sql-server-native-client"></a>Tipi di User-Defined CLR di grandi dimensioni in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In SQL Server 2005 i tipi definiti dall'utente in CLR (Common Language Runtime) sono limitati a dimensioni di 8.000 byte. Questa restrizione è stata eliminata in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] e versioni successive. In questa versione i tipi CLR definiti dall'utente vengono considerati simili ai tipi LOB. Tipi definiti dall'utente minori o uguali a 8.000 byte, pertanto, hanno lo stesso comportamento che in SQL Server 2005, ma sono supportati dati definiti dall'utente di dimensioni maggiori, che vengono indicate come illimitate ("unlimited").  
   
- Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md) e [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Per ulteriori informazioni, vedere [tipi clr User-Defined di grandi dimensioni &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md) e i [tipi di User-Defined CLR di grandi dimensioni &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="use-cases"></a>Modalità di utilizzo comuni  
  Per ODBC, il supporto per i tipi definiti dall'utente di grandi dimensioni include la possibilità di inviare i valori di tali tipi in parti come parametri data-at-execution. Questa operazione viene eseguita usando SQLPutData.  

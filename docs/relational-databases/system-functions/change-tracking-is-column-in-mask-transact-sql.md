@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c774b419283ea0d4799ef89c8628095424f169bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e1961dec1f32006d7a4b3d91b7b8763f34ce3514
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498184"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440617"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,10 +59,10 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 |0|La colonna specificata non è presente nell'elenco *change_columns* .|  
 |1|La colonna specificata si trova nell'elenco *change_columns* .|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK non esegue alcun controllo per convalidare il valore *column_id* o che è stato ottenuto il parametro *change_columns* dalla tabella da cui è stato ottenuto il *column_id* .  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente viene determinato se è stata aggiornata la colonna `Salary` della tabella `Employees`. La `COLUMNPROPERTY` funzione restituisce l'ID della colonna `Salary` . La variabile locale `@change_columns` deve essere impostata sui risultati di una query utilizzando CHANGETABLE come origine dati.  
   
 ```sql  
@@ -73,7 +73,7 @@ SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di rilevamento delle modifiche &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [CHANGETABLE &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/changetable-transact-sql.md)   
+ [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

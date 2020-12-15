@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec57f41be3971b41d5bebf6c139b9913666e8c20
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eb990b9cb78d36bfe680562574eda0688422c7c3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753969"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462732"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "91753969"
 |**NUMERIC_PRECISION**|**tinyint**|Precisione dei dati numerici approssimati, dei dati numerici esatti, dei dati integer o dei dati in valuta. In caso contrario, viene restituito NULL.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Base di precisione dei dati numerici approssimati, dei dati numerici esatti, dei dati integer o dei dati in valuta. In caso contrario, viene restituito NULL.|  
 |**NUMERIC_SCALE**|**tinyint**|Scala dei dati numerici approssimati, dei dati numerici esatti, dei dati integer o dei dati in valuta. In caso contrario, viene restituito NULL.|  
-|**DATETIME_PRECISION**|**smallint**|Codice di sottotipo per i tipi di dati**Integer** **DateTime** e ISO. Per gli altri tipi di dati restituisce NULL.|  
+|**DATETIME_PRECISION**|**smallint**|Codice di sottotipo per i tipi di dati **Integer** **DateTime** e ISO. Per gli altri tipi di dati restituisce NULL.|  
 |**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|Restituisce il **database master**. Indica il database in cui si trova il set di caratteri se la colonna è di tipo carattere o di dati di tipo **Text** . In caso contrario, viene restituito NULL.|  
 |**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|Viene restituito sempre NULL.|  
 |**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|Restituisce il nome univoco del set di caratteri se la colonna è di tipo carattere o di dati di tipo **Text** . In caso contrario, viene restituito NULL.|  

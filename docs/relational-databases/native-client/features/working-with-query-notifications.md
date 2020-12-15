@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fcd6eb55e54880365952491224e1b9511c8c561
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6182c18b9f85b2b11a5813a11131b7a5efb3bbbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891981"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463362"
 ---
 # <a name="working-with-query-notifications"></a>Utilizzo delle notifiche delle query
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -116,7 +116,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- Se le proprietà SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT e SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS sono diverse da Null, l'intestazione TDS delle notifiche delle query contenente i tre attributi definiti sopra verrà inviata al server ogni volta che il comando viene eseguito. Se una di esse è Null, l'intestazione non viene inviata e viene restituito SQL_SUCCESS_WITH_INFO. La convalida si verifica sulla [funzione SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md), **SQLExecDirect**e **SQLExecute**, che non hanno esito positivo se gli attributi non sono validi. Analogamente, quando questi attributi di notifica delle query vengono impostati per le versioni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'esecuzione non riesce e viene restituito SQL_SUCCESS_WITH_INFO.  
+ Se le proprietà SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT e SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS sono diverse da Null, l'intestazione TDS delle notifiche delle query contenente i tre attributi definiti sopra verrà inviata al server ogni volta che il comando viene eseguito. Se una di esse è Null, l'intestazione non viene inviata e viene restituito SQL_SUCCESS_WITH_INFO. La convalida si verifica sulla [funzione SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md), **SQLExecDirect** e **SQLExecute**, che non hanno esito positivo se gli attributi non sono validi. Analogamente, quando questi attributi di notifica delle query vengono impostati per le versioni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'esecuzione non riesce e viene restituito SQL_SUCCESS_WITH_INFO.  
   
 > [!NOTE]  
 >  La preparazione delle istruzioni non causerà mai l'avvio della sottoscrizione. Tale operazione verrà effettuata solo mediante l'esecuzione delle istruzioni.  

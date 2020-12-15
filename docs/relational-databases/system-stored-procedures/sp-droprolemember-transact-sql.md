@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ef98244eec97fda5d0d11220348dbd4f14dcf61
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 013cd061a96bd4f199591fa65f15718d27056d89
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006515"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440565"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
@@ -55,10 +55,10 @@ sp_droprolemember 'role' ,
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
-## <a name="arguments"></a>Arguments  
-`[ @rolename = ] 'role'` Nome del ruolo da cui viene rimosso il membro. *Role* è di **tipo sysname**e non prevede alcun valore predefinito. il *ruolo* deve esistere nel database corrente.  
+## <a name="arguments"></a>Argomenti  
+`[ @rolename = ] 'role'` Nome del ruolo da cui viene rimosso il membro. *Role* è di **tipo sysname** e non prevede alcun valore predefinito. il *ruolo* deve esistere nel database corrente.  
   
-`[ @membername = ] 'security_account'` Nome dell'account di sicurezza da rimuovere dal ruolo. *security_account* è di **tipo sysname**e non prevede alcun valore predefinito. *security_account* può essere un utente del database, un altro ruolo del database, un account di accesso di Windows o un gruppo di Windows. *security_account* deve esistere nel database corrente.  
+`[ @membername = ] 'security_account'` Nome dell'account di sicurezza da rimuovere dal ruolo. *security_account* è di **tipo sysname** e non prevede alcun valore predefinito. *security_account* può essere un utente del database, un altro ruolo del database, un account di accesso di Windows o un gruppo di Windows. *security_account* deve esistere nel database corrente.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
@@ -73,7 +73,7 @@ sp_droprolemember 'role' ,
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il ruolo.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente l'utente `JonB` viene rimosso dal ruolo `Sales`.  
   
 ```sql

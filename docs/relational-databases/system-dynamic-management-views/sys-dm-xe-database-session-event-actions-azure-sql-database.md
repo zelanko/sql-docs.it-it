@@ -10,14 +10,14 @@ ms.topic: language-reference
 ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 750bfeae27269acf4b8d3fb1e64b7f8944f8ebbe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0a43b7f39199a05b5ef864de0819459b05363931
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546421"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440694"
 ---
 # <a name="sysdm_xe_database_session_event_actions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "89546421"
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|To|Relazione|  
+|Da|A|Relazione|  
 |----------|--------|------------------|  
-|sys. dm_xe_database_session_event_actions. event_session_address|sys. dm_xe_database_sessions. Address|Molti-a-uno|  
-|sys. dm_xe_database_session_event_actions. action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys. dm_xe_database_session_events. event_package_guid|Molti-a-uno|  
-|sys. dm_xe_database_session_event_actions. event_name<br /><br /> sys. dm_xe_database_session_event_actions. event_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|Molti-a-uno|  
+|sys.dm_xe_database_session_event_actions sys.dm_xe_database_session_event_actions.event_session_address|sys.dm_xe_database_sessions. Address|Molti-a-uno|  
+|sys.dm_xe_database_session_event_actions sys.dm_xe_database_session_event_actions.action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_database_session_events sys.dm_xe_database_session_events.event_package_guid|Molti-a-uno|  
+|sys.dm_xe_database_session_event_actions sys.dm_xe_database_session_event_actions.event_name<br /><br /> sys.dm_xe_database_session_event_actions sys.dm_xe_database_session_event_actions.event_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|Molti-a-uno|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eventi estesi](../../relational-databases/extended-events/extended-events.md)  

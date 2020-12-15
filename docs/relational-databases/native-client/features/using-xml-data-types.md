@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b095eace82538b8d10efd0c628b467560ef36edf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 76b24491df72773fb45b0513720151ed9a9c6585
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428213"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461962"
 ---
 # <a name="using-xml-data-types-in-sql-server-native-clients"></a>Utilizzo di tipi di dati XML in SQL Server client nativi
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "88428213"
  Se i dati XML di input vengono associati come DBTYPE_WSTR, l'applicazione deve verificare che i dati siano già codificati come Unicode per evitare qualsiasi rischio di danni dovuti a conversioni di dati indesiderate.  
   
 ### <a name="data-bindings-and-coercions"></a>Associazione dati e coercizioni  
- Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si usano i tipi di dati elencati con il tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]xml**di**.  
+ Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si usano i tipi di dati elencati con il tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]xml **di**.  
   
 |Tipo di dati|Al server<br /><br /> **XML**|Al server<br /><br /> **Non XML**|Dal server<br /><br /> **XML**|Dal server<br /><br /> **Non XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
@@ -191,7 +191,7 @@ ms.locfileid: "88428213"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client aggiunge nuovi valori o modifiche a molte delle interfacce di OLE DB principali.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Interfaccia ISSCommandWithParameters  
- Per supportare il tipo di dati **XML** tramite OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa una serie di modifiche, inclusa l'aggiunta dell'interfaccia [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) . Questa nuova interfaccia eredita dall'interfaccia OLE DB principale **ICommandWithParameters**. Oltre ai tre metodi ereditati da **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**e **separameterinfo**; **ISSCommandWithParameters** fornisce i metodi [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) e [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) utilizzati per gestire i tipi di dati specifici del server.  
+ Per supportare il tipo di dati **XML** tramite OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa una serie di modifiche, inclusa l'aggiunta dell'interfaccia [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) . Questa nuova interfaccia eredita dall'interfaccia OLE DB principale **ICommandWithParameters**. Oltre ai tre metodi ereditati da **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames** e **separameterinfo**; **ISSCommandWithParameters** fornisce i metodi [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) e [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) utilizzati per gestire i tipi di dati specifici del server.  
   
 > [!NOTE]  
 >  L'interfaccia **ISSCommandWithParameters** usa anche la nuova struttura SSPARAMPROPS.  

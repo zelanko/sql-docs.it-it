@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50e2a6efad0cf14739fe2ef28135ea797ce6140e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 952c7e905e40e869d459f1ada3225d5524b3d799
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750823"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461822"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Creazione di elementi costanti tramite sql:is-constant (SQLXML 4.0)
 
@@ -40,7 +40,7 @@ ms.locfileid: "85750823"
   
  È possibile aggiungere l'annotazione **SQL: is-constant** a un **\<complexType>** elemento.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>R. Definizione di sql:is-constant per aggiungere un elemento contenitore  

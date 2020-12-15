@@ -1,6 +1,6 @@
 ---
 description: sys.sp_add_trusted_assembly (Transact-SQL)
-title: sys. sp_add_trusted_assembly (Transact-SQL) | Microsoft Docs
+title: sys.sp_add_trusted_assembly (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e59cd1836a838294904970f00a677a0fdfe6c03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dd109cbb67ced59488d6436880be495501e92034
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480883"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462652"
 ---
 # <a name="syssp_add_trusted_assembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_add_trusted_assembly
 
 ## <a name="remarks"></a>Osservazioni  
 
-Questa procedura consente di aggiungere un assembly a  [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
+Questa procedura consente di aggiungere un assembly a  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
 ## <a name="arguments"></a>Argomenti
 
@@ -57,7 +57,7 @@ Descrizione facoltativa definita dall'utente dell'assembly. Microsoft consiglia 
 
 È richiesta l'appartenenza al `sysadmin` ruolo predefinito del server o all' `CONTROL SERVER` autorizzazione.
 
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
 
 Nell'esempio seguente viene aggiunto un assembly denominato `pointudt` all'elenco di assembly attendibili per il server. Questi valori sono disponibili da  [sys. Assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
 
@@ -67,10 +67,10 @@ N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarch
 ```  
 
 ## <a name="see-also"></a>Vedere anche  
-  [sys. sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
-  [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
+  [sys.sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
+  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
-  [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)  
+  [CLR Strict Security](../../database-engine/configure-windows/clr-strict-security.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

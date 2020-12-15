@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cec1e6076820e8d41feb077db417b168e80b05c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b1376f6ab56ae100d70882ee5c2b86301c8d4f42
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448463"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462212"
 ---
 # <a name="use-large-clr-udts--in-sql-server-native-client-ole-db"></a>USA tipi definiti dall'utente CLR di grandi dimensioni in SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "88448463"
   In questo esempio viene illustrato come recuperare righe con tipi di grandi dimensioni definiti dall'utente da un set di risultati. Per altre informazioni, vedere [Tipi CLR definiti dall'utente di grandi dimensioni &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva.  
   
 ## <a name="example"></a>Esempio  
- L'esempio include due progetti. Un progetto consente di creare un assembly (DLL) dal codice sorgente C# che contiene il tipo CLR. Nel database verrà aggiunta una tabella Una colonna nella tabella sarà di un tipo definito nell'assembly. Per impostazione predefinita, in questo esempio verrà utilizzato il database master. Il secondo progetto è un'applicazione C nativa che consente di leggere i dati dalla tabella.  
+ L'esempio include due progetti. Un progetto consente di creare un assembly (DLL) dal codice sorgente C# che contiene il tipo CLR. Nel database verrà aggiunta una tabella Una colonna nella tabella sarà di un tipo definito nell'assembly. Per impostazione predefinita, in questo esempio verrà usato il database master. Il secondo progetto è un'applicazione C nativa che consente di leggere i dati dalla tabella.  
   
  Compilare il primo listato di codice (C#) in una DLL.  Copiare quindi la DLL nella directory radice dell'unità C.  
   
