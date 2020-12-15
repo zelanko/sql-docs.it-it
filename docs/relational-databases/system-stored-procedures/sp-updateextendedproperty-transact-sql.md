@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52c91c09c440402df383253996e660d7abdb317c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 13d9b45efd0fc75e1e17ea0ec5b21537fae71971
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551162"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427214"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,10 +54,10 @@ sp_updateextendedproperty
   
 ## <a name="arguments"></a>Argomenti  
  [ @name =] {'*property_name*'}  
- Nome della proprietà da aggiornare. *property_name* è di **tipo sysname**e non può essere null.  
+ Nome della proprietà da aggiornare. *property_name* è di **tipo sysname** e non può essere null.  
   
  [ @value =] {'*valore*'}  
- Valore associato alla proprietà. il valore è **sql_variant**e il *valore* predefinito è null. La dimensione del *valore* non può essere superiore a 7.500 byte.  
+ Valore associato alla proprietà. il valore è **sql_variant** e il *valore* predefinito è null. La dimensione del *valore* non può essere superiore a 7.500 byte.  
   
  [ @level0type =] {'*level0_object_type*'}  
  Utente o tipo definito dall'utente. *level0_object_type* è di tipo **varchar (128)** e il valore predefinito è null. Gli input validi sono ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEgroup, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, PLAN GUIDE, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE e NULL.  
@@ -78,15 +78,15 @@ sp_updateextendedproperty
  Tipo di oggetto di livello 2. *level2_object_type* è di tipo **varchar (128)** e il valore predefinito è null. I possibili valori sono COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
   
  [ @level2name =] {'*level2_object_name*'}  
- Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* è di **tipo sysname**e il valore predefinito è null.  
+ Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* è di **tipo sysname** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Ai fini della definizione delle proprietà estese, gli oggetti inclusi in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono classificati in base a tre livelli, ovvero 0, 1 e 2. Il livello 0 è il livello più alto e viene definito come oggetti inclusi nell'ambito del database. Gli oggetti di livello 1 sono inclusi nell'ambito di uno schema o utente, mentre gli oggetti di livello 2 sono contenuti dagli oggetti di livello 1. È possibile definire le proprietà estese per gli oggetti di qualsiasi livello. È necessario qualificare i riferimenti a un oggetto in un livello mediante i nomi degli oggetti proprietari di livello superiore o che li contengono.  
   
- Dato un *property_name* e un *valore*validi, se tutti i tipi e i nomi di oggetto sono null, la proprietà aggiornata appartiene al database corrente.  
+ Dato un *property_name* e un *valore* validi, se tutti i tipi e i nomi di oggetto sono null, la proprietà aggiornata appartiene al database corrente.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  I membri dei ruoli predefiniti del database db_owner e db_ddladmin possono aggiornare le proprietà estese di qualsiasi oggetto, anche se il ruolo db_ddladmin non può aggiungere proprietà al database stesso oppure a utenti o ruoli.  
@@ -138,7 +138,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di motore di database &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys. fn_listextendedproperty &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;&#41;Transact-SQL ](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  

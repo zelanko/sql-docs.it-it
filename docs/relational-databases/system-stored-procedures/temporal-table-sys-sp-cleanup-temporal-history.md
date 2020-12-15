@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1eb0487c46b0ef3d16c7a8286292fce5cef11538
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: e4afeb9f30040cf576a35b1b822bf5292752c148
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809147"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97427170"
 ---
 # <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact-SQL)
 
@@ -45,7 +45,7 @@ Nome dello schema a cui appartiene la tabella temporale corrente
 
 Parametro di output che restituisce il numero di righe eliminate. Se la tabella di cronologia include un indice columnstore cluster, questo parametro restituirà sempre 0.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Questa stored procedure può essere usata solo con le tabelle temporali in cui è stato specificato un periodo di conservazione finito.
 Usare questa stored procedure solo se è necessario pulire immediatamente tutte le righe obsolete dalla tabella di cronologia. È necessario tenere presente che può avere un impatto significativo sul log del database e sul sottosistema di I/O perché elimina tutte le righe idonee all'interno della stessa transazione.

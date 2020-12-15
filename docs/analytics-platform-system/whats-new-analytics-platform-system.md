@@ -9,19 +9,19 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 25bc830bcf2582d7630829ccb3c369fdd434c094
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 693e724256d8792581770e7fde4f4e6c991701bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011811"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97420168"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novità del sistema di piattaforma di analisi, un MPP con scalabilità orizzontale data warehouse
 Vedere Novità degli aggiornamenti più recenti degli appliance per piattaforma di strumenti analitici Microsoft (APS). APS è un'appliance locale con scalabilità orizzontale che ospita MPP SQL Server data warehouse parallele. 
 
-::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016-au7 "
 <a name="h2-aps-cu7.7"></a>
-## <a name="aps-cu77"></a>APS CU 7.7
+## <a name="aps-cu77"></a>APS CU7.7
 Data di rilascio-2020 novembre
 
 ### <a name="scvmm2016"></a>SCVMM2016
@@ -179,7 +179,7 @@ Con il software APS AU7, viene fornito un aggiornamento del BIOS Intel che corre
 Microsoft consiglia a tutti i clienti di installare il BIOS aggiornato. Microsoft ha misurato l'effetto dello shadowing degli indirizzi virtuali (KVAS) kernel, della tabella delle pagine kernel (KPTI) e del IBP (Indirect Branch Prediction Mitigation) su vari carichi di lavoro SQL in diversi ambienti. Le misurazioni hanno rilevato un calo significativo per alcuni carichi di lavoro. In base ai risultati, si consiglia di testare l'effetto sulle prestazioni dell'abilitazione dell'aggiornamento del BIOS prima di distribuirli in un ambiente di produzione. Vedere le istruzioni SQL Server [qui](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
 
 ::: moniker-end
-::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
+::: moniker range=">= aps-pdw-2016 "
 <a name="h2-aps-au6"></a>
 ## <a name="aps-2016"></a>APS 2016
 Questa sezione descrive le nuove funzionalità per APS 2016-AU6.
