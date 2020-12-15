@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 67c111b15728f92e3a6f0ac8dac830fe32f2f8da
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: d60c081eecf88868db4541bc79960bf1bbd8723c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892401"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412912"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Database di SQL Azure)
 
@@ -129,7 +129,7 @@ start_time                    end_time
 - Se si verifica un errore del computer nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Data Center, è possibile che nella tabella eventi manchi una piccola quantità di dati.  
 - Se un indirizzo IP è stato bloccato tramite DoSGuard, gli eventi di tentativi di connessione dall'indirizzo IP in questione non possono essere raccolti, né verranno visualizzati in questa vista.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
   
 ### <a name="simple-examples"></a>Esempi semplici
 

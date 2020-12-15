@@ -29,13 +29,13 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 534de76c28dea79ba52b28983fe56daf666760f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 988a15524f4d0fdbdd3174ba1017dfd85562e3a6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750765"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415950"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>Mapping XSD personalizzati a tabelle/colonne (SQLXML)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "85750765"
 ## <a name="sql-field"></a>sql-field  
  L'annotazione **SQL-Field** esegue il mapping di un elemento o di un attributo a una colonna del database. L'annotazione **SQL: Field** viene aggiunta per eseguire il mapping di un nodo XML nello schema a una colonna del database. Non è possibile specificare **SQL: Field** su un elemento di contenuto vuoto.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>R. Specifica delle annotazioni sql:relation e sql:field  

@@ -25,13 +25,13 @@ ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81b6570f0301d501f1f8899da70e60f04f1c5c44
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 44f7bf464742b1863ebc62a5def3f484932b52c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750751"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97415733"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Nascondere gli elementi e gli attributi utilizzando sql:hide
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "85750751"
   
  L'annotazione **SQL: Hide** accetta un valore booleano (0 = false, 1 = true). I valori possibili sono 0, 1, true e false.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>R. Specifica di sql:hide in un attributo  
- Lo schema XSD in questo esempio è costituito da un **\<Person.Contact>** elemento con gli attributi **ContactID**, **FirstName**e **LastName** .  
+ Lo schema XSD in questo esempio è costituito da un **\<Person.Contact>** elemento con gli attributi **ContactID**, **FirstName** e **LastName** .  
   
  L' **\<Person.Contact>** elemento è di tipo complesso e, pertanto, esegue il mapping alla tabella con lo stesso nome (mapping predefinito). Tutti gli attributi dell' **\<Person.Contact>** elemento sono di tipo semplice ed eseguono il mapping alle colonne con gli stessi nomi di PERSON. contactTable nel database AdventureWorks. Nello schema l'annotazione **SQL: Hide** viene specificata nell'attributo **ContactID** . Quando si specifica una query XPath su questo schema, **ContactID** non viene restituito nel documento XML.  
   

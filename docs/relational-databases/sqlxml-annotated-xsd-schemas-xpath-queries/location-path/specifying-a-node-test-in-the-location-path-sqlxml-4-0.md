@@ -16,17 +16,17 @@ ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0b7934b73589f71e5152bff33b2080c6eeb353e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b8fdee8bdc7f3fbc3281ecab7682efdc8378bbdf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85649751"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97414822"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Specifica di un test di nodo nel percorso (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse (**figlio**, **padre**, **attributo**o **auto**) ha un tipo di nodo principale. Per l'asse degli **attributi** , il tipo di nodo principale è **\<attribute>** . Per gli assi **padre**, **figlio**e **self** , il tipo di nodo principale è **\<element>** .  
+  Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse (**figlio**, **padre**, **attributo** o **auto**) ha un tipo di nodo principale. Per l'asse degli **attributi** , il tipo di nodo principale è **\<attribute>** . Per gli assi **padre**, **figlio** e **self** , il tipo di nodo principale è **\<element>** .  
   
 > [!NOTE]  
 >  Il test di nodo con carattere jolly *, ad esempio `child::*`, non è supportato.  
