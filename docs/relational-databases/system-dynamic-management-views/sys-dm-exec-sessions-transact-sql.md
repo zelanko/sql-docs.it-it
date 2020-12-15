@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_sessions (Transact-SQL)
-title: sys. dm_exec_sessions (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d160be9c71c75e58a892f4b43494046b293caeb6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7b50b83a71df6485afae83fb371abb04209898ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539444"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482792"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restituisce una riga per ogni sessione autenticata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_exec_sessions è una vista con ambito server che contiene informazioni su tutte le attività interne e le connessioni utente attive. Tali informazioni includono la versione del client, il nome del programma client, l'ora di accesso del client, l'utente che esegue l'accesso, l'impostazione di sessione corrente e altro. Utilizzare sys.dm_exec_sessions prima di tutto per visualizzare il carico di sistema corrente e individuare una sessione di interesse, quindi per raccogliere ulteriori informazioni su tale sessione utilizzando altre viste o funzioni a gestione dinamica.  
   
- Le viste a gestione dinamica sys. dm_exec_connections, sys. dm_exec_sessions e sys. dm_exec_requests vengono mappate alla tabella di sistema [sys.sysprocessi](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
+ Le viste a gestione dinamica sys.dm_exec_connections, sys.dm_exec_sessions e sys.dm_exec_requests vengono mappate alla tabella di sistema [sys.sysprocessi](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) .  
   
-> **Nota:** Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys. dm_pdw_nodes_exec_sessions**.  
+> **Nota:** Per chiamare questo [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oggetto da o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , usare il nome **sys.dm_pdw_nodes_exec_sessions**.  
   
 |Nome colonna|Tipo di dati|Descrizione e informazioni specifiche della versione|  
 |-----------------|---------------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "89539444"
 |login_name|**nvarchar(128)**|Nome dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui la sessione è attualmente in esecuzione. Per il nome dell'account di accesso originale che ha creato la sessione, vedere original_login_name. Può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nome di account di accesso autenticato o un nome utente di dominio autenticato di Windows. Non ammette i valori Null.|  
 |nt_domain|**nvarchar(128)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Dominio di Windows per il client se la sessione utilizza l'autenticazione di Windows o una connessione trusted. Il valore è NULL per le sessioni interne e per gli utenti non di dominio. Ammette i valori Null.|  
 |nt_user_name|**nvarchar(128)**|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.<br /><br /> Nome utente di Windows per il client se la sessione utilizza l'autenticazione di Windows o una connessione trusted. Il valore è NULL per le sessioni interne e per gli utenti non di dominio. Ammette i valori Null.|  
-|status|**nvarchar(30)**|Stato della sessione. Valori possibili:<br /><br /> **Running**: una o più richieste sono in esecuzione<br /><br /> **Sleeping**: nessuna richiesta è in esecuzione<br /><br /> **Dormant** La sessione inattiva è stata reimpostata a causa del pool di connessioni ed è ora in stato di preaccesso.<br /><br /> **Preconnect**: la sessione si trova nel classificatore di Resource Governor.<br /><br /> Non ammette i valori Null.|  
+|status|**nvarchar(30)**|Stato della sessione. Valori possibili:<br /><br /> **Running**: una o più richieste sono in esecuzione<br /><br /> **Sleeping**: nessuna richiesta è in esecuzione<br /><br />  La sessione inattiva è stata reimpostata a causa del pool di connessioni ed è ora in stato di preaccesso.<br /><br /> **Preconnect**: la sessione si trova nel classificatore di Resource Governor.<br /><br /> Non ammette i valori Null.|  
 |context_info|**varbinary(128)**|Valore di CONTEXT_INFO per la sessione. Le informazioni di contesto vengono impostate dall'utente utilizzando l'istruzione [set CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) . Ammette i valori Null.|  
 |cpu_time|**int**|Tempo della CPU, espresso in millisecondi, utilizzato dalla sessione. Non ammette i valori Null.|  
 |memory_usage|**int**|Numero di pagine da 8 KB utilizzate dalla sessione. Non ammette i valori Null.|  
@@ -94,11 +94,11 @@ ms.locfileid: "89539444"
   
 ## <a name="permissions"></a>Autorizzazioni  
 Tutti possono visualizzare le proprie informazioni sulla sessione.  
-** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** È richiesta l' `VIEW SERVER STATE` autorizzazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] per per visualizzare tutte le sessioni nel server.  
-** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Richiede `VIEW DATABASE STATE` per visualizzare tutte le connessioni al database corrente. `VIEW DATABASE STATE` non è possibile concedere nel `master` database. 
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** È richiesta l' `VIEW SERVER STATE` autorizzazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] per per visualizzare tutte le sessioni nel server.  
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Richiede `VIEW DATABASE STATE` per visualizzare tutte le connessioni al database corrente. `VIEW DATABASE STATE` non è possibile concedere nel `master` database. 
   
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Quando è abilitata l'opzione di configurazione del server **common criteria compliance enabled** , le statistiche di accesso vengono visualizzate nelle colonne seguenti.  
   
 -   last_successful_logon  
@@ -115,12 +115,12 @@ Tutti possono visualizzare le proprie informazioni sulla sessione.
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|Da|To|In/Si applica a|Relazione|  
+|Da|A|In/Si applica a|Relazione|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|Uno-a-zero o uno-a-molti|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|Uno-a-zero o uno-a-molti|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|Uno-a-zero o uno-a-molti|  
-|sys.dm_exec_sessions|[sys. dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|Uno-a-zero o uno-a-molti|  
+|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|Uno-a-zero o uno-a-molti|  
 |sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|Uno-a-uno|  
   
 ## <a name="examples"></a>Esempi  

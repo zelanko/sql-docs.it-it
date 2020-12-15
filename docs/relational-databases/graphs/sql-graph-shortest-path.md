@@ -18,13 +18,13 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-ver15||=azuresqldb-mi-current
+ms.openlocfilehash: c916466f6a105a2b10508e23f1739bba0d192970
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475843"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480182"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -50,7 +50,7 @@ PER PATH deve essere usato con qualsiasi nome di tabella Node o Edge nella claus
 Questo modello include i nodi e i bordi che devono essere attraversati ripetutamente fino a raggiungere il nodo desiderato o fino a quando non viene soddisfatto il numero massimo di iterazioni specificato nel criterio. Ogni volta che viene eseguita la query, il risultato dell'esecuzione di questo modello sarà una raccolta ordinata dei nodi e dei bordi attraversati lungo il percorso dal nodo iniziale al nodo finale. Si tratta di un modello di sintassi di tipo espressione regolare e sono supportati i due quantificatori di criteri seguenti:
 
 * **' +'**: Ripetere il modello 1 o più volte. Terminare non appena viene trovato un percorso più breve.
-* **{1, n}**: ripetere il modello da 1 a' n'volte. Termina non appena viene rilevata una più breve.
+* **{1,n}** : Ripetere il criterio da una a "n" volte. Termina non appena viene rilevata una più breve.
 
 ## <a name="last_node"></a>LAST_NODE
 La funzione LAST_NODE () consente il concatenamento di due modelli di attraversamento di lunghezza arbitraria. Può essere usato in scenari in cui:    
@@ -100,7 +100,7 @@ Questa funzione restituisce il numero di valori non null dell'attributo node/Edg
 {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 ```
 
-### <a name="avg"></a>AVG
+### <a name="avg"></a>MEDIA
 Restituisce la media dei valori dell'attributo node/Edge forniti o dell'espressione che è stata visualizzata nel percorso attraversato.
 
 ### <a name="min"></a>MIN
@@ -109,14 +109,14 @@ Restituisce il valore minimo dall'espressione o dai valori di attributo node/Edg
 ### <a name="max"></a>MAX
 Restituisce il valore massimo dai valori o dall'espressione dell'attributo node/Edge fornito visualizzato nel percorso attraversato.
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 shortest_path funzione può essere usata solo all'interno di MATCH.     
 LAST_NODE è supportato solo all'interno shortest_path.     
 La ricerca del percorso più breve ponderato, di tutti i percorsi o di tutti i percorsi più brevi non è supportata.         
 In alcuni casi, è possibile che vengano generati piani danneggiati per le query con un numero maggiore di hop, il che comporta tempi di esecuzione delle query più elevati. L'uso di un hint di hash join può essere utile.    
 
 
-## <a name="examples"></a>Esempi 
+## <a name="examples"></a>Esempio 
 Per le query di esempio illustrate di seguito, verrà usato il nodo e le tabelle Edge create in [SQL Graph Sample](./sql-graph-sample.md)
 
 ### <a name="a--find-shortest-path-between-2-people"></a>R.  Trova il percorso più breve tra due persone
@@ -213,6 +213,6 @@ WHERE Q.levels = 2
 ## <a name="see-also"></a>Vedere anche  
  [MATCH (grafo SQL)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [Insert (grafo SQL)](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT (grafo SQL)](../../t-sql/statements/insert-sql-graph.md)  
  [Graph Processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Elaborazione di grafi con SQL Server 2017)     
  

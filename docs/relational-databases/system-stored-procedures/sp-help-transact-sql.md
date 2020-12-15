@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21116db0cc5faa63a54ffda5740f1c93df27c676
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: fe0b4f610b0656a0b82ad80adebde1480f14c6f3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543349"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478912"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Restituisce informazioni su un oggetto di database (qualsiasi oggetto elencato nella visualizzazione di compatibilità ** degli oggettisys.sys** ), un tipo di dati definito dall'utente o un tipo di dati.  
+  Restituisce informazioni su un oggetto di database (qualsiasi oggetto elencato nella visualizzazione di compatibilità **degli oggettisys.sys** ), un tipo di dati definito dall'utente o un tipo di dati.  
   
  
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -57,7 +57,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Nome**|**nvarchar (** 128 **)**|Nome dell'oggetto|  
     |**Proprietario**|**nvarchar (** 128 **)**|Proprietario dell'oggetto. Si tratta dell'entità di database proprietaria dell'oggetto. Corrispondente per impostazione predefinita al proprietario dello schema contenente l'oggetto.|  
-    |**Object_type**|**nvarchar (** 31 **)**|Tipo oggetto|  
+    |**Object_type**|**nvarchar (** 31 **)**|Tipo di oggetto|  
   
 2.  Se *Name* è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati o un tipo di dati definito dall'utente, **sp_help** restituisce il set di risultati.  
   
@@ -65,9 +65,9 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar (** 128 **)**|Nome del tipo di dati.|  
     |**Storage_type**|**nvarchar (** 128 **)**|Nome del tipo di archiviazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-    |**Lunghezza**|**smallint**|Lunghezza fisica del tipo di dati in byte.|  
+    |**Length**|**smallint**|Lunghezza fisica del tipo di dati in byte.|  
     |**Prec**|**int**|Precisione, ovvero il numero totale di cifre.|  
-    |**Ridimensionare**|**int**|Numero di cifre a destra del separatore decimale.|  
+    |**Ridimensiona**|**int**|Numero di cifre a destra del separatore decimale.|  
     |**Ammette i valori Null**|**varchar (** 35 **)**|Indica se i valori NULL sono supportati. I possibili valori sono Yes o No.|  
     |**Default_name**|**nvarchar (** 128 **)**|Nome del valore predefinito associato al tipo di dati specificato.<br /><br /> NULL = Non è associata alcuna regola predefinita.|  
     |**Rule_name**|**nvarchar (** 128 **)**|Nome di una regola associata al tipo di dati specificato.<br /><br /> NULL = Non è associata alcuna regola predefinita.|  
@@ -93,9 +93,9 @@ sp_help [ [ @objname = ] 'name' ]
         |**Column_name**|**nvarchar (** 128 **)**|Nome colonna.|  
         |**Tipo**|**nvarchar (** 128 **)**|Tipo di dati della colonna.|  
         |**Calcolata**|**varchar (** 35 **)**|Indica se i valori della colonna sono calcolati (Yes o No).|  
-        |**Lunghezza**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: se il tipo di dati della colonna è un tipo di valore di grandi dimensioni (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** o **XML**), il valore verrà visualizzato come-1.|  
+        |**Length**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: se il tipo di dati della colonna è un tipo di valore di grandi dimensioni (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** o **XML**), il valore verrà visualizzato come-1.|  
         |**Prec**|**char (** 5 **)**|Precisione della colonna.|  
-        |**Ridimensionare**|**char (** 5 **)**|Scala della colonna.|  
+        |**Ridimensiona**|**char (** 5 **)**|Scala della colonna.|  
         |**Ammette i valori Null**|**varchar (** 35 **)**|Indica se nella colonna sono consentiti i valori Null. I possibili valori sono Yes o No.|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|Specifica se gli spazi vuoti finali devono essere eliminati o meno. Restituisce Yes o No.|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|Disponibile solo per compatibilità con le versioni precedenti.|  
@@ -106,7 +106,7 @@ sp_help [ [ @objname = ] 'name' ]
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
         |**Identità**|**nvarchar (** 128 **)**|Nome della colonna il cui tipo di dati viene dichiarato come Identity.|  
-        |**Seed**|**numeric**|Valore iniziale per la colonna Identity.|  
+        |**Inizializzazione**|**numeric**|Valore iniziale per la colonna Identity.|  
         |**Incremento valore Identity**|**numeric**|Incremento da utilizzare per i valori della colonna.|  
         |**Non applicare in processi di replica**|**int**|La proprietà IDENTITY non viene applicata quando un account di accesso per la replica, ad esempio **sqlrepl**, inserisce i dati nella tabella:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -154,12 +154,12 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|Nome del parametro della stored procedure.|  
         |**Tipo**|**nvarchar (** 128 **)**|Tipo di dati del parametro della stored procedure.|  
-        |**Lunghezza**|**smallint**|Capacità massima di archiviazione fisica in byte.|  
+        |**Length**|**smallint**|Capacità massima di archiviazione fisica in byte.|  
         |**Prec**|**int**|Precisione, ovvero il numero totale di cifre.|  
-        |**Ridimensionare**|**int**|Numero di cifre a destra del separatore decimale.|  
+        |**Ridimensiona**|**int**|Numero di cifre a destra del separatore decimale.|  
         |**Param_order**|**smallint**|Ordine del parametro.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La routine **sp_help** Cerca un oggetto solo nel database corrente.  
   
  Quando il *nome* non è specificato, **sp_help** elenca i nomi di oggetto, i proprietari e i tipi di oggetto per tutti gli oggetti nel database corrente. **sp_helptrigger** fornisce informazioni sui trigger.  

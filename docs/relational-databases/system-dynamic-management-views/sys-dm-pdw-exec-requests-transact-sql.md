@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8816e2ca5872da55193fab016a459a461359c742
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: a84facf470cbafa9480c1beb48b19be7b9783f51
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328581"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482569"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -49,24 +49,24 @@ ms.locfileid: "93328581"
 |client_correlation_id|**nvarchar(255)**|Nome facoltativo definito dall'utente per una sessione client.  Per impostare una sessione, chiamare sp_set_session_context ' client_correlation_id ',' <CorrelationIDName> '.  Eseguire `SELECT SESSION_CONTEXT(N'client_correlation_id')` per recuperare il valore.|
 ||||
 
-## <a name="remarks"></a>Osservazioni 
+## <a name="remarks"></a>Commenti 
  Per informazioni sul numero massimo di righe mantenute da questa visualizzazione, vedere la sezione metadati nell'argomento [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
 Il valore integer negativo nella colonna result_cache_hit è un valore bitmap di tutti i motivi applicati perché il set di risultati di una query non può essere memorizzato nella cache.  Questa colonna può essere la [| (OR bit per bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) prodotto di uno o più dei valori seguenti:  
   
-|valore            |Descrizione  |  
+|Valore            |Descrizione  |  
 |-----------------|-----------------|  
 |**1**|Riscontro nella cache del set di risultati|  
-|**0x00** ( **0** )|Mancata memorizzazione nella cache del set di risultati|  
-|-**0x01** ( **-1** )|La memorizzazione nella cache del set di risultati è disabilitata nel database.|  
-|-**0x02** ( **-2** )|La memorizzazione nella cache del set di risultati è disabilitata nella sessione. | 
-|-**0x04** ( **-4** )|La memorizzazione nella cache del set di risultati è disabilitata perché non sono presenti origini dati per la query.|  
-|-**0x08** ( **-8** )|Il caching del set di risultati è disabilitato a causa di predicati di sicurezza a livello di riga.|  
-|-**0x10** ( **-16** )|La memorizzazione nella cache del set di risultati è disabilitata a causa dell'utilizzo della tabella di sistema, della tabella temporanea o della tabella esterna della query.|  
-|-**0x20** ( **-32** )|La memorizzazione nella cache del set di risultati è disabilitata perché la query contiene costanti di runtime, funzioni definite dall'utente o funzioni non deterministiche.|  
-|-**0x40** ( **-64** )|La memorizzazione nella cache del set di risultati è disabilitata perché le dimensioni stimate del set di risultati sono >10 GB|  
-|-**0x80** ( **-128** ) |La memorizzazione nella cache del set di risultati è disabilitata perché il set di risultati contiene righe di grandi dimensioni (>64KB).|  
-|-**0x100** ( **-256** ) |La memorizzazione nella cache del set di risultati è disabilitata a causa dell'utilizzo della maschera dati dinamica granulare.|  
+|**0x00** (**0**)|Mancata memorizzazione nella cache del set di risultati|  
+|-**0x01** (**-1**)|La memorizzazione nella cache del set di risultati è disabilitata nel database.|  
+|-**0x02** (**-2**)|La memorizzazione nella cache del set di risultati è disabilitata nella sessione. | 
+|-**0x04** (**-4**)|La memorizzazione nella cache del set di risultati è disabilitata perché non sono presenti origini dati per la query.|  
+|-**0x08** (**-8**)|Il caching del set di risultati è disabilitato a causa di predicati di sicurezza a livello di riga.|  
+|-**0x10** (**-16**)|La memorizzazione nella cache del set di risultati è disabilitata a causa dell'utilizzo della tabella di sistema, della tabella temporanea o della tabella esterna della query.|  
+|-**0x20** (**-32**)|La memorizzazione nella cache del set di risultati è disabilitata perché la query contiene costanti di runtime, funzioni definite dall'utente o funzioni non deterministiche.|  
+|-**0x40**(**-64**)|La memorizzazione nella cache del set di risultati è disabilitata perché le dimensioni stimate del set di risultati sono >10 GB|  
+|-**0x80**(**-128**) |La memorizzazione nella cache del set di risultati è disabilitata perché il set di risultati contiene righe di grandi dimensioni (>64KB).|  
+|-**0x100**(**-256**) |La memorizzazione nella cache del set di risultati è disabilitata a causa dell'utilizzo della maschera dati dinamica granulare.|  
 
 ## <a name="permissions"></a>Autorizzazioni
 

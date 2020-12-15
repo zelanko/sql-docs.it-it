@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dee5ef30ca260855c9df6a7823e7dce605c3ff72
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f976f9be51d688833a09e5faaae42b8864ecc274
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534803"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482377"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,12 +47,12 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="arguments"></a>Argomenti  
 `[ @resample = ] 'resample'` Specifica che **sp_updatestats** utilizzerà l'opzione RESAMPLE dell'istruzione [Update Statistics](../../t-sql/statements/update-statistics-transact-sql.md) . Se **' resample '** non è specificato, **sp_updatestats** aggiorna le statistiche usando il campionamento predefinito. il **ricampionamento** è **varchar (8)** e il valore predefinito è no.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  **sp_updatestats** viene eseguito `UPDATE STATISTICS` , specificando la `ALL` parola chiave, in tutte le tabelle interne e definite dall'utente nel database. sp_updatestats Visualizza i messaggi che indicano lo stato di avanzamento. Al termine dell'aggiornamento, viene segnalato che sono state aggiornate le statistiche di tutte le tabelle.  
   
 **sp_updatestats** aggiorna le statistiche per gli indici non cluster disabilitati e non aggiorna le statistiche sugli indici cluster disabilitati.  
   
-Per le tabelle basate su disco, **sp_updatestats** aggiorna le statistiche in base alle informazioni **modification_counter** nella vista del catalogo **sys. dm_db_stats_properties** , aggiornando le statistiche in cui è stata modificata almeno una riga. Le statistiche sulle tabelle ottimizzate per la memoria vengono sempre aggiornate quando si eseguono **sp_updatestats**. Non eseguire pertanto **sp_updatestats** più del necessario.  
+Per le tabelle basate su disco, **sp_updatestats** aggiorna le statistiche in base alle informazioni **modification_counter** nella vista del catalogo **sys.dm_db_stats_properties** , aggiornando le statistiche in cui è stata modificata almeno una riga. Le statistiche sulle tabelle ottimizzate per la memoria vengono sempre aggiornate quando si eseguono **sp_updatestats**. Non eseguire pertanto **sp_updatestats** più del necessario.  
   
 **sp_updatestats** possibile attivare una ricompilazione di stored procedure o altro codice compilato. Tuttavia, **sp_updatestats** potrebbe non provocare una ricompilazione, se è possibile solo un piano di query per le tabelle a cui si fa riferimento e gli indici. Una ricompilazione non sarebbe necessaria in tali casi anche se le statistiche vengono aggiornate.  
   
@@ -62,7 +62,7 @@ Per i database con un livello di compatibilità inferiore a 90, l'esecuzione di 
 
 Per eseguire **sp_updatestats**, l'utente deve essere il proprietario del database ( `dbo` , non solo membro del ruolo `db_owner` ) o essere membro del ruolo predefinito del server sysadmin.
 
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
 Nell'esempio seguente vengono aggiornate le statistiche per le tabelle del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  

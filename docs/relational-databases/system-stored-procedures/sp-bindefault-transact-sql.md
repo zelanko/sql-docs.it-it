@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21f743aa4c28095a3167ebb16cf873f46afece38
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9cad51a7a83f694ac89b41584929a46e1fbc725c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541961"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482408"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,9 +48,9 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="arguments"></a>Argomenti  
 `[ @defname = ] 'default'` Nome dell'oggetto predefinito creato da CREATE DEFAULT. il *valore predefinito* è **nvarchar (776)** e non prevede alcun valore predefinito.  
   
-`[ @objname = ] 'object_name'` Nome della tabella e della colonna o tipo di dati alias a cui associare il valore predefinito. *object_name* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito. non è possibile definire *object_name* con i tipi **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**o CLR definiti dall'utente.  
+`[ @objname = ] 'object_name'` Nome della tabella e della colonna o tipo di dati alias a cui associare il valore predefinito. *object_name* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito. non è possibile definire *object_name* con i tipi **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** o CLR definiti dall'utente.  
   
- Se *object_name* è un nome in una parte, viene risolto come tipo di dati alias. Se è un nome in due o tre parti, viene prima risolto come tabella e colonna. Se la risoluzione non riesce, viene risolto come tipo di dati alias. Per impostazione predefinita, le colonne esistenti del tipo di dati alias ereditano *default*, a meno che un valore predefinito non sia stato associato direttamente alla colonna. Impossibile associare un valore predefinito a una colonna di tipo **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **timestamp**o CLR definito dall'utente, una colonna con la proprietà Identity, una colonna calcolata o una colonna che dispone già di un vincolo Default.  
+ Se *object_name* è un nome in una parte, viene risolto come tipo di dati alias. Se è un nome in due o tre parti, viene prima risolto come tabella e colonna. Se la risoluzione non riesce, viene risolto come tipo di dati alias. Per impostazione predefinita, le colonne esistenti del tipo di dati alias ereditano *default*, a meno che un valore predefinito non sia stato associato direttamente alla colonna. Impossibile associare un valore predefinito a una colonna di tipo **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **timestamp** o CLR definito dall'utente, una colonna con la proprietà Identity, una colonna calcolata o una colonna che dispone già di un vincolo Default.  
   
 > [!NOTE]  
 >  *object_name* possono contenere parentesi quadre **[]** come identificatori delimitati. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
@@ -60,7 +60,7 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  È possibile utilizzare **sp_bindefault** per associare un nuovo valore predefinito a una colonna, sebbene sia preferibile utilizzare il vincolo predefinito oppure a un tipo di dati alias senza disassociare un valore predefinito esistente. Il valore predefinito esistente viene ignorato. Non è possibile associare un valore predefinito a un tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a un tipo CLR definito dall'utente. Se il valore predefinito non è compatibile con la colonna a cui è stato associato, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] restituisce un messaggio di errore quando si tenta di inserire il valore predefinito, non in fase di associazione.  
   
  Le colonne esistenti del tipo di dati alias ereditano il nuovo valore predefinito, a meno che non sia associato un valore predefinito direttamente a tali colonne o *futureonly_flag* sia specificato come **futureonly**. Le nuove colonne del tipo di dati alias ereditano sempre il valore predefinito.  
@@ -82,7 +82,7 @@ EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. Associazione di un valore predefinito a un tipo di dati alias  
- Il valore predefinito `def_ssn` e il tipo di dati alias `ssn` esistono già. Nell'esempio seguente il valore predefinito `def_ssn` viene associato a `ssn`. Il valore predefinito viene ereditato da tutte le colonne a cui è stato assegnato il tipo di dati alias `ssn` in fase di creazione della tabella. Le colonne esistenti di tipo **SSN** ereditano anche la **def_ssn**predefinita, a meno che non sia specificato **futureonly** per *futureonly_flag* valore o, a meno che la colonna non disponga di un oggetto predefinito associato direttamente a tale colonna. I valori predefiniti associati alle colonne sono sempre prioritari rispetto a quelli associati ai tipi di dati.  
+ Il valore predefinito `def_ssn` e il tipo di dati alias `ssn` esistono già. Nell'esempio seguente il valore predefinito `def_ssn` viene associato a `ssn`. Il valore predefinito viene ereditato da tutte le colonne a cui è stato assegnato il tipo di dati alias `ssn` in fase di creazione della tabella. Le colonne esistenti di tipo **SSN** ereditano anche la **def_ssn** predefinita, a meno che non sia specificato **futureonly** per *futureonly_flag* valore o, a meno che la colonna non disponga di un oggetto predefinito associato direttamente a tale colonna. I valori predefiniti associati alle colonne sono sempre prioritari rispetto a quelli associati ai tipi di dati.  
   
 ```  
 USE master;  

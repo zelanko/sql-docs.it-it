@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c742ebd930066c4e242cabff781b0c61af5f566f
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f167741a2064020cfbc7fdc43e881a74609e4ac6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235578"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480162"
 ---
 # <a name="sql-graph-architecture"></a>Architettura di SQL Graph  
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -78,7 +78,7 @@ La `sys.columns` vista contiene colonne aggiuntive `graph_type` e `graph_type_de
  
 |Nome colonna |Tipo di dati |Descrizione |
 |--- |---|--- |
-|graph_type |int |Colonna interna con un set di valori. I valori sono compresi tra 1-8 per le colonne Graph e NULL per altri.  |
+|graph_type |INT |Colonna interna con un set di valori. I valori sono compresi tra 1-8 per le colonne Graph e NULL per altri.  |
 |graph_type_desc |nvarchar(60)  |colonna interna con un set di valori |
  
 Nella tabella seguente sono elencati i valori validi per la `graph_type` colonna

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_text_query_plan (Transact-SQL)
-title: sys. dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51e2ee0d9867f952b219434ff59432732a96ddd6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f24871b199c66ea1efdd238b7141d8f0f7d99e19
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539434"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482822"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Restituisce il piano Showplan in formato testo per un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] o per un'istruzione specifica nel batch. Il piano di query specificato tramite l'handle del piano può essere memorizzato nella cache o in esecuzione. Questa funzione con valori di tabella è simile a [sys. dm_exec_query_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), ma presenta le differenze seguenti:  
+Restituisce il piano Showplan in formato testo per un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] o per un'istruzione specifica nel batch. Il piano di query specificato tramite l'handle del piano può essere memorizzato nella cache o in esecuzione. Questa funzione con valori di tabella è simile a [sys.dm_exec_query_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), ma presenta le differenze seguenti:  
   
 -   L'output del piano di query viene restituito in formato testo.  
 -   Per l'output del piano di query non sono previsti limiti di dimensioni.  
@@ -64,9 +64,9 @@ Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti
   
 -   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys. dm_exec_procedure_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys.dm_exec_procedure_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys. dm_exec_trigger_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys.dm_exec_trigger_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 *statement_start_offset* | 0 | PREDEFINITA  
 Indica, in byte, la posizione iniziale della query descritta dalla riga all'interno del testo del batch o dell'oggetto persistente. *statement_start_offset* è di **tipo int**. Il valore 0 indica l'inizio del batch. Il valore predefinito è 0.  
@@ -94,14 +94,14 @@ Il valore -1 indica la fine del batch. Il valore predefinito è -1.
 |**crittografati**|**bit**|Indica se la stored procedure corrispondente è crittografata.<br /><br /> 0 = non crittografata<br /><br /> 1 = crittografata<br /><br /> La colonna non ammette i valori Null.|  
 |**query_plan**|**nvarchar(max)**|Contiene la rappresentazione Showplan della fase di compilazione del piano di esecuzione della query specificato con *plan_handle*. La rappresentazione Showplan è in formato testo. Viene generato un piano per ogni batch contenente ad esempio istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, chiamate di stored procedure e chiamate di funzioni definite dall'utente.<br /><br /> La colonna ammette i valori Null.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Nelle condizioni seguenti non viene restituito alcun output Showplan nella colonna **plan** della tabella restituita per **sys.dm_exec_text_query_plan**:  
   
 -   Se il piano di query specificato utilizzando *plan_handle* è stato eliminato dalla cache dei piani, la colonna **query_plan** della tabella restituita è null. Questa condizione si verifica, ad esempio, in presenza di un ritardo di tempo tra l'acquisizione dell'handle del piano e il relativo utilizzo in **sys.dm_exec_text_query_plan**.  
   
 -   Alcune istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] non vengono memorizzate nella cache, ad esempio le istruzioni per operazioni bulk o le istruzioni che contengono valori letterali stringa con dimensioni maggiori di 8 KB. Non è possibile recuperare Showplan per tali istruzioni tramite **sys.dm_exec_text_query_plan** perché non esistono nella cache.  
   
--   Se un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch o stored procedure contiene una chiamata a una funzione definita dall'utente o una chiamata a SQL dinamico, ad esempio tramite exec (*String*), lo Showplan XML compilato per la funzione definita dall'utente non viene incluso nella tabella restituita da **sys. dm_exec_text_query_plan** per il batch o stored procedure. È invece necessario eseguire una chiamata separata a **sys. dm_exec_text_query_plan** per la *plan_handle* che corrisponde alla funzione definita dall'utente.  
+-   Se un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch o stored procedure contiene una chiamata a una funzione definita dall'utente o una chiamata a SQL dinamico, ad esempio tramite exec (*String*), lo Showplan XML compilato per la funzione definita dall'utente non viene incluso nella tabella restituita da **sys.dm_exec_text_query_plan** per il batch o stored procedure. È invece necessario eseguire una chiamata separata a **sys.dm_exec_text_query_plan** per il *plan_handle* che corrisponde alla funzione definita dall'utente.  
   
 Quando una query ad hoc utilizza la [parametrizzazione](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) [semplice](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) o forzata, la colonna **query_plan** conterrà solo il testo dell'istruzione e non il piano di query effettivo. Per restituire il piano di query, chiamare **sys.dm_exec_text_query_plan** per l'handle del piano della query con parametri preparata. È possibile determinare se è stata eseguita la parametrizzazione della query facendo riferimento alla colonna **sql** della vista [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) o alla colonna di testo della DMV [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
@@ -181,4 +181,4 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. dm_exec_query_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+ [sys.dm_exec_query_plan &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

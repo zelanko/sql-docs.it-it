@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 6b631c6a8139304bd716e4eb1f3969de706f31d6
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: 1ab5c24dadbe3e8d0ad333cd67452c752cb2937b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753763"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478992"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -52,11 +52,11 @@ fn_get_audit_file ( file_pattern,
     
     Questo argomento deve includere sia un percorso (lettera di unità o condivisione di rete) che un nome di file, che può includere un carattere jolly. È possibile utilizzare un singolo asterisco (*) per raccogliere più file da un set di file di controllo. Ad esempio:  
   
-    -   **\<path>\\\*** -Raccoglie tutti i file di controllo nel percorso specificato.  
+    -   **\<path>\\\** _: Raccoglie tutti i file di controllo nel percorso specificato.  
   
-    -   ** \<path> \ LOGINSAUDIT_ {GUID}***: raccoglie tutti i file di controllo con il nome e la coppia GUID specificati.  
+    -   _* \<path> \LoginsAudit_{Guid} * * _-raccoglie tutti i file di controllo con il nome e la coppia GUID specificati.  
   
-    -   ** \<path> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** : raccoglie un file di controllo specifico.  
+    -   _* \<path> \LoginsAudit_{GUID} _00_29384. sqlaudit * *-raccoglie un file di controllo specifico.  
   
  - **Database SQL di Azure**:
  
@@ -64,7 +64,7 @@ fn_get_audit_file ( file_pattern,
  
       - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** : raccoglie tutti i file di controllo (BLOB) per il database specifico.    
       
-      - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . xel** : raccoglie un file di controllo specifico (BLOB).
+      - **\<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . xel** : raccoglie un file di controllo specifico (BLOB).
   
 > [!NOTE]  
 >  Se si passa un percorso senza un criterio del nome di file, verrà generato un errore.  
@@ -128,7 +128,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar(4000)** | **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, database SQL di Azure e SQL istanza gestita<br /><br /> Utilizzato per registrare eventuali informazioni aggiuntive che l'utente desidera registrare nel log di controllo utilizzando il **sp_audit_write** stored procedure. |  
 
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se l'argomento *file_pattern* passato a **fn_get_audit_file** fa riferimento a un percorso o a un file che non esiste o se il file non è un file di controllo, viene restituito il messaggio di errore **MSG_INVALID_AUDIT_FILE** .  
   
 ## <a name="permissions"></a>Autorizzazioni
@@ -139,7 +139,7 @@ fn_get_audit_file ( file_pattern,
   - Gli amministratori non server possono accedere ai log di controllo solo dal database corrente.
   - I BLOB che non soddisfano i criteri indicati sopra verranno ignorati (un elenco di BLOB ignorati verrà visualizzato nel messaggio di output della query) e la funzione restituirà i log solo dai BLOB per cui è consentito l'accesso.  
   
-## <a name="examples"></a>Esempi
+## <a name="examples"></a>Esempio
 
 - **SQL Server**
 
@@ -159,7 +159,7 @@ fn_get_audit_file ( file_pattern,
   GO  
   ```  
 
-  In questo esempio viene letto dallo stesso file precedente, ma con clausole T-SQL aggiuntive (**Top**, **Order by**e clausola **where** per filtrare i record di controllo restituiti dalla funzione):
+  In questo esempio viene letto dallo stesso file precedente, ma con clausole T-SQL aggiuntive (**Top**, **Order by** e clausola **where** per filtrare i record di controllo restituiti dalla funzione):
   
   ```  
   SELECT TOP 10 * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default)

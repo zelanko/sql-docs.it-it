@@ -1,6 +1,6 @@
 ---
-description: sys. external_tables (Transact-SQL)
-title: sys. external_tables (Transact-SQL) | Microsoft Docs
+description: sys.external_tables (Transact-SQL)
+title: sys.external_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ dev_langs:
 ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ba3034b4cdda575f19ec436725afd4c0f43451f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5ff3ffe4c6afbf00cad2bb543acaf800e7040b11
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550528"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477492"
 ---
-# <a name="sysexternal_tables-transact-sql"></a>sys. external_tables (Transact-SQL)
+# <a name="sysexternal_tables-transact-sql"></a>sys.external_tables (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   Contiene una riga per ogni tabella esterna nel database corrente.  
@@ -31,7 +31,7 @@ ms.locfileid: "89550528"
 |uses_ansi_nulls|**bit**|La tabella è stata creata con l'opzione di database SET ANSI_NULLS impostata su ON.||  
 |data_source_id|**int**|ID oggetto per l'origine dati esterna.||  
 |file_format_id|**int**|Per le tabelle esterne in un'origine dati esterna HADOOP, si tratta dell'ID oggetto per il formato di file esterno.||  
-|posizione|**nvarchar(4000)**|Per le tabelle esterne in un'origine dati esterna HADOOP, questo è il percorso dei dati esterni in HDFS.||  
+|location|**nvarchar(4000)**|Per le tabelle esterne in un'origine dati esterna HADOOP, questo è il percorso dei dati esterni in HDFS.||  
 |reject_type|**tinyint**|Per le tabelle esterne in un'origine dati esterna HADOOP, questo è il modo in cui vengono conteggiate le righe rifiutate durante l'esecuzione di query su dati esterni.|VALUE: numero di righe rifiutate.<br /><br /> PERCENTUALE: la percentuale di righe rifiutate.|  
 |reject_value|**float**|Per le tabelle esterne in un'origine dati esterna HADOOP:<br /><br /> Per *reject_type =* value, indica il numero di rifiuti di riga da consentire prima che la query abbia esito negativo.<br /><br /> Per *reject_type* = percentuale, indica la percentuale di rifiuti di riga da consentire prima che la query abbia esito negativo.||  
 |reject_sample_value|**int**|Per *reject_type* = percentuale, indica il numero di righe da caricare, con esito positivo o negativo, prima di calcolare la percentuale di righe rifiutate.|NULL se reject_type = VALUE.|  
@@ -45,8 +45,8 @@ ms.locfileid: "89550528"
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. external_file_formats &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
- [sys. external_data_sources &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
+ [sys.external_file_formats &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
+ [sys.external_data_sources &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   

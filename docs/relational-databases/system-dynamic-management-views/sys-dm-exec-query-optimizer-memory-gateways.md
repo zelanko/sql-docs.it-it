@@ -19,13 +19,13 @@ helpviewer_keywords:
 - sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db599449d45263445ae9628e2cfbacfe768f0f1
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a87f08bd2992d752b57af9519d351c198cb4d78b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96503456"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477232"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "96503456"
 
 Restituisce lo stato corrente dei semafori di risorsa utilizzati per limitare l'ottimizzazione delle query simultanee.
 
-|Colonna|Tipo|Descrizione|  
+|Colonna|Type|Descrizione|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|ID pool di risorse in Resource Governor|  
 |**nome**|**sysname**|Nome del controllo di compilazione (Gateway Small, gateway medio, Big gateway)|

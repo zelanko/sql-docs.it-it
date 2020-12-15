@@ -33,13 +33,13 @@ helpviewer_keywords:
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8222058b5e26dd8e2d1c932705889ec0ee6d68c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753705"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482522"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -123,7 +123,7 @@ CONTAINSTABLE
  Nome di una o più colonne indicizzate per la ricerca full-text. La colonna o le colonne possono essere di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** r **varbinary(max)** .  
   
  *column_list*  
- Viene indicato che è possibile specificare più colonne, separate da virgola. *column_list*deve essere racchiuso tra parentesi. La lingua di tutte le colonne di *column_list* deve essere la stessa, a meno che non sia specificato *language_term*.  
+ Viene indicato che è possibile specificare più colonne, separate da virgola. *column_list* deve essere racchiuso tra parentesi. La lingua di tutte le colonne di *column_list* deve essere la stessa, a meno che non sia specificato *language_term*.  
   
  \*  
  Specifica che tutte le colonne con indicizzazione full-text nella *tabella* devono essere utilizzate per cercare la condizione di ricerca specificata. La lingua di tutte le colonne della tabella deve essere la stessa, a meno che non sia specificato *language_term*.  
@@ -145,7 +145,7 @@ CONTAINSTABLE
  <contains_search_condition>  
  Specifica il testo da cercare in *column_name* e le condizioni della ricerca. Per informazioni sulle condizioni di ricerca, vedere [contains &#40;&#41;Transact-SQL ](../../t-sql/queries/contains-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  I predicati e le funzioni full-text possono essere utilizzati in una singola tabella, specificata in modo implicito nel predicato FROM. Per cercare in più tabelle, utilizzare una tabella unita in join nella clausola FROM, che consente di eseguire una ricerca in un set di risultati prodotto da due o più tabelle.  
   
  La tabella restituita include una colonna denominata **Key** che contiene i valori della chiave full-text. Ogni tabella con indicizzazione full-text include una colonna i cui valori sono garantiti univoci e i valori restituiti nella colonna **chiave** sono i valori chiave full-text delle righe che corrispondono ai criteri di selezione specificati nella condizione di ricerca Contains. La proprietà **TableFulltextKeyColumn** , ottenuta dalla funzione OBJECTPROPERTYEX, fornisce l'identità della colonna chiave univoca. Per ottenere l'ID della colonna associata alla chiave full-text dell'indice full-text, utilizzare **sys.fulltext_indexes**. Per ulteriori informazioni, vedere [sys.fulltext_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  

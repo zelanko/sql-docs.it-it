@@ -1,6 +1,6 @@
 ---
 description: sys.firewall_rules (Database SQL di Azure)
-title: sys. firewall_rules (database SQL di Azure) | Microsoft Docs
+title: sys.firewall_rules (database SQL di Azure) | Microsoft Docs
 ms.date: 03/26/2019
 ms.prod: sql
 ms.technology: system-objects
@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3fbe5a555ffde0a06d43c737fbc424ed9648cfef
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: b7e08498a9f3867c03c2198957af0ac35f9a0a01
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546807"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477432"
 ---
 # <a name="sysfirewall_rules-azure-sql-database"></a>sys.firewall_rules (Database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "89546807"
 |create_date|**DATETIME**|Data e ora UTC in cui è stata creata l'impostazione del firewall a livello di server.<br /><br /> Nota: UTC è un acronimo di Coordinated Universal Time.|  
 |modify_date|**DATETIME**|Data e ora UTC in cui è stata modificata per l'ultima volta l'impostazione del firewall a livello di server.|  
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
- Per restituire informazioni sulle impostazioni del firewall a livello di database associate alla database SQL di Microsoft Azure, usare [sys. database_firewall_rules &#40;&#41;del database SQL di Azure ](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md).  
+ Per restituire informazioni sulle impostazioni del firewall a livello di database associate alla database SQL di Microsoft Azure, usare [sys.database_firewall_rules &#40;&#41;del database SQL di Azure ](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md).  
   
 ## <a name="permissions"></a>Autorizzazioni
 
@@ -56,7 +56,7 @@ ms.locfileid: "89546807"
 [sp_delete_firewall_rule &#40;database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)   
 [sp_set_database_firewall_rule &#40;Database di SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
 [sp_delete_database_firewall_rule &#40;database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)  
-[sys. database_firewall_rules &#40;database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+[sys.database_firewall_rules &#40;database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
 [Configurare un Windows Firewall per l'accesso motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)     
 [Configurare un firewall per l'accesso FILESTREAM](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)  
 [Configurare un firewall per l'accesso al server di report](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 

@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd891bcfdaddfb42e2b55e1b69e3f320563c1ba7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3efd2428f9eeae241c0ec9be497c854ba0d91417
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427823"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478952"
 ---
 # <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -97,7 +97,7 @@ fn_listextendedproperty (
   
  Se la tabella restituita è vuota, significa che all'oggetto non sono associate proprietà estese o che l'utente non è autorizzato a elencare le proprietà estese dell'oggetto. In caso di restituzione di proprietà estese per il database, le colonne objtype e objname saranno NULL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Se il valore per *property_name* è null o predefinito, fn_listextendedproperty restituisce tutte le proprietà per l'oggetto specificato.  
   
  Se è specificato il tipo di oggetto e il valore del nome oggetto corrispondente è NULL o default, fn_listextendedproperty restituisce tutte le proprietà estese di tutti gli oggetti del tipo specificato.  

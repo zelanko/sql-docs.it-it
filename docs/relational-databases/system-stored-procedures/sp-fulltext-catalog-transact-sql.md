@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb810e5130f04a7f55ac0e262ecfe6f11b784a98
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2cd4ad72b81a0a602707ad55c85174657feb183c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543421"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482395"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 > [!NOTE]  
 >  I cataloghi full-text possono essere creati, eliminati e modificati in base alle necessità. Evitare tuttavia di modificare contemporaneamente più cataloghi a livello di schema. Queste azioni possono essere eseguite usando il **sp_fulltext_table** stored procedure, che è il metodo consigliato.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |**Creare**|Crea un nuovo catalogo full-text vuoto nel file system e aggiunge una riga associata in **sysfulltextcatalogs** con i valori *fulltext_catalog_name* e *root_directory*, se presenti. *fulltext_catalog_name* deve essere univoco all'interno del database.|  
 |**Goccia**|Elimina *fulltext_catalog_name* rimuovendo dalla file System ed eliminando la riga associata in **sysfulltextcatalogs**. Questa azione non viene completata se nel catalogo sono inclusi indici per una o più tabelle. **sp_fulltext_table** per eliminare le tabelle dal catalogo, è necessario eseguire '*table_name*',' drop '.<br /><br /> Se il catalogo non esiste, viene visualizzato un errore.|  
@@ -64,7 +64,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
   
 `[ @path = ] 'root_directory'` È la directory radice (non il percorso fisico completo) per un'azione **create** . *root_directory* è di **tipo nvarchar (100)** e il valore predefinito è null, che indica l'utilizzo del percorso predefinito specificato al momento dell'installazione. Si tratta della sottodirectory Ftdata nella directory MSSQL. ad esempio, C:\Programmi\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. La directory radice specificata deve trovarsi in un'unità dello stesso computer, non deve corrispondere alla sola lettera di unità e non può essere un percorso relativo. Le unità di rete, le unità rimovibili, i dischi floppy e i percorsi in formato UNC non sono supportati. È necessario creare i cataloghi full-text in un'unità disco rigido locale associata a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- il ** \@ percorso** è valido solo quando viene **creata**l' *azione* . Per le azioni diverse da **create** (**Stop**, **Rebuild**e così via), ** \@ path** deve essere null o omesso.  
+ il **\@ percorso** è valido solo quando viene **creata** l' *azione* . Per le azioni diverse da **create** (**Stop**, **Rebuild** e così via), **\@ path** deve essere null o omesso.  
   
  Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un server virtuale in un cluster, la directory di catalogo specificata deve trovarsi in un'unità disco condivisa dalla quale dipende la risorsa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se @path viene omesso, il percorso della directory del catalogo predefinita si trova nell'unità disco condivisa, nella directory specificata durante l'installazione del server virtuale.  
   
@@ -77,7 +77,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="remarks"></a>Osservazioni  
  L'azione **start_full** viene utilizzata per creare uno snapshot completo dei dati full-text *fulltext_catalog_name*. L'azione **start_incremental** viene utilizzata per reindicizzare solo le righe modificate nel database. Il popolamento incrementale può essere applicato solo se la tabella contiene una colonna di tipo **timestamp**. Se una tabella nel catalogo full-text non contiene una colonna di tipo **timestamp**, la tabella viene sottoposta a un popolamento completo.  
   
- I dati dell'indice e del catalogo full-text vengono archiviati in file creati in una directory di catalogo full-text. La directory del catalogo full-text viene creata come una sottodirectory della directory specificata nel ** \@ percorso** o nella directory del catalogo full-text predefinita del server se il ** \@ percorso** non è specificato. Il nome della directory di catalogo full-text viene compilato in modo che sia univoco nel server. Le varie directory di catalogo full-text di un server pertanto possono condividere lo stesso percorso.  
+ I dati dell'indice e del catalogo full-text vengono archiviati in file creati in una directory di catalogo full-text. La directory del catalogo full-text viene creata come una sottodirectory della directory specificata nel **\@ percorso** o nella directory del catalogo full-text predefinita del server se il **\@ percorso** non è specificato. Il nome della directory di catalogo full-text viene compilato in modo che sia univoco nel server. Le varie directory di catalogo full-text di un server pertanto possono condividere lo stesso percorso.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È necessario che il chiamante sia membro del ruolo **db_owner** . A seconda dell'azione richiesta, al chiamante non devono essere negate le autorizzazioni ALTER o CONTROL (che **db_owner** dispone) nel catalogo full-text di destinazione.  

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81f55a758949f3be55c70d55b06d5c7860f407d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b05c7d20deb1108e5e4c7f74fffce42072ba8515
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499109"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478062"
 ---
 # <a name="using-statement-parameters"></a>Utilizzo dei parametri delle istruzioni
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "88499109"
   
 -   Migliorare l'interazione dell'utente nella costruzione di criteri di query.  
   
--   Gestire i dati di tipo **Text**, **ntext**e **Image** e i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati C specifici di.  
+-   Gestire i dati di tipo **Text**, **ntext** e **Image** e i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati C specifici di.  
   
- Una tabella **parts** , ad esempio, include colonne denominate **partID**, **Description**e **Price**. Per aggiungere una parte senza parametri, è necessario costruire un'istruzione SQL come:  
+ Una tabella **parts** , ad esempio, include colonne denominate **partID**, **Description** e **Price**. Per aggiungere una parte senza parametri, è necessario costruire un'istruzione SQL come:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  

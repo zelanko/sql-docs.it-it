@@ -1,6 +1,6 @@
 ---
 description: sys.dm_exec_xml_handles (Transact-SQL)
-title: sys. dm_exec_xml_handles (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_xml_handles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
 author: pmasl
 ms.author: pelopes
-monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57347d66ba5bf0438b40696433a4eb5c0d6124bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0433126f43a14aa12521c0a65cd1b4aca8441ac6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489871"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482662"
 ---
 # <a name="sysdm_exec_xml_handles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -54,22 +54,22 @@ dm_exec_xml_handles (session_id | 0 )
 |**document_id**|**int**|ID dell'handle del documento XML restituito da **sp_xml_preparedocument**.|  
 |**namespace_document_id**|**int**|ID handle interno utilizzato per il documento dello spazio dei nomi associato passato come terzo parametro a **sp_xml_preparedocument**. È NULL se non esiste un documento dello spazio dei nomi.|  
 |**sql_handle**|**varbinary(64)**|Handle per il testo del codice SQL in cui l'handle è stato definito.|  
-|**statement_start_offset**|**int**|Numero di caratteri nel batch o stored procedure attualmente in esecuzione in corrispondenza del quale si verifica la chiamata al **sp_xml_preparedocument** . Può essere utilizzato in combinazione con il **sql_handle**, **statement_end_offset**e la funzione a gestione dinamica **sys. dm_exec_sql_text** per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
-|**statement_end_offset**|**int**|Numero di caratteri nel batch o stored procedure attualmente in esecuzione in corrispondenza del quale si verifica la chiamata al **sp_xml_preparedocument** . Può essere utilizzato in combinazione con il **sql_handle**, **statement_start_offset**e la funzione a gestione dinamica **sys. dm_exec_sql_text** per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
+|**statement_start_offset**|**int**|Numero di caratteri nel batch o stored procedure attualmente in esecuzione in corrispondenza del quale si verifica la chiamata al **sp_xml_preparedocument** . Può essere utilizzato insieme all' **sql_handle**, **statement_end_offset** e **sys.dm_exec_sql_text** funzione a gestione dinamica per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
+|**statement_end_offset**|**int**|Numero di caratteri nel batch o stored procedure attualmente in esecuzione in corrispondenza del quale si verifica la chiamata al **sp_xml_preparedocument** . Può essere utilizzato insieme all' **sql_handle**, **statement_start_offset** e **sys.dm_exec_sql_text** funzione a gestione dinamica per recuperare l'istruzione attualmente in esecuzione per la richiesta.|  
 |**creation_time**|**datetime**|Timestamp in cui è stato chiamato **sp_xml_preparedocument** .|  
 |**original_document_size_bytes**|**bigint**|Dimensioni in byte del documento XML non analizzato.|  
 |**original_namespace_document_size_bytes**|**bigint**|Dimensioni in byte del documento dello spazio dei nomi XML non analizzato. È NULL se non esiste un documento dello spazio dei nomi.|  
 |**num_openxml_calls**|**bigint**|Numero di chiamate a OPENXML con questo handle di documento.|  
 |**row_count**|**bigint**|Numero di righe restituite da tutte le chiamate a OPENXML precedenti per questo handle di documento.|  
-|**dormant_duration_ms**|**bigint**|Millisecondi trascorsi dall'ultima chiamata a OPENXML. Se OPENXML non è stato chiamato, restituisce i millisecondi dalla chiamata a **sp_xml_preparedocumen**t.|  
+|**dormant_duration_ms**|**bigint**|Millisecondi trascorsi dall'ultima chiamata a OPENXML. Se OPENXML non è stato chiamato, restituisce i millisecondi dalla chiamata a **sp_xml_preparedocumen** t.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La durata del **sql_handles** utilizzata per recuperare il testo SQL che ha eseguito una chiamata a **sp_xml_preparedocument** sopravvive al piano memorizzato nella cache utilizzato per eseguire la query. Se il testo della query non è disponibile nella cache, non sarà possibile recuperare i dati utilizzando le informazioni incluse nel risultato della funzione. Questa situazione può verificarsi in caso di esecuzione di numerosi batch di grandi dimensioni.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE sul server per visualizzare tutte le sessioni o gli ID di sessione che non appartengono al chiamante. Un chiamante può sempre visualizzare i dati del proprio ID della sessione corrente.      
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Nell'esempio seguente vengono selezionati tutti gli handle attivi.  
   
 ```  

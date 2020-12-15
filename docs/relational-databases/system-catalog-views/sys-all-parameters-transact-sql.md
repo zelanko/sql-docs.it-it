@@ -1,6 +1,6 @@
 ---
 description: sys.all_parameters (Transact-SQL)
-title: sys. all_parameters (Transact-SQL) | Microsoft Docs
+title: sys.all_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: eecbb68e-9b4c-4243-94e2-8096a9cc7892
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2a6f5d373c4bf3ea2a5b22b0376ee57dbb0e4c0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 452d131c0bf1a267d42c83c17b7c6f3c9ec69bfe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539788"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479112"
 ---
 # <a name="sysall_parameters-transact-sql"></a>sys.all_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "89539788"
 |**scale**|**tinyint**|Scala del parametro se di tipo numerico, in caso contrario 0.|  
 |**is_output**|**bit**|1 = Parametro di output (o restituito), in caso contrario 0.|  
 |**is_cursor_ref**|**bit**|1 = Parametro di riferimento al cursore.|  
-|**has_default_value**|**bit**|1 = Parametro con un valore predefinito.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i valori predefiniti solo per gli oggetti CLR in questa vista del catalogo. Il valore di questa colonna sarà pertanto sempre 0 per gli oggetti [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per visualizzare il valore predefinito di un parametro in un [!INCLUDE[tsql](../../includes/tsql-md.md)] oggetto, eseguire una query sulla colonna di **definizione** della vista del catalogo [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) oppure utilizzare la funzione di sistema [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .|  
+|**has_default_value**|**bit**|1 = Parametro con un valore predefinito.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i valori predefiniti solo per gli oggetti CLR in questa vista del catalogo. Il valore di questa colonna sarà pertanto sempre 0 per gli oggetti [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per visualizzare il valore predefinito di un parametro in un [!INCLUDE[tsql](../../includes/tsql-md.md)] oggetto, eseguire una query sulla colonna di **definizione** della vista del catalogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) oppure utilizzare la funzione di sistema [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .|  
 |**is_xml_document**|**bit**|1 = Il contenuto è un documento XML completo.<br /><br /> 0 = il contenuto è un frammento di documento oppure il tipo di dati della colonna non è **XML**.|  
 |**default_value**|**sql_variant**|Se **has_default_value** è 1, il valore di questa colonna corrisponde al valore predefinito per il parametro. in caso contrario, NULL.|  
 |**xml_collection_id**|**int**|ID della raccolta di XML Schema utilizzata per convalidare il parametro.<br /><br /> Diverso da zero se il tipo di dati del parametro è **XML** e il codice XML è tipizzato.<br /><br /> 0 = Non esiste una raccolta di XML Schema oppure il parametro non è XML.|  

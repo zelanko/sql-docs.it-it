@@ -1,6 +1,6 @@
 ---
 description: sys.assembly_types (Transact-SQL)
-title: sys. assembly_types (Transact-SQL) | Microsoft Docs
+title: sys.assembly_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 35f0384f-7a6d-41b1-9461-f1406d68f317
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06eb2eb4fe6b0983b798ea38fa98057be73af77a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 006495335ab8a6bfa48adf8d840b3b96a0c936d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545082"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479092"
 ---
 # <a name="sysassembly_types-transact-sql"></a>sys.assembly_types (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  Contiene una riga per ogni tipo definito dall'utente che viene definito da un assembly CLR. La **vista sys. assembly_types** seguente viene visualizzata nell'elenco delle colonne ereditate (vedere [sys. Types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) dopo **rule_object_id**.  
+  Contiene una riga per ogni tipo definito dall'utente che viene definito da un assembly CLR. I **sys.assembly_types** seguenti vengono visualizzati nell'elenco delle colonne ereditate (vedere [sys. Types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) dopo **rule_object_id**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  

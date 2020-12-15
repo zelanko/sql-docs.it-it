@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: d9bcc769abf138658c4994a42b9ee1898e964509
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: c180d679075076168d3be510c22d0775ebc7af30
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130894"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478902"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -71,7 +71,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objtype =]'*object_type*'  
  Tipo dell'oggetto da rinominare. *object_type* è di tipo **varchar (13)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|valore|Descrizione|  
+|Valore|Descrizione|  
 |-----------|-----------------|  
 |COLUMN|Colonna da rinominare.|  
 |DATABASE|Database definito dall'utente. Quando si rinomina un database è necessario specificare questo tipo di oggetto.|  
@@ -86,7 +86,7 @@ In sp_rename (Preview) per [!INCLUDE[ssazuresynapse](../../includes/ssazuresynap
 ## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
 **Si applica a** SQL Server (tutte le versioni supportate) e il database SQL di Azure  
  La stored procedure sp_rename rinomina automaticamente l'indice associato ogni volta che viene rinominato un vincolo PRIMARY KEY o UNIQUE. Se un indice rinominato è associato a un vincolo PRIMARY KEY, quando si esegue sp_rename viene rinominato automaticamente anche il vincolo PRIMARY KEY.  
 
