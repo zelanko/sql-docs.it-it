@@ -1,5 +1,5 @@
 ---
-title: Caricatore da riga di comando dwloader
+title: Caricatore Command-Line dwloader
 description: dwloader è uno strumento da riga di comando data warehouse parallelo (PDW) che carica le righe della tabella in blocco in una tabella esistente.
 author: mzaman1
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 7dd0ccf960b53b3cd1b474f61c60a58ff9b0a2c6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3635aff3c3dad371c969acd3d72b2fb738748ecc
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767050"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489691"
 ---
-# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Caricatore da riga di comando dwloader per data warehouse paralleli
-**dwloader** è uno strumento da riga di comando data warehouse parallelo (PDW) che carica le righe della tabella in blocco in una tabella esistente. Quando si caricano righe, è possibile aggiungere tutte le righe alla fine della tabella (modalità di*Accodamento* o *FastAppend*), aggiungere nuove righe e aggiornare le righe esistenti (*modalità Upsert*) o eliminare tutte le righe esistenti prima del caricamento e quindi inserire tutte le righe in una tabella vuota (*modalità di ricaricamento*).  
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader Command-Line loader per data warehouse parallelo
+**dwloader** è uno strumento da riga di comando data warehouse parallelo (PDW) che carica le righe della tabella in blocco in una tabella esistente. Quando si caricano righe, è possibile aggiungere tutte le righe alla fine della tabella (modalità di *Accodamento* o *FastAppend*), aggiungere nuove righe e aggiornare le righe esistenti (*modalità Upsert*) o eliminare tutte le righe esistenti prima del caricamento e quindi inserire tutte le righe in una tabella vuota (*modalità di ricaricamento*).  
   
 **Processo per il caricamento dei dati**  
   
@@ -124,7 +124,7 @@ Visualizza semplici informazioni della guida sull'utilizzo del caricatore. La gu
 Un account di accesso con autenticazione SQL Server valido con le autorizzazioni appropriate per eseguire il caricamento.  
   
 **-P** *password*  
-Password per un *login_name*di autenticazione SQL Server.  
+Password per un *login_name* di autenticazione SQL Server.  
   
 **-W**  
 Utilizza l'autenticazione di Windows. (Nessuna *login_name* o *password* obbligatoria). 
@@ -134,7 +134,7 @@ For information about configuring Windows Authentication, see [Security - Config
 -->
   
 **-f** *parameter_file_name*  
-Usare un file di parametri, *parameter_file_name*al posto dei parametri della riga di comando. *parameter_file_name* possono contenere parametri della riga di comando tranne *user_name* e *password*. Se viene specificato un parametro nella riga di comando e nel file dei parametri, la riga di comando esegue l'override del parametro file.  
+Usare un file di parametri, *parameter_file_name* al posto dei parametri della riga di comando. *parameter_file_name* possono contenere parametri della riga di comando tranne *user_name* e *password*. Se viene specificato un parametro nella riga di comando e nel file dei parametri, la riga di comando esegue l'override del parametro file.  
   
 Il file di parametri contiene un parametro, senza **-** prefisso, per riga.  
   
@@ -222,7 +222,7 @@ Specifica un tipo di codifica dei caratteri per i dati da caricare dal file di d
 **-t** *field_delimiter*  
 Delimitatore per ogni campo (colonna) nella riga. Il delimitatore di campo è costituito da uno o più caratteri di escape ASCII o valori esadecimali ASCII.  
   
-|Name|Carattere escape|Carattere esadecimale|  
+|Nome|Carattere escape|Carattere esadecimale|  
 |--------|--------------------|-----------------|  
 |Scheda|\t|0x09|  
 |Ritorno a capo (CR)|\r|0x0D|  
@@ -427,7 +427,7 @@ Se il tipo di carico è FASTAPPEND, *BatchSize* si applica al caricamento dei da
 Specifica le opzioni per determinare il numero di errori di caricamento consentiti dal caricatore. Se gli errori di caricamento superano la soglia, il caricatore si arresterà e non eseguirà il commit di alcuna riga.  
   
 **-RT** { **valore** | percentuale}  
-Specifica se il*reject_value* nell'opzione **-RV** *reject_value* è un numero letterale di righe (valore) o un tasso di errore (percentuale). Il valore predefinito è value.  
+Specifica se il *reject_value* nell'opzione **-RV** *reject_value* è un numero letterale di righe (valore) o un tasso di errore (percentuale). Il valore predefinito è value.  
   
 L'opzione percentuale è un calcolo in tempo reale che si verifica a intervalli in base all'opzione-RS.  
   
@@ -466,7 +466,7 @@ Con **-m**, SQL Server PDW esegue ed esegue il commit dei caricamenti in paralle
   
 Senza **-m**, il SQL Server PDW esegue e commit in modo seriale tra le distribuzioni all'interno di ogni nodo di calcolo e simultaneamente tra i nodi di calcolo. Questo metodo è più lento della modalità multitransazione, ma è indipendente dalle transazioni.  
   
-**-m** è facoltativo per *Append*, *reload*e *Upsert*.  
+**-m** è facoltativo per *Append*, *reload* e *Upsert*.  
   
 **-m** è obbligatorio per FastAppend.  
   
@@ -528,7 +528,7 @@ I dati caricati potrebbero richiedere più o meno spazio sul dispositivo rispett
 Anche se **dwloader** è un processo di transazione e viene eseguito correttamente il rollback in caso di errore, non è possibile eseguirne il rollback una volta completato il caricamento bulk. Per annullare un processo **dwloader** attivo, digitare CTRL + C.  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
-La dimensione totale di tutti i caricamenti che si verificano simultaneamente deve essere minore di LOG_SIZE per il database ed è consigliabile che le dimensioni totali di tutti i carichi simultanei siano inferiori al 50% del LOG_SIZE. Per ottenere questa limitazione delle dimensioni, è possibile suddividere i carichi di grandi dimensioni in più batch. Per ulteriori informazioni su LOG_SIZE, vedere [create database](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016)  
+La dimensione totale di tutti i caricamenti che si verificano simultaneamente deve essere minore di LOG_SIZE per il database ed è consigliabile che le dimensioni totali di tutti i carichi simultanei siano inferiori al 50% del LOG_SIZE. Per ottenere questa limitazione delle dimensioni, è possibile suddividere i carichi di grandi dimensioni in più batch. Per ulteriori informazioni su LOG_SIZE, vedere [create database](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016&preserve-view=true)  
   
 Quando si caricano più file con un solo comando Load, tutte le righe rifiutate vengono scritte nello stesso file Reject. Il file di rifiuto non indica il file di input contenente ogni riga rifiutata.  
   
@@ -554,13 +554,13 @@ La modalità di accodamento consente di caricare i dati in due fasi. La fase 1 c
   
 |Tipo di tabella|Più transazioni<br />Modalità (-m)|Tabella vuota|Concorrenza supportata|Registrazione|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Heap|Sì|Sì|Sì|Minimal|  
-|Heap|Sì|No|Sì|Minimal|  
-|Heap|No|Sì|No|Minimal|  
-|Heap|No|No|No|Minimal|  
-|CL|Sì|Sì|No|Minimal|  
+|Heap|Sì|Sì|Sì|Minime|  
+|Heap|Sì|No|Sì|Minime|  
+|Heap|No|Sì|No|Minime|  
+|Heap|No|No|No|Minime|  
+|CL|Sì|Sì|No|Minime|  
 |CL|Sì|No|Sì|Full|  
-|CL|No|Sì|No|Minimal|  
+|CL|No|Sì|No|Minime|  
 |CL|No|No|Sì|Full|  
   
 La tabella precedente Mostra **dwloader** usando il caricamento in modalità Accodamento in un heap o una tabella dell'indice cluster (ci), con o senza il flag transazionale, e il caricamento in una tabella vuota o in una tabella non vuota. Nella tabella viene visualizzato il comportamento di blocco e di registrazione di ogni combinazione di carico. Ad esempio, la fase di caricamento (2a) con la modalità di Accodamento in un indice cluster senza modalità transazionale e in una tabella vuota creerà un blocco esclusivo sulla tabella e la registrazione sarà minima. Questo significa che un cliente non sarà in grado di caricare (2a) fase e query simultaneamente in una tabella vuota. Tuttavia, quando si carica con la stessa configurazione in una tabella non vuota, PDW non emette un blocco esclusivo sulla tabella e la concorrenza è possibile. Sfortunatamente, la registrazione completa si verifica, rallentando il processo.  
@@ -695,7 +695,7 @@ Descrizione dei parametri della riga di comando:
   
 -   *-r \r\n* specifica ogni riga in DimAccount.txt termina con un ritorno a capo e un carattere di avanzamento riga.  
   
--   *-U <login_name>-P <password> * Specifica l'account di accesso e la password per l'account di accesso che dispone delle autorizzazioni per eseguire il caricamento.  
+-   *-U <login_name>-P <password>* Specifica l'account di accesso e la password per l'account di accesso che dispone delle autorizzazioni per eseguire il caricamento.  
   
 
 <!-- MISSING LINK

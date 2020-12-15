@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 7bf3928bfb21d34d0f60e6c52be8dae43621e4bd
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 526f7c7bea8d7ed1e7499649d929f6c732ab07a3
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766740"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489681"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Database master-data warehouse parallela
 Il database master SQL Server PDW archivia le informazioni di accesso a livello di dispositivo e il catalogo del database. Si tratta di un database master SQL Server che risiede nel nodo di controllo. Di conseguenza, fornisce funzionalità simili a SQL Server PDW come il master fornisce per SQL Server.  
@@ -44,7 +44,7 @@ Nell'elenco seguente vengono descritte le operazioni che non è possibile esegui
   
 |Attività|Descrizione|  
 |--------|---------------|  
-|Creare un backup completo del database master.|Esempio:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Per ulteriori informazioni, vedere [backup database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016).|  
+|Creare un backup completo del database master.|Esempio:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Per ulteriori informazioni, vedere [backup database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true).|  
 |Ripristinare il database master|Per ripristinare il database master, utilizzare la pagina [Ripristina database master](restore-the-master-database.md) dello strumento Configuration Manager.|  
 |Visualizzare le informazioni del catalogo del database.|`SELECT * FROM master.sys.databases;`|  
 |Consente di visualizzare informazioni sulle autorizzazioni e sull'accesso a livello di sistema.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b6e0bbfd3acbc7616fca0f180d6de3238a724231
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767160"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489721"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Acquisire e configurare un server di backup per data warehouse paralleli
 Questo articolo descrive come configurare un sistema Windows non Appliance come server di backup per l'uso con le funzionalità di backup e ripristino in Analytics Platform System (APS) e Parallel data warehouse (PDW).  
@@ -120,9 +120,9 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 Per altre informazioni, vedere: 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016&preserve-view=true)   
   
--   [RIPRISTINA DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
+-   [RIPRISTINA DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)  
   
 ## <a name="security-notices"></a><a name="Security"></a>Avvisi sulla sicurezza  
 Il server di backup non è stato aggiunto al dominio privato per l'appliance. Si trova nella propria rete e non esiste alcuna relazione di trust tra il dominio e il dominio Appliance privato.  
@@ -140,7 +140,7 @@ Per archiviare il nome utente e la password in PDW, usare il [sp_pdw_add_network
   
 Per rimuovere le credenziali di rete da PDW, usare il stored procedure [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) .  
   
-Per elencare tutte le credenziali di rete archiviate in SQL Server PDW, utilizzare la vista a gestione dinamica [sys. dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) .  
+Per elencare tutte le credenziali di rete archiviate in SQL Server PDW, utilizzare la vista a gestione dinamica [sys.dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) .  
   
 ### <a name="secure-communications"></a>Comunicazioni sicure  
   

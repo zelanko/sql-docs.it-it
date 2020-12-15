@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 035273939e2141b8497b5b0c38762fd7b7d47564
-ms.sourcegitcommit: ce15cbbcb0d5f820f328262ff5451818e508b480
+ms.openlocfilehash: 8d4de2aea0a9020a7f971f36dd011c435a3cec3d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94947931"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489497"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificare il database SQL di Azure o lo SKU Istanza gestita appropriato per il database locale
 
@@ -44,7 +44,7 @@ Di seguito sono riportate le istruzioni che consentono di determinare le raccoma
 - Verificare che il computer disponga di [PowerShell versione 5,1](https://www.microsoft.com/download/details.aspx?id=54616) o successiva, che è necessario per eseguire tutti gli script. Per informazioni su come scoprire quale versione di PowerShell è installata nel computer, vedere l'articolo [scaricare e installare Windows powershell 5,1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
   > [!NOTE]
   > Per raccogliere informazioni sul computer, lo script di raccolta dati usa il cmdlet Get-WmiObject, che è stato deprecato in PowerShell 6. Per eseguire questo script in PowerShell 6 o 7, è necessario sostituire i cmdlet WMI con i cmdlet CIM più recenti.
-- Verificare che nel computer sia installato il modulo Azure PowerShell. Per ulteriori informazioni, vedere l'articolo [installare il modulo Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.8.0).
+- Verificare che nel computer sia installato il modulo Azure PowerShell. Per ulteriori informazioni, vedere l'articolo [installare il modulo Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.8.0&preserve-view=true).
 - Verificare che il file di PowerShell **SkuRecommendationDataCollectionScript.ps1**, che è necessario per raccogliere i contatori delle prestazioni, sia installato nella cartella DMA.
 - Verificare che il computer in cui si eseguirà questo processo disponga delle autorizzazioni di amministratore per il computer in cui sono ospitati i database di.
 
@@ -239,4 +239,4 @@ Per inserire le informazioni di provisioning e apportare modifiche alle raccoman
 
 ## <a name="next-step"></a>Passaggio successivo
 
-- Per un elenco completo dei comandi per l'esecuzione di DMA dall'interfaccia della riga di comando, vedere l'articolo [eseguire Data Migration Assistant dalla riga di comando](./dma-commandline.md?view=sql-server-2017).
+- Per un elenco completo dei comandi per l'esecuzione di DMA dall'interfaccia della riga di comando, vedere l'articolo [eseguire Data Migration Assistant dalla riga di comando](./dma-commandline.md).

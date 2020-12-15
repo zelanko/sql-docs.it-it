@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: b91385f587668b17bd9cde9f173cebacce48dc91
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636171"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489545"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Riprodurre una traccia in Database Experimentation Assistant
 
@@ -52,7 +52,7 @@ In primo luogo, è necessario eseguire una riproduzione della traccia sulla dest
 
 3. Verificare che il database sia stato ripristinato selezionando la casella di controllo **Sì, ho ripristinato manualmente i database** .
 
-4. In **SQL Server Dettagli connessione**immettere o selezionare le informazioni seguenti:
+4. In **SQL Server Dettagli connessione** immettere o selezionare le informazioni seguenti:
 
     - **Tipo di server**: specificare il tipo di SQL Server (**SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
     - **Nome server**: specificare il nome del server o l'indirizzo IP del SQL Server.
@@ -139,7 +139,7 @@ DEA acquisisce gli eventi di traccia che contengono informazioni relative alle p
 
 - Verificare che il servizio Riesecuzione distribuita controller sia in esecuzione nel computer del controller. Per verificare, usare gli strumenti di gestione di Riesecuzione distribuita (eseguire il comando `dreplay.exe status -f 1` ).
 - Se la riproduzione viene avviata in modalità remota:
-  - Verificare che il computer che esegue DEA possa eseguire correttamente il ping del controller. Verificare che le impostazioni del firewall consentano le connessioni in base alle istruzioni nella pagina **Configura ambiente di riproduzione** . Per ulteriori informazioni, vedere l'articolo [SQL Server riesecuzione distribuita](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017).
+  - Verificare che il computer che esegue DEA possa eseguire correttamente il ping del controller. Verificare che le impostazioni del firewall consentano le connessioni in base alle istruzioni nella pagina **Configura ambiente di riproduzione** . Per ulteriori informazioni, vedere l'articolo [SQL Server riesecuzione distribuita](../tools/distributed-replay/sql-server-distributed-replay.md).
   - Assicurarsi che l'avvio remoto e l'attivazione remota DCOM siano consentiti per l'utente del controller di Riesecuzione distribuita.
   - Verificare che i diritti utente di accesso remoto DCOM siano consentiti per l'utente del controller di Riesecuzione distribuita.
 
@@ -163,6 +163,6 @@ Questo problema è noto nella versione RTM di SQL Server 2017. Per ulteriori inf
   
 Il problema è stato risolto nell'aggiornamento cumulativo 1 più recente per SQL Server 2017. Scaricare la versione più recente dell' [aggiornamento cumulativo 1 per SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 - Per creare un report di analisi che consenta di ottenere informazioni dettagliate sulle modifiche proposte, vedere [creare report](database-experimentation-assistant-create-report.md).

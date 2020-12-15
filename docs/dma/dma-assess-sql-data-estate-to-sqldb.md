@@ -15,18 +15,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9aae42b92c6d7d9bb5c26c84e49c49a8cde6bc57
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: c6e5a3878011de396568c4649ea5575635e96aec
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523878"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489555"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Valutare la conformità di un SQL Server di dati di cui si esegue la migrazione al database SQL di Azure usando il Data Migration Assistant
 
 La migrazione di centinaia di istanze di SQL Server e di migliaia di database al database SQL di Azure, l'offerta di piattaforma distribuita come servizio (PaaS), è un'attività considerevole. Per semplificare il processo il più possibile, è necessario avere la certezza della disponibilità relativa per la migrazione. L'identificazione dei frutti a basso costo, inclusi i server e i database che sono completamente pronti o che richiedono un impegno minimo per preparare la migrazione, semplifica e accelera le attività.
 
-In questo articolo vengono fornite istruzioni dettagliate per sfruttare i [Data Migration Assistant](./dma-overview.md?view=sql-server-2017) per riepilogare i risultati di conformità ed esporli nell'hub [Azure migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
+In questo articolo vengono fornite istruzioni dettagliate per sfruttare i [Data Migration Assistant](./dma-overview.md) per riepilogare i risultati di conformità ed esporli nell'hub [Azure migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
 
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
@@ -37,7 +37,7 @@ Configurare un nuovo progetto di Azure Migrate in una sottoscrizione di Azure e 
 
 Il progetto Azure Migrate viene usato per archiviare i metadati di individuazione, valutazione e migrazione raccolti dall'ambiente da valutare o trasferire. Si usa un progetto anche per tenere traccia delle risorse individuate e per orchestrare la valutazione e la migrazione.
 
-1. Accedere al portale di Azure, selezionare tutti i **Servizi**e quindi cercare Azure migrate.
+1. Accedere al portale di Azure, selezionare tutti i **Servizi** e quindi cercare Azure migrate.
 2. In **Servizi** selezionare **Azure Migrate**.
 
    ![Azure Migrate-selezionare il servizio](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-services.png)
@@ -51,7 +51,7 @@ Il progetto Azure Migrate viene usato per archiviare i metadati di individuazion
    ![Azure Migrate-aggiungere strumenti](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tools.png)
 
 5. Nella scheda **migrazione progetto** selezionare la sottoscrizione e il gruppo di risorse di Azure (se non si dispone già di un gruppo di risorse, crearne uno).
-6. In **Dettagli progetto**specificare il nome del progetto e l'area geografica in cui si desidera creare il progetto.
+6. In **Dettagli progetto** specificare il nome del progetto e l'area geografica in cui si desidera creare il progetto.
 
     ![Azure Migrate-aggiungere una finestra di dialogo dello strumento](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tool-dialog.png)
 
@@ -178,7 +178,7 @@ Dopo aver creato un progetto di migrazione, in **strumenti di valutazione**, nel
 
    ![Azure Migrate rivedere i blocchi di migrazione](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>Vedi anche
+## <a name="see-also"></a>Vedere anche
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant: impostazioni di configurazione](../dma/dma-configurationsettings.md)
