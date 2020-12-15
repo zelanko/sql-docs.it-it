@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b84de259222b9e2bde8c9b99f67328ea317e645
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 35f08a014fd1abbc8af6db994ba4c2d9b85a0bd4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765139"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405629"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Effettuare il provisioning di chiavi Always Encrypted con SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ La finestra di dialogo **Nuova chiave master della colonna** consente di generar
     - **Archivio certificati - Utente corrente**: indica il percorso dell'archivio certificati Utente corrente nell'archivio certificati di Windows, ovvero nell'archivio personale. 
     - **Archivio certificati - Computer locale**: indica il percorso dell'archivio certificati Computer locale nell'archivio certificati di Windows. 
     - **Azure Key Vault**: è necessario accedere ad Azure facendo clic su **Accedi**. Dopo aver eseguito l'accesso, sarà possibile selezionare uno degli abbonamenti di Azure e un insieme di credenziali delle chiavi.
-    - **Provider dell'archivio chiavi (KSP)** : indica un archivio chiavi che è accessibile tramite un provider dell'archivio chiavi (KSP) che implementa l'API CNG (Cryptography Next Generation). In genere, questo tipo di archivio è un modulo di protezione hardware (HSM). Dopo aver selezionato questa opzione, è necessario selezionare un provider dell'archivio chiavi. Viene selezionato per impostazione predefinita il**provider dell'archivio chiavi del software Microsoft** . Per usare una chiave master della colonna archiviata in un HSM, selezionare un provider dell'archivio chiavi per il dispositivo, che deve essere installato e configurato nel computer prima di aprire la finestra di dialogo.
+    - **Provider dell'archivio chiavi (KSP)** : indica un archivio chiavi che è accessibile tramite un provider dell'archivio chiavi (KSP) che implementa l'API CNG (Cryptography Next Generation). In genere, questo tipo di archivio è un modulo di protezione hardware (HSM). Dopo aver selezionato questa opzione, è necessario selezionare un provider dell'archivio chiavi. Viene selezionato per impostazione predefinita il **provider dell'archivio chiavi del software Microsoft** . Per usare una chiave master della colonna archiviata in un HSM, selezionare un provider dell'archivio chiavi per il dispositivo, che deve essere installato e configurato nel computer prima di aprire la finestra di dialogo.
     -   **Provider del servizio di crittografia (CSP)** : un archivio chiavi accessibile attraverso un provider del servizio di crittografia (CSP) che implementa l'API di crittografia (CAPI). In genere, questo archivio è un modulo di protezione hardware (HSM). Dopo aver selezionato questa opzione, è necessario selezionare un provider del servizio di crittografia.  Per usare una chiave master della colonna archiviata in un HSM, selezionare un provider del servizio di crittografia per il dispositivo, che deve essere installato e configurato nel computer prima di aprire la finestra di dialogo.
     
     > [!NOTE]
@@ -60,7 +60,7 @@ La finestra di dialogo **Nuova chiave master della colonna** consente di generar
 
 Dopo aver completato la finestra di dialogo, SQL Server Management Studio crea i metadati per la chiave master della colonna nel database. Nella finestra di dialogo viene generata e rilasciata un'istruzione [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) .
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 Se si sta configurando una chiave master della colonna abilitata per l'enclave, SSMS usa la chiave anche per firmare i metadati. 
 
@@ -81,7 +81,7 @@ Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna 
 
 La finestra di dialogo **Nuova chiave di crittografia della colonna** consente di generare una chiave di crittografia della colonna, crittografarla con una chiave master della colonna e creare i metadati della chiave di crittografia della colonna nel database.
 
-1.  In **Esplora oggetti**passare alla cartella **Sicurezza/Chiavi con crittografia sempre attiva** del database.
+1.  In **Esplora oggetti** passare alla cartella **Sicurezza/Chiavi con crittografia sempre attiva** del database.
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Chiavi di crittografia della colonna** e selezionare **Nuova chiave di crittografia della colonna**. 
 3.  Nella finestra di dialogo **Nuova chiave di crittografia della colonna** immettere il nome dell'oggetto metadati della chiave di crittografia della colonna.
 4.  Selezionare un oggetto metadati che rappresenta la chiave master della colonna nel database.

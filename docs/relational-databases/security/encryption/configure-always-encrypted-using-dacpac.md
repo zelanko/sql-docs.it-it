@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bb90c0f00087f0d2b0b76b3fa66b8cca2f4707c
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c18b6842139e5a4f5f0261761fa93cc42d3a506c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96130904"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97405671"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Configurare la crittografia delle colonne usando Always Encrypted con un pacchetto di applicazione livello dati 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ La distribuzione di un pacchetto DAC può comportare anche la creazione o la rim
 ## <a name="performance-considerations"></a>Considerazioni sulle prestazioni
 Per eseguire operazioni di crittografia, lo strumento usato per distribuire un pacchetto DACPAC deve spostare i dati fuori dal database. Lo strumento crea una o più nuove tabelle con la configurazione di crittografia desiderata nel database, carica tutti i dati dalle tabelle originali, esegue le operazioni di crittografia richieste, carica i dati nelle nuove tabelle e quindi scambia le tabelle originali con le nuove tabelle. L'esecuzione di operazioni di crittografia può richiedere molto tempo. Durante questo periodo, il database non è disponibile per la scrittura di transazioni. 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Se si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e l'istanza di SQL Server è configurata con un'enclave sicura, è possibile eseguire le operazioni di crittografia sul posto, senza trasferire i dati all'esterno del database. Vedere [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicure](always-encrypted-enclaves-configure-encryption.md). La crittografia sul posto non è disponibile per le distribuzioni di pacchetti DACPAC.
