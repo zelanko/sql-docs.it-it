@@ -15,13 +15,13 @@ ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8bb42554935076679107d78ee5c2eed0b838797
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3b54f8e3f4cc2656469aaccabe810a89cb661e5c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470456"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407300"
 ---
 # <a name="perform-index-operations-online"></a>Eseguire operazioni online sugli indici
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "88470456"
   
 5.  Fare clic con il pulsante destro del mouse sull'indice da ricompilare online e selezionare **Proprietà**.  
   
-6.  In **Selezione pagina**selezionare **Opzioni**.  
+6.  In **Selezione pagina** selezionare **Opzioni**.  
   
 7.  Selezionare **Consenti elaborazione DML online**, quindi selezionare **True** dall'elenco.  
   

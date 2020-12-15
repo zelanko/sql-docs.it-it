@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43ef52303110cb26b145348edc6aa9ec09bf38de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 780ee667e84b0def82e27afff1b27886150c8bb0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408137"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97407301"
 ---
 # <a name="index-properties-f1-help"></a>Guida sensibile al contesto di Proprietà indice
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -279,7 +279,7 @@ Le pagine di livello intermedio vengono riempite poco al di sotto della capacit�
  Se al livello principale un oggetto include più celle rispetto a quanto specificato da *n*, l'indicizzazione usa il numero di celle necessario per offrire uno schema a mosaico di livello principale completo. In tali casi un oggetto può ricevere un numero di celle maggiore di quello specificato: il numero massimo è il numero di celle generate dalla griglia di livello principale che dipende dalla densità di **Livello 1** .  
   
 ### <a name="grids"></a>Griglie  
- In questo pannello è visualizzata la densità della griglia a ogni livello dello schema a mosaico. Le opzioni disponibili sono **Bassa**, **Media**o **Alta**. Il valore predefinito è **Media**. **Bassa** rappresenta una griglia 4x4 (16 celle), **Media** una griglia 8x8 (64 celle) e **Alta** una griglia 16x16 (256 celle). Queste opzioni non sono disponibili se si scelgono le opzioni di schema a mosaico **Griglia geometrica automatica** o **Griglia geografica automatica** .  
+ In questo pannello è visualizzata la densità della griglia a ogni livello dello schema a mosaico. Le opzioni disponibili sono **Bassa**, **Media** o **Alta**. Il valore predefinito è **Media**. **Bassa** rappresenta una griglia 4x4 (16 celle), **Media** una griglia 8x8 (64 celle) e **Alta** una griglia 16x16 (256 celle). Queste opzioni non sono disponibili se si scelgono le opzioni di schema a mosaico **Griglia geometrica automatica** o **Griglia geografica automatica** .  
   
  **Livello 1**  
  Densità della griglia di primo livello (principale).  
