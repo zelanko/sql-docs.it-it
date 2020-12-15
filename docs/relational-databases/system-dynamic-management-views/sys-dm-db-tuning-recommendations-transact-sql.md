@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: adf2a1eb88397acbbc8e092eb320e15f239ae8f2
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cad75b88b14fd9bc64acbbd8b167619d3dbcc2e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834520"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472882"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>\_indicazioni sull'ottimizzazione del database sys.dm \_ \_ (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "91834520"
 
 | **Nome colonna** | **Tipo di dati** | **Descrizione** |
 | --- | --- | --- |
-| **name** | **nvarchar(4000)** | Nome univoco dell'indicazione. |
+| **nome** | **nvarchar(4000)** | Nome univoco dell'indicazione. |
 | **type** | **nvarchar(4000)** | Nome dell'opzione di ottimizzazione automatica che ha prodotto la raccomandazione, ad esempio `FORCE_LAST_GOOD_PLAN` |
 | **reason** | **nvarchar(4000)** | Motivo per cui è stata fornita questa raccomandazione. |
 | **valido \_ da** | **datetime2** | La prima volta che questa raccomandazione è stata generata. |
@@ -57,7 +57,7 @@ ms.locfileid: "91834520"
 | **Punteggio** | **int** | Valore stimato/effetto per questa raccomandazione sulla scala 0-100 (maggiore è il migliore) |
 | **Dettagli** | **nvarchar(max)** | Documento JSON che contiene ulteriori dettagli sull'indicazione. Sono disponibili i campi seguenti:<br /><br />`planForceDetails`<br />-    `queryId` : \_ ID query della query regressione.<br />-    `regressedPlanId` -plan_id del piano regressione.<br />-   `regressedPlanExecutionCount` : Numero di esecuzioni della query con piano regressione prima che venga rilevata la regressione.<br />-    `regressedPlanAbortedCount` -Numero di errori rilevati durante l'esecuzione del piano regressione.<br />-    `regressedPlanCpuTimeAverage` -Tempo medio CPU (in microsecondi) utilizzato dalla query regressione prima che venga rilevata la regressione.<br />-    `regressedPlanCpuTimeStddev` -Deviazione standard del tempo di CPU utilizzato dalla query regressione prima che venga rilevata la regressione.<br />-    `recommendedPlanId` -plan_id del piano da forzare.<br />-   `recommendedPlanExecutionCount`: Numero di esecuzioni della query con il piano da forzare prima che venga rilevata la regressione.<br />-    `recommendedPlanAbortedCount` : Numero di errori rilevati durante l'esecuzione del piano da forzare.<br />-    `recommendedPlanCpuTimeAverage` -Tempo medio CPU (in microsecondi) utilizzato dalla query eseguita con il piano che deve essere forzato (calcolato prima che la regressione venga rilevata).<br />-    `recommendedPlanCpuTimeStddev` Deviazione standard del tempo di CPU utilizzato dalla query regressione prima che venga rilevata la regressione.<br /><br />`implementationDetails`<br />-  `method` : Il metodo che deve essere usato per correggere la regressione. Il valore è sempre `TSql` .<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script da eseguire per forzare il piano consigliato. |
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Le informazioni restituite da `sys.dm_db_tuning_recommendations` vengono aggiornate quando il motore di database identifica la possibile regressione delle prestazioni delle query e non è permanente. Le raccomandazioni vengono mantenute solo fino a quando non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato. Gli amministratori di database devono eseguire periodicamente copie di backup dell'indicazione di ottimizzazione se vogliono mantenerla dopo il riciclo del server. 
 
  `currentValue` il campo della `state` colonna può contenere i valori seguenti:

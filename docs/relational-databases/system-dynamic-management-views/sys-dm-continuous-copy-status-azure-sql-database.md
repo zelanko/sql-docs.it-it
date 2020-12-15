@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a27c286316dd49407b0cb74027eefc296a8ca654
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 69dfbde65d00f3d6995d1bce784a46a64515f8fe
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834271"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472892"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (database SQL di Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -52,14 +52,14 @@ Se si usa il database SQL V12 è necessario usare [sys.dm_geo_replication_link_s
 ## <a name="permissions"></a>Autorizzazioni  
  Per recuperare i dati, è richiesta l'appartenenza al ruolo del database **db_owner** . Anche l'utente dbo, i membri del ruolo del database **dbmanager** e l'account di accesso sa possono eseguire query su questa vista.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  La vista **sys.dm_continuous_copy_status** viene creata nel database **Resource** ed è visibile in tutti i database, incluso il database master logico. Tuttavia, se si esegue una query su questa vista nel database master logico viene restituito un set vuoto.  
   
  Se la relazione di copia continua viene terminata su un database, la riga relativa a tale database nella vista **sys.dm_continuous_copy_status** scomparirà.  
   
- Analogamente alla visualizzazione **sys.dm_database_copies** , **sys.dm_continuous_copy_status** riflette lo stato della relazione di copia continua in cui il database è un database primario o secondario attivo. A differenza di **sys.dm_database_copies**, **sys.dm_continuous_copy_status** contiene diverse colonne che forniscono informazioni dettagliate sulle operazioni e sulle prestazioni. Queste colonne includono **last_replication**e **replication_lag_sec**.  
+ Analogamente alla visualizzazione **sys.dm_database_copies** , **sys.dm_continuous_copy_status** riflette lo stato della relazione di copia continua in cui il database è un database primario o secondario attivo. A differenza di **sys.dm_database_copies**, **sys.dm_continuous_copy_status** contiene diverse colonne che forniscono informazioni dettagliate sulle operazioni e sulle prestazioni. Queste colonne includono **last_replication** e **replication_lag_sec**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.dm_database_copies &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [Stored procedure per la replica geografica attiva &#40;Transact-SQL&#41;](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Stored procedure Geo-Replication attive &#40;&#41;Transact-SQL ](../system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

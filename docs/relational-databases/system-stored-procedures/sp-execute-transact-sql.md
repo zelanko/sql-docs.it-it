@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49b5548d149640b7e9d78b38c70c22fd6c5ae163
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 72018e5e064a3d3f35fb8495f3b32d7a3e76d4fd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005603"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472712"
 ---
 # <a name="sp_execute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ sp_execute handle OUTPUT
  Indica l'utilizzo di parametri aggiuntivi. *bound_param* è un parametro obbligatorio che richiede valori di input di qualsiasi tipo di dati per indicare parametri aggiuntivi per la procedura.  
   
 > [!NOTE]  
->  *bound_param* deve corrispondere alle dichiarazioni effettuate dal valore dei*parametri* sp_prepare e può essere nel formato * @name = valore* o *valore*.  
+>  *bound_param* deve corrispondere alle dichiarazioni effettuate dal valore dei *parametri* sp_prepare e può essere nel formato *@name = valore* o *valore*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

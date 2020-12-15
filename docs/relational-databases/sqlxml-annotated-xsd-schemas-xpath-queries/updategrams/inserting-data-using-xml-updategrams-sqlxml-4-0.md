@@ -34,13 +34,13 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88e1f334629482182fb182dde60f715c0d122d25
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ac801a52e89e60bb05d1431de77078fa750f6d34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790598"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473112"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Inserimento di dati mediante updategram XML (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -67,10 +67,10 @@ ms.locfileid: "85790598"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<before>Blocco  
+## <a name="before-block"></a>\<before> Blocco  
  Il **\<before>** blocco può essere omesso per un'operazione di inserimento. Se l'attributo **mapping-schema** facoltativo non è specificato, l' **\<ElementName>** elemento specificato nell'updategram esegue il mapping a una tabella di database e gli attributi o gli elementi figlio vengono mappati alle colonne della tabella.  
   
-## <a name="after-block"></a>\<after>Blocco  
+## <a name="after-block"></a>\<after> Blocco  
  È possibile specificare uno o più record nel **\<after>** blocco.  
   
  Se il **\<after>** blocco non fornisce un valore per una colonna specifica, l'updategram utilizzerà il valore predefinito specificato nello schema con annotazioni (se è stato specificato uno schema). Se lo schema non specifica un valore predefinito per la colonna, l'updategram non specifica alcun valore esplicito per questa colonna e, invece, assegna il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valore predefinito (se specificato) a questa colonna. Se non è presente alcun valore predefinito di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e la colonna accetta un valore NULL, l'updategram imposta il valore della colonna su NULL. Se la colonna non ha un valore predefinito e non accetta un valore NULL, il comando non riesce e l'updategram restituisce un errore. L'attributo facoltativo **attributo updg: returnid** viene usato per restituire il valore Identity generato dal sistema quando viene aggiunto un record in una tabella con una colonna di tipo Identity.  
@@ -84,7 +84,7 @@ ms.locfileid: "85790598"
 ## <a name="updgguid-attribute"></a>Attributo updg:guid  
  L'attributo **attributo updg: GUID** è un attributo facoltativo che genera un identificatore univoco globale. Questo valore rimane nell'ambito per l'intero **\<sync>** blocco in cui è specificato. È possibile utilizzare questo valore in qualsiasi punto del **\<sync>** blocco. L'attributo chiama la funzione **NewGuid ()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per generare l'identificatore univoco.  
   
-## <a name="examples"></a>Esempi  
+## <a name="examples"></a>Esempio  
  Per creare esempi funzionanti utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati nei [requisiti per l'esecuzione di esempi SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
  Prima di utilizzare gli esempi dell'updategram, si tenga presente quanto segue:  

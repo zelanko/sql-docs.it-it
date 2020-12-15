@@ -1,6 +1,6 @@
 ---
 description: sys.bandwidth_usage (Azure SQL Database)
-title: sys. bandwidth_usage (database SQL di Azure) | Microsoft Docs
+title: sys.bandwidth_usage (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d39486a513e012fc53e66c408145bbf148696ff2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: = azuresqldb-current
+ms.openlocfilehash: c71fdc21c634e8f473d628373ae5adfa9c1c072f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88402527"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473032"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -34,11 +34,11 @@ ms.locfileid: "88402527"
 > [!NOTE]
 > Si applica solo a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11. * *  
   
- Restituisce informazioni sulla larghezza di banda di rete utilizzata da ogni database in un ** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server di database V11**. In ogni riga restituita per un determinato database vengono riepilogate una direzione e una classe di utilizzo per un periodo di un'ora.  
+ Restituisce informazioni sulla larghezza di banda di rete utilizzata da ogni database in un **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server di database V11**. In ogni riga restituita per un determinato database vengono riepilogate una direzione e una classe di utilizzo per un periodo di un'ora.  
   
  **Questa funzionalità è stata deprecata in un oggetto [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .**  
   
- La vista **sys. bandwidth_usage** contiene le colonne seguenti.  
+ La vista **sys.bandwidth_usage** contiene le colonne seguenti.  
   
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
@@ -53,11 +53,11 @@ ms.locfileid: "88402527"
 
  Questa vista è disponibile solo nel database **Master** per l'account di accesso dell'entità di livello server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
   
 ### <a name="external-and-internal-classes"></a>Classi External e Internal
 
- Per ogni database utilizzato in un determinato momento, la vista **sys. bandwidth_usage** restituisce righe che mostrano la classe e la direzione dell'utilizzo della larghezza di banda. Nell'esempio seguente vengono illustrati i dati che possono essere esposti per un determinato database. In questo esempio, la data e l'ora sono 2012-04-21 17:00:00, che cade nel periodo di massima attività. Il nome del database è Db1. In questo esempio **sys. bandwidth_usage** ha restituito una riga per tutte e quattro le combinazioni delle direzioni in ingresso e in uscita e le classi esterne e interne, come indicato di seguito:  
+ Per ogni database usato in un determinato momento, la vista **sys.bandwidth_usage** restituisce righe che mostrano la classe e la direzione di utilizzo della larghezza di banda. Nell'esempio seguente vengono illustrati i dati che possono essere esposti per un determinato database. In questo esempio, la data e l'ora sono 2012-04-21 17:00:00, che cade nel periodo di massima attività. Il nome del database è Db1. In questo esempio **sys.bandwidth_usage** ha restituito una riga per tutte e quattro le combinazioni delle direzioni in ingresso e in uscita e le classi esterne e interne, come indicato di seguito:  
   
 |time|database_name|direction|classe|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  

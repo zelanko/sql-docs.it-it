@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5fa8a1df313af5473de9c49137166a6c2ac50589
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+monikerRange: '>=sql-server-ver15'
+ms.openlocfilehash: ef24acb23a346b59b747d876d60d9a58374188bd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521103"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469972"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Ospitare un database MDS in un'istanza gestita
 
@@ -47,7 +47,7 @@ Per preparare, è necessario creare e configurare un Istanza gestita SQL di Azur
      - Strumenti di gestione Web
      - Console di gestione IIS
      - Servizi Web
-     - Sviluppo di applicazioni
+     - Sviluppo applicazioni
      - Estendibilità .NET 3.5
      - Estendibilità .NET 4.5
      - ASP.NET 3.5
@@ -135,22 +135,22 @@ Questa azione consente di installare:
 
 1. Dopo aver creato e configurato il database, selezionare **fine**.
 
-   Per ulteriori informazioni sulle impostazioni della **procedura guidata Crea database** , vedere [creazione guidata database &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
+   Per ulteriori informazioni sulle impostazioni della **procedura guidata Crea database**, vedere [creazione guidata database &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
 
 1. Nella pagina **Configurazione database** in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] scegliere **Seleziona database**.
 
-1. Selezionare **Connetti** , scegliere il [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database e quindi fare clic su **OK**.
+1. Selezionare **Connetti**, scegliere il [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database e quindi fare clic su **OK**.
 
    ![Screenshot della finestra di dialogo Connetti al database.](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_connectDBName")
 
 1. In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] selezionare **configurazione Web** nel riquadro sinistro.
 
-1. Nella casella di riepilogo **sito** Web scegliere **sito Web predefinito** , quindi selezionare **Crea** per creare un'applicazione Web.
+1. Nella casella di riepilogo **sito** Web scegliere **sito Web predefinito**, quindi selezionare **Crea** per creare un'applicazione Web.
 
    ![Screenshot della finestra di dialogo Gestione configurazione Master Data Services.](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "MDS-SQLServer2019-config-MI_WebConfiguration")
 
    > [!NOTE]
-   > Se si seleziona **sito Web predefinito** , sarà necessario creare un'applicazione Web separatamente. Se si sceglie **Crea nuovo sito Web** nella casella di riepilogo, l'applicazione viene creata automaticamente.
+   > Se si seleziona **sito Web predefinito**, sarà necessario creare un'applicazione Web separatamente. Se si sceglie **Crea nuovo sito Web** nella casella di riepilogo, l'applicazione viene creata automaticamente.
 
 1. Nella sezione **pool di applicazioni** immettere un nome utente diverso, immettere la password e quindi fare clic su **OK**.
 

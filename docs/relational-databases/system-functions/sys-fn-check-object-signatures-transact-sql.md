@@ -1,6 +1,6 @@
 ---
 description: sys.fn_check_object_signatures (Transact-SQL)
-title: sys. fn_check_object_signatures (Transact-SQL) | Microsoft Docs
+title: sys.fn_check_object_signatures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7dc2f5c8700bef804b77e97917250152988baf7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 652f7d896d68097d081d209fd6617a8a3b389eb9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481824"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472772"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -53,7 +53,7 @@ fn_ check_object_signatures (
   
 -   'asymmetric key'  
   
- \@*class* è **sysname**.  
+ \@*classe* è di **tipo sysname**.  
   
  { \@ *identificazione digitale* }  
  Hash SHA-1 del certificato con il quale è crittografata la chiave, o GUID della chiave asimmetrica con il quale è crittografata la chiave. \@*identificazione personale* è di tipo **varbinary (20)**.  
@@ -68,7 +68,7 @@ fn_ check_object_signatures (
 |is_signed|**int**|Restituisce 0 quando l'oggetto non viene firmato con l'identificazione digitale fornita. Restituisce 1 quando l'oggetto viene firmato con l'identificazione digitale fornita.|  
 |is_signature_valid|**int**|Quando il valore is_signed è 1, restituisce 0 se la firma non è valida e 1 se è valida.<br /><br /> Quando il valore is_signed è 0, restituisce sempre 0.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Usare **fn_check_object_signatures** per verificare che gli utenti malintenzionati non abbiano alterato gli oggetti.  
   
 ## <a name="permissions"></a>Autorizzazioni  

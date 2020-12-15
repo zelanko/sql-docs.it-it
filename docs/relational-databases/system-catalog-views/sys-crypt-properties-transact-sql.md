@@ -1,6 +1,6 @@
 ---
 description: sys.crypt_properties (Transact-SQL)
-title: sys. crypt_properties (Transact-SQL) | Microsoft Docs
+title: sys.crypt_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4feac22b04fb06053441e046fd9f35ece6dbd33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09372a367d3469ffa0d2de6a4ea97bb1bbe10c34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469972"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473042"
 ---
 # <a name="syscrypt_properties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88469972"
 |**class**|**tinyint**|Identifica la classe dell'elemento in cui esiste la proprietà.<br /><br /> 1 = Oggetto o colonna<br /> 5 = Assembly|  
 |**class_desc**|**nvarchar(60)**|Descrizione della classe dell'elemento in cui esiste la proprietà.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|ID dell'elemento in cui esiste la proprietà, interpretato in base alla classe.|  
-|**Thumbprint**|**varbinary(32)**|Hash SHA-1 del certificato o chiave asimmetrica utilizzata.|  
+|**thumbprint**|**varbinary(32)**|Hash SHA-1 del certificato o chiave asimmetrica utilizzata.|  
 |**crypt_type**|**char (4)**|Tipo di crittografia.<br /><br /> SPVC = chiave privata con firma mediante certificato<br /><br /> SPVA = chiave privata asimmetrica firmata<br /><br /> CPVC = Controfirma tramite la chiave privata del certificato<br /><br /> CPVA = Controfirma tramite la chiave asimmetrica|  
 |**crypt_type_desc**|**nvarchar(60)**|Descrizione del tipo di crittografia.<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
 |**crypt_property**|**varbinary(max)**|Bit firmati o crittografati. Per un modulo firmato si tratta dei bit di firma del modulo.|  
