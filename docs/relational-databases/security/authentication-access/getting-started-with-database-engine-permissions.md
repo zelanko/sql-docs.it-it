@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c5d2d1f0af5abdf24fce8be780c15a73f2a778a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 81bb8dd3acae7fda65af0ada009b065c909506b3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91864473"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460063"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introduzione alle autorizzazioni del motore di database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,15 +81,13 @@ ms.locfileid: "91864473"
   
 #### <a name="if-the-person-connecting-will-be-connecting-to-only-one-database"></a>Se l'utente che si connette verrà connesso a un solo database  
   
-1.  Creare un account di accesso per i gruppi di Windows. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignorare i passaggi di Active Directory e creare qui gli account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+1.  Nel database utente creare un utente di database indipendente per il gruppo di Windows. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignorare i passaggi di Active Directory e creare qui l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per gli utenti di database indipendente.  
   
-2.  Nel database utente creare un utente di database indipendente per il gruppo di Windows. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignorare i passaggi di Active Directory e creare qui l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per gli utenti di database indipendente.  
+1.  Nel database utente creare uno o più ruoli del database definiti dall'utente, ognuno dei quali rappresenta una funzione simile, ad esempio analista finanziario e analista vendite.  
   
-3.  Nel database utente creare uno o più ruoli del database definiti dall'utente, ognuno dei quali rappresenta una funzione simile, ad esempio analista finanziario e analista vendite.  
+1.  Aggiungere gli utenti di database a uno o più ruoli del database definiti dall'utente.  
   
-4.  Aggiungere gli utenti di database a uno o più ruoli del database definiti dall'utente.  
-  
-5.  Concedere le autorizzazioni ai ruoli del database definiti dall'utente.  
+1.  Concedere le autorizzazioni ai ruoli del database definiti dall'utente.  
   
  Il risultato tipico a questo punto è che un utente di Windows è un membro di un gruppo di Windows. Il gruppo di Windows ha un account di accesso in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Viene eseguito il mapping dell'account di accesso a un'identità utente nel database utente. L'utente è un membro di un ruolo del database. È necessario ora aggiungere le autorizzazioni al ruolo.  
   

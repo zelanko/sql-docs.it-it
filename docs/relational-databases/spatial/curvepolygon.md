@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f117b284799ba4849131254b90a018a397824e7b
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 24be57e6e964fea4ddb0f050480dbe79353ddcd2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006326"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97459979"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "92006326"
 ### <a name="accepted-instances"></a>Istanze accettate  
  Per poter essere accettata, un'istanza **CurvePolygon** deve essere vuota o contenere solo anelli di arco circolare accettati. Un anello di arco circolare accettato soddisfa i requisiti seguenti.  
   
-1.  È un'istanza **LineString**, **CircularString**o **CompoundCurve** accettata. Per altre informazioni sulle istanze accettate, vedere [LineString](../../relational-databases/spatial/linestring.md), [CircularString](../../relational-databases/spatial/circularstring.md)e [CompoundCurve](../../relational-databases/spatial/compoundcurve.md).  
+1.  È un'istanza **LineString**, **CircularString** o **CompoundCurve** accettata. Per altre informazioni sulle istanze accettate, vedere [LineString](../../relational-databases/spatial/linestring.md), [CircularString](../../relational-databases/spatial/circularstring.md)e [CompoundCurve](../../relational-databases/spatial/compoundcurve.md).  
   
 2.  Dispone almeno di quattro punti.  
   
@@ -77,7 +77,7 @@ Perché un'istanza **CurvePolygon** sia valida, è necessario che l'anello inter
 3.  Ogni anello deve contenere almeno quattro punti.  
 4.  Ogni anello deve essere un tipo di curva accettabile.  
   
-Le istanze**CurvePolygon** devono inoltre soddisfare criteri specifici a seconda del fatto che siano del tipo di dati **geometry** o **geography** .  
+Le istanze **CurvePolygon** devono inoltre soddisfare criteri specifici a seconda del fatto che siano del tipo di dati **geometry** o **geography** .  
   
 #### <a name="geometry-data-type"></a>Tipo di dati geometry  
 Un'istanza **geometryCurvePolygon** valida deve avere gli attributi seguenti:  
@@ -131,7 +131,7 @@ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. Creazione di un'istanza Geography con un'istanza CurvePolygon  
- Questo frammento di codice illustra come dichiarare e inizializzare un'istanza **geography** con un'istanza **CurvePolygon**nella stessa istruzione:  
+ Questo frammento di codice illustra come dichiarare e inizializzare un'istanza **geography** con un'istanza **CurvePolygon** nella stessa istruzione:  
   
 ```sql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  

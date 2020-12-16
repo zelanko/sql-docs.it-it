@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04bc3b16152307b5d5ed4a3437934e5c7ce6a45a
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f28ea2b3ce9520eca770b0808738a53073d70316
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868781"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438734"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Costrutti Transact-SQL non supportati da OLTP in memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "91868781"
 |Funzionalità|ANSI_PADDING OFF|L'opzione di sessione **ANSI_PADDING** deve essere impostata su ON durante la creazione delle tabelle ottimizzate per la memoria e delle stored procedure compilate in modo nativo. Eseguire **SET ANSI_PADDING ON** prima di eseguire l'istruzione CREATE.|  
 |Opzione|DATA_COMPRESSION|La compressione dati non è supportata dalle tabelle ottimizzate per la memoria. Rimuovere l'opzione dalla definizione della tabella.|  
 |Funzionalità|DTC|Non è possibile accedere alle tabelle con ottimizzazione per la memoria e alle stored procedure compilate in modo nativo da transazioni distribuite. Utilizzare le transazioni SQL.|  
-|Operazione|Tabelle con ottimizzazione per la memoria come destinazione di MERGE|Le tabelle con ottimizzazione per la memoria non possono essere la destinazione di un'operazione **MERGE** . Usare le istruzioni **INSERT**, **UPDATE**e **DELETE**.|  
+|Operazione|Tabelle con ottimizzazione per la memoria come destinazione di MERGE|Le tabelle con ottimizzazione per la memoria non possono essere la destinazione di un'operazione **MERGE** . Usare le istruzioni **INSERT**, **UPDATE** e **DELETE**.|  
   
 ## <a name="indexes-on-memory-optimized-tables"></a>Indici in tabelle con ottimizzazione per la memoria  
  Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere inclusi nel testo del messaggio di un errore che interessa l'indice di una tabella ottimizzata per la memoria e l'azione correttiva per risolvere l'errore.  
@@ -101,7 +101,7 @@ ms.locfileid: "91868781"
 |Type|Funzionalità|Risoluzione|  
 |----------|-------------|----------------|  
 |Funzionalità|Variabili di tabella inline|I tipi di tabella non possono essere dichiarati inline con le dichiarazioni di variabili. I tipi di tabella devono essere dichiarati in modo esplicito utilizzando un'istruzione **CREATE TYPE** .|  
-|Funzionalità|Cursori|I cursori non sono supportati nelle stored procedure compilate in modo nativo.<br /><br /> Quando si esegue la procedura dal client, usare RPC anziché l'API cursore. Con ODBC, evitare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . **EXECUTE**e specificare direttamente il nome della procedura.<br /><br /> Quando si esegue la procedura da un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] o da un'altra stored procedure, evitare di usare un cursore con la stored procedure compilata in modo nativo.<br /><br /> Quando si crea una stored procedure compilata in modo nativo, usare al posto del cursore la logica basata su set o un ciclo **WHILE** .|  
+|Funzionalità|Cursori|I cursori non sono supportati nelle stored procedure compilate in modo nativo.<br /><br /> Quando si esegue la procedura dal client, usare RPC anziché l'API cursore. Con ODBC, evitare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . **EXECUTE** e specificare direttamente il nome della procedura.<br /><br /> Quando si esegue la procedura da un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] o da un'altra stored procedure, evitare di usare un cursore con la stored procedure compilata in modo nativo.<br /><br /> Quando si crea una stored procedure compilata in modo nativo, usare al posto del cursore la logica basata su set o un ciclo **WHILE** .|  
 |Funzionalità|Valori predefiniti del parametro non costanti|Quando si utilizzano i valori predefiniti con i parametri nelle stored procedure compilate in modo nativo, i valori devono essere costanti. Rimuovere tutti i caratteri jolly dalle dichiarazioni di parametro.|  
 |Funzionalità|EXTERNAL|Le stored procedure CLR non possono essere compilate in modo nativo. Rimuovere la clausola AS EXTERNAL o l'opzione NATIVE_COMPILATION dall'istruzione CREATE PROCEDURE.|  
 |Funzionalità|Stored procedure numerate|Le stored procedure compilate in modo nativo non possono essere numerate. Rimuovere **;** _number_ dall'istruzione **CREATE PROCEDURE** .|  

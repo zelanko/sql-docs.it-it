@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e25eac581730b8d4950ca49af8b7edbf61433e5f
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 052ff4a8c3d47ba702db0e60aaee5d47817de734
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125945"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438791"
 ---
 # <a name="install-sql-server-database-engine"></a>Installare il motore di database di SQL Server
 
@@ -39,15 +39,15 @@ Quando si seleziona **Motore di database di [!INCLUDE[ssNoVersion](../../include
   
 -   [Replica di SQL Server](../../relational-databases/replication/sql-server-replication.md) - componente facoltativo  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-ver15"
 -   [Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R e Python) e [Estensioni di linguaggio](../..//language-extensions/install/windows-java.md) (Java) - componenti facoltativi
 ::: moniker-end
 
-::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017"
 -   [Machine Learning Services (In-Database)](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R e Python) - componente facoltativo
 ::: moniker-end
 
-::: monikerRange=">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016 <=sql-server-2016"
 -   [R Services (In-Database)](../../machine-learning/install/sql-r-services-windows-install.md) - componente facoltativo
 ::: moniker-end
 

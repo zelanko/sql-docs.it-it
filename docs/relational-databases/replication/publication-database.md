@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: a9fafc9b-9963-4b59-97a0-3472158fa665
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b57b93d976f7b8e9d1a2e6e26bc19b9633afc4f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: ce56be1b0c8c2b647d93ac01f9adbc9d5aa9ba44
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427973"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460194"
 ---
 # <a name="publication-database"></a>Database di pubblicazione
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88427973"
   
 -   Seleziona il database nella finestra di dialogo **Proprietà server di pubblicazione** .  
   
--   Esegue **sp_replicationdboption** e imposta su **True** l'opzione per la **pubblicazione** relativa a snapshot e pubblicazioni transazionali o l'opzione per la **pubblicazione di tipo merge**relativa a pubblicazioni di tipo merge.  
+-   Esegue **sp_replicationdboption** e imposta su **True** l'opzione per la **pubblicazione** relativa a snapshot e pubblicazioni transazionali o l'opzione per la **pubblicazione di tipo merge** relativa a pubblicazioni di tipo merge.  
   
 ## <a name="options"></a>Opzioni  
  **Database**  

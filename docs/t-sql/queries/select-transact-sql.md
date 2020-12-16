@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faece054ca8f125e8c3594eb588ffa8cf97ddc16
-ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e67547c75424708ca0e934175cc0183afb0bd37d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344903"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439080"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "92344903"
   
  [ [HAVING *search_condition*](../../t-sql/queries/select-having-transact-sql.md) ]  
   
- [ [ORDER BY *order_expression* [ ASC | DESC ] ](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
+ [ [ORDER BY *order_expression* [ ASC | DESC ]](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
   
  È possibile usare gli operatori [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md), [EXCEPT e INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md) tra le query per combinare o confrontare i risultati di più query in un unico set di risultati.  
   
@@ -187,10 +187,10 @@ SELECT <select_criteria>
 > [!WARNING]
 > La sequenza precedente si rivela in genere esatta. Tuttavia, esistono casi non comuni in cui la sequenza può variare.
 >
-> Si supponga, ad esempio, di avere un indice cluster in una vista, che la vista escluda alcune righe di tabella e che l'elenco della colonna SELECT della vista usi una funzione CONVERT che modifica un tipo di dati da *varchar* a *integer* . In questo caso la funzione CONVERT può essere eseguita prima della clausola WHERE. Si tratta di una situazione molto insolita. Spesso è possibile modificare la vista per evitare una sequenza diversa, se è importante nel caso specifico. 
+> Si supponga, ad esempio, di avere un indice cluster in una vista, che la vista escluda alcune righe di tabella e che l'elenco della colonna SELECT della vista usi una funzione CONVERT che modifica un tipo di dati da *varchar* a *integer*. In questo caso la funzione CONVERT può essere eseguita prima della clausola WHERE. Si tratta di una situazione molto insolita. Spesso è possibile modificare la vista per evitare una sequenza diversa, se è importante nel caso specifico. 
 
 ## <a name="permissions"></a>Autorizzazioni  
- La selezione di dati richiede l'autorizzazione **SELECT** per la tabella o la vista che potrebbe essere ereditata da un ambito più elevato, ad esempio l'autorizzazione **SELECT** per lo schema o l'autorizzazione **CONTROL** per la tabella. Oppure richiede l'appartenenza al ruolo predefinito del database **db_datareader** o **db_owner** o il ruolo predefinito del server **sysadmin** . La creazione di una nuova tabella tramite **SELECTINTO** richiede anche le autorizzazioni **CREATE TABLE** e **ALTER SCHEMA** per lo schema proprietario della nuova tabella.  
+ La selezione di dati richiede l'autorizzazione **SELECT** per la tabella o la vista che potrebbe essere ereditata da un ambito più elevato, ad esempio l'autorizzazione **SELECT** per lo schema o l'autorizzazione **CONTROL** per la tabella. Oppure richiede l'appartenenza al ruolo predefinito del database **db_datareader** o **db_owner** o il ruolo predefinito del server **sysadmin**. La creazione di una nuova tabella tramite **SELECTINTO** richiede anche le autorizzazioni **CREATE TABLE** e **ALTER SCHEMA** per lo schema proprietario della nuova tabella.  
   
 ## <a name="examples"></a>Esempi:   
 Nell'esempio seguente viene utilizzato il database [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d9522bf78d3c3d0a36047283d8b0ab9e3073b6d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: fc2ff897b098c9d923e7829b2eb04756257beaab
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005638"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460020"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Concedere un'autorizzazione a un'entità
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "86005638"
   
 #### <a name="to-grant-permission-to-a-principal"></a>Per concedere un'autorizzazione a un'entità  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

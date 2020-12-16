@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ae4198c68bdef3ca6c4ad93e2c717c18125d8f4e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: b716a4cd679e0cb252fb5805c0d3a8e74c6fb60a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86909044"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460244"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Visualizzazione dello stato delle pubblicazioni e delle sottoscrizioni in Monitoraggio replica
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "86909044"
 ## <a name="subscription-status-values"></a>Valori di stato delle sottoscrizioni  
  Nelle tabelle seguenti vengono mostrati i valori di stato delle sottoscrizioni e le relative icone in ordine di priorità. Una sottoscrizione può essere caratterizzata contemporaneamente da due stati, ad esempio **Scadenza imminente/Scaduta** e **Ripetizione comando non riuscito**. Viene visualizzato lo stato con priorità più alta.  
   
- I valori di stato **Prestazioni critiche**, **Scadenza imminente/Scaduta**e **Non inizializzata** sono avvisi. Se viene visualizzato un avviso, in Monitoraggio replica viene inoltre segnalato se un agente è in esecuzione. Ad esempio, lo stato potrebbe essere **In esecuzione, Prestazioni critiche**.  
+ I valori di stato **Prestazioni critiche**, **Scadenza imminente/Scaduta** e **Non inizializzata** sono avvisi. Se viene visualizzato un avviso, in Monitoraggio replica viene inoltre segnalato se un agente è in esecuzione. Ad esempio, lo stato potrebbe essere **In esecuzione, Prestazioni critiche**.  
   
 ### <a name="transactional-subscriptions"></a>Sottoscrizioni transazionali  
   

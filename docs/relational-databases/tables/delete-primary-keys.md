@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf44e0ef836763dd4515fb410f2a73577b4fed05
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2113e0bf6ceb8a27b53a6853235152a1dbf8f425
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646011"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439390"
 ---
 # <a name="delete-primary-keys"></a>Eliminazione di chiavi primarie
 
@@ -73,7 +73,7 @@ ms.locfileid: "88646011"
   
 #### <a name="to-delete-a-primary-key-constraint"></a>Per eliminare un vincolo di chiave primaria  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

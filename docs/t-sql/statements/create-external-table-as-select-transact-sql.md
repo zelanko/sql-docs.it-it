@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1085686f4c83198a043855e701ec2ef38d17541f
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 9c97ee3e1f268553a828e035498b203c8fa1e747
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496942"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97438946"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -63,9 +63,9 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="arguments"></a>Argomenti
  **[ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*** è il nome della tabella da creare nel database, composto da una, due o tre parti. Per una tabella esterna, solo i metadati della tabella vengono archiviati nel database relazionale. 
 
- **LOCATION =  ' *hdfs_folder* '** specifica la posizione in cui scrivere i risultati dell'istruzione SELECT nell'origine dati esterna. La posizione è un nome di cartella e, se necessario, può includere un percorso relativo alla cartella radice del cluster Hadoop o di Archiviazione BLOB. PolyBase creerà il percorso e la cartella se non esistono già.
+ **LOCATION =  '*hdfs_folder*'** specifica la posizione in cui scrivere i risultati dell'istruzione SELECT nell'origine dati esterna. La posizione è un nome di cartella e, se necessario, può includere un percorso relativo alla cartella radice del cluster Hadoop o di Archiviazione BLOB. PolyBase creerà il percorso e la cartella se non esistono già.
 
-I file esterni vengono scritti in *hdfs_folder* e denominati *QueryID_date_time_ID.format* , dove *ID* è un identificatore incrementale e *format* è il formato dei dati esportati. Un esempio è QID776_20160130_182739_0.orc.
+I file esterni vengono scritti in *hdfs_folder* e denominati *QueryID_date_time_ID.format*, dove *ID* è un identificatore incrementale e *format* è il formato dei dati esportati. Un esempio è QID776_20160130_182739_0.orc.
 
  **DATA_SOURCE = *external_data_source_name*** specifica il nome dell'oggetto origine dati esterna che contiene il percorso in cui sono o verranno archiviati i dati esterni. Il percorso è un cluster Hadoop o un'istanza di Archiviazione BLOB di Azure. Per creare un'origine dati esterna, usare [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -77,18 +77,18 @@ I file esterni vengono scritti in *hdfs_folder* e denominati *QueryID_date_time_
 
    - **REJECT_TYPE = **value** | percentage** indica se l'opzione REJECT_VALUE è specificata come valore letterale o percentuale.
 
-      - Il tipo **Value** viene usato se REJECT_VALUE è un valore letterale, non una percentuale. Il database interrompe l'importazione di righe dal file di dati esterno quando il numero di righe con esito negativo supera *reject_value* .
+      - Il tipo **Value** viene usato se REJECT_VALUE è un valore letterale, non una percentuale. Il database interrompe l'importazione di righe dal file di dati esterno quando il numero di righe con esito negativo supera *reject_value*.
 
         Ad esempio, se REJECT_VALUE = 5 e REJECT_TYPE = value, il database interrompe l'importazione di righe dopo cinque righe che non possono essere importate.
 
-      - Il tipo **Percentage** viene usato se REJECT_VALUE è una percentuale e non un valore letterale. Il database interrompe l'importazione di righe dal file di dati esterno quando la *percentuale* di righe con esito negativo supera *reject_value* . La percentuale di righe con esito negativo viene calcolata a intervalli.
+      - Il tipo **Percentage** viene usato se REJECT_VALUE è una percentuale e non un valore letterale. Il database interrompe l'importazione di righe dal file di dati esterno quando la *percentuale* di righe con esito negativo supera *reject_value*. La percentuale di righe con esito negativo viene calcolata a intervalli.
 
    - **REJECT_SAMPLE_VALUE = *reject_sample_value*** è obbligatoria quando REJECT_TYPE = percentage. Specifica il numero di righe che è possibile provare a importare prima che il database ricalcoli la percentuale di righe con esito negativo.
 
-      Ad esempio, se REJECT_SAMPLE_VALUE = 1000, il database calcola la percentuale di righe con esito negativo dopo che ha tentato di importare 1000 righe dal file di dati esterno. Se la percentuale di righe con esito negativo è inferiore al valore *reject_value* , il database tenterà di recuperare altre 1000 righe. Il database continua a ricalcolare la percentuale di righe con esito negativo dopo aver tentato di importare ognuna delle 1000 righe aggiuntive.
+      Ad esempio, se REJECT_SAMPLE_VALUE = 1000, il database calcola la percentuale di righe con esito negativo dopo che ha tentato di importare 1000 righe dal file di dati esterno. Se la percentuale di righe con esito negativo è inferiore al valore *reject_value*, il database tenterà di recuperare altre 1000 righe. Il database continua a ricalcolare la percentuale di righe con esito negativo dopo aver tentato di importare ognuna delle 1000 righe aggiuntive.
 
      > [!NOTE]
-     >  Poiché il database calcola la percentuale di righe con esito negativo a intervalli, la percentuale effettiva di tali righe può superare *reject_value* .
+     >  Poiché il database calcola la percentuale di righe con esito negativo a intervalli, la percentuale effettiva di tali righe può superare *reject_value*.
 
      **Esempio:**
 
@@ -106,11 +106,11 @@ I file esterni vengono scritti in *hdfs_folder* e denominati *QueryID_date_time_
 
 ## <a name="permissions"></a>Autorizzazioni
 
- Per eseguire questo comando, l' *utente del database* deve avere tutte le autorizzazioni o appartenenze seguenti:
+ Per eseguire questo comando, l'*utente del database* deve avere tutte le autorizzazioni o appartenenze seguenti:
 
-- Autorizzazione **ALTER SCHEMA** per lo schema locale che conterrà la nuova tabella o appartenenza al ruolo predefinito del database **db_ddladmin** .
-- Autorizzazione **CREATE TABLE** o appartenenza al ruolo predefinito del database **db_ddladmin** .
-- Autorizzazione **SELECT** per tutti gli oggetti a cui si fa riferimento in *select_criteria* .
+- Autorizzazione **ALTER SCHEMA** per lo schema locale che conterrà la nuova tabella o appartenenza al ruolo predefinito del database **db_ddladmin**.
+- Autorizzazione **CREATE TABLE** o appartenenza al ruolo predefinito del database **db_ddladmin**.
+- Autorizzazione **SELECT** per tutti gli oggetti a cui si fa riferimento in *select_criteria*.
 
  L'account di accesso deve avere tutte le autorizzazioni che seguono:
 
@@ -136,7 +136,7 @@ I file esterni vengono scritti in *hdfs_folder* e denominati *QueryID_date_time_
 
  Il nome e la definizione della tabella esterna vengono archiviati nei metadati del database. I dati vengono archiviati nell'origine dati esterna.
 
- I file esterni sono denominati *QueryID_date_time_ID.format* , dove *ID* è un identificatore incrementale e *format* è il formato dei dati esportati. Un esempio è QID776_20160130_182739_0.orc.
+ I file esterni sono denominati *QueryID_date_time_ID.format*, dove *ID* è un identificatore incrementale e *format* è il formato dei dati esportati. Un esempio è QID776_20160130_182739_0.orc.
 
  L'istruzione CREATE EXTERNAL TABLE AS SELECT crea sempre una tabella non partizionata, anche se la tabella di origine è partizionata.
 
@@ -186,7 +186,7 @@ Per usare CREATE EXTERNAL TABLE AS SELECT con questi caratteri, è prima di tutt
 
  L'esempio seguente crea una nuova tabella esterna denominata `hdfsCustomer` che usa le definizioni e i dati delle colonne della tabella di origine `dimCustomer`.
 
- La definizione della tabella è archiviata nel database e i risultati dell'istruzione SELECT vengono esportati nel file "/pdwdata/customer.tbl" nell'origine dati esterna Hadoop *customer_ds* . Il file viene formattato in base al formato di file esterno *customer_ff* .
+ La definizione della tabella è archiviata nel database e i risultati dell'istruzione SELECT vengono esportati nel file "/pdwdata/customer.tbl" nell'origine dati esterna Hadoop *customer_ds*. Il file viene formattato in base al formato di file esterno *customer_ff*.
 
  Il nome del file è generato dal database e contiene l'ID di query per facilitare l'allineamento del file con la query che lo ha generato.
 

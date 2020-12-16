@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62166f813bee655bda939c1f230d02a1a5b0afbc
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2e4ad904176abdc4f714980cf1e242bd620632a6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195664"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440218"
 ---
 # <a name="export-a-data-tier-application"></a>Esportazione di un'applicazione livello dati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ Nel database SQL di Azure è necessario concedere **per ogni database** le autor
   
 1.  Connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], locale o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-2.  In **Esplora oggetti**espandere il nodo per le istanze da cui esportare l'applicazione livello dati.  
+2.  In **Esplora oggetti** espandere il nodo per le istanze da cui esportare l'applicazione livello dati.  
   
 3.  Fare clic con il pulsante destro del mouse sul nome del database.  
   
@@ -104,7 +104,7 @@ Nel database SQL di Azure è necessario concedere **per ogni database** le autor
 ##  <a name="validation-page"></a><a name="Validation"></a> Pagina Convalida  
  Utilizzare la pagina di convalida per esaminare gli eventuali problemi che bloccano l'operazione. Per continuare, risolvere i problemi che causano il blocco, quindi fare clic su **Ripeti convalida** per assicurarsi che la convalida venga completata correttamente.  
   
- Scegliere **Avanti**per continuare.  
+ Scegliere **Avanti** per continuare.  
   
 ##  <a name="summary-page"></a><a name="Summary"></a> Pagina Riepilogo  
  Utilizzare questa pagina per esaminare le impostazioni di origine e destinazione specificate per l'operazione. Per completare l'operazione di esportazione usando le impostazioni specificate, fare clic su **Fine**. Per annullare l'operazione di esportazione e chiudere la procedura guidata, fare clic su **Annulla**.  

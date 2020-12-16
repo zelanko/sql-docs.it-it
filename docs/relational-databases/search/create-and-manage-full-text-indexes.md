@@ -13,13 +13,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347f59a7498e34ac1b99956990507559363813c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 501be7ed93ec7be0edd55d95bf7bd0b5bce229d8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493854"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460094"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Creazione e gestione di indici full-text
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,11 +65,11 @@ Per altre informazioni, vedere [Popolare gli indici full-text](../../relational-
 ### <a name="view-the-properties-of-a-full-text-index-with-management-studio"></a>Visualizzare le proprietà di un indice full-text con Management Studio 
 1.  In Management Studio espandere il server in Esplora oggetti.  
   
-2.  Espandere **Database**e quindi il database contenente l'indice full-text.  
+2.  Espandere **Database** e quindi il database contenente l'indice full-text.  
   
 3.  Espandere **Tabelle**.  
   
-4.  Fare clic con il pulsante destro del mouse sulla tabella in cui viene definito l'indice full-text, scegliere **Indice full-text**e quindi **Proprietà** dal menu di scelta rapida **Indice full-text**. Verrà visualizzata la finestra di dialogo **Proprietà indice full-text** .  
+4.  Fare clic con il pulsante destro del mouse sulla tabella in cui viene definito l'indice full-text, scegliere **Indice full-text** e quindi **Proprietà** dal menu di scelta rapida **Indice full-text**. Verrà visualizzata la finestra di dialogo **Proprietà indice full-text** .  
   
 5.  Nel riquadro **Seleziona una pagina** è possibile selezionare le pagine seguenti:  
   
@@ -166,7 +166,7 @@ GO
  Nell'esempio viene restituita una colonna del set di risultati denominata `Unique Key Column`in cui viene visualizzata una sola riga contenente il nome della colonna chiave univoca della tabella Document, DocumentNode. Si noti che se questa query contenesse un nome di indice non valido, il nome di indice non corrispondesse alla tabella, la tabella non esistesse e così via, il risultato restituito sarebbe NULL.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>Indicizzare colonne varbinary(max) e xml  
- Se una colonna **varbinary(max)** , **varbinary**o **xml** viene sottoposta a indicizzazione full-text, le query su questa colonna possono essere eseguite usando predicati (CONTAINS e FREETEXT) e funzioni (CONTAINSTABLE e FREETEXTTABLE) full-text, proprio come su ogni altra colonna con indicizzazione full-text.
+ Se una colonna **varbinary(max)** , **varbinary** o **xml** viene sottoposta a indicizzazione full-text, le query su questa colonna possono essere eseguite usando predicati (CONTAINS e FREETEXT) e funzioni (CONTAINSTABLE e FREETEXTTABLE) full-text, proprio come su ogni altra colonna con indicizzazione full-text.
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>Indicizzare colonne varbinary(max) o varbinary  
  In una singola colonna **varbinary(max)** o **varbinary** possono essere archiviati molti tipi di documenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta qualsiasi tipo di documento per cui viene installato un filtro e disponibile nel sistema operativo. Il tipo di ogni documento è identificato dall'estensione file relativa. Per un'estensione file doc, ad esempio, la ricerca full-text utilizza il filtro che supporta i documenti di Microsoft Word. Per un elenco dei tipi di documento disponibili, eseguire una query sulla vista del catalogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
@@ -191,7 +191,7 @@ Per creare un indice full-text in una colonna **varbinary(max)** , il motore di 
 
 1.  Espandere il gruppo di server, espandere **Database**, quindi il database contenente la tabella che si vuole abilitare per l'indicizzazione full-text.  
   
-2.  Espandere **Tabelle**e fare clic con il pulsante destro del mouse sulla tabella che si vuole disabilitare o riabilitare per l'indicizzazione full-text.  
+2.  Espandere **Tabelle** e fare clic con il pulsante destro del mouse sulla tabella che si vuole disabilitare o riabilitare per l'indicizzazione full-text.  
   
 3.  Scegliere **Indice full-text**, quindi fare clic su **Disabilita indicizzazione full-text** o **Abilita indicizzazione full-text**.  
   

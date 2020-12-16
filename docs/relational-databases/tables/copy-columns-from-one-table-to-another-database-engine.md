@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1952dc72148ee9e8d0d68b375f39f5fc3bedfc3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2b8b8dd930fa6fff0b5be86ed0c83ad485326996
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488634"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97439420"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copia di colonne da una tabella a un'altra (Motore di database)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "88488634"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Per copiare le definizioni delle colonne tra tabelle  
   
@@ -97,7 +97,7 @@ ms.locfileid: "88488634"
   
 #### <a name="to-copy-data-from-one-table-to-another"></a>Per copiare dati tra tabelle  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6280e0abe6c95b2ac0a13339b0dfe2c6092e2fa3
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 9cc9c07d69be1b08a887ddf4a7ac071647a4d89a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125971"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440232"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installare SQL Server dall'Installazione guidata (programma di installazione)
 
@@ -49,7 +49,7 @@ Prima di installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], v
 > [!NOTE]  
 > Per le installazioni locali è necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura ed esecuzione relative a tale condivisione.  
 
-::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016 <=sql-server-2017"
 
 ###  <a name="install-patch-requirement"></a><a name="bkmk_ga_instalpatch"></a> Requisito di installazione patch
 
@@ -221,7 +221,7 @@ Ciò non è applicabile a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-ver15"
 ## <a name="to-install-sql-server-2019"></a>Per installare SQL Server 2019 
   
 1. Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nella cartella radice fare doppio clic sul file **Setup.exe**. Per eseguire l'installazione da una condivisione di rete, individuare la cartella radice nella condivisione, quindi fare doppio clic sul file **Setup.exe**.  
