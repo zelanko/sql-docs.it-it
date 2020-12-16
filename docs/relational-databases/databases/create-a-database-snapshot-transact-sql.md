@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 39110067ea0abb2722da0ee88f70946d2875ccee
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e427b52c416fe3ca325fd476959827c67ecacaaa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192571"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483673"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Creare uno snapshot del database (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "92192571"
   
 -   Non è possibile configurare il database di origine come un database condiviso scalabile.  
 
-::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017"
 
 - Il database di origine non deve contenere un filegroup MEMORY_OPTIMIZED_DATA.
 

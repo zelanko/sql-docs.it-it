@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88012cf4428822d913b82bba0c822cf1fafa0ca1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ab6066ba9f9732d66df73125acc56c3a79ca98ce
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470666"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483553"
 ---
 # <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88470666"
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |SPID|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |StartTime|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|Operazione completata|**int**|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|23|Sì|  
+|Success|**int**|1 = esito positivo. 0 = esito negativo (ad esempio, 1 indica l'esito positivo di un controllo delle autorizzazioni e 0 indica l'esito negativo di tale controllo).|23|Sì|  
 |TextData|**ntext**|Valore di testo che dipende dalla classe di evento acquisita nella traccia.|1|Sì|  
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |XactSequence|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
