@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 23803485a7734bf9f077aa70d136e8730055ccd0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3c738370cc02b3ca36123a5e6232ec04b9a4e882
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913215"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97433004"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Impostazione di valore soglia e avvisi in Monitoraggio replica
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "86913215"
   
 3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<AlertName>** :  
   
-    -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
+    -   Nella pagina **Generale** fare clic su **Abilita** e specificare il database a cui si desidera applicare l'avviso.  
   
     -   Nella pagina **Risposta** specificare se si desidera inviare un messaggio di posta elettronica e/o eseguire un processo.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "86913215"
   
 3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<AlertName>** :  
   
-    -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
+    -   Nella pagina **Generale** fare clic su **Abilita** e specificare il database a cui si desidera applicare l'avviso.  
   
     -   Nella pagina **Risposta** specificare se si desidera inviare un messaggio di posta elettronica e/o eseguire un processo.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "86913215"
   
 3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<AlertName>** :  
   
-    -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
+    -   Nella pagina **Generale** fare clic su **Abilita** e specificare il database a cui si desidera applicare l'avviso.  
   
     -   Nella pagina **Risposta** specificare se si desidera inviare un messaggio di posta elettronica e/o eseguire un processo.  
   

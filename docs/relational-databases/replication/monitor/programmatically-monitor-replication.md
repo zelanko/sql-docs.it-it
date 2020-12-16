@@ -29,13 +29,13 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2dfc06b78d249a0ed266315f42c066eef05b3413
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 0983d52e2b0843a8ccbb2566e9e2762e97f61a4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920067"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97433005"
 ---
 # <a name="programmatically-monitor-replication"></a>Monitoraggio della replica a livello di programmazione
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "86920067"
   
 #### <a name="to-monitor-merge-agent-sessions"></a>Per monitorare sessioni dell'agente di merge  
   
-1.  Nel database di distribuzione del server di distribuzione eseguire [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md). Vengono restituite le informazioni di monitoraggio, **Session_id**incluso, relative a tutte le sessioni dell'agente di merge per tutte le sottoscrizioni che utilizzano il server di distribuzione. È anche possibile ottenere il valore **Session_id** eseguendo una query sulla tabella di sistema [MSmerge_sessions](../../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) .  
+1.  Nel database di distribuzione del server di distribuzione eseguire [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md). Vengono restituite le informazioni di monitoraggio, **Session_id** incluso, relative a tutte le sessioni dell'agente di merge per tutte le sottoscrizioni che utilizzano il server di distribuzione. È anche possibile ottenere il valore **Session_id** eseguendo una query sulla tabella di sistema [MSmerge_sessions](../../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) .  
   
 2.  Nel database di distribuzione del server di distribuzione eseguire [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md). Specificare il valore **Session_id** indicato al passaggio 1 per **\@session_id**. Vengono visualizzate informazioni di monitoraggio dettagliate sulla sessione.  
   
