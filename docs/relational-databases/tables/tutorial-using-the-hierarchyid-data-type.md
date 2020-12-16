@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eece1dc9ea612e37c466d57e074ae105ea0608c4
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8aae425506ebc8a2a17aadb2fa9c2d4485fe8f85
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809651"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97426740"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>Esercitazione: Uso del tipo di dati hierarchyid
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ In questa lezione si crea una tabella usando il tipo di dati **hierarchyid** per
   
 -   Internet Explorer 6 o versioni successive.  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 [Esercitazione: Introduzione al motore di database](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 [Esercitazione: Scrittura di istruzioni Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
 [Guida di riferimento ai metodi per il tipo di dati hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
