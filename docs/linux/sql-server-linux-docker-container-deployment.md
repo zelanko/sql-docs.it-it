@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 380fa9b4cb6941b438d0308be38956659862ce50
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 6fbf5782ff67b3406cffad808b27c47112a48d97
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115460"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489861"
 ---
 # <a name="deploy-and-connect-to-sql-server-docker-containers"></a>Distribuire e connettersi a contenitori Docker di SQL Server
 
@@ -45,8 +45,8 @@ Questo video di 6 minuti offre un'introduzione relativa all'esecuzione di SQL Se
 
 Per il pull e l'esecuzione delle immagini del contenitore Docker per SQL Server 2017 e SQL Server 2019, seguire i prerequisiti e i passaggi illustrati nella guida di avvio rapido seguente:
 
-- [Eseguire l'immagine del contenitore di SQL Server 2017 con Docker](quickstart-install-connect-docker.md?view=sql-server-2017)
-- [Eseguire l'immagine del contenitore di SQL Server 2019 con Docker](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- [Eseguire l'immagine del contenitore di SQL Server 2017 con Docker](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
+- [Eseguire l'immagine del contenitore di SQL Server 2019 con Docker](quickstart-install-connect-docker.md?view=sql-server-ver15&preserve-view=true)
 
 Questo articolo dedicato alla configurazione descrive altri scenari di utilizzo nelle sezioni seguenti.
 
@@ -245,7 +245,7 @@ Esistono scenari in cui è possibile che non si voglia usare la versione più re
 Questi passaggi possono essere usati anche per effettuare il downgrade di un contenitore esistente. Ad esempio, potrebbe essere necessario effettuare il rollback o il downgrade di un contenitore in esecuzione per la risoluzione dei problemi o per attività di test. Per effettuare il downgrade di un contenitore in esecuzione, è necessario usare una tecnica di persistenza per la cartella dati. Seguire la stessa procedura descritta nella [sezione dedicata all'aggiornamento](#upgrade), ma specificare il nome del tag della versione precedente quando si esegue il nuovo contenitore.
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="run-rhel-based-container-images"></a><a id="rhel"></a> Eseguire immagini del contenitore basate su RHEL
 
@@ -348,7 +348,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 L'esempio seguente crea due contenitori di SQL Server 2019 ed esegue il mapping di questi alle porte **1401** e **1402** nel computer host.
 
@@ -426,12 +426,12 @@ L'immagine di SQL Server viene così aggiornata per tutti i nuovi contenitori cr
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- Per informazioni introduttive sull'uso delle immagini del contenitore di SQL Server 2017 in Docker, vedere questo [articolo di avvio rapido](quickstart-install-connect-docker.md?view=sql-server-2017)
+- Per informazioni introduttive sull'uso delle immagini del contenitore di SQL Server 2017 in Docker, vedere questo [articolo di avvio rapido](quickstart-install-connect-docker.md?view=sql-server-2017&preserve-view=true)
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 - Per informazioni introduttive sull'uso delle immagini del contenitore di SQL Server 2019 in Docker, vedere questo [articolo di avvio rapido](quickstart-install-connect-docker.md?view=sql-server-ver15)
 

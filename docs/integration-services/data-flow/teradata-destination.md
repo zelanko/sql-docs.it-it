@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 191c89d1fdced6ad1581dadff1e4ed92f397f640
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 158184ea961aa8938bb0eb2b6f94890dd1eddbfa
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92194713"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489871"
 ---
 # <a name="teradata-destination"></a>Destinazione Teradata
 
@@ -223,7 +223,7 @@ Usare la pagina Output degli errori della finestra di dialogo Editor destinazion
 
 Consente di selezionare il modo in cui la destinazione Teradata deve gestire gli errori in un flusso: ignorare l'errore, reindirizzare la riga o interrompere il componente.
 
-**Argomenti correlati**: [Gestione degli errori nei dati](./error-handling-in-data.md?view=sql-server-2017)
+**Argomenti correlati**: [Gestione degli errori nei dati](./error-handling-in-data.md)
 
 **Troncamento**
 

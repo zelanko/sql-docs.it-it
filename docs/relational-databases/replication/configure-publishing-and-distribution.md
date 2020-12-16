@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f321bc96749a0a5c6bf260a8093113258c64f3f1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 72e6a2ed252e895f1e55a7263c089e8e618ec115
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866571"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484913"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurazione della pubblicazione e della distribuzione
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ Configurare la distribuzione mediante la Creazione guidata nuova pubblicazione o
 
 3. Eseguire i vari passaggi della Configurazione guidata distribuzione per: 
 
-  - Selezionare un server di distribuzione. Per usare un server di distribuzione locale, selezionare **NomeServer fungerà da server di distribuzione per se stesso. Verranno creati un database di distribuzione e un log**. Per utilizzare un server di distribuzione remoto, selezionare **Usa il server seguente come server di distribuzione**e quindi specificare un server. È necessario che il server sia già configurato come server di distribuzione e che il server di pubblicazione sia abilitato per l'utilizzo del server di distribuzione. Per altre informazioni, vedere [Abilitazione di un server di pubblicazione remoto in un database di distribuzione &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).
+  - Selezionare un server di distribuzione. Per usare un server di distribuzione locale, selezionare **NomeServer fungerà da server di distribuzione per se stesso. Verranno creati un database di distribuzione e un log**. Per utilizzare un server di distribuzione remoto, selezionare **Usa il server seguente come server di distribuzione** e quindi specificare un server. È necessario che il server sia già configurato come server di distribuzione e che il server di pubblicazione sia abilitato per l'utilizzo del server di distribuzione. Per altre informazioni, vedere [Abilitazione di un server di pubblicazione remoto in un database di distribuzione &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).
 
      Se si seleziona un server di distribuzione remoto, è necessario immettere la password nella pagina **Password amministrativa** per le connessioni effettuate dal server di pubblicazione a quello di distribuzione. Questa password deve corrispondere a quella specificata quando il server di pubblicazione è stato attivato nel server di distribuzione remoto.
 

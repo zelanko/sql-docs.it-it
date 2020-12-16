@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e484cfef4f805f1456101ad966ddf64912daca5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5159591eeafc76ca16fde95f8a7b9789acc084e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867191"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485313"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "91867191"
  Il report di analisi delle prestazioni delle transazioni e gli assistenti alla migrazione vengono installati come parte di SQL Server Management Studio (SSMS) quando si seleziona **Strumenti di gestione - Di base** o **Strumenti di gestione - Avanzati** quando si installa [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oppure quando si sceglie di [scaricare SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).    
   
 ## <a name="transaction-performance-analysis-reports"></a>Report di analisi delle prestazioni delle transazioni  
- Per generare report di analisi delle prestazioni delle transazioni in **Esplora oggetti** fare clic con il pulsante destro del mouse sul database, scegliere **Report**, quindi **Report standard**e infine **Panoramica dell'analisi delle prestazioni delle transazioni**. Per generare un report di analisi significativo, è richiesto un carico di lavoro attivo o di recente esecuzione del database.  
+ Per generare report di analisi delle prestazioni delle transazioni in **Esplora oggetti** fare clic con il pulsante destro del mouse sul database, scegliere **Report**, quindi **Report standard** e infine **Panoramica dell'analisi delle prestazioni delle transazioni**. Per generare un report di analisi significativo, è richiesto un carico di lavoro attivo o di recente esecuzione del database.  
   
 ### <a name="tables"></a>Tabelle
   
@@ -108,7 +108,7 @@ Le statistiche sulle contese e sulle analisi nel report dettagli della tabella v
   
 **Per generare un elenco di controllo per migrazione tramite il comando dell'interfaccia utente**  
   
-1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse su un database diverso dal database di sistema, scegliere **Attività**e quindi fare clic su **Generazione guidata elenchi di controllo per migrazione OLTP in memoria**.  
+1.  In **Esplora oggetti** fare clic con il pulsante destro del mouse su un database diverso dal database di sistema, scegliere **Attività** e quindi fare clic su **Generazione guidata elenchi di controllo per migrazione OLTP in memoria**.  
   
 2.  Nella finestra di dialogo Generazione guidata elenchi di controllo per migrazione OLTP in memoria fare clic su Avanti per passare alla pagina **Configura opzioni di generazione elenchi di controllo** . In questa pagina eseguire le operazioni seguenti.  
   
@@ -122,13 +122,13 @@ Le statistiche sulle contese e sulle analisi nel report dettagli della tabella v
   
 3.  Fare clic su **Avanti** e verificare che l'elenco di attività corrisponda alle impostazioni nella pagina **Configura opzioni di generazione elenco di controllo** .  
   
-4.  Fare clic su **Fine**e quindi verificare che i report degli elenchi di controllo per migrazione siano stati generati solo per gli oggetti selezionati.  
+4.  Fare clic su **Fine** e quindi verificare che i report degli elenchi di controllo per migrazione siano stati generati solo per gli oggetti selezionati.  
 
  È possibile verificare l'accuratezza dei report confrontandoli con i report generati dagli strumenti Ottimizzazione guidata per la memoria e Assistente compilazione nativa. Per ulteriori informazioni, vedere [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) e [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
   
 **Per generare un elenco di controllo per migrazione tramite SQL Server PowerShell**  
   
-1.  In **Esplora oggetti**fare clic su un database e quindi scegliere **Avvia PowerShell**. Verificare che sia visualizzato il prompt seguente.  
+1.  In **Esplora oggetti** fare clic su un database e quindi scegliere **Avvia PowerShell**. Verificare che sia visualizzato il prompt seguente.  
   
     ```  
     PS SQLSERVER: \SQL\{Instance Name}\DEFAULT\Databases\{two-part DB Name}>  

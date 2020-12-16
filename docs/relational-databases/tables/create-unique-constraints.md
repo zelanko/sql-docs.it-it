@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa72cf50aed832d92d0351ceb699df0646debacd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 06f465d3c4ff6086d74c155c4f810730eca50742
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809655"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484483"
 ---
 # <a name="create-unique-constraints"></a>Creare vincoli univoci
 
@@ -57,13 +57,13 @@ ms.locfileid: "91809655"
   
 #### <a name="to-create-a-unique-constraint"></a>Per creare un vincolo univoco  
   
-1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella nella quale aggiungere un vincolo univoco e scegliere **Progetta**.  
+1.  In **Esplora oggetti** fare clic con il pulsante destro del mouse sulla tabella nella quale aggiungere un vincolo univoco e scegliere **Progetta**.  
   
 2.  Scegliere **Indici/chiavi** nel menu **Progettazione tabelle**.  
   
 3.  Nella finestra di dialogo **Indici/chiavi** fare clic su **Aggiungi**.  
   
-4.  Nella griglia in **Generale**fare clic su **Tipo** e selezionare **Chiave univoca** dall'elenco a discesa a destra della proprietà, quindi fare clic su **Chiudi**.  
+4.  Nella griglia in **Generale** fare clic su **Tipo** e selezionare **Chiave univoca** dall'elenco a discesa a destra della proprietà, quindi fare clic su **Chiudi**.  
   
 5.  Nel menu **File** fare clic su **Salva** _nome tabella_.  
 
@@ -71,7 +71,7 @@ ms.locfileid: "91809655"
   
 #### <a name="to-create-a-unique-constraint"></a>Per creare un vincolo univoco  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "91809655"
   
 #### <a name="to-create-a-unique-constraint-on-an-existing-table"></a>Per creare un vincolo univoco in una tabella esistente  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "91809655"
   
 #### <a name="to-create-a-unique-constraint-on-a-new-table"></a>Per creare un vincolo univoco in una nuova tabella  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

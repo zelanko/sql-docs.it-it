@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a1e6bcb89b8206f34c8438f6ebab2ef983210057
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 910671ecefc7a52f86a7e025492c3e5ec1371e65
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88330437"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485363"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Categoria di eventi Security Audit (SQL Server Profiler)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88330437"
 |[Classe di evento Audit DBCC](../../relational-databases/event-classes/audit-dbcc-event-class.md)|Indica che è stato eseguito un comando DBCC.|  
 |[Classe di evento Audit Fulltext](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Indica che si è verificato un evento full-text.|  
 |[Classe di evento Audit Login Change Password](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Indica che un utente ha modificato la password dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|[Classe di evento Audit Login Change Property](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Indica che è stata usata **sp_defaultdb**, **sp_defaultlanguage**o ALTER LOGIN per modificare una proprietà di un account di accesso.|  
+|[Classe di evento Audit Login Change Property](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Indica che è stata usata **sp_defaultdb**, **sp_defaultlanguage** o ALTER LOGIN per modificare una proprietà di un account di accesso.|  
 |[Classe di evento Audit Login](../../relational-databases/event-classes/audit-login-event-class.md)|Indica che un utente è riuscito ad accedere correttamente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Classe di evento Audit Login Failed](../../relational-databases/event-classes/audit-login-failed-event-class.md)|Indica che un utente ha tentato di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e l'operazione ha avuto esito negativo.|  
 |[Classe di evento Audit Login GDR](../../relational-databases/event-classes/audit-login-gdr-event-class.md)|Indica che un diritto di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows è stato aggiunto o rimosso.|  

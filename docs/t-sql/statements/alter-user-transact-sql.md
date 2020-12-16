@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ecb1710f992535ca4e6ebca3a3f825c5e1bffc9a
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4f2a00a567282eb4a2d5990360b630817d1950c6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496970"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489474"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -41,7 +41,7 @@ Rinomina un utente del database oppure ne modifica lo schema predefinito.
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -57,7 +57,7 @@ Rinomina un utente del database oppure ne modifica lo schema predefinito.
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Piattaforma di strumenti<br />analitici (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Piattaforma di strumenti<br />analitici (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -93,28 +93,28 @@ NAME = newUserName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } specifica il primo schema nel quale il server eseguirà una ricerca durante la risoluzione dei nomi di oggetti per l'utente. L'impostazione dello schema predefinito su NULL comporta la rimozione di uno schema predefinito da un gruppo di Windows. Non è possibile usare NULL con un utente di Windows.
 
- PASSWORD **=** ' *password* '  **si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ PASSWORD **=** '*password*'  **si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
  Specifica la password per l'utente che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.
 
 > [!NOTE]
 > Questa opzione è disponibile solo per gli utenti contenuti. Per altre informazioni, vedere [Database indipendenti](../../relational-databases/databases/contained-databases.md) e [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
 
- OLD_PASSWORD **=** _'oldpassword'_ **si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ OLD_PASSWORD **=** _'oldpassword'_ **si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
- Password dell'utente corrente che verrà sostituita da ' *password* '. Per le password viene fatta distinzione tra maiuscole e minuscole. *OLD_PASSWORD* è necessaria per modificare una password, a meno che non si disponga dell'autorizzazione **ALTER ANY USER** . Si richiede *OLD_PASSWORD* per impedire agli utenti con autorizzazione **IMPERSONATION** di modificare la password.
+ Password dell'utente corrente che verrà sostituita da '*password*'. Per le password viene fatta distinzione tra maiuscole e minuscole. *OLD_PASSWORD* è necessaria per modificare una password, a meno che non si disponga dell'autorizzazione **ALTER ANY USER**. Si richiede *OLD_PASSWORD* per impedire agli utenti con autorizzazione **IMPERSONATION** di modificare la password.
 
 > [!NOTE]
 > Questa opzione è disponibile solo per gli utenti contenuti.
 
- DEFAULT_LANGUAGE **=** _{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_ **Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
+ DEFAULT_LANGUAGE **=** _{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_ **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
 
  Specifica una lingua predefinita da assegnare all'utente. Se questa opzione è impostata su NONE, la lingua predefinita viene impostata sulla lingua predefinita corrente del database. Se la lingua predefinita del database viene modificata in seguito, la lingua predefinita dell'utente rimarrà invariata. *DEFAULT_LANGUAGE* può essere l'ID locale (lcid), il nome della lingua o l'alias della lingua.
 
 > [!NOTE]
 > È possibile specificare questa opzione solo in un database indipendente e solo per utenti contenuti.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **si applica a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Elimina i controlli sui metadati di crittografia nel server nelle operazioni di copia bulk. Ciò consente all'utente di eseguire la copia bulk dei dati crittografati tra tabelle o database senza decrittografare i dati. Il valore predefinito è OFF.
 
@@ -125,14 +125,14 @@ NAME = newUserName
 
  Lo schema predefinito sarà il primo schema in cui verrà eseguita la ricerca nel server durante la risoluzione dei nomi di oggetti per l'utente del database. Se non specificato diversamente, lo schema predefinito sarà il proprietario degli oggetti creati dall'utente del database.
 
- Se l'utente ha uno schema predefinito, verrà usato lo schema predefinito. Se l'utente non ha uno schema predefinito ma è membro di un gruppo che ha uno schema predefinito, verrà usato lo schema predefinito del gruppo. Se l'utente non ha uno schema predefinito ed è membro di più di un gruppo, lo schema predefinito per l'utente sarà quello del gruppo di Windows con il valore principal_id più basso e uno schema predefinito impostato in modo esplicito. Se non possono essere determinati schemi predefiniti per un utente, viene usato lo schema **dbo** .
+ Se l'utente ha uno schema predefinito, verrà usato lo schema predefinito. Se l'utente non ha uno schema predefinito ma è membro di un gruppo che ha uno schema predefinito, verrà usato lo schema predefinito del gruppo. Se l'utente non ha uno schema predefinito ed è membro di più di un gruppo, lo schema predefinito per l'utente sarà quello del gruppo di Windows con il valore principal_id più basso e uno schema predefinito impostato in modo esplicito. Se non possono essere determinati schemi predefiniti per un utente, viene usato lo schema **dbo**.
 
  DEFAULT_SCHEMA può essere impostato su uno schema che attualmente non è presente nel database. È pertanto possibile assegnare uno schema predefinito tramite DEFAULT_SCHEMA a un utente prima della creazione dello schema.
 
  Non è possibile specificare DEFAULT_SCHEMA per un utente di cui è stato eseguito il mapping a un certificato o a una chiave asimmetrica.
 
 > [!IMPORTANT]
-> Il valore di DEFAULT_SCHEMA viene ignorato se l'utente è un membro del ruolo predefinito del server **sysadmin** . Tutti i membri del ruolo predefinito del server **sysadmin** dispongono di uno schema predefinito di `dbo`.
+> Il valore di DEFAULT_SCHEMA viene ignorato se l'utente è un membro del ruolo predefinito del server **sysadmin**. Tutti i membri del ruolo predefinito del server **sysadmin** dispongono di uno schema predefinito di `dbo`.
 
  È possibile modificare il nome di un utente sul quale viene eseguito il mapping a un account di accesso o a un gruppo di Windows solo se il SID del nuovo nome utente corrisponde al SID registrato nel database. Questa verifica consente di impedire lo spoofing degli account di accesso di Windows nel database.
 
@@ -162,7 +162,7 @@ Il nome di un utente di cui è stato eseguito il mapping a un account di accesso
 
 ### <a name="permissions"></a>Autorizzazioni
 
- Per modificare il nome di un utente, è necessaria l'autorizzazione **ALTER ANY USER** .
+ Per modificare il nome di un utente, è necessaria l'autorizzazione **ALTER ANY USER**.
 
  Per modificare l'account di accesso di destinazione di un utente, è necessaria l'autorizzazione **CONTROL** per il database.
 
@@ -196,7 +196,7 @@ GO
 
  Nell'esempio seguente vengono modificate diverse opzioni per un utente del database indipendente in un'istruzione.
 
-**Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
+**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.
 
 ```sql
 ALTER USER Philip
@@ -216,11 +216,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Database SQL \*_**
@@ -232,7 +232,7 @@ GO
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Piattaforma di strumenti<br />analitici (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Piattaforma di strumenti<br />analitici (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -288,21 +288,21 @@ ALTER USER userName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } specifica il primo schema nel quale il server eseguirà una ricerca durante la risoluzione dei nomi di oggetti per l'utente. L'impostazione dello schema predefinito su NULL comporta la rimozione di uno schema predefinito da un gruppo di Windows. L'opzione NULL non può essere usata con un utente di Windows.
 
- PASSWORD **=** ' *password* '  **si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ PASSWORD **=** '*password*'  **si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
  Specifica la password per l'utente che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.
 
 > [!NOTE]
 > Questa opzione è disponibile solo per gli utenti contenuti. Per altre informazioni, vedere [Database indipendenti](../../relational-databases/databases/contained-databases.md) e [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
 
- OLD_PASSWORD **=** _'oldpassword'_ **si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+ OLD_PASSWORD **=** _'oldpassword'_ **si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
- Password dell'utente corrente che verrà sostituita da ' *password* '. Per le password viene fatta distinzione tra maiuscole e minuscole. *OLD_PASSWORD* è necessaria per modificare una password, a meno che non si disponga dell'autorizzazione **ALTER ANY USER** . Si richiede *OLD_PASSWORD* per impedire agli utenti con autorizzazione **IMPERSONATION** di modificare la password.
+ Password dell'utente corrente che verrà sostituita da '*password*'. Per le password viene fatta distinzione tra maiuscole e minuscole. *OLD_PASSWORD* è necessaria per modificare una password, a meno che non si disponga dell'autorizzazione **ALTER ANY USER**. Si richiede *OLD_PASSWORD* per impedire agli utenti con autorizzazione **IMPERSONATION** di modificare la password.
 
 > [!NOTE]
 > Questa opzione è disponibile solo per gli utenti contenuti.
 
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **si applica a** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  **si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 
  Elimina i controlli sui metadati di crittografia nel server nelle operazioni di copia bulk. Ciò consente all'utente di eseguire la copia bulk dei dati crittografati tra tabelle o database senza decrittografare i dati. Il valore predefinito è OFF.
 
@@ -313,14 +313,14 @@ ALTER USER userName
 
  Lo schema predefinito sarà il primo schema in cui verrà eseguita la ricerca nel server durante la risoluzione dei nomi di oggetti per l'utente del database. Se non specificato diversamente, lo schema predefinito sarà il proprietario degli oggetti creati dall'utente del database.
 
- Se l'utente dispone di uno schema predefinito, verrà utilizzato tale schema. Se l'utente non ha uno schema predefinito ma è membro di un gruppo che ha uno schema predefinito, verrà usato lo schema predefinito del gruppo. Se l'utente non ha uno schema predefinito ed è membro di più di un gruppo, lo schema predefinito per l'utente sarà quello del gruppo di Windows con il valore principal_id più basso e uno schema predefinito impostato in modo esplicito. Se non possono essere determinati schemi predefiniti per un utente, viene usato lo schema **dbo** .
+ Se l'utente dispone di uno schema predefinito, verrà utilizzato tale schema. Se l'utente non ha uno schema predefinito ma è membro di un gruppo che ha uno schema predefinito, verrà usato lo schema predefinito del gruppo. Se l'utente non ha uno schema predefinito ed è membro di più di un gruppo, lo schema predefinito per l'utente sarà quello del gruppo di Windows con il valore principal_id più basso e uno schema predefinito impostato in modo esplicito. Se non possono essere determinati schemi predefiniti per un utente, viene usato lo schema **dbo**.
 
  DEFAULT_SCHEMA può essere impostato su uno schema che attualmente non è presente nel database. È pertanto possibile assegnare uno schema predefinito tramite DEFAULT_SCHEMA a un utente prima della creazione dello schema.
 
  Non è possibile specificare DEFAULT_SCHEMA per un utente di cui è stato eseguito il mapping a un certificato o a una chiave asimmetrica.
 
 > [!IMPORTANT]
-> Il valore di DEFAULT_SCHEMA viene ignorato se l'utente è un membro del ruolo predefinito del server **sysadmin** . Tutti i membri del ruolo predefinito del server **sysadmin** dispongono di uno schema predefinito di `dbo`.
+> Il valore di DEFAULT_SCHEMA viene ignorato se l'utente è un membro del ruolo predefinito del server **sysadmin**. Tutti i membri del ruolo predefinito del server **sysadmin** dispongono di uno schema predefinito di `dbo`.
 
  È possibile modificare il nome di un utente sul quale viene eseguito il mapping a un account di accesso o a un gruppo di Windows solo se il SID del nuovo nome utente corrisponde al SID registrato nel database. Questa verifica consente di impedire lo spoofing degli account di accesso di Windows nel database.
 
@@ -350,7 +350,7 @@ Il nome di un utente di cui è stato eseguito il mapping a un account di accesso
 
 ### <a name="permissions"></a>Autorizzazioni
 
- Per modificare il nome di un utente, è necessaria l'autorizzazione **ALTER ANY USER** .
+ Per modificare il nome di un utente, è necessaria l'autorizzazione **ALTER ANY USER**.
 
  Per modificare l'account di accesso di destinazione di un utente, è necessaria l'autorizzazione **CONTROL** per il database.
 
@@ -401,11 +401,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Database SQL](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -417,7 +417,7 @@ GO
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Piattaforma di strumenti<br />analitici (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Piattaforma di strumenti<br />analitici (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -476,7 +476,7 @@ ALTER USER userName
 
  DEFAULT_SCHEMA **=** { *schemaName* | NULL } specifica il primo schema nel quale il server eseguirà una ricerca durante la risoluzione dei nomi di oggetti per l'utente. L'impostazione dello schema predefinito su NULL comporta la rimozione di uno schema predefinito da un gruppo di Windows. L'opzione NULL non può essere usata con un utente di Windows.
 
- PASSWORD **=** ' *password* '
+ PASSWORD **=** '*password*'
 
  Specifica la password per l'utente che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.
 
@@ -485,7 +485,7 @@ ALTER USER userName
 
  OLD_PASSWORD **=** _'oldpassword'_
 
- Password dell'utente corrente che verrà sostituita da ' *password* '. Per le password viene fatta distinzione tra maiuscole e minuscole. *OLD_PASSWORD* è necessaria per modificare una password, a meno che non si disponga dell'autorizzazione **ALTER ANY USER** . Si richiede *OLD_PASSWORD* per impedire agli utenti con autorizzazione **IMPERSONATION** di modificare la password.
+ Password dell'utente corrente che verrà sostituita da '*password*'. Per le password viene fatta distinzione tra maiuscole e minuscole. *OLD_PASSWORD* è necessaria per modificare una password, a meno che non si disponga dell'autorizzazione **ALTER ANY USER**. Si richiede *OLD_PASSWORD* per impedire agli utenti con autorizzazione **IMPERSONATION** di modificare la password.
 
 > [!NOTE]
 > Questa opzione è disponibile solo per gli utenti contenuti.
@@ -508,14 +508,14 @@ ALTER USER userName
 
  Lo schema predefinito sarà il primo schema in cui verrà eseguita la ricerca nel server durante la risoluzione dei nomi di oggetti per l'utente del database. Se non specificato diversamente, lo schema predefinito sarà il proprietario degli oggetti creati dall'utente del database.
 
- Se l'utente dispone di uno schema predefinito, verrà utilizzato tale schema. Se l'utente non ha uno schema predefinito ma è membro di un gruppo che ha uno schema predefinito, verrà usato lo schema predefinito del gruppo. Se l'utente non ha uno schema predefinito ed è membro di più di un gruppo, lo schema predefinito per l'utente sarà quello del gruppo di Windows con il valore principal_id più basso e uno schema predefinito impostato in modo esplicito. Se non possono essere determinati schemi predefiniti per un utente, viene usato lo schema **dbo** .
+ Se l'utente dispone di uno schema predefinito, verrà utilizzato tale schema. Se l'utente non ha uno schema predefinito ma è membro di un gruppo che ha uno schema predefinito, verrà usato lo schema predefinito del gruppo. Se l'utente non ha uno schema predefinito ed è membro di più di un gruppo, lo schema predefinito per l'utente sarà quello del gruppo di Windows con il valore principal_id più basso e uno schema predefinito impostato in modo esplicito. Se non possono essere determinati schemi predefiniti per un utente, viene usato lo schema **dbo**.
 
  DEFAULT_SCHEMA può essere impostato su uno schema che attualmente non è presente nel database. È pertanto possibile assegnare uno schema predefinito tramite DEFAULT_SCHEMA a un utente prima della creazione dello schema.
 
  Non è possibile specificare DEFAULT_SCHEMA per un utente di cui è stato eseguito il mapping a un certificato o a una chiave asimmetrica.
 
 > [!IMPORTANT]
-> Il valore di DEFAULT_SCHEMA viene ignorato se l'utente è un membro del ruolo predefinito del server **sysadmin** . Tutti i membri del ruolo predefinito del server **sysadmin** dispongono di uno schema predefinito di `dbo`.
+> Il valore di DEFAULT_SCHEMA viene ignorato se l'utente è un membro del ruolo predefinito del server **sysadmin**. Tutti i membri del ruolo predefinito del server **sysadmin** dispongono di uno schema predefinito di `dbo`.
 
  È possibile modificare il nome di un utente sul quale viene eseguito il mapping a un account di accesso o a un gruppo di Windows solo se il SID del nuovo nome utente corrisponde al SID registrato nel database. Questa verifica consente di impedire lo spoofing degli account di accesso di Windows nel database.
 
@@ -555,15 +555,15 @@ Queste note si applicano all'autenticazione come utenti di Windows che sono stat
 - Controllare che il tipo indicato dell'account di accesso sia `E` o `X`.
 - Non è possibile usare l'opzione PASSWORD per gli utenti di Azure AD.
 - In tutti i casi di migrazione, i ruoli e le autorizzazioni degli utenti o dei gruppi di Windows verranno trasferiti automaticamente nei nuovi utenti o gruppi di Azure AD.
-- È disponibile una nuova estensione della sintassi, **FROM EXTERNAL PROVIDER** , per la modifica di utenti e gruppi di Windows da SQL locale a utenti e gruppi di Azure AD. Il dominio Windows deve essere federato con Azure AD e tutti i membri del dominio Windows devono esistere in Azure AD quando si usa questa estensione. La sintassi **FROM EXTERNAL PROVIDER** si applica a Istanza gestita di SQL di Azure e deve essere usata nel caso in cui gli utenti di Windows non abbiano account di accesso nell'istanza di SQL originale e sia necessario eseguirne il mapping a utenti di database Azure AD autonomi.
+- È disponibile una nuova estensione della sintassi, **FROM EXTERNAL PROVIDER**, per la modifica di utenti e gruppi di Windows da SQL locale a utenti e gruppi di Azure AD. Il dominio Windows deve essere federato con Azure AD e tutti i membri del dominio Windows devono esistere in Azure AD quando si usa questa estensione. La sintassi **FROM EXTERNAL PROVIDER** si applica a Istanza gestita di SQL di Azure e deve essere usata nel caso in cui gli utenti di Windows non abbiano account di accesso nell'istanza di SQL originale e sia necessario eseguirne il mapping a utenti di database Azure AD autonomi.
 - In questo caso il valore userName consentito può essere:
-- Un utente di Windows ( _domain\user_ ).
-- Un gruppo di Windows ( _MyWindowsGroup_ ).
-- Un alias di Windows ( _MyWindowsAlias_ ).
+- Un utente di Windows (_domain\user_).
+- Un gruppo di Windows (_MyWindowsGroup_).
+- Un alias di Windows (_MyWindowsAlias_).
 - Il risultato del comando ALTER sostituisce il valore userName precedente con il nome corrispondente trovato in Azure AD in base all'ID di sicurezza (SID) originale del valore userName precedente. Il nome modificato viene sostituito e archiviato nei metadati del database:
-- ( _domain\user_ ) verrà sostituito con user@domain.com di Azure AD.
-- ( _domain\\MyWidnowsGroup_ ) verrà sostituito con il gruppo di Azure AD.
-- ( _MyWindowsAlias_ ) rimarrà invariato, ma l'ID di sicurezza (SID) di questo utente verrà verificato in Azure AD.
+- (_domain\user_) verrà sostituito con user@domain.com di Azure AD.
+- (_domain\\MyWidnowsGroup_) verrà sostituito con il gruppo di Azure AD.
+- (_MyWindowsAlias_) rimarrà invariato, ma l'ID di sicurezza (SID) di questo utente verrà verificato in Azure AD.
 
 > [!NOTE]
 > Se l'ID di sicurezza (SID) dell'utente originale convertito in objectID non viene trovato in Azure AD, il comando ALTER USER avrà esito negativo.
@@ -584,7 +584,7 @@ Queste note si applicano all'autenticazione come utenti di Windows che sono stat
 
 ### <a name="permissions"></a>Autorizzazioni
 
- Per modificare il nome di un utente, è necessaria l'autorizzazione **ALTER ANY USER** .
+ Per modificare il nome di un utente, è necessaria l'autorizzazione **ALTER ANY USER**.
 
  Per modificare l'account di accesso di destinazione di un utente, è necessaria l'autorizzazione **CONTROL** per il database.
 
@@ -669,11 +669,11 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 - [Esercitazione: Migrazione di utenti e gruppi di Windows locali di SQL Server in Istanza gestita di SQL tramite la sintassi DDL T-SQL](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Database SQL](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -685,7 +685,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Piattaforma di strumenti<br />analitici (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+        [Piattaforma di strumenti<br />analitici (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -724,14 +724,14 @@ ALTER USER userName
 
  Lo schema predefinito sarà il primo schema in cui verrà eseguita la ricerca nel server durante la risoluzione dei nomi di oggetti per l'utente del database. Se non specificato diversamente, lo schema predefinito sarà il proprietario degli oggetti creati dall'utente del database.
 
- Se l'utente dispone di uno schema predefinito, verrà utilizzato tale schema. Se l'utente non ha uno schema predefinito ma è membro di un gruppo che ha uno schema predefinito, verrà usato lo schema predefinito del gruppo. Se l'utente non ha uno schema predefinito ed è membro di più di un gruppo, lo schema predefinito per l'utente sarà quello del gruppo di Windows con il valore principal_id più basso e uno schema predefinito impostato in modo esplicito. Se non possono essere determinati schemi predefiniti per un utente, viene usato lo schema **dbo** .
+ Se l'utente dispone di uno schema predefinito, verrà utilizzato tale schema. Se l'utente non ha uno schema predefinito ma è membro di un gruppo che ha uno schema predefinito, verrà usato lo schema predefinito del gruppo. Se l'utente non ha uno schema predefinito ed è membro di più di un gruppo, lo schema predefinito per l'utente sarà quello del gruppo di Windows con il valore principal_id più basso e uno schema predefinito impostato in modo esplicito. Se non possono essere determinati schemi predefiniti per un utente, viene usato lo schema **dbo**.
 
  DEFAULT_SCHEMA può essere impostato su uno schema che attualmente non è presente nel database. È pertanto possibile assegnare uno schema predefinito tramite DEFAULT_SCHEMA a un utente prima della creazione dello schema.
 
  Non è possibile specificare DEFAULT_SCHEMA per un utente di cui è stato eseguito il mapping a un certificato o a una chiave asimmetrica.
 
 > [!IMPORTANT]
-> Il valore di DEFAULT_SCHEMA viene ignorato se l'utente è un membro del ruolo predefinito del server **sysadmin** . Tutti i membri del ruolo predefinito del server **sysadmin** dispongono di uno schema predefinito di `dbo`.
+> Il valore di DEFAULT_SCHEMA viene ignorato se l'utente è un membro del ruolo predefinito del server **sysadmin**. Tutti i membri del ruolo predefinito del server **sysadmin** dispongono di uno schema predefinito di `dbo`.
 
  La clausola WITH LOGIN consente di modificare il mapping di un utente associandolo a un account di accesso diverso. Non è possibile modificare con questa clausola il mapping degli utenti che non hanno un account di accesso o degli utenti con mapping a un certificato o a una chiave asimmetrica. È possibile modificare il mapping solo di utenti di SQL e di utenti (o gruppi) di Windows. Non è possibile usare la clausola WITH LOGIN per modificare il tipo di utente, ad esempio per modificare un account di Windows in un account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -755,7 +755,7 @@ Il nome di un utente di cui è stato eseguito il mapping a un account di accesso
 
 ### <a name="permissions"></a>Autorizzazioni
 
- Per modificare il nome di un utente, è necessaria l'autorizzazione **ALTER ANY USER** .
+ Per modificare il nome di un utente, è necessaria l'autorizzazione **ALTER ANY USER**.
 
  Per modificare l'account di accesso di destinazione di un utente, è necessaria l'autorizzazione **CONTROL** per il database.
 
@@ -794,11 +794,11 @@ GO
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Database SQL](alter-user-transact-sql.md?view=azuresqldb-current)
@@ -849,14 +849,14 @@ ALTER USER userName
 
  Lo schema predefinito sarà il primo schema in cui verrà eseguita la ricerca nel server durante la risoluzione dei nomi di oggetti per l'utente del database. Se non specificato diversamente, lo schema predefinito sarà il proprietario degli oggetti creati dall'utente del database.
 
- Se l'utente dispone di uno schema predefinito, verrà utilizzato tale schema. Se l'utente non ha uno schema predefinito ma è membro di un gruppo che ha uno schema predefinito, verrà usato lo schema predefinito del gruppo. Se l'utente non ha uno schema predefinito ed è membro di più di un gruppo, lo schema predefinito per l'utente sarà quello del gruppo di Windows con il valore principal_id più basso e uno schema predefinito impostato in modo esplicito. Se non possono essere determinati schemi predefiniti per un utente, viene usato lo schema **dbo** .
+ Se l'utente dispone di uno schema predefinito, verrà utilizzato tale schema. Se l'utente non ha uno schema predefinito ma è membro di un gruppo che ha uno schema predefinito, verrà usato lo schema predefinito del gruppo. Se l'utente non ha uno schema predefinito ed è membro di più di un gruppo, lo schema predefinito per l'utente sarà quello del gruppo di Windows con il valore principal_id più basso e uno schema predefinito impostato in modo esplicito. Se non possono essere determinati schemi predefiniti per un utente, viene usato lo schema **dbo**.
 
  DEFAULT_SCHEMA può essere impostato su uno schema che attualmente non è presente nel database. È pertanto possibile assegnare uno schema predefinito tramite DEFAULT_SCHEMA a un utente prima della creazione dello schema.
 
  Non è possibile specificare DEFAULT_SCHEMA per un utente di cui è stato eseguito il mapping a un certificato o a una chiave asimmetrica.
 
 > [!IMPORTANT]
-> Il valore di DEFAULT_SCHEMA viene ignorato se l'utente è un membro del ruolo predefinito del server **sysadmin** . Tutti i membri del ruolo predefinito del server **sysadmin** dispongono di uno schema predefinito di `dbo`.
+> Il valore di DEFAULT_SCHEMA viene ignorato se l'utente è un membro del ruolo predefinito del server **sysadmin**. Tutti i membri del ruolo predefinito del server **sysadmin** dispongono di uno schema predefinito di `dbo`.
 
  La clausola WITH LOGIN consente di modificare il mapping di un utente associandolo a un account di accesso diverso. Non è possibile modificare con questa clausola il mapping degli utenti che non hanno un account di accesso o degli utenti con mapping a un certificato o a una chiave asimmetrica. È possibile modificare il mapping solo di utenti di SQL e di utenti (o gruppi) di Windows. Non è possibile usare la clausola WITH LOGIN per modificare il tipo di utente, ad esempio per modificare un account di Windows in un account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -880,7 +880,7 @@ Il nome di un utente di cui è stato eseguito il mapping a un account di accesso
 
 ### <a name="permissions"></a>Autorizzazioni
 
- Per modificare il nome di un utente, è necessaria l'autorizzazione **ALTER ANY USER** .
+ Per modificare il nome di un utente, è necessaria l'autorizzazione **ALTER ANY USER**.
 
  Per modificare l'account di accesso di destinazione di un utente, è necessaria l'autorizzazione **CONTROL** per il database.
 

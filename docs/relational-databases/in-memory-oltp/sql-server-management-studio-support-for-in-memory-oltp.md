@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddd1c896aa3a1425b6d31d33a6d113c77c9c11bf
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8684764c0386513c0890b10dee8bfa3582c1cf59
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867484"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485173"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Supporto di SQL Server Management Studio per OLTP in memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,19 +29,19 @@ ms.locfileid: "91867484"
   
 ### <a name="to-create-a-database-with-a-memory-optimized-data-filegroup"></a>Per creare un database con un filegroup di dati ottimizzato per la memoria  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed espanderla.  
+1.  In **Esplora oggetti** connettersi a un'istanza del motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed espanderla.  
   
 2.  Fare clic con il pulsante destro del mouse su **Database**, quindi scegliere **Nuovo database**.  
   
 3.  Per aggiungere un nuovo filegroup di dati ottimizzato per la memoria, fare clic sulla pagina **Filegroup**. In **DATI OTTIMIZZATI PER LA MEMORIA** fare clic su **Aggiungi filegroup**, quindi immettere il nome del filegroup di dati ottimizzato per la memoria.  La colonna con etichetta **File FILESTREAM** rappresenta il numero di contenitori del filegroup. I contenitori vengono aggiunti alla pagina **Generale** .  
   
-4.  Per aggiungere un file (contenitore) a un filegroup, fare clic sulla pagina **Generale** . In **File di database**fare clic su **Aggiungi**. Selezionare **Tipo file** come **Dati FILESTREAM**, specificare il nome logico del contenitore, selezionare il filegroup ottimizzato per la memoria e verificare che **Aumento automatico / Dimensioni max** sia impostato su **Senza limiti**.  
+4.  Per aggiungere un file (contenitore) a un filegroup, fare clic sulla pagina **Generale** . In **File di database** fare clic su **Aggiungi**. Selezionare **Tipo file** come **Dati FILESTREAM**, specificare il nome logico del contenitore, selezionare il filegroup ottimizzato per la memoria e verificare che **Aumento automatico / Dimensioni max** sia impostato su **Senza limiti**.  
 
      Per altre informazioni sulle modalità di creazione di un nuovo database tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [Creare un database](../../relational-databases/databases/create-a-database.md).  
   
 ### <a name="to-create-a-memory-optimized-table"></a>Per creare una tabella ottimizzata per la memoria  
   
-1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sul nodo **Tabelle** del database, scegliere **Nuova**, quindi fare clic su **Tabella con ottimizzazione per la memoria**.  
+1.  In **Esplora oggetti** fare clic con il pulsante destro del mouse sul nodo **Tabelle** del database, scegliere **Nuova**, quindi fare clic su **Tabella con ottimizzazione per la memoria**.  
   
      Verrà visualizzato un modello per creare tabelle ottimizzate per la memoria.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "91867484"
   
 ### <a name="to-create-a-natively-compiled-stored-procedure"></a>Per creare una stored procedure compilata in modo nativo  
   
-1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sul nodo **Stored procedure** del database, scegliere **Nuova**, quindi fare clic su **Stored procedure compilata in modo nativo**.  
+1.  In **Esplora oggetti** fare clic con il pulsante destro del mouse sul nodo **Stored procedure** del database, scegliere **Nuova**, quindi fare clic su **Stored procedure compilata in modo nativo**.  
   
      Verrà visualizzato un modello per la creazione di stored procedure compilate in modo nativo.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "91867484"
   
 ### <a name="to-create-a-user-defined-memory-optimized-table-type"></a>Per creare una tipo di tabella ottimizzata per la memoria definito dall'utente  
   
-1.  In **Esplora oggetti**espandere il nodo **Tipi** del database, fare clic con il pulsante destro del mouse sul nodo **Tipi di tabella definiti dall'utente** , fare clic su **Nuova**, quindi scegliere **Tipo di tabella con ottimizzazione per la memoria definito dall'utente**.  
+1.  In **Esplora oggetti** espandere il nodo **Tipi** del database, fare clic con il pulsante destro del mouse sul nodo **Tipi di tabella definiti dall'utente** , fare clic su **Nuova**, quindi scegliere **Tipo di tabella con ottimizzazione per la memoria definito dall'utente**.  
   
      Viene visualizzato un modello per la creazione di un tipo di tabella ottimizzata per la memoria definito dall'utente.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "91867484"
   
 #### <a name="view-memory-usage-by-memory-optimized-objects-report"></a>Visualizzare l'utilizzo della memoria con il report relativo agli oggetti con ottimizzazione per la memoria  
   
--   In **Esplora oggetti**fare clic con il pulsante destro del mouse sul database, scegliere **Report**, fare clic su **Report standard**, quindi su **Utilizzo memoria da oggetti con ottimizzazione per la memoria**.  
+-   In **Esplora oggetti** fare clic con il pulsante destro del mouse sul database, scegliere **Report**, fare clic su **Report standard**, quindi su **Utilizzo memoria da oggetti con ottimizzazione per la memoria**.  
   
      Questo report include informazioni dettagliate sull'utilizzo dello spazio in memoria da parte di oggetti ottimizzati per la memoria nel database.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "91867484"
   
 1.  Per ottenere informazioni sull'utilizzo in memoria:  
   
-    -   In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella ottimizzata per la memoria, scegliere **Proprietà**, quindi la pagina **Archiviazione**. Il valore della proprietà **Spazio dati** indica la memoria usata dai dati nella tabella. Il valore della proprietà **Spazio degli indici** indica la memoria usata dagli indici nella tabella.  
+    -   In **Esplora oggetti** fare clic con il pulsante destro del mouse sulla tabella ottimizzata per la memoria, scegliere **Proprietà**, quindi la pagina **Archiviazione**. Il valore della proprietà **Spazio dati** indica la memoria usata dai dati nella tabella. Il valore della proprietà **Spazio degli indici** indica la memoria usata dagli indici nella tabella.  
   
-    -   In **Esplora oggetti**fare clic con il pulsante destro del mouse sul database, scegliere **Proprietà**, quindi fare clic sulla pagina **Generale** . Il valore della proprietà **Memoria allocata agli oggetti ottimizzati in memoria** indica la memoria allocata agli oggetti ottimizzati per la memoria nel database. Il valore della proprietà **Memoria utilizzata dagli oggetti ottimizzati in memoria** indica la memoria usata dagli oggetti ottimizzati per la memoria nel database.  
+    -   In **Esplora oggetti** fare clic con il pulsante destro del mouse sul database, scegliere **Proprietà**, quindi fare clic sulla pagina **Generale** . Il valore della proprietà **Memoria allocata agli oggetti ottimizzati in memoria** indica la memoria allocata agli oggetti ottimizzati per la memoria nel database. Il valore della proprietà **Memoria utilizzata dagli oggetti ottimizzati in memoria** indica la memoria usata dagli oggetti ottimizzati per la memoria nel database.  
   
 ## <a name="supported-features-in-ssmanstudiofull"></a>Funzionalità supportate in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supporta le funzionalità e le operazioni supportate dal motore di database nei database con filegroup di dati ottimizzati per la memoria, tabelle ottimizzate per la memoria, indici e stored procedure compilate in modo nativo.  
@@ -141,7 +141,7 @@ ms.locfileid: "91867484"
   
         -   Importare ed esportare dati. Usare l'opzione **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Copia i dati da una o più tabelle o viste dell'Importazione/Esportazione guidata** . Se la tabella di destinazione è una tabella ottimizzata per la memoria non presente nel database di destinazione:  
   
-            1.  Nella schermata **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Impostazione copia tabella o query**dell' **Importazione/esportazione guidata** selezionare **Copia i dati da una o più tabelle o viste**. Quindi fare clic su **Next**.  
+            1.  Nella schermata **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Impostazione copia tabella o query** dell' **Importazione/esportazione guidata** selezionare **Copia i dati da una o più tabelle o viste**. Quindi fare clic su **Next**.  
   
             2.  Fare clic su **Modifica mapping**. Selezionare quindi **Crea tabella di destinazione** e fare clic su **Modifica SQL**. Immettere la sintassi CREATE TABLE per creare una tabella ottimizzata per la memoria nel database di destinazione. Fare clic su **OK** e completare i passaggi rimanenti della procedura guidata.  
   

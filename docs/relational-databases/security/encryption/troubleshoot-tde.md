@@ -13,13 +13,13 @@ ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2eb908b1d63b70453aeff0e650f93b7c4e794520
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: = azuresqldb-current || = azure-sqldw-latest
+ms.openlocfilehash: 2328cb73bbd101af12074620d0f755209e6dd185
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679248"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489841"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errori comuni relativi a Transparent Data Encryption (TDE) con chiavi gestite dal cliente in Azure Key Vault
 
@@ -34,7 +34,7 @@ Per le prime 8 ore, se il problema sottostante di accesso alla chiave di Azure K
 
 Se un database inaccessibile non è più necessario, è possibile eliminarlo immediatamente per evitare l'addebito di costi. Tutte le altre azioni sul database non sono consentite fino a quando non viene ripristinato l'accesso alla chiave di Azure Key Vault e il database non è di nuovo online. Quando un database crittografato con chiavi gestite dal cliente non è accessibile, non è nemmeno possibile modificare l'opzione TDE da chiavi gestite dal cliente a chiavi gestite dal servizio nel server. Questo vincolo è necessario per proteggere i dati da accessi non autorizzati mentre le autorizzazioni alla tecnologia di protezione TDE sono state revocate. 
 
-Quando un database rimane inaccessibile per più di 8 ore, non verrà più eseguita la riparazione automatica. Se l'accesso alla chiave di Azure Key Vault richiesta viene ripristinato dopo tale periodo, è necessario riconvalidare manualmente l'accesso alla chiave per riportare online il database. Il ripristino dello stato online del database in questo caso può richiedere una notevole quantità di tempo a seconda delle dimensioni del database. Quando il database tornerà di nuovo online, le impostazioni configurate in precedenza, come il [gruppo di failover](/azure/sql-database/sql-database-auto-failover-group), la cronologia del recupero temporizzato e i tag, **andranno perse** . È pertanto consigliabile implementare un sistema di notifica basato su [Gruppi di azioni](/azure/azure-monitor/platform/action-groups) che consenta di venire a conoscenza della situazione e di risolvere quanto prima i problemi di accesso sottostanti relativi all'insieme di credenziali delle chiavi. 
+Quando un database rimane inaccessibile per più di 8 ore, non verrà più eseguita la riparazione automatica. Se l'accesso alla chiave di Azure Key Vault richiesta viene ripristinato dopo tale periodo, è necessario riconvalidare manualmente l'accesso alla chiave per riportare online il database. Il ripristino dello stato online del database in questo caso può richiedere una notevole quantità di tempo a seconda delle dimensioni del database. Quando il database tornerà di nuovo online, le impostazioni configurate in precedenza, come il [gruppo di failover](/azure/sql-database/sql-database-auto-failover-group), la cronologia del recupero temporizzato e i tag, **andranno perse**. È pertanto consigliabile implementare un sistema di notifica basato su [Gruppi di azioni](/azure/azure-monitor/platform/action-groups) che consenta di venire a conoscenza della situazione e di risolvere quanto prima i problemi di accesso sottostanti relativi all'insieme di credenziali delle chiavi. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Errori comuni che causano l'inaccessibilità dei database
 
@@ -70,7 +70,7 @@ Usare il cmdlet o il comando seguente per assicurarsi che all'istanza di SQL Ser
 
 - Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
 
-- Interfaccia della riga di comando di Azure: [az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- Interfaccia della riga di comando di Azure: [az-sql-server-show](/cli/azure/sql/server#az-sql-server-show)
 
 **Mitigazione**
 
@@ -78,9 +78,9 @@ Usare il cmdlet o il comando seguente per configurare un'identità di Azure AD (
 
 - Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) con l'opzione `-AssignIdentity`.
 
-- Interfaccia della riga di comando di Azure: [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) con l'opzione `--assign_identity`.
+- Interfaccia della riga di comando di Azure: [az sql server update](/cli/azure/sql/server#az-sql-server-update) con l'opzione `--assign_identity`.
 
-Nel portale di Azure passare all'insieme di credenziali delle chiavi e quindi passare a **Criteri di accesso** . Seguire questa procedura: 
+Nel portale di Azure passare all'insieme di credenziali delle chiavi e quindi passare a **Criteri di accesso**. Seguire questa procedura: 
 
  1. Usare il pulsante **Aggiungi nuovo** per aggiungere l'AppId per il server creato nel passaggio precedente. 
  1. Assegnare le autorizzazioni seguenti: Ottieni chiave, Esegui il wrapping della chiave e Annulla il wrapping della chiave 
@@ -105,7 +105,7 @@ Per identificare l'URI della chiave e l'insieme di credenziali delle chiavi:
 
     - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-    - Interfaccia della riga di comando di Azure: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+    - Interfaccia della riga di comando di Azure: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key#az-sql-server-tde-key-show) 
 
 1. Usare l'URI della chiave per identificare l'insieme di credenziali delle chiavi:
 
@@ -159,9 +159,9 @@ Per identificare l'URI della chiave e l'insieme di credenziali delle chiavi:
 
 Verificare che l'istanza di SQL Server logica abbia le autorizzazioni per l'insieme di credenziali delle chiavi e le autorizzazioni corrette per accedere alla chiave:
 
-- Nel portale di Azure passare all'insieme di credenziali delle chiavi e quindi passare a **Criteri di accesso** . Trovare l'AppId dell'istanza di SQL Server logica.  
+- Nel portale di Azure passare all'insieme di credenziali delle chiavi e quindi passare a **Criteri di accesso**. Trovare l'AppId dell'istanza di SQL Server logica.  
 - Se l'AppId è presente, verificare che abbia le autorizzazioni per le chiavi seguenti: Ottieni chiave, Esegui il wrapping della chiave e Annulla il wrapping della chiave.
-- Se l'AppId non è presente, aggiungerlo facendo clic sul pulsante **Aggiungi nuovo** . 
+- Se l'AppId non è presente, aggiungerlo facendo clic sul pulsante **Aggiungi nuovo**. 
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>Recupero dello stato di TDE dal log attività
 

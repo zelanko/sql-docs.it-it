@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5919aa313147b54e52289aa0c1d530a5f0064aab
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: fe89a97c1fb13d9446b0fe07f04c7399b42a439e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195353"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489771"
 ---
 # <a name="oracle-source"></a>Origine Oracle
 
@@ -162,7 +162,7 @@ Usare la pagina **Output degli errori** della finestra di dialogo **Editor origi
 **Comportamento in caso di errore**
 
 Consente di selezionare il modo in cui l'origine Oracle deve gestire gli errori in un flusso: ignorare l'errore, reindirizzare la riga o interrompere il componente.
-**Sezione correlata**: [Gestione degli errori nei dati](./error-handling-in-data.md?view=sql-server-2017)
+**Sezione correlata**: [Gestione degli errori nei dati](./error-handling-in-data.md)
 
 **Troncamento**
 

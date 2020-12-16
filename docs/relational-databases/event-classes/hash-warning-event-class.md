@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4a39dcf3f4d9023b85d05a5368a979a8dc1ee5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ec0ced044ba6405d36f53bed4a42f17b57e7d342
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428493"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485423"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88428493"
 >  Per descrivere l'hash bailout vengono usati anche i termini *grace hash join* e *hash join ricorsivo* .  
   
 > [!IMPORTANT]  
->  Per determinare la posizione in cui si verifica l'evento Hash Warning quando Query Optimizer genera un piano di esecuzione, è inoltre consigliabile acquisire una classe di evento Showplan nella traccia. È possibile scegliere qualsiasi classe di evento Showplan ad eccezione delle classi Showplan Text e Showplan Text (Unencoded) che non restituiscono alcun ID nodo. Nelle classi Showplan gli ID nodo identificano ogni operazione eseguita da Query Optimizer quando genera un piano di esecuzione della query. Queste operazioni sono denominate *operatori*e a ogni operatore presente in una classe Showplan è associato un ID nodo. La colonna ObjectID relativa agli eventi Hash Warning corrisponde così all'ID nodo nelle classi Showplan, in modo che sia possibile determinare l'operatore o l'operazione che sta provocando l'errore.  
+>  Per determinare la posizione in cui si verifica l'evento Hash Warning quando Query Optimizer genera un piano di esecuzione, è inoltre consigliabile acquisire una classe di evento Showplan nella traccia. È possibile scegliere qualsiasi classe di evento Showplan ad eccezione delle classi Showplan Text e Showplan Text (Unencoded) che non restituiscono alcun ID nodo. Nelle classi Showplan gli ID nodo identificano ogni operazione eseguita da Query Optimizer quando genera un piano di esecuzione della query. Queste operazioni sono denominate *operatori* e a ogni operatore presente in una classe Showplan è associato un ID nodo. La colonna ObjectID relativa agli eventi Hash Warning corrisponde così all'ID nodo nelle classi Showplan, in modo che sia possibile determinare l'operatore o l'operazione che sta provocando l'errore.  
   
 ## <a name="hash-warning-event-class-data-columns"></a>Colonne di dati della classe di evento Hash Warning  
   

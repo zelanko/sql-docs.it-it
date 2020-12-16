@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 875859d70488bd536223e400e183bcc88a3b4d99
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0b9c6b440766763d00b62e3889a3091ad4af4ae6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92497017"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489881"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -40,7 +40,7 @@ Modifica le proprietà di un account di accesso di [!INCLUDE[ssNoVersion](../../
 
 [!INCLUDE[select-product](../../includes/select-product.md)]
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017"
 
 :::row:::
     :::column:::
@@ -56,7 +56,7 @@ Modifica le proprietà di un account di accesso di [!INCLUDE[ssNoVersion](../../
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Piattaforma di strumenti<br />analitici (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+        [Piattaforma di strumenti<br />analitici (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -159,7 +159,7 @@ Se si specifica MUST_CHANGE, è necessario impostare CHECK_EXPIRATION e CHECK_PO
 
 Se l'opzione CHECK_POLICY è impostata su OFF, non è possibile impostare CHECK_EXPIRATION su ON. Un'istruzione ALTER LOGIN che presenta questa combinazione di opzioni avrà esito negativo.
 
-Non è possibile usare ALTER LOGIN con l'argomento DISABLE per negare l'accesso a un gruppo di Windows. Ad esempio, ALTER LOGIN [ *domain\group* ] DISABLE restituisce il messaggio di errore seguente:
+Non è possibile usare ALTER LOGIN con l'argomento DISABLE per negare l'accesso a un gruppo di Windows. Ad esempio, ALTER LOGIN [*domain\group*] DISABLE restituisce il messaggio di errore seguente:
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -274,11 +274,11 @@ GO
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Database SQL \*_**
@@ -290,7 +290,7 @@ GO
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Piattaforma di strumenti<br />analitici (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+        [Piattaforma di strumenti<br />analitici (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -398,7 +398,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 Nell'esempio seguente viene eseguito il mapping dell'account di accesso `Mary5` alla credenziale EKM `EKMProvider1`.
 
 
-**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 ALTER LOGIN Mary5
@@ -428,7 +428,7 @@ GO
 
 Nell'esempio seguente viene modificata la password dell'account di accesso `TestUser` con un valore con hash.
 
-**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -446,11 +446,11 @@ GO
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
@@ -462,7 +462,7 @@ GO
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
-        [Piattaforma di strumenti<br />analitici (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+        [Piattaforma di strumenti<br />analitici (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -590,7 +590,7 @@ Se si specifica MUST_CHANGE, è necessario impostare CHECK_EXPIRATION e CHECK_PO
 
 Se l'opzione CHECK_POLICY è impostata su OFF, non è possibile impostare CHECK_EXPIRATION su ON. Un'istruzione ALTER LOGIN che presenta questa combinazione di opzioni avrà esito negativo.
 
-Non è possibile utilizzare ALTER_LOGIN con l'argomento DISABLE per negare l'accesso a un gruppo di Windows. Questo si verifica per motivi strutturali. Ad esempio, ALTER_LOGIN [ *domain\group* ] DISABLE restituisce il messaggio di errore seguente:
+Non è possibile utilizzare ALTER_LOGIN con l'argomento DISABLE per negare l'accesso a un gruppo di Windows. Questo si verifica per motivi strutturali. Ad esempio, ALTER_LOGIN [*domain\group*] DISABLE restituisce il messaggio di errore seguente:
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -655,7 +655,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 Nell'esempio seguente viene eseguito il mapping dell'account di accesso `Mary5` alla credenziale EKM `EKMProvider1`.
 
-**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e a Istanza gestita di SQL di Azure.
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e a Istanza gestita di SQL di Azure.
 
 ```sql
 ALTER LOGIN Mary5
@@ -685,7 +685,7 @@ GO
 
 Nell'esempio seguente viene modificata la password dell'account di accesso `TestUser` con un valore con hash.
 
-**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e a Istanza gestita di SQL di Azure.
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e a Istanza gestita di SQL di Azure.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -711,11 +711,11 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
-::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azure-sqldw-latest"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
@@ -727,7 +727,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
         **_\* Azure Synapse<br />Analytics \*_**
     :::column-end:::
     :::column:::
-        [Piattaforma di strumenti<br />analitici (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+        [Piattaforma di strumenti<br />analitici (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -832,7 +832,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 Nell'esempio seguente viene eseguito il mapping dell'account di accesso `Mary5` alla credenziale EKM `EKMProvider1`.
 
-**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 ALTER LOGIN Mary5
@@ -862,7 +862,7 @@ GO
 
 Nell'esempio seguente viene modificata la password dell'account di accesso `TestUser` con un valore con hash.
 
-**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -880,11 +880,11 @@ GO
 - [Extensible Key Management (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)
 
 ::: moniker-end
-::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016"
 
 :::row:::
     :::column:::
-        [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
+        [SQL Server](alter-login-transact-sql.md?view=sql-server-ver15&preserve-view=true)
     :::column-end:::
     :::column:::
         [Database SQL](alter-login-transact-sql.md?view=azuresqldb-current)
@@ -972,7 +972,7 @@ Se si specifica MUST_CHANGE, è necessario impostare CHECK_EXPIRATION e CHECK_PO
 
 Se l'opzione CHECK_POLICY è impostata su OFF, non è possibile impostare CHECK_EXPIRATION su ON. Un'istruzione ALTER LOGIN che presenta questa combinazione di opzioni avrà esito negativo.
 
-Non è possibile utilizzare ALTER_LOGIN con l'argomento DISABLE per negare l'accesso a un gruppo di Windows. Questo si verifica per motivi strutturali. Ad esempio, ALTER_LOGIN [ *domain\group* ] DISABLE restituisce il messaggio di errore seguente:
+Non è possibile utilizzare ALTER_LOGIN con l'argomento DISABLE per negare l'accesso a un gruppo di Windows. Questo si verifica per motivi strutturali. Ad esempio, ALTER_LOGIN [*domain\group*] DISABLE restituisce il messaggio di errore seguente:
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -1035,7 +1035,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 Nell'esempio seguente viene eseguito il mapping dell'account di accesso `Mary5` alla credenziale EKM `EKMProvider1`.
 
-**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 ALTER LOGIN Mary5
@@ -1065,7 +1065,7 @@ GO
 
 Nell'esempio seguente viene modificata la password dell'account di accesso `TestUser` con un valore con hash.
 
-**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.
 
 ```sql
 ALTER LOGIN TestUser WITH

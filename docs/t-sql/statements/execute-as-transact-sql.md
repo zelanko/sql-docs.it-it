@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: markingmyname
 ms.author: maghan
-monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 8f7b4ad559ccafbfd9ac43304a9f1ad6da73b6bd
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017||=azure-sqldw-latest
+ms.openlocfilehash: b0a39ae14cdabfd7868602eb6fe6c705e3edb9fd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497903"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483913"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -131,7 +131,7 @@ Se l'utente è reso orfano, ovvero se l'accesso associato non esiste più, e non
 ## <a name="using-with-no-revert"></a>Utilizzo di WITH NO REVERT  
  Se l'istruzione EXECUTE AS include la clausola facoltativa WITH NO REVERT, il contesto di esecuzione di una sessione non può essere ripristinato tramite REVERT oppure tramite l'esecuzione di un'altra istruzione EXECUTE AS. Il contesto impostato dall'istruzione rimane valido fino all'eliminazione della sessione.  
   
- Quando la clausola WITH NO REVERT COOKIE = @*varbinary_variabl*e è specificata, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passa il valore del cookie a @*varbinary_variabl*e. Il contesto di esecuzione impostato da tale istruzione può essere riportato al contesto precedente solo se l'istruzione REVERT WITH COOKIE = @*varbinary_variable* contiene lo stesso valore di *\@varbinary_variable*.  
+ Quando la clausola WITH NO REVERT COOKIE = @*varbinary_variabl* e è specificata, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passa il valore del cookie a @*varbinary_variabl* e. Il contesto di esecuzione impostato da tale istruzione può essere riportato al contesto precedente solo se l'istruzione REVERT WITH COOKIE = @*varbinary_variable* contiene lo stesso valore di *\@varbinary_variable*.  
   
  Questa opzione risulta utile in un ambiente in cui vengono utilizzati i pool di connessioni. Tramite i pool di connessioni vengono gestiti i gruppi di connessioni al database in modo che tali connessioni possano essere riutilizzate dalle applicazioni in un server applicazioni. Poiché il valore passato a *\@varbinary_variable* è noto solo al chiamante dell'istruzione EXECUTE AS, il chiamante è in grado di garantire che il contesto di esecuzione stabilito non venga modificato da altri.  
   

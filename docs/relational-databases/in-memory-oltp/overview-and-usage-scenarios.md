@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: kevin-farlee
 ms.author: kfarlee
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f759c6cb9b13b75216f5927d078f45996378ab8
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 35e59fa45d81c5b80fe6ff28e2cb3ab4abab47c9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175979"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97485273"
 ---
 # <a name="overview-and-usage-scenarios"></a>Panoramica e scenari di utilizzo
 
@@ -37,10 +37,10 @@ Ma solo perché i dati si trovano in memoria non significa che si perdono quando
 
 Per sfruttare OLTP in memoria nel database, è possibile usare uno o più dei seguenti tipi di oggetti:
 
-- Le*tabelle con ottimizzazione per la memoria* vengono usate per archiviare i dati utente. È possibile dichiarare una tabella ottimizzata per la memoria al momento della creazione.
-- Le*tabelle non durevoli* vengono usate per i dati temporanei, per la memorizzazione nella cache o per un set di risultati intermedio (sostituendo le tabelle temporanee tradizionali). Una tabella non durevole è una tabella ottimizzata per la memoria che viene dichiarata con DURABILITY=SCHEMA_ONLY, vale a dire che le modifiche apportate a queste tabelle non comportano operazioni di I/O. Ciò evita l'utilizzo di risorse per le operazioni di I/O sui log per i casi in cui la durabilità non è un problema.
-- I*tipi di tabella con ottimizzazione per la memoria* vengono usati per i parametri con valori di tabella, ovvero come set di risultati intermedi nelle stored procedure. Questi tipi possono essere usati al posto dei tipi di tabella tradizionali. Le variabili di tabella e i parametri con valori di tabella che vengono dichiarati usando un tipo di tabella ottimizzata per la memoria ereditano i vantaggi delle tabelle non durevoli ottimizzate per la memoria: accesso efficiente ai dati e nessuna operazione I/O.
-- I*moduli T-SQL compilati in modo nativo* vengono usati per ridurre ulteriormente il tempo impiegato per una singola transazione riducendo i cicli di CPU necessari per elaborare le operazioni. È possibile dichiarare un modulo Transact-SQL in modo da essere compilato in modo nativo al momento della creazione. Attualmente, i moduli T-SQL che possono essere compilati in modo nativo sono i seguenti: stored procedure, trigger e funzioni scalari definite dall'utente.
+- Le *tabelle con ottimizzazione per la memoria* vengono usate per archiviare i dati utente. È possibile dichiarare una tabella ottimizzata per la memoria al momento della creazione.
+- Le *tabelle non durevoli* vengono usate per i dati temporanei, per la memorizzazione nella cache o per un set di risultati intermedio (sostituendo le tabelle temporanee tradizionali). Una tabella non durevole è una tabella ottimizzata per la memoria che viene dichiarata con DURABILITY=SCHEMA_ONLY, vale a dire che le modifiche apportate a queste tabelle non comportano operazioni di I/O. Ciò evita l'utilizzo di risorse per le operazioni di I/O sui log per i casi in cui la durabilità non è un problema.
+- I *tipi di tabella con ottimizzazione per la memoria* vengono usati per i parametri con valori di tabella, ovvero come set di risultati intermedi nelle stored procedure. Questi tipi possono essere usati al posto dei tipi di tabella tradizionali. Le variabili di tabella e i parametri con valori di tabella che vengono dichiarati usando un tipo di tabella ottimizzata per la memoria ereditano i vantaggi delle tabelle non durevoli ottimizzate per la memoria: accesso efficiente ai dati e nessuna operazione I/O.
+- I *moduli T-SQL compilati in modo nativo* vengono usati per ridurre ulteriormente il tempo impiegato per una singola transazione riducendo i cicli di CPU necessari per elaborare le operazioni. È possibile dichiarare un modulo Transact-SQL in modo da essere compilato in modo nativo al momento della creazione. Attualmente, i moduli T-SQL che possono essere compilati in modo nativo sono i seguenti: stored procedure, trigger e funzioni scalari definite dall'utente.
 
 OLTP in memoria è integrato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. E poiché il comportamento di questi oggetti è simile a quello delle relative controparti tradizionali, spesso è possibile ottenere un miglioramento delle prestazioni apportando solo modifiche minime al database e all'applicazione. Inoltre, nello stesso database è possibile avere sia le tabelle ottimizzate per la memoria che le tabelle tradizionali basati su disco ed eseguire le query in entrambi i tipi di tabella. Alla fine di questo articolo è disponibile uno script Transact-SQL che mostra un esempio per ognuno di questi tipi di oggetti.
 

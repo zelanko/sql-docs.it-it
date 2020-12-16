@@ -11,14 +11,14 @@ ms.prod: sql
 ms.technology: linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
+monikerRange: '>= sql-server-linux-2017 || >= sql-server-2017'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 8e87ca7630fca5e72daf2a3e4eedfd38d50482fd
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 94ca368b7eaf9b9ad37107c01eb84e239d5fb3c0
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115664"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490031"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Avvio rapido: Eseguire immagini del contenitore di SQL Server con Docker
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -36,7 +36,7 @@ In questa guida introduttiva si usa Docker per effettuare il pull ed eseguire l'
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 > [!NOTE]
 > A partire da SQL Server 2019 CU3 è supportato Ubuntu 18.04.
@@ -44,7 +44,7 @@ In questa guida introduttiva si usa Docker per effettuare il pull ed eseguire l'
 In questa guida di avvio rapido si usa Docker per il pull e l'esecuzione dell'immagine del contenitore di SQL Server 2019, [mssql-server](https://hub.docker.com/r/microsoft/mssql-server). Ci si connette quindi con **sqlcmd** per creare il primo database ed eseguire query.
 
 > [!TIP]
-> Questa guida di avvio rapido consente di creare contenitori di SQL Server 2019. Se si preferisce creare contenitori di SQL Server 2017, vedere la [versione di questo articolo relativa a SQL Server 2017](quickstart-install-connect-docker.md?view=sql-server-linux-2017).
+> Questa guida di avvio rapido consente di creare contenitori di SQL Server 2019. Se si preferisce creare contenitori di SQL Server 2017, vedere la [versione di questo articolo relativa a SQL Server 2017](quickstart-install-connect-docker.md?view=sql-server-linux-2017&preserve-view=true).
 
 ::: moniker-end
 
@@ -138,7 +138,7 @@ Prima di iniziare la procedura seguente, assicurarsi di aver selezionato la shel
 
    | Parametro | Descrizione |
    |-----|-----|
-   | **-e "ACCEPT_EULA=Y"** |  Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza ](https://go.microsoft.com/fwlink/?linkid=857698). Impostazione obbligatoria per l'immagine di SQL Server. |
+   | **-e "ACCEPT_EULA=Y"** |  Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza](https://go.microsoft.com/fwlink/?linkid=857698). Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specificare la password complessa composta da almeno 8 caratteri e conforme ai [requisiti per le password di SQL Server](../relational-databases/security/password-policy.md). Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-p 1433:1433** | Eseguire il mapping di una porta TCP nell'ambiente host (primo valore) con una porta TCP nel contenitore (secondo valore). In questo esempio SQL Server è in ascolto sulla porta TCP 1433 nel contenitore e questo è esposto alla porta 1433 nell'host. |
    | **--name sql1** | Specificare un nome personalizzato per il contenitore, invece di un nome generato in modo casuale. Se si eseguono più contenitori, non è possibile riutilizzare questo stesso nome. |
@@ -171,7 +171,7 @@ Prima di iniziare la procedura seguente, assicurarsi di aver selezionato la shel
 
    ![Output del comando ps di Docker](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. Se nella colonna **STATUS** è impostato lo stato**Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](./sql-server-linux-docker-container-troubleshooting.md).
+4. Se nella colonna **STATUS** è impostato lo stato **Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](./sql-server-linux-docker-container-troubleshooting.md).
 
 Il parametro `-h` (nome host) illustrato in precedenza modifica il nome interno del contenitore in un valore personalizzato. È il nome che viene restituito nella query Transact-SQL seguente:
 
@@ -190,7 +190,7 @@ L'impostazione di `-h` e `--name` sullo stesso valore è un buon modo per identi
 <!--End of 2017 "Pull and run" section-->
 
 <!--This is the 2019 version of the "Pull and run" section-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="pull-and-run-the-2019-container-image"></a><a id="pullandrun2019"></a> Eseguire il pull dell'immagine del contenitore 2019 ed eseguirla
 
@@ -221,7 +221,7 @@ Prima di iniziare la procedura seguente, assicurarsi di aver selezionato la shel
    ::: zone-end
 
    > [!TIP]
-   > Questa guida di avvio rapido usa l'immagine Docker di SQL Server 2019. Se si vuole eseguire l'immagine di SQL Server 2017, vedere la [versione di questo articolo relativa a SQL Server 2017](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017).
+   > Questa guida di avvio rapido usa l'immagine Docker di SQL Server 2019. Se si vuole eseguire l'immagine di SQL Server 2017, vedere la [versione di questo articolo relativa a SQL Server 2017](quickstart-install-connect-docker.md?view=sql-server-linux-2017&preserve-view=true#pullandrun2017).
 
    Il comando precedente esegue il pull dell'immagine del contenitore di SQL Server 2019 basata su Ubuntu. Per usare invece immagini del contenitore basate su RedHat, vedere [Eseguire immagini del contenitore basate su RHEL](./sql-server-linux-docker-container-deployment.md#rhel). Per vedere tutte le immagini disponibili, vedere la [pagina mssql-server-linux dell'hub Docker](https://hub.docker.com/_/microsoft-mssql-server).
 
@@ -264,7 +264,7 @@ Prima di iniziare la procedura seguente, assicurarsi di aver selezionato la shel
 
    | Parametro | Descrizione |
    |-----|-----|
-   | **-e "ACCEPT_EULA=Y"** |  Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza ](https://go.microsoft.com/fwlink/?LinkId=746388). Impostazione obbligatoria per l'immagine di SQL Server. |
+   | **-e "ACCEPT_EULA=Y"** |  Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza](https://go.microsoft.com/fwlink/?LinkId=746388). Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specificare la password complessa composta da almeno 8 caratteri e conforme ai [requisiti per le password di SQL Server](../relational-databases/security/password-policy.md). Impostazione obbligatoria per l'immagine di SQL Server. |
    | **-p 1433:1433** | Eseguire il mapping di una porta TCP nell'ambiente host (primo valore) con una porta TCP nel contenitore (secondo valore). In questo esempio SQL Server è in ascolto sulla porta TCP 1433 nel contenitore e questo è esposto alla porta 1433 nell'host. |
    | **--name sql1** | Specificare un nome personalizzato per il contenitore, invece di un nome generato in modo casuale. Se si eseguono più contenitori, non è possibile riutilizzare questo stesso nome. |
@@ -295,7 +295,7 @@ Prima di iniziare la procedura seguente, assicurarsi di aver selezionato la shel
 
    ![Output del comando ps di Docker](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. Se nella colonna **STATUS** è impostato lo stato**Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** (Stato) del contenitore di SQL Server è impostata su **Exited** (Chiuso), vedere la [Risoluzione dei problemi dei contenitori Docker di SQL Server](sql-server-linux-docker-container-troubleshooting.md).
+4. Se nella colonna **STATUS** è impostato lo stato **Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** (Stato) del contenitore di SQL Server è impostata su **Exited** (Chiuso), vedere la [Risoluzione dei problemi dei contenitori Docker di SQL Server](sql-server-linux-docker-container-troubleshooting.md).
 
 Il parametro `-h` (nome host) illustrato in precedenza modifica il nome interno del contenitore in un valore personalizzato. Cambia il nome interno del contenitore sostituendolo con un valore personalizzato. È il nome che viene restituito nella query Transact-SQL seguente:
 

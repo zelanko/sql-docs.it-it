@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28472efd6747239910630388133bdfe3ca95a6a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f4ff1708cf4c3986a90aff1b4c8048879bf0658e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547801"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489460"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -157,7 +157,7 @@ DEFAULT
  Valore letterale, valore Null o funzione di sistema utilizzati come valore predefinito della colonna. Se usato insieme a una colonna definita come tipo definito dall'utente di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], l'implementazione del tipo deve supportare una conversione implicita da *constant_expression* nel tipo definito dall'utente.  
   
 WITH VALUES   
- Quando si aggiunge una colonna e un vincolo DEFAULT, se la colonna consente valori NULL con WITH VALUES, per le righe esistenti, il valore della nuova colonna verrà impostato su valore specificato in DEFAULT *constant_expression*. Se la colonna da aggiungere non consente valori NULL, per le righe esistenti, il valore della colonna verrà sempre impostato sul valore specificato in DEFAULT *constant_expression*. A partire da SQL Server 2012 questa potrebbe essere un'operazione sui metadati (vedere [Aggiunta di colonne NOT NULL come operazione online](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)).
+ Quando si aggiunge una colonna e un vincolo DEFAULT, se la colonna consente valori NULL con WITH VALUES, per le righe esistenti, il valore della nuova colonna verrà impostato su valore specificato in DEFAULT *constant_expression*. Se la colonna da aggiungere non consente valori NULL, per le righe esistenti, il valore della colonna verrà sempre impostato sul valore specificato in DEFAULT *constant_expression*. A partire da SQL Server 2012 questa potrebbe essere un'operazione sui metadati (vedere [Aggiunta di colonne NOT NULL come operazione online](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation)).
 Se viene usata quando non viene aggiunta anche la colonna correlata, non ha alcun effetto.
  
  Specifica che il valore assegnato in DEFAULT *constant_expression* viene archiviato in una nuova colonna aggiunta alle righe esistenti. Se la colonna aggiunta ammette valori Null e viene specificata la clausola WITH VALUES, il valore predefinito viene archiviato nella nuova colonna aggiunta alle righe esistenti. Se la clausola WITH VALUES non viene specificata per le colonne che consentono valori Null, il valore NULL viene archiviato nella nuova colonna nelle righe esistenti. Se la nuova colonna non ammette valori Null, il valore predefinito viene archiviato nelle nuove righe, indipendentemente dal fatto che la clausola WITH VALUES sia o meno specificata.  
@@ -205,9 +205,9 @@ SPARSE
  Specifica la chiave di crittografia della colonna. Per altre informazioni, vedere [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md).  
   
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
- La**crittografia deterministica** usa un metodo che genera sempre lo stesso valore crittografato per qualsiasi valore di testo normale specificato. L'uso della crittografia deterministica consente di eseguire operazioni di ricerca usando il confronto di uguaglianza, il raggruppamento e il join di tabelle con join di uguaglianza basati su valori crittografati, ma può anche consentire a utenti non autorizzati di ipotizzare informazioni sui valori crittografati esaminando i criteri nella colonna crittografata. È possibile creare un join di due tabelle nelle colonne crittografate in modo deterministico solo se entrambe le colonne vengono crittografate usando la stessa chiave di crittografia della colonna. La crittografia deterministica deve usare regole di confronto a livello di colonna con un ordinamento binario2 per colonne di tipo carattere.  
+ La **crittografia deterministica** usa un metodo che genera sempre lo stesso valore crittografato per qualsiasi valore di testo normale specificato. L'uso della crittografia deterministica consente di eseguire operazioni di ricerca usando il confronto di uguaglianza, il raggruppamento e il join di tabelle con join di uguaglianza basati su valori crittografati, ma può anche consentire a utenti non autorizzati di ipotizzare informazioni sui valori crittografati esaminando i criteri nella colonna crittografata. È possibile creare un join di due tabelle nelle colonne crittografate in modo deterministico solo se entrambe le colonne vengono crittografate usando la stessa chiave di crittografia della colonna. La crittografia deterministica deve usare regole di confronto a livello di colonna con un ordinamento binario2 per colonne di tipo carattere.  
   
- La**crittografia casuale** usa un metodo di crittografia dei dati meno prevedibile. La crittografia casuale è più sicura, ma impedisce i calcoli e l'indicizzazione delle colonne crittografate, a meno che l'istanza di SQL Server non supporti [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+ La **crittografia casuale** usa un metodo di crittografia dei dati meno prevedibile. La crittografia casuale è più sicura, ma impedisce i calcoli e l'indicizzazione delle colonne crittografate, a meno che l'istanza di SQL Server non supporti [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
  Se si usa Always Encrypted (senza enclave sicuri), usare la crittografia deterministica per le colonne in cui eseguire la ricerca con parametri o parametri di raggruppamento, ad esempio un numero ID per gli enti pubblici. Usare la crittografia casuale per i dati, ad esempio il numero di carta di credito, che non sono raggruppati con altri record o usati per il join di tabelle e in cui non vengono eseguite ricerche perché si usano altre colonne, ad esempio un numero di transazione, per trovare la riga che contiene la colonna crittografata che interessa.  
 

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f25698110307ca4539b0939ad8c1f0cb9696145b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1efbdca9b0d3d7919cf3e3f54837decd37bdf5b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537826"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484443"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Query sui dati in una tabella temporale con controllo delle versioni di sistema
 
@@ -35,7 +35,7 @@ Per eseguire qualsiasi tipo di analisi basata sul tempo, usare la nuova clausola
 - CONTAINED IN (<data_ora_inizio> , <data_ora_fine>)
 - ALL
 
-È possibile specificare**FOR SYSTEM_TIME** in modo indipendente per ogni tabella in una query. La clausola può essere usata all'interno di espressioni di tabella comuni, funzioni con valore di tabella e stored procedure. Quando si usa un alias di tabella con una tabella temporale, la clausola **FOR SYSTEM_TIME** deve essere inclusa tra il nome della tabella temporale e l'alias. Vedere il secondo esempio in "Query per una data/ora specifica con la sottoclausola AS-OF".
+È possibile specificare **FOR SYSTEM_TIME** in modo indipendente per ogni tabella in una query. La clausola può essere usata all'interno di espressioni di tabella comuni, funzioni con valore di tabella e stored procedure. Quando si usa un alias di tabella con una tabella temporale, la clausola **FOR SYSTEM_TIME** deve essere inclusa tra il nome della tabella temporale e l'alias. Vedere il secondo esempio in "Query per una data/ora specifica con la sottoclausola AS-OF".
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>Query per un data/ora specifica con la sottoclausola AS-OF
 
