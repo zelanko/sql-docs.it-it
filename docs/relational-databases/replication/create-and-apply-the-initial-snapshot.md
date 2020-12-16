@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 40b77254e3c9dfd6640d1649b1e2236a34cd644d
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: e297a985ef1a6ffb0eb3c407f089cbd9a360c42b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868297"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479992"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Creazione e applicazione dello snapshot iniziale
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -123,7 +123,7 @@ Gli snapshot iniziali possono essere creati a livello di programmazione creando 
   
 2.  Aggiungere articoli alla pubblicazione. Per altre informazioni, vedere [definire un articolo](../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  Dal prompt dei comandi o in un file batch avviare l' [Agente merge repliche](../../relational-databases/replication/agents/replication-snapshot-agent.md) eseguendo **snapshot.exe**con gli argomenti della riga di comando seguenti:  
+3.  Dal prompt dei comandi o in un file batch avviare l' [Agente merge repliche](../../relational-databases/replication/agents/replication-snapshot-agent.md) eseguendo **snapshot.exe** con gli argomenti della riga di comando seguenti:  
   
     -   **-Publication**  
     -   **-Publisher**  

@@ -12,13 +12,13 @@ ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d90234f6a433604e492e3824cd7585de2babfce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 90670f75be6e54b92309c460b315c77a3056008c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465034"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479512"
 ---
 # <a name="full-text-search"></a>Ricerca full-text
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -124,7 +124,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
 -   **Protocol handler.** Questo componente consente di effettuare il pull dei dati dalla memoria per un'ulteriore elaborazione e di accedere ai dati da una tabella utente in un database specificato. È inoltre responsabile della raccolta dei dati dalle colonne oggetto dell'indicizzazione full-text e del loro passaggio all'host del daemon di filtri tramite il quale verrà applicato il filtro e il word breaker in base alle specifiche esigenze.  
   
--   **Filtri.** Per alcuni tipi di dati è richiesta l'applicazione di un filtro prima che i dati di un documento possano essere sottoposti all'indicizzazione full-text, inclusi i dati nelle colonne **varbinary**, **varbinary(max)** , **image**o **xml** . Il filtro utilizzato per un documento dipende dal relativo tipo. Vengono infatti utilizzati filtri diversi per documenti di Microsoft Word (doc), documenti di Microsoft Excel (xls) e documenti XML (xml). Il filtro estrae blocchi di testo dal documento, rimuovendo la formattazione incorporata e mantenendo il testo e, potenzialmente, le informazioni sulla posizione del testo. Il risultato è un flusso di informazioni testuali. Per altre informazioni, vedere [Configurazione e gestione di filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
+-   **Filtri.** Per alcuni tipi di dati è richiesta l'applicazione di un filtro prima che i dati di un documento possano essere sottoposti all'indicizzazione full-text, inclusi i dati nelle colonne **varbinary**, **varbinary(max)** , **image** o **xml** . Il filtro utilizzato per un documento dipende dal relativo tipo. Vengono infatti utilizzati filtri diversi per documenti di Microsoft Word (doc), documenti di Microsoft Excel (xls) e documenti XML (xml). Il filtro estrae blocchi di testo dal documento, rimuovendo la formattazione incorporata e mantenendo il testo e, potenzialmente, le informazioni sulla posizione del testo. Il risultato è un flusso di informazioni testuali. Per altre informazioni, vedere [Configurazione e gestione di filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
   
 -   **Word breaker e stemmer.** Un word breaker è un componente specifico della lingua che consente di trovare i delimitatori di parola in base alle regole lessicali di una determinata lingua (*word breaking*). Ogni word breaker è associato a uno stemmer specifico della lingua che coniuga i verbi ed esegue le espansioni flessionali. In fase di indicizzazione, l'host del daemon di filtri utilizza un word breaker e uno stemmer per eseguire l'analisi linguistica sui dati testuali di una colonna di tabella specificata. Il word breaker e lo stemmer utilizzati per l'indicizzazione della colonna sono determinati dalla lingua associata a una colonna di tabella nell'indice full-text. Per altre informazioni, vedere [Configurare e gestire word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
@@ -136,7 +136,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
  Durante l'indicizzazione dei dati archiviati in una colonna **varbinary(max)** o **image** , il filtro, che implementa l'interfaccia **IFilter** , estrae testo in base al formato file specificato per tali dati, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. Per i componenti filtro talvolta i dati di tipo **varbinary(max)** o **image** devono essere scritti nella cartella filterdata e non deve esserne eseguito il push in memoria.  
   
- Nell'ambito dell'elaborazione, i dati di testo raccolti vengono sottoposti a un word breaker per separare il testo in singoli token o parole chiave. La lingua usata per la tokenizzazione viene specificata a livello di colonna o può essere identificata all'interno dei dati **varbinary(max)** , **image**o **xml** dal componente filtro.  
+ Nell'ambito dell'elaborazione, i dati di testo raccolti vengono sottoposti a un word breaker per separare il testo in singoli token o parole chiave. La lingua usata per la tokenizzazione viene specificata a livello di colonna o può essere identificata all'interno dei dati **varbinary(max)** , **image** o **xml** dal componente filtro.  
   
  È possibile eseguire un'ulteriore elaborazione per rimuovere le parole non significative e normalizzare i token prima di archiviarli nell'indice full-text o in un frammento di indice.  
   
@@ -150,7 +150,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
  A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]gli indici full-text sono integrati nel Motore di database anziché risiedere nel file system come nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un nuovo database, il catalogo full-text è ora un oggetto virtuale che non appartiene ad alcun filegroup. Si tratta semplicemente di un concetto logico che fa riferimento a un gruppo di indici full-text. Si noti tuttavia che durante l'aggiornamento di un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , ovvero qualsiasi catalogo full-text contenente file di dati, viene creato un nuovo filegroup. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  
   
-È consentito un solo indice full-text per tabella. Per creare un indice full-text su una tabella, quest'ultima deve contenere una colonna singola, univoca e non Null. È possibile compilare un indice full-text su colonne di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**e **varbinary(max)** . La creazione di un indice full-text in colonne con tipo di dati  **varbinary**, **varbinary(max)** , **image**o **xml** richiede la specifica di una colonna del tipo. Una *colonna del tipo* è una colonna di tabella in cui è possibile archiviare l'estensione file (doc, pdf, xls e così via) del documento in ogni riga.  
+È consentito un solo indice full-text per tabella. Per creare un indice full-text su una tabella, quest'ultima deve contenere una colonna singola, univoca e non Null. È possibile compilare un indice full-text su colonne di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** e **varbinary(max)** . La creazione di un indice full-text in colonne con tipo di dati  **varbinary**, **varbinary(max)** , **image** o **xml** richiede la specifica di una colonna del tipo. Una *colonna del tipo* è una colonna di tabella in cui è possibile archiviare l'estensione file (doc, pdf, xls e così via) del documento in ogni riga.  
 
 ###  <a name="full-text-index-structure"></a><a name="structure"></a> Struttura di un indice full-text  
  Comprendere a fondo la struttura di un indice full-text è fondamentale per comprendere il funzionamento del motore di ricerca full-text. In questo argomento viene usato come esempio l'estratto seguente della tabella **Document** in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] . In questo estratto sono visualizzate solo due colonne, la colonna **DocumentID** e la colonna **Title** , e tre righe della tabella.  
@@ -250,7 +250,7 @@ Un indice full-text include una o più colonne basate su caratteri in una tabell
   
 -   **File del thesaurus.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa anche un file del thesaurus per ogni lingua full-text e un file del thesaurus globale. I file del thesaurus installati sono praticamente vuoti, ma è possibile modificarli per definire sinonimi per una lingua o uno scenario aziendale specifico. Sviluppando un thesaurus basato sui dati full-text in uso, è possibile ampliare in modo efficace l'ambito delle query full-text su tali dati. Per altre informazioni, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
--   **Filtri (iFilters).**  Per l'indicizzazione di un documento in una colonna del tipo di dati **varbinary(max)** , **image**o **xml** è richiesta l'applicazione di un filtro per eseguire altre operazioni di elaborazione. Il filtro deve essere specifico del tipo di documento (doc, pdf, xls, xml e così via). Per altre informazioni, vedere [Configurazione e gestione di filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
+-   **Filtri (iFilters).**  Per l'indicizzazione di un documento in una colonna del tipo di dati **varbinary(max)** , **image** o **xml** è richiesta l'applicazione di un filtro per eseguire altre operazioni di elaborazione. Il filtro deve essere specifico del tipo di documento (doc, pdf, xls, xml e così via). Per altre informazioni, vedere [Configurazione e gestione di filtri per la ricerca](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
   
  I word breaker, gli stemmer e i filtri vengono eseguiti nel processo host del daemon di filtri (fdhost.exe).  
 

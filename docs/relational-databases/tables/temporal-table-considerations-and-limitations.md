@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28e2c218d9f474638c7d0d8c390f79bf42ca3679
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3ba8729558f6e3e1736db9c380a268cd606444f1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548878"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482347"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerazioni e limitazioni delle tabelle temporali
 
@@ -36,12 +36,12 @@ Quando si usano le tabelle temporali, tenere presenti le considerazioni seguenti
 - Se la tabella corrente è partizionata, la tabella di cronologia viene creata nel filegroup predefinito perché la configurazione del partizionamento non viene replicata automaticamente dalla tabella corrente nella tabella di cronologia.
 - Le tabelle temporali e di cronologia non possono essere **FILETABLE** e possono contenere colonne di qualsiasi tipo di dati supportato diverso da **FILESTREAM** poiché **FILETABLE** e **FILESTREAM** consentono la manipolazione dei dati all'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e quindi non può essere garantito il controllo delle versioni di sistema.
 - Non è possibile creare una tabella nodi o archi come tabella temporale o modificarla in tabella temporale.
-- Mentre le tabelle temporali supportano i tipi di dati BLOB, ad esempio **(n)varchar(max)** , **varbinary(max)** , **(n)text**e **image**, a causa delle loro dimensioni non si potranno evitare costi di archiviazione significativi e implicazioni sulle prestazioni. Di conseguenza, quando si progetta il sistema è importante prestare attenzione mentre si usano questi tipi di dati.
+- Mentre le tabelle temporali supportano i tipi di dati BLOB, ad esempio **(n)varchar(max)** , **varbinary(max)** , **(n)text** e **image**, a causa delle loro dimensioni non si potranno evitare costi di archiviazione significativi e implicazioni sulle prestazioni. Di conseguenza, quando si progetta il sistema è importante prestare attenzione mentre si usano questi tipi di dati.
 - La tabella di cronologia deve essere creata nello stesso database della tabella corrente. L'esecuzione di query temporali su **Linked Server** non è supportata.
 - La tabella di cronologia non può includere vincoli (chiave primaria, chiave esterna, vincoli di colonna o tabella).
 - Le viste indicizzate non sono supportate per le query temporali (query che usano la clausola **FOR SYSTEM_TIME**).
 - L'opzione online (**WITH (ONLINE = ON**) non ha alcun effetto su **ALTER TABLE ALTER COLUMN** nel caso di una tabella temporale con controllo delle versioni di sistema. La colonna ALTER non viene eseguita come online indipendentemente dal valore che è stato specificato per l'opzione ONLINE.
-- Le istruzioni**INSERT** e **UPDATE** non possono fare riferimento a colonne periodo SYSTEM_TIME. Eventuali tentativi di inserire valori direttamente in tali colonne verranno bloccati.
+- Le istruzioni **INSERT** e **UPDATE** non possono fare riferimento a colonne periodo SYSTEM_TIME. Eventuali tentativi di inserire valori direttamente in tali colonne verranno bloccati.
 - **TRUNCATE TABLE** non è supportata quando l'opzione **SYSTEM_VERSIONING** è impostata su **ON**
 - La modifica diretta dei dati in una tabella di cronologia non è consentita.
 - **ON DELETE CASCADE** e **ON UPDATE CASCADE** non sono consentiti nella tabella corrente. In altre parole, quando la tabella temporale fa riferimento alla tabella nella relazione di chiave esterna (corrispondente a *parent_object_id* in sys.foreign_keys) non sono consentite le opzioni CASCADE. Per risolvere questa limitazione, usare la logica dell'applicazione oppure i trigger AFTER per mantenere la coerenza in caso di eliminazione nella tabella di chiave primaria (corrispondente a *referenced_object_id* in sys.foreign_keys). Se la tabella di chiave primaria è temporale e la tabella di riferimento non lo è, questa limitazione non si applica.
@@ -49,7 +49,7 @@ Quando si usano le tabelle temporali, tenere presenti le considerazioni seguenti
   > [!NOTE]
   > questa limitazione si applica solo a SQL Server 2016. Le opzioni CASCADE sono supportate in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e SQL Server 2017 a partire dalla versione CTP 2.0.
 
-- Per non invalidare la logica DML, i trigger**INSTEAD OF** non sono consentiti né per la tabella corrente né per quella di cronologia. I trigger**AFTER** sono consentiti solo per la tabella corrente. Sono bloccati nella tabella di cronologia per evitare di invalidare la logica DML.
+- Per non invalidare la logica DML, i trigger **INSTEAD OF** non sono consentiti né per la tabella corrente né per quella di cronologia. I trigger **AFTER** sono consentiti solo per la tabella corrente. Sono bloccati nella tabella di cronologia per evitare di invalidare la logica DML.
 - L'utilizzo di tecnologie di replica è limitato:
 
   - **Always On:** supporto completo

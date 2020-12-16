@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 01d90b3a146c8e110b5cfad11b4d198a1f97c609
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: fa48c38c00732759cf49c8fb694a54f8bc210971
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720876"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97483022"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>Finestra di dialogo Proprietà pubblicazione di replica di SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -141,12 +141,12 @@ Per ottimizzare le prestazioni dell'applicazione e ridurre la quantità di spazi
   
 ### <a name="options"></a>Opzioni  
  **Accedi ai file di snapshot tramite FTP**  
- Selezionare **I Sottoscrittori possono scaricare i file di snapshot utilizzando FTP (File Transfer Protocol)** e specificare **Nome server FTP**, **Numero di porta**, **Percorso dalla cartella radice FTP**, **Account di accesso**e **Password**per consentire ai Sottoscrittori l'utilizzo del protocollo FTP per il recapito di snapshot.  
+ Selezionare **I Sottoscrittori possono scaricare i file di snapshot utilizzando FTP (File Transfer Protocol)** e specificare **Nome server FTP**, **Numero di porta**, **Percorso dalla cartella radice FTP**, **Account di accesso** e **Password** per consentire ai Sottoscrittori l'utilizzo del protocollo FTP per il recapito di snapshot.  
   
  La selezione di questa opzione consente ai Sottoscrittori di utilizzare il protocollo FTP per recuperare i file di snapshot, senza tuttavia imporne l'obbligo di utilizzo. Se si seleziona questa opzione, l'impostazione predefinita per la Creazione guidata nuova sottoscrizione viene impostata per consentire al Sottoscrittore di recuperare file di snapshot tramite FTP. Per modificare l'impostazione utilizzare la finestra di dialogo **Proprietà sottoscrizione** . Se si consente ai Sottoscrittori l'accesso ai file di snapshot tramite FTP, specificare la cartella FTP come posizione per i file di snapshot nella pagina **Snapshot** della finestra di dialogo **Proprietà pubblicazione** . In tal modo l'agente snapshot aggiornerà automaticamente i file nella cartella FTP quando viene generato un nuovo snapshot. Se la posizione non è impostata sulla cartella FTP, sarà necessario aggiornare i file manualmente ogni volta che vengono generati nuovi snapshot. Per altre informazioni, vedere [Recapitare uno snapshot tramite FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
  **Sincronizzazione Web**  
- Solo per la replica di tipo merge. Selezionare **I Sottoscrittori possono eseguire la sincronizzazione tramite connessione a un server Web**e specificare l'indirizzo di un server Web per consentire ai Sottoscrittori della replica di tipo merge di utilizzare la sincronizzazione Web. È necessario che il server Web usi TLS (Transport Layer Security), precedentemente noto come SSL (Secure Sockets Layer) e che l'indirizzo Web sia completo, ad esempio `https://server.domain.com/synchronize`. Per altre informazioni, vedere [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
+ Solo per la replica di tipo merge. Selezionare **I Sottoscrittori possono eseguire la sincronizzazione tramite connessione a un server Web** e specificare l'indirizzo di un server Web per consentire ai Sottoscrittori della replica di tipo merge di utilizzare la sincronizzazione Web. È necessario che il server Web usi TLS (Transport Layer Security), precedentemente noto come SSL (Secure Sockets Layer) e che l'indirizzo Web sia completo, ad esempio `https://server.domain.com/synchronize`. Per altre informazioni, vedere [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
 
 
 ## <a name="agent-security"></a>Sicurezza agente

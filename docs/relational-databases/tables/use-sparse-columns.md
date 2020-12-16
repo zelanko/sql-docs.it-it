@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b422f4c34831c570b3ed6d9d54bcdb90d1d86754
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ba2d4bc789c324e3e6153dc971a983638af603f4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645935"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482341"
 ---
 # <a name="use-sparse-columns"></a>Utilizzo di colonne di tipo sparse
 
@@ -125,7 +125,7 @@ ms.locfileid: "88645935"
 ## <a name="restrictions-for-using-sparse-columns"></a>Restrizioni relative all'utilizzo di colonne di tipo sparse  
  Le colonne di tipo sparse possono essere di qualsiasi tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e presentano un comportamento analogo a qualsiasi altra colonna, ma con le restrizioni seguenti:  
   
--   Una colonna di tipo sparse deve ammettere i valori Null e non può includere proprietà ROWGUIDCOL o IDENTITY. Una colonna di tipo sparse non può essere costituita dai tipi di dati **text**, **ntext**, **image**, **timestamp**, tipi di dati definiti dall'utente, **geometry**o **geography**, né disporre dell'attributo FILESTREAM.  
+-   Una colonna di tipo sparse deve ammettere i valori Null e non può includere proprietà ROWGUIDCOL o IDENTITY. Una colonna di tipo sparse non può essere costituita dai tipi di dati **text**, **ntext**, **image**, **timestamp**, tipi di dati definiti dall'utente, **geometry** o **geography**, né disporre dell'attributo FILESTREAM.  
   
 -   Una colonna di tipo sparse non può avere un valore predefinito.  
   

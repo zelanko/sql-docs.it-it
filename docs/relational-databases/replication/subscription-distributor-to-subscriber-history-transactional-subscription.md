@@ -13,20 +13,20 @@ f1_keywords:
 ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d09bc4bb7382c236661ba6433ee24ec4f96219ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 698650955b56d73615a644821b553e10076ab040
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729397"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479622"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Sottoscrizione, Cronologia server di distribuzione - Sottoscrittore (Sottoscrizione transazionale)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Nella scheda **Cronologia server di distribuzione - Sottoscrittore** vengono visualizzate informazioni dettagliate sull'agente di distribuzione, quali lo stato, la cronologia, i messaggi informativi ed eventuali messaggi di errore.  
   
 ## <a name="options"></a>Opzioni  
- Scegliere le sessioni dell'agente di distribuzione da visualizzare dal menu **Visualizza** e quindi selezionare una sessione specifica nella griglia con etichetta **Sessioni dell'agente di distribuzione**. Nella griglia con etichetta **Azioni nella sessione selezionata**verranno visualizzate informazioni dettagliate sulla sessione selezionata. Se la sessione selezionata è terminata con un errore, verrà inoltre visualizzata l'area di testo con etichetta **Messaggio o dettagli errore della sessione selezionata** .  
+ Scegliere le sessioni dell'agente di distribuzione da visualizzare dal menu **Visualizza** e quindi selezionare una sessione specifica nella griglia con etichetta **Sessioni dell'agente di distribuzione**. Nella griglia con etichetta **Azioni nella sessione selezionata** verranno visualizzate informazioni dettagliate sulla sessione selezionata. Se la sessione selezionata è terminata con un errore, verrà inoltre visualizzata l'area di testo con etichetta **Messaggio o dettagli errore della sessione selezionata** .  
   
  **Visualizza**  
  Consente di selezionare le sessioni dell'agente di distribuzione da visualizzare. L'esecuzione dell'agente di distribuzione è in genere continua. Potrebbe pertanto essere presente una sola sessione.  

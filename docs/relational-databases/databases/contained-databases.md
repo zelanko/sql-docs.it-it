@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee26ff95b5317d65e71fbdb91e39a2d56e9f5f95
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cc6e5734edbf7203f98d1b7fc7a685e699aaa635
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756347"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481432"
 ---
 # <a name="contained-databases"></a>Database indipendenti
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "85756347"
   
  All'interno del limite del database è presente il *modello di database*, nel quale i database vengono sviluppati e gestiti. Esempi di entità che si trovano all'interno del database includono tabelle di sistema, ad esempio **sys.tables**, utenti del database indipendente con password e tabelle utente nel database corrente a cui viene fatto riferimento con un nome in due parti.  
   
- All'esterno del limite del database è presente il *modello di gestione*che si riferisce alla gestione e alle funzioni a livello di istanza. Esempi di entità che si trovano all'esterno del limite del database includono tabelle di sistema, ad esempio **sys.endpoints**, utenti su cui viene eseguito il mapping ad account di accesso e tabelle utente in un altro database a cui viene fatto riferimento con un nome in tre parti.  
+ All'esterno del limite del database è presente il *modello di gestione* che si riferisce alla gestione e alle funzioni a livello di istanza. Esempi di entità che si trovano all'esterno del limite del database includono tabelle di sistema, ad esempio **sys.endpoints**, utenti su cui viene eseguito il mapping ad account di accesso e tabelle utente in un altro database a cui viene fatto riferimento con un nome in tre parti.  
   
 ##  <a name="containment"></a><a name="containment"></a> Indipendenza  
  Le entità utente completamente residenti all'interno del database sono considerate *indipendenti*. Qualsiasi entità residente all'esterno del database o basata sull'interazione con le funzioni esterne al database è considerata *non indipendente*.  

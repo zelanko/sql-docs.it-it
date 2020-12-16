@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ee448df6c962596b146c3c933406a23063873d96
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 0f339c2be8c7424134ba76fabbed1105d447a621
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919947"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479592"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Pubblicazione dell'esecuzione delle stored procedure nella replica transazionale
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,7 +58,7 @@ EXEC give_raise
 -   Programmazione Transact-SQL della replica: eseguire [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e specificare un valore 'serializable proc exec' (consigliato) o 'proc exec' per il parametro `@type`. Per altre informazioni sulla definizione degli articoli, vedere [Definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Modifica della procedura nel Sottoscrittore  
- Per impostazione predefinita, la definizione della stored procedure nel server di pubblicazione viene distribuita in ogni Sottoscrittore. È comunque possibile modificare la stored procedure anche nel Sottoscrittore. Ciò risulta utile se nel Sottoscrittore si desidera eseguire logica diversa da quella eseguita nel server di pubblicazione. Si supponga, ad esempio, che la stored procedure **sp_big_delete**nel server di pubblicazione svolga due funzioni, ovvero elimini 1.000.000 di righe dalla tabella replicata **big_table1** e aggiorni la tabella non replicata **big_table2**. In questo caso, per ridurre la quantità di risorse di rete utilizzate, è necessario distribuire l'eliminazione del milione di righe come stored procedure pubblicando **sp_big_delete**. Nel Sottoscrittore è possibile modificare **sp_big_delete** in modo che esegua l'eliminazione delle righe, ma non l'aggiornamento successivo di **big_table2**.  
+ Per impostazione predefinita, la definizione della stored procedure nel server di pubblicazione viene distribuita in ogni Sottoscrittore. È comunque possibile modificare la stored procedure anche nel Sottoscrittore. Ciò risulta utile se nel Sottoscrittore si desidera eseguire logica diversa da quella eseguita nel server di pubblicazione. Si supponga, ad esempio, che la stored procedure **sp_big_delete** nel server di pubblicazione svolga due funzioni, ovvero elimini 1.000.000 di righe dalla tabella replicata **big_table1** e aggiorni la tabella non replicata **big_table2**. In questo caso, per ridurre la quantità di risorse di rete utilizzate, è necessario distribuire l'eliminazione del milione di righe come stored procedure pubblicando **sp_big_delete**. Nel Sottoscrittore è possibile modificare **sp_big_delete** in modo che esegua l'eliminazione delle righe, ma non l'aggiornamento successivo di **big_table2**.  
   
 > [!NOTE]  
 >  Per impostazione predefinita tutte le modifiche apportate nel server di pubblicazione utilizzando ALTER PROCEDURE vengono distribuite nel Sottoscrittore. Per impedire questa operazione, disabilitare la distribuzione delle modifiche dello schema prima di eseguire ALTER PROCEDURE. Per informazioni sulle modifiche dello schema, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  

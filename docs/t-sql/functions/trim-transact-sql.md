@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c2110b541ad06770b1218e3e48e77056085eaeb
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 382d0ba28928d800b9b2c89824036faf64af1735
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379526"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480382"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 
@@ -56,7 +56,7 @@ string è un'espressione di qualsiasi tipo di carattere (`nvarchar`, `varchar`, 
 
 Restituisce un'espressione carattere con un tipo di argomento stringa in cui il carattere spazio `char(32)` o altri caratteri specificati vengono rimossi a entrambe le estremità. Restituisce `NULL` se la stringa di input è `NULL`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Commenti
 
 Per impostazione predefinita, la funzione `TRIM` rimuove gli spazi sia dall'inizio che dalla fine della stringa. Questo comportamento è equivalente a `LTRIM(RTRIM(@string))`.
 

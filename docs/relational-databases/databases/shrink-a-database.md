@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5761ee136c23cd82296f154e7e87d4756410c55a
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 60c06966368720b4d996c32be221cf37d805a381
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807514"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478352"
 ---
 # <a name="shrink-a-database"></a>Compattare un database
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "87807514"
   
 #### <a name="to-shrink-a-database"></a>Per compattare un database  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere questa istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere questa istanza.  
   
 2.  Espandere **Database**, quindi fare clic con il pulsante destro del mouse sul database che si vuole compattare.  
   

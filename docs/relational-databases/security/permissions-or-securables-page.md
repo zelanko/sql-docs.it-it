@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8109779b1afe4badd7c44bd30b264a07503c5fa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0bc202f99dfc1bcc067b3baf7f7606506f318d3d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000558"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479402"
 ---
 # <a name="permissions-or-securables-page"></a>Pagina Autorizzazioni o Entità a sicurezza diretta
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "86000558"
  Descrive il tipo di ogni elemento.  
   
 ## <a name="explicit-tab"></a>Scheda Esplicita  
- Nella scheda **Esplicita** sono elencate le possibili autorizzazioni per l'entità a protezione diretta selezionate nella griglia superiore. Per configurare le autorizzazioni, selezionare o deselezionare le caselle di controllo **Concedi** (o **Consenti**), **Con diritto di concessione**e **Nega** . Le opzioni effettivamente disponibili dipendono dall'autorizzazione esplicita in questione.  
+ Nella scheda **Esplicita** sono elencate le possibili autorizzazioni per l'entità a protezione diretta selezionate nella griglia superiore. Per configurare le autorizzazioni, selezionare o deselezionare le caselle di controllo **Concedi** (o **Consenti**), **Con diritto di concessione** e **Nega** . Le opzioni effettivamente disponibili dipendono dall'autorizzazione esplicita in questione.  
   
  **Autorizzazioni**  
  Nome dell'autorizzazione.  
@@ -62,7 +62,7 @@ ms.locfileid: "86000558"
  Selezionare questa opzione per negare l'autorizzazione all'account di accesso, deselezionarla per revocare l'autorizzazione.  
   
  **Autorizzazioni colonna**  
- Per oggetti che contengono colonne, ad esempio tabelle, viste o funzioni con valori di tabella, il pulsante **Autorizzazioni colonna** consente di visualizzare la finestra di dialogo **Autorizzazioni colonna** . In questa finestra di dialogo è possibile impostare le autorizzazioni **Concedi**, **Consenti**o **Nega** in colonne singole di una tabella o di una vista. Questa opzione non è disponibile per tutti i tipi di oggetti o tutte le autorizzazioni.  
+ Per oggetti che contengono colonne, ad esempio tabelle, viste o funzioni con valori di tabella, il pulsante **Autorizzazioni colonna** consente di visualizzare la finestra di dialogo **Autorizzazioni colonna** . In questa finestra di dialogo è possibile impostare le autorizzazioni **Concedi**, **Consenti** o **Nega** in colonne singole di una tabella o di una vista. Questa opzione non è disponibile per tutti i tipi di oggetti o tutte le autorizzazioni.  
   
 ## <a name="effective-tab"></a>Scheda Valide  
  Le autorizzazioni di un'entità correlate a quelle di un'entità a sicurezza diretta possono derivare da autorizzazioni impostate per numerose entità diverse. A un account di accesso, ad esempio, potrebbero essere concesse autorizzazioni sia a livello individuale che come appartenente a un gruppo. Nella scheda **Valide** viene visualizzato il risultato della combinazione di autorizzazioni esplicite e di quelle ricevute in base all'appartenenza a un gruppo oppure a un ruolo. Le autorizzazioni concesse vengono aggregate. Un'autorizzazione negata ha la priorità su tutte le autorizzazioni concesse.  

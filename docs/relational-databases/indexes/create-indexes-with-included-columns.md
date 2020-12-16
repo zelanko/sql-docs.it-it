@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b7c552fa3955818c8d9978802f950f07f8a6bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ce010e0093e234c9095c440f3283b8c7942c78bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88408267"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480052"
 ---
 # <a name="create-indexes-with-included-columns"></a>Creare indici con colonne incluse
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,11 +54,11 @@ ms.locfileid: "88408267"
   
 -   Le colonne non chiave possono essere definite solo negli indici non cluster.  
   
--   È possibile usare come colonne non chiave tutti i tipi di dati eccetto **text**, **ntext**e **image** .  
+-   È possibile usare come colonne non chiave tutti i tipi di dati eccetto **text**, **ntext** e **image** .  
   
 -   Le colonne calcolate deterministiche, precise o imprecise, possono essere colonne non chiave. Per altre informazioni, vedere [Indici per le colonne calcolate](../../relational-databases/indexes/indexes-on-computed-columns.md).  
   
--   Le colonne calcolate derivate dai tipi di dati **image**, **ntext**e **text** possono essere colonne non chiave purché il tipo di dati della colonna calcolata sia consentito come colonna non chiave dell'indice.  
+-   Le colonne calcolate derivate dai tipi di dati **image**, **ntext** e **text** possono essere colonne non chiave purché il tipo di dati della colonna calcolata sia consentito come colonna non chiave dell'indice.  
   
 -   Non è possibile rimuovere da una tabella le colonne non chiave se non si è prima eliminato l'indice di questa tabella.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88408267"
   
     -   Modifica del supporto di valori NULL della colonna da NOT NULL a NULL.  
   
-    -   Aumento della lunghezza di colonne **varchar**, **nvarchar**o **varbinary** .  
+    -   Aumento della lunghezza di colonne **varchar**, **nvarchar** o **varbinary** .  
   
 ###  <a name="security"></a><a name="Security"></a> Sicurezza  
   
@@ -83,7 +83,7 @@ ms.locfileid: "88408267"
   
 3.  Fare clic sul segno più per espandere la tabella in cui si desidera creare un indice con colonne non chiave.  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice**e selezionare **Indice non cluster**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice** e selezionare **Indice non cluster**.  
   
 5.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
@@ -105,7 +105,7 @@ ms.locfileid: "88408267"
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Per creare un indice con colonne non chiave  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d64eedf43ee8ef64a5a2e5e958df02ea8e20b2cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e70793cab3740089246cc3e1f0738f559566e3f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428423"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481192"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Descrizione di indici cluster e non cluster.
 
@@ -32,7 +32,7 @@ Una tabella o una vista può contenere i tipi di indici seguenti:
 
 - Cluster
 
-  - Gli indici cluster ordinano e archiviano le righe di dati della tabella in base ai valori di chiave, ovvero alle colonne incluse nella definizione dell'indice. Per ogni tabella è disponibile un solo indice cluster, poiché alle righe di dati è possibile applicare un solo tipo di ordinamento.  
+  - Gli indici cluster ordinano e archiviano le righe di dati della tabella in base ai valori di chiave, ovvero alle colonne incluse nella definizione dell'indice. Per ogni tabella è disponibile un solo indice cluster, poiché alle righe di dati è possibile applicare un solo tipo di ordinamento.  
   - Le righe di dati di una tabella vengono archiviate con ordinamento solo se la tabella contiene un indice cluster. Una tabella con indice cluster è denominata tabella cluster. Se la tabella non contiene un indice cluster, le righe di dati vengono archiviate in una struttura non ordinata denominata heap.
 
 - Non cluster

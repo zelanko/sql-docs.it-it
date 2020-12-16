@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 45f347cb606773ad5e568a8d443bbe010e1a3fd1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: 116d2f34bef990cca174117238981bb7e87917b4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868775"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481342"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinazioni per gli eventi estesi in SQL Server
 
@@ -146,12 +146,12 @@ La destinazione **event_file** scrive l'output della sessione eventi dal buffer 
 
 
 - Specificare il parametro *filename=* nella clausola ADD TARGET.
-    - L'estensione del file deve essere**xel** .
+    - L'estensione del file deve essere **xel** .
 
 
 - Il nome di file selezionato viene usato dal sistema come prefisso a cui viene aggiunto un valore long integer basato su data-ora, seguito dall'estensione xel.
 
-::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 
 > [!NOTE]
 > Database SQL di Azure supporta solo l'archiviazione di file `xel` in un archivio BLOB di Azure. 
@@ -289,7 +289,7 @@ Il valore predefinito del parametro 'slots' è 256. Se si assegna un altro valor
 - Ad esempio, slots=59 viene arrotondato a =64.
 
 
-### <a name="action-example-for-histogram"></a>Esempio di*azione* per histogram
+### <a name="action-example-for-histogram"></a>Esempio di *azione* per histogram
 
 
 Nella clausola TARGET...SET, l'istruzione Transact-SQL CREATE EVENT SESSION seguente specifica l'assegnazione del parametro di destinazione **source_type=1**. Il valore 1 significa che la destinazione histogram tiene traccia di un'azione.

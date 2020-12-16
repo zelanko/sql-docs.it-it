@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 08857f964f652c5663cda32ce442cf34e201c80c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 7c6121b21be6a0a0d49581ebfcc4d637e7fd2f27
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86907287"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481022"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Aggiunta e rimozione di server di pubblicazione da Monitoraggio replica
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "86907287"
   
 1.  Fare clic con il pulsante destro del mouse sul nodo **Monitoraggio replica** oppure sul nodo di un gruppo di server di pubblicazione nel riquadro sinistro e quindi scegliere **Aggiungi server di pubblicazione**.  
   
-2.  Nella finestra di dialogo **Aggiungi server di pubblicazione** fare clic su **Aggiungi**e quindi su **Aggiungi server di pubblicazione SQL Server**.  
+2.  Nella finestra di dialogo **Aggiungi server di pubblicazione** fare clic su **Aggiungi** e quindi su **Aggiungi server di pubblicazione SQL Server**.  
   
 3.  Nella finestra di dialogo **Connetti al server** immettere il nome del server di pubblicazione e quindi selezionare il tipo di autenticazione. Se si seleziona **Autenticazione di SQL Server**, specificare un account di accesso e la relativa password. Le credenziali specificate vengono salvate da Monitoraggio replica per poterle utilizzare per le connessioni future a questo server. L'account di Windows o l'account di accesso di SQL Server specificato deve essere un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **replmonitor** nel database di distribuzione.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "86907287"
   
 6.  Per specificare le opzioni di aggiornamento e connessione del server di pubblicazione, selezionare il server nella griglia e modificare le opzioni in base alle necessità. Per ulteriori informazioni sulle opzioni di aggiornamento, vedere [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md).  
   
-7.  Selezionare il gruppo all'interno del quale deve essere visualizzato il server di pubblicazione in Monitoraggio replica. Per creare un nuovo gruppo, fare clic su **Nuovo gruppo**e quindi specificare un nome per il gruppo. Al termine, selezionare il gruppo dall'elenco **Mostra server di pubblicazione nel gruppo seguente** .  
+7.  Selezionare il gruppo all'interno del quale deve essere visualizzato il server di pubblicazione in Monitoraggio replica. Per creare un nuovo gruppo, fare clic su **Nuovo gruppo** e quindi specificare un nome per il gruppo. Al termine, selezionare il gruppo dall'elenco **Mostra server di pubblicazione nel gruppo seguente** .  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "86907287"
   
 1.  Fare clic con il pulsante destro del mouse sul nodo **Monitoraggio replica** oppure sul nodo di un gruppo di server di pubblicazione nel riquadro sinistro e quindi scegliere **Aggiungi server di pubblicazione**.  
   
-2.  Nella finestra di dialogo **Aggiungi server di pubblicazione** fare clic su **Aggiungi**e quindi su **Aggiungi server di pubblicazione Oracle**.  
+2.  Nella finestra di dialogo **Aggiungi server di pubblicazione** fare clic su **Aggiungi** e quindi su **Aggiungi server di pubblicazione Oracle**.  
   
 3.  Nella finestra di dialogo **Connetti al server** immettere il nome del server di distribuzione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] associato al server di pubblicazione Oracle e quindi selezionare il tipo di autenticazione. Se si seleziona **Autenticazione di SQL Server**, specificare un account di accesso e la relativa password. Le credenziali specificate vengono salvate da Monitoraggio replica per poterle utilizzare per le connessioni future a questo server. L'account di Windows o l'account di accesso di SQL Server specificato deve essere un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **replmonitor** nel database di distribuzione.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "86907287"
   
 6.  Per specificare le opzioni di aggiornamento e connessione del server di pubblicazione, selezionare il server nella griglia e modificare le opzioni in base alle necessità. Per ulteriori informazioni sulle opzioni di aggiornamento, vedere [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md).  
   
-7.  Selezionare il gruppo all'interno del quale deve essere visualizzato il server di pubblicazione in Monitoraggio replica. Per creare un nuovo gruppo, fare clic su **Nuovo gruppo**e quindi specificare un nome per il gruppo. Al termine, selezionare il gruppo dall'elenco **Mostra server di pubblicazione nel gruppo seguente** .  
+7.  Selezionare il gruppo all'interno del quale deve essere visualizzato il server di pubblicazione in Monitoraggio replica. Per creare un nuovo gruppo, fare clic su **Nuovo gruppo** e quindi specificare un nome per il gruppo. Al termine, selezionare il gruppo dall'elenco **Mostra server di pubblicazione nel gruppo seguente** .  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -65,7 +65,7 @@ ms.locfileid: "86907287"
   
 1.  Fare clic con il pulsante destro del mouse sul nodo **Monitoraggio replica** oppure sul nodo di un gruppo di server di pubblicazione nel riquadro sinistro e quindi scegliere **Aggiungi server di pubblicazione**.  
   
-2.  Nella finestra di dialogo **Aggiungi server di pubblicazione** fare clic su **Aggiungi**e quindi su **Specificare un server di distribuzione e aggiungere i relativi server di pubblicazione**.  
+2.  Nella finestra di dialogo **Aggiungi server di pubblicazione** fare clic su **Aggiungi** e quindi su **Specificare un server di distribuzione e aggiungere i relativi server di pubblicazione**.  
   
 3.  Nella finestra di dialogo **Connetti al server** immettere il nome del server di distribuzione e quindi selezionare il tipo di autenticazione. Se si seleziona **Autenticazione di SQL Server**, specificare un account di accesso e la relativa password. Le credenziali specificate vengono salvate da Monitoraggio replica per poterle utilizzare per le connessioni future a questo server. L'account di Windows o l'account di accesso di SQL Server specificato deve essere un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **replmonitor** nel database di distribuzione.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "86907287"
   
 6.  Per specificare le opzioni di aggiornamento e connessione del server di pubblicazione, selezionare il server nella griglia e modificare le opzioni in base alle necessità. Per ulteriori informazioni sulle opzioni di aggiornamento, vedere [Caching, Refresh, and Replication Monitor Performance](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md).  
   
-7.  Selezionare il gruppo all'interno del quale devono essere visualizzati i server di pubblicazione in Monitoraggio replica. Per creare un nuovo gruppo, fare clic su **Nuovo gruppo**e quindi specificare un nome per il gruppo. Al termine, selezionare il gruppo dall'elenco **Mostra server di pubblicazione nel gruppo seguente** .  
+7.  Selezionare il gruppo all'interno del quale devono essere visualizzati i server di pubblicazione in Monitoraggio replica. Per creare un nuovo gruppo, fare clic su **Nuovo gruppo** e quindi specificare un nome per il gruppo. Al termine, selezionare il gruppo dall'elenco **Mostra server di pubblicazione nel gruppo seguente** .  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -85,7 +85,7 @@ ms.locfileid: "86907287"
   
 2.  Apportare le modifiche desiderate nella finestra di dialogo **Impostazioni server di pubblicazione** :  
   
-    -   Per modificare le credenziali utilizzate da Monitoraggio replica per la connessione al server, fare clic su **Connessione server di pubblicazione** o su **Connessione server di distribuzione**e nella finestra di dialogo **Connetti al server** immettere le nuove credenziali.  
+    -   Per modificare le credenziali utilizzate da Monitoraggio replica per la connessione al server, fare clic su **Connessione server di pubblicazione** o su **Connessione server di distribuzione** e nella finestra di dialogo **Connetti al server** immettere le nuove credenziali.  
   
     -   Per spostare un server di pubblicazione da un gruppo a un altro, selezionare il server di pubblicazione nella griglia **Avvia il monitoraggio dei server di pubblicazione seguenti** e quindi selezionare il nuovo gruppo nell'elenco **Mostra server di pubblicazione nel gruppo seguente** .  
   

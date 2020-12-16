@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d69fbd48f7d7f713d9a10806c65c144fff84d6d
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d1550e59cfa9579cf2c7bf38cdbc8c688b447b69
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87361501"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478372"
 ---
 # <a name="databases"></a>Database
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "87361501"
 
 :::row:::
     :::column:::
-        [Database di sistema](../../relational-databases/databases/system-databases.md)  
+        [Database di sistema.](../../relational-databases/databases/system-databases.md)  
         [Database indipendenti](../../relational-databases/databases/contained-databases.md)  
         [File di dati di SQL Server in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
         [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md)  
@@ -68,7 +68,7 @@ ms.locfileid: "87361501"
         [Visualizzare o modificare le proprietà di un database](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)  
         [Visualizzare un elenco di database in un'istanza di SQL Server](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)  
         [Visualizzare o modificare il livello di compatibilità di un database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
-        [Usare la Creazione guidata piano di manutenzione](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
+        [Utilizzare la Creazione guidata piano di manutenzione](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
         [Creare un alias del tipo di dati definito dall'utente](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)  
         [Snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
     :::column-end:::

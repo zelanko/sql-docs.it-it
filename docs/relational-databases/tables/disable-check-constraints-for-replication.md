@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5a231db58bca07596f63698d5e02a07638c3b02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 148c3fc7d46972fcd6d4769471edd16954cc449d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446487"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480862"
 ---
 # <a name="disable-check-constraints-for-replication"></a>Disabilitare un vincolo CHECK per la replica
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -39,23 +39,23 @@ ms.locfileid: "88446487"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>Per disabilitare un vincolo CHECK per la replica  
   
-1.  In **Esplora oggetti**espandere la tabella contenente il vincolo CHECK che si desidera modificare, quindi espandere la cartella **Vincoli** .  
+1.  In **Esplora oggetti** espandere la tabella contenente il vincolo CHECK che si desidera modificare, quindi espandere la cartella **Vincoli** .  
   
 2.  Fare clic con il pulsante destro del mouse sul vincolo CHECK da modificare, quindi scegliere **Modifica**.  
   
-3.  Nella finestra di dialogo **Verifica vincoli** , in **Progettazione tabelle**selezionare un valore **No** per **Attiva per replica**.  
+3.  Nella finestra di dialogo **Verifica vincoli** , in **Progettazione tabelle** selezionare un valore **No** per **Attiva per replica**.  
   
 4.  Fare clic su **Close**.  
 
-##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>Per disabilitare un vincolo CHECK per la replica  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88446487"
  Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Specificare le opzioni dello schema](../../relational-databases/replication/publish/specify-schema-options.md)  
   
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 435c9e512278d3954c46e543ab6d68610f1cbdfc
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1225f99547dd143b4284f6415df761bdca5c0c38
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679260"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480852"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Caricamento bulk di dati crittografati in colonne tramite Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,7 @@ Lo scenario seguente dimostra come un'importazione non corretta può causare il 
 
 1.  L'opzione è impostata su ON per un utente.  
  
-2.  L'utente esegue l'applicazione che si connette al database. L'applicazione usa le API bulk per inserire valori di testo normale nelle colonne crittografate. L'applicazione si aspetta che un driver client con Crittografia sempre attiva crittografi i dati durante l'inserimento. L'applicazione, tuttavia, non è configurata correttamente e di conseguenza o usa un driver che non supporta Always Encrypted o la stringa di connessione non contiene **column encryption setting=enabled** .  
+2.  L'utente esegue l'applicazione che si connette al database. L'applicazione usa le API bulk per inserire valori di testo normale nelle colonne crittografate. L'applicazione si aspetta che un driver client con Crittografia sempre attiva crittografi i dati durante l'inserimento. L'applicazione, tuttavia, non è configurata correttamente e di conseguenza o usa un driver che non supporta Always Encrypted o la stringa di connessione non contiene **column encryption setting=enabled**.  
 
 3.  L'applicazione invia i valori di testo normale al server. Poiché i controlli dei metadati crittografici sono disattivati nel server per l'utente, il server lascia che i dati non corretti (testo normale anziché testo crittografato) siano inseriti nella colonna crittografata.  
  

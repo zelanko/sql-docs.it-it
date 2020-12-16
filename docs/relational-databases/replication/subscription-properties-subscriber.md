@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7b1338f4e935a2c7e8662a09aacff1cc4b7df9d3
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 773162660a1d64f37ee225a14b7a260640104594
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988816"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479602"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Finestra di dialogo Proprietà sottoscrizione di replica di SQL Server 
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ La finestra di dialogo **Proprietà sottoscrizione** nel Sottoscrittore consente
   
 ## <a name="publisher-options-for-all-subscriptions"></a>Opzioni del server di pubblicazione per tutte le sottoscrizioni  
  **Sicurezza**  
- Fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **...** ) per modificare l'account utilizzato per l'esecuzione dell'agente di distribuzione o dell'agente di merge nel server di distribuzione. Per modificare l'account utilizzato dall'agente di distribuzione o dall'agente di merge per creare connessioni al Sottoscrittore, fare clic su **Connessione al Sottoscrittore**e quindi sul pulsante delle proprietà ( **...** ).  
+ Fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **...** ) per modificare l'account utilizzato per l'esecuzione dell'agente di distribuzione o dell'agente di merge nel server di distribuzione. Per modificare l'account utilizzato dall'agente di distribuzione o dall'agente di merge per creare connessioni al Sottoscrittore, fare clic su **Connessione al Sottoscrittore** e quindi sul pulsante delle proprietà ( **...** ).  
   
  Per ulteriori informazioni sulle autorizzazioni necessarie per ogni agente, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -100,11 +100,11 @@ La finestra di dialogo **Proprietà sottoscrizione** nel Sottoscrittore consente
  **Sicurezza**  
  Fare clic sulla riga **Account processo agente** , quindi sul pulsante delle proprietà ( **...** ) per modificare l'account con cui viene eseguito l'agente di merge o di distribuzione nel Sottoscrittore. Le opzioni di sicurezza correlate a connessioni dipendono dal tipo di sottoscrizione:  
   
--   In caso di sottoscrizioni a una pubblicazione transazionale, per modificare l'account con cui l'agente di distribuzione crea connessioni al server di distribuzione, fare clic su **Connessione server di distribuzione**e quindi sul pulsante delle proprietà **...** .  
+-   In caso di sottoscrizioni a una pubblicazione transazionale, per modificare l'account con cui l'agente di distribuzione crea connessioni al server di distribuzione, fare clic su **Connessione server di distribuzione** e quindi sul pulsante delle proprietà **...** .  
   
--   In caso di sottoscrizioni ad aggiornamento immediato a una pubblicazione transazionale, oltre alla connessione al server di distribuzione descritta in precedenza, è possibile modificare il metodo utilizzato per la propagazione delle modifiche dal Sottoscrittore al server di pubblicazione facendo clic su **Connessione server di pubblicazione**e quindi sul pulsante delle proprietà **...** .  
+-   In caso di sottoscrizioni ad aggiornamento immediato a una pubblicazione transazionale, oltre alla connessione al server di distribuzione descritta in precedenza, è possibile modificare il metodo utilizzato per la propagazione delle modifiche dal Sottoscrittore al server di pubblicazione facendo clic su **Connessione server di pubblicazione** e quindi sul pulsante delle proprietà **...** .  
   
--   In caso di sottoscrizioni a pubblicazioni di tipo merge, fare clic su **Connessione server di pubblicazione**e quindi sul pulsante delle proprietà **...** .  
+-   In caso di sottoscrizioni a pubblicazioni di tipo merge, fare clic su **Connessione server di pubblicazione** e quindi sul pulsante delle proprietà **...** .  
   
  Per ulteriori informazioni sulle autorizzazioni necessarie per ogni agente, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   

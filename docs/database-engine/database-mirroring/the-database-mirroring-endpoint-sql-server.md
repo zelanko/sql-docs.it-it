@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dd3477fb75040443fdfa56969ba9772baaabb0c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: d674ed580a3c4a73a3f136344b8c2c5d76d33ac4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896994"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481502"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Endpoint del mirroring del database (SQL Server)
 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  Per fare parte del mirroring del database e di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , un'istanza del server richiede un *endpoint del mirroring del database*dedicato. Si tratta di un endpoint speciale utilizzato solo per ricevere connessioni da altre istanze del server. In un'istanza del server specificata, ogni connessione del mirroring del database o di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a qualsiasi altra istanza del server utilizza un solo endpoint del mirroring di database.  
+  Per fare parte del mirroring del database e di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , un'istanza del server richiede un *endpoint del mirroring del database* dedicato. Si tratta di un endpoint speciale utilizzato solo per ricevere connessioni da altre istanze del server. In un'istanza del server specificata, ogni connessione del mirroring del database o di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a qualsiasi altra istanza del server utilizza un solo endpoint del mirroring di database.  
   
  Gli endpoint del mirroring del database utilizzano il protocollo TCP (Transmission Control Protocol) per inviare e ricevere messaggi tra istanze del server che fanno parte di sessioni di mirroring del database o ospitano repliche di disponibilità. L'endpoint del mirroring del database è in attesa su un numero di porta TCP univoco.  
   

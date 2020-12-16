@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7f1992be76777862078f029df44a73f7b3579dc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 739d977502331d245b78fcd22776a25590c66bc8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88405417"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479812"
 ---
 # <a name="reinitialize-subscriptions"></a>Reinizializzare le sottoscrizioni
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88405417"
   
  Per reinizializzare tutti gli articoli di una sottoscrizione, utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], stored procedure oppure oggetti RMO (Replication Management Objects). Per reinizializzare singoli articoli di pubblicazioni snapshot e transazionali, è necessario utilizzare stored procedure. Per altre informazioni, vedere [Reinitialize a Subscription](../../relational-databases/replication/reinitialize-a-subscription.md).  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
  [Inizializzare una sottoscrizione](../../relational-databases/replication/initialize-a-subscription.md)   
  [Scadenza e disattivazione delle sottoscrizioni](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   

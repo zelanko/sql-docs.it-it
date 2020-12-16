@@ -17,13 +17,13 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77e6942702594d7c33e3e88ca0d695dda3a59caa
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 79368864ef41860d725772ee9136bb1e66e82790
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868075"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479502"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -143,7 +143,7 @@ Per informazioni essenziali sulle formule seguenti, vedere le note dopo la tabel
   
  #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Esempio: stima dei requisiti di memoria di fdhost.exe  
   
- Questo esempio è relativo a un computer a 64 bit con 8 GB di RAM e 4 processori dual core. Il primo calcolo consente di stimare i requisiti di memoria di fdhost.exe, ovvero*F*. Il numero di intervalli di ricerca per indicizzazione è `8`.  
+ Questo esempio è relativo a un computer a 64 bit con 8 GB di RAM e 4 processori dual core. Il primo calcolo consente di stimare i requisiti di memoria di fdhost.exe, ovvero *F*. Il numero di intervalli di ricerca per indicizzazione è `8`.  
   
  `F = 8*10*8=640`  
   

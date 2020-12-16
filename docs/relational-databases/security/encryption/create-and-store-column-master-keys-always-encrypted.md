@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c9a0dfad97e37325c0990bb8c1786a63a5bf897a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867827"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479362"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Creare e archiviare chiavi master della colonna per Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-Le*chiavi master della colonna* proteggono le chiavi usate in Always Encrypted per crittografare le chiavi di crittografia della colonna. Le chiavi master della colonna devono essere archiviate in un archivio attendibile e devono essere accessibili alle applicazioni che le richiedono per crittografare o decrittografare i dati e agli strumenti per la configurazione di Always Encrypted e la gestione delle chiavi di Always Encrypted.
+Le *chiavi master della colonna* proteggono le chiavi usate in Always Encrypted per crittografare le chiavi di crittografia della colonna. Le chiavi master della colonna devono essere archiviate in un archivio attendibile e devono essere accessibili alle applicazioni che le richiedono per crittografare o decrittografare i dati e agli strumenti per la configurazione di Always Encrypted e la gestione delle chiavi di Always Encrypted.
 
 Questo articolo fornisce informazioni dettagliate per la selezione di un archivio chiavi e la creazione di chiavi master della colonna per Always Encrypted. Per una panoramica dettagliata, vedere [Overview of Key Management for Always Encrypted (Panoramica della gestione delle chiavi per Always Encrypted)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
@@ -30,13 +30,13 @@ Questo articolo fornisce informazioni dettagliate per la selezione di un archivi
 
 Always Encrypted supporta più archivi chiavi per l'archiviazione di chiavi master della colonna Always Encrypted. Gli archivi chiavi supportati variano a seconda dei driver e della versione in uso.
 
-Esistono due categorie generali di archivi da considerare: gli *archivi chiavi locali*e gli *archivi chiavi centralizzati*.
+Esistono due categorie generali di archivi da considerare: gli *archivi chiavi locali* e gli *archivi chiavi centralizzati*.
 
 ###  <a name="local-or-centralized-key-store"></a>Archivio chiavi centralizzato o locale?
 
-* Gli**archivi chiavi locali** possono essere usati solo dalle applicazioni nei computer che contengono l'archivio chiavi locale. In altre parole, è necessario replicare l'archivio chiavi e la chiave per ogni computer che esegue l'applicazione. Un esempio di archivio chiavi locale è l'archivio certificati Windows. Quando si usa un archivio chiavi locale, è necessario verificare che l'archivio chiavi esista in ogni computer che ospita l'applicazione e che il computer contenga le chiavi master della colonna richieste dall'applicazione per accedere ai dati protetti con Always Encrypted. Quando si esegue il provisioning di una chiave master della colonna per la prima volta o quando si modifica (ruota) la chiave, è necessario verificare che la chiave venga distribuita a tutti i computer che ospitano una o più applicazioni.
+* Gli **archivi chiavi locali** possono essere usati solo dalle applicazioni nei computer che contengono l'archivio chiavi locale. In altre parole, è necessario replicare l'archivio chiavi e la chiave per ogni computer che esegue l'applicazione. Un esempio di archivio chiavi locale è l'archivio certificati Windows. Quando si usa un archivio chiavi locale, è necessario verificare che l'archivio chiavi esista in ogni computer che ospita l'applicazione e che il computer contenga le chiavi master della colonna richieste dall'applicazione per accedere ai dati protetti con Always Encrypted. Quando si esegue il provisioning di una chiave master della colonna per la prima volta o quando si modifica (ruota) la chiave, è necessario verificare che la chiave venga distribuita a tutti i computer che ospitano una o più applicazioni.
 
-* Gli**archivi chiavi centralizzati** vengono usati dalle applicazioni in più computer. Un esempio di archivio chiavi centralizzato è un [insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/services/key-vault/). Un archivio chiavi centralizzato in genere facilita la gestione delle chiavi perché non è necessario avere più copie delle chiavi master della colonna in più computer. Verificare che le applicazioni siano configurate per la connessione all'archivio chiavi centralizzato.
+* Gli **archivi chiavi centralizzati** vengono usati dalle applicazioni in più computer. Un esempio di archivio chiavi centralizzato è un [insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/services/key-vault/). Un archivio chiavi centralizzato in genere facilita la gestione delle chiavi perché non è necessario avere più copie delle chiavi master della colonna in più computer. Verificare che le applicazioni siano configurate per la connessione all'archivio chiavi centralizzato.
 
 ### <a name="which-key-stores-are-supported-in-always-encrypted-enabled-client-drivers"></a>Quali sono gli archivi chiavi supportati nei driver dei client abilitati per Always Encrypted?
 
@@ -95,8 +95,8 @@ Per concedere all'utente l'autorizzazione di *lettura* per un certificato archiv
 1.  Aprire un prompt dei comandi e digitare **mmc**.
 2.  Nella console MMC scegliere **Aggiungi/Rimuovi snap-in** dal menu **File**.
 3.  Nella finestra di dialogo **Aggiungi/Rimuovi snap-in** fare clic su **Aggiungi**.
-4.  Nella finestra di dialogo **Aggiungi snap-in autonomo** fare clic su **Certificati**e quindi su **Aggiungi**.
-5.  Nella finestra di dialogo **Snap-in certificati** fare clic su **Account del computer**e quindi su **Fine**.
+4.  Nella finestra di dialogo **Aggiungi snap-in autonomo** fare clic su **Certificati** e quindi su **Aggiungi**.
+5.  Nella finestra di dialogo **Snap-in certificati** fare clic su **Account del computer** e quindi su **Fine**.
 6.  Nella finestra di dialogo **Aggiungi snap-in autonomo** fare clic su **Chiudi**.
 7.  Nella finestra di dialogo **Aggiungi/Rimuovi snap-in** fare clic su **OK**.
 8.  In **Snap-in certificati** trovare il certificato nella cartella **Certificati > Personale**, fare clic con il pulsante destro del mouse sul certificato, scegliere **Tutte le attività** e quindi fare clic su **Gestisci chiavi private**.
@@ -132,9 +132,9 @@ Per un'esercitazione dettagliata che usa SSMS e archivia le chiavi di Always Enc
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Rendere disponibili le chiavi dell'insieme di credenziali delle chiavi di Azure ad applicazioni e utenti
 
-Quando si usa una chiave dell'insieme di credenziali delle chiavi di Azure come chiave master della colonna, l'applicazione deve eseguire l'autenticazione in Azure e l'identità dell'applicazione deve avere le autorizzazioni seguenti per l'insieme di credenziali delle chiavi: *get*, *unwrapKey*e *verify*. 
+Quando si usa una chiave dell'insieme di credenziali delle chiavi di Azure come chiave master della colonna, l'applicazione deve eseguire l'autenticazione in Azure e l'identità dell'applicazione deve avere le autorizzazioni seguenti per l'insieme di credenziali delle chiavi: *get*, *unwrapKey* e *verify*. 
 
-Per eseguire il provisioning delle chiavi di crittografia della colonna protette con una chiave master della colonna archiviata nell'insieme di credenziali delle chiavi di Azure, sono necessarie le autorizzazioni *get*, *unwrapKey*, *wrapKey*, *sign*e *verify* . Inoltre, per creare una nuova chiave in un insieme di credenziali delle chiavi di Azure, è necessaria l'autorizzazione *create* , mentre per elencare il contenuto dell'insieme di credenziali delle chiavi è necessaria l'autorizzazione *list* .
+Per eseguire il provisioning delle chiavi di crittografia della colonna protette con una chiave master della colonna archiviata nell'insieme di credenziali delle chiavi di Azure, sono necessarie le autorizzazioni *get*, *unwrapKey*, *wrapKey*, *sign* e *verify* . Inoltre, per creare una nuova chiave in un insieme di credenziali delle chiavi di Azure, è necessaria l'autorizzazione *create* , mentre per elencare il contenuto dell'insieme di credenziali delle chiavi è necessaria l'autorizzazione *list* .
 
 #### <a name="using-powershell"></a>Utilizzo di PowerShell
 

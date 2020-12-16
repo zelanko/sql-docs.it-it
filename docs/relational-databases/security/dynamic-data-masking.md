@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9da4fe7d516453b91ab5d60ec170431035146b6b
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 568b3f60205e94bd0b81ff5e80e8b3db372a4691
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496949"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480912"
 ---
 # <a name="dynamic-data-masking"></a>Dynamic Data Masking
 [!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,7 +41,7 @@ Il mascheramento dei dati dinamici è disponibile in [!INCLUDE[ssSQL15](../../in
   
 |Funzione|Descrizione|Esempi|  
 |--------------|-----------------|--------------|  
-|Predefinito|Maschera completa in base al tipo di dati dei campi designati.<br /><br /> Per il tipo di dati stringa usare XXXX o X minori se la dimensione del campo è inferiore a 4 caratteri  ( **char** , **nchar** ,  **varchar** , **nvarchar** , **text** , **ntext** ).  <br /><br /> Per il tipo di dati numerici, usare il valore zero ( **bigint** , **bit** , **decimal** , **int** , **money** , **numeric** , **smallint** , **smallmoney** , **tinyint** , **float** , **real** ).<br /><br /> Per i tipi di dati data e ora, usare 01.01.1900 00:00:00.0000000 ( **date** , **datetime2** , **datetime** , **datetimeoffset** , **smalldatetime** , **time** ).<br /><br />Per i tipi di dati binati, usare un singolo byte di valore 0 ASCII ( **binary** , **varbinary** , **image** ).|Esempio di sintassi di definizione della colonna: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|Predefinito|Maschera completa in base al tipo di dati dei campi designati.<br /><br /> Per il tipo di dati stringa usare XXXX o X minori se la dimensione del campo è inferiore a 4 caratteri  (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Per il tipo di dati numerici, usare il valore zero (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Per i tipi di dati data e ora, usare 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Per i tipi di dati binati, usare un singolo byte di valore 0 ASCII (**binary**, **varbinary**, **image**).|Esempio di sintassi di definizione della colonna: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|Metodo di maschera che espone la prima lettera di un indirizzo di posta elettronica e il suffisso costante ".com", sotto forma di un indirizzo di posta elettronica. `aXXX@XXXX.com`.|Esempio di sintassi di definizione: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Random (Casuale)|Una funzione di maschera casuale per l'uso in qualsiasi tipo numerico al fine di mascherare il valore originale con un valore casuale in un intervallo specificato.|Esempio di sintassi di definizione: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |Stringa personalizzata|Metodo di maschera che espone la prima e l'ultima lettera e aggiunge al centro una stringa di riempimento personalizzata. `prefix,[padding],suffix`<br /><br /> Nota: se il valore originale è troppo breve per completare l'intera maschera, parte del prefisso o del suffisso non sarà esposta.|Esempio di sintassi di definizione: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Esempio aggiuntivo:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`|  
@@ -61,7 +61,7 @@ Il mascheramento dei dati dinamici è disponibile in [!INCLUDE[ssSQL15](../../in
   
 -   Usando `SELECT INTO` o `INSERT INTO` per copiare i dati da una colonna con maschera in un'altra tabella vengono restituiti i dati mascherati nella tabella di destinazione.  
   
--   La maschera dati dinamica viene applicata quando si esegue l'importazione e l'esportazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un database contenente colonne con maschera genera un file di dati esportato con dati mascherati, supponendo che venga esportato da un utente senza privilegi **UNMASK** , e il database importato contiene dati mascherati in modo statico.  
+-   La maschera dati dinamica viene applicata quando si esegue l'importazione e l'esportazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un database contenente colonne con maschera genera un file di dati esportato con dati mascherati, supponendo che venga esportato da un utente senza privilegi **UNMASK**, e il database importato contiene dati mascherati in modo statico.  
   
 ## <a name="querying-for-masked-columns"></a>Esecuzione di query per le colonne con maschera  
  Usare la vista **sys.masked_columns** per eseguire query per tabelle e colonne con funzione di maschera applicata. Questa vista viene ereditata dalla vista **sys.columns** , che restituisce tutte le colonne della vista **sys.columns** , in aggiunta alle colonne **is_masked** e **masking_function** , che indicano se la colonna è nascosta e, in tal caso, quale funzione di maschera viene definita. Questa vista mostra solo le colonne su cui è applicata una funzione di maschera.  
@@ -87,7 +87,7 @@ WHERE is_masked = 1;
   
 -   Una colonna con la maschera dati non può essere una chiave per un indice FULLTEXT.  
   
- Per gli utenti senza autorizzazione **UNMASK** , le istruzioni **READTEXT** , **UPDATETEXT** e **WRITETEXT** deprecate non funzionano correttamente in una colonna configurata per la maschera dati dinamica. 
+ Per gli utenti senza autorizzazione **UNMASK** , le istruzioni **READTEXT**, **UPDATETEXT** e **WRITETEXT** deprecate non funzionano correttamente in una colonna configurata per la maschera dati dinamica. 
  
  Poiché l'aggiunta di una maschera di dati dinamici viene implementata come modifica dello schema nella tabella sottostante, l'operazione non può essere eseguita in una colonna con dipendenze. Per aggirare questa limitazione, è possibile rimuovere la dipendenza, aggiungere la maschera di dati dinamici e quindi ricreare la dipendenza. Ad esempio, se la dipendenza è dovuta a un indice che dipende dalla colonna, è possibile eliminare l'indice, aggiungere la maschera e quindi ricreare l'indice dipendente.
  

@@ -24,13 +24,13 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77e6331623da6672b0b39ec7ca432201cd9a482b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: ac09b96cf93144ebf2b615bbd73db36c673eb5ca
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404137"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97479462"
 ---
 # <a name="populate-full-text-indexes"></a>Popolamento degli indici full-text
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -176,11 +176,11 @@ In alcuni casi una richiesta di popolamento incrementale comporta un popolamento
   
 1.  In Management Studio espandere il server in Esplora oggetti.  
   
-2.  Espandere **Database**e quindi il database contenente l'indice full-text.  
+2.  Espandere **Database** e quindi il database contenente l'indice full-text.  
   
 3.  Espandere **Tabelle**.  
   
-    Fare clic con il pulsante destro del mouse sulla tabella in cui viene definito l'indice full-text, scegliere **Indice full-text**e quindi **Proprietà** dal menu di scelta rapida **Indice full-text**. Verrà visualizzata la finestra di dialogo **Proprietà indice full-text** .  
+    Fare clic con il pulsante destro del mouse sulla tabella in cui viene definito l'indice full-text, scegliere **Indice full-text** e quindi **Proprietà** dal menu di scelta rapida **Indice full-text**. Verrà visualizzata la finestra di dialogo **Proprietà indice full-text** .  
 
     > [!IMPORTANT]  
     >  Se la tabella o la vista di base non contiene una colonna di dati di tipo **timestamp**, non è possibile eseguire un popolamento incrementale.
@@ -196,7 +196,7 @@ In alcuni casi una richiesta di popolamento incrementale comporta un popolamento
         Verrà visualizzata la finestra di dialogo **Nuova pianificazione tabella indicizzazione full-text** , in cui è possibile creare una pianificazione. Per salvare la pianificazione, fare clic su **OK**.  
   
         > [!IMPORTANT]  
-        >  Dopo la chiusura della finestra di dialogo *Proprietà indice full-text*, alla nuova pianificazione viene associato un processo di SQL Server Agent, Start Incremental Table Population on*database_name*. **table_name** (Avvio popolamento incrementale tabella in nome_database.nome_tabella). Se vengono create più pianificazioni per lo stesso indice full-text, tutte usano lo stesso processo.  
+        >  Dopo la chiusura della finestra di dialogo *Proprietà indice full-text*, alla nuova pianificazione viene associato un processo di SQL Server Agent, Start Incremental Table Population on *database_name*. **table_name** (Avvio popolamento incrementale tabella in nome_database.nome_tabella). Se vengono create più pianificazioni per lo stesso indice full-text, tutte usano lo stesso processo.  
   
     -   Per **modificare** una pianificazione esistente, selezionare la pianificazione esistente e quindi fare clic su **Modifica**.  
   
