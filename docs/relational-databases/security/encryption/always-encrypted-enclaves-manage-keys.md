@@ -10,13 +10,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8b70fba2edc9a3ba948afa653acbe79607b8eb51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 0c1f00a5b1e69bdb8f51f848210e8e90b0ae6a4b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420315"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477632"
 ---
 # <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>Gestire le chiavi per Always Encrypted con enclave sicuri
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -38,6 +38,6 @@ Gli articoli seguenti illustrano gli aspetti specifici della gestione delle chia
 ## <a name="next-steps"></a>Passaggi successivi
 - [Effettuare il provisioning delle chiavi abilitate per l'enclave](always-encrypted-enclaves-provision-keys.md)
 
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedi anche  
 - [Panoramica della gestione delle chiavi per Always Encrypted](overview-of-key-management-for-always-encrypted.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

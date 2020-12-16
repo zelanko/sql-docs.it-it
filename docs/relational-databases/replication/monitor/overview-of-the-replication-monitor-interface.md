@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 281f95c0e80b11e6295e94ef1e19b93969910790
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 92101ce00eb74e7a48a7e72b320eb536e4d60022
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465230"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477822"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Panoramica dell'interfaccia di Monitoraggio replica
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "88465230"
 ## <a name="viewing-information-and-performing-tasks-related-to-distributors"></a>Visualizzazione delle informazioni ed esecuzione di attività relative ai server di distribuzione  
  Monitoraggio replica consente di visualizzare informazioni sui server di distribuzione in tre schede:  
   
--   Scheda**Pubblicazioni**  
+-   Scheda **Pubblicazioni**  
   
      In questa scheda sono incluse informazioni di riepilogo per tutte le pubblicazioni di un server di distribuzione.  
   
--   Scheda**Elenco verifica sottoscrizioni**  
+-   Scheda **Elenco verifica sottoscrizioni**  
   
      In questa scheda sono incluse informazioni sulle sottoscrizioni per il server di distribuzione selezionato. È possibile filtrare l'elenco delle sottoscrizioni per visualizzare errori, avvisi ed eventuali sottoscrizioni con prestazioni scarse. In questa scheda è inoltre possibile effettuare le attività seguenti: accedere alle proprietà di sottoscrizione, accedere a informazioni dettagliate sull'agente o gli agenti associati a una sottoscrizione, reinizializzare le sottoscrizioni e convalidare le sottoscrizioni.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "88465230"
   
      Questa scheda non è disponibile per i server di distribuzione che eseguono versioni di [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o successive.  
   
--   Scheda**Agenti**  
+-   Scheda **Agenti**  
   
      In questa scheda vengono visualizzate informazioni dettagliate su agenti e processi utilizzati da tutti i tipi di replica. La scheda consente anche di avviare e arrestare ciascun agente e processo.  
   
@@ -83,11 +83,11 @@ ms.locfileid: "88465230"
 ## <a name="viewing-information-and-performing-tasks-related-to-publishers"></a>Visualizzazione delle informazioni ed esecuzione di attività relative ai server di pubblicazione  
  Monitoraggio replica consente di visualizzare informazioni sui server di pubblicazione in tre schede:  
   
--   Scheda**Pubblicazioni**  
+-   Scheda **Pubblicazioni**  
   
      In questa scheda sono incluse informazioni di riepilogo per tutte le pubblicazioni di un server di pubblicazione.  
   
--   Scheda**Elenco verifica sottoscrizioni**  
+-   Scheda **Elenco verifica sottoscrizioni**  
   
      Questa scheda è destinata alla visualizzazione delle informazioni sulle sottoscrizioni da tutte le pubblicazioni disponibili nel server di pubblicazione selezionato. È possibile filtrare l'elenco delle sottoscrizioni per visualizzare errori, avvisi ed eventuali sottoscrizioni con prestazioni scarse. In questa scheda è inoltre possibile accedere alle proprietà di sottoscrizione, accedere a informazioni dettagliate sull'agente o gli agenti associati a una sottoscrizione, reinizializzare le sottoscrizioni e convalidare le sottoscrizioni.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88465230"
   
      Questa scheda non viene visualizzata per i server di distribuzione che eseguono versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
--   Scheda**Agenti**  
+-   Scheda **Agenti**  
   
      In questa scheda vengono visualizzate informazioni dettagliate su agenti e processi utilizzati da tutti i tipi di replica. La scheda consente anche di avviare e arrestare ciascun agente e processo.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "88465230"
 ## <a name="viewing-information-and-performing-tasks-related-to-publications"></a>Visualizzazione delle informazioni ed esecuzione di attività relative alle pubblicazioni  
  In Monitoraggio replica vengono visualizzate informazioni sulle pubblicazioni in tre schede e in alcune finestre dei dettagli:  
   
--   Scheda**Tutte le sottoscrizioni**  
+-   Scheda **Tutte le sottoscrizioni**  
   
      In questa scheda vengono visualizzate informazioni su tutte le sottoscrizioni della pubblicazione selezionata. Per impostazione predefinita, le informazioni disponibili in questa scheda vengono visualizzate in ordine di priorità: errori, avvisi e sottoscrizioni ordinate in base alle prestazioni, dalle più scarse alle migliori.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "88465230"
   
          Nella griglia presente in questa scheda vengono visualizzate icone di errore e di avviso per qualsiasi sottoscrizione che richieda un'attenzione particolare.  
   
--   Scheda**Agenti**  
+-   Scheda **Agenti**  
   
      In questa scheda vengono visualizzate informazioni sugli agenti utilizzati dalla replica. In questa scheda vengono visualizzate informazioni relative agli agenti seguenti:  
   
@@ -148,11 +148,11 @@ ms.locfileid: "88465230"
   
      Questa scheda consente inoltre di accedere a informazioni dettagliate su ciascun agente, nonché di avviare e arrestare ciascun agente. Per informazioni sugli agenti associati alle sottoscrizioni (agente di distribuzione e agente di merge), vedere la sezione "Visualizzazione delle informazioni ed esecuzione di attività relative alle sottoscrizioni" in questo argomento.  
   
--   Scheda**Avvisi**  
+-   Scheda **Avvisi**  
   
      Questa scheda consente di specificare avvisi per gli agenti. Per altre informazioni, vedere [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
--   Scheda**Token di traccia** (solo nella replica transazionale)  
+-   Scheda **Token di traccia** (solo nella replica transazionale)  
   
      Questa scheda consente di misurare la latenza, ovvero l'intervallo di tempo che intercorre tra il commit di una transazione nel server di pubblicazione e il commit della transazione corrispondente nel Sottoscrittore.  
   
@@ -195,23 +195,23 @@ ms.locfileid: "88465230"
 ## <a name="viewing-information-and-performing-tasks-related-to-subscriptions"></a>Visualizzazione delle informazioni ed esecuzione di attività relative alle sottoscrizioni  
  In Monitoraggio replica vengono visualizzate informazioni sulle sottoscrizioni all'interno di numerose schede. Fare doppio clic su una sottoscrizione in Monitoraggio replica per accedere a tali schede in una finestra dei dettagli. Tutte le schede consentono di individuare i motivi per cui un agente non è in esecuzione. I messaggi di errore disponibili offrono informazioni dettagliate sul motivo per cui un agente non è in esecuzione e rappresentano un punto di partenza per la risoluzione di problemi relativi agli agenti associati a una sottoscrizione.  
   
--   Schede**Tutte le sottoscrizioni** e **Elenco verifica sottoscrizioni**.  
+-   Schede **Tutte le sottoscrizioni** e **Elenco verifica sottoscrizioni**.  
   
      Queste schede sono descritte più indietro in questo argomento.  
   
--   Scheda**Cronologia server di pubblicazione - server di distribuzione** (solo nella replica transazionale)  
+-   Scheda **Cronologia server di pubblicazione - server di distribuzione** (solo nella replica transazionale)  
   
      In questa scheda vengono visualizzate informazioni sull'agente di lettura log per una pubblicazione (la scheda è identica alla finestra dei dettagli Agente di lettura log).  
   
--   Scheda**Cronologia server di distribuzione - Sottoscrittore** (nella replica snapshot e nella replica transazionale)  
+-   Scheda **Cronologia server di distribuzione - Sottoscrittore** (nella replica snapshot e nella replica transazionale)  
   
      In questa scheda vengono visualizzate informazioni sull'agente di distribuzione per una sottoscrizione.  
   
--   Scheda**Comandi non distribuiti** (solo nella replica transazionale)  
+-   Scheda **Comandi non distribuiti** (solo nella replica transazionale)  
   
      In questa scheda vengono visualizzate informazioni sul numero di comandi nel database di distribuzione che non sono stati recapitati al Sottoscrittore selezionato e sul tempo stimato per recapitare tali comandi. Questa scheda consente di individuare lo stato della sottoscrizione è non è disponibile per i server di distribuzione che eseguono versioni precedenti a SQL Server 2005.  
   
--   Scheda**Cronologia sincronizzazione** (solo nella replica di tipo merge)  
+-   Scheda **Cronologia sincronizzazione** (solo nella replica di tipo merge)  
   
      In questa scheda vengono visualizzate informazioni sull'agente di merge per una sottoscrizione. Questa scheda consente di individuare i seguenti aspetti:  
   

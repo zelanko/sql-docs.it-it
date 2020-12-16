@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5da64e544211e29491ce4270c91ae527bda923de
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c1ab9e2681f229fba5294f061d8d83e98aabac64
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364763"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475322"
 ---
 # <a name="create-a-stored-procedure"></a>Creazione di una stored procedure
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ In questo argomento viene descritta la procedura per la creazione di una stored 
   
 1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   
-2.  Espandere **Database** , il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e quindi **Programmabilità**.  
+2.  Espandere **Database**, il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] e quindi **Programmabilità**.  
   
 3.  Fare clic con il pulsante destro del mouse su **Stored procedure** e quindi scegliere **Nuova stored procedure**.  
   
@@ -62,10 +62,10 @@ In questo argomento viene descritta la procedura per la creazione di una stored 
     |Descrizione|Restituisce i dati dei dipendenti.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
-    |@Datatype_For_Param1|**nvarchar** (50)|  
+    |@Datatype_For_Param1|**nvarchar**(50)|  
     |Default_Value_For_Param1|NULL|  
     |@Param2|@FirstName|  
-    |@Datatype_For_Param2|**nvarchar** (50)|  
+    |@Datatype_For_Param2|**nvarchar**(50)|  
     |Default_Value_For_Param2|NULL|  
   
 6.  Fare clic su **OK**.  

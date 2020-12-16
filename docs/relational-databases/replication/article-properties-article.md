@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6a0703042862d995d8890c01fee519915b513e3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 03b08fa667f8b0753c315a7cf66123618cb493f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482450"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475862"
 ---
 # <a name="article-properties---ltarticlegt"></a>Proprietà articolo - &lt;Articolo&gt;
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "88482450"
   
 -   Per ogni schema, aggiungere un utente al database di sottoscrizione utilizzando lo stesso nome dello schema.  
   
- **Converti tipi di dati XML in NTEXT**, **Converti tipi di dati MAX in NTEXT e IMAGE**, **Converti nuovi tipi datetime in NVARCHAR**, **Converti tipo FILESTREAM in tipi di dati MAX**, **Converti tipo CLR di grandi dimensioni in tipi di dati MAX**, **Converti tipo hierarchyId in tipi di dati MAX**e **Converti tipo spaziale in tipi di dati MAX**.  
+ **Converti tipi di dati XML in NTEXT**, **Converti tipi di dati MAX in NTEXT e IMAGE**, **Converti nuovi tipi datetime in NVARCHAR**, **Converti tipo FILESTREAM in tipi di dati MAX**, **Converti tipo CLR di grandi dimensioni in tipi di dati MAX**, **Converti tipo hierarchyId in tipi di dati MAX** e **Converti tipo spaziale in tipi di dati MAX**.  
  Determina se convertire i tipi di dati e gli attributi come descritto. Specificare il valore **True** se si intende replicare questi tipi di dati in versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo modo i tipi di dati verranno gestiti correttamente nel Sottoscrittore.  
   
  **Nome oggetto di destinazione**  
@@ -111,10 +111,10 @@ ms.locfileid: "88482450"
  **Livello rilevamento**  
  Determina se gestire come conflitto le modifiche apportate alla stessa riga o alla stessa colonna.  
   
- **Verifica autorizzazione INSERT**, **Verifica autorizzazione UPDATE**e **Verifica autorizzazione DELETE**  
+ **Verifica autorizzazione INSERT**, **Verifica autorizzazione UPDATE** e **Verifica autorizzazione DELETE**  
  Determina se durante la sincronizzazione viene controllata la disponibilità delle autorizzazioni INSERT, UPDATE o DELETE da parte dell'account di accesso del Sottoscrittore per le tabelle pubblicate nel database di pubblicazione. Il valore predefinito è **False** poiché per la replica di tipo merge non è necessario disporre di tali autorizzazioni. L'accesso alle tabelle pubblicate viene controllato tramite l'elenco di accesso alla pubblicazione. Per altre informazioni sull'elenco di acceso alla pubblicazione, vedere [Proteggere il server di pubblicazione](../../relational-databases/replication/security/secure-the-publisher.md).  
   
- È possibile richiedere che vengano verificate le autorizzazioni se si desidera consentire a uno o più Sottoscrittori di caricare solo determinate modifiche nei dati pubblicati. Ad esempio, è possibile aggiungere un Sottoscrittore all'elenco di accesso alla pubblicazione senza concedere al Sottoscrittore alcuna autorizzazione per le tabelle contenute nel database di pubblicazione. È quindi possibile impostare l'opzione Verifica autorizzazioni DELETE su **True**in modo che il Sottoscrittore sia in grado di caricare inserimenti e aggiornamenti, ma non eliminazioni.  
+ È possibile richiedere che vengano verificate le autorizzazioni se si desidera consentire a uno o più Sottoscrittori di caricare solo determinate modifiche nei dati pubblicati. Ad esempio, è possibile aggiungere un Sottoscrittore all'elenco di accesso alla pubblicazione senza concedere al Sottoscrittore alcuna autorizzazione per le tabelle contenute nel database di pubblicazione. È quindi possibile impostare l'opzione Verifica autorizzazioni DELETE su **True** in modo che il Sottoscrittore sia in grado di caricare inserimenti e aggiornamenti, ma non eliminazioni.  
   
  **UPDATE multicolonna**  
  Quando la replica di tipo merge esegue un aggiornamento, vengono aggiornate tutte le colonne modificate in un'unica istruzione UPDATE e reimpostati i valori originali per le colonne non modificate. L'alternativa in questi casi consiste nell'inoltrare più istruzioni UPDATE, con una istruzione UPDATE per ogni colonna che ha subito modifiche. L'istruzione UPDATE multicolonna risulta in genere più efficiente, ma è consigliabile valutare la possibilità di impostare l'opzione su **False** nel caso in cui i trigger nella tabella siano impostati per rispondere agli aggiornamenti di determinate colonne e rispondano in maniera non appropriata a causa del ripristino di tali colonne durante gli aggiornamenti.  

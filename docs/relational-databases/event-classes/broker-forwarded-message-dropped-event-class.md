@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6fe9b893b04f48a582e0ff0125c1fc33b77a16f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ccb035e127b6476ca18b5745dbaf58b66c8c929e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88409867"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476252"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped - classe di evento
 
@@ -56,7 +56,7 @@ ms.locfileid: "88409867"
 |SPID|**int**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Sì|  
 |StartTime|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |State|**int**|Indica la posizione che ha generato l'evento all'interno del codice sorgente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni punto che può generare questo evento è contraddistinto da un codice di stato diverso. Questo codice di stato consente al supporto tecnico Microsoft di individuare la posizione in cui è stato generato l'evento.|30|No|  
-|Operazione completata|**int**|Intervallo di tempo in cui il messaggio è stato attivo. Quando questo valore è uguale o maggiore a quello della durata (TTL), il messaggio viene eliminato.|23|No|  
+|Success|**int**|Intervallo di tempo in cui il messaggio è stato attivo. Quando questo valore è uguale o maggiore a quello della durata (TTL), il messaggio viene eliminato.|23|No|  
 |TargetLoginName|**nvarchar**|Indirizzo di rete a cui doveva essere inoltrato il messaggio.|42|No|  
 |TargetUserName|**nvarchar**|Nome del servizio di origine per il messaggio.|39|No|  
 |TextData|**ntext**|Descrizione del motivo per cui il messaggio è stato eliminato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|1|Sì|  

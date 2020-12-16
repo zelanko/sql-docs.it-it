@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7353735a34874248e3796763c608bff24a83f649
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 1f566297d7efaffeb272ba79fb3b35ff37730429
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907372"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475672"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Aggiunta ed eliminazione di articoli a e da pubblicazioni esistenti
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92907372"
  L'aggiunta di un articolo comporta l'aggiunta dell'articolo alla pubblicazione, la creazione di un nuovo snapshot per la pubblicazione e la sincronizzazione della sottoscrizione per applicare lo schema e i dati per il nuovo articolo.  
   
 > [!NOTE]
->  Se in una pubblicazione di tipo merge si aggiunge un nuovo articolo dal quale dipende un articolo esistente, è necessario specificare l'ordine di elaborazione per entrambi gli articoli tramite il parametro **\@processing_order** di [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Si consideri lo scenario seguente: viene pubblicata una tabella, ma non viene pubblicata una funzione a cui fa riferimento la tabella. Se non si pubblica la funzione, la tabella non può essere creata nel Sottoscrittore. Quando si aggiunge la funzione alla pubblicazione, specificare il valore **1** per il parametro **\@processing_order** di **sp_addmergearticle** e il valore **2** per il parametro **\@processing_order** di **sp_changemergearticle** , indicando il nome della tabella per il parametro **\@article**. Questo ordine di elaborazione consente di creare la funzione nel Sottoscrittore prima della tabella dipendente. È possibile utilizzare numeri diversi per ogni articolo, purché il numero per la funzione sia inferiore a quello per la tabella.  
+>  Se in una pubblicazione di tipo merge si aggiunge un nuovo articolo dal quale dipende un articolo esistente, è necessario specificare l'ordine di elaborazione per entrambi gli articoli tramite il parametro **\@processing_order** di [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Si consideri lo scenario seguente: viene pubblicata una tabella, ma non viene pubblicata una funzione a cui fa riferimento la tabella. Se non si pubblica la funzione, la tabella non può essere creata nel Sottoscrittore. Quando si aggiunge la funzione alla pubblicazione, specificare il valore **1** per il parametro **\@processing_order** di **sp_addmergearticle** e il valore **2** per il parametro **\@processing_order** di **sp_changemergearticle**, indicando il nome della tabella per il parametro **\@article**. Questo ordine di elaborazione consente di creare la funzione nel Sottoscrittore prima della tabella dipendente. È possibile utilizzare numeri diversi per ogni articolo, purché il numero per la funzione sia inferiore a quello per la tabella.  
   
 1.  Aggiungere uno o più articoli tramite uno dei metodi seguenti:  
   

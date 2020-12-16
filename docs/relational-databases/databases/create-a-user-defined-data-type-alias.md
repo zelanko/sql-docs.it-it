@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e2bc61b8c69f3e52fc5149a1c3313ee4f0dc8d1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 85c93be3f041e470a7c4d1838467a997ff7dd56f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363157"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476502"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Creare un alias del tipo di dati definito dall'utente
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "87363157"
   
 #### <a name="to-create-a-user-defined-data-type"></a>Per creare un tipo di dati definito dall'utente  
   
-1.  In Esplora oggetti espandere **Database**, espandere un database, **Programmabilità**e **Tipi**, fare clic con il pulsante destro del mouse su **Tipi di dati definiti dall'utente**, quindi scegliere **Nuovo tipo di dati definito dall'utente**.  
+1.  In Esplora oggetti espandere **Database**, espandere un database, **Programmabilità** e **Tipi**, fare clic con il pulsante destro del mouse su **Tipi di dati definiti dall'utente**, quindi scegliere **Nuovo tipo di dati definito dall'utente**.  
   
      **Consenti valori Null**  
      Specificare se dal tipo di dati definito dall'utente possono essere accettati valori Null. Il supporto di valori Null di un tipo di dati definito dall'utente esistente non può essere modificato.  
@@ -69,7 +69,7 @@ ms.locfileid: "87363157"
      Facoltativamente, selezionare un valore predefinito da associare all'alias del tipo di dati definito dall'utente.  
   
      **Lunghezza/Precisione**  
-     Consente di visualizzare la lunghezza o la precisione del tipo di dati. L'opzione**Lunghezza** viene applicata ai tipi di dati carattere definiti dall'utente mentre **Precisione** solo ai tipi di dati numerici definiti dall'utente. L'etichetta varia a seconda del tipo di dati selezionato in precedenza. Se la lunghezza o la precisione del tipo di dati selezionato è fissa, la casella non è modificabile.  
+     Consente di visualizzare la lunghezza o la precisione del tipo di dati. L'opzione **Lunghezza** viene applicata ai tipi di dati carattere definiti dall'utente mentre **Precisione** solo ai tipi di dati numerici definiti dall'utente. L'etichetta varia a seconda del tipo di dati selezionato in precedenza. Se la lunghezza o la precisione del tipo di dati selezionato è fissa, la casella non è modificabile.  
   
      La lunghezza non viene visualizzata per tipi di dati **nvarchar(max)** , **varchar(max)** o **varbinary(max)** .  
   
@@ -105,7 +105,7 @@ ms.locfileid: "87363157"
   
 4.  Nella casella **Tipo di dati** selezionare il tipo di dati sul quale sarà basato il nuovo alias del tipo di dati.  
   
-5.  Compilare le caselle **Lunghezza**, **Precisione**e **Scala** se necessarie per il tipo di dati selezionato.  
+5.  Compilare le caselle **Lunghezza**, **Precisione** e **Scala** se necessarie per il tipo di dati selezionato.  
   
 6.  Selezionare **Consenti valori NULL** se il nuovo alias del tipo di dati può consentire valori NULL.  
   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a754dd4904cb106fc847beab843abca3837545a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 31a157c04afc4890c8818a118c83f5a3c5458e84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002961"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474112"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Stima delle dimensioni di un heap
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "86002961"
      I byte aggiunti a **_Max_Var_Size_** servono a tenere traccia di ogni colonna a lunghezza variabile. Questa formula si basa sul presupposto che tutte le colonne a lunghezza variabile siano piene al 100%. Se si prevede che verrà usata una percentuale inferiore dello spazio di archiviazione delle colonne a lunghezza variabile, è possibile modificare il valore di **_Max_Var_Size_** in base a tale percentuale per ottenere una stima più accurata delle dimensioni complessive della tabella.  
   
     > [!NOTE]  
-    >  È possibile combinare colonne **varchar**, **nvarchar**, **varbinary**o **sql_variant** che fanno eccedere gli 8.060 byte per la larghezza totale definita della tabella. La lunghezza di ognuna di queste colonne deve comunque essere compresa nel limite di 8.000 byte per una colonna **varchar**, **nvarchar, varbinary** o **sql_variant**. Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella.  
+    >  È possibile combinare colonne **varchar**, **nvarchar**, **varbinary** o **sql_variant** che fanno eccedere gli 8.060 byte per la larghezza totale definita della tabella. La lunghezza di ognuna di queste colonne deve comunque essere compresa nel limite di 8.000 byte per una colonna **varchar**, **nvarchar, varbinary** o **sql_variant**. Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella.  
   
      Se non sono presenti colonne di lunghezza variabile, impostare **_Variable_Data_Size_** su 0.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "86002961"
   
 -   Valori LOB  
   
-     L'algoritmo per determinare con esattezza la quantità di spazio usata per archiviare i tipi di dati LOB **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntextxml**e **image** è complesso. È sufficiente aggiungere soltanto le dimensioni medie dei valori LOB previsti e aggiungerle alle dimensioni totali dell'heap.  
+     L'algoritmo per determinare con esattezza la quantità di spazio usata per archiviare i tipi di dati LOB **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntextxml** e **image** è complesso. È sufficiente aggiungere soltanto le dimensioni medie dei valori LOB previsti e aggiungerle alle dimensioni totali dell'heap.  
   
 -   Compressione  
   

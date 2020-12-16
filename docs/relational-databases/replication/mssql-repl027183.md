@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 52c271ac-1a0e-43d5-85d4-35886d1efd32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 10b0edeac4c84d11eb1bafe43ef884b76734f784
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 123936b94066af78dce6cd9c2f8a4cdeec7f2fbd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470207"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475702"
 ---
 # <a name="mssql_repl027183"></a>MSSQL_REPL027183
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88470207"
   
 -   Frammentazione dell'indice nelle colonne utilizzate per il filtraggio.  
   
--   Tabelle di metadati di tipo merge di grandi dimensioni, come **MSmerge_tombstone**, **MSmerge_contents**e **MSmerge_genhistory**.  
+-   Tabelle di metadati di tipo merge di grandi dimensioni, come **MSmerge_tombstone**, **MSmerge_contents** e **MSmerge_genhistory**.  
   
 -   Tabelle filtrate non unite in join in una chiave univoca e filtri join che coinvolgono un gran numero di tabelle.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88470207"
   
 -   Specificare la minima impostazione possibile per il periodo di memorizzazione della pubblicazione, poiché la replica non è in grado di eliminare i metadati dei database di pubblicazione e sottoscrizione prima della scadenza del periodo di memorizzazione. Per altre informazioni, vedere [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
--   Come parte della manutenzione per la replica di tipo merge, controllare occasionalmente l'aumento delle dimensioni delle tabelle di sistema associate alla replica di tipo merge: **MSmerge_contents**, **MSmerge_genhistory**e **MSmerge_tombstone**, **MSmerge_current_partition_mappings**e **MSmerge_past_partition_mappings**. Reindicizzare periodicamente queste tabelle. Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+-   Come parte della manutenzione per la replica di tipo merge, controllare occasionalmente l'aumento delle dimensioni delle tabelle di sistema associate alla replica di tipo merge: **MSmerge_contents**, **MSmerge_genhistory** e **MSmerge_tombstone**, **MSmerge_current_partition_mappings** e **MSmerge_past_partition_mappings**. Reindicizzare periodicamente queste tabelle. Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Verificare che le colonne utilizzate per il filtraggio siano indicizzate correttamente e, se necessario, ricompilare tali indici. Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   

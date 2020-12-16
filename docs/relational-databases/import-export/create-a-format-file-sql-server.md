@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b3cffe95dcdd41cc904aed95de0d91c97314670
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f878144b8b7ff86636ff778ec586a0382ca801cf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009919"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474062"
 ---
 # <a name="create-a-format-file-sql-server"></a>Creazione di un file di formato (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "86009919"
 > [!NOTE]  
 >  La versione dell'utilità **bcp** (Bcp.exe) usata per leggere un file di formato deve essere uguale o successiva alla versione usata per creare il file di formato. Ad esempio, l'utilità **bcp** di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] può leggere un file di formato versione 10.0 generato dall'utilità **bcp** di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ma l'utilità **bcp** di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] non può leggere un file di formato versione 11.0 generato dall'utilità **bcp** di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- Questo argomento descrive come usare l' [utilità bcp](../../tools/bcp-utility.md) per creare un file di formato per una tabella specifica. Il file di formato è basato sull'opzione relativa al tipo di dati specificata ( **-n**, **-c**, **-w**o **-N**) e sui delimitatori della tabella o della vista.  
+ Questo argomento descrive come usare l' [utilità bcp](../../tools/bcp-utility.md) per creare un file di formato per una tabella specifica. Il file di formato è basato sull'opzione relativa al tipo di dati specificata ( **-n**, **-c**, **-w** o **-N**) e sui delimitatori della tabella o della vista.  
   
 ## <a name="creating-a-non-xml-format-file"></a>Creazione di un file di formato non XML  
  Per usare un comando **bcp** per creare un file di formato, specificare l'argomento **format** e usare **nul** anziché un percorso del file di dati. L'opzione **format** richiede anche l'opzione **-f** , come nell'esempio seguente:  
@@ -267,7 +267,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.x
  Per informazioni sulla sintassi di questo file di formato, vedere [File in formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md). Per informazioni su come usare i dati nativi, vedere [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md).  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>Mapping tra campi dati e colonne della tabella  
- Un file di formato creato da **bcp**descrive tutte le colonne della tabella in ordine. È possibile modificare un file di formato per spostare o omettere righe della tabella. In questo modo, è possibile personalizzare un file di formato in base a un file di dati i cui campi non eseguono il mapping direttamente alle colonne della tabella. Per altre informazioni, vedere gli argomenti seguenti:  
+ Un file di formato creato da **bcp** descrive tutte le colonne della tabella in ordine. È possibile modificare un file di formato per spostare o omettere righe della tabella. In questo modo, è possibile personalizzare un file di formato in base a un file di dati i cui campi non eseguono il mapping direttamente alle colonne della tabella. Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

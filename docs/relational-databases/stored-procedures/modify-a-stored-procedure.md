@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f70272f01918af1d7cb91000e0ce15904b1e5518
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0137aec684b5c0e4b1ee1dfcaee07e9d7c32d3df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332618"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475272"
 ---
 # <a name="modify-a-stored-procedure"></a>Modificare una stored procedure
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,9 +73,9 @@ ms.locfileid: "87332618"
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per modificare una stored procedure nell'editor di query**  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   
-2.  Espandere **Database**ed espandere il database a cui appartiene la stored procedure. In alternativa, selezionare il database nell'elenco dei database disponibili sulla barra degli strumenti. Per questo esempio, selezionare il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
+2.  Espandere **Database** ed espandere il database a cui appartiene la stored procedure. In alternativa, selezionare il database nell'elenco dei database disponibili sulla barra degli strumenti. Per questo esempio, selezionare il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 3.  Scegliere **Nuova query** dal menu **File**.  
   

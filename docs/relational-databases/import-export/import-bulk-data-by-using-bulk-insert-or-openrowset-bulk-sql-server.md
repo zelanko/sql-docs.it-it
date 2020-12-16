@@ -21,14 +21,14 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
 ms.date: 09/25/2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a9f62a8a6aa679624e78def2dd5bea1ddeb7f5db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4afac2fde54524d5440d33d8ff2bf4cdc9062521
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715403"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473972"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>Usare BULK INSERT o OPENROWSET (BULK...) per importare dati in SQL Server
 
@@ -89,7 +89,7 @@ Per una lettura corretta dei dati di origine è necessario concedere all'account
 
 Ad esempio, considerare un utente che abbia eseguito l'accesso a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di Windows. Perché l'utente sia in grado di utilizzare BULK INSERT o OPENROWSET per importare dati da un file di dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario che l'account utente disponga dell'accesso in lettura al file di dati. Con l'accesso al file di dati, l'utente può importare i dati dal file in una tabella anche se il processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone dell'autorizzazione per accedere al file. Non è necessario che l'utente conceda l'autorizzazione di accesso al file al processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows possono essere configurati in modo da abilitare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per connettersi a un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trasmettendo le credenziali di un utente di Windows autenticato. Questa configurazione è nota come *rappresentazione* o *delega*. La comprensione delle modalità di gestione della sicurezza da parte della versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ai fini della rappresentazione dell'utente rappresenta un elemento importante quando si usa BULK INSERT o OPENROWSET. La rappresentazione utente fa sì che i file di dati possano trovarsi su un computer diverso rispetto al processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o all'utente. Se, ad esempio, un utente nel **Computer_A** ha accesso a un file di dati presente nel **Computer_B**e la delega delle credenziali è stata impostata in modo corretto, l'utente potrà connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione nel **Computer_C**, accedere al file di dati nel **Computer_B**ed effettuare un'importazione in blocco dei dati dal file in una tabella nel **Computer_C**.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows possono essere configurati in modo da abilitare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per connettersi a un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trasmettendo le credenziali di un utente di Windows autenticato. Questa configurazione è nota come *rappresentazione* o *delega*. La comprensione delle modalità di gestione della sicurezza da parte della versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ai fini della rappresentazione dell'utente rappresenta un elemento importante quando si usa BULK INSERT o OPENROWSET. La rappresentazione utente fa sì che i file di dati possano trovarsi su un computer diverso rispetto al processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o all'utente. Se, ad esempio, un utente nel **Computer_A** ha accesso a un file di dati presente nel **Computer_B** e la delega delle credenziali è stata impostata in modo corretto, l'utente potrà connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione nel **Computer_C**, accedere al file di dati nel **Computer_B** ed effettuare un'importazione in blocco dei dati dal file in una tabella nel **Computer_C**.
 
 ## <a name="bulk-importing-to-sql-server-from-a-remote-data-file"></a>Importazione bulk in SQL Server da un file di dati remoto
 
@@ -167,13 +167,13 @@ WITH ( TYPE = BLOB_STORAGE,
 );
 
 INSERT INTO achievements with (TABLOCK) (id, description)
-SELECT * FROM OPENROWSET(
-   BULK  'csv/achievements.csv',
-   DATA_SOURCE = 'MyAzureBlobStorage',
-   FORMAT ='CSV',
-   FORMATFILE='csv/achievements-c.xml',
-   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
-    ) AS DataFile;
+SELECT * FROM OPENROWSET(
+   BULK  'csv/achievements.csv',
+   DATA_SOURCE = 'MyAzureBlobStorage',
+   FORMAT ='CSV',
+   FORMATFILE='csv/achievements-c.xml',
+   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
+    ) AS DataFile;
 ```
 
 > [!IMPORTANT]

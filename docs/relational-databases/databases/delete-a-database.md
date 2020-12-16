@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e33c98e664c794477b913fc1b7826f43f8e9a09c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4459b28768763f6e49a6cf5ed778f5ae893300d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192941"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474142"
 ---
 # <a name="delete-a-database"></a>Eliminare un database
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "92192941"
   
 #### <a name="to-delete-a-database"></a>Per eliminare un database  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere questa istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espandere questa istanza.  
   
 2.  Espandere **Database**, fare clic con il pulsante destro del mouse sul database che si vuole eliminare e quindi scegliere **Elimina**.  
   

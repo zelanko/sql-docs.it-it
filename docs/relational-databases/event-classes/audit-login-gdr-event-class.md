@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a0d0eb1272e93b08d9dbe84608199cf26ebd3df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8dfc9dbbeee6f03dc1d4c8b7053bb669107c6037
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424263"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476352"
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe di evento **Audit Login GDR** viene generata quando viene aggiunto o rimosso un diritto di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Questa classe di evento è relativa alle stored procedure **sp_grantlogin**, **sp_revokelogin**e **sp_denylogin** .  
+  La classe di evento **Audit Login GDR** viene generata quando viene aggiunto o rimosso un diritto di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Questa classe di evento è relativa alle stored procedure **sp_grantlogin**, **sp_revokelogin** e **sp_denylogin** .  
   
  Questa classe di evento verrà probabilmente rimossa in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consigliabile utilizzare al suo posto la classe di evento **Audit Server Principal Management** .  
   

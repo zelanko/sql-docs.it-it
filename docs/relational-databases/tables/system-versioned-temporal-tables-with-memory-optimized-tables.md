@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b93b419e4678b84684c524011ed4df4feb6fcb14
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810461"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474572"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria
 
@@ -49,7 +49,7 @@ I fattori seguenti sulle tabelle temporali con controllo delle versioni di siste
 - È possibile applicare uno scaricamento dati chiamando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).
 - Con **SYSTEM_VERSIONING = OFF** o quando viene modificato lo schema della tabella con controllo delle versioni del sistema aggiungendo, eliminando o modificando le colonne, tutti i contenuti del buffer interno di gestione temporanea vengono spostati nella tabella di cronologia basata su disco.
 - L'esecuzione di query sui dati cronologici è efficace nel livello di isolamento SNAPSHOT e restituisce sempre un'unione tra il buffer di gestione in memoria e la tabella basata su disco senza duplicati.
-- Le operazioni**ALTER TABLE** che modificano internamente lo schema della tabella devono eseguire uno scaricamento di dati, che potrebbe prolungare la durata dell'operazione.
+- Le operazioni **ALTER TABLE** che modificano internamente lo schema della tabella devono eseguire uno scaricamento di dati, che potrebbe prolungare la durata dell'operazione.
 
 ## <a name="the-internal-memory-optimized-staging-table"></a>Tabella interna di gestione temporanea con ottimizzazione per la memoria
 

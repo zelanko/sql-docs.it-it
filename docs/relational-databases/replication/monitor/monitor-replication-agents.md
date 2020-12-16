@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 67710fa8ef1a0e3e79797140abd1f4f2ec751287
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: ddaa4698033f06db589ca550f39d434173e012e7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918707"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477842"
 ---
 # <a name="monitor-replication-agents"></a>Monitoraggio degli agenti di replica
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "86918707"
   
     -   Per le sottoscrizioni push fare clic su **Esegui monitoraggio** per avviare **Monitoraggio replica**.  
   
-    -   Per le sottoscrizioni pull fare clic su **Visualizza cronologia processi** per avviare **Visualizzatore file log**e visualizzare l'output del log dell'agente.  
+    -   Per le sottoscrizioni pull fare clic su **Visualizza cronologia processi** per avviare **Visualizzatore file log** e visualizzare l'output del log dell'agente.  
   
 6.  Fare clic su **Close**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "86918707"
   
     -   Avviare o arrestare l'agente se necessario.  
   
-    -   Fare clic su **Visualizza cronologia processi** per avviare **Visualizzatore file log**e visualizzare l'output del log dell'agente.  
+    -   Fare clic su **Visualizza cronologia processi** per avviare **Visualizzatore file log** e visualizzare l'output del log dell'agente.  
   
 5.  Fare clic su **Close**.  
   

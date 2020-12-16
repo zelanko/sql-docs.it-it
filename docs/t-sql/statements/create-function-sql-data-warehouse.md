@@ -13,13 +13,13 @@ dev_langs:
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 47073d130f6a3881c7765d74f40fa06658b02f78
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 5d969da45ab53a82d71cea4d852a69f4bbc10999
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067384"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476622"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -106,8 +106,8 @@ RETURNS TABLE
  *parameter_data_type*  
  Tipo di dati del parametro. Per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], sono consentiti tutti i tipi di dati scalari supportati in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Il tipo di dati timestamp (rowversion) non è supportato.  
   
- [ = *default* ]  
- Valore predefinito del parametro. Se viene definito un valore *default* , è possibile eseguire la funzione senza specificare un valore per il parametro corrispondente a tale valore.  
+ [ =*default* ]  
+ Valore predefinito del parametro. Se viene definito un valore *default*, è possibile eseguire la funzione senza specificare un valore per il parametro corrispondente a tale valore.  
   
  Se a un parametro della funzione è associato un valore predefinito, alla chiamata della funzione è necessario specificare la parola chiave DEFAULT per recuperare il valore predefinito. Questo comportamento risulta diverso dall'utilizzo di parametri con valore predefinito nelle stored procedure in cui l'omissione del parametro implica l'utilizzo del valore predefinito.  
   
@@ -122,11 +122,11 @@ RETURNS TABLE
  *scalar_expression*  
  Specifica il valore scalare restituito dalla funzione scalare.  
 
- *select_stmt* **SI APPLICA A** : Azure Synapse Analytics  
+ *select_stmt* **SI APPLICA A**: Azure Synapse Analytics  
  Istruzione SELECT singola che definisce il valore restituito di una funzione inline con valori di tabella (anteprima).
 
- TABLE **SI APPLICA A** : Azure Synapse Analytics  
- Specifica che il valore restituito della funzione con valori di tabella è una tabella. Alle funzioni con valori di tabella è possibile passare solo costanti e @ *local_variables*.
+ TABLE **SI APPLICA A**: Azure Synapse Analytics  
+ Specifica che il valore restituito della funzione con valori di tabella è una tabella. Alle funzioni con valori di tabella è possibile passare solo costanti e @*local_variables*.
 
  Nelle funzioni inline con valori di tabella il valore restituito di TABLE viene definito tramite una singola istruzione SELECT. Alle funzioni inline non sono associate variabili restituite.
   
@@ -244,7 +244,7 @@ RETURN
 );
 GO
 ```
-La funzione può quindi essere chiamata per restituire tutti gli oggetti View ( **V** ) con:
+La funzione può quindi essere chiamata per restituire tutti gli oggetti View (**V**) con:
 ```sql
 select * from dbo.ModulesByType('V');
 ```

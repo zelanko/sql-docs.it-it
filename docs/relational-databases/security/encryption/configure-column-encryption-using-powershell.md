@@ -11,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7014f349998781dcd890e84a77deb4732fe028c9
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f03f5dc54c525e850c7654c5860fb56d35ad75c7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127726"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475602"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>Configurare la crittografia delle colonne usando Always Encrypted con PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 Questo articolo descrive la procedura per la configurazione Always Encrypted di destinazione per le colonne del database tramite il cmdlet [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) nel modulo di PowerShell *SqlServer* . Il cmdlet **Set-SqlColumnEncryption** modifica sia lo schema del database di destinazione che i dati archiviati nelle colonne selezionate. I dati archiviati in una colonna possono essere crittografati, crittografati nuovamente o decrittografati, a seconda delle impostazioni di crittografia di destinazione specificate per le colonne e la configurazione di crittografia corrente.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Se si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e l'istanza di SQL Server è configurata con un'enclave sicura, è possibile eseguire le operazioni di crittografia sul posto, senza trasferire i dati all'esterno del database. Vedere [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicure](always-encrypted-enclaves-configure-encryption.md). Tenere presente che PowerShell non supporta la crittografia sul posto.

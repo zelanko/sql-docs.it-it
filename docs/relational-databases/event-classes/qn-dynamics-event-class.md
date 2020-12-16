@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24571ce977fc52cba0355b14751bef7fe8dda6d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: df3b445815eaa10ce5a4a3dcda71eb7e1a0a0fd7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455995"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474022"
 ---
 # <a name="qndynamics-event-class"></a>Classe di evento QN:Dynamics
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

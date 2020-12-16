@@ -23,18 +23,18 @@ helpviewer_keywords:
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 976bfdb47aae7037e3a7636299ff98e4a1424944
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 60a5fb875bf2ae69a4f87c543476b91844738276
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004282"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475582"
 ---
 # <a name="server-level-roles"></a>Ruoli a livello di server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce ruoli a livello di server per semplificare la gestione delle autorizzazioni in un server. Questi ruoli sono entità di sicurezza che raggruppano altre entità. L'ambito delle autorizzazioni dei ruoli a livello di server è l'intero server. I*ruoli* equivalgono ai *gruppi* nel sistema operativo Windows.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce ruoli a livello di server per semplificare la gestione delle autorizzazioni in un server. Questi ruoli sono entità di sicurezza che raggruppano altre entità. L'ambito delle autorizzazioni dei ruoli a livello di server è l'intero server. I *ruoli* equivalgono ai *gruppi* nel sistema operativo Windows.  
   
  I ruoli predefiniti del server vengono forniti per motivi di praticità e compatibilità con le versioni precedenti. Laddove possibile, assegnare autorizzazioni più specifiche.  
   

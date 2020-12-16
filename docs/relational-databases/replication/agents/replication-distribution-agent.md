@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c9e762060e3afdc5df7802249e99075de66ef751
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 71782c95201c224bdd40624e23f529b01d892f22
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395024"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97475942"
 ---
 # <a name="replication-distribution-agent"></a>Agente distribuzione repliche
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -222,7 +222,7 @@ distrib [-?]
  **-PacketSize** _packet_size_  
  Dimensioni del pacchetto, in byte. Il valore predefinito è 4096 byte.  
   
- **-PollingInterval** _polling_interval__  
+ **-PollingInterval** _polling_interval_ _  
  Frequenza, in secondi, di esecuzione di query sul database di distribuzione per le transazioni replicate. Il valore predefinito è 5 secondi.  
   
  **-ProfileName** _profile_name_  
@@ -280,7 +280,7 @@ distrib [-?]
  Specifica il tipo di sottoscrizione per la distribuzione. Un valore **0** indica una sottoscrizione push, un valore **1** indica una sottoscrizione pull e un valore **2** indica una sottoscrizione anonima.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Specifica l'intervallo delle transazioni per la registrazione della cronologia. Se il numero di transazioni di cui è stato eseguito il commit dopo l'ultima istanza di registrazione della cronologia è maggiore rispetto al valore di questa opzione, viene registrato un messaggio di cronologia. Il valore predefinito è 100. Un valore di **0** indica **TransactionsPerHistory**infinito. See the preceding **–MessageInterval**parameter.  
+ Specifica l'intervallo delle transazioni per la registrazione della cronologia. Se il numero di transazioni di cui è stato eseguito il commit dopo l'ultima istanza di registrazione della cronologia è maggiore rispetto al valore di questa opzione, viene registrato un messaggio di cronologia. Il valore predefinito è 100. Un valore di **0** indica **TransactionsPerHistory** infinito. See the preceding **–MessageInterval** parameter.  
   
  **-UseDTS**  
  Deve essere specificato come parametro per una pubblicazione che consente la trasformazione dei dati.  

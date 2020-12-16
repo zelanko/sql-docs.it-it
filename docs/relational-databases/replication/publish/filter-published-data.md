@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c52250061e78f663e4046d53b5c101f13367407d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 8d2bb044d0a75c4809cfe987bea6d0c2efc7d743
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423435"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477752"
 ---
 # <a name="filter-published-data"></a>Filtro dei dati pubblicati
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -132,7 +132,7 @@ ms.locfileid: "88423435"
   
 -   La replica transazionale consente di replicare una vista indicizzata come vista o come tabella. Se la vista viene replicata come tabella, non sarà possibile filtrare le colonne dalla tabella.  
   
- I filtri di riga non sono progettati per funzionare nei database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene limitata intenzionalmente l'esecuzione di **sp_replcmds** (in cui vengono eseguiti i filtri) al proprietario del database (**dbo**). Al **dbo** non sono associati privilegi tra database. Grazie all'aggiunta di CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] the **sp_replcmds** le tabelle di rilevamento delle modifiche vengono popolate con le informazioni che possono essere restituite all'utente e su cui quest'ultimo può eseguire una query. Per motivi di sicurezza, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene limitata l'esecuzione di questa logica in modo che un **dbo** malintenzionato non possa rubare il percorso di esecuzione. Ad esempio, un **dbo** malintenzionato potrebbe aggiungere trigger nelle tabelle CDC che quindi verrebbero eseguite nel contesto della chiamata a **sp_replcmds**da parte dell'utente, in questo caso l'agente di lettura log.  Se all'account con cui l'agente è in esecuzione sono associati privilegi superiori, il **dbo** malintenzionato potrebbe tentare l'escalation dei suoi privilegi.  
+ I filtri di riga non sono progettati per funzionare nei database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene limitata intenzionalmente l'esecuzione di **sp_replcmds** (in cui vengono eseguiti i filtri) al proprietario del database (**dbo**). Al **dbo** non sono associati privilegi tra database. Grazie all'aggiunta di CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] the **sp_replcmds** le tabelle di rilevamento delle modifiche vengono popolate con le informazioni che possono essere restituite all'utente e su cui quest'ultimo può eseguire una query. Per motivi di sicurezza, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene limitata l'esecuzione di questa logica in modo che un **dbo** malintenzionato non possa rubare il percorso di esecuzione. Ad esempio, un **dbo** malintenzionato potrebbe aggiungere trigger nelle tabelle CDC che quindi verrebbero eseguite nel contesto della chiamata a **sp_replcmds** da parte dell'utente, in questo caso l'agente di lettura log.  Se all'account con cui l'agente è in esecuzione sono associati privilegi superiori, il **dbo** malintenzionato potrebbe tentare l'escalation dei suoi privilegi.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pubblicare dati e oggetti di database](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
