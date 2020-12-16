@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72b1c23ddc584f909661b07058e519347be045fa
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bfb3ee2b9dee35b5154c019f47a25570b6f7eeae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005394"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468582"
 ---
 # <a name="create-a-database-schema"></a>Creazione di uno schema di database
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "92005394"
   
 #### <a name="to-create-a-schema"></a>Per creare uno schema  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b60c997ccd244be75c8946fb7465e2bdd98def66
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 0155e73c264c04ce875284489ebaea8f72a78d96
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470303"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467372"
 ---
 # <a name="ltagentnamegt-agent-location"></a>Posizione in cui eseguire l'agente &lt;NomeAgente&gt;
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

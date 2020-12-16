@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 481d5b13-657e-4b51-8783-ccac3595bd45
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f54ff7fc9d4877fcaa75c5e0f5cf1af19f4eaeb7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 1f5baf87741a53df33ffc5b627b77fdd6417e54b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88410197"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468032"
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation - classe di evento
 

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4ffeb0300e8211110ba3a8b303ff21b230626b9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7070e1aa45101022073d4ce21cf7943cfca31d34
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866902"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468712"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Esercitazione: Configurare la replica tra un server e più client per dispositivi mobili (replica di tipo merge)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -116,7 +116,7 @@ In questa sezione viene creata una pubblicazione di tipo merge con [!INCLUDE[ssM
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 
     ```  
   
-    b. In **Specificare le opzioni del join**selezionare **Chiave univoca** e quindi selezionare **OK**.
+    b. In **Specificare le opzioni del join** selezionare **Chiave univoca** e quindi selezionare **OK**.
 
     ![Selezioni per aggiungere un join al filtro](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
 
@@ -131,11 +131,11 @@ In questa sezione viene creata una pubblicazione di tipo merge con [!INCLUDE[ssM
     ON [SalesOrderHeader].[SalesOrderID] = [SalesOrderDetail].[SalesOrderID] 
     ```  
   
-    d. In **Specificare le opzioni del join**selezionare **Chiave univoca** e quindi selezionare **OK**. Selezionare **Avanti**. 
+    d. In **Specificare le opzioni del join** selezionare **Chiave univoca** e quindi selezionare **OK**. Selezionare **Avanti**. 
 
     ![Selezioni per aggiungere un altro join per gli ordini di vendita](media/tutorial-replicating-data-with-mobile-clients/joinsalestables.png)
   
-21. Selezionare **Crea snapshot immediatamente**, deselezionare **Usa la pianificazione seguente per l'esecuzione dell'agente snapshot**e quindi selezionare **Avanti**:  
+21. Selezionare **Crea snapshot immediatamente**, deselezionare **Usa la pianificazione seguente per l'esecuzione dell'agente snapshot** e quindi selezionare **Avanti**:  
 
     ![Selezione per creare uno snapshot immediatamente](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   

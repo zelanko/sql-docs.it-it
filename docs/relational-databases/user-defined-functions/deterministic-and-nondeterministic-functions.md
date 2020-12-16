@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2665ab9b5a30209a123056664921334ce3c8367
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: eebd2896dc1931e03dd121867ee09c1940d02d36
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485306"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466712"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funzioni deterministiche e non deterministiche
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -165,7 +165,7 @@ ms.locfileid: "88485306"
 |Funzione|Commenti|  
 |--------------|--------------|  
 |Tutte le funzioni di aggregazione|Tutte le funzioni di aggregazione sono deterministiche a meno che non vengano specificate con le clausole OVER e ORDER BY. Per un elenco di queste funzioni, vedere [Funzioni di aggregazione &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md).|  
-|CAST|Deterministica a meno che non sia usata con **datetime**, **smalldatetime**o **sql_variant**.|  
+|CAST|Deterministica a meno che non sia usata con **datetime**, **smalldatetime** o **sql_variant**.|  
 |CONVERT|Deterministica a meno che non si verifichi una delle condizioni seguenti:<br /><br /> <br /><br /> Il tipo di origine è **sql_variant**.<br /><br /> Il tipo di destinazione è **sql_variant** e il relativo tipo di origine è non deterministico.<br /><br /> Il tipo di origine o di destinazione è **datetime** o **smalldatetime**, l'altro tipo di origine o di destinazione è una stringa di caratteri ed è specificato uno stile non deterministico. Per essere deterministico, il parametro di stile deve essere una costante. Gli stili minori o uguali a 100 sono non deterministici, ad eccezione degli stili 20 e 21. Gli stili maggiori di 100 sono deterministici, ad eccezione degli stili 106, 107, 109 e 113.|  
 |CHECKSUM|Deterministica, ad eccezione di CHECKSUM(*).|  
 |ISDATE|Deterministica solo se utilizzata con la funzione CONVERT, se è specificato il parametro di stile CONVERT e se lo stile non equivale a 0, 100, 9 o 109.|  

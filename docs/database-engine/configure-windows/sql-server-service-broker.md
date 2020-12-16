@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5a22d4bf95b7d6bfc7c6a5e00c5613b04a80749e
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: cf37305f773f4b417ed3cac1bc5a31ad8d910505
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670774"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465702"
 ---
 # <a name="service-broker"></a>Broker di servizio
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -114,7 +114,7 @@ FROM ExpenseQueue;
  La sintassi dell'istruzione [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md) è stata estesa per abilitare il multicast supportando più handle di conversazione.  
   
 ### <a name="queues-expose-the-message-enqueued-time"></a>Le code espongono il tempo di accodamento del messaggio  
- Le code dispongono di una nuova colonna, **message_enqueue_time**in cui è indicato il tempo di accodamento di un messaggio.  
+ Le code dispongono di una nuova colonna, **message_enqueue_time** in cui è indicato il tempo di accodamento di un messaggio.  
   
 ### <a name="poison-message-handling-can-be-disabled"></a>La gestione dei messaggi non elaborabili può essere disabilitata  
  Tramite le istruzioni [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md) e [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md) è possibile abilitare o disabilitare la gestione dei messaggi non elaborabili aggiungendo la clausola, `POISON_MESSAGE_HANDLING (STATUS = ON | OFF)`. La vista del catalogo **sys.service_queues** contiene ora la colonna **is_poison_message_handling_enabled** per indicare se il messaggio non elaborabile è abilitato o disabilitato.  

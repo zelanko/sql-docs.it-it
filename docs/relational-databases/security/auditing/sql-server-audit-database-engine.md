@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 83fdbfc82724e7c3c1a41210a44e6371f9191f9e
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: e978c269a17f42bc75729303a860c61d4868f3fb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868595"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468612"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Il*controllo* di un'istanza del [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o di un database individuale comporta il rilevamento e la registrazione di eventi che si verificano nel [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di creare controlli del server che possono contenere specifiche del controllo del server per gli eventi a livello di server e specifiche del controllo del database per gli eventi a livello di database. Gli eventi controllati possono essere scritti nei log eventi o in file di controllo.  
+  Il *controllo* di un'istanza del [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o di un database individuale comporta il rilevamento e la registrazione di eventi che si verificano nel [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di creare controlli del server che possono contenere specifiche del controllo del server per gli eventi a livello di server e specifiche del controllo del database per gli eventi a livello di database. Gli eventi controllati possono essere scritti nei log eventi o in file di controllo.  
   
 [!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
@@ -60,7 +60,7 @@ ms.locfileid: "91868595"
 ### <a name="database-audit-specification"></a>Specifica controllo database  
  Anche l'oggetto *specifica controllo database* appartiene a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit. È possibile creare una specifica del controllo del database per ogni database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e per ogni controllo.  
   
- Nella specifica del controllo del database vengono raccolte azioni di controllo a livello di database generate dalla funzionalità degli eventi estesi. A questa specifica è possibile aggiungere gruppi di azioni di controllo o eventi di controllo. Gli*eventi di controllo* sono le azioni atomiche che possono essere controllate dal motore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mentre i*gruppi di azioni di controllo* sono gruppi predefiniti di azioni. Sia gli eventi di controllo che i gruppi di azioni si trovano nell'ambito del database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Tali azioni vengono inviate al controllo che le registra nella destinazione. In una specifica del controllo di un database utente non includere oggetti con ambito server, ad esempio viste di sistema.  
+ Nella specifica del controllo del database vengono raccolte azioni di controllo a livello di database generate dalla funzionalità degli eventi estesi. A questa specifica è possibile aggiungere gruppi di azioni di controllo o eventi di controllo. Gli *eventi di controllo* sono le azioni atomiche che possono essere controllate dal motore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mentre i *gruppi di azioni di controllo* sono gruppi predefiniti di azioni. Sia gli eventi di controllo che i gruppi di azioni si trovano nell'ambito del database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Tali azioni vengono inviate al controllo che le registra nella destinazione. In una specifica del controllo di un database utente non includere oggetti con ambito server, ad esempio viste di sistema.  
   
  I gruppi di azioni di controllo a livello di database e le azioni di controllo sono descritti nell'argomento [Azioni e gruppi di azioni di SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "91868595"
   
 3.  Abilitare il controllo.  
   
-4.  Leggere gli eventi di controllo tramite il **Visualizzatore eventi**di Windows, il **Visualizzatore file di log**o la funzione fn_get_audit_file.  
+4.  Leggere gli eventi di controllo tramite il **Visualizzatore eventi** di Windows, il **Visualizzatore file di log** o la funzione fn_get_audit_file.  
 
  Per ulteriori informazioni, vedere [Creazione di un controllo del server e di una specifica del controllo del server](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) e [Creazione di un controllo del server e di una specifica del controllo del database](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   

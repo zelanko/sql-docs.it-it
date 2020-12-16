@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88c0c8d1365d91489a7485e6eabed759b0515716
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 41f86301a0520201fb0316de6d4d3379d27c37d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428443"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467872"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "88428443"
 |DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
-|EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 1 = Le query incluse in una stored procedure sono state compilate.<br /><br /> Di seguito sono elencati i tipi di sottoclasse EventSubClass generati nella traccia per stored procedure.<br /><br /> Stored procedure con *n* query, dove n rappresenta un numero:<br /><br /> Numero*n* di tipo 1|21|Sì|  
+|EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 1 = Le query incluse in una stored procedure sono state compilate.<br /><br /> Di seguito sono elencati i tipi di sottoclasse EventSubClass generati nella traccia per stored procedure.<br /><br /> Stored procedure con *n* query, dove n rappresenta un numero:<br /><br /> Numero *n* di tipo 1|21|Sì|  
 |IntegerData2|**int**|Fine dell'istruzione nella stored procedure.<br /><br /> -1 per la fine della stored procedure.|55|Sì|  
 |ObjectID|**int**|ID dell'oggetto assegnato dal sistema.|22|Sì|  
 |Offset|**int**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|61|Sì|  
@@ -79,7 +79,7 @@ ms.locfileid: "88428443"
 |DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
-|EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 2 = Le query incluse in un'istruzione SQL ad hoc sono state compilate.<br /><br /> Di seguito sono elencati i tipi di sottoclasse EventSubClass generati nella traccia per batch ad hoc.<br /><br /> Batch ad hoc con *n* query, dove n rappresenta un numero:<br /><br /> Numero*n* di tipo 2|21|Sì|  
+|EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 2 = Le query incluse in un'istruzione SQL ad hoc sono state compilate.<br /><br /> Di seguito sono elencati i tipi di sottoclasse EventSubClass generati nella traccia per batch ad hoc.<br /><br /> Batch ad hoc con *n* query, dove n rappresenta un numero:<br /><br /> Numero *n* di tipo 2|21|Sì|  
 |IntegerData2|**int**|Fine dell'istruzione nel batch.<br /><br /> -1 per la fine del batch.|55|Sì|  
 |ObjectID|**int**|N/D|22|Sì|  
 |Offset|**int**|Offset iniziale dell'istruzione nel batch.<br /><br /> 0 per l'inizio del batch.|61|Sì|  

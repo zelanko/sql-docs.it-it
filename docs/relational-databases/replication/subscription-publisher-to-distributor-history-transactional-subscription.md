@@ -13,20 +13,20 @@ f1_keywords:
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a78f01aabd3e36b4a5b9a0a7d23dd928a55fab73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 57a363a0eff8e1b912446323fb346ce8387d9c16
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729356"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468762"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Sottoscrizione, Cronologia server di pubblicazione - server di distribuzione (sottoscrizione transazionale)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Nella scheda **Cronologia server di pubblicazione - server di distribuzione** vengono visualizzate informazioni dettagliate sull'agente di lettura log, quali lo stato, la cronologia, i messaggi informativi ed eventuali messaggi di errore.  
   
 ## <a name="options"></a>Opzioni  
- Scegliere le sessioni dell'agente di lettura log da visualizzare dal menu **Visualizza** e quindi selezionare una sessione specifica nella griglia con etichetta **Sessioni dell'agente di lettura log**. Nella griglia con etichetta **Azioni nella sessione selezionata**verranno visualizzate informazioni dettagliate sulla sessione selezionata. Se la sessione selezionata è terminata con un errore, verrà inoltre visualizzata l'area di testo con etichetta **Messaggio o dettagli errore della sessione selezionata** .  
+ Scegliere le sessioni dell'agente di lettura log da visualizzare dal menu **Visualizza** e quindi selezionare una sessione specifica nella griglia con etichetta **Sessioni dell'agente di lettura log**. Nella griglia con etichetta **Azioni nella sessione selezionata** verranno visualizzate informazioni dettagliate sulla sessione selezionata. Se la sessione selezionata è terminata con un errore, verrà inoltre visualizzata l'area di testo con etichetta **Messaggio o dettagli errore della sessione selezionata** .  
   
  **Visualizza**  
  Selezionare le sessioni dell'agente di lettura log da visualizzare. L'agente di lettura log in genere viene eseguito in modo continuo, pertanto potrebbe essere disponibile una sola sessione da visualizzare.  

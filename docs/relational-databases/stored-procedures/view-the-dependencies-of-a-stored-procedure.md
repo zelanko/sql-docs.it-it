@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b59fe000bb72cdfb7286c5efba0de009439c555
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2d0a64ac9fd8ed3f9ac09f269a4026ed797b5af2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332200"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466982"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Visualizzare le dipendenze di una stored procedure
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -75,9 +75,9 @@ ms.locfileid: "87332200"
  Funzione di sistema: **sys.dm_sql_referencing_entities**  
  Questa funzione viene usata per visualizzare gli oggetti che dipendono da una stored procedure.  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   
-2.  Espandere **Database**ed espandere il database a cui appartiene la stored procedure.  
+2.  Espandere **Database** ed espandere il database a cui appartiene la stored procedure.  
   
 3.  Scegliere **Nuova query** dal menu **File** .  
   
@@ -119,9 +119,9 @@ ms.locfileid: "87332200"
  Funzione di sistema: **sys.dm_sql_referenced_entities**  
  Questa funzione viene usata per visualizzare gli oggetti da cui dipende una stored procedure.  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   
-2.  Espandere **Database**ed espandere il database a cui appartiene la stored procedure.  
+2.  Espandere **Database** ed espandere il database a cui appartiene la stored procedure.  
   
 3.  Scegliere **Nuova query** dal menu **File** .  
   
@@ -165,9 +165,9 @@ ms.locfileid: "87332200"
  Questa vista può essere usata per visualizzare gli oggetti da cui dipende una stored procedure o che dipendono da una stored procedure.  
   
  Visualizzazione degli oggetti che dipendono da una stored procedure.  
- 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
+ 1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   
-2.  Espandere **Database**ed espandere il database a cui appartiene la stored procedure.  
+2.  Espandere **Database** ed espandere il database a cui appartiene la stored procedure.  
   
 3.  Scegliere **Nuova query** dal menu **File** .  
   
@@ -216,9 +216,9 @@ ms.locfileid: "87332200"
     ```  
   
  Visualizzazione degli oggetti da cui dipende una stored procedure.  
- 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
+ 1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   
-2.  Espandere **Database**ed espandere il database a cui appartiene la stored procedure.  
+2.  Espandere **Database** ed espandere il database a cui appartiene la stored procedure.  
   
 3.  Scegliere **Nuova query** dal menu **File** .  
   

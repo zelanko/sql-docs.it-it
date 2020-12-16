@@ -14,18 +14,18 @@ dev_langs:
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e384304e5e3e67b0768c0cd145a0427877c4ce89
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
+ms.openlocfilehash: 14eb63bde72a10be3c58af17510030ad6610e33b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300343"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465872"
 ---
 # <a name="permissions-grant-deny-revoke-azure-synapse-analytics-parallel-data-warehouse"></a>Autorizzazioni: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Usare le istruzioni **GRANT** e **DENY** di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] per concedere o negare un'autorizzazione, ad esempio **UPDATE** , in un'entità a protezione diretta (ad esempio un database, una tabella, una visualizzazione, ecc.) per un'entità di sicurezza (un account di accesso, un utente database o un ruolo del database). Usare **REVOKE** per rimuovere l'assegnazione o la revoca di un'autorizzazione.  
+  Usare le istruzioni **GRANT** e **DENY** di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] per concedere o negare un'autorizzazione, ad esempio **UPDATE**, in un'entità a protezione diretta (ad esempio un database, una tabella, una visualizzazione, ecc.) per un'entità di sicurezza (un account di accesso, un utente database o un ruolo del database). Usare **REVOKE** per rimuovere l'assegnazione o la revoca di un'autorizzazione.  
   
  Le autorizzazioni a livello server vengono applicate agli account di accesso. Le autorizzazioni a livello di database vengono applicate agli utenti database e ai ruoli del database.  
   
@@ -79,33 +79,33 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- \<permission>[ **,** ... *n* ]  
+ \<permission>[ **,** ...*n* ]  
  Una o più autorizzazioni da concedere, negare o revocare.  
   
  ON [ \<class_type> :: ] *securable* La clausola **ON** descrive il parametro dell'entità a protezione diretta in cui concedere, negare o revocare le autorizzazioni.  
   
- \<class_type> Tipo di classe dell'entità a protezione diretta. Può essere **LOGIN** , **DATABASE** , **OBJECT** , **SCHEMA** , **ROLE** o **USER** . È possibile concedere le autorizzazioni anche a **SERVER**_class\_type_ , ma **SERVER** non è specificato per tali autorizzazioni. **DATABASE** non è specificato quando l'autorizzazione include la parola **DATABASE** , ad esempio **ALTER ANY DATABASE** . Se *class_type* non è specificato e il tipo di autorizzazione non è limitato al server o alla classe del database, viene usata la classe **OBJECT** .  
+ \<class_type> Tipo di classe dell'entità a protezione diretta. Può essere **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE** o **USER**. È possibile concedere le autorizzazioni anche a **SERVER**_class\_type_, ma **SERVER** non è specificato per tali autorizzazioni. **DATABASE** non è specificato quando l'autorizzazione include la parola **DATABASE**, ad esempio **ALTER ANY DATABASE**. Se *class_type* non è specificato e il tipo di autorizzazione non è limitato al server o alla classe del database, viene usata la classe **OBJECT**.  
   
  *securable*  
  Nome di account di accesso, database, tabella, visualizzazione, schema, procedura, ruolo o utente in cui concedere, negare o revocare le autorizzazioni. Il nome dell'oggetto può essere specificato con le regole di denominazione in tre parti descritte in [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
- TO *principal* [ **,** ... *n* ]  
+ TO *principal* [ **,** ...*n* ]  
  Una o più entità di sicurezza a cui vengono concesse, negate o revocate le autorizzazioni. L'entità di sicurezza corrisponde al nome di un account di accesso, di un utente database o di un ruolo del database.  
   
- FROM *principal* [ **,** ... *n* ]  
- Una o più entità di sicurezza a cui revocare le autorizzazioni.  L'entità di sicurezza corrisponde al nome di un account di accesso, di un utente database o di un ruolo del database. **FROM** può essere usato solo con un'istruzione **REVOKE** . **TO** può essere usato con **GRANT** , **DENY** o **REVOKE** .  
+ FROM *principal* [ **,** ...*n* ]  
+ Una o più entità di sicurezza a cui revocare le autorizzazioni.  L'entità di sicurezza corrisponde al nome di un account di accesso, di un utente database o di un ruolo del database. **FROM** può essere usato solo con un'istruzione **REVOKE**. **TO** può essere usato con **GRANT**, **DENY** o **REVOKE**.  
   
  WITH GRANT OPTION  
  Indica che l'utente autorizzato potrà inoltre concedere l'autorizzazione specificata ad altre entità.  
   
  CASCADE  
- Indica che l'autorizzazione viene negata o revocata all'entità specificata e a tutte le entità a cui l'entità di sicurezza ha concesso l'autorizzazione. Obbligatorio quando l'entità ha l'autorizzazione con **GRANT OPTION** .  
+ Indica che l'autorizzazione viene negata o revocata all'entità specificata e a tutte le entità a cui l'entità di sicurezza ha concesso l'autorizzazione. Obbligatorio quando l'entità ha l'autorizzazione con **GRANT OPTION**.  
   
  GRANT OPTION FOR  
- Indica che verrà revocata la capacità di concedere l'autorizzazione specificata. Obbligatorio quando viene usato l'argomento **CASCADE** .  
+ Indica che verrà revocata la capacità di concedere l'autorizzazione specificata. Obbligatorio quando viene usato l'argomento **CASCADE**.  
   
 > [!IMPORTANT]  
->  Se l'autorizzazione specificata è stata concessa all'entità senza l'opzione **GRANT** , l'autorizzazione stessa verrà revocata.  
+>  Se l'autorizzazione specificata è stata concessa all'entità senza l'opzione **GRANT**, l'autorizzazione stessa verrà revocata.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per concedere un'autorizzazione, l'utente che concede le autorizzazioni deve disporre dell'autorizzazione con **WITH GRANT OPTION** oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa.  I proprietari degli oggetti possono concedere autorizzazioni per gli oggetti di cui sono proprietari. Le entità con l'autorizzazione **CONTROL** per un'entità a sicurezza diretta possono concedere l'autorizzazione per l'entità.  I membri dei ruoli del database predefiniti **db_owner** e **db_securityadmin** possono concedere qualsiasi autorizzazione nel database.  
@@ -114,21 +114,21 @@ REVOKE
  La negazione o la revoca delle autorizzazioni a un'entità di sicurezza non ha effetto sulle richieste che hanno passato l'autorizzazione e sono attualmente in esecuzione. Per limitare immediatamente l'accesso, è necessario annullare le richieste attive o terminare le sessioni correnti.  
   
 > [!NOTE]  
->  La maggior parte dei ruoli predefiniti del server non è disponibile in questa versione. In alternativa, usare i ruoli del database definiti dall'utente. Non è possibile aggiungere gli account di accesso al ruolo predefinito del server **sysadmin** . La concessione dell'autorizzazione **CONTROL SERVER** è simile all'appartenenza al ruolo predefinito del server **sysadmin** .  
+>  La maggior parte dei ruoli predefiniti del server non è disponibile in questa versione. In alternativa, usare i ruoli del database definiti dall'utente. Non è possibile aggiungere gli account di accesso al ruolo predefinito del server **sysadmin**. La concessione dell'autorizzazione **CONTROL SERVER** è simile all'appartenenza al ruolo predefinito del server **sysadmin**.  
   
  Alcune istruzioni richiedono più autorizzazioni. Ad esempio, per creare una tabella sono necessarie le autorizzazioni **CREATE TABLE** nel database e l'autorizzazione **ALTER SCHEMA** per la tabella che conterrà la tabella.  
   
  PDW esegue a volte le stored procedure per distribuire le azioni utente ai nodi di calcolo. Pertanto, non è possibile negare l'autorizzazione di esecuzione per un intero database. (Ad esempio `DENY EXECUTE ON DATABASE::<name> TO <user>;` avrà esito negativo). Per risolvere il problema, negare l'autorizzazione di esecuzione per gli schemi utente oppure per oggetti specifici (procedure).  
   
 ### <a name="implicit-and-explicit-permissions"></a>Autorizzazioni implicite ed esplicite  
- Un' *autorizzazione esplicita* è un'autorizzazione **GRANT** o **DENY** concessa a un'entità di sicurezza tramite un'istruzione **GRANT** o **DENY** .  
+ Un'*autorizzazione esplicita* è un'autorizzazione **GRANT** o **DENY** concessa a un'entità di sicurezza tramite un'istruzione **GRANT** o **DENY**.  
   
- Un' *autorizzazione implicita* è un'autorizzazione **GRANT** o **DENY** che un'entità di sicurezza (account di accesso, utente o ruolo del database) ha ereditato da un altro ruolo del database.  
+ Un'*autorizzazione implicita* è un'autorizzazione **GRANT** o **DENY** che un'entità di sicurezza (account di accesso, utente o ruolo del database) ha ereditato da un altro ruolo del database.  
   
  Un'autorizzazione implicita può anche essere ereditata da un'autorizzazione di copertura o da un'autorizzazione padre. Ad esempio, l'autorizzazione **UPDATE** in una tabella può essere ereditata tramite un'autorizzazione **UPDATE** nello schema che contiene la tabella o un'autorizzazione **CONTROL** nella tabella.  
   
 ### <a name="ownership-chaining"></a>Concatenamento della proprietà  
- Quando più oggetti di database accedono l'uno all'altro in sequenza, questa sequenza è nota come *catena* . Sebbene queste catene non esistono in modo indipendente, quando in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono attraversati i collegamenti contenuti in una catena, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valuta le autorizzazioni per gli oggetti che compongono la catena diversamente da quanto farebbe se accedesse agli oggetti separatamente. Il concatenamento della proprietà ha implicazioni importanti per la gestione della sicurezza. Per altre informazioni sulle catene di proprietà, vedere [Catene di proprietà](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) e [Esercitazione: Catene di proprietà e cambio di contesto](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
+ Quando più oggetti di database accedono l'uno all'altro in sequenza, questa sequenza è nota come *catena*. Sebbene queste catene non esistono in modo indipendente, quando in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono attraversati i collegamenti contenuti in una catena, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valuta le autorizzazioni per gli oggetti che compongono la catena diversamente da quanto farebbe se accedesse agli oggetti separatamente. Il concatenamento della proprietà ha implicazioni importanti per la gestione della sicurezza. Per altre informazioni sulle catene di proprietà, vedere [Catene di proprietà](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) e [Esercitazione: Catene di proprietà e cambio di contesto](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
   
 ## <a name="permission-list"></a>Elenco delle autorizzazioni  
   
@@ -241,26 +241,26 @@ REVOKE
  Per una definizione di ogni tipo di autorizzazione, vedere [Autorizzazioni (motore di database)](../../relational-databases/security/permissions-database-engine.md).  
   
 ### <a name="chart-of-permissions"></a>Grafico delle autorizzazioni  
- Nel poster seguente sono rappresentate graficamente tutte le autorizzazioni. Il poster consente di visualizzare chiaramente la gerarchia nidificata delle autorizzazioni. Ad esempio, l'autorizzazione **ALTER ON LOGIN** può essere concessa singolarmente ma è inclusa anche nel caso in cui venga concessa l'autorizzazione **CONTROL** per l'account di accesso specifico oppure nel caso in cui venga concessa a un account di accesso l'autorizzazione **ALTER ANY LOGIN** .  
+ Nel poster seguente sono rappresentate graficamente tutte le autorizzazioni. Il poster consente di visualizzare chiaramente la gerarchia nidificata delle autorizzazioni. Ad esempio, l'autorizzazione **ALTER ON LOGIN** può essere concessa singolarmente ma è inclusa anche nel caso in cui venga concessa l'autorizzazione **CONTROL** per l'account di accesso specifico oppure nel caso in cui venga concessa a un account di accesso l'autorizzazione **ALTER ANY LOGIN**.  
   
  ![Poster delle autorizzazioni di sicurezza APS](../../t-sql/statements/media/aps-security-perms-poster.png "Poster delle autorizzazioni di sicurezza APS")  
   
- Per scaricare la versione completa del poster, vedere [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249) (Autorizzazioni di SQL Server PDW) nella sezione dei file del sito APS Yammer (oppure richiederla tramite posta elettronica ad **apsdoc\@microsoft.com** ).  
+ Per scaricare la versione completa del poster, vedere [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249) (Autorizzazioni di SQL Server PDW) nella sezione dei file del sito APS Yammer (oppure richiederla tramite posta elettronica ad **apsdoc\@microsoft.com**).  
   
 ## <a name="default-permissions"></a>Autorizzazioni predefinite  
  L'elenco seguente descrive le autorizzazioni predefinite:  
   
--   Quando un account di accesso viene creato usando l'istruzione **CREATE LOGIN** , il nuovo account riceve l'autorizzazione **CONNECT SQL** .  
+-   Quando un account di accesso viene creato usando l'istruzione **CREATE LOGIN**, il nuovo account riceve l'autorizzazione **CONNECT SQL**.  
   
--   Tutti gli account di accesso sono membri del ruolo del server **public** e non possono essere rimossi da **public** .  
+-   Tutti gli account di accesso sono membri del ruolo del server **public** e non possono essere rimossi da **public**.  
   
--   Quando un utente database viene creato usando l'autorizzazione **CREATE USER** , l'utente riceve l'autorizzazione **CONNECT** nel database.  
+-   Quando un utente database viene creato usando l'autorizzazione **CREATE USER**, l'utente riceve l'autorizzazione **CONNECT** nel database.  
   
--   Tutte le entità di sicurezza, incluso il ruolo **public** , non hanno alcuna autorizzazione esplicita o implicita per impostazione predefinita.  
+-   Tutte le entità di sicurezza, incluso il ruolo **public**, non hanno alcuna autorizzazione esplicita o implicita per impostazione predefinita.  
   
--   Quando un account di accesso o un utente diventa il proprietario di un database o un oggetto, l'account o l'utente ha sempre tutte le autorizzazioni per il database o l'oggetto. Le autorizzazioni di proprietà non possono essere modificate e non sono visibili come autorizzazioni esplicite. Le istruzioni **GRANT** , **DENY** e **REVOKE** non hanno effetto sui proprietari.  
+-   Quando un account di accesso o un utente diventa il proprietario di un database o un oggetto, l'account o l'utente ha sempre tutte le autorizzazioni per il database o l'oggetto. Le autorizzazioni di proprietà non possono essere modificate e non sono visibili come autorizzazioni esplicite. Le istruzioni **GRANT**, **DENY** e **REVOKE** non hanno effetto sui proprietari.  
   
--   L'account di accesso **sa** ha tutte le autorizzazioni nell'appliance. Analogamente alle autorizzazioni di proprietà, le autorizzazioni **sa** non possono essere modificate e non sono visibili come autorizzazioni esplicite. Le istruzioni **GRANT** , **DENY** e **REVOKE** non hanno effetto sull'account di accesso **sa** . L'account di accesso **sa** non può essere rinominato.  
+-   L'account di accesso **sa** ha tutte le autorizzazioni nell'appliance. Analogamente alle autorizzazioni di proprietà, le autorizzazioni **sa** non possono essere modificate e non sono visibili come autorizzazioni esplicite. Le istruzioni **GRANT**, **DENY** e **REVOKE** non hanno effetto sull'account di accesso **sa**. L'account di accesso **sa** non può essere rinominato.  
   
 -   L'istruzione **USE** non richiede autorizzazioni. Tutte le entità di sicurezza possono eseguire l'istruzione **USE** in qualsiasi database.  
   
@@ -304,7 +304,7 @@ GRANT SELECT ON SCHEMA::dbo TO [Yuen];
 DENY SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
- L'istruzione **REVOKE** seguente rimuove l'autorizzazione **DENY** . Le autorizzazioni esplicite di Yuen sono ora neutre. Yuen può selezionare dati da qualsiasi tabella attraverso un'altra autorizzazione implicita, ad esempio l'appartenenza a un ruolo.  
+ L'istruzione **REVOKE** seguente rimuove l'autorizzazione **DENY**. Le autorizzazioni esplicite di Yuen sono ora neutre. Yuen può selezionare dati da qualsiasi tabella attraverso un'altra autorizzazione implicita, ad esempio l'appartenenza a un ruolo.  
   
 ```sql  
 REVOKE SELECT ON SCHEMA::dbo TO [Yuen];  

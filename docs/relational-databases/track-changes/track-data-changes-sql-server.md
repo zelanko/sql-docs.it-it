@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5edcc10b7cb9682f6856c8129e13a2d57af67074
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b38293d4b60168028a5669a9f5dd2e01ccbde012
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810745"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466752"
 ---
 # <a name="track-data-changes-sql-server"></a>Rilevare le modifiche ai dati (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "91810745"
  Per accedere ai dati delle modifiche associati a un'istanza di acquisizione, l'utente deve disporre dell'autorizzazione SELECT per l'accesso a tutte le colonne acquisite della tabella di origine associata. Se, inoltre, al momento della creazione dell'istanza di acquisizione viene specificato un ruolo di controllo, il chiamante deve essere anche un membro del ruolo di controllo specificato. Le altre funzioni generali di Change Data Capture per l'accesso ai metadati saranno accessibili a tutti gli utenti del database tramite il ruolo public, sebbene l'accesso ai metadati restituiti venga controllato in genere utilizzando anche l'autorizzazione SELECT per l'accesso alle tabelle di origine sottostanti e tramite l'appartenenza a qualsiasi ruolo di controllo definito.  
   
  **Operazioni DDL nelle tabelle delle modifiche abilitate per Change Data Capture**  
- Quando una tabella è abilitata per Change Data Capture, le operazioni DDL possono essere applicate alla tabella solo da un membro del ruolo predefinito del server **sysadmin**, del **ruolo del database db_owner**o del **ruolo del database db_ddladmin**. Agli utenti che dispongono di autorizzazioni esplicite per eseguire operazioni DDL nella tabella verrà restituito l'errore 22914 se tentano di eseguire tali operazioni.  
+ Quando una tabella è abilitata per Change Data Capture, le operazioni DDL possono essere applicate alla tabella solo da un membro del ruolo predefinito del server **sysadmin**, del **ruolo del database db_owner** o del **ruolo del database db_ddladmin**. Agli utenti che dispongono di autorizzazioni esplicite per eseguire operazioni DDL nella tabella verrà restituito l'errore 22914 se tentano di eseguire tali operazioni.  
   
 ### <a name="data-type-considerations-for-change-data-capture"></a>Considerazioni sui tipi di dati per Change Data Capture  
  La funzionalità Change Data Capture supporta tutti i tipi di colonna di base. Nella tabella seguente vengono descritti il comportamento e i limiti per numerosi tipi di colonna.  

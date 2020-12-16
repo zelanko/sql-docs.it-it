@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 591b33a5ad44a242fde2377c86002ea1f5b5931a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 3b29f98ad39d34935d65530841f8e81063233791
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719519"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468722"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Sincronizzare una sottoscrizione mediante Gestione sincronizzazione Microsoft Windows
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "85719519"
   
 1.  Avviare Gestione sincronizzazione in uno dei modi seguenti:  
   
-    -   In Internet Explorer scegliere **Sincronizza**dal menu **Strumenti**.  
+    -   In Internet Explorer scegliere **Sincronizza** dal menu **Strumenti**.  
   
-    -   Fare clic sul menu **Start**, scegliere **Programmi** o **Tutti i i programmi**, quindi **Accessori**e fare clic su **Sincronizza**.  
+    -   Fare clic sul menu **Start**, scegliere **Programmi** o **Tutti i i programmi**, quindi **Accessori** e fare clic su **Sincronizza**.  
   
-    -   Fare clic sul menu **Start**dal menu **Esegui** . Nella finestra di dialogo **Esegui** digitare **mobsync.exe** in the **Apri** e quindi fare clic su **OK**.  
+    -   Fare clic sul menu **Start** dal menu **Esegui** . Nella finestra di dialogo **Esegui** digitare **mobsync.exe** in the **Apri** e quindi fare clic su **OK**.  
   
 2.  Nella finestra di dialogo **Sincronizzazione elementi** selezionare le sottoscrizioni da sincronizzare. Le sottoscrizioni vengono elencate al di sotto delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installate nel computer.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "85719519"
   
     -   **Identificazione**  
   
-    -   **Accesso al Sottoscrittore**, **Accesso al server di distribuzione**e **Accesso al server di pubblicazione** (solo per la replica di tipo merge)  
+    -   **Accesso al Sottoscrittore**, **Accesso al server di distribuzione** e **Accesso al server di pubblicazione** (solo per la replica di tipo merge)  
   
     -   **Informazioni server Web** (per le sottoscrizioni di tipo merge nei Sottoscrittori in cui è in esecuzione SQL Server 2005 o versione successiva)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "85719519"
      La riga selezionata viene quindi applicata al server di pubblicazione e/o al Sottoscrittore e propagata ad altri nodi nella topologia durante le sincronizzazioni successive.  
   
 > [!NOTE]  
->  Le modifiche vengono applicate solo se fanno parte della riga scelta per la risoluzione. Se, ad esempio, si apportano modifiche nel **Server di pubblicazione**e quindi si fa clic su **Accetta Sottoscrittore**, le modifiche verranno ignorate.  
+>  Le modifiche vengono applicate solo se fanno parte della riga scelta per la risoluzione. Se, ad esempio, si apportano modifiche nel **Server di pubblicazione** e quindi si fa clic su **Accetta Sottoscrittore**, le modifiche verranno ignorate.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  

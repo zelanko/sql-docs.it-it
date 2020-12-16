@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5da2a080ef20bd98b27873796a64b433268ae06f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: =azuresqldb-current||>=sql-server-2016
+ms.openlocfilehash: 1d395bebae8b009f4e91d8df074401f8659e1748
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87108423"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467402"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategie per il backup e il ripristino della replica snapshot e della replica transazionale
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -186,7 +186,7 @@ ms.locfileid: "87108423"
          Per ulteriori informazioni su come specificare che i dati sono già disponibili nel Sottoscrittore, vedere [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
 #### <a name="publication-database-peer-to-peer-transactional-replication"></a>Database di pubblicazione: Replica transazionale peer-to-peer  
- Nella procedura seguente i database di pubblicazione **A**, **B**e **C** sono inclusi in una topologia di replica transazionale peer-to-peer. I database **A** e **C** sono online e funzionano correttamente. Il database **B** è il database da ripristinare. Il processo descritto, specialmente i passaggi 7, 10 e 11, è molto simile al processo per l'aggiunta di un nodo a una topologia peer-to-peer. Il modo più semplice per eseguire questi passaggi consiste nell'utilizzare la Configurazione guidata topologia peer-to-peer, ma è possibile utilizzare anche stored procedure.  
+ Nella procedura seguente i database di pubblicazione **A**, **B** e **C** sono inclusi in una topologia di replica transazionale peer-to-peer. I database **A** e **C** sono online e funzionano correttamente. Il database **B** è il database da ripristinare. Il processo descritto, specialmente i passaggi 7, 10 e 11, è molto simile al processo per l'aggiunta di un nodo a una topologia peer-to-peer. Il modo più semplice per eseguire questi passaggi consiste nell'utilizzare la Configurazione guidata topologia peer-to-peer, ma è possibile utilizzare anche stored procedure.  
   
 1.  Eseguire gli agenti di distribuzione per sincronizzare le sottoscrizioni nei database **A** e **C**. Andare al passaggio 2.  
   
@@ -244,7 +244,7 @@ ms.locfileid: "87108423"
   
 12. Ricreare la sottoscrizione tra i database **B** e **C**:  
   
-    1.  Nel database **B**eseguire una query sulla tabella [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) per recuperare il numero di sequenza del file di log (LSN) della transazione più recente che il database **B** ha ricevuto dal database **C**.  
+    1.  Nel database **B** eseguire una query sulla tabella [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) per recuperare il numero di sequenza del file di log (LSN) della transazione più recente che il database **B** ha ricevuto dal database **C**.  
   
     2.  Ricreare la sottoscrizione nel database **B** della pubblicazione nel database **C**, specificando che è necessario inizializzare la sottoscrizione in base al numero LSN, ovvero impostando il valore **initialize from lsn** per il parametro `@sync_type` di [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Andare al passaggio b.  
   

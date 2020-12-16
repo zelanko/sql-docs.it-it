@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4019a1e661b14825532596091918f2f14eac1e92
-ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: d81ecf6b555022aeac47e810041d96a57f61b00b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93405068"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468212"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -82,17 +82,17 @@ OPENROWSET
 
 ## <a name="arguments"></a>Argomenti
 
-### <a name="provider_name"></a>' *provider_name* '
+### <a name="provider_name"></a>'*provider_name*'
 Stringa di caratteri che rappresenta il nome descrittivo (o PROGID) del provider OLE DB specificato nel Registro di sistema. *provider_name* non ha un valore predefinito. Sono esempi di nomi di provider `Microsoft.Jet.OLEDB.4.0`, `SQLNCLI` o `MSDASQL`.
 
-### <a name="datasource"></a>' *datasource* '
+### <a name="datasource"></a>'*datasource*'
 Costante stringa che corrisponde a un'origine dati OLE DB specifica. *datasource* è la proprietà DBPROP_INIT_DATASOURCE da passare all'interfaccia IDBProperties del provider per l'inizializzazione di quest'ultimo. In genere questa stringa include il nome del file di database, il nome di un server di database o un nome riconosciuto dal provider per individuare il database o i database.
 L'origine dati può essere il percorso di file `C:\SAMPLES\Northwind.mdb'` per il provider `Microsoft.Jet.OLEDB.4.0` o la stringa di connessione `Server=Seattle1;Trusted_Connection=yes;` per il provider `SQLNCLI`.
 
-### <a name="user_id"></a>' *user_id* '
+### <a name="user_id"></a>'*user_id*'
 Costante stringa che rappresenta il nome utente passato al provider OLE DB specificato. *user_id* consente di specificare il contesto di sicurezza per la connessione e viene passato come proprietà DBPROP_AUTH_USERID per l'inizializzazione del provider. *user_id* non può essere un ID di accesso di Microsoft Windows.
 
-### <a name="password"></a>' *password* '
+### <a name="password"></a>'*password*'
 Costante stringa che rappresenta la password utente da passare al provider OLE DB. *password* viene passato come proprietà DBPROP_AUTH_PASSWORD durante l'inizializzazione del provider. *password* non può essere una password di Microsoft Windows.
 
 ```sql
@@ -104,7 +104,7 @@ SELECT a.*
                    Customers) AS a;
 ```
 
-### <a name="provider_string"></a>' *provider_string* '
+### <a name="provider_string"></a>'*provider_string*'
 Stringa di connessione specifica del provider passata come proprietà DBPROP_INIT_PROVIDERSTRING per l'inizializzazione del provider OLE DB. In *provider_string* sono incluse in genere tutte le informazioni di connessione necessarie per inizializzare il provider. Per un elenco di parole chiave riconosciute dal provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, vedere [Proprietà di inizializzazione e di autorizzazione](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).
 
 ```sql
@@ -125,7 +125,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
                  AdventureWorks2012.HumanResources.Department) AS d;
 ```
 
-### <a name="query"></a>' *query* '
+### <a name="query"></a>'*query*'
 Costante stringa inviata al provider ed eseguita da questo. L'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non elabora questa query, ma i risultati della query restituiti dal provider (query pass-through). Le query pass-through risultano utili quando vengono utilizzate in provider che non espongono i dati tabulari tramite i nomi di tabella, ma solo attraverso un linguaggio di comando. Le query pass-through sono supportate nel server remoto, a condizione che il provider di query supporti l'oggetto OLE DB Command e le relative interfacce obbligatorie. Per altre informazioni, vedere [Informazioni di riferimento di SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md).
 
 ```sql
@@ -141,7 +141,7 @@ Utilizza il provider BULK per set di righe per OPENROWSET per leggere i dati da 
 > [!IMPORTANT]
 > Il database SQL di Azure supporta solo la lettura da Archiviazione BLOB di Azure.
 
-Gli argomenti dell'opzione BULK consentono un controllo significativo su dove iniziare e terminare la lettura dei dati, come gestire gli errori e come interpretare i dati. È ad esempio possibile specificare che il file di dati deve essere letto come riga singola, set di righe a colonna singola di tipo **varbinary** , **varchar** o **nvarchar**. Il comportamento predefinito viene illustrato nelle descrizioni degli argomenti seguenti.
+Gli argomenti dell'opzione BULK consentono un controllo significativo su dove iniziare e terminare la lettura dei dati, come gestire gli errori e come interpretare i dati. È ad esempio possibile specificare che il file di dati deve essere letto come riga singola, set di righe a colonna singola di tipo **varbinary**, **varchar** o **nvarchar**. Il comportamento predefinito viene illustrato nelle descrizioni degli argomenti seguenti.
 
  Per informazioni sull'utilizzo dell'opzione BULK, vedere la sezione "Osservazioni" di seguito in questo argomento. Per informazioni sulle autorizzazioni necessarie per l'opzione BULK, vedere la sezione "Autorizzazioni" di seguito in questo argomento.
 
@@ -150,7 +150,7 @@ Gli argomenti dell'opzione BULK consentono un controllo significativo su dove in
 
 Per informazioni sulla preparazione dei dati per le operazioni di importazione bulk, vedere [Preparazione dei dati per l'importazione o l'esportazione bulk &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
-#### <a name="bulk-data_file"></a>BULK ' *data_file* '
+#### <a name="bulk-data_file"></a>BULK '*data_file*'
 Percorso completo del file di dati i cui dati devono essere copiati nella tabella di destinazione.
 
 ```sql
@@ -168,7 +168,7 @@ A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, dat
 #### <a name="bulk-error-handling-options"></a>Opzioni di gestione degli errori BULK
 
 ##### <a name="errorfile"></a>ERRORFILE
-`ERRORFILE`=' *file_name* ' specifica il file usato per raccogliere le righe che contengono errori di formattazione e non possono essere convertite in un set di righe OLE DB. Tali righe vengono copiate nel file degli errori dal file di dati così come sono.
+`ERRORFILE`='*file_name*' specifica il file usato per raccogliere le righe che contengono errori di formattazione e non possono essere convertite in un set di righe OLE DB. Tali righe vengono copiate nel file degli errori dal file di dati così come sono.
 
 Il file di errori viene creato all'inizio dell'esecuzione del comando. Se il file esiste già viene generato un errore. Viene inoltre creato un file di controllo con estensione ERROR.txt. Questo file contiene un riferimento a ogni riga nel file degli errori e fornisce informazioni di diagnostica. Dopo la correzione degli errori, i dati possono essere caricati.
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
@@ -214,7 +214,7 @@ Per impostazione predefinita, il valore ROWS_PER_BATCH è sconosciuto. La specif
 
 Se le righe effettive del file di dati non sono ordinate in base all'ordine specificato o se l'hint UNIQUE viene specificato e sono presenti chiavi duplicate, viene restituito un errore.
 
-Gli alias di colonna sono richiesti quando si utilizza ORDER. L'elenco di alias di colonna deve fare riferimento alla tabella derivata a cui è possibile accedere tramite la clausola BULK. I nomi di colonna specificati nella clausola ORDER si riferiscono a questo elenco di alias di colonna. Non è possibile specificare colonne di tipi valore di grandi dimensioni ( **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml** ) e di tipi Large Object (LOB) ( **text** , **ntext** e **image** ).
+Gli alias di colonna sono richiesti quando si utilizza ORDER. L'elenco di alias di colonna deve fare riferimento alla tabella derivata a cui è possibile accedere tramite la clausola BULK. I nomi di colonna specificati nella clausola ORDER si riferiscono a questo elenco di alias di colonna. Non è possibile specificare colonne di tipi valore di grandi dimensioni (**varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml**) e di tipi Large Object (LOB) (**text**, **ntext** e **image**).
 
 ##### <a name="single_blob"></a>SINGLE_BLOB
 Restituisce il contenuto di *data_file* come set di righe a riga singola e a colonna singola di tipo **varbinary(max)** .
@@ -236,7 +236,7 @@ SELECT *
 #### <a name="bulk-input-file-format-options"></a>Opzioni di formato del file di input BULK
 
 ##### <a name="codepage"></a>CODEPAGE
-`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| ' *tabella_codici* ' } Specifica la tabella codici dei dati contenuti nel file di dati. CODEPAGE è pertinente solo se i dati contengono colonne di tipo **char** , **varchar** o **text** con valori carattere maggiori di 127 o minori di 32.
+`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| '*tabella_codici*' } Specifica la tabella codici dei dati contenuti nel file di dati. CODEPAGE è pertinente solo se i dati contengono colonne di tipo **char**, **varchar** o **text** con valori carattere maggiori di 127 o minori di 32.
 
 > [!IMPORTANT]
 > `CODEPAGE` non è un'opzione supportata in Linux.
@@ -246,8 +246,8 @@ SELECT *
 
 |Valore CODEPAGE|Descrizione|
 |--------------------|-----------------|
-|ACP|Converte le colonne con tipo di dati **char** , **varchar** o **text** dalla tabella codici ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) a quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
-|OEM (predefinito)|Converte le colonne con tipo di dati **char** , **varchar** o **text** dalla tabella codici OEM di sistema a quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
+|ACP|Converte le colonne con tipo di dati **char**, **varchar** o **text** dalla tabella codici ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) a quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
+|OEM (predefinito)|Converte le colonne con tipo di dati **char**, **varchar** o **text** dalla tabella codici OEM di sistema a quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |RAW|Non vengono eseguite conversioni tra tabelle codici. Si tratta dell'opzione più rapida.|
 |*code_page*|Indica la tabella codici di origine in cui vengono codificati i dati di tipo carattere del file di dati, ad esempio 850.<br /><br /> **Importante** Le versioni precedenti a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] non supportano la tabella codici 65001 (codifica UTF-8).|
 
@@ -264,7 +264,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 ##### <a name="formatfile"></a>FORMATFILE
-`FORMATFILE` =' *format_file_path* ' Specifica il percorso completo di un file di formato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di file di formato: XML e non XML.
+`FORMATFILE` ='*format_file_path*' Specifica il percorso completo di un file di formato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di file di formato: XML e non XML.
 
 Un file di formato è necessario per definire i tipi di colonna nel set di risultati. L'unica eccezione si verifica quando viene specificato SINGLE_CLOB, SINGLE_BLOB o SINGLE_NCLOB. In questo caso, il file di formato non è necessario.
 
@@ -283,7 +283,7 @@ Specifica il carattere da usare come carattere virgolette nel file CSV. Se non v
 
 Quando si accede alle origini dati OLE DB remote, l'identità dell'account di accesso delle connessioni trusted non viene delegata automaticamente dal server in cui il client è connesso al server su cui viene eseguita la query. È necessario configurare la delega dell'autenticazione.
 
-Se il provider OLE DB supporta più cataloghi e schemi nell'origine dati specificata, è necessario specificare i nomi di catalogo e di schema. I valori per _catalog_ e ) _schema_ possono essere omessi se il provider OLE DB non li supporta. Se il provider supporta solo nomi di schema, è necessario specificare un nome composto da due parti nel formato _schema_ **.** _oggetto_. Se il provider supporta solo nomi di catalogo, è necessario specificare un nome composto da tre parti nel formato _catalogo_ **.** _schema_ **.** _oggetto_. È necessario specificare nomi composti da tre parti per le query pass-through che usano il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per altre informazioni, vedere [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+Se il provider OLE DB supporta più cataloghi e schemi nell'origine dati specificata, è necessario specificare i nomi di catalogo e di schema. I valori per _catalog_ e )_schema_ possono essere omessi se il provider OLE DB non li supporta. Se il provider supporta solo nomi di schema, è necessario specificare un nome composto da due parti nel formato _schema_ **.** _oggetto_. Se il provider supporta solo nomi di catalogo, è necessario specificare un nome composto da tre parti nel formato _catalogo_ **.** _schema_ **.** _oggetto_. È necessario specificare nomi composti da tre parti per le query pass-through che usano il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per altre informazioni, vedere [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 La funzione `OPENROWSET` non accetta variabili come argomenti.
 

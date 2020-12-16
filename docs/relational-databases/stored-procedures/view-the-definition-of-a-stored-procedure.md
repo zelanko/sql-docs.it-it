@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10b39b46beeb3add46e56065f5671dbfedd9ed2b
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8951647f20a2bf48b8cee26ed946795fbf79eda7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332543"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467032"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Visualizzare la definizione di una stored procedure
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ In questo argomento viene descritto come visualizzare la definizione di una stor
  È richiesta l'appartenenza al ruolo **public** . Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che hanno una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
   
  Funzione di sistema: **OBJECT_DEFINITION**  
- Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che hanno una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Queste autorizzazioni sono assegnate implicitamente ai membri dei ruoli predefiniti del database **db_owner**, **db_ddladmin**e **db_securityadmin** .  
+ Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che hanno una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Queste autorizzazioni sono assegnate implicitamente ai membri dei ruoli predefiniti del database **db_owner**, **db_ddladmin** e **db_securityadmin** .  
   
  Vista del catalogo dell'oggetto: **sys.sql_modules**  
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

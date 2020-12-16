@@ -12,13 +12,13 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ddfb9836650028c0f6aae150a2f70e4758b6ca2
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: d8d3b67a8909867760b7ab01ebf860dd2f8dfe48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279285"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467222"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Esercitazione: Creare e usare indici sulle colonne abilitate per l'enclave tramite la crittografia casuale
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]

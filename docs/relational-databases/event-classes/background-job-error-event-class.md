@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 532a24d0cb2b3e30a5e513b4feab522ef45e34d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0625642c875d936407033785316bb9c742e831a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88410427"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468052"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,18 +30,18 @@ ms.locfileid: "88410427"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID del database specificato dal processo. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**DatabaseName**|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|**Error (Errore) (Error (Errore)e)**|**int**|Numero di errore relativo all'ultimo tentativo (solo**EventSubClass** 1).|31|Sì|  
+|**Error (Errore) (Error (Errore)e)**|**int**|Numero di errore relativo all'ultimo tentativo (solo **EventSubClass** 1).|31|Sì|  
 |**EventClass**|**int**|Tipo di evento = 193.|27|No|  
 |**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |**EventSubClass**|**int**|Tipo di sottoclasse di evento.<br /><br /> 1 = Il processo in background è in fase di terminazione dopo l'errore.<br /><br /> 2 = Il processo in background è stato eliminato, coda piena.<br /><br /> 3 = Il processo in background ha restituito un errore.|21|Sì|  
 |**IndexID**|**int**|ID dell'indice dell'oggetto interessato dall'evento. Per determinare l'ID di indice di un oggetto, utilizzare la colonna **indid** della tabella di sistema **sysindexes** .|24|Sì|  
-|**IntegerData**|**int**|Numero di tentativi eseguiti dal processo (solo**EventSubClass** 1).|25|Sì|  
+|**IntegerData**|**int**|Numero di tentativi eseguiti dal processo (solo **EventSubClass** 1).|25|Sì|  
 |**IntegerData2**|**int**|Numero di sequenza del processo.|55|Sì|  
 |**ObjectID**|**int**|ID dell'oggetto assegnato dal sistema.|22|Sì|  
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna vengono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Sì|  
-|**Gravità**|**int**|Livello di gravità dell'errore all'ultimo tentativo (solo**EventSubClass** 1).|20|Sì|  
+|**Gravità**|**int**|Livello di gravità dell'errore all'ultimo tentativo (solo **EventSubClass** 1).|20|Sì|  
 |**StartTime**|**datetime**|Istante in cui è stato creato il processo.|14|Sì|  
-|**State**|**int**|Stato dell'errore all'ultimo tentativo (solo**EventSubClass** 1).|30|Sì|  
+|**State**|**int**|Stato dell'errore all'ultimo tentativo (solo **EventSubClass** 1).|30|Sì|  
 |**TextData**|**ntext**|Descrizione testuale del valore di sottoclasse dell'evento.|1|Sì|  
 |**Tipo**|**int**|Tipo di processo.|57|Sì|  
   

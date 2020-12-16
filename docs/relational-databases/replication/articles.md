@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5198b93db0372a1bd16fa99a7c0b65feeac70aa4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 96a8558b4a1c233ef94fdd47cae70309f1ce53ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428003"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467282"
 ---
 # <a name="articles"></a>Articoli
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "88428003"
 -   Fare clic con il pulsante destro del mouse su un oggetto nel riquadro per visualizzare un menu di comandi per tale oggetto.  
   
  **Proprietà articolo**  
- Fare clic su **Proprietà articolo**e quindi su una delle opzioni seguenti:  
+ Fare clic su **Proprietà articolo** e quindi su una delle opzioni seguenti:  
   
 -   Fare clic su **Imposta proprietà dell'articolo di \<ObjectType> evidenziato** per aprire la finestra di dialogo **Proprietà articolo - \<ObjectName>** . Le modifiche apportate alle proprietà in questa finestra di dialogo vengono applicate solo all'oggetto evidenziato nel riquadro degli oggetti nella pagina **Articoli**.  
   

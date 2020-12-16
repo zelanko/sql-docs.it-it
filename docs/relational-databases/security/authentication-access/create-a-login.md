@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b94fa9994a42dd11b6fa5a54fffd222e87feb2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a5c6647b06d058b1b97188810c4a23644d05c4f7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867450"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468592"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "91867450"
   
      Se si fa clic su **Cerca...** :  
   
-    1.  In **Selezionare questo tipo di oggetto** fare clic su **Tipi di oggetti** per aprire la finestra di dialogo **Tipi di oggetti** e selezionare tutte le opzioni seguenti o solo alcune di esse: **Entità di sicurezza predefinite**, **Gruppi** e **Utenti**. Le opzioni**Entità di sicurezza predefinite** e **Utenti** sono selezionate per impostazione predefinita. Al termine, fare clic su **OK**.  
+    1.  In **Selezionare questo tipo di oggetto** fare clic su **Tipi di oggetti** per aprire la finestra di dialogo **Tipi di oggetti** e selezionare tutte le opzioni seguenti o solo alcune di esse: **Entità di sicurezza predefinite**, **Gruppi** e **Utenti**. Le opzioni **Entità di sicurezza predefinite** e **Utenti** sono selezionate per impostazione predefinita. Al termine, fare clic su **OK**.  
   
     2.  In **Da questo percorso** fare clic su **Percorsi...** per aprire la finestra di dialogo **Percorsi** e selezionare uno dei percorsi server disponibili. Al termine, fare clic su **OK**.  
   
@@ -78,13 +78,13 @@ ms.locfileid: "91867450"
   
     1.  Nella casella **Password** digitare una password per il nuovo utente. Digitare di nuovo la password nella casella **Conferma password** .  
   
-    2.  In caso di modifica di una password esistente, selezionare **Specifica vecchia password**e quindi digitare la password precedente nella casella **Vecchia password** .  
+    2.  In caso di modifica di una password esistente, selezionare **Specifica vecchia password** e quindi digitare la password precedente nella casella **Vecchia password** .  
   
     3.  Per applicare le opzioni dei criteri password per la complessità e l'applicazione, selezionare **Applica criteri password**. Per ulteriori informazioni, vedere [Password Policy](../../../relational-databases/security/password-policy.md). È un'opzione predefinita quando si seleziona **Autenticazione di SQL Server** .  
   
-    4.  Per applicare le opzioni dei criteri password per la scadenza, selezionare **Imponi scadenza password**. Per abilitare questa casella di controllo, è necessario selezionare**Applica criteri password** . È un'opzione predefinita quando si seleziona **Autenticazione di SQL Server** .  
+    4.  Per applicare le opzioni dei criteri password per la scadenza, selezionare **Imponi scadenza password**. Per abilitare questa casella di controllo, è necessario selezionare **Applica criteri password** . È un'opzione predefinita quando si seleziona **Autenticazione di SQL Server** .  
   
-    5.  Per forzare l'utente a creare una nuova password dopo la prima volta che l'account di accesso viene utilizzato, selezionare **Richiedi modifica della password all'accesso successivo**. Per abilitare questa casella di controllo, è necessario selezionare**Imponi scadenza password** . È un'opzione predefinita quando si seleziona **Autenticazione di SQL Server** .  
+    5.  Per forzare l'utente a creare una nuova password dopo la prima volta che l'account di accesso viene utilizzato, selezionare **Richiedi modifica della password all'accesso successivo**. Per abilitare questa casella di controllo, è necessario selezionare **Imponi scadenza password** . È un'opzione predefinita quando si seleziona **Autenticazione di SQL Server** .  
   
 6.  Per associare l'account di accesso a un certificato di sicurezza autonomo, selezionare **Mapping con certificato** , quindi selezionare il nome di un certificato esistente dall'elenco.  
   
@@ -104,31 +104,31 @@ ms.locfileid: "91867450"
 ### <a name="server-roles"></a>Ruoli del server  
  Nella pagina **Ruoli del server** sono elencati tutti i possibili ruoli che possono essere assegnati al nuovo account accesso. Sono disponibili le opzioni seguenti:  
   
- Casella di controllo**bulkadmin**  
+ Casella di controllo **bulkadmin**  
  I membri del ruolo predefinito del server **bulkadmin** sono autorizzati a eseguire l'istruzione BULK INSERT.  
   
- Casella di controllo**dbcreator**  
+ Casella di controllo **dbcreator**  
  I membri del ruolo predefinito del server **dbcreator** sono autorizzati a creare, modificare, eliminare e ripristinare qualsiasi database.  
   
- Casella di controllo**diskadmin**  
+ Casella di controllo **diskadmin**  
  I membri del ruolo predefinito del server **diskadmin** sono autorizzati a gestire file su disco.  
   
- Casella di controllo**processadmin**  
+ Casella di controllo **processadmin**  
  I membri del ruolo predefinito del server **processadmin** sono autorizzati a terminare processi in esecuzione in un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
- Casella di controllo**public**  
+ Casella di controllo **public**  
  Tutti gli utenti, gruppi e ruoli di SQL Server appartengono al ruolo predefinito del server **public** per impostazione predefinita.  
   
- Casella di controllo**securityadmin**  
+ Casella di controllo **securityadmin**  
  I membri del ruolo predefinito del server **securityadmin** gestiscono gli account di accesso e le relative proprietà. Possono concedere, negare e revocare le autorizzazioni a livello di server e a livello di database. Questi membri sono inoltre autorizzati a reimpostare le password per gli account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Casella di controllo**serveradmin**  
+ Casella di controllo **serveradmin**  
  I membri del ruolo predefinito del server **serveradmin** sono autorizzati a modificare le opzioni di configurazione a livello di server e ad arrestare il server.  
   
- Casella di controllo**setupadmin**  
+ Casella di controllo **setupadmin**  
  I membri del ruolo predefinito del server **setupadmin** possono aggiungere e rimuovere server collegati e inoltre eseguire alcune stored procedure di sistema.  
   
- Casella di controllo**sysadmin**  
+ Casella di controllo **sysadmin**  
  I membri del ruolo predefinito del server **sysadmin** sono autorizzati a eseguire qualsiasi attività nel [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 ### <a name="user-mapping"></a>Mapping utenti  
@@ -230,7 +230,7 @@ ms.locfileid: "91867450"
 ##  <a name="create-a-login-using-windows-authentication-using-t-sql"></a><a name="TsqlProcedure"></a> Creare un account di accesso usando l'autenticazione di Windows con T-SQL  
   
  
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "91867450"
   
 ## <a name="create-a-login-using-sql-server-authentication-using-t-sql"></a>Creare un account di accesso usando l'autenticazione di SQL Server con T-SQL
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4cada27e8e73013667c69c82c9306426eef685f3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8999c3a94d65ee29d496f891068e158f5f178814
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010146"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465572"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Usare il formato carattere Unicode per importare o esportare dati (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -185,7 +185,7 @@ bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
 ```
   
 ### <a name="using-bulk-insert-and-unicode-character-format-without-a-format-file"></a>**Uso di BULK INSERT e del formato carattere Unicode senza un file di formato**<a name="bulk_widechar"></a>
-Argomento**DATAFILETYPE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomento **DATAFILETYPE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
 BULK INSERT TestDatabase.dbo.myWidechar
@@ -199,7 +199,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
 ```
   
 ### <a name="using-bulk-insert-and-unicode-character-format-with-a-non-xml-format-file"></a>**Uso di BULK INSERT e del formato carattere Unicode con un file di formato non XML**<a name="bulk_widechar_fmt"></a>
-Argomento**FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomento **FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
 BULK INSERT TestDatabase.dbo.myWidechar
@@ -213,7 +213,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
 ```
   
 ### <a name="using-openrowset-and-unicode-character-format-with-a-non-xml-format-file"></a>**Uso di OPENROWSET e del formato carattere Unicode con un file di formato non XML**<a name="openrowset_widechar_fmt"></a>
-Argomento**FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomento **FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar;  -- for testing
 INSERT INTO TestDatabase.dbo.myWidechar

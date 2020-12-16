@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ab8521fac163837e3949db95f27e2686954c9856
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: aa205a6281a9cd1bedd3218956a255403d875ef6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916169"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97467412"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>Come mettere una topologia di replica in stato di inattività (programmazione Transact-SQL della replica)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  Mettere in*stato di inattività* un sistema significa arrestare le attività sulle tabelle pubblicate in tutti i nodi e verificare che ogni nodo abbia ricevuto tutte le modifiche dagli altri nodi. In questo argomento è illustrato come mettere in stato di inattività una topologia di replica, operazione necessaria per diverse attività amministrative, e assicurarsi che un nodo abbia ricevuto tutte le modifiche dagli altri nodi.  
+  Mettere in *stato di inattività* un sistema significa arrestare le attività sulle tabelle pubblicate in tutti i nodi e verificare che ogni nodo abbia ricevuto tutte le modifiche dagli altri nodi. In questo argomento è illustrato come mettere in stato di inattività una topologia di replica, operazione necessaria per diverse attività amministrative, e assicurarsi che un nodo abbia ricevuto tutte le modifiche dagli altri nodi.  
   
 ### <a name="to-quiesce-a-transactional-replication-topology-with-read-only-subscriptions"></a>Per mettere in stato di inattività una topologia di replica transazionale con sottoscrizioni di sola lettura  
   

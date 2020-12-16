@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5167a04707739bd83b966aba28d7a2cab0003f2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f77b2cff9793f7e6be200423dd6bc23377814635
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88410227"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468022"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation - classe di evento
 
