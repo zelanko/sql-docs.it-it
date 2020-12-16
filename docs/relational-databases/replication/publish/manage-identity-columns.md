@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7d0a169e6b160bc865c5ba3c115803fb690cbe68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 6c7f660c4550a3bd792b2132ad0699d944b90a2e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423485"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468992"
 ---
 # <a name="manage-identity-columns"></a>Gestione delle colonne Identity
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "88423485"
   
 2.  Nella pagina **Articoli** selezionare una tabella con una colonna Identity.  
   
-3.  Fare clic su **Proprietà articolo**e quindi su **Imposta proprietà dell'articolo di tabella evidenziato**.  
+3.  Fare clic su **Proprietà articolo** e quindi su **Imposta proprietà dell'articolo di tabella evidenziato**.  
   
 4.  Nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo - \<Article>** , nella sezione **Gestione intervalli di valori Identity**, impostare la proprietà **Gestisci automaticamente gli intervalli di valori Identity** su **Automatico** o **Manuale** (per i server di pubblicazione che eseguono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva) oppure su **True** o **False** (per i server di pubblicazione che eseguono una versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedente a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88423485"
   
 1.  Nella pagina **Articoli** della finestra di dialogo **Proprietà pubblicazione - \<Publication>** selezionare una tabella con una colonna Identity.  
   
-2.  Fare clic su **Proprietà articolo**e quindi su **Imposta proprietà dell'articolo di tabella evidenziato**.  
+2.  Fare clic su **Proprietà articolo** e quindi su **Imposta proprietà dell'articolo di tabella evidenziato**.  
   
 3.  Nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo - \<Article>** , nella sezione **Gestione intervalli di valori Identity**, immettere i valori per una o più delle proprietà seguenti: **Dimensioni intervallo server di pubblicazione**, **Dimensioni intervallo Sottoscrittore** e **Percentuale soglia intervallo**.  
   

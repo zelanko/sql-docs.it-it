@@ -8,14 +8,14 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
+monikerRange: '>= sql-server-ver15'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 1cfc3dc5fa707a10f6adcf6e12122698ff4f9428
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 6c27959422023c0407d7abe3a1219c6a242bae7f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92524018"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469072"
 ---
 # <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>Usare la procedura guidata Tabella esterna con origini dati ODBC
 
@@ -45,7 +45,7 @@ Selezionare **Avanti** per continuare.
 
 ## <a name="create-a-database-master-key"></a>Creare una chiave master del database
 
-In questo passaggio verrà creata una chiave master del database. La creazione di una chiave master è obbligatoria. La chiave master protegge le credenziali usate da un'origine dati esterna. Scegliere una password complessa per la chiave master. Eseguire anche un backup della chiave master usando **BACKUP MASTER KEY** . Archiviare il backup in una posizione esterna protetta.
+In questo passaggio verrà creata una chiave master del database. La creazione di una chiave master è obbligatoria. La chiave master protegge le credenziali usate da un'origine dati esterna. Scegliere una password complessa per la chiave master. Eseguire anche un backup della chiave master usando **BACKUP MASTER KEY**. Archiviare il backup in una posizione esterna protetta.
 
 ![Creare una chiave master del database](media/data-virtualization/virtualize-data-master-key.png)
 
@@ -78,11 +78,11 @@ Questo passaggio visualizza un riepilogo delle selezioni. Indica il nome delle c
 
 ![Schermata Riepilogo](media/data-virtualization/virtualize-data-summary.png)
 
-Se si seleziona **Crea** , viene visualizzato l'oggetto origine dati esterna creato nel database di destinazione.
+Se si seleziona **Crea**, viene visualizzato l'oggetto origine dati esterna creato nel database di destinazione.
 
 ![Origini dati esterne](media/data-virtualization/external-data-sources.png)
 
-Se si seleziona **Genera script** , viene visualizzata la query T-SQL generata per creare l'oggetto origine dati esterna.
+Se si seleziona **Genera script**, viene visualizzata la query T-SQL generata per creare l'oggetto origine dati esterna.
 
 ![Genera script](media/data-virtualization/generated-script.png)
 

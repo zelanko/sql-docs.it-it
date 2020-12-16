@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1dfa866c6c03234a28fbccb14a2c45cea2571090
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 81929c8da672e9294d276b5b562e55886a1c3515
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918494"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469002"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifiche allo schema nei database di pubblicazione
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "86918494"
   
 -   Read Uncommitted non è un livello di isolamento supportato quando si esegue la DDL in una tabella pubblicata.  
   
--   È consigliabile non utilizzare**SET CONTEXT_INFO** per modificare il contesto delle transazioni in cui le modifiche dello schema vengono effettuate negli oggetti pubblicati.  
+-   È consigliabile non utilizzare **SET CONTEXT_INFO** per modificare il contesto delle transazioni in cui le modifiche dello schema vengono effettuate negli oggetti pubblicati.  
   
 #### <a name="adding-columns"></a>Aggiunta di colonne  
   
@@ -151,7 +151,7 @@ ms.locfileid: "86918494"
         |**hierarchyid**|Modifica consentita|Modifica bloccata|Modifica bloccata|  
         |**geography** e **geometry**|Modifica consentita|Modifica consentita*|Modifica bloccata|  
         |**filestream**|Modifica consentita|Modifica bloccata|Modifica bloccata|  
-        |**date**, **time**, **datetime2**e **datetimeoffset**|Modifica consentita|Modifica consentita*|Modifica bloccata|  
+        |**date**, **time**, **datetime2** e **datetimeoffset**|Modifica consentita|Modifica consentita*|Modifica bloccata|  
   
          \* I Sottoscrittori di SQL Server Compact convertono questi tipi di dati nel Sottoscrittore.  
   
