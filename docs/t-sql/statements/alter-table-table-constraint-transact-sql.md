@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8e5da6272ce3bb60852e10f3bac9cd3fa9a1435f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9597b6c0811ff2fe917a2282b43e677b74eebd4f
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426863"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490071"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "88426863"
   
  Se in una tabella esiste già un vincolo o un indice cluster, non è possibile specificare l'opzione CLUSTERED. In questo caso, inoltre, i vincoli PRIMARY KEY sono impostati su NONCLUSTERED.  
   
- Le colonne con tipo di dati **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** o **image**non possono essere specificate come colonne di un indice.  
+ Le colonne con tipo di dati **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** o **image** non possono essere specificate come colonne di un indice.  
   
  *column*  
  Colonna o elenco di colonne tra parentesi utilizzate in un nuovo vincolo.  
@@ -177,7 +177,7 @@ ms.locfileid: "88426863"
  Specifica la colonna associata a una definizione DEFAULT a livello di tabella.  
   
  WITH VALUES  
- Quando si aggiunge una colonna e un vincolo DEFAULT, se la colonna consente valori NULL con WITH VALUES, per le righe esistenti, il valore della nuova colonna verrà impostato su valore specificato in DEFAULT *constant_expression*. Se la colonna da aggiungere non consente valori NULL, per le righe esistenti, il valore della colonna verrà sempre impostato sul valore specificato in DEFAULT *constant_expression*. A partire da SQL Server 2012 questa potrebbe essere un'operazione sui metadati (vedere [Aggiunta di colonne NOT NULL come operazione online](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)).
+ Quando si aggiunge una colonna e un vincolo DEFAULT, se la colonna consente valori NULL con WITH VALUES, per le righe esistenti, il valore della nuova colonna verrà impostato su valore specificato in DEFAULT *constant_expression*. Se la colonna da aggiungere non consente valori NULL, per le righe esistenti, il valore della colonna verrà sempre impostato sul valore specificato in DEFAULT *constant_expression*. A partire da SQL Server 2012 questa potrebbe essere un'operazione sui metadati (vedere [Aggiunta di colonne NOT NULL come operazione online](alter-table-transact-sql.md#adding-not-null-columns-as-an-online-operation)).
 Se viene usata quando non viene aggiunta anche la colonna correlata, non ha alcun effetto. 
   
  CHECK  

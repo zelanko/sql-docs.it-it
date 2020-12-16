@@ -18,12 +18,12 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 12adf94f84fbe9c1b47093cf8ab6b106fb9d5249
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c69b375ae55f8d7a4d76c4c619f9c9afe1d50def
+ms.sourcegitcommit: 86534989f7827f1c36ed1333ad9c4557dfd77f3d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440652"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97515366"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (database SQL di Azure)
 
@@ -34,12 +34,12 @@ ms.locfileid: "97440652"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID del database corrente nella vista sys. databases.|  
-|start_date|**datetimeoffset**|Ora UTC in un data center del database SQL locale quando è stata avviata la replica del database|  
-|modify_date|**datetimeoffset**|Ora UTC in un data center del database SQL locale quando la replica geografica del database è stata completata. Il nuovo database viene sincronizzato con il database primario al momento. .|  
+|start_date|**datetimeoffset**|Ora UTC in un data center del database SQL locale quando è stata avviata la replica del database.|  
+|modify_date|**datetimeoffset**|Ora UTC in un data center del database SQL locale quando la replica geografica del database è stata completata. Il nuovo database viene sincronizzato con il database primario al momento.|  
 |link_guid|**uniqueidentifier**|ID univoco del collegamento per la replica geografica.|  
 |partner_server|**sysname**|Nome del server di database SQL contenente il database con replica geografica.|  
 |partner_database|**sysname**|Nome del database con replica geografica sul server di database SQL collegato.|  
-|replication_state|**tinyint**|Stato della replica geografica per il database, uno dei seguenti:.<br /><br /> 0 = in sospeso. La creazione del database secondario attivo è pianificata, ma i passaggi necessari per la preparazione non sono ancora stati completati.<br /><br /> 1 = seeding. È in corso il seeding della destinazione di replica geografica, ma i due database non sono ancora sincronizzati. Fino al completamento del seeding, non è possibile connettersi al database secondario. Se si rimuove il database secondario dalla replica primaria, l'operazione di seeding viene annullata.<br /><br /> 2 = aggiornamento. Il database secondario è in uno stato coerente a livello di transazione ed è costantemente sincronizzato con il database primario.|  
+|replication_state|**tinyint**|Stato della replica geografica per il database, uno dei seguenti:<br /><br /> 0 = in sospeso. La creazione del database secondario attivo è pianificata, ma i passaggi necessari per la preparazione non sono ancora stati completati.<br /><br /> 1 = seeding. È in corso il seeding della destinazione di replica geografica, ma i due database non sono ancora sincronizzati. Fino al completamento del seeding, non è possibile connettersi al database secondario. Se si rimuove il database secondario dalla replica primaria, l'operazione di seeding viene annullata.<br /><br /> 2 = aggiornamento. Il database secondario è in uno stato coerente a livello di transazione ed è costantemente sincronizzato con il database primario.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |ruolo|**tinyint**|Ruolo replica geografica, uno dei seguenti:<br /><br /> 0 = primario. Il database_id fa riferimento al database primario nella relazione di replica geografica.<br /><br /> 1 = secondario.  Il database_id fa riferimento al database primario nella relazione di replica geografica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  

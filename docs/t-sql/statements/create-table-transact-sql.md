@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a6b0e958439025019e51bac7edb103febfe6409a
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+ms.openlocfilehash: 9fb4195047df5e996cbef4a3fbceb1367172df6b
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521168"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490081"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -420,7 +420,7 @@ Analogamente a ON e a `TEXTIMAGE_ON`, il valore impostato tramite `CREATE TABLE`
 - Un'istruzione [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) converte un heap in un indice cluster. In questo caso è possibile specificare un filegroup FILESTREAM diverso, uno schema di partizione o NULL.
 - Un'istruzione [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) converte un indice cluster in un heap. In questo caso è possibile specificare un filegroup FILESTREAM diverso, uno schema di partizione o il valore **"default"** .
 
-Per il filegroup nella clausola `FILESTREAM_ON <filegroup>` o per ogni filegroup FILESTREAM denominato nello schema di partizione deve essere presente un file definito per il filegroup. Il file deve essere definito usando un'istruzione [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017) o [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). In caso contrario, viene generato un errore.
+Per il filegroup nella clausola `FILESTREAM_ON <filegroup>` o per ogni filegroup FILESTREAM denominato nello schema di partizione deve essere presente un file definito per il filegroup. Il file deve essere definito usando un'istruzione [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) o [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). In caso contrario, viene generato un errore.
 
 Per gli argomenti correlati a FILESTREAM, vedere [Dati BLOB (Binary Large Object)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
 
