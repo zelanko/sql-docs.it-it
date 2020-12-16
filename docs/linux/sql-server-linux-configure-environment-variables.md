@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 66a40af981670fd30f8ff6d20c34364ba084e3dd
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 737004c651ff7cb335557cbbfe61e9df516e2f48
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115531"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471622"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurare le impostazioni di SQL Server con variabili di ambiente in Linux
 
@@ -27,7 +27,7 @@ Per configurare SQL Server 2017 in Linux è possibile usare diverse variabili di
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 Per configurare SQL Server 2019 in Linux è possibile usare diverse variabili di ambiente. Queste variabili vengono usate in due scenari:
 
@@ -46,7 +46,7 @@ Per configurare SQL Server 2019 in Linux è possibile usare diverse variabili di
 
 | Variabile di ambiente | Descrizione |
 |-----|-----|
-| **ACCEPT_EULA** | Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza ](https://go.microsoft.com/fwlink/?LinkId=746388). Impostazione obbligatoria per l'immagine di SQL Server. |
+| **ACCEPT_EULA** | Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza](https://go.microsoft.com/fwlink/?LinkId=746388). Impostazione obbligatoria per l'immagine di SQL Server. |
 | **MSSQL_SA_PASSWORD** | Consente di configurare la password dell'utente SA. |
 | **MSSQL_PID** | Consente di impostare l'edizione o il codice Product Key di SQL Server. I valori possibili sono: </br></br>**Versione di valutazione**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Un codice Product Key**</br></br>Se si specifica un codice Product Key, questo deve essere nel formato #####-#####-#####-#####-#####, dove '#' è un numero o una lettera.|
 | **MSSQL_LCID** | Imposta l'ID della lingua da usare per SQL Server. Ad esempio, 1036 corrisponde al francese. |
@@ -66,11 +66,11 @@ Per configurare SQL Server 2019 in Linux è possibile usare diverse variabili di
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 | Variabile di ambiente | Descrizione |
 |-----|-----|
-| **ACCEPT_EULA** | Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza ](https://go.microsoft.com/fwlink/?LinkId=746388). Impostazione obbligatoria per l'immagine di SQL Server. |
+| **ACCEPT_EULA** | Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza](https://go.microsoft.com/fwlink/?LinkId=746388). Impostazione obbligatoria per l'immagine di SQL Server. |
 | **MSSQL_SA_PASSWORD** | Consente di configurare la password dell'utente SA. |
 | **MSSQL_PID** | Consente di impostare l'edizione o il codice Product Key di SQL Server. I valori possibili sono: </br></br>**Versione di valutazione**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Un codice Product Key**</br></br>Se si specifica un codice Product Key, questo deve essere nel formato #####-#####-#####-#####-#####, dove '#' è un numero o una lettera.|
 | **MSSQL_LCID** | Imposta l'ID della lingua da usare per SQL Server. Ad esempio, 1036 corrisponde al francese. |
@@ -132,7 +132,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 Se si esegue Docker in Linux o macOS, usare la sintassi seguente con virgolette singole:
 

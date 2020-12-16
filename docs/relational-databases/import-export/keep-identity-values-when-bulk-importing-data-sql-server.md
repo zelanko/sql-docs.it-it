@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3d87bce11cc657ef437a0f57ce07d0eda89bdeb3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d523fcf6649b51432b994e6c941169616bb123a8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007204"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473922"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantenere i valori Identity durante l'importazione bulk dei dati (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -175,7 +175,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
 ### <a name="using-bulk-insert-and-keeping-identity-values-without-a-format-file"></a>**Uso di [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e mantenimento dei valori Identity senza un file di formato**<a name="bulk_identity"></a>
-Argomento**KEEPIDENTITY** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomento **KEEPIDENTITY** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 USE TestDatabase;
 GO
@@ -194,7 +194,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### <a name="using-bulk-insert-and-keeping-identity-values-with-a-non-xml-format-file"></a>**Uso di [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e mantenimento dei valori Identity con un [file di formato non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_identity_fmt"></a>
-Argomenti**KEEPIDENTITY** e **FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomenti **KEEPIDENTITY** e **FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 USE TestDatabase;
 GO
@@ -247,7 +247,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### <a name="using-openrowsetbulk-and-keeping-identity-values-with-a-non-xml-format-file"></a>**Uso di [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) e mantenimento dei valori Identity con un [file di formato non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_identity_fmt"></a>
-Hint di tabella**KEEPIDENTITY** e argomento **FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Hint di tabella **KEEPIDENTITY** e argomento **FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 ```sql
 USE TestDatabase;
 GO

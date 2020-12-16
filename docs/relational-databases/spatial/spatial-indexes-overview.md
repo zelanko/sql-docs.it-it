@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5375afc7e8a115c9398f7ab567c06cb731eb62
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b9d004ce88bba442dc17ff17c3d8a26e75bffd1a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006275"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473142"
 ---
 # <a name="spatial-indexes-overview"></a>Panoramica degli indici spaziali
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92006275"
 ##  <a name="about-spatial-indexes"></a><a name="about"></a> Informazioni sugli indici spaziali  
   
 ###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> Scomposizione dello spazio indicizzato in una gerarchia di griglie  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gli indici spaziali vengono compilati utilizzando alberi B, pertanto gli indici devono rappresentare i dati spaziali bidimensionali nell'ordine lineare degli alberi B. Pertanto, prima della lettura di dati in un indice spaziale, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di implementare una scomposizione gerarchica uniforme dello spazio. Il processo di creazione dell'indice *scompone* lo spazio in una *gerarchia di griglie*a quattro livelli. Questi livelli vengono indicati come *livello 1* (il livello principale), *livello 2*, *livello 3*e *livello 4*.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gli indici spaziali vengono compilati utilizzando alberi B, pertanto gli indici devono rappresentare i dati spaziali bidimensionali nell'ordine lineare degli alberi B. Pertanto, prima della lettura di dati in un indice spaziale, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di implementare una scomposizione gerarchica uniforme dello spazio. Il processo di creazione dell'indice *scompone* lo spazio in una *gerarchia di griglie* a quattro livelli. Questi livelli vengono indicati come *livello 1* (il livello principale), *livello 2*, *livello 3* e *livello 4*.  
   
  Ogni livello successivo scompone ulteriormente il livello precedente, pertanto ogni cella di livello superiore contiene una griglia completa al livello successivo. Su un livello specificato, tutte le griglie hanno lo stesso numero di celle lungo entrambi gli assi (ad esempio, 4x4 o 8x8) e le celle hanno tutte la stessa dimensione.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "92006275"
   
 -   Regola delle celle per oggetto  
   
-     Questa regola stabilisce il *limite di celle per oggetto*e determina il numero massimo di celle che possono essere conteggiate per ogni oggetto, a eccezione del livello 1. A livelli inferiori, la regola delle celle per oggetto consente di controllare la quantità di informazioni che possono essere registrate sull'oggetto.  
+     Questa regola stabilisce il *limite di celle per oggetto* e determina il numero massimo di celle che possono essere conteggiate per ogni oggetto, a eccezione del livello 1. A livelli inferiori, la regola delle celle per oggetto consente di controllare la quantità di informazioni che possono essere registrate sull'oggetto.  
   
 -   Regola della cella più in basso  
   
@@ -118,7 +118,7 @@ ms.locfileid: "92006275"
   
 -   *Mosaico per griglia di geometria*, ovvero lo schema per il tipo di dati **geometry** .  
   
--   *Mosaico per griglia di geografia*che si applica a colonne del tipo di dati **geografia** .  
+-   *Mosaico per griglia di geografia* che si applica a colonne del tipo di dati **geografia** .  
   
 > [!NOTE]  
 >  L'impostazione **tessellation_scheme** di un indice spaziale è visibile nella vista del catalogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
@@ -130,7 +130,7 @@ ms.locfileid: "92006275"
 >  È possibile specificare in modo esplicito questo schema a mosaico con la clausola USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) dell'istruzione [CREATE SPATIAL INDEX di ](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##### <a name="the-bounding-box"></a>Riquadro  
- I dati geometrici occupano un piano che può essere infinito. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia, un indice spaziale richiede uno spazio finito. Per stabilire uno spazio finito per la scomposizione, lo schema a mosaico per la griglia di geometria richiede un *riquadro*rettangolare. Il rettangolo di selezione è definito da quattro coordinate, **(**_x-min_**,**_y-min_**)** e **(**_x-max_**,**_y-max_**)**, che sono archiviate come proprietà dell'indice spaziale. Queste coordinate rappresentano gli elementi seguenti:  
+ I dati geometrici occupano un piano che può essere infinito. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia, un indice spaziale richiede uno spazio finito. Per stabilire uno spazio finito per la scomposizione, lo schema a mosaico per la griglia di geometria richiede un *riquadro* rettangolare. Il rettangolo di selezione è definito da quattro coordinate, **(**_x-min_**,**_y-min_**)** e **(**_x-max_**,**_y-max_**)**, che sono archiviate come proprietà dell'indice spaziale. Queste coordinate rappresentano gli elementi seguenti:  
   
 -   *x-min* è la coordinata x dell'angolo inferiore sinistro del rettangolo di selezione.  
   

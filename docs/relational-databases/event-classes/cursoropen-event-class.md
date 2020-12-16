@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8252eb2af628ecc838a995699d941c2ddb2462a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c8d74cc9f767f52c94f59a7f89c4720888df84df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494429"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469872"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

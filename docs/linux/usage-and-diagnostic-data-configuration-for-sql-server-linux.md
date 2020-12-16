@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 96c58159a020ba11708b12a4e5732438044b3291
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: bfc63894d7e2ada81ca230c1a66d32bd49d6d91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115732"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471402"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>Configurare la raccolta di dati di diagnostica e utilizzo per SQL Server in Linux
 
@@ -83,7 +83,7 @@ Per disabilitare la raccolta di dati di utilizzo e diagnostica in Docker, è nec
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Aggiungere un file `mssql.conf` con le righe `[telemetry]` e `customerfeedback = false` nella directory host:
 
@@ -176,7 +176,7 @@ Per abilitare il controllo locale in Docker, è necessario che Docker [salvi in 
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. La directory di destinazione per i nuovi log di controllo locale sarà nel contenitore. Creare una directory di destinazione per i nuovi log di controllo locale nella directory host del computer. L'esempio seguente crea una nuova directory **/audit**:
 

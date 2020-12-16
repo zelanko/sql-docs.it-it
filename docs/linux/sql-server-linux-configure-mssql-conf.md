@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: b30229e584cce79d73018aa0540c9bdaf328830d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 0274f6f2a0acccb20f9a9682d16b35ef5009d1b5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115704"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471602"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql conf
 
@@ -50,7 +50,7 @@ ms.locfileid: "92115704"
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 **mssql-conf** è uno script di configurazione che viene installato con [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] per Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Ubuntu. È possibile usare questa utilità per impostare i parametri seguenti:
 
@@ -559,7 +559,7 @@ Sono disponibili diverse altre impostazioni per mssql-conf che è possibile usar
 | distributedtransaction.tracefilepath | Cartella in cui archiviare i file di traccia |
 | distributedtransaction.turnoffrpcsecurity | Abilitare o disabilitare la sicurezza RPC per le transazioni distribuite |
 
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> Accettare i contratti di licenza con l'utente finale di MLServices
 
@@ -589,7 +589,7 @@ accepteula = Y
 accepteulaml = Y
 ```
 :::moniker-end
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ## <a name="enable-outbound-network-access"></a><a id="mlservices-outbound-access"></a> Abilitare l'accesso alla rete in uscita
 
@@ -783,7 +783,7 @@ traceflag = 3456
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 ```ini
 [EULA]

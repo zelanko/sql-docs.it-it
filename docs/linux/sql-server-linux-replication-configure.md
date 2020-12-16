@@ -11,13 +11,13 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 titleSuffix: SQL Server on Linux
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c4a22b43650292055a7b1c48b9408b4d8e85f6c
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
+ms.openlocfilehash: 54eb732e45515176f7fd1e8b258310e7de2b535c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785050"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471512"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Configurare la replica di SQL Server in Linux
 

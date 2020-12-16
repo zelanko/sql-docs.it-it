@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d5d881ff7628c094b8d6880406650387c0cff48
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0626ff511e504a4718a426ae9b1ca85c674ab5f0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868572"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97473872"
 ---
 # <a name="memory-optimization-advisor"></a>Ottimizzazione guidata per la memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "91868572"
  Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP - Common Workload Patterns and Migration Considerations](/previous-versions/dn673538(v=msdn.10)) (OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Procedura dettagliata per l'utilizzo di Ottimizzazione guidata per la memoria  
- In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella che si vuole convertire, quindi selezionare **Ottimizzazione guidata per la memoria**. Verrà visualizzata la pagina introduttiva per **Ottimizzazione guidata per la memoria della tabella**.  
+ In **Esplora oggetti** fare clic con il pulsante destro del mouse sulla tabella che si vuole convertire, quindi selezionare **Ottimizzazione guidata per la memoria**. Verrà visualizzata la pagina introduttiva per **Ottimizzazione guidata per la memoria della tabella**.  
   
 ### <a name="memory-optimization-checklist"></a>Elenco di controllo relativo all'ottimizzazione per la memoria  
  Quando si fa clic su **Avanti** nella pagina introduttiva di **Ottimizzazione guidata per la memoria della tabella**, viene visualizzato l'elenco di controllo relativo all'ottimizzazione per la memoria. Le tabelle con ottimizzazione per la memoria non supportano tutte le funzionalità di una tabella basata su disco. Nell'elenco di controllo relativo all'ottimizzazione per la memoria viene indicato se la tabella basata su disco utilizza qualche funzionalità che non è compatibile con un tabella ottimizzata per la memoria. Poiché l' **Ottimizzazione guidata per la memoria della tabella** non modifica la tabella basata su disco, è possibile effettuare la migrazione della tabella per usare OLTP in memoria. È necessario effettuare queste modifiche manualmente prima di continuare con la migrazione. Per ogni incompatibilità riscontrata, in **Ottimizzazione guidata per la memoria della tabella** viene visualizzato un collegamento a informazioni utili per la modifica delle tabelle basate su disco.  
@@ -99,7 +99,7 @@ ms.locfileid: "91868572"
   
  Se non esiste una chiave primaria e viene eseguita la migrazione della tabella in una tabella non durevole, questa schermata non verrà visualizzata.  
   
- Per le colonne testuali (le colonne con i tipi **char**, **nchar**, **varchar**e **nvarchar**) è necessario selezionare le regole di confronto appropriate. OLTP in memoria supporta solo le regole di confronto BIN2 per le colonne in una tabella ottimizzata per la memoria e non supporta le regole di confronto con i caratteri supplementari. Per informazioni sulle regole di confronto supportate e sull'impatto potenziale di una modifica a una regola di confronto, vedere [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) .  
+ Per le colonne testuali (le colonne con i tipi **char**, **nchar**, **varchar** e **nvarchar**) è necessario selezionare le regole di confronto appropriate. OLTP in memoria supporta solo le regole di confronto BIN2 per le colonne in una tabella ottimizzata per la memoria e non supporta le regole di confronto con i caratteri supplementari. Per informazioni sulle regole di confronto supportate e sull'impatto potenziale di una modifica a una regola di confronto, vedere [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) .  
   
  È possibile configurare i seguenti parametri per la chiave primaria:  
   

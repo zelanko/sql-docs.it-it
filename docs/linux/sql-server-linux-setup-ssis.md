@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a8ec33ad6d3c2bfc9c8f3adab2acad2fdb74ce0d
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e34fd6c218950b86a46f43842c06408feefedfc9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088771"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471442"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installare SQL Server Integration Services (SSIS) in Linux
 
@@ -67,7 +67,7 @@ Per installare il pacchetto **mssql-server-is** in Ubuntu, seguire questa proced
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Importare le chiavi GPG del repository pubblico.
 
@@ -151,7 +151,7 @@ Per installare il pacchetto **mssql-server-is** in RHEL, seguire questa procedur
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Scaricare il file di configurazione del repository SQL Server per Red Hat.
 

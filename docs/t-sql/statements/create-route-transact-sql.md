@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5eea276766b848033fc0fd8cd7487e7451c779ca
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
+ms.openlocfilehash: b3419eb9e2a557309b3892055066ea22749f7b8e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688332"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471932"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -58,7 +58,7 @@ WITH
   
 ## <a name="arguments"></a>Argomenti  
  *route_name*  
- Nome della route da creare. La nuova route viene creata nel database corrente e diventa di proprietà dell'identità specificata nella clausola AUTHORIZATION. Non è possibile specificare i nomi del server, del database e dello schema. *route_name* deve essere un valore **sysname**valido.  
+ Nome della route da creare. La nuova route viene creata nel database corrente e diventa di proprietà dell'identità specificata nella clausola AUTHORIZATION. Non è possibile specificare i nomi del server, del database e dello schema. *route_name* deve essere un valore **sysname** valido.  
   
  AUTHORIZATION *owner_name*  
  Imposta il proprietario della route sull'utente o il ruolo di database specificato. Per *owner_name* è possibile specificare il nome di qualsiasi utente o ruolo valido se l'utente corrente è un membro del ruolo predefinito del database **db_owner** o del ruolo predefinito del server **sysadmin**. In caso contrario, *owner_name* deve corrispondere al nome dell'utente corrente, al nome di un utente per il quale l'utente corrente dispone di autorizzazione IMPERSONATE oppure al nome di un ruolo a cui appartiene l'utente corrente. Se la clausola viene omessa, la route appartiene all'utente corrente.  

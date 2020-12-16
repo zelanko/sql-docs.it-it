@@ -7,13 +7,13 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0e35acbb3bd331117170a41eb3665ddc2fb9f9ab
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
+ms.openlocfilehash: b5fcfbf30028c904be96ca17be1ebb7feeb6f91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115864"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471422"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Ripristinare un database di SQL Server in un contenitore Docker per Linux
 
@@ -26,7 +26,7 @@ Questa esercitazione illustra come spostare e ripristinare un file di backup di 
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 Questa esercitazione illustra come spostare e ripristinare un file di backup di SQL Server in un'immagine del contenitore di SQL Server 2019 su Linux in esecuzione in Docker.
 
@@ -97,7 +97,7 @@ Questa esercitazione illustra come spostare e ripristinare un file di backup di 
    docker ps -a
    ```
 
-1. Se nella colonna **STATUS** è impostato lo stato**Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](./sql-server-linux-docker-container-troubleshooting.md).
+1. Se nella colonna **STATUS** è impostato lo stato **Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](./sql-server-linux-docker-container-troubleshooting.md).
 
   ```bash
   $ sudo docker ps -a
@@ -108,7 +108,7 @@ Questa esercitazione illustra come spostare e ripristinare un file di backup di 
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Aprire un terminale Bash in Linux/Mac o una sessione di PowerShell con privilegi elevati in Windows.
 
@@ -153,7 +153,7 @@ Questa esercitazione illustra come spostare e ripristinare un file di backup di 
    docker ps -a
    ```
 
-1. Se nella colonna **STATUS** è impostato lo stato**Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](./sql-server-linux-docker-container-troubleshooting.md).
+1. Se nella colonna **STATUS** è impostato lo stato **Up**, SQL Server è in esecuzione nel contenitore e in ascolto sulla porta specificata nella colonna **PORTS**. Se la colonna **STATUS** del contenitore di SQL Server è impostata su **Exited**, vedere la [sezione relativa alla risoluzione dei problemi della guida alla configurazione](./sql-server-linux-docker-container-troubleshooting.md).
 
    ```bash
    $ sudo docker ps -a
@@ -465,7 +465,7 @@ Oltre a eseguire backup del database per proteggere i dati, è anche possibile u
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 1. Arrestare il contenitore **sql1**.
 
@@ -529,7 +529,7 @@ In questa esercitazione si è appreso come eseguire il backup di un database in 
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
 In questa esercitazione si è appreso come eseguire il backup di un database in Windows e come spostarlo in un server Linux che esegue SQL Server 2019. Si è appreso come:
 
