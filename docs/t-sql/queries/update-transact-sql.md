@@ -38,13 +38,13 @@ helpviewer_keywords:
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56eaaeb3dfc90ee9de1f5ee769417eb75c232e4b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 00ff65b2c1007f8c205bc30e27c48b5282b882b9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035814"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464212"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -145,7 +145,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Le espressioni di tabella comune possono essere utilizzate anche con le istruzioni SELECT, INSERT, DELETE e CREATE VIEW. Per altre informazioni, vedere [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  TOP **(** _expression_ **)** [ PERCENT ]  
- Specifica il numero o la percentuale di righe che vengono aggiornate. Il valore di*expression* può essere specificato come numero o come percentuale di righe.  
+ Specifica il numero o la percentuale di righe che vengono aggiornate. Il valore di *expression* può essere specificato come numero o come percentuale di righe.  
   
  Le righe a cui viene fatto riferimento nell'espressione TOP utilizzata con INSERT, UPDATE o DELETE non sono disposte in alcun ordine.  
   

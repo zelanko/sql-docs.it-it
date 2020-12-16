@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 612b353c094a3144669e59ae415b92e862be5ea9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 439e400c4ae4298e7e7c55548ffeb7874917a573
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448132"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463172"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Sincronizzazione di una sottoscrizione pull
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "88448132"
   
 #### <a name="to-start-the-distribution-agent-from-the-command-prompt-or-from-a-batch-file"></a>Per avviare l'agente di distribuzione dal prompt dei comandi o da un file batch  
   
-1.  Dal prompt dei comandi o in un file batch, avviare l' [Agente distribuzione repliche](../../relational-databases/replication/agents/replication-distribution-agent.md) eseguendo **distrib.exe**con gli argomenti della riga di comando seguenti:  
+1.  Dal prompt dei comandi o in un file batch, avviare l' [Agente distribuzione repliche](../../relational-databases/replication/agents/replication-distribution-agent.md) eseguendo **distrib.exe** con gli argomenti della riga di comando seguenti:  
   
     -   **-Publisher**  
   
@@ -102,7 +102,7 @@ ms.locfileid: "88448132"
   
 #### <a name="to-start-the-merge-agent-from-the-command-prompt-or-from-a-batch-file"></a>Per avviare l'agente di merge dal prompt dei comandi o da un file batch  
   
-1.  Dal prompt dei comandi o in un file batch, avviare l' [Agente merge repliche](../../relational-databases/replication/agents/replication-merge-agent.md) eseguendo **replmerg.exe**con gli argomenti della riga di comando seguenti:  
+1.  Dal prompt dei comandi o in un file batch, avviare l' [Agente merge repliche](../../relational-databases/replication/agents/replication-merge-agent.md) eseguendo **replmerg.exe** con gli argomenti della riga di comando seguenti:  
   
     -   **-Publisher**  
   

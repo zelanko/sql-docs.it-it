@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56065a74319773012d88ddd9bb09987187e6f4c7
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0a2ad9953050271d42aa2770c6bd3a02d787f9d9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646654"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462612"
 ---
 # <a name="delete-unique-constraints"></a>Eliminazione di vincoli univoci
 
@@ -62,7 +62,7 @@ ms.locfileid: "88646654"
   
 #### <a name="to-delete-a-unique-constraint-using-table-designer"></a>Per eliminare un vincolo univoco utilizzando Progettazione tabelle  
   
-1.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella con il vincolo UNIQUE e selezionare **Progetta**.  
+1.  In **Esplora oggetti** fare clic con il pulsante destro del mouse sulla tabella con il vincolo UNIQUE e selezionare **Progetta**.  
   
 2.  Scegliere **Indici/chiavi** nel menu **Progettazione tabelle**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88646654"
   
 #### <a name="to-delete-a-unique-constraint"></a>Per eliminare un vincolo univoco  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

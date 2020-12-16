@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73e56eb0ffcc4996ddd6903f2e79c14947b9a450
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a5225cdec356cbefc3df6abae58ae4cd512445b8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485391"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461512"
 ---
 # <a name="manage-trigger-security"></a>Gestione della sicurezza dei trigger
 
@@ -50,7 +50,7 @@ Il trigger indica che non appena un utente autorizzato a eseguire un'istruzione 
 ## <a name="trigger-security-best-practices"></a>Procedure consigliate per la sicurezza dei trigger  
  Per impedire l'esecuzione del codice del trigger con privilegi alzati di livello, è possibile adottare le misure seguenti:  
   
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 -   Individuare i trigger DML e DDL esistenti nel database e nell'istanza del server eseguendo query sulle viste del catalogo [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) e [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) . La query seguente restituisce tutti i trigger DML e DDL a livello di database nel database corrente e tutti i trigger DDL a livello di server nell'istanza del server:  
   
@@ -65,7 +65,7 @@ Il trigger indica che non appena un utente autorizzato a eseguire un'istruzione 
 
 ::: moniker-end
 
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current"
 
 -   Individuare i trigger DML e DDL esistenti nel database eseguendo query sulla vista del catalogo [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). La query seguente restituisce tutti i trigger DML e DDL a livello di database nel database corrente:  
   

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ea0d7aca2659d16bc761cfd4dc2146a96f977622
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: 6627a09a602f9d75cd742f967ba9e8cb6f05ca7e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423615"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464822"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>Operazioni comuni che richiedono il backup del database
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  Se si eseguono backup regolari del log, le eventuali modifiche correlate alla replica dovrebbero essere incluse nei backup del log. Se non si eseguono backup del log, effettuare un backup dei database di pubblicazione, di distribuzione e di sottoscrizione, nonché dei database **msdb**e **master** dopo avere apportato modifiche alla topologia o allo schema di replica.  
+  Se si eseguono backup regolari del log, le eventuali modifiche correlate alla replica dovrebbero essere incluse nei backup del log. Se non si eseguono backup del log, effettuare un backup dei database di pubblicazione, di distribuzione e di sottoscrizione, nonché dei database **msdb** e **master** dopo avere apportato modifiche alla topologia o allo schema di replica.  
   
 ## <a name="publication-database"></a>Database di pubblicazione  
  È necessario eseguire il backup del database di pubblicazione in seguito al completamento delle operazioni seguenti:  
@@ -110,6 +110,6 @@ ms.locfileid: "88423615"
   
 ## <a name="see-also"></a>Vedere anche  
  [Backup e ripristino di database SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Backup e ripristino di database replicati](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
+ [Eseguire il backup e ripristino di database replicati](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   
   

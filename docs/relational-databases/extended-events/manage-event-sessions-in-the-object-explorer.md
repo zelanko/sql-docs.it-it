@@ -10,13 +10,13 @@ ms.topic: tutorial
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 802ef2c4b7c73847e1c3de3cdc67516a9d35f2e3
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3b7295d803770d37940480606ce038129e62a01d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868540"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465512"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Gestire sessioni di eventi in Esplora oggetti
 
@@ -66,10 +66,10 @@ STATE = STOP
 ```  
   
 ### <a name="start-or-stop-an-extended-events-session-in-object-explorer"></a>Avviare o arrestare una sessione Eventi estesi in Esplora oggetti  
- Per avviare o arrestare una sessione Eventi estesi in **Esplora oggetti**, espandere i nodi **Gestione**, **Eventi estesi**e **Sessioni** , fare clic con il pulsante destro del mouse su una sessione, quindi scegliere **Avvia sessione** o **Arresta sessione**.  
+ Per avviare o arrestare una sessione Eventi estesi in **Esplora oggetti**, espandere i nodi **Gestione**, **Eventi estesi** e **Sessioni** , fare clic con il pulsante destro del mouse su una sessione, quindi scegliere **Avvia sessione** o **Arresta sessione**.  
   
 ## <a name="export-an-extended-events-session-template"></a>Esportare un modello di sessione Eventi estesi  
- È possibile esportare una sessione Eventi estesi usando **Esplora oggetti**e salvarla come file modello xml. Ad esempio, è possibile esportare una sessione, quindi applicare il modello a una nuova sessione eventi usando la **Creazione guidata nuova sessione** o la procedura guidata **Nuova sessione** .  
+ È possibile esportare una sessione Eventi estesi usando **Esplora oggetti** e salvarla come file modello xml. Ad esempio, è possibile esportare una sessione, quindi applicare il modello a una nuova sessione eventi usando la **Creazione guidata nuova sessione** o la procedura guidata **Nuova sessione** .  
   
  Quando si esporta una sessione, assicurarsi di salvare il file modello in un percorso che utilizza il file system NTFS e di limitare l'accesso agli utenti autorizzati a visualizzare le informazioni.  
   
@@ -84,7 +84,7 @@ STATE = STOP
      Se si salva il file nel percorso predefinito dei modelli di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , il modello sarà visualizzato nell'elenco a discesa di modelli predefiniti quando si usano la **Creazione guidata nuova sessione** e la finestra di dialogo **Nuova sessione** .  
   
 ## <a name="import-an-extended-events-session-template"></a>Importare un modello di sessione Eventi estesi  
- Usando **Esplora oggetti**è possibile importare un modello per una sessione Eventi estesi. È possibile, ad esempio, effettuare questa operazione per creare una sessione da un modello esportato da un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Usando **Esplora oggetti** è possibile importare un modello per una sessione Eventi estesi. È possibile, ad esempio, effettuare questa operazione per creare una sessione da un modello esportato da un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Per creare una sessione Eventi estesi, è necessario disporre dell'autorizzazione **ALTER ANY EVENT SESSION** .  
   
@@ -92,7 +92,7 @@ STATE = STOP
   
  Per importare una sessione Eventi estesi:  
   
-1.  In **Esplora oggetti**espandere i nodi **Gestione**, quindi **Eventi estesi** .  
+1.  In **Esplora oggetti** espandere i nodi **Gestione**, quindi **Eventi estesi** .  
   
 2.  Fare clic con il pulsante destro del mouse su **Sessioni** e selezionare **Nuova sessione**.  
   
@@ -109,7 +109,7 @@ STATE = STOP
   
  Per modificare una sessione Eventi estesi:  
   
-1.  In **Esplora oggetti**espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni** .  
+1.  In **Esplora oggetti** espandere i nodi **Gestione**, **Eventi estesi**, quindi **Sessioni** .  
   
 2.  Fare clic con il pulsante destro del mouse su una sessione e selezionare **Proprietà**.  
   
@@ -120,7 +120,7 @@ STATE = STOP
 ## <a name="script-an-event-session-definition-using-tsql"></a>Creare uno script per la definizione di una sessione eventi tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  Sia nella Creazione guidata nuova sessione che nella finestra di dialogo Nuova sessione è presente un'opzione Script che consente di generare codice [!INCLUDE[tsql](../../includes/tsql-md.md)] per definire la sessione Eventi estesi.  
   
- Per accedere a [!INCLUDE[tsql](../../includes/tsql-md.md)] per una sessione Eventi estesi esistente, fare clic con il pulsante destro del mouse sul nome della sessione, scegliere **Crea script per sessione**e selezionare quindi **Genera codice per istruzione CREATE in**.  
+ Per accedere a [!INCLUDE[tsql](../../includes/tsql-md.md)] per una sessione Eventi estesi esistente, fare clic con il pulsante destro del mouse sul nome della sessione, scegliere **Crea script per sessione** e selezionare quindi **Genera codice per istruzione CREATE in**.  
   
 ## <a name="delete-an-extended-events-session"></a>Eliminare una sessione Eventi estesi  
  È possibile eliminare una sessione Eventi estesi:  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27776324d94176619c25acbeefb3b6bd901d8a2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4105a3c3b0ba43d3ed142cba31b2f991f6dc5287
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418935"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461562"
 ---
 # <a name="dml-triggers"></a>Trigger DML
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,10 +61,10 @@ ms.locfileid: "88418935"
 |Applicabilità|Tabelle|Tabelle e viste|  
 |Quantità per tabella o vista|Multiplo per azione di trigger (UPDATE, DELETE e INSERT)|Singolo per azione di trigger (UPDATE, DELETE e INSERT)|  
 |Riferimenti di propagazione|Nessuna restrizione|I trigger INSTEAD OF UPDATE e DELETE non sono consentiti in tabelle che rappresentano le destinazioni di vincoli di integrità per operazioni referenziali di propagazione|  
-|Esecuzione|Dopo:<br /><br /> Elaborazione dei vincoli<br /><br /> Operazioni referenziali dichiarative<br /><br /> Creazione di tabelle**inserted** e **deleted**<br /><br /> Operazione di trigger|Prima: elaborazione dei vincoli<br /><br /> Invece di: operazione di trigger<br /><br /> Dopo: creazione di tabelle  **inserted** e **deleted**|  
+|Esecuzione|Dopo:<br /><br /> Elaborazione dei vincoli<br /><br /> Operazioni referenziali dichiarative<br /><br /> Creazione di tabelle **inserted** e **deleted**<br /><br /> Operazione di trigger|Prima: elaborazione dei vincoli<br /><br /> Invece di: operazione di trigger<br /><br /> Dopo: creazione di tabelle  **inserted** e **deleted**|  
 |Ordine di esecuzione|È possibile specificare la prima e l'ultima esecuzione|Non applicabile|  
-|Riferimenti a colonne**varchar (max)**, **nvarchar (max)** e **varbinary (max)** in tabelle **inserted** e **deleted**|Consentito|Consentito|  
-|Riferimenti a colonne**text**, **ntext**e **image** in tabelle **inserted** e **deleted**|Non consentito|Consentito|  
+|Riferimenti a colonne **varchar (max)**, **nvarchar (max)** e **varbinary (max)** in tabelle **inserted** e **deleted**|Consentito|Consentito|  
+|Riferimenti a colonne **text**, **ntext** e **image** in tabelle **inserted** e **deleted**|Non consentito|Consentito|  
   
  Trigger CLR  
  I trigger CLR includono i trigger AFTER e INSTEAD OF. Un trigger CLR può essere anche un trigger DDL. Anziché eseguire una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] , un trigger CLR consente di eseguire uno o più metodi scritti in codice gestito che sono membri di un assembly creato in .NET Framework e caricato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -77,7 +77,7 @@ ms.locfileid: "88418935"
 |Viene illustrato come creare un trigger CLR.|[Creazione di trigger CLR](../../relational-databases/triggers/create-clr-triggers.md)|  
 |Viene descritto come creare un trigger DML per la gestione delle modifiche sia della singola riga che di più righe.|[Creazione di trigger DML per gestire più righe di dati](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)|  
 |Viene descritto come annidare trigger.|[Creazione di trigger annidati](../../relational-databases/triggers/create-nested-triggers.md)|  
-|Viene descritto come specificare l'ordine in cui vengono generati trigger AFTER.|[Specificare i primi e gli ultimi trigger](../../relational-databases/triggers/specify-first-and-last-triggers.md)|  
+|Viene descritto come specificare l'ordine in cui vengono generati trigger AFTER.|[Specifica dei primi e degli ultimi trigger](../../relational-databases/triggers/specify-first-and-last-triggers.md)|  
 |Viene descritto come utilizzare le tabelle speciali inserted e deleted nel codice del trigger.|[Usare le tabelle inserite ed eliminate](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)|  
 |Viene descritto come modificare o rinominare un trigger DML.|[Modifica o ridenominazione di trigger DML](../../relational-databases/triggers/modify-or-rename-dml-triggers.md)|  
 |Viene descritto come visualizzare informazioni sui trigger DML.|[Ottieni informazioni sui trigger DML](../../relational-databases/triggers/get-information-about-dml-triggers.md)|  

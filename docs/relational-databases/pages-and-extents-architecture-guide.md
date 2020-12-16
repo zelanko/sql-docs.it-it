@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56bd6740a6b016bd06084b2e44958e61adc7ca89
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4fdc13dcfa509ed2df3ec39afe5a9aa591aa6e39
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439395"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461942"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -182,7 +182,7 @@ Se in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] è necessario i
 
 In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] viene allocato un nuovo extent a un'unità di allocazione solo se non viene trovata rapidamente una pagina di un extent esistente in cui sia disponibile spazio sufficiente per la riga da inserire. 
 
-<a name="ProportionalFill"></a> In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] gli extent da allocare vengono selezionati tra quelli disponibili nel filegroup usando un **algoritmo di allocazione riempimento proporzionale** . Se un filegroup include due file e in uno lo spazio libero è doppio rispetto all'altro, vengono allocate due pagine del file con lo spazio libero maggiore per ogni pagina allocata dell'altro file. Ciò significa che la percentuale di spazio utilizzato deve essere analoga in tutti i file di un filegroup. 
+<a name="ProportionalFill"></a> In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] gli extent da allocare vengono selezionati tra quelli disponibili nel filegroup usando un **algoritmo di allocazione riempimento proporzionale**. Se un filegroup include due file e in uno lo spazio libero è doppio rispetto all'altro, vengono allocate due pagine del file con lo spazio libero maggiore per ogni pagina allocata dell'altro file. Ciò significa che la percentuale di spazio utilizzato deve essere analoga in tutti i file di un filegroup. 
 
 ## <a name="tracking-modified-extents"></a>Rilevamento degli extent modificati 
 

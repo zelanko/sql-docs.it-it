@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98faafb23e6f5c3f981fdf04eca99a7ab3eb7a7b
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3f408175a59484aa162c0db654ebf4b1d5656901
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384819"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460584"
 ---
 # <a name="set-or-change-the-column-collation"></a>Impostare o modificare le regole di confronto delle colonne
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  È possibile ignorare le regole di confronto del database per i dati **char** , **varchar** , **text** , **nchar** , **nvarchar** e **ntext** specificando regole di confronto diverse per una colonna specifica di una tabella e utilizzando uno degli elementi seguenti:  
+  È possibile ignorare le regole di confronto del database per i dati **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext** specificando regole di confronto diverse per una colonna specifica di una tabella e utilizzando uno degli elementi seguenti:  
   
 -   Clausola COLLATE di [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) e [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md), come illustrato negli esempi seguenti. 
 
@@ -88,13 +88,13 @@ ms.locfileid: "94384819"
 -   Un vincolo CHECK  
 -   Un vincolo FOREIGN KEY  
   
- Quando si usa il database **tempdb** , la clausola [COLLATE](~/t-sql/statements/collations.md) include un'opzione *database_default* per specificare che una colonna di una tabella temporanea utilizza le regole di confronto predefinite del database utente corrente per la connessione anziché quelle del database **tempdb**.  
+ Quando si usa il database **tempdb**, la clausola [COLLATE](~/t-sql/statements/collations.md) include un'opzione *database_default* per specificare che una colonna di una tabella temporanea utilizza le regole di confronto predefinite del database utente corrente per la connessione anziché quelle del database **tempdb**.  
   
 ## <a name="collations-and-text-columns"></a>Regole di confronto e colonne di tipo text  
  È possibile inserire o aggiornare valori in una colonna **text** le cui regole di confronto sono diverse dalla tabella codici delle regole di confronto predefinite del database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte in modo implicito i valori nelle regole di confronto della colonna.  
   
 ## <a name="collations-and-tempdb"></a>Regole di confronto e database tempdb  
- Il database **tempdb** viene compilato a ogni avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e presenta le stesse regole di confronto predefinite del database **model** . Queste sono generalmente le stesse regole di confronto predefinite dell'istanza. Se si crea un database utente e si specificano regole di confronto predefinite diverse da quelle del database **model** , il database utente utilizzerà regole di confronto predefinite diverse da quelle di **tempdb**. Tutte le stored procedure temporanee o le tabelle temporanee vengono create e archiviate in **tempdb**. Di conseguenza, tutte le colonne implicite delle tabelle temporanee e tutte le costanti, le variabili e i parametri a cui possono essere assegnati valori predefiniti e che si trovano in stored procedure temporanee, utilizzano regole di confronto diverse da quelle degli oggetti analoghi creati in tabelle e stored procedure permanenti.  
+ Il database **tempdb** viene compilato a ogni avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e presenta le stesse regole di confronto predefinite del database **model** . Queste sono generalmente le stesse regole di confronto predefinite dell'istanza. Se si crea un database utente e si specificano regole di confronto predefinite diverse da quelle del database **model**, il database utente utilizzerà regole di confronto predefinite diverse da quelle di **tempdb**. Tutte le stored procedure temporanee o le tabelle temporanee vengono create e archiviate in **tempdb**. Di conseguenza, tutte le colonne implicite delle tabelle temporanee e tutte le costanti, le variabili e i parametri a cui possono essere assegnati valori predefiniti e che si trovano in stored procedure temporanee, utilizzano regole di confronto diverse da quelle degli oggetti analoghi creati in tabelle e stored procedure permanenti.  
   
  Ciò può causare problemi derivanti da una non corrispondenza nelle regole di confronto tra i database definiti dall'utente e gli oggetti di database del sistema. Si supponga ad esempio che un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzi le regole di confronto Latin1_General_CS_AS e di eseguire le seguenti istruzioni:  
   

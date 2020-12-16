@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6fcc2f6593a7fc7a72c80ee3fe271cdb392ee747
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5f78cfecbfcf99ec3ae855b41bb802a0c6b12864
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115391"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462552"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char and varchar (Transact-SQL)
 
@@ -79,7 +79,7 @@ Non vengono segnalati errori particolari (oltre il normale avviso che indica che
 
 Se un'espressione di caratteri viene convertita in un tipo di dati carattere di dimensioni diverse, i valori troppo lunghi per il nuovo tipo di dati vengono troncati. Ai fini della conversione da un'espressione di caratteri, il tipo **uniqueidentifier** viene considerato un tipo carattere ed è quindi soggetto alle regole di troncamento per la conversione in tipo carattere. Vedere la sezione Esempi riportata di seguito.
 
-Se un'espressione di caratteri viene convertita in un'espressione di caratteri con tipo di dati o dimensioni diverse, ad esempio da**char(5)** a **varchar(5)** , o da **char(20)** a **char(15)** , al valore convertito vengono assegnate le regole di confronto del valore di input. Se un'espressione non di caratteri viene convertita in dati di tipo carattere, al valore convertito vengono assegnate le regole di confronto predefinite del database corrente. In entrambi i casi è possibile assegnare regole di confronto specifiche mediante la clausola [COLLATE](../../t-sql/statements/collations.md).
+Se un'espressione di caratteri viene convertita in un'espressione di caratteri con tipo di dati o dimensioni diverse, ad esempio da **char(5)** a **varchar(5)** , o da **char(20)** a **char(15)** , al valore convertito vengono assegnate le regole di confronto del valore di input. Se un'espressione non di caratteri viene convertita in dati di tipo carattere, al valore convertito vengono assegnate le regole di confronto predefinite del database corrente. In entrambi i casi è possibile assegnare regole di confronto specifiche mediante la clausola [COLLATE](../../t-sql/statements/collations.md).
 
 > [!NOTE]
 > Le conversioni tra tabelle codici sono supportate per i tipi di dati **char** e **varchar**, ma non per il tipo di dati **text**. Come nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la perdita di dati durante le conversioni tra tabelle codici non viene segnalata.

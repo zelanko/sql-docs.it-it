@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a433fbfe50e2a673ab29595729f7c8b83f9444ae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4b57082f1ce4f76e191c0237e80f404199a9ac4a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538215"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462642"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>Modifica dello schema di una tabella temporale con controllo delle versioni di sistema
 
@@ -26,7 +26,7 @@ ms.locfileid: "89538215"
 
 Usare l'istruzione **ALTER TABLE** per aggiungere, modificare o rimuovere una colonna.
 
-## <a name="examples"></a>Esempio
+## <a name="examples"></a>Esempi
 
 Di seguito sono riportati alcuni esempi in cui viene modificato lo schema della tabella temporale.
 
@@ -58,7 +58,7 @@ ALTER TABLE dbo.Department
 
 ### <a name="important-remarks"></a>Note importanti
 
-- L'autorizzazione**CONTROL** nelle tabelle correnti e di cronologia è necessaria per modificare lo schema della tabella temporale.
+- L'autorizzazione **CONTROL** nelle tabelle correnti e di cronologia è necessaria per modificare lo schema della tabella temporale.
 - Durante un'operazione **ALTER TABLE** , il sistema mantiene un blocco dello schema su entrambe le tabelle.
 - La modifica dello schema specificata viene propagata alla tabella di cronologia in modo appropriato (a seconda del tipo di modifica).
 - Se si aggiunge una colonna non nullable o si altera la colonna esistente in modo che diventi non nullable, è necessario specificare il valore predefinito per le righe esistenti. Il sistema genererà un valore predefinito aggiuntivo con lo stesso valore e lo applicherà alla tabella di cronologia. L'aggiunta di **DEFAULT** a una tabella non vuota è un'operazione di dimensionamento dei dati in tutte le edizioni diverse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, in cui si tratta di un'operazione di metadati.
@@ -71,7 +71,7 @@ ALTER TABLE dbo.Department
 
   - Aggiunta di una colonna calcolata
   - Aggiunta di una colonna **IDENTITY**
-  - Aggiunta di una colonna **SPARSE** o modifica della colonna esistente in **SPARSE**quando la tabella di cronologia è impostata su **DATA_COMPRESSION = PAGE** o **DATA_COMPRESSION = ROW**, ovvero il valore predefinito per la tabella di cronologia.
+  - Aggiunta di una colonna **SPARSE** o modifica della colonna esistente in **SPARSE** quando la tabella di cronologia è impostata su **DATA_COMPRESSION = PAGE** o **DATA_COMPRESSION = ROW**, ovvero il valore predefinito per la tabella di cronologia.
   - Aggiunta di **COLUMN_SET**
   - Aggiunta di una colonna **ROWGUIDCOL** o modifica della colonna esistente in **ROWGUIDCOL**
 

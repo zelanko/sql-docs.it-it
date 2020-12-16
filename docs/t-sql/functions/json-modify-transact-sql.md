@@ -10,13 +10,13 @@ ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 35d34b47dbb1c1f8879656895c8b7e3429f95de0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
+ms.openlocfilehash: 517aad9dec56520b2f0b86b81ba6bb1b2e4761cb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88364257"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461332"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
@@ -60,7 +60,7 @@ JSON_MODIFY ( expression , path , newValue )
   
 In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e nel [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] è possibile specificare una variabile come valore di *path*.
 
-**JSON_MODIFY**restituisce un errore se il formato di *path* non è valido.  
+**JSON_MODIFY** restituisce un errore se il formato di *path* non è valido.  
   
  *newValue*  
  Nuovo valore della proprietà specificata da *path*.  

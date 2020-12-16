@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c4b159f41f998155d4013413e69346ab0c4a239
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6a81d2b397418a934e51a7e9e0f8491d10e0cdba
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516944"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462592"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>Prestazioni delle tabelle temporali con controllo delle versioni di sistema e ottimizzazione per la memoria
 
@@ -36,7 +36,7 @@ Questo argomento presenta alcune considerazioni sulle prestazioni specifiche qua
 - Il periodo di attivazione per le attività di scaricamento dati non è configurabile ma è possibile applicare il processo richiamando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).
 - Si consiglia di usare columnstore cluster come opzione di archiviazione per la tabella di cronologia basata su disco, soprattutto se si prevede di eseguire query di analisi sui dati cronologici che usano funzioni di aggregazione o windowing. In questo caso columnstore cluster è una soluzione ottimale per la tabella di cronologia perché fornisce una buona compressione dei dati e si comporta in modo "favorevole all'inserimento", in linea con il modo in cui vengono generati i dati cronologici.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [Creazione di una tabella temporale con controllo delle versioni di sistema e ottimizzazione per la memoria](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)

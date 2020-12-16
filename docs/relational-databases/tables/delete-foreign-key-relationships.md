@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f3e8a42bce62455b998ee9e4c121256bab7953a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4daec2e6e616ef0922e5700c77539e61496b69aa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646026"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462602"
 ---
 # <a name="delete-foreign-key-relationships"></a>Eliminazione di relazioni di chiave esterna
 
@@ -52,7 +52,7 @@ ms.locfileid: "88646026"
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>Per eliminare un vincolo di chiave esterna  
   
-1.  In **Esplora oggetti**espandere la tabella contenente il vincolo, quindi espandere **Chiavi**.  
+1.  In **Esplora oggetti** espandere la tabella contenente il vincolo, quindi espandere **Chiavi**.  
   
 2.  Fare clic con il pulsante destro del mouse sul vincolo e selezionare **Elimina**.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "88646026"
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>Per eliminare un vincolo di chiave esterna  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

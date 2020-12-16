@@ -12,13 +12,13 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: cd75e0a63ebbfbf6a5749939442b8b8a2e964d92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: '>= sql-server-ver15'
+ms.openlocfilehash: 84ab8334a2a34552d0aa301d7fd92d04dd9ce214
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403797"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463082"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>Esercitazione: Sviluppare un'applicazione .NET Framework usando Always Encrypted con enclave sicuri
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -40,7 +40,7 @@ Per usare Always Encrypted con enclave sicuri in un'applicazione .NET Framework,
 
 3. Assicurarsi che il progetto sia destinato almeno a .NET Framework 4.7.2. Fare clic con il pulsante destro del mouse sul progetto in Esplora soluzioni, scegliere Proprietà e impostare Framework di destinazione su .NET Framework 4.7.2.
 
-4. Installare il pacchetto NuGet seguente passando a**Strumenti** (menu principale) > **Gestione pacchetti NuGet** > **Console di Gestione pacchetti**. Eseguire il codice seguente nella Console di Gestione pacchetti.
+4. Installare il pacchetto NuGet seguente passando a **Strumenti** (menu principale) > **Gestione pacchetti NuGet** > **Console di Gestione pacchetti**. Eseguire il codice seguente nella Console di Gestione pacchetti.
 
    ```powershell
    Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders -IncludePrerelease

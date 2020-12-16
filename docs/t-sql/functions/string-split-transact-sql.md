@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: julieMSFT
 ms.author: jrasnick
-monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: a7c3220138c0f375b043f41044d5023fdb355ff5
-ms.sourcegitcommit: ef7539af262aad327270bb28752e420197e9e776
+monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017
+ms.openlocfilehash: d30220685c2654c745c40ecc8782b79049f5c598
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93405048"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461192"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -53,10 +53,10 @@ STRING_SPLIT ( string , separator )
 ## <a name="arguments"></a>Argomenti
 
  *string*  
- [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi tipo carattere, ad esempio **nvarchar** , **varchar** , **nchar** o **char**.  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi tipo carattere, ad esempio **nvarchar**, **varchar**, **nchar** o **char**.  
   
  *separator*  
- È un' [espressione](../../t-sql/language-elements/expressions-transact-sql.md) a carattere singolo di qualsiasi tipo, ad esempio **nvarchar(1)** , **varchar (1)** , **nchar (1)** o **char (1)** , usata come separatore per sottostringhe concatenate.  
+ È un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) a carattere singolo di qualsiasi tipo, ad esempio **nvarchar(1)** , **varchar (1)** , **nchar (1)** o **char (1)** , usata come separatore per sottostringhe concatenate.  
   
 ## <a name="return-types"></a>Tipi restituiti  
 
@@ -68,7 +68,7 @@ Restituisce una tabella a colonna singola le cui righe sono sottostringhe. Il no
 
 Le righe di output potrebbero essere in qualsiasi ordine. L'ordine _non_ corrisponde necessariamente all'ordine delle sottostringhe nella stringa di input. È possibile ignorare l'ordinamento finale usando una clausola ORDER BY nell'istruzione SELECT (`ORDER BY value`).
 
-0x0000 ( **char(0)** ) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in STRING_SPLIT.
+0x0000 (**char(0)** ) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in STRING_SPLIT.
 
 Le sottostringhe vuote di lunghezza zero sono presenti quando la stringa di input contiene due o più occorrenze consecutive del carattere delimitatore. Le sottostringhe vuote vengono trattate allo stesso modo delle sottostringhe semplici. È possibile escludere le righe che contengono la sottostringa vuota usando la clausola WHERE (`WHERE value <> ''`). Se la stringa di input è NULL, la funzione con valori di tabella STRING_SPLIT restituisce una tabella vuota.  
 

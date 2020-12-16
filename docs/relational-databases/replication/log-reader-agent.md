@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3225f7f90521357d0db312ea8cbd1c3272267337
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016
+ms.openlocfilehash: e894024f52a569004f76b2e7aa4b379ec7a5993e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493940"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464732"
 ---
 # <a name="log-reader-agent"></a>Agente di lettura log
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
    La finestra di dialogo **Agente di lettura log** visualizza informazioni dettagliate sull'agente di lettura log, inclusi lo stato, la cronologia, i messaggi informativi e gli eventuali messaggi di errore.  
   
 ## <a name="options"></a>Opzioni  
- Scegliere le sessioni dell'agente di lettura log da visualizzare dal menu **Visualizza** e quindi selezionare una sessione specifica nella griglia con etichetta **Sessioni dell'agente di lettura log**. Nella griglia con etichetta **Azioni nella sessione selezionata**verranno visualizzate informazioni dettagliate sulla sessione selezionata. Se la sessione selezionata è terminata con un errore, verrà inoltre visualizzata l'area di testo con etichetta **Messaggio o dettagli errore della sessione selezionata** .  
+ Scegliere le sessioni dell'agente di lettura log da visualizzare dal menu **Visualizza** e quindi selezionare una sessione specifica nella griglia con etichetta **Sessioni dell'agente di lettura log**. Nella griglia con etichetta **Azioni nella sessione selezionata** verranno visualizzate informazioni dettagliate sulla sessione selezionata. Se la sessione selezionata è terminata con un errore, verrà inoltre visualizzata l'area di testo con etichetta **Messaggio o dettagli errore della sessione selezionata** .  
   
  **Visualizza**  
  Selezionare le sessioni dell'agente di lettura log da visualizzare. L'agente di lettura log in genere viene eseguito in modo continuo, pertanto potrebbe essere disponibile una sola sessione da visualizzare.  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb9db9e3bcd2b081ded78ef0829298b80476f7d8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3f67ff91e6f5270c3bec207223eb3f72a070eea3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88383147"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460374"
 ---
 # <a name="create-filtered-indexes"></a>Creare indici filtrati
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -113,11 +113,11 @@ ms.locfileid: "88383147"
   
 3.  Fare clic sul segno più per espandere la tabella in cui si desidera creare un indice filtrato.  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice**e selezionare **Indice non cluster**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice** e selezionare **Indice non cluster**.  
   
 5.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
-6.  In **Colonne chiave indice**fare clic su **Aggiungi**.  
+6.  In **Colonne chiave indice** fare clic su **Aggiungi**.  
   
 7.  Nella finestra di dialogo **Seleziona colonne da**_nome\_tabella_ selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice univoco.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "88383147"
   
 #### <a name="to-create-a-filtered-index"></a>Per creare un indice filtrato  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "88383147"
   
 #### <a name="to-ensure-that-a-filtered-index-is-used-in-a-sql-query"></a>Per assicurarsi che un indice filtrato venga utilizzato in una query SQL  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

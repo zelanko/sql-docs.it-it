@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e074f54cb4d31616abced2e0b555c068728ec6c
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 59637197b72232df9f5054b88ea9a111f34b58a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384817"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464092"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -128,7 +128,7 @@ DELETE
  Alias specificato nella clausola FROM *table_source* che rappresenta la tabella o la vista da cui devono essere eliminate le righe.  
   
  *server_name*  
- **Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Nome del server, che usa come nome un nome di server collegato o la funzione [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md), in cui è contenuta la tabella o la vista. Se *server_name* è specificato, è obbligatorio specificare *database_name* e *schema_name*.  
   
@@ -146,11 +146,11 @@ DELETE
  È necessario che la vista a cui viene fatto riferimento in *table_or_view_name* sia aggiornabile e includa un riferimento esatto a una tabella di base nella clausola FROM della definizione della vista. Per altre informazioni sulle viste aggiornabili, vedere [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
  Funzione [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), in base alle funzionalità del provider.  
   
- WITH **(** \<table_hint_limited> [... *n* ] **)**  
+ WITH **(** \<table_hint_limited> [... *n*] **)**  
  Specifica uno o più hint di tabella consentiti per una tabella di destinazione. La parola chiave WITH e le parentesi sono obbligatorie. Le opzioni NOLOCK e READUNCOMMITTED non sono consentite. Per altre informazioni sugli hint di tabella, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<OUTPUT_Clause>  
@@ -187,7 +187,7 @@ DELETE
  *cursor_variable_name*  
  Nome di una variabile di cursore. La variabile di cursore deve fare riferimento a un cursore che consente operazioni di aggiornamento.  
   
- OPTION **(** \<query_hint> [ **,** ... *n* ] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  Parole chiave che indicano quali hint di ottimizzazione vengono utilizzati per personalizzare la modalità di elaborazione dell'istruzione nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Procedure consigliate  
@@ -338,7 +338,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. Utilizzo di TOP per limitare il numero di righe eliminate  
- Quando si usa una clausola TOP ( *n* ) con l'istruzione DELETE, l'operazione di eliminazione viene eseguita su una selezione casuale di un numero di righe *n*. Nell'esempio seguente vengono eliminate `20` righe casuali della tabella `PurchaseOrderDetail` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che contengono date di scadenza precedenti alla data 1 luglio 2006.  
+ Quando si usa una clausola TOP (*n*) con l'istruzione DELETE, l'operazione di eliminazione viene eseguita su una selezione casuale di un numero di righe *n*. Nell'esempio seguente vengono eliminate `20` righe casuali della tabella `PurchaseOrderDetail` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che contengono date di scadenza precedenti alla data 1 luglio 2006.  
   
 ```sql
 DELETE TOP (20)   
@@ -361,7 +361,7 @@ GO
 ###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> Eliminazione di righe da una tabella remota  
  Negli esempi riportati in questa sezione viene illustrato come eliminare righe da una tabella remota tramite un [server collegato](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o una [funzione per i set di righe](../functions/opendatasource-transact-sql.md) per fare riferimento alla tabella remota. Esiste una tabella remota in un server diverso o un'istanza di SQL Server.  
   
-**Si applica a** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Eliminazione di dati da una tabella remota tramite un server collegato  
  Nell'esempio seguente vengono eliminate righe da una tabella remota. L'esempio inizia con la creazione di un collegamento all'origine dati remota tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Il nome del server collegato, `MyLinkServer`, viene specificato come parte del nome di oggetto in quattro parti nel formato *server.catalogo.schema.oggetto*.  

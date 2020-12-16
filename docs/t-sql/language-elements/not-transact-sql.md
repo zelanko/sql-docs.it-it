@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
 author: rothja
 ms.author: jroth
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdaf68bd8f119fa0c0cba7c8cd16a11d927d310c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 246123d61e889b7e6b9579d7f7f65e5e7f4a10ef
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92188121"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460944"
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,14 +54,14 @@ ms.locfileid: "92188121"
 ## <a name="result-value"></a>Valore restituito  
  L'operatore NOT inverte il valore di qualsiasi espressione booleana.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Commenti  
  Tramite NOT è possibile negare il valore di un'espressione.  
   
  Nella tabella seguente vengono illustrati i risultati del confronto tra i valori TRUE e FALSE tramite l'operatore NOT.  
   
 ||NOT|  
 |------|---------|  
-|**TRUE**|false|  
+|**TRUE**|FALSE|  
 |**FALSE**|true|  
 |**UNKNOWN**|UNKNOWN|  
   

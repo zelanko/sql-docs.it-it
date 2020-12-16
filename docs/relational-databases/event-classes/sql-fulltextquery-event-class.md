@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9251d9e080e68678d20d2d97b3171f06a3386464
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 94686629622207bec1d79416a00dc69fd046bbc7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88383437"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460504"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery - classe di evento
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

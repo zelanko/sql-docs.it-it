@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c02704b8d18464ead042769038378acc07177ba8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 56f585c9eb19fc5beef0f2f70852b730ad113a95
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998521"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460514"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Usare il formato carattere per importare o esportare dati (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -163,7 +163,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
 ### <a name="using-bulk-insert-and-character-format-without-a-format-file"></a>**Uso di BULK INSERT e del formato carattere senza un file di formato**<a name="bulk_char"></a>
-Argomento**DATAFILETYPE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomento **DATAFILETYPE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar; -- for testing
@@ -178,7 +178,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
 ### <a name="using-bulk-insert-and-character-format-with-a-non-xml-format-file"></a>**Uso di BULK INSERT e del formato carattere con un file di formato non XML**<a name="bulk_char_fmt"></a>
-Argomento**FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomento **FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar; -- for testing
@@ -193,7 +193,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
 ### <a name="using-openrowset-and-character-format-with-a-non-xml-format-file"></a>**Uso di OPENROWSET e del formato carattere con un file di formato non XML**<a name="openrowset_char_fmt"></a>
-Argomento**FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
+Argomento **FORMATFILE** .  Eseguire l'istruzione Transact-SQL seguente in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
 TRUNCATE TABLE TestDatabase.dbo.myChar;  -- for testing

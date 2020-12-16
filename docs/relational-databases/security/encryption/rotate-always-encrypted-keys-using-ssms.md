@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d213b41fe392bbc82f663360879b7d67b07675be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 09be06fc9f84b46a93363c8386b492f987872583
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767552"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463102"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>Ruotare chiavi Always Encrypted con SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -105,7 +105,7 @@ La rotazione di una chiave master della colonna richiede le seguenti autorizzazi
 
 È necessario essere in grado di accedere sia alla chiave master della colonna precedente, sia alla nuova chiave master della colonna nei rispettivi archivi chiavi. Per accedere a un archivio chiavi e usare una chiave master della colonna, è possibile richiedere le autorizzazioni per l'archivio chiavi e/o la chiave:
 - **Archivio certificati - Computer locale**: è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
-- **Azure Key Vault**: sono necessarie le autorizzazioni *create*, *get*, *unwrapKey*, *wrapKey*, *sign*e *verify* per l'insieme di credenziali contenente le chiavi master della colonna.
+- **Azure Key Vault**: sono necessarie le autorizzazioni *create*, *get*, *unwrapKey*, *wrapKey*, *sign* e *verify* per l'insieme di credenziali contenente le chiavi master della colonna.
 - **Provider dell'archivio chiavi (CNG)** : l'autorizzazione e le credenziali obbligatorie potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
 - **Provider del servizio di crittografia (CAPI)** : potrebbero essere richieste l'autorizzazione e le credenziali obbligatorie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
 
@@ -125,9 +125,9 @@ Per ruotare una chiave di crittografia della colonna, usare la procedura guidata
 3.  Nella pagina **Selezione colonne** espandere le tabelle e individuare tutte le colonne da sostituire che attualmente vengono crittografate con la chiave di crittografia della colonna precedente.
 4.  Per ogni colonna crittografata con la chiave di crittografia precedente, impostare **Chiave di crittografia** su una nuova chiave generata automaticamente. **Nota:** in alternativa è possibile creare una nuova chiave di crittografia della colonna prima di eseguire la procedura guidata. Vedere [Effettuare il provisioning delle chiavi di crittografia di colonna con la finestra di dialogo Nuova chiave di crittografia della colonna](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog).
 5.  Nella pagina **Configurazione chiave master** , selezionare un percorso per archiviare la nuova chiave, selezionare un'origine della chiave master e quindi fare clic su **Avanti**. **Nota:** se si usa una chiave di crittografia della colonna già esistente (non una generata automaticamente), non deve essere eseguita alcuna azione in questa pagina.
-6.  Nella pagina **Convalida**scegliere se eseguire lo script immediatamente o creare uno script di PowerShell, quindi fare clic su **Avanti**.
+6.  Nella pagina **Convalida** scegliere se eseguire lo script immediatamente o creare uno script di PowerShell, quindi fare clic su **Avanti**.
 7.  Nella pagina **Riepilogo** esaminare le opzioni selezionate, quindi fare clic su **Fine** e chiudere la procedura guidata quando viene completata.
-8.  In **Esplora oggetti**passare alla cartella **Sicurezza/Chiavi con crittografia sempre attiva/Chiavi di crittografia della colonna** e individuare la chiave di crittografia della colonna precedente da rimuovere dal database. Fare clic sulla chiave con il pulsante destro del mouse e selezionare **Elimina**.
+8.  In **Esplora oggetti** passare alla cartella **Sicurezza/Chiavi con crittografia sempre attiva/Chiavi di crittografia della colonna** e individuare la chiave di crittografia della colonna precedente da rimuovere dal database. Fare clic sulla chiave con il pulsante destro del mouse e selezionare **Elimina**.
 
 ### <a name="permissions-for-rotating-column-encryption-keys"></a>Autorizzazioni per la rotazione delle chiavi di crittografia della colonna
 

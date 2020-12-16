@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f336e026d95db0de5ad40a9fb4ebc90d8165f609
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 630b6a3c00d3bd4fccdb13acaadad64279a460c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998997"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465522"
 ---
 # <a name="xml-format-files-sql-server"></a>File in formato XML (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -205,7 +205,7 @@ ms.locfileid: "85998997"
 |ID **="** _fieldID_ **"**|Specifica il nome logico del campo nel file di dati. L'ID di un campo rappresenta la chiave utilizzata per fare riferimento al campo.<br /><br /> \<FIELD ID**="**_fieldID_**"**/> esegue il mapping a \<COLUMN SOURCE**="**_fieldID_**"**/>|Obbligatoria|  
 |xsi:type **="** _fieldType_ **"**|Costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo dell'istanza dell'elemento. Il valore di *fieldType* determina gli attributi opzionali, riportati di seguito, necessari in un'istanza specifica.|Obbligatorio, a seconda del tipo di dati|  
 |LENGTH **="** _n_ **"**|Definisce la lunghezza per un'istanza di un tipo di dati a lunghezza fissa.<br /><br /> Il valore di *n* deve essere un numero intero positivo.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
-|PREFIX_LENGTH **="** _p_ **"**|Definisce la lunghezza del prefisso per una rappresentazione di dati binary. Il valore PREFIX_LENGTH *p*deve essere uno dei seguenti: 1, 2, 4 o 8.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
+|PREFIX_LENGTH **="** _p_ **"**|Definisce la lunghezza del prefisso per una rappresentazione di dati binary. Il valore PREFIX_LENGTH *p* deve essere uno dei seguenti: 1, 2, 4 o 8.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
 |MAX_LENGTH **="** _m_ **"**|Corrisponde al numero massimo di byte archiviabile in un campo specifico. In assenza di una tabella di destinazione, la lunghezza massima della colonna non è nota. L'attributo MAX_LENGTH limita la lunghezza massima di una colonna di testo di output e di conseguenza anche lo spazio di archiviazione allocato al valore della colonna. Tale limitazione risulta particolarmente comoda quando si utilizza l'opzione BULK della funzione OPENROWSET in una clausola SELECT FROM.<br /><br /> Il valore di *m* deve essere un numero intero positivo. Per impostazione predefinita, la lunghezza massima è pari a 8000 caratteri per una colonna **char** e a 4000 caratteri per una colonna **nchar** .|Facoltativo|  
 |COLLATION **="** _collationName_ **"**|Questo attributo è consentito solo per i campi di tipo carattere. Per un elenco dei nomi delle regole di confronto SQL, vedere [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Facoltativo|  
 |TERMINATOR **= "** _terminator_ **"**|Specifica il carattere di terminazione di un campo di dati. Il carattere di terminazione può essere costituito da un carattere qualsiasi, univoco e non facente parte dei dati.<br /><br /> Per impostazione predefinita, il carattere di terminazione corrisponde al carattere di tabulazione, rappresentato come \t. Per rappresentare un segno di paragrafo, utilizzare \r\n.|Viene utilizzato solo con un valore xsi:type di dati di tipo carattere, per il quale è necessario specificare questo attributo.|  
@@ -270,12 +270,12 @@ ms.locfileid: "85998997"
   
 |Categoria del tipo|\<COLUMN> Tipi di dati|Attributi XML obbligatori<br /><br /> per il tipo di dati|Attributi XML facoltativi<br /><br /> per il tipo di dati|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|Correzione|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**e **SQLUNIQUEID**|No.|NULLABLE|  
+|Correzione|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT** e **SQLUNIQUEID**|No.|NULLABLE|  
 |Numero variabile|**SQLDECIMAL** e **SQLNUMERIC**|No.|NULLABLE, PRECISION, SCALE|  
-|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**e **SQLUDT**|No.|NULLABLE|  
+|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT** e **SQLUDT**|No.|NULLABLE|  
 |Character LOB|**SQLNTEXT**|No.|NULLABLE|  
 |Stringa binaria|**SQLBINARY** e **SQLVARYBIN**|No.|NULLABLE, LENGTH|  
-|Stringa di caratteri|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**e **SQLNVARCHAR**|No.|NULLABLE, LENGTH|  
+|Stringa di caratteri|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR** e **SQLNVARCHAR**|No.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
 >  Per eseguire l'esportazione o l'importazione bulk di dati SQLXML, utilizzare uno dei tipi di dati seguenti nel file di formato: SQLCHAR o SQLVARYCHAR (i dati vengono inviati nella tabella codici del client o nella tabella codici implicita nelle regole di confronto), SQLNCHAR o SQLNVARCHAR (i dati vengono inviati come Unicode) oppure SQLBINARY o SQLVARYBIN (i dati vengono inviati senza conversione).  

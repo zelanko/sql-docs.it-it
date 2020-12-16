@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2686ba2c5ac8e4db03f49a1d090ed8de1066b2c7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c486e78d8cd05d4af130626586e8a9817ab779a1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550950"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464492"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>Arresto del controllo delle versioni in una tabella temporale con controllo delle versioni di sistema
 

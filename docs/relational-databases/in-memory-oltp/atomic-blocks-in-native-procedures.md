@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84adfac47c755bccee6603a632dfa44aa2c151b2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7e5de0ea599650792feef01508c1eed54aed68c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867352"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465432"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocchi atomici nelle procedure native
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "91867352"
   
  Se non è presente alcuna transazione attiva in una sessione, **BEGIN ATOMIC** avvia una nuova transazione. Se non viene generata alcuna eccezione all'esterno dell'ambito del blocco, verrà eseguito il commit della transazione alla fine del blocco. Se il blocco genera un'eccezione (l'eccezione non viene rilevata e gestita nel blocco), verrà eseguito il rollback della transazione. Per le transazioni che interessano un singolo blocco atomico (una singola stored procedure compilata in modo nativo), non è necessario scrivere istruzioni **BEGIN TRANSACTION** e **COMMIT** o **ROLLBACK** esplicite.  
   
- Le stored procedure compilate in modo nativo supportano i costrutti **TRY**, **CATCH**e **THROW** per la gestione degli errori. **RAISERROR** non è supportato.  
+ Le stored procedure compilate in modo nativo supportano i costrutti **TRY**, **CATCH** e **THROW** per la gestione degli errori. **RAISERROR** non è supportato.  
   
  Nell'esempio seguente viene illustrato il comportamento della gestione degli errori con blocchi atomici e stored procedure compilate in modo nativo:  
   
@@ -136,7 +136,7 @@ GO
   
 |Impostazione necessaria|Descrizione|  
 |----------------------|-----------------|  
-|**TRANSACTION ISOLATION LEVEL**|I valori supportati sono **SNAPSHOT**, **REPEATABLEREAD**e **SERIALIZABLE**.|  
+|**TRANSACTION ISOLATION LEVEL**|I valori supportati sono **SNAPSHOT**, **REPEATABLEREAD** e **SERIALIZABLE**.|  
 |**LANGUAGE**|Determina i formati data e ora e i messaggi di sistema. Tutti i linguaggi e gli alias in [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) sono supportati.|  
   
  Le impostazioni seguenti sono facoltative:  

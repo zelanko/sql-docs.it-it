@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18ed629f6a9d02c0068a20fc1da3e8d5c4375dc2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 70df620a283ac7f49c8ec854884a25843adc3e1c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645795"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464512"
 ---
 # <a name="rename-columns-database-engine"></a>Ridenominazione di colonne (motore di database)
 
@@ -60,13 +60,13 @@ Se una colonna viene ridenominata, i riferimenti a tale colonna non vengono ride
 
 ### <a name="to-rename-a-column-using-object-explorer"></a>Per rinominare una colonna utilizzando Esplora oggetti
 
-1. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].
-2. In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella in cui si vuole rinominare le colonne, quindi selezionare **Rinomina**.
+1. In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+2. In **Esplora oggetti** fare clic con il pulsante destro del mouse sulla tabella in cui si vuole rinominare le colonne, quindi selezionare **Rinomina**.
 3. Digitare un nuovo nome colonna.
 
 ### <a name="to-rename-a-column-using-table-designer"></a>Per rinominare una colonna utilizzando Progettazione tabelle
 
-1. In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella di cui si vuole rinominare le colonne e selezionare **Progetta**.
+1. In **Esplora oggetti** fare clic con il pulsante destro del mouse sulla tabella di cui si vuole rinominare le colonne e selezionare **Progetta**.
 2. In **Nome colonna**, selezionare il nome da cambiare e digitarne uno nuovo.
 3. Nel menu **File** fare clic su **Salva** _nome tabella_.
 

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: markingmyname
 ms.author: maghan
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08a3bbf542911c31681f72c74ed783cf6ae79d99
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 03159a0a6656e4fa45d4b3363ee0e61ebdef6878
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439522"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460414"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Monitorare e risolvere i problemi relativi all'utilizzo della memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "92439522"
   
 1.  Avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-2.  Fare clic su **Nuova query** .  
+2.  Fare clic su **Nuova query**.  
   
 3.  Incollare il codice nella finestra della nuova query ed eseguire ogni sezione.  
 
@@ -138,7 +138,7 @@ ms.locfileid: "92439522"
   
 2.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database in cui si desidera creare i report.  
   
-3.  Dal menu di scelta rapida scegliere **Report** -> **Standard Report** -> **Utilizzo memoria da parte di oggetti con ottimizzazione per la memoria** .  
+3.  Dal menu di scelta rapida scegliere **Report** -> **Standard Report** -> **Utilizzo memoria da parte di oggetti con ottimizzazione per la memoria**.  
   
  ![Screenshot che mostra Esplora oggetti con le opzioni Report > Report standard > Utilizzo memoria da parte di oggetti con ottimizzazione per la memoria.](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   

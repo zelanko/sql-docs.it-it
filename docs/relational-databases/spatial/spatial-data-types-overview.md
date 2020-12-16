@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5eca8f5329c6d4727c622c78d7b66000ad50935
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 668d1fda7e4b979e52377c03daaddb0cb2286cdd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006215"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97462962"
 ---
 # <a name="spatial-data-types-overview"></a>Panoramica dei tipi di dati spaziali
 
@@ -151,7 +151,7 @@ LS Length    CS Length
 5.65685...   6.28318...
 ```
 
-Le istanze **CircularString** usano un numero minore di punti per archiviare i limiti delle curve con maggiore precisione delle istanze **LineString**. Le istanze**CircularString** sono ideali per l'archiviazione di limiti circolari, ad esempio un raggio di ricerca di 20 miglia da un punto specifico. Le istanze**LineString** sono ideali per l'archiviazione di limiti lineari come un blocco urbano quadrato.  
+Le istanze **CircularString** usano un numero minore di punti per archiviare i limiti delle curve con maggiore precisione delle istanze **LineString**. Le istanze **CircularString** sono ideali per l'archiviazione di limiti circolari, ad esempio un raggio di ricerca di 20 miglia da un punto specifico. Le istanze **LineString** sono ideali per l'archiviazione di limiti lineari come un blocco urbano quadrato.  
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>Confronto tra LineString e CompoundCurve
 
@@ -187,7 +187,7 @@ Per archiviare la sezione del grafico a torta usando un'istanza **CircularString
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
-Le istanze**CompoundCurve** consentono componenti sia **LineString** sia **CircularString** , in modo che solo due punti nei segmenti di linea della sezione del grafico a torta debbano essere noti.  In questo esempio di codice viene illustrato come utilizzare un'istanza **CompoundCurve** per archiviare la stessa figura:
+Le istanze **CompoundCurve** consentono componenti sia **LineString** sia **CircularString** , in modo che solo due punti nei segmenti di linea della sezione del grafico a torta debbano essere noti.  In questo esempio di codice viene illustrato come utilizzare un'istanza **CompoundCurve** per archiviare la stessa figura:
 
 ```sql
 DECLARE @g geometry;
@@ -197,7 +197,7 @@ SELECT @g.ToString(), @g.STLength();
 
 ### <a name="polygon-and-curvepolygon-comparison"></a>Confronto tra Polygon e CurvePolygon
 
-Le istanze**CurvePolygon** possono utilizzare istanze **CircularString** e **CompoundCurve** instances when defining their exterior e interior rings. Le istanze **Polygon** non possono.
+Le istanze **CurvePolygon** possono utilizzare istanze **CircularString** e **CompoundCurve** instances when defining their exterior e interior rings. Le istanze **Polygon** non possono.
 
 ## <a name="see-also"></a>Vedere anche
 

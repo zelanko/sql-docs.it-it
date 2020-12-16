@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 200f10a76629eb94e1e9fc1b3e1c29811d9e7f67
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5a5c3a93771a24a2cf3d1f5debb77b7026bef963
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005569"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463122"
 ---
 # <a name="create-a-database-master-key"></a>Creazione della chiave master di un database
 
@@ -37,7 +37,7 @@ In questo argomento viene descritto come creare una chiave master del database i
 ### <a name="to-create-a-database-master-key"></a>Per creare la chiave master di un database
 
 1. Scegliere una password per la crittografia della copia della chiave master che verrà archiviata nel database.
-2. In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].
+2. In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].
 3. Espandere **Database di sistema**, fare clic con il pulsante destro del mouse su `master` e quindi scegliere **Nuova query**.
 4. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.
 

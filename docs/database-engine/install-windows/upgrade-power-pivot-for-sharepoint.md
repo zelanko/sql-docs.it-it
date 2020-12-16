@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+monikerRange: '>=sql-server-2016'
 manager: erikre
-ms.openlocfilehash: 6169741cf4e744aa89c17c960a83a6af18d54851
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 03041d41745e51d858f56bfcd21407ad58530dd9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670184"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460694"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Aggiornare Power Pivot per SharePoint
 
@@ -103,7 +103,7 @@ ms.locfileid: "91670184"
   
          Oppure  
   
-         Dal menu **Start** scegliere **Tutti i programmi**, fare clic su [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**e successivamente selezionare **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013**. Si noti che lo strumento è elencato solo se [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è installato nel server locale.  
+         Dal menu **Start** scegliere **Tutti i programmi**, fare clic su [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione** e successivamente selezionare **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013**. Si noti che lo strumento è elencato solo se [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è installato nel server locale.  
   
     2.  All'avvio, lo strumento di configurazione controlla lo stato dell'aggiornamento della soluzione farm [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e delle soluzioni delle applicazioni Web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se vengono rilevate versioni precedenti di queste soluzioni, verrà visualizzato il messaggio "**Sono state rilevate versioni più recenti dei file di soluzione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Selezionare l'opzione di aggiornamento per aggiornare la farm**". Fare clic su **OK** per chiudere il messaggio di convalida del sistema.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "91670184"
         > [!IMPORTANT]  
         >  È necessario elaborare sempre per prima la prima azione **Aggiornare la soluzione farm**. Con questa azione verranno registrati i cmdlet di PowerShell utilizzati per configurare il server. Se viene generato un errore per questa azione, non continuare. Utilizzare invece le informazioni fornite dall'errore per diagnosticare e risolvere il problema prima di elaborare ulteriori azioni nell'elenco attività.  
   
-    7.  Fare clic su **Esegui** per eseguire tutte le azioni valide per questa attività. L'opzione**Esegui** è disponibile solo dopo il superamento del controllo di convalida. Quando fa clic su **Esegui** viene visualizzato il seguente messaggio di avviso, in cui si ricorda che le azioni vengono elaborate in modalità batch: "**Tutte le impostazioni di configurazione che sono contrassegnate come valide nello strumento verranno applicate alla farm di SharePoint. Continuare?** ".  
+    7.  Fare clic su **Esegui** per eseguire tutte le azioni valide per questa attività. L'opzione **Esegui** è disponibile solo dopo il superamento del controllo di convalida. Quando fa clic su **Esegui** viene visualizzato il seguente messaggio di avviso, in cui si ricorda che le azioni vengono elaborate in modalità batch: "**Tutte le impostazioni di configurazione che sono contrassegnate come valide nello strumento verranno applicate alla farm di SharePoint. Continuare?** ".  
   
     8.  Per continuare, scegliere **Sì** .  
   
@@ -198,7 +198,7 @@ ms.locfileid: "91670184"
         > [!IMPORTANT]  
         >  È necessario elaborare sempre per prima la prima azione **Aggiornare la soluzione farm**. Con questa azione verranno registrati i cmdlet di PowerShell utilizzati per configurare il server. Se viene generato un errore per questa azione, non continuare. Utilizzare invece le informazioni fornite dall'errore per diagnosticare e risolvere il problema prima di elaborare ulteriori azioni nell'elenco attività.  
   
-    8.  Fare clic su **Esegui** per eseguire tutte le azioni valide per questa attività. L'opzione**Esegui** è disponibile solo dopo il superamento del controllo di convalida. Quando fa clic su **Esegui** viene visualizzato il seguente messaggio di avviso, in cui si ricorda che le azioni vengono elaborate in modalità batch: "Tutte le impostazioni di configurazione che sono contrassegnate come valide nello strumento verranno applicate alla farm di SharePoint. Continuare?"  
+    8.  Fare clic su **Esegui** per eseguire tutte le azioni valide per questa attività. L'opzione **Esegui** è disponibile solo dopo il superamento del controllo di convalida. Quando fa clic su **Esegui** viene visualizzato il seguente messaggio di avviso, in cui si ricorda che le azioni vengono elaborate in modalità batch: "Tutte le impostazioni di configurazione che sono contrassegnate come valide nello strumento verranno applicate alla farm di SharePoint. Continuare?"  
   
     9. Per continuare, scegliere **Sì** .  
   

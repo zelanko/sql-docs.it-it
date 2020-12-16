@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ea1926c2e54135277dd486976dda7ebe4ae6086
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 7fbaf22758dcf62d2159e63ee3af3c0507f3f607
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907380"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460574"
 ---
 # <a name="set-or-change-the-database-collation"></a>Impostare o modificare le regole di confronto del database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,23 +48,21 @@ ms.locfileid: "92907380"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitazioni e restrizioni  
   
--   Le regole di confronto solo Unicode di Windows possono essere usate solo con la clausola COLLATE per essere applicate ai tipi di dati **nchar** , **nvarchar** e **ntext** per i dati a livello di colonna e di espressione. Non è possibile utilizzarle con la clausola COLLATE per modificare le regole di confronto di un database o un'istanza del server.  
+-   Le regole di confronto solo Unicode di Windows possono essere usate solo con la clausola COLLATE per essere applicate ai tipi di dati **nchar**, **nvarchar** e **ntext** per i dati a livello di colonna e di espressione. Non è possibile utilizzarle con la clausola COLLATE per modificare le regole di confronto di un database o un'istanza del server.  
   
 -   Se le regole di confronto specificate o adottate dall'oggetto cui viene fatto riferimento utilizzano una tabella codici non supportata dai sistemi operativi Windows, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene visualizzato un errore.  
 
--   Le regole di confronto non possono essere modificate usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dopo la creazione del database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Possono essere modificate solo tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].
-  
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Indicazioni  
   
 È possibile trovare i nomi delle regole di confronto supportate in [Windows_collation_name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md); oppure è possibile usare la funzione di sistema [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
   
 Quando si modificano le regole di confronto del database, è possibile modificare gli elementi seguenti:  
   
--   Qualsiasi **char** , **varchar** , **text** , **nchar** , **nvarchar** o colonna **ntext** nelle tabelle di sistema viene impostata sulle nuove regole di confronto.  
+-   Qualsiasi **char**, **varchar**, **text**, **nchar**, **nvarchar** o colonna **ntext** nelle tabelle di sistema viene impostata sulle nuove regole di confronto.  
   
--   Tutti i parametri esistenti di tipo **char** , **varchar** , **text** , **nchar** , **nvarchar** o **ntext** , i valori scalari restituiti per le stored procedure e le funzioni definite dall'utente vengono modificati in base alle nuove regole di confronto.  
+-   Tutti i parametri esistenti di tipo **char**, **varchar**, **text**, **nchar**, **nvarchar** o **ntext** , i valori scalari restituiti per le stored procedure e le funzioni definite dall'utente vengono modificati in base alle nuove regole di confronto.  
   
--   I tipi di dati di sistema **char** , **varchar** , **text** , **nchar** , **nvarchar** o **ntext** e tutti i tipi di dati definiti dall'utente basati su tali tipi di dati di sistema vengono modificati in base alle nuove regole di confronto predefinite.  
+-   I tipi di dati di sistema **char**, **varchar**, **text**, **nchar**, **nvarchar** o **ntext** e tutti i tipi di dati definiti dall'utente basati su tali tipi di dati di sistema vengono modificati in base alle nuove regole di confronto predefinite.  
   
 È possibile modificare le regole di confronto di qualsiasi nuovo oggetto creato in un database utente usando la clausola `COLLATE` dell'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Questa istruzione **non consente di modificare** le regole di confronto delle colonne delle tabelle definite dall'utente esistenti. Per modificare le regole di confronto delle colonne, è necessario usare la clausola `COLLATE` dell'istruzione [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
 
