@@ -43,13 +43,13 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: df5c82ef6887dba2d261a1517d1d1f9b871d5ec4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039020"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478812"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script
 
@@ -79,7 +79,7 @@ L'autorizzazione minima per pubblicare un database è l'appartenenza al ruolo pr
 
 **Per generare o pubblicare uno script**
 
-1. In **Esplora oggetti**espandere il nodo dell'istanza contenente il database per il quale generare lo script.
+1. In **Esplora oggetti** espandere il nodo dell'istanza contenente il database per il quale generare lo script.
 
 2. Scegliere **Attività** e selezionare **Genera script**.
 
@@ -204,7 +204,7 @@ Usare questa pagina per specificare come si desidera che vengano generati gli sc
 
 - **Genera script per il rilevamento modifiche** : consente di generare script per il rilevamento delle modifiche se è abilitato nel database di origine o nelle tabelle del database di origine. Il valore predefinito è **False**. Per altre informazioni, vedere [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).
 
-- **Script per vincoli CHECK**: consente di aggiungere vincoli **CHECK** allo script. Il valore predefinito è **True**. I vincoli**CHECK** richiedono che i dati immessi in una tabella rispettino una condizione specificata. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).
+- **Script per vincoli CHECK**: consente di aggiungere vincoli **CHECK** allo script. Il valore predefinito è **True**. I vincoli **CHECK** richiedono che i dati immessi in una tabella rispettino una condizione specificata. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).
 
 - **Genera script per le opzioni di compressione dati** : consente di includere le opzioni di compressione dati, se sono configurate nel database di origine o nelle tabelle del database di origine. Per altre informazioni, vedere [Data Compression](../../relational-databases/data-compression/data-compression.md). Il valore predefinito è **False**.
 

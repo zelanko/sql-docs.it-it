@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 496a5e901ec802cbd7a7ffbb810a14ee31734dcc
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 01294938af5e2d1813a371091e89b03321268637
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037757"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478782"
 ---
 # <a name="synchronize-target-server-clocks"></a>Sincronizzare gli orologi dei server di destinazione
 
@@ -47,13 +47,13 @@ In questo argomento viene descritto come sincronizzare gli orologi dei server di
   
 1.  In **Esplora oggetti** fare clic sul segno più per espandere il server di cui si desidera sincronizzare gli orologi del server di destinazione con l'orologio del server master.  
   
-2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, scegliere **Amministrazione multiserver**e selezionare **Gestione server di destinazione**.  
+2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, scegliere **Amministrazione multiserver** e selezionare **Gestione server di destinazione**.  
   
 3.  Nella finestra di dialogo **Gestione server di destinazione** , fare clic su **Invia istruzioni**.  
   
 4.  Nell'elenco **Tipo istruzione** selezionare **Sincronizza orologi**.  
   
-5.  In **Destinatari**eseguire una delle operazioni seguenti:  
+5.  In **Destinatari** eseguire una delle operazioni seguenti:  
   
     -   Fare clic su **Tutti i server di destinazione** per sincronizzare gli orologi di tutti i server di destinazione con l'orologio del server master.  
   
@@ -65,7 +65,7 @@ In questo argomento viene descritto come sincronizzare gli orologi dei server di
   
 #### <a name="to-synchronize-target-server-clocks"></a>Per sincronizzare gli orologi dei server di destinazione  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

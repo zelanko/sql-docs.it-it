@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ec47525a79738eafc2746808a669ee50df0363a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 3b19e905d68d53764a496ab5ee7745e3529484cf
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194491"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489901"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Dati demo sugli arrivi di una compagnia aerea per le esercitazioni su Python e R in SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 In questo esercizio si creerà un database SQL Server in cui archiviare i dati importati dal set di dati demo della compagnia aerea incorporati in R o Python. Le distribuzioni R e Python forniscono dati equivalenti, che è possibile importare in un database SQL Server usando Management Studio.
 
-Per completare questo esercizio, è necessario avere [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) o un altro strumento in grado di eseguire query T-SQL.
+Per completare questo esercizio, è necessario avere [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) o un altro strumento in grado di eseguire query T-SQL.
 
 Le esercitazioni e le guide di avvio rapido che usano questo set di dati includono:
 

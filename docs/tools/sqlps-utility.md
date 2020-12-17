@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fcf85aa9657da37d2fc1f64300c5a773d6de63ca
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 85f3fd590ee204cac018cffd59d0ba180831d8df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714279"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476522"
 ---
 # <a name="sqlps-utility"></a>sqlps - utilità
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +69,7 @@ sqlps
  **-Command-** specifica che l'utilità **sqlps** deve leggere l'input dall'input standard.  
   
  *script_block* [ **-args**_argument\_array_ ]  
- Specifica un blocco di comandi di PowerShell da eseguire. Il blocco deve essere incluso tra parentesi graffe: {}. È possibile specificare*Script_block* solo quando l'utilità **sqlps** viene chiamata da **PowerShell** o da un'altra sessione dell'utilità **sqlps** . *argument_array* è una matrice di variabili PowerShell che contiene gli argomenti per i comandi di PowerShell in *script_block*.  
+ Specifica un blocco di comandi di PowerShell da eseguire. Il blocco deve essere incluso tra parentesi graffe: {}. È possibile specificare *Script_block* solo quando l'utilità **sqlps** viene chiamata da **PowerShell** o da un'altra sessione dell'utilità **sqlps** . *argument_array* è una matrice di variabili PowerShell che contiene gli argomenti per i comandi di PowerShell in *script_block*.  
   
  *string* [ *command_parameters* ]  
  Specifica una stringa che contiene i comandi di PowerShell da eseguire. Usare il formato **"&{** _command_ **}"** . Le virgolette indicano una stringa e l'operatore invoke (&) determina l'esecuzione del comando da parte dell'utilità **sqlps**.  

@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a4a12d71818ad4b900a7959904c47cb0baad4357
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 55f416890794509f2fd141c2a907222a7d72c47e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870307"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470142"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>Esercitazione: Preparare i dati per eseguire il training di un modello predittivo in R con Machine Learning in SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Nella seconda parte di questa serie di esercitazioni in quattro parti si prepareranno i dati di un database usando R. Più avanti nella serie, questi dati verranno usati per eseguire il training e la distribuzione di un modello predittivo in R con Machine Learning Services per SQL Server oppure in cluster Big Data.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Nella seconda parte di questa serie di esercitazioni in quattro parti, si prepareranno i dati di un database usando R. Più avanti nella serie, questi dati verranno usati per eseguire il training e la distribuzione di un modello predittivo in R con Machine Learning Services per SQL Server.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Nella seconda parte di questa serie di esercitazioni in quattro parti si prepareranno i dati di un database usando R. Più avanti nella serie, questi dati verranno usati per eseguire il training e la distribuzione di un modello predittivo in R con R Services per SQL Server.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Nella seconda parte di questa serie di esercitazioni in quattro parti, si prepareranno i dati di un database usando R. Più avanti nella serie, questi dati verranno usati per eseguire il training e la distribuzione di un modello predittivo in R con Machine Learning Services per Istanza gestita di SQL di Azure.
 ::: moniker-end
 

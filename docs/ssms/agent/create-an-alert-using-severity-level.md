@@ -16,13 +16,13 @@ ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c863b7ea6652fdbf26ab8b011c3208f369b36231
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1b3fd8449cca11551f46ec449557d8d4ecd1c97e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035063"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464382"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Creazione di un avviso utilizzando i livelli di gravità
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,9 +61,9 @@ Per impostazione predefinita, solo i membri del ruolo predefinito del server **s
   
 5.  Nell'elenco **Tipo** selezionare **Avviso per evento di SQL Server**.  
   
-6.  Nell'elenco **Nome database**sotto **Definizione di avviso di evento** selezionare un database per limitare l'avviso a un database specifico.  
+6.  Nell'elenco **Nome database** sotto **Definizione di avviso di evento** selezionare un database per limitare l'avviso a un database specifico.  
   
-7.  In **Genera avvisi in base a**fare clic su **Gravità** , quindi selezionare una gravità specifica che genera l'avviso.  
+7.  In **Genera avvisi in base a** fare clic su **Gravità** , quindi selezionare una gravità specifica che genera l'avviso.  
   
 8.  Per limitare l'avviso a una particolare sequenza di caratteri, selezionare la casella di controllo corrispondente a **Genera avviso quando il messaggio contiene** e immettere una parola chiave o una stringa di caratteri nella casella **Testo del messaggio**. Il numero massimo di caratteri consentito è 100.  
   
@@ -73,7 +73,7 @@ Per impostazione predefinita, solo i membri del ruolo predefinito del server **s
   
 #### <a name="to-create-an-alert-using-severity-level"></a>Per creare un avviso utilizzando il livello di gravità  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

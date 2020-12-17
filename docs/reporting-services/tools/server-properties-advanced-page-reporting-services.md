@@ -8,13 +8,13 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 10/19/2020
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e8bb8de8d13a9b7696bb6505363b15d38cd35994
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: ed31e889e195cffb828f5e04e131ffd2cb71fa84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194276"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466662"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Pagina Proprietà server - Avanzate - Server di report di Power BI e Reporting Services
 
@@ -164,7 +164,7 @@ Indica se inviare messaggi di errore dettagliati al computer client quando gli u
 Numero di giorni durante i quali le informazioni sulle esecuzioni dei report vengono conservate nel log di esecuzione. I valori validi per questa proprietà sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1** le voci non vengono eliminate dalla tabella del log di esecuzione. Il valore predefinito è **60**.  
 
 > [!NOTE]
-> Se si imposta un valore pari a **0, vengono ** *eliminate* tutte le voci dal log di esecuzione. Il valore **-1** mantiene le voci del log di esecuzione e non le elimina.
+> Se si imposta un valore pari a **0, vengono** *eliminate* tutte le voci dal log di esecuzione. Il valore **-1** mantiene le voci del log di esecuzione e non le elimina.
 
 ### <a name="executionloglevel"></a>ExecutionLogLevel
 Imposta il livello del log di esecuzione. *L'impostazione predefinita è Normal.*
@@ -194,7 +194,7 @@ Nome del ruolo utilizzato durante la creazione dei criteri di sicurezza nelle ca
 (Solo Server di report di Power BI) Imposta l'indirizzo dell'istanza di Office Online Server per la visualizzazione di cartelle di lavoro di Excel.
 
 ### <a name="rdlxreporttimetout"></a>RDLXReportTimetout
-Valore di timeout per l'elaborazione del report RDLX *(report di Power View in un'istanza di SharePoint Server)* in secondi per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è **1800**.
+Valore di timeout per l'elaborazione del report RDLX *(report di Power View in un'istanza di SharePoint Server)* in secondi per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1** durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è **1800**.
 
 ### <a name="requireintune"></a>RequireIntune
 (Solo Server di report di Power BI, Reporting Services 2017 e versioni successive) Richiede Intune per accedere ai report dell'organizzazione tramite l'app Power BI per dispositivi mobili. *Il valore predefinito è False.*
@@ -236,7 +236,7 @@ Specifica il numero massimo di valori dei parametri che possono essere archiviat
 (Solo Server di report di Power BI gennaio 2019, Reporting Services 2019 e versioni successive) Imposta un elenco di schemi URI separati da virgola di cui è consentita la definizione nelle azioni dei collegamenti ipertestuali di cui è consentito il rendering, o "&ast;" per abilitare tutti gli schemi di collegamento ipertestuale. Se ad esempio si imposta "http,https", sono consentiti collegamenti ipertestuali a "https://www. contoso.com", ma vengono rimossi i collegamenti ipertestuali a "mailto:bill@contoso.com" o "javascript:window.open('www.contoso.com', '_blank')". L'impostazione predefinita è "&ast;".
 
 ### <a name="systemreporttimeout"></a>SystemReportTimeout
-Valore di timeout  predefinito per l'elaborazione dei report, espresso in secondi, per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è **1800**.  
+Valore di timeout  predefinito per l'elaborazione dei report, espresso in secondi, per tutti i report gestiti nello spazio dei nomi del server di report. È possibile eseguire l'override del valore a livello di report. Se questa proprietà è impostata, il server di report tenta di arrestare l'elaborazione di un report quando scade il tempo specificato. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1** durante l'elaborazione non si verifica alcun timeout dei report nello spazio dei nomi. Il valore predefinito è **1800**.  
 
 ### <a name="systemsnapshotlimit"></a>SystemSnapshotLimit
 Numero massimo di snapshot archiviati per un report. I valori validi sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1**, non vi sono limiti per gli snapshot.  

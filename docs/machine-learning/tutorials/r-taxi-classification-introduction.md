@@ -9,30 +9,30 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: db8a0c073821df46e6d9d5bda43e74aae19a2501
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: afc692cdd0b7766ff0366f0de5d13e47d6dc27e1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94585048"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470182"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>Esercitazione su R: Prevedere le tariffe dei taxi di NYC con la classificazione binaria
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 In questa serie di esercitazioni in cinque parti per i programmatori SQL, verranno fornite informazioni sull'integrazione di R in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) o nei [cluster Big Data](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 In questa serie di esercitazioni in cinque parti per i programmatori SQL verranno fornite informazioni sull'integrazione di R in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 In questa serie di esercitazioni in cinque parti per i programmatori SQL verranno fornite informazioni sull'integrazione di R in [SQL Server 2016 R Services](../sql-server-machine-learning-services.md).
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=azuresqldb-mi-current"
 In questa serie di esercitazioni in cinque parti per i programmatori SQL verranno fornite informazioni sull'integrazione di R in [Machine Learning Services in Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
@@ -61,11 +61,11 @@ Nella [quinta parte](r-taxi-classification-deploy-model.md) si apprenderà come 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 + Installare [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation)
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 + Installare [SQL Server Machine Learning Services con R abilitato](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 ::: moniker-end
 
@@ -73,7 +73,7 @@ Nella [quinta parte](r-taxi-classification-deploy-model.md) si apprenderà come 
 
 + [Concedere le autorizzazioni per l'esecuzione di script Python](../security/user-permission.md)
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 + A partire da SQL Server 2019, il meccanismo di isolamento richiede di assegnare le autorizzazioni appropriate alla directory in cui è archiviato il file del tracciato. Per altre informazioni su come impostare queste autorizzazioni, vedere la [sezione Autorizzazioni per i file in SQL Server 2019 in Windows: Modifiche al meccanismo di isolamento per Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 

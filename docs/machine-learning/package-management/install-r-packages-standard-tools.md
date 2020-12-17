@@ -7,13 +7,13 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 55d2917d149a4c88dbfddf614971c8d4f1e60d26
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: =sql-server-2016||=sql-server-2017
+ms.openlocfilehash: 5943de8bcc6588572bc3acebed5b3ba4104b7a96
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869954"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471062"
 ---
 # <a name="install-packages-with-r-tools"></a>Installare i pacchetti con gli strumenti R
 
@@ -24,7 +24,7 @@ Questo articolo descrive come usare gli strumenti R standard per installare nuov
 Oltre agli strumenti R standard, è possibile installare i pacchetti R usando le soluzioni seguenti:
 
 + [RevoScaleR](install-r-packages-with-revoscaler.md)
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [T-SQL](install-r-packages-with-tsql.md) (CREATE EXTERNAL LIBRARY)
 ::: moniker-end
 
@@ -35,13 +35,13 @@ incluse le librerie R installate con altri prodotti Microsoft.
 
 + La libreria di pacchetti R si trova nella cartella Programmi dell'istanza di SQL Server e, per impostazione predefinita, è necessario disporre delle autorizzazioni di amministratore per eseguire installazioni in questa cartella. Per altre informazioni, vedere [Percorso della libreria dei pacchetti](../package-management/r-package-information.md#default-r-library-location).
 
-  ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2017"
   Gli utenti non amministratori possono installare i pacchetti usando RevoScaleR 9.0.1 e versioni successive oppure CREATE EXTERNAL LIBRARY. L'utente **dbo_owner** o un utente con autorizzazione CREATE EXTERNAL LIBRARY può installare i pacchetti R nel database corrente. Per altre informazioni, vedere:
   + [Usare RevoScaleR per installare i pacchetti R](install-r-packages-with-revoscaler.md)
   + [Usare T-SQL (CREATE EXTERNAL LIBRARY) per installare i pacchetti R in SQL Server](install-r-packages-with-tsql.md)
   ::: moniker-end
 
-  ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+  ::: moniker range="=sql-server-2016"
   Gli utenti non amministratori possono installare i pacchetti usando RevoScaleR 9.0.1 o versioni successive. L'utente **dbo_owner** può installare i pacchetti R nel database corrente. Per altre informazioni, vedere [Usare RevoScaleR per installare i pacchetti R](install-r-packages-with-revoscaler.md).
   ::: moniker-end
 
@@ -56,13 +56,13 @@ Se l'istanza di SQL Server ha accesso a Internet, è possibile usare gli strumen
 
 1. Determinare il percorso della libreria dell'istanza (vedere [Ottenere informazioni sui pacchetti R](../package-management/r-package-information.md)) e passare alla cartella in cui sono installati gli strumenti R.
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    Il percorso predefinito per l'istanza predefinita di SQL Server 2017 è ad esempio il seguente:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    Il percorso predefinito per l'istanza predefinita di SQL Server 2017 è ad esempio il seguente:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
@@ -87,13 +87,13 @@ Quando il file ZIP si trova nell'istanza di SQL Server, è possibile installarlo
 
 1. Determinare il percorso della libreria dell'istanza (vedere [Ottenere informazioni sui pacchetti R](../package-management/r-package-information.md)) e passare alla cartella in cui sono installati gli strumenti R. 
 
-   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2016"
    Il percorso predefinito per l'istanza predefinita di SQL Server 2017 è ad esempio il seguente:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64\`
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    Il percorso predefinito per l'istanza predefinita di SQL Server 2017 è ad esempio il seguente:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`

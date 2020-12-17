@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-ms.openlocfilehash: 44d46bd260b1f59b9d1bcffd4a7bfb6ea46c248c
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 40ce4c62a28f404ceb3295f9644a8aefb4c789f8
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713749"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489791"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>Scaricare le funzionalità estese e gli strumenti di SQL Server
 
@@ -50,7 +50,7 @@ Questo articolo offre una breve spiegazione dei diversi download e pacchetti aut
 | [SQL Server Semantic Language Statistics](../relational-databases/search/install-and-configure-semantic-search.md) | Il database di statistiche lingua semantica è un componente obbligatorio per la funzionalità di ricerca di semantica statistica di Microsoft SQL Server. |
 | [Oggetti di gestione condivisa di SQL Server](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | SQL Server Management Objects (SMO) è un modello a oggetti di .NET Framework che consente agli sviluppatori di software di creare applicazioni sul lato client per gestire e amministrare oggetti e servizi SQL Server. |
 | [System CLR Types](https://go.microsoft.com/fwlink/?linkid=2108808) | Il pacchetto SQL Server System CLR Types contiene i componenti che implementano i tipi di ID di geometria, geografia e gerarchia di SQL Server. **Nota: per questo componente è richiesto anche [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)** . |
-| [Estensioni Windows PowerShell per Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md?view=sql-server-2017) | In Estensioni Microsoft Windows PowerShell per SQL Server sono disponibili un provider e un set di cmdlet che consentono ad amministratori e sviluppatori di compilare script di PowerShell per la gestione di istanze di SQL Server. |
+| [Estensioni Windows PowerShell per Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md) | In Estensioni Microsoft Windows PowerShell per SQL Server sono disponibili un provider e un set di cmdlet che consentono ad amministratori e sviluppatori di compilare script di PowerShell per la gestione di istanze di SQL Server. |
 |||
 
 ## <a name="database-engine"></a>Motore di database

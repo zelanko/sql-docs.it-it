@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d82ac562495e916ce34b591190f6c427e6c8413e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27e2596894e6d36742472ad1d3ae192fc37787e6
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765940"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489671"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurare il servizio Azure Kubernetes per le distribuzioni di cluster Big Data di SQL Server
 
@@ -149,7 +149,7 @@ Scegliere la versione più recente disponibile del cluster. Annotare il numero d
 
 ## <a name="connect-to-the-cluster"></a>Stabilire la connessione al cluster
 
-1. Per configurare kubectl per la connessione al cluster Kubernetes, eseguire il comando [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials). Questo passaggio consente di scaricare le credenziali e di configurare l'interfaccia della riga di comando di kubectl per usarle.
+1. Per configurare kubectl per la connessione al cluster Kubernetes, eseguire il comando [az aks get-credentials](/cli/azure/aks#az-aks-get-credentials). Questo passaggio consente di scaricare le credenziali e di configurare l'interfaccia della riga di comando di kubectl per usarle.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -165,7 +165,7 @@ Scegliere la versione più recente disponibile del cluster. Annotare il numero d
 
 Se si verificano problemi durante la creazione di un servizio Azure Kubernetes con i comandi precedenti, provare le risoluzioni seguenti:
 
-- Assicurarsi di avere installato la [versione più recente dell'interfaccia della riga di comando di Azure](/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Assicurarsi di avere installato la [versione più recente dell'interfaccia della riga di comando di Azure](/cli/azure/install-azure-cli).
 - Provare a eseguire gli stessi passaggi usando un gruppo di risorse e un nome di cluster diversi.
 - Vedere la [documentazione dettagliata sulla risoluzione dei problemi per il servizio Azure Kubernetes](/azure/aks/troubleshooting).
 

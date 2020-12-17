@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f3b87208c7e1105d881816297cc70c8cee54f46f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 96aaa12ce934da18818bd99fde009f6ec0747aee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037258"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480732"
 ---
 # <a name="view-information-about-an-alert"></a>Visualizzare informazioni su un avviso
 
@@ -69,7 +69,7 @@ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadm
   
 #### <a name="to-view-information-about-an-alert"></a>Per visualizzare informazioni su un avviso  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

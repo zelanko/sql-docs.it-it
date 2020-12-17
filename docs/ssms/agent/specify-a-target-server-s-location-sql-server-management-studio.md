@@ -14,13 +14,13 @@ ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ec7ed61678519716e84e74e13b9d954628a3ea45
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 3e09fbc094ddf75a56b2b4c48eac4ecb23b47b7e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035530"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482163"
 ---
 # <a name="specify-a-target-server39s-location"></a>Specificare la posizione di un server di destinazione
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,9 +44,9 @@ L'esecuzione di questa azione modifica il Registro di sistema. La modifica manua
   
 #### <a name="to-specify-a-target-servers-location"></a>Per specificare la posizione di un server di destinazione  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server master in cui si desidera specificare il percorso di un server di destinazione.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server master in cui si desidera specificare il percorso di un server di destinazione.  
   
-2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, scegliere **Amministrazione multiserver**e selezionare **Gestione server di destinazione**.  
+2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, scegliere **Amministrazione multiserver** e selezionare **Gestione server di destinazione**.  
   
 3.  Fare clic con il pulsante destro del mouse su un server di destinazione e selezionare **Proprietà**.  
   
@@ -56,7 +56,7 @@ L'esecuzione di questa azione modifica il Registro di sistema. La modifica manua
   
 #### <a name="to-specify-a-target-servers-location"></a>Per specificare la posizione di un server di destinazione  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

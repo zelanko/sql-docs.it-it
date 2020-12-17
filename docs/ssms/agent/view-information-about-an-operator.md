@@ -18,13 +18,13 @@ ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e7ee5c9f7a26979891a26ff44c34a5b4502b6026
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: a9fb20b3a5d161c4d69d15740defc3dd10ebe7a4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038711"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480712"
 ---
 # <a name="view-information-about-an-operator"></a>Visualizzazione delle informazioni relative a un operatore
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,7 +53,7 @@ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli
   
 #### <a name="to-view-information-about-an-operator"></a>Per visualizzare le informazioni relative a un operatore  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server che contiene l'operatore da visualizzare.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server che contiene l'operatore da visualizzare.  
   
 2.  Fare clic sul segno più per espandere **SQL Server Agent**.  
   
@@ -75,7 +75,7 @@ Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli
   
 #### <a name="to-view-information-about-an-operator"></a>Per visualizzare le informazioni relative a un operatore  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

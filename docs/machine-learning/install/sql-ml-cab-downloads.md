@@ -8,23 +8,23 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1d36936a0dc921a02897bcf7f9a9bfceb6766293
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: a356a006e2defb8fd8c99f479280ff75c5ea45d9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956782"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471162"
 ---
 # <a name="cab-downloads-for-offline-installation-of-cumulative-updates-for-sql-server-machine-learning-services"></a>Download dei file CAB per l'installazione offline di aggiornamenti cumulativi per SQL Server Machine Learning Services
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Scaricare i file CAB di Python e R per Machine Learning Services per SQL Server. Questi file CAB contengono gli aggiornamenti della funzionalità Machine Learning Services (Python e R) e vengono usati quando si installa SQL Server in un server senza accesso a Internet.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Scaricare i file CAB di Python e R per SQL Server 2016 R Services. Questi file CAB contengono gli aggiornamenti della funzionalità R Services e vengono usati quando si installa SQL Server in un server senza accesso a Internet.
 ::: moniker-end
 
@@ -32,17 +32,17 @@ Di seguito sono disponibili i collegamenti per il download dei file CAB per ogni
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Iniziare con un'installazione di base. In Machine Learning Services per SQL Server la versione iniziale corrisponde all'installazione di base. 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Iniziare con un'installazione di base.  In R Services per SQL Server 2016 è possibile iniziare con la versione iniziale, con il Service Pack 1 o con il Service Pack 2. 
 ::: moniker-end
 
 È anche possibile applicare aggiornamenti cumulativi.
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 
 ## <a name="sql-server-2019-cabs"></a>File CAB per SQL Server 2019
 
@@ -83,7 +83,7 @@ I file CAB sono elencati in ordine cronologico inverso. Quando si scaricano i fi
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 ## <a name="sql-server-2017-cabs"></a>File CAB per SQL Server 2017
 
@@ -154,7 +154,7 @@ I file CAB sono elencati in ordine cronologico inverso. Quando si scaricano i fi
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 <a name="bkmk_2016Installers"></a>
 

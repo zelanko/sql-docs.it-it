@@ -19,13 +19,13 @@ ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 10c8ab37bd23fde67f9632f8f54c94d49dcc3ebf
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: cb23dfc48779bd0f85f876d5f084764ebb2df8d1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039172"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474472"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +49,7 @@ I membri del ruolo predefinito del server **sysadmin** possono eliminare gli ope
   
 #### <a name="to-delete-an-operator"></a>Per eliminare un operatore  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server che contiene l'operatore da eliminare.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server che contiene l'operatore da eliminare.  
   
 2.  Fare clic sul segno più per espandere **SQL Server Agent**.  
   
@@ -63,7 +63,7 @@ I membri del ruolo predefinito del server **sysadmin** possono eliminare gli ope
   
 #### <a name="to-delete-an-operator"></a>Per eliminare un operatore  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

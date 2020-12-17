@@ -20,13 +20,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e71aa6719c06dd181d756ebb1ee5e14e47ba96f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 65ca95f3aa2cef72b49a9f80bdbf615e890a85d0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038981"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478772"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Gestione dell'editor e della modalità di visualizzazione
 
@@ -36,7 +36,7 @@ Nell'editor sono disponibili vari modi per gestire la visualizzazione del codice
 
 ## <a name="changing-the-view-mode"></a>Modifica della modalità di visualizzazione  
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre una modalità di visualizzazione denominata **Documenti a schede**che consente di aprire contemporaneamente più editor e documenti e di accedervi tramite schede visualizzate nella parte superiore dell'editor. In alternativa, è possibile aprire l'ambiente [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] in modalità interfaccia a più documenti (MDI, Multiple Document Interface), nella quale le finestre sono visualizzate senza schede e possono essere ancorate, affiancate, ridotte a icona e così via.  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre una modalità di visualizzazione denominata **Documenti a schede** che consente di aprire contemporaneamente più editor e documenti e di accedervi tramite schede visualizzate nella parte superiore dell'editor. In alternativa, è possibile aprire l'ambiente [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] in modalità interfaccia a più documenti (MDI, Multiple Document Interface), nella quale le finestre sono visualizzate senza schede e possono essere ancorate, affiancate, ridotte a icona e così via.  
   
 #### <a name="to-switch-between-view-modes"></a>Per passare da una modalità di visualizzazione all'altra  
   

@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 809d11c82a9b09a23590592ec3f7b433e3c9ca43
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d01a008e00d2effccb109555799bbe6d55baf1e3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986657"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466572"
 ---
 # <a name="limit-report-history---reporting-services"></a>Limitare la cronologia dei report - Reporting Services
   La cronologia di un report è una raccolta di snapshot del report creati nel tempo. È possibile creare la cronologia del report su richiesta o pianificare la frequenza di creazione di uno snapshot e della relativa aggiunta alla cronologia.  
   
  La cronologia del report viene archiviata nel database del server di report. Se gli snapshot del report contengono una quantità di dati elevata, è possibile limitare la cronologia del report per ridurre al minimo l'impatto della conservazione degli snapshot sulle dimensioni del database.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ## <a name="to-configure-report-history-for-a-report-server"></a>Per configurare la cronologia del report per un server di report  
   
@@ -53,7 +53,7 @@ ms.locfileid: "91986657"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 ## <a name="to-configure-report-history-for-a-report-server"></a>Per configurare la cronologia del report per un server di report  
   

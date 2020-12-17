@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307e262c57409725014a202b4a48143b5228763e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f4a350830a4d0672877cb94deb9b4baf8e602944
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036304"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466272"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Impostazione di un filtro per un punto di interruzione
 
@@ -45,7 +45,7 @@ I filtri per i punti di interruzione non vengono in genere utilizzati con il deb
   
     -   **MachineName** è il computer che esegue l'istanza del motore di database.  
   
-    -   **ProcessID**e **ProcessName** sono relativi al processo del sistema operativo che esegue l'istanza del motore di database.  
+    -   **ProcessID** e **ProcessName** sono relativi al processo del sistema operativo che esegue l'istanza del motore di database.  
   
     -   **ThreadID** e **ThreadName** sono relativi al thread del sistema operativo che esegue il batch, la procedura o la funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] nell'istanza del motore di database.  
   

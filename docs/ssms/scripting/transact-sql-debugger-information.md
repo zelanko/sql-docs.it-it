@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad70e5f88163668c8b0802b6b66996e608f0ffd9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 41ae36248cff60542b7e7fe9ab0c1663ab7820f2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036174"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480632"
 ---
 # <a name="transact-sql-debugger---information"></a>Debugger Transact-SQL - Informazioni
 
@@ -36,7 +36,7 @@ Ogni volta che l'esecuzione viene sospesa dal debugger in corrispondenza di un'i
 
 ## <a name="debugger-windows"></a>Finestre del debugger  
 
-In modalità di debug, il debugger apre due finestre nella parte inferiore della finestra principale di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . In queste due finestre vengono fornite tutte le informazioni del debugger. Ciascuna finestra dispone di schede che è possibile selezionare per controllare il set di informazioni che viene visualizzato nella finestra. La finestra di sinistra contiene le schede **Variabili locali**, **Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3**ed **Espressione di controllo4** . La finestra di destra contiene le schede **Stack di chiamate**, **Thread**, **Punti di interruzione**, **Finestra di comando**e **Output** .  
+In modalità di debug, il debugger apre due finestre nella parte inferiore della finestra principale di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . In queste due finestre vengono fornite tutte le informazioni del debugger. Ciascuna finestra dispone di schede che è possibile selezionare per controllare il set di informazioni che viene visualizzato nella finestra. La finestra di sinistra contiene le schede **Variabili locali**, **Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3** ed **Espressione di controllo4** . La finestra di destra contiene le schede **Stack di chiamate**, **Thread**, **Punti di interruzione**, **Finestra di comando** e **Output** .  
   
 > [!NOTE]  
 >  Le descrizioni precedenti indicano le posizioni predefinite delle finestre del debugger. È possibile trascinare una scheda per spostarla da una finestra all'altra oppure è possibile disancorare una scheda per creare una nuova finestra che potrà essere collocata ovunque si desideri.  
@@ -48,7 +48,7 @@ In modalità di debug, il debugger apre due finestre nella parte inferiore della
 -   Fare clic su **Punti di interruzione** sulla barra degli strumenti **Debug**, quindi selezionare la finestra desiderata.  
   
 ## <a name="transact-sql-expressions"></a>Espressioni di Transact-SQL  
- Le espressioni sono clausole [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un singolo valore scalare, ad esempio variabili o parametri. La finestra sinistra del debugger può visualizzare i valori di dati attualmente assegnati a espressioni in massimo cinque schede o finestre: **Variabili locali, Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3**ed **Espressione di controllo4**.  
+ Le espressioni sono clausole [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un singolo valore scalare, ad esempio variabili o parametri. La finestra sinistra del debugger può visualizzare i valori di dati attualmente assegnati a espressioni in massimo cinque schede o finestre: **Variabili locali, Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3** ed **Espressione di controllo4**.  
   
  La finestra **Variabili locali** visualizza informazioni sulle variabili locali nell'ambito corrente del debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il set di espressioni elencate nella finestra **Variabili locali** cambia man mano che il debugger viene eseguito sulle varie parti del codice.  
   
@@ -68,7 +68,7 @@ In modalità di debug, il debugger apre due finestre nella parte inferiore della
   
  Per aggiungere un'espressione a una finestra **Espressione di controllo** , è possibile selezionare **Aggiungi espressione di controllo** nella finestra di dialogo **Controllo immediato** oppure immette il nome dell'espressione nella colonna **Nome** di una riga vuota in una finestra **Espressione di controllo** .  
   
- È possibile impostare i valori dei dati per le variabili nelle finestre **Variabili locali**, **Espressione di controllo**o **Controllo immediato** facendo clic con il pulsante destro del mouse nella riga e selezionando quindi **Modifica valore**. Le colonne **Valore** nelle finestre **Variabili locali** ed **Espressione di controllo** e nella finestra di dialogo **Controllo immediato** supportano tutte i visualizzatori di testo e di dati XML e HTML. I visualizzatori sono rappresentati da finestre di suggerimenti dati a forma di lente di ingrandimento sul lato destro della colonna **Valori** . È possibile utilizzare i visualizzatori per visualizzare valori di dati in formato testo, XML o HTML in visualizzazioni che corrispondono ai tipi di dati, ad esempio, per visualizzare file XML in una finestra del browser.  
+ È possibile impostare i valori dei dati per le variabili nelle finestre **Variabili locali**, **Espressione di controllo** o **Controllo immediato** facendo clic con il pulsante destro del mouse nella riga e selezionando quindi **Modifica valore**. Le colonne **Valore** nelle finestre **Variabili locali** ed **Espressione di controllo** e nella finestra di dialogo **Controllo immediato** supportano tutte i visualizzatori di testo e di dati XML e HTML. I visualizzatori sono rappresentati da finestre di suggerimenti dati a forma di lente di ingrandimento sul lato destro della colonna **Valori** . È possibile utilizzare i visualizzatori per visualizzare valori di dati in formato testo, XML o HTML in visualizzazioni che corrispondono ai tipi di dati, ad esempio, per visualizzare file XML in una finestra del browser.  
   
  In modalità debug, se si sposta il puntatore del mouse su un identificatore, viene visualizzata una finestra popup di **informazioni rapide** con il nome dell'espressione e il relativo valore corrente. Per altre informazioni, vedere [Informazioni rapide &#40;IntelliSense&#41;](./quick-info-intellisense.md).  
   
@@ -94,9 +94,9 @@ In modalità di debug, il debugger apre due finestre nella parte inferiore della
   
 -   Se la chiamata è diretta a una stored procedure o una funzione che accetta parametri, vengono elencati anche i nomi, i tipi di dati e i valori di tutti i parametri.  
   
- Le espressioni nelle finestre **Variabili locali**, **Espressione di controllo**e **Controllo immediato** vengono valutate per lo stack frame corrente. Per impostazione predefinita, lo stack frame corrente è il frame in cima allo stack, dove il debugger ha sospeso l'esecuzione. Se si specifica un altro stack frame come frame corrente, le espressioni nelle finestre **Variabili locali**, **Espressione di controllo**e **Controllo immediato** vengono rivalutate per il nuovo stack frame. È possibile cambiare lo stack frame corrente facendo doppio clic su un frame oppure facendo clic su un frame e selezionando **Passa al frame**. A questo punto, le espressioni nelle finestre **Variabili locali**, **Espressione di controllo**e **Controllo immediato** vengono rivalutate per il nuovo frame. La presenza di una freccia verde sul margine sinistro dello stack frame identifica lo stack frame corrente, nei casi in cui lo stack frame corrente non è quello in cima allo stack.  
+ Le espressioni nelle finestre **Variabili locali**, **Espressione di controllo** e **Controllo immediato** vengono valutate per lo stack frame corrente. Per impostazione predefinita, lo stack frame corrente è il frame in cima allo stack, dove il debugger ha sospeso l'esecuzione. Se si specifica un altro stack frame come frame corrente, le espressioni nelle finestre **Variabili locali**, **Espressione di controllo** e **Controllo immediato** vengono rivalutate per il nuovo stack frame. È possibile cambiare lo stack frame corrente facendo doppio clic su un frame oppure facendo clic su un frame e selezionando **Passa al frame**. A questo punto, le espressioni nelle finestre **Variabili locali**, **Espressione di controllo** e **Controllo immediato** vengono rivalutate per il nuovo frame. La presenza di una freccia verde sul margine sinistro dello stack frame identifica lo stack frame corrente, nei casi in cui lo stack frame corrente non è quello in cima allo stack.  
   
- Quando si fa clic con il pulsante destro del mouse su uno stack frame e si seleziona **Vai a codice sorgente**, il codice per quel frame viene visualizzato in una finestra dell'editor di query. Quel frame tuttavia non diventa il frame corrente e il contenuto delle finestre **Variabili locali**, **Espressione di controllo**e **Controllo immediato** non cambia.  
+ Quando si fa clic con il pulsante destro del mouse su uno stack frame e si seleziona **Vai a codice sorgente**, il codice per quel frame viene visualizzato in una finestra dell'editor di query. Quel frame tuttavia non diventa il frame corrente e il contenuto delle finestre **Variabili locali**, **Espressione di controllo** e **Controllo immediato** non cambia.  
   
 ## <a name="system-information-and-transact-sql-results"></a>Informazioni di sistema e risultati di Transact-SQL  
  I messaggi di stato e di evento del debugger vengono elencati nella finestra **Output** del debugger. Tra le informazioni visualizzate vi sono ad esempio il collegamento del debugger ad altri processi o il termine dei thread del debugger.  

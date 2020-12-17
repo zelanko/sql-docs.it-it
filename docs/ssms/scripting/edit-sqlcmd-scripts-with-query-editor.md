@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5df33c67466a355dd7b204dcfd6f12f146ac59bb
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8e6c97089feee33f1bbff76f0820ea37de5ae69c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093443"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474312"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modifica di script SQLCMD con l'editor di query
 
@@ -54,7 +54,7 @@ L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[s
   
 #### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>Per attivare la modalità SQLCMD per una finestra dell'editor di query del Motore di database  
   
-1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul server, quindi scegliere **Nuova query**per aprire una nuova finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul server, quindi scegliere **Nuova query** per aprire una nuova finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 2.  Scegliere **Modalità SQLCMD** dal menu **Query**.  
   
@@ -91,7 +91,7 @@ L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[s
  Per altre informazioni sull'esecuzione di SQLCMD, vedere [Utilità sqlcmd](../../tools/sqlcmd-utility.md)oppure eseguire l'esercitazione relativa a SQLCMD.  
   
 ## <a name="enable-sqlcmd-scripting-by-default"></a>Attivazione di scripting SQLCMD per impostazione predefinita  
- Per attivare la modalità di scripting SQLCMD per impostazione predefinita, scegliere **Opzioni** dal menu **Strumenti**, espandere **Esecuzione query**e **SSQL Server**, fare clic sulla pagina **Generale** e quindi selezionare la casella di controllo **Per impostazione predefinita, apri le nuove query in modalità SQLCMD** .  
+ Per attivare la modalità di scripting SQLCMD per impostazione predefinita, scegliere **Opzioni** dal menu **Strumenti**, espandere **Esecuzione query** e **SSQL Server**, fare clic sulla pagina **Generale** e quindi selezionare la casella di controllo **Per impostazione predefinita, apri le nuove query in modalità SQLCMD** .  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>Scrittura e modifica di script SQLCMD  
  Dopo avere attivato la modalità di scripting, sarà possibile immettere comandi SQLCMD e istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . Sono applicabili le regole seguenti:  

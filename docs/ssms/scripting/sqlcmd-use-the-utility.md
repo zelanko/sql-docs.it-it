@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c71685e6abf6a38827394c24fb9d2dc5e1afb8d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: dd26583a850cc3734c2201b0640da99ce971fa8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036264"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476902"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - Usare l'utilità
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "92036264"
   
 -   L'opzione server ( **-S**) identifica l'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla quale si connette **sqlcmd**.  
   
--   Le opzioni di autenticazione ( **-E**, **-U**e **-P**) specificano le credenziali usate da **sqlcmd** per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **NOTA** l'opzione **-E** è quella predefinita e non deve essere specificata.  
+-   Le opzioni di autenticazione ( **-E**, **-U** e **-P**) specificano le credenziali usate da **sqlcmd** per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **NOTA** l'opzione **-E** è quella predefinita e non deve essere specificata.  
   
--   Le opzioni di input ( **-Q**, **-q**e **-i**) identificano la posizione dell'input per **sqlcmd**.  
+-   Le opzioni di input ( **-Q**, **-q** e **-i**) identificano la posizione dell'input per **sqlcmd**.  
   
 -   L'opzione di output ( **-o**) specifica il file nel quale **sqlcmd** inserirà il proprio output.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "92036264"
     > **SUGGERIMENTO** Per un elenco delle opzioni supportate dall'utilità **sqlcmd** , eseguire: `sqlcmd -?`.  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>Eseguire le istruzioni Transact-SQL in modo interattivo usando sqlcmd  
- È possibile usare l'utilità **sqlcmd** in modo interattivo per eseguire istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in una finestra del prompt dei comandi. Per eseguire in modo interattivo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] con **sqlcmd**, eseguire l'utilità senza usare le opzioni **-Q**, **-q**, **-Z**o **-i** per specificare eventuali file di input o query. Ad esempio:  
+ È possibile usare l'utilità **sqlcmd** in modo interattivo per eseguire istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in una finestra del prompt dei comandi. Per eseguire in modo interattivo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] con **sqlcmd**, eseguire l'utilità senza usare le opzioni **-Q**, **-q**, **-Z** o **-i** per specificare eventuali file di input o query. Ad esempio:  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -202,7 +202,7 @@ ms.locfileid: "92036264"
  Le righe successive alla riga `3> GO` costituiscono l'output di un'istruzione `SELECT` . Dopo la generazione dell'output, `sqlcmd` reimposta il prompt di `sqlcmd` e visualizza `1>`. Dopo aver immesso `EXIT` nella riga `1>`, nella finestra del prompt dei comandi viene visualizzata la stessa riga presente alla prima apertura di tale finestra. Ciò indica che la sessione di `sqlcmd` è terminata. È ora possibile chiudere la finestra del prompt dei comandi digitando un altro comando `EXIT` .  
   
 ## <a name="running-transact-sql-script-files-using-sqlcmd"></a>Esecuzione di file script Transact-SQL usando sqlcmd  
- È possibile usare **sqlcmd** per eseguire file script del database. I file script sono file di testo che contengono una combinazione di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , comandi **sqlcmd** e variabili di scripting. Per altre informazioni sullo scripting di variabili, vedere [Utilizzo di sqlcmd con variabili di scripting](./sqlcmd-use-with-scripting-variables.md). Il funzionamento di**sqlcmd** con le istruzioni, i comandi e le variabili di scripting presenti in un file script è analogo al funzionamento con le istruzioni e i comandi immessi in modo interattivo. La principale differenza sta nel fatto che **sqlcmd** legge il file di input senza pause anziché attendere l'immissione di istruzioni, comandi e variabili di scripting da parte dell'utente.  
+ È possibile usare **sqlcmd** per eseguire file script del database. I file script sono file di testo che contengono una combinazione di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , comandi **sqlcmd** e variabili di scripting. Per altre informazioni sullo scripting di variabili, vedere [Utilizzo di sqlcmd con variabili di scripting](./sqlcmd-use-with-scripting-variables.md). Il funzionamento di **sqlcmd** con le istruzioni, i comandi e le variabili di scripting presenti in un file script è analogo al funzionamento con le istruzioni e i comandi immessi in modo interattivo. La principale differenza sta nel fatto che **sqlcmd** legge il file di input senza pause anziché attendere l'immissione di istruzioni, comandi e variabili di scripting da parte dell'utente.  
   
  I file script di database possono essere creati nei modi seguenti:  
   
@@ -385,7 +385,7 @@ ms.locfileid: "92036264"
  `Syed Abbas, Catherine Abel, Kim Abercrombie,`  
   
 ### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>F. Utilizzo di sqlcmd in un file script di Windows  
- Un comando di **sqlcmd**come `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` può essere eseguito in un file con estensione bat insieme a VBScript. In questo caso, non utilizzare opzioni interattive. **sqlcmd** deve essere installato nel computer che esegue il file con estensione bat.  
+ Un comando di **sqlcmd** come `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` può essere eseguito in un file con estensione bat insieme a VBScript. In questo caso, non utilizzare opzioni interattive. **sqlcmd** deve essere installato nel computer che esegue il file con estensione bat.  
   
  Creare innanzitutto i quattro file seguenti:  
   
@@ -453,7 +453,7 @@ ms.locfileid: "92036264"
  `SQLCMD returned 100 to the command shell`  
   
 ### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. Utilizzo di sqlcmd per impostare la crittografia in database SQL di Azure  
- È possibile eseguire un comando **sqlcmd**in una connessione ai dati [!INCLUDE[ssSDS](../../includes/sssds-md.md)] per specificare la crittografia e l'attendibilità del certificato. Sono disponibili due opzioni di **sqlcmd**:  
+ È possibile eseguire un comando **sqlcmd** in una connessione ai dati [!INCLUDE[ssSDS](../../includes/sssds-md.md)] per specificare la crittografia e l'attendibilità del certificato. Sono disponibili due opzioni di **sqlcmd**:  
   
 -   L'opzione -N viene utilizzata dal client per richiedere una connessione crittografata. Equivale all'opzione ADO.net `ENCRYPT = true`.  
   
