@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9584b479d77efaa6c114cd160964e0fbf09c77d7
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: f8e0b03d5ea3be6473c8e00a8d62ef5900f33973
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901032"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465732"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Proprietà di SQL Server (scheda Parametri di avvio)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88901032"
  Per altre informazioni su come spostare il database master, vedere l'argomento "Spostamento dei database di sistema" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="optional-parameters"></a>Parametri facoltativi  
- Tutti i parametri di avvio supportati sono descritti nell'argomento "Utilizzo delle opzioni di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un parametro di avvio -T*trace#* indica che deve essere avviata un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno specifico flag di traccia (*trace#* ) attivo. I flag di traccia vengono utilizzati per avviare il server con un funzionamento non standard. Per altre informazioni sui flag di traccia, vedere l'argomento "Flag di traccia ( [!INCLUDE[tsql](../../includes/tsql-md.md)] )" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Tutti i parametri di avvio supportati sono descritti nell'argomento "Utilizzo delle opzioni di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un parametro di avvio -T *trace#* indica che deve essere avviata un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno specifico flag di traccia (*trace#* ) attivo. I flag di traccia vengono utilizzati per avviare il server con un funzionamento non standard. Per altre informazioni sui flag di traccia, vedere l'argomento "Flag di traccia ( [!INCLUDE[tsql](../../includes/tsql-md.md)] )" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!CAUTION]  
 >  Su Internet è possibile che siano descritti parametri di avvio e flag di traccia aggiuntivi non documentati. I parametri di avvio e i flag di traccia non documentati vengono creati per risolvere problemi non comuni o per forzare determinate condizioni richieste per il test. L'utilizzo di parametri di avvio non documentati può causare risultati imprevisti. Utilizzare parametri non documentati solo se indicato dal Servizio Supporto Tecnico Clienti Microsoft.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0845fc6cbf14259c02e2fdbf1f30bcf450917f00
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b1258d21f2478d30e10938d0ac97cce935d34b00
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039145"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440390"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>Associazione di estensioni di file a un editor di codice
 
@@ -33,7 +33,7 @@ L'associazione di estensioni di file a un editor di codice specifico consente di
   
 ### <a name="to-associate-a-new-file-extension-with-sql-server-management-studio"></a>Per associare una nuova estensione di file a SQL Server Management Studio  
   
-1.  Fare clic sul pulsante **Start** , scegliere **Tutti i programmi**, **Accessori**e quindi **Esplora risorse**.  
+1.  Fare clic sul pulsante **Start** , scegliere **Tutti i programmi**, **Accessori** e quindi **Esplora risorse**.  
   
 2.  In Esplora risorse scegliere **Opzioni cartella** dal menu **Strumenti**.  
   
@@ -43,7 +43,7 @@ L'associazione di estensioni di file a un editor di codice specifico consente di
   
 5.  Selezionare la nuova estensione nella casella **Tipi di file registrati** , quindi fare clic su **Cambia**.  
   
-6.  Nella finestra di dialogo **Apri con** fare clic su **SSMS - SQL Server Management Studio**e quindi su **OK**.  
+6.  Nella finestra di dialogo **Apri con** fare clic su **SSMS - SQL Server Management Studio** e quindi su **OK**.  
   
 7.  Fare clic su **Chiudi** per chiudere la finestra di dialogo **Opzioni cartella** , quindi chiudere Esplora risorse.  
   
@@ -51,11 +51,11 @@ L'associazione di estensioni di file a un editor di codice specifico consente di
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]scegliere **Opzioni** dal menu **Strumenti**.  
   
-2.  Nella finestra di dialogo **Opzioni** fare clic su **Editor di testo**e quindi su **Estensione file**.  
+2.  Nella finestra di dialogo **Opzioni** fare clic su **Editor di testo** e quindi su **Estensione file**.  
   
 3.  Immettere la nuova estensione di file nella casella **Estensione** .  
   
-4.  Nella casella **Editor** selezionare l'editor di codice da usare per aprire questo tipo di file, fare clic su **Aggiungi**e quindi su **OK**.  
+4.  Nella casella **Editor** selezionare l'editor di codice da usare per aprire questo tipo di file, fare clic su **Aggiungi** e quindi su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilità Ssms](../ssms-utility.md)  

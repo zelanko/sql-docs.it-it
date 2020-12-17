@@ -18,13 +18,13 @@ ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c8a5a8ceb8aaa26d9c18a9b37e4acb84247f2e9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 11ea9a4bff085843b571fbf69df5b79d9c3a9f8a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038819"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466452"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]ed espandere tale istanza.  
   
-2.  Espandere **SQL Server Agent**e **Processi**, fare clic con il pulsante destro del mouse sul processo che si vuole modificare e scegliere **Proprietà**.  
+2.  Espandere **SQL Server Agent** e **Processi**, fare clic con il pulsante destro del mouse sul processo che si vuole modificare e scegliere **Proprietà**.  
   
 3.  Nella finestra di dialogo **Proprietà processo** selezionare la pagina **Notifiche** .  
   
@@ -77,7 +77,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-notify-an-operator-of-job-status"></a>Per notificare lo stato di un processo a un operatore  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

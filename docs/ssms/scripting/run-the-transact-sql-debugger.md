@@ -22,13 +22,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e8a30b5c8ff29155c58f940de8d800075c84c1e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e9fe76a738bc38eafc1c778fef6a6f91d93492e2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036391"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466282"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Esecuzione del debugger Transact-SQL
 
@@ -100,7 +100,7 @@ Di seguito vengono indicati i requisiti per avviare il debugger [!INCLUDE[tsql](
 |**Arresta debug**|Non disponibile|**Arresta debug**|MAIUSC+F5|Consente di portare una finestra dell'editor di query dalla modalità di debug alla modalità normale.|  
 |**Disconnetti tutto**|Non disponibile|Non disponibile|Non disponibile|Consente di arrestare la modalità di debug, ma di eseguire le istruzioni restanti nella finestra dell'editor di query.|  
 |**Esegui istruzione**|Non disponibile|**Esegui istruzione**|F11|Consente di eseguire l'istruzione successiva e anche di aprire una nuova finestra dell'editor di query nella modalità di debug se l'istruzione successiva esegue una stored procedure, un trigger o una funzione.|  
-|**Esegui istruzione/routine**|Non disponibile|**Esegui istruzione/routine**|F10|Stessa funzione di **Esegui istruzione**eccetto per il fatto che con questo comando non viene eseguito il debug di funzioni, stored procedure o trigger.|  
+|**Esegui istruzione/routine**|Non disponibile|**Esegui istruzione/routine**|F10|Stessa funzione di **Esegui istruzione** eccetto per il fatto che con questo comando non viene eseguito il debug di funzioni, stored procedure o trigger.|  
 |**Esci da istruzione/routine**|Non disponibile|**Esci da istruzione/routine**|MAIUSC+F11|Consente di eseguire il codice restante in un trigger, una funzione o una stored procedure ignorando i punti di interruzione. La normale modalità di debug riprende quando il controllo viene restituito al codice che ha chiamato il modulo.|  
 |Non disponibile|**Esegui fino al cursore**|Non disponibile|CTRL+F10|Consente di eseguire tutto il codice dall'ultima posizione di arresto fino alla posizione corrente del cursore ignorando i punti di arresto.|  
 |**Controllo immediato**|**Controllo immediato**|Non disponibile|CTRL+ALT+Q|Consente di visualizzare la finestra **Controllo immediato** .|  

@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: aee6dcfce5e07b62d53420328221999bed0f887f
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 8b9836119612aa64b941f056902e7886deb8233b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870260"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470092"
 ---
 # <a name="r-tutorials-for-sql-machine-learning"></a>Esercitazioni di R per Machine Learning in SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di R per [Machine Learning Services in SQL Server](../sql-server-machine-learning-services.md) e in [cluster Big Data](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di R per [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di R per [R Services per SQL Server 2016](../r/sql-server-r-services.md).
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di Python per [Machine Learning Services per Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
@@ -38,7 +38,7 @@ Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di Pyt
 
 ## <a name="r-tutorials"></a>Esercitazioni di R
 
-::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15"
 | Esercitazione | Descrizione |
 |------|-------------|
 | [Stimare il noleggio di sci con l'albero delle decisioni](r-predictive-model-introduction.md) | Usare R e un modello di albero delle decisioni per stimare il numero di noleggi di sci in futuro. Usare notebook in Azure Data Studio per preparare i dati ed eseguire il training del modello e T-SQL per distribuire il modello. |

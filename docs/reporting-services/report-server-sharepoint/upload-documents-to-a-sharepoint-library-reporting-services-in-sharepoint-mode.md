@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2af61cc504fe89a4a8992397df69816f411f353f
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 0d033bdfe9ae0d2773e7c3d8622b7321ed60e02e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935495"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461422"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Caricare documenti in una raccolta di SharePoint (Reporting Services in modalità SharePoint)
 
@@ -36,7 +36,7 @@ Definizioni e modelli di report possono essere caricati in una raccolta di Share
   
 ## <a name="add-a-report-definition-or-report-model-to-a-library"></a>Aggiungere la definizione o il modello di un report a una raccolta
   
-1.  Aprire la raccolta o una cartella all'interno della raccolta. Se la raccolta non è aperta, fare clic sul nome della raccolta sulla barra di avvio veloce. Se il nome della raccolta non è visualizzato, fare clic su **Visualizza tutto il contenuto del sito**e quindi sul nome della raccolta desiderata.  
+1.  Aprire la raccolta o una cartella all'interno della raccolta. Se la raccolta non è aperta, fare clic sul nome della raccolta sulla barra di avvio veloce. Se il nome della raccolta non è visualizzato, fare clic su **Visualizza tutto il contenuto del sito** e quindi sul nome della raccolta desiderata.  
   
 2.  Scegliere **Carica documento** dal menu **Carica**.  
   

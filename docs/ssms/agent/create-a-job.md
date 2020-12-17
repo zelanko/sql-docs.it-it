@@ -14,13 +14,13 @@ ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 404971a6874de15cfae2408e5fa2d4bc2e387c0e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 0542509d087aee51d942aeb1d8c59e382fa80b63
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039193"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461382"
 ---
 # <a name="create-a-job"></a>Creare un processo
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,7 +72,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-create-a-sql-server-agent-job"></a>Per creare un processo di SQL Server Agent  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server in cui si desidera creare un processo di SQL Server Agent.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server in cui si desidera creare un processo di SQL Server Agent.  
   
 2.  Fare clic sul segno più per espandere **SQL Server Agent**.  
   
@@ -96,7 +96,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-create-a-sql-server-agent-job"></a>Per creare un processo di SQL Server Agent  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

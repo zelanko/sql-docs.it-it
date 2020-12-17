@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: efeb00d679ca93e45da50988b36710a8f4c9dbe2
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: c4929816503430c151c80735078d6a71b0221e71
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900447"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463853"
 ---
 # <a name="named-pipes-properties"></a>Proprietà Named Pipes
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

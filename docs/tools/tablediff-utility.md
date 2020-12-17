@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fc5868edc1456f2588d450f60a23a4de36afaa07
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: 71becc4645aa71a3e6d60a00766b913546ff7c22
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006268"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463712"
 ---
 # <a name="tablediff-utility"></a>utilità tablediff
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -130,7 +130,7 @@ tablediff
  La tabella di destinazione viene bloccata durante il confronto mediante gli hint di tabella TABLOCK e HOLDLOCK.  
   
  **-b** _large_object_bytes_  
- Numero di byte da confrontare per le colonne dei tipi di dati di grandi dimensioni, ovvero: **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** e **varbinary(max)** . L'impostazione predefinita di*large_object_bytes* corrisponde alle dimensioni della colonna. I dati che superano il valore di *large_object_bytes* non verranno confrontati.  
+ Numero di byte da confrontare per le colonne dei tipi di dati di grandi dimensioni, ovvero: **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** e **varbinary(max)** . L'impostazione predefinita di *large_object_bytes* corrisponde alle dimensioni della colonna. I dati che superano il valore di *large_object_bytes* non verranno confrontati.  
   
  **-bf**  _number_of_statements_  
  Numero di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] da scrivere nel file script [!INCLUDE[tsql](../includes/tsql-md.md)] corrente quando si usa l'opzione **-f** . Se il numero di istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] supera il valore di *number_of_statements*, viene creato un nuovo file script [!INCLUDE[tsql](../includes/tsql-md.md)] .  
@@ -139,7 +139,7 @@ tablediff
  Esegue il confronto per individuare eventuali differenze a livello di colonna.  
   
  **-dt**  
- Elimina la tabella dei risultati specificata da *table_name*se la tabella esiste già.  
+ Elimina la tabella dei risultati specificata da *table_name* se la tabella esiste già.  
   
  **-et** _table_name_  
  Specifica il nome della tabella dei risultati da creare. Se questa tabella esiste già, è necessario usare l'opzione **-DT** . In caso contrario, l'operazione ha esito negativo.  
@@ -182,7 +182,7 @@ tablediff
   
 |Tipo di dati di origine|Tipo di dati di destinazione|  
 |----------------------|---------------------------|  
-|**tinyint**|**smallint**, **int**o **bigint**|  
+|**tinyint**|**smallint**, **int** o **bigint**|  
 |**smallint**|**int** o **bigint**|  
 |**int**|**bigint**|  
 |**timestamp**|**varbinary**|  

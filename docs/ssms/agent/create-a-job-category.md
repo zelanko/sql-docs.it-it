@@ -15,13 +15,13 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eca2f9ee0bfadddd91443c01089139c7b08a308c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 24c614f6b7fa00eb566dc7d8d25a6686494cfebc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035632"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409215"
 ---
 # <a name="create-a-job-category"></a>Creare una categoria di processi
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-create-a-job-category"></a>Per creare una categoria di processi  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server in cui si desidera creare una categoria di processi.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server in cui si desidera creare una categoria di processi.  
   
 2.  Fare clic sul segno più per espandere **SQL Server Agent**.  
   
@@ -67,7 +67,7 @@ Per altre informazioni su queste finestre di dialogo, vedere [Categorie processi
   
 #### <a name="to-create-a-job-category"></a>Per creare una categoria di processi  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

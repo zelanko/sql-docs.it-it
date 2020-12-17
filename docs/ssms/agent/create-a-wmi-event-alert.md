@@ -13,13 +13,13 @@ ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6511ea5b72a4031ec212d463b6cf8a6f7b977a9e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1ae08f86a984f4a8bdbc73db02fb41e335250e4f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035082"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464472"
 ---
 # <a name="create-a-wmi-event-alert"></a>Creare un avviso per evento WMI
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ Per impostazione predefinita, solo i membri del ruolo predefinito del server **s
   
 6.  Nell'elenco **Tipo** selezionare **Avviso per evento WMI**.  
   
-7.  Nella casella **Spazio dei nomi**in **Definizione di avviso di evento WMI** specificare lo spazio dei nomi WMI da usare per l'istruzione WQL (WMI Query Language) che identifica l'evento WMI che attiva l'avviso.  
+7.  Nella casella **Spazio dei nomi** in **Definizione di avviso di evento WMI** specificare lo spazio dei nomi WMI da usare per l'istruzione WQL (WMI Query Language) che identifica l'evento WMI che attiva l'avviso.  
   
 8.  Nella casella **Query** specificare l'istruzione WQL che identifica l'evento al quale risponde l'avviso.  
   
@@ -71,7 +71,7 @@ Per impostazione predefinita, solo i membri del ruolo predefinito del server **s
   
 #### <a name="to-create-a-wmi-event-alert"></a>Per creare un avviso per evento WMI  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

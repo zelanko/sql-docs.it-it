@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a97a33dadae8f9039a6c5a0ca935decfb1e24b4a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bdf33a22b10a5a10dc14f0ecce870ce43fc33aee
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036373"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466312"
 ---
 # <a name="search-documents-interactively"></a>Ricerca interattiva all'interno di documenti
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "92036373"
   
 #### <a name="to-replace-in-all-active-files-interactively"></a>Per eseguire una sostituzione in tutti i file attivi in modo interattivo  
   
-1.  Scegliere **Trova e sostituisci** dal menu **Modifica**e quindi fare clic su **Sostituzione veloce**.  
+1.  Scegliere **Trova e sostituisci** dal menu **Modifica** e quindi fare clic su **Sostituzione veloce**.  
   
 2.  Nella casella di testo **Trova** immettere il testo da cercare.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "92036373"
   
 4.  Nell'elenco **Cerca in** selezionare **Tutti i documenti aperti**.  
   
-5.  Fare clic su **Sostituisci**e continuare a fare clic su **Sostituisci** fino all'ultima sostituzione nell'ultimo file. Fare clic su **Trova successivo** per ignorare una corrispondenza che non si desidera sostituire.  
+5.  Fare clic su **Sostituisci** e continuare a fare clic su **Sostituisci** fino all'ultima sostituzione nell'ultimo file. Fare clic su **Trova successivo** per ignorare una corrispondenza che non si desidera sostituire.  
   
      -oppure-  
   

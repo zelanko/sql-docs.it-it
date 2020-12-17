@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2acca0bd84985700395cb3d073e6476167577b68
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: ab2a821d2c7d14f16caefb7f881f69962b3eaa94
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901184"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97465772"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Proprietà - SQL Server (scheda Avanzate)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "88901184"
  Visualizza il codice di riferimento del prodotto (SKU), definito anche edizione del prodotto.  
   
  **Parametri di avvio**  
- Elenca i parametri di avvio utilizzati dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I parametri sono separati da punti e virgola. I parametri predefiniti includono i percorsi del file di dati del database master (`master.mdf`), del file di log del database master (`mastlog.ldf`) e del file di log degli errori. Per informazioni sulla sintassi dei parametri di avvio, cercare l'argomento **Utilizzo delle opzioni di avvio del servizio SQL Server**nella documentazione online.  
+ Elenca i parametri di avvio utilizzati dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I parametri sono separati da punti e virgola. I parametri predefiniti includono i percorsi del file di dati del database master (`master.mdf`), del file di log del database master (`mastlog.ldf`) e del file di log degli errori. Per informazioni sulla sintassi dei parametri di avvio, cercare l'argomento **Utilizzo delle opzioni di avvio del servizio SQL Server** nella documentazione online.  
   
  **SKU**  
  Visualizza il numero del codice di riferimento del prodotto (SKU).  

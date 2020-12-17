@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: cba06a816e57189cb69f9680542452d2788b233e
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 571b49dfa3ce555aad02ffe8d6ba7c68a033bbdc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92412536"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470122"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>Esercitazione su R: Esplorare e visualizzare i dati
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -78,7 +78,7 @@ Nel set di dati pubblico originale gli identificatori di taxi e i record delle c
 
 ## <a name="create-plots-using-r-in-t-sql"></a>Creare tracciati usando R in T-SQL
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!IMPORTANT]
 > A partire da SQL Server 2019, il meccanismo di isolamento richiede di assegnare le autorizzazioni appropriate alla directory in cui è archiviato il file del tracciato. Per altre informazioni su come impostare queste autorizzazioni, vedere la [sezione Autorizzazioni per i file in SQL Server 2019 in Windows: Modifiche al meccanismo di isolamento per Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end

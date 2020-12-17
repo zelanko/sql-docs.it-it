@@ -9,24 +9,24 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 07c62ab016f7db61d3619b19bb194bee1109651e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: de98a94f997d7107f0a2157d80919b16631ee7de
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173408"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470422"
 ---
 # <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Esercitazione su Python: Distribuire un modello di regressione lineare con Machine Learning in SQL Server
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di regressione lineare sviluppato in Python in un database SQL Server usando Machine Learning Services o cluster Big Data.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di regressione lineare sviluppato in Python in un database SQL Server usando Machine Learning Services.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di regressione lineare sviluppato in Python in un database di Istanza gestita di SQL di Azure usando Machine Learning Services.
 ::: moniker-end
 

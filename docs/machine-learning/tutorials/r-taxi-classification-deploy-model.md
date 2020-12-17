@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e7657dcfe382ed87b31ca17e6c36d9019d1b84e2
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 0b32d12a694062e56611abaff18dc4f1e2f23061
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412522"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470112"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>Esercitazione su R: Eseguire le previsioni nelle stored procedure SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -24,9 +24,9 @@ Nella quinta parte di questa serie di esercitazioni in cinque parti si apprender
 
 Questo articolo illustra due metodi di assegnazione dei punteggi:
 
-+ **Modalità di assegnazione dei punteggi batch** : usare una query SELECT come input per la stored procedure. La stored procedure restituisce una tabella di osservazioni corrispondenti ai casi di input.
++ **Modalità di assegnazione dei punteggi batch**: usare una query SELECT come input per la stored procedure. La stored procedure restituisce una tabella di osservazioni corrispondenti ai casi di input.
 
-+ **Modalità di valutazione singola** : passare come input un set di valori di parametro singoli.  La stored procedure restituisce una singola riga o un singolo valore.
++ **Modalità di valutazione singola**: passare come input un set di valori di parametro singoli.  La stored procedure restituisce una singola riga o un singolo valore.
 
 Contenuto dell'articolo:
 

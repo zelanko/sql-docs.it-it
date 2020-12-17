@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56201dec5bb9b6a66c63f6c4bca50d90b4e27c33
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ac7abdfbac2beec19e5cd53d0077dbcd0c2c8d24
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039044"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466362"
 ---
 # <a name="find-in-files"></a>Cerca nei file
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "92039044"
  Selezionare un ambito di ricerca predefinito dall'elenco oppure usare la finestra di dialogo **Seleziona cartelle di ricerca** per specificare un set di directory personalizzato.  
   
  **Documento corrente**  
- Questa opzione è disponibile quando un documento è aperto in un editor. La ricerca della stringa specificata in **Trova**viene eseguita solo nel documento attivo.  
+ Questa opzione è disponibile quando un documento è aperto in un editor. La ricerca della stringa specificata in **Trova** viene eseguita solo nel documento attivo.  
   
  **Tutti i documenti aperti**  
  La ricerca viene eseguita in tutti i file aperti attualmente per essere modificati.  

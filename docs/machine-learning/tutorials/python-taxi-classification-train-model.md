@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 18cd0c279493dcb41d043d3f76d6debe71eb402c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 7f7b7a22376cba31a54f5682e041e225cb15760c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194473"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470342"
 ---
 # <a name="python-tutorial-train-and-save-a-python-model-using-t-sql"></a>Esercitazione su Python: Eseguire il training e il salvataggio di un modello Python usando T-SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]

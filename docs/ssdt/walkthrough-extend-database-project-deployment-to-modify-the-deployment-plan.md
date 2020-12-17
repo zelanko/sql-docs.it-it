@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e38e126274b03a53c693f9cdd904ee8301b0069b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 52a3ee78a73e2ba3e600d7dae99019d481da73a7
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987705"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559113"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Procedura dettagliata: Estendere la distribuzione del progetto di database per modificare il piano di distribuzione
 
@@ -775,7 +775,7 @@ Dopo aver seguito uno di questi approcci, è possibile utilizzare MSBuild per pa
         > Se si distribuisce un progetto di database identico al database di destinazione, il report risultante non sarà molto significativo. Per risultati più significativi, distribuire modifiche a un database o distribuire un nuovo database.  
   
 ## <a name="command-line-deployment-using-generated-dacpac-file"></a>Distribuzione della riga di comando mediante il file dacpac generato  
-Dopo che un progetto SQL viene compilato, viene creato un file dacpac che può essere utilizzato per distribuire lo schema dalla riga di comando e che consente la distribuzione da un computer diverso, ad esempio da un computer di compilazione. SqlPackage è un'utilità della riga di comando che consente la distribuzione di dacpac con una gamma completa di opzioni che consentono agli utenti di distribuire un dacpac o di generare uno script di distribuzione, tra le altre azioni. Per altre informazioni, vedere [SqlPackage.exe](../tools/sqlpackage.md).  
+Dopo che un progetto SQL viene compilato, viene creato un file dacpac che può essere utilizzato per distribuire lo schema dalla riga di comando e che consente la distribuzione da un computer diverso, ad esempio da un computer di compilazione. SqlPackage è un'utilità della riga di comando che consente la distribuzione di dacpac con una gamma completa di opzioni che consentono agli utenti di distribuire un dacpac o di generare uno script di distribuzione, tra le altre azioni. Per altre informazioni, vedere [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md).  
   
 > [!NOTE]  
 > Per distribuire dacpac creati da progetti con la proprietà DeploymentContributors definita, e necessario che le DLL che contengono propri collaboratori siano installati nel computer in uso. Ciò è dovuto al fatto che sono stati contrassegnati come necessari per il corretto completamento della distribuzione.  

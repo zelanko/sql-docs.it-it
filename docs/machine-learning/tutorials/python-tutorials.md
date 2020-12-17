@@ -8,24 +8,24 @@ ms.date: 05/21/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f417a92a00b290f06326433b24b73137a0a424fa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 6e527f7ba5d9a0f97a52cf068565b1b24ee696bf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178548"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470312"
 ---
 # <a name="python-tutorials-for-sql-machine-learning"></a>Esercitazioni di Python per Machine Learning in SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di Python per [Machine Learning Services in SQL Server](../sql-server-machine-learning-services.md) e in [cluster Big Data](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di Python per [Machine Learning Services per SQL Server](../sql-server-machine-learning-services.md).
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di Python per [Machine Learning Services per Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
@@ -33,7 +33,7 @@ Questo articolo descrive le esercitazioni e gli argomenti di avvio rapido di Pyt
 
 ## <a name="python-tutorials"></a>Esercitazioni di Python
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 | Esercitazione | Descrizione |
 |-|-|
 | [Stimare il noleggio di sci tramite la regressione lineare](python-ski-rental-linear-regression.md) | Usare Python e la regressione lineare per stimare il numero di noleggi di sci. Usare notebook in Azure Data Studio per preparare i dati ed eseguire il training del modello e T-SQL per distribuire il modello. |
