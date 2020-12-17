@@ -16,13 +16,13 @@ ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0f74ab9949662ceffce1965ebf4fefcc9086e5e9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: c3141dfe74272758450b33a1302be4fe339eeb82
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038695"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97480662"
 ---
 # <a name="view-job-step-information"></a>Visualizzare informazioni sui passaggi di processo
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,7 +58,7 @@ Se un passaggio di processo è stato configurato per la scrittura dell'output in
   
 1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], quindi espandere questa istanza.  
   
-2.  Espandere il nodo **SQL Server Agent**e il nodo **Processi**, fare clic con il pulsante destro del mouse sul processo che include il passaggio da visualizzare e scegliere **Proprietà**.  
+2.  Espandere il nodo **SQL Server Agent** e il nodo **Processi**, fare clic con il pulsante destro del mouse sul processo che include il passaggio da visualizzare e scegliere **Proprietà**.  
   
 3.  Nella finestra di dialogo **Proprietà processo** fare clic sulla scheda **Passaggi** .  
   

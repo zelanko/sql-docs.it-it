@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 482ff4d53e85214daf89f010f23a05ce4da0fb26
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 655c0a2fdcd36c7b93b87d3d8979751fcd757e8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986046"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424739"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Contatori delle prestazioni per MSRS 2011 Web Service, oggetti prestazioni
   In questo argomento vengono descritti i contatori delle prestazioni per gli oggetti prestazioni **MSRS 2011 Web Service** e **MSRS 2011 Windows Service** . Questi oggetti fanno parte di una distribuzione in modalità nativa di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
@@ -55,7 +55,7 @@ ms.locfileid: "91986046"
 |**Mancati riscontri nella cache/sec**|Numero di richieste al secondo che non hanno restituito un report dalla cache. Consente di stabilire se le risorse utilizzate per la memorizzazione nella cache, su disco o in memoria, siano sufficienti.|  
 |**Mancati riscontri nella cache/sec (modelli semantici)**|Numero di richieste al secondo tramite cui non è stato restituito alcun modello dalla cache. Consente di stabilire se le risorse utilizzate per la memorizzazione nella cache, su disco o in memoria, siano sufficienti.|  
 |**Richieste prima sessione/sec**|Numero di nuove sessioni utente avviate al secondo dalla cache del server di report.|  
-|**Riscontri nella cache in memoria/sec**|Numero di volte al secondo in cui è stato possibile recuperare i report dalla cache in memoria. La*cache in memoria* è una parte della cache che archivia i report nella memoria della CPU. Quando viene usata la cache in memoria, il server di report non esegue query su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per individuare il contenuto memorizzato nella cache.|  
+|**Riscontri nella cache in memoria/sec**|Numero di volte al secondo in cui è stato possibile recuperare i report dalla cache in memoria. La *cache in memoria* è una parte della cache che archivia i report nella memoria della CPU. Quando viene usata la cache in memoria, il server di report non esegue query su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per individuare il contenuto memorizzato nella cache.|  
 |**Mancati riscontri nella cache in memoria/sec**|Numero di volte al secondo in cui non è stato possibile recuperare i report dalla cache in memoria.|  
 |**Richieste sessione successiva/sec**|Numero di richieste al secondo di report aperti in una sessione esistente, ovvero i report di cui è stato eseguito il rendering da una sessione di snapshot.|  
 |**Richieste di report**|Numero di report attualmente attivi e gestiti dal server di report.|  
@@ -65,7 +65,7 @@ ms.locfileid: "91986046"
 |**Totale riscontri nella cache (modelli semantici)**|Numero totale di richieste per il modello dalla cache dopo l'avvio del servizio. Il contatore viene reimpostato ogni volta che il servizio Web ReportServer viene arrestato da ASP.NET.|  
 |**Totale mancati riscontri nella cache**|Numero totale di volte in cui non è stato possibile recuperare un report dalla cache dall'avvio del servizio. Il contatore viene reimpostato ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Utilizzare questo contatore per stabilire se lo spazio su disco e la memoria siano sufficienti.|  
 |**Totale mancati riscontri nella cache (modelli semantici)**|Numero totale di volte in cui non è stato possibile restituire un modello dalla cache dopo l'avvio del servizio. Il contatore viene reimpostato ogni volta che il servizio Web ReportServer viene arrestato da ASP.NET. Utilizzare questo contatore per stabilire se lo spazio su disco e la memoria siano sufficienti.|  
-|**Totale riscontri nella cache in memoria**|Numero totale di report memorizzati nella cache restituiti dalla cache in memoria dall'avvio del servizio. Il contatore viene reimpostato ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . La*cache in memoria* è una parte della cache che archivia i report nella memoria della CPU. Quando viene usata la cache in memoria, il server di report non esegue query su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per individuare il contenuto memorizzato nella cache.|  
+|**Totale riscontri nella cache in memoria**|Numero totale di report memorizzati nella cache restituiti dalla cache in memoria dall'avvio del servizio. Il contatore viene reimpostato ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . La *cache in memoria* è una parte della cache che archivia i report nella memoria della CPU. Quando viene usata la cache in memoria, il server di report non esegue query su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per individuare il contenuto memorizzato nella cache.|  
 |**Totale mancati riscontri nella cache in memoria**|Numero totale di accessi alla cache in memoria non riusciti dall'avvio del servizio. Il contatore viene reimpostato ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .|  
 |**Totale elaborazioni non riuscite**|Numero di errori di elaborazione delle richieste per il servizio Web ReportServer.|  
 |**Totale thread rifiutati**|Numero totale di thread rifiutati per l'elaborazione asincrona e gestiti in un secondo momento come processi sincroni nello stesso thread. Ogni origine dei dati viene elaborata in un thread. Se il volume dei thread supera la capacità, i thread non verranno sottoposti all'elaborazione asincrona e verranno elaborati in modo seriale.|  
@@ -88,7 +88,7 @@ ms.locfileid: "91986046"
 |**Recapiti/sec**|Numero di recapiti di report al secondo, da parte di tutte le estensioni per il recapito.|  
 |**Eventi/sec**|Numero di eventi elaborati al secondo. Tra gli eventi monitorati sono inclusi **SnapshotUpdated** e **TimedSubscription**.|  
 |**Richieste prima sessione/sec**|Numero di nuove sessioni di esecuzione del report create al secondo.|  
-|**Riscontri nella cache in memoria/sec**|Numero di volte al secondo in cui è stato possibile recuperare i report dalla cache in memoria. La*cache in memoria* è una parte della cache che archivia i report nella memoria della CPU. Quando viene usata la cache in memoria, il server di report non esegue query su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per individuare il contenuto memorizzato nella cache.|  
+|**Riscontri nella cache in memoria/sec**|Numero di volte al secondo in cui è stato possibile recuperare i report dalla cache in memoria. La *cache in memoria* è una parte della cache che archivia i report nella memoria della CPU. Quando viene usata la cache in memoria, il server di report non esegue query su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per individuare il contenuto memorizzato nella cache.|  
 |**Mancati riscontri nella cache in memoria/sec**|Numero di volte al secondo in cui non è stato possibile recuperare i report dalla cache in memoria.|  
 |**Richieste sessione successiva/sec**|Numero di richieste al secondo di report aperti in una sessione esistente, ovvero i report di cui è stato eseguito il rendering da una sessione di snapshot.|  
 |**Richieste di report**|Numero di report attualmente attivi e gestiti dal server di report. Utilizzare questo contatore per valutare la strategia utilizzata per la memorizzazione nella cache. Potrebbero essere presenti più richieste rispetto ai report generati.|  

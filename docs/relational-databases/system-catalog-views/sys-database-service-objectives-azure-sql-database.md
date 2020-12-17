@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: ca0b8567115c2a9209efb61185aad4fa4d05fa24
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6435440b60c7b90d78f8050d64b5b580e610f017
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97412986"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643320"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (database SQL di Azure)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -32,7 +32,7 @@ Restituisce l'edizione (livello di servizio), l'obiettivo di servizio (piano tar
   
  Per informazioni sui prezzi, vedere [Opzioni e prestazioni del database SQL: prezzi del database SQL](https://azure.microsoft.com/pricing/details/sql-database/) e [prezzi di analisi delle sinapsi di Azure](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
- Per modificare le impostazioni del servizio, vedere [ALTER database (database SQL di Azure)](../../t-sql/statements/alter-database-transact-sql.md) e [ALTER database (Azure sinapsi Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest).  
+ Per modificare le impostazioni del servizio, vedere [ALTER database (database SQL di Azure)](../../t-sql/statements/alter-database-transact-sql.md) e [ALTER database (Azure sinapsi Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).  
   
  La vista sys.database_service_objectives contiene le colonne seguenti.  
   
@@ -46,7 +46,7 @@ Restituisce l'edizione (livello di servizio), l'obiettivo di servizio (piano tar
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **dbManager** per il database master.  A livello di database, l'utente deve essere l'autore o il proprietario.  
   
-## <a name="examples"></a>Esempio  
+## <a name="examples"></a>Esempi  
  Questo esempio può essere eseguito nel database master o nei database utente del database SQL di Azure. La query restituisce le informazioni sul nome, il servizio e il livello di prestazioni dei database.  
   
 ```sql  

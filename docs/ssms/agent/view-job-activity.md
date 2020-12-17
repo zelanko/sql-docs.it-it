@@ -16,13 +16,13 @@ ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 04c42de9a98d507367cb2c2256a7c1f241baf1fc
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 1476f1e4ad5699ddfef144f33947911b6c731343
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92030681"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482144"
 ---
 # <a name="view-job-activity"></a>Visualizza attività processi
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,13 +43,13 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-view-job-activity"></a>Per visualizzare l'attività del processo  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], quindi espandere questa istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], quindi espandere questa istanza.  
   
 2.  Espandere **SQL Server Agent**.  
   
 3.  Fare clic con il pulsante destro del mouse su **Monitoraggio attività processi** e scegliere **Visualizza attività processi**.  
   
-4.  In **Monitoraggio attività processo**è possibile visualizzare i dettagli relativi a ogni processo definito nel server.  
+4.  In **Monitoraggio attività processo** è possibile visualizzare i dettagli relativi a ogni processo definito nel server.  
   
 5.  Fare clic con il pulsante destro del mouse su un processo per avviarlo, arrestarlo, attivarlo o disabilitarlo, aggiornarne lo stato visualizzato in Monitoraggio attività processo, eliminarlo o visualizzarne la cronologia o le proprietà.  Per avviare, arrestare, attivare o disabilitare o aggiornare più processi, selezionare più righe in Monitoraggio attività processo e fare clic con il pulsante destro del mouse.  
   
@@ -59,7 +59,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-view-job-activity"></a>Per visualizzare l'attività del processo  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

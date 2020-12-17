@@ -15,13 +15,13 @@ ms.assetid: 81dfcbe4-3000-4e77-99de-bf85fef63a12
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3c30588555fafa4922af3434271759614f19b1df
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 733e88a41fcf1d2fca045351610199cbc6375e9c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037994"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423868"
 ---
 # <a name="designate-an-events-forwarding-server"></a>Impostare un server di inoltro eventi
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,9 +48,9 @@ Questo argomento descrive come designare un server al quale verranno inoltrati e
   
 3.  Nella finestra di dialogo **Proprietà SQL Server Agent -**_nome_server_ fare clic su **Avanzate** in **Selezione pagina**.  
   
-4.  In **Inoltro eventi SQL Server**selezionare la casella di controllo **Inoltra eventi a un altro server** .  
+4.  In **Inoltro eventi SQL Server** selezionare la casella di controllo **Inoltra eventi a un altro server** .  
   
-5.  Nell'elenco **Server** fare clic su un server e quindi in **Eventi**selezionare una delle opzioni seguenti:  
+5.  Nell'elenco **Server** fare clic su un server e quindi in **Eventi** selezionare una delle opzioni seguenti:  
   
     -   Selezionare **Eventi non gestiti** per inoltrare solo gli eventi che non sono stati gestiti da avvisi locali.  
   

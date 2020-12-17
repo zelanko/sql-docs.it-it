@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 82c949647cf670c0e335b2c4446c248fea86581d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e7d7b36c2c19d48fec393e38c741244f6713dcd3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196326"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470632"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scenari di data science e modelli di soluzioni
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "92196326"
 Questo articolo descrive una serie di modelli di soluzioni di Machine Learning di SQL Server. Questi modelli illustrano le procedure consigliate e rendono disponibili gli elementi fondamentali che consentono di implementare rapidamente una soluzione di Machine Learning. Ogni modello è progettato per risolvere un determinato problema di data science, per un settore specifico o verticale.
 Le attività incluse in ogni modello vanno dalla preparazione dei dati alla progettazione della funzionalità fino al training e alla valutazione del modello. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Usare questi modelli per informazioni sul funzionamento di [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. I modelli possono essere personalizzati in base allo scenario in uso per creare una soluzione personalizzata.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"
 Usare questi modelli per informazioni sul funzionamento di Machine Learning Services per SQL Server. I modelli possono essere personalizzati in base allo scenario in uso per creare una soluzione personalizzata.
 ::: moniker-end
 
@@ -79,9 +79,9 @@ Ogni soluzione include dati di esempio, codice R o codice Python e stored proced
 
 **Modalità:** Questa soluzione è incentrata sulla risposta alla domanda "Quando si guasterà un dispositivo attualmente funzionante?" I dati di input rappresentano misurazioni simulate di sensori per motori di aerei. I dati ottenuti dal monitoraggio delle condizioni di funzionamento correnti del motore, quali ciclo di lavoro corrente, impostazioni e misurazioni dei sensori, vengono usati per creare tre tipi di modelli predittivi:
 
--   **Modelli di regressione**per stimare quanto un motore può continuare a funzionare prima di bloccarsi. Il modello di esempio consente di stimare la metrica "Vita utile rimanente", detta anche "Tempo fra i guasti".
+-   **Modelli di regressione** per stimare quanto un motore può continuare a funzionare prima di bloccarsi. Il modello di esempio consente di stimare la metrica "Vita utile rimanente", detta anche "Tempo fra i guasti".
   
--   **Modelli di classificazione**per determinare la probabilità che un motore si guasti.
+-   **Modelli di classificazione** per determinare la probabilità che un motore si guasti.
   
     Il **modello di classificazione binario** stima se un motore si guasterà entro un determinato periodo di tempo.
 

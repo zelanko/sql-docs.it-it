@@ -18,13 +18,13 @@ ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 33621e680b958bf6945fb26fa82209ee640ba9f2
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: d0ec97acbbae3f0e5947348ba35308bd3cfc86ff
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92033939"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424947"
 ---
 # <a name="assign-alerts-to-an-operator"></a>Assegnazione di avvisi a un operatore
 
@@ -54,17 +54,17 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono assegnare av
   
 #### <a name="to-assign-alerts-to-an-operator"></a>Per assegnare avvisi a un operatore  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server contenente l'operatore a cui si desidera assegnare un avviso.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server contenente l'operatore a cui si desidera assegnare un avviso.  
   
 2.  Fare clic sul segno più per espandere **SQL Server Agent**.  
   
 3.  Fare clic sul segno più per espandere la cartella **Operatori** .  
   
-4.  Fare clic con il pulsante destro del mouse sull'operatore a cui assegnare un avviso, scegliere **Proprietà**e selezionare la pagina **Notifiche** .  
+4.  Fare clic con il pulsante destro del mouse sull'operatore a cui assegnare un avviso, scegliere **Proprietà** e selezionare la pagina **Notifiche** .  
   
 5.  Nella finestra di dialogo **Proprietà**_nome\_operatore_ in **Seleziona una pagina** selezionare **Notifiche**.  
   
-6.  Nell'area **Visualizza le notifiche inviate all'utente per**selezionare **Avvisi** per visualizzare un elenco di avvisi inviati all'operatore oppure selezionare **Processi** per visualizzare un elenco dei processi che inviano notifiche all'operatore. Selezionare una o più tra le caselle di controllo seguenti per definire il metodo di notifica secondo le necessità: **Posta elettronica**, **CERCAPERSONE**oppure **Net Send**.  
+6.  Nell'area **Visualizza le notifiche inviate all'utente per** selezionare **Avvisi** per visualizzare un elenco di avvisi inviati all'operatore oppure selezionare **Processi** per visualizzare un elenco dei processi che inviano notifiche all'operatore. Selezionare una o più tra le caselle di controllo seguenti per definire il metodo di notifica secondo le necessità: **Posta elettronica**, **CERCAPERSONE** oppure **Net Send**.  
   
 7.  Al termine, fare clic su **OK**.  
   
@@ -72,7 +72,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono assegnare av
   
 #### <a name="to-assign-alerts-to-an-operator"></a>Per assegnare avvisi a un operatore  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

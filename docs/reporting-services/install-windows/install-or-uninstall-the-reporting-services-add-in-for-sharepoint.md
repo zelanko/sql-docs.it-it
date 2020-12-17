@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fc01d1323d3145b16c9a6317509e72715f5a12ce
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: b4c8232909187894df11b7b1198fdb3416fbd1e4
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91890863"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425482"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint (SSRS)
 
@@ -157,7 +157,7 @@ Rssharepoint.msi /?
 ### <a name="to-uninstall-from-windows-control-panel"></a>Per eseguire la disinstallazione dal Pannello di controllo di Windows  
  Per avviare la procedura guidata dal Pannello di controllo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e rimuovere il componente aggiuntivo:  
   
-1.  In **Programmi**nel Pannello di controllo selezionare **Disinstalla un programma**  
+1.  In **Programmi** nel Pannello di controllo selezionare **Disinstalla un programma**  
   
 2.  Selezionare **Componente aggiuntivo Microsoft SQL Server RS per SharePoint**. È inoltre possibile avviare la disinstallazione guidata eseguendo **rssharepoint.msi** dal prompt dei comandi senza opzioni.  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09f898ac65e48977b98b55c1f6b5e5ed9057ee49
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 35d75fe78e9631423f6dc9acc48cd89ef41d8d79
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810210"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641902"
 ---
 # <a name="system-base-tables"></a>Tabelle di base di sistema
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "91810210"
 |**sys.sysguidrefs**|Esiste in ogni database. Contiene una riga per ogni riferimento a ID classificati GUID.|  
   
 ## <a name="updating-system-base-tables"></a>Aggiornamento delle tabelle di base di sistema    
-È possibile visualizzare i dati delle tabelle di sistema tramite le viste del catalogo di sistema. Per aggiornare i metadati in una tabella di base di sistema, utilizzare l'interfaccia TSQL appropriata, ad esempio istruzioni DDL. Non è possibile aggiornare manualmente le tabelle di sistema. SQL Server segnala i messaggi seguenti quando si eseguono gli aggiornamenti diretti delle tabelle di sistema.
+È possibile visualizzare i dati nelle tabelle di sistema tramite le viste del catalogo di sistema. Per aggiornare i metadati in una tabella di base di sistema, utilizzare l'interfaccia TSQL appropriata, ad esempio istruzioni DDL. Non è possibile aggiornare manualmente le tabelle di sistema. SQL Server segnala i messaggi seguenti quando si eseguono gli aggiornamenti diretti delle tabelle di sistema.
 
 ### <a name="a-system-table-is-manually-updated"></a>Una tabella di sistema viene aggiornata manualmente
 Messaggio 17659: Avviso: la tabella di sistema con ID <id> è stata aggiornata direttamente nel database con ID <id> ed è possibile che non sia stata mantenuta la coerenza a livello della cache. È necessario riavviare SQL Server.
@@ -100,4 +100,4 @@ Messaggio 3859: avviso: il catalogo di sistema è stato aggiornato direttamente 
 ### <a name="executing-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>Esecuzione del comando DBCC_CHECKDB dopo l'aggiornamento manuale di una tabella di sistema
 Messaggio 3859: avviso: il catalogo di sistema è stato aggiornato direttamente nel database con ID 17, più di recente in date_time.
 
-Se si eseguono aggiornamenti manuali a una tabella di sistema e si verifica un problema, potrebbe essere richiesto di eseguire il ripristino da un backup o di copiare i dati dal database interessato in un nuovo database. Ulteriori informazioni sui [messaggi di errore dell'azione dell'utente](../errors-events/mssqlserver-8992-database-engine-error.md?view=sql-server-ver15#user-action).
+Se si eseguono aggiornamenti manuali a una tabella di sistema e si verifica un problema, potrebbe essere richiesto di eseguire il ripristino da un backup o di copiare i dati dal database interessato in un nuovo database. Ulteriori informazioni sui [messaggi di errore dell'azione dell'utente](../errors-events/mssqlserver-8992-database-engine-error.md#user-action).

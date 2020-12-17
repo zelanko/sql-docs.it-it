@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d2a604bd27145b839476c75ea443d680e78c464
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 878d189aba259e5b69f5c27dbbc8b80b3f7f880b
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196987"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642978"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definizione dei dati MDX - CREATE MEMBER
 
@@ -115,7 +115,7 @@ WHERE ProfitRatio
 |SOLVE_ORDER|L'ordine con cui deve essere risolto il membro calcolato nel caso in cui un membro calcolato faccia riferimento a un altro membro calcolato, ovvero, quando i membri calcolati si intersecano.|  
 |FORMAT_STRING|Stringa di formato di tipo Office che può essere utilizzata dall'applicazione client per la visualizzazione dei valori delle celle.|  
 |VISIBLE|Un valore che indica se il membro calcolato è visibile in un set di righe dello schema. I membri calcolati visibili possono essere aggiunti a un set con la funzione [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Un valore diverso da zero indica che il membro calcolato è visibile. Il valore predefinito per questa proprietà è *visibile*.<br /><br /> I membri calcolati non visibili, per cui il valore è impostato su zero, vengono in genere utilizzati come passaggi intermedi in membri calcolati più complessi. A tali membri calcolati è possibile fare riferimento anche da altri tipi di membri, ad esempio le misure.|  
-|NON_EMPTY_BEHAVIOR|La misura o il set utilizzato per determinare il comportamento dei membri calcolati durante la risoluzione delle celle vuote.<br /><br /> Avviso questa proprietà è deprecata. ** \* \* \* \* ** Evitare di impostarla. Per informazioni dettagliate, vedere [deprecated Analysis Services features in SQL Server 2014](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014) .|  
+|NON_EMPTY_BEHAVIOR|La misura o il set utilizzato per determinare il comportamento dei membri calcolati durante la risoluzione delle celle vuote.<br /><br /> Avviso questa proprietà è deprecata. **\* \* \* \*** Evitare di impostarla. Per informazioni dettagliate, vedere [deprecated Analysis Services features in SQL Server 2014](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014&preserve-view=true) .|  
 |CAPTION|Una stringa che l'applicazione client utilizza come didascalia per il membro.|  
 |DISPLAY_FOLDER|Una stringa che identifica il percorso della cartella di visualizzazione che l'applicazione client utilizza per mostrarla al membro. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la barra rovesciata ( \\ ) è il separatore di livello. Per fornire più cartelle di visualizzazione per un membro definito, utilizzare un punto e virgola (;) per separare le cartelle.|  
 |ASSOCIATED_MEASURE_GROUP|Il nome del gruppo di misure al quale questo membro è associato.|  

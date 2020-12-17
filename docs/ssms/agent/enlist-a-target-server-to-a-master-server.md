@@ -17,13 +17,13 @@ ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a936e1a601401787a36470d3119897ec0c5c5b77
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 63798bf4c5697adabfce39317883792ff73de2c6
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038885"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423975"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Integrare un server di destinazione in un server master
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,9 +41,9 @@ Per le connessioni tra server master e server di destinazione sono abilitate la 
   
 #### <a name="to-enlist-a-target-server"></a>Per integrare un server di destinazione  
   
-1.  In **Esplora oggetti**espandere un server configurato come server master.  
+1.  In **Esplora oggetti** espandere un server configurato come server master.  
   
-2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, scegliere **Amministrazione multiserver**e fare clic su **Aggiungi server di destinazione**.  
+2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, scegliere **Amministrazione multiserver** e fare clic su **Aggiungi server di destinazione**.  
   
 3.  In Configurazione guidata server di destinazione, eseguire i passaggi necessari per completare la procedura.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71c53b9a1f57e5c207500d25f1ab3eb0fec16ad8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cbc72515c3ba8bcee52bff213ba11bd0b4bc2140
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985592"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641150"
 ---
 # <a name="adox-properties"></a>Proprietà ADOX
 
@@ -29,13 +29,13 @@ ms.locfileid: "88985592"
 |[Attributes (Attributi)](./attributes-property-adox.md)|Descrive le caratteristiche della colonna.|  
 |[Cluster](./clustered-property-adox.md)|Indica se l'indice è di tipo cluster.|  
 |[Comando](./command-property-adox.md)|Specifica un oggetto **comando** ADO che può essere utilizzato per creare o eseguire la procedura.|  
-|[Numero](../ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
+|[Count](../ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
 |[DateCreated](./datecreated-property-adox.md)|Indica la data di creazione dell'oggetto.|  
 |[DateModified](./datemodified-property-adox.md)|Indica la data dell'Ultima modifica apportata all'oggetto.|  
 |[DefinedSize](./definedsize-property-adox.md)|Indica le dimensioni massime indicate della colonna.|  
 |[DeleteRule](./deleterule-property-adox.md)|Indica l'azione eseguita quando viene eliminata una chiave primaria.|  
 |[IndexNulls](./indexnulls-property-adox.md)|Indica se i record con valori null nei rispettivi campi di indice contengono voci di indice.|  
-|[Elemento](../ado-api/item-property-ado.md)|Indica un membro specifico di una raccolta, in base al nome o al numero ordinale.|  
+|[Item](../ado-api/item-property-ado.md)|Indica un membro specifico di una raccolta, in base al nome o al numero ordinale.|  
 |[Nome](./name-property-adox.md)|Indica il nome dell'oggetto.|  
 |[NumericScale](./numericscale-property-adox.md)|Indica la scala di un valore numerico nella colonna.|  
 |[ParentCatalog](./parentcatalog-property-adox.md)|Specifica il catalogo padre di una tabella o di una colonna per fornire l'accesso alle proprietà specifiche del provider.|  
@@ -51,5 +51,5 @@ ms.locfileid: "88985592"
 |[UpdateRule](./updaterule-property-adox.md)|Indica l'azione eseguita quando viene aggiornata una chiave primaria.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sull'API ADOX](./adox-object-model.md?view=sql-server-ver15)   
+ [Informazioni di riferimento sull'API ADOX](./adox-object-model.md)   
  [ADO Extensions for Data Definition Language and Security (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

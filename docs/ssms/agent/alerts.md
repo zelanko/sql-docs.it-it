@@ -23,13 +23,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ea3cc85669b31eed9ba2b91d6d4c91c8b59bd603
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 82e633e1a0614882fef7775b9119077d3b9b9e84
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039225"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424755"
 ---
 # <a name="alerts"></a>Avvisi
 
@@ -98,9 +98,9 @@ Il tipo di evento determina i parametri utilizzati per specificare l'evento esat
   
 -   **Avvisa se il contatore** e **Valore**  
   
-    La soglia per l'avviso e il comportamento prodotto dall'avviso. La soglia è rappresentata da un numero. Il comportamento può essere uno dei seguenti **: è minore di**, **diventa uguale a**o **è maggiore di un numero specificato per Valore**. L'opzione **Valore** rappresenta un numero che descrive il contatore della condizione delle prestazioni. Per impostare, ad esempio, un avviso per l'oggetto prestazione **SQLServer:Locks** quando il valore **Tempo di attesa blocchi (ms)** supera i 30 minuti, selezionare **è maggiore di** e **specificare 30 come valore**.  
+    La soglia per l'avviso e il comportamento prodotto dall'avviso. La soglia è rappresentata da un numero. Il comportamento può essere uno dei seguenti **: è minore di**, **diventa uguale a** o **è maggiore di un numero specificato per Valore**. L'opzione **Valore** rappresenta un numero che descrive il contatore della condizione delle prestazioni. Per impostare, ad esempio, un avviso per l'oggetto prestazione **SQLServer:Locks** quando il valore **Tempo di attesa blocchi (ms)** supera i 30 minuti, selezionare **è maggiore di** e **specificare 30 come valore**.  
   
-    Sempre a titolo di esempio, è possibile specificare che un avviso venga generato per l'oggetto prestazione **SQLServer:Transactions** quando lo spazio disponibile in **tempdb** è minore di 1000 KB. Per procedere, scegliere il contatore **Spazio disponibile in tempdb (KB)**, **è minore di**e un **Valore** pari a **1000**.  
+    Sempre a titolo di esempio, è possibile specificare che un avviso venga generato per l'oggetto prestazione **SQLServer:Transactions** quando lo spazio disponibile in **tempdb** è minore di 1000 KB. Per procedere, scegliere il contatore **Spazio disponibile in tempdb (KB)**, **è minore di** e un **Valore** pari a **1000**.  
   
     > [!NOTE]  
     > Viene eseguito un campionamento periodico dei dati relativi alle prestazioni, che può determinare un lieve ritardo (qualche secondo) tra il raggiungimento della soglia e la generazione dell'avviso.  

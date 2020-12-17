@@ -17,13 +17,13 @@ ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 346cdbc84fb6d4af293f96b7044b0afae07dabe7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: c78142b6608ccce1d633faa08ca499383d8416de
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036584"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424754"
 ---
 # <a name="delete-a-job-category"></a>Eliminare una categoria di processi
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-delete-a-job-category"></a>Per eliminare una categoria di processi  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server in cui si desidera eliminare una categoria di processi.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server in cui si desidera eliminare una categoria di processi.  
   
 2.  Fare clic sul segno più per espandere **SQL Server Agent**.  
   
@@ -65,7 +65,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-delete-a-job-category"></a>Per eliminare una categoria di processi  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

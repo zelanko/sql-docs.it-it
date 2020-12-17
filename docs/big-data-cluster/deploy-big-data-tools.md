@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 27248c9a8ef05b8662f56255cab47e47bd2959f4
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e6571c92f68412a464b96964be4b02d22a106a0b
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257231"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489701"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installare gli strumenti per Big Data di SQL Server 2019
 
@@ -33,7 +33,7 @@ La tabella seguente elenca gli strumenti comuni per i cluster Big Data e indica 
 | `kubectl`<sup>1</sup> | Sì | Strumento da riga di comando per il monitoraggio del cluster Kubernetes sottostante ([altre informazioni](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio** | Sì | Strumento grafico multipiattaforma per l'esecuzione di query su SQL Server. | [Installazione](../azure-data-studio/download-azure-data-studio.md) |
 | **Estensione di virtualizzazione dei dati** | Sì | Estensione per Azure Data Studio con una procedura guidata di virtualizzazione dei dati. | [Installazione](../azure-data-studio/extensions/data-virtualization-extension.md) |
-| **Interfaccia della riga di comando di Azure**<sup>2</sup> | Per il servizio Azure Kubernetes | Interfaccia della riga di comando moderna per la gestione dei servizi di Azure. Viene usata con distribuzioni di cluster Big Data nel servizio Azure Kubernetes ([altre informazioni](/cli/azure/?view=azure-cli-latest&preserve-view=true)). | [Installazione](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) |
+| **Interfaccia della riga di comando di Azure**<sup>2</sup> | Per il servizio Azure Kubernetes | Interfaccia della riga di comando moderna per la gestione dei servizi di Azure. Viene usata con distribuzioni di cluster Big Data nel servizio Azure Kubernetes ([altre informazioni](/cli/azure/)). | [Installazione](/cli/azure/install-azure-cli) |
 | **mssql-cli** | Facoltativo | Interfaccia della riga di comando moderna per l'esecuzione di query su SQL Server ([altre informazioni](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | Per alcuni script | Strumento da riga di comando legacy per l'esecuzione di query su SQL Server ([altre informazioni](../tools/sqlcmd-utility.md)). Potrebbe essere necessario installare Microsoft ODBC Driver 11 per SQL Server prima di installare il pacchetto SQLCMD. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | Per alcuni script | Strumento da riga di comando per il trasferimento di dati con URL. | [Windows](https://curl.haxx.se/windows/) \| Linux: installare il pacchetto curl |

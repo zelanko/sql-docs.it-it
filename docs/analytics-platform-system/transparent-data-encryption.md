@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f80767ef3b371260e916aef386dd1c8dbc755586
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: dc6b582895a684386ed2d14b0c31612dcd0a47d1
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777730"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641567"
 ---
 # <a name="transparent-data-encryption"></a>Transparent Data Encryption
 È possibile adottare diverse precauzioni per proteggere il database, ad esempio la progettazione di un sistema sicuro, la crittografia di asset riservati e la creazione di un firewall che protegga i server di database. Tuttavia, per uno scenario in cui i supporti fisici (ad esempio unità o nastri di backup) vengono rubati, un malintenzionato può solo ripristinare o alleghire il database ed esplorare i dati. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
@@ -142,7 +142,7 @@ Per visualizzare i metadati implicati con Transparent Data Encryption è necessa
 ## <a name="considerations"></a>Considerazioni  
 Durante un'analisi di una nuova crittografia di un database, le operazioni di manutenzione per il database sono disabilitate.  
   
-È possibile trovare lo stato della crittografia del database utilizzando la vista a gestione dinamica **sys. dm_pdw_nodes_database_encryption_keys** . Per altre informazioni, vedere la sezione *viste del catalogo e viste a gestione dinamica* più indietro in questo articolo.  
+È possibile trovare lo stato della crittografia del database utilizzando la vista a gestione dinamica **sys.dm_pdw_nodes_database_encryption_keys** . Per altre informazioni, vedere la sezione *viste del catalogo e viste a gestione dinamica* più indietro in questo articolo.  
   
 ### <a name="restrictions"></a>Restrizioni  
 Le operazioni seguenti non sono consentite durante le `CREATE DATABASE ENCRYPTION KEY` `ALTER DATABASE ENCRYPTION KEY` istruzioni,, `DROP DATABASE ENCRYPTION KEY` o `ALTER DATABASE...SET ENCRYPTION` .  
@@ -207,7 +207,7 @@ La chiave di crittografia del database è protetta dai certificati archiviati ne
   
 Il sistema può accedere alle chiavi senza richiedere l'intervento dell'uomo (ad esempio, fornire una password). Se il certificato non è disponibile, il sistema restituirà un errore che indica che non è possibile decrittografare la chiave di crittografia finché non è disponibile il certificato appropriato.  
   
-Quando si trasferisce un database da un appliance a un altro, il certificato utilizzato per proteggere la relativa chiave di crittografia deve essere ripristinato per primo nel server di destinazione. Il database può quindi essere ripristinato come di consueto. Per ulteriori informazioni, vedere la documentazione di SQL Server standard, in [spostare un database protetto con Transparent Data Encryption in un'altra SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md?view=sql-server-ver15).  
+Quando si trasferisce un database da un appliance a un altro, il certificato utilizzato per proteggere la relativa chiave di crittografia deve essere ripristinato per primo nel server di destinazione. Il database può quindi essere ripristinato come di consueto. Per ulteriori informazioni, vedere la documentazione di SQL Server standard, in [spostare un database protetto con Transparent Data Encryption in un'altra SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
   
 I certificati usati per crittografare chiavi DEK devono essere conservati finché sono presenti backup del database che li usano. I backup dei certificati devono includere la chiave privata del certificato, perché senza la chiave privata non è possibile usare un certificato per il ripristino del database. Tali backup della chiave privata del certificato vengono archiviati in un file separato, protetto da una password che è necessario fornire per il ripristino del certificato.  
   
@@ -246,7 +246,7 @@ Esempio di azione per sostituire una macchina virtuale.
   
 Durante l'aggiornamento, se un database utente è crittografato e la password DMK non viene specificata, l'operazione di aggiornamento avrà esito negativo. Durante la sostituzione, se non viene fornita la password corretta quando è presente una DMK, l'operazione ignorerà il passaggio di ripristino DMK. Tutti gli altri passaggi verranno completati alla fine dell'azione Sostituisci macchina virtuale. Tuttavia, l'azione segnalerà un errore alla fine per indicare che sono necessari ulteriori passaggi. Nei log del programma di installazione (che si trovano in **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup \\<Time-Stamp> \Detail-Setup**), verrà visualizzato l'avviso seguente in prossimità della fine.  
   
-`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
+`**_ WARNING \_\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
 Eseguire manualmente queste istruzioni in PDW e riavviare Appliance per ripristinare la DMK:  
   

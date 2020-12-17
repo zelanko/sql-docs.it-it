@@ -21,13 +21,13 @@ ms.assetid: 4cb37dc6-1134-405d-8590-58b44dcf63b2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0c20b81d9f45e4d9c700f83be5f9a4c2e47c07f4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 7008a6bb91e1d3976f76bcd3e22e3881de424fd7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92033252"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423761"
 ---
 # <a name="disable-or-reactivate-an-alert"></a>Disabilitazione o riattivazione di un avviso
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,7 @@ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadm
   
 #### <a name="to-disable-or-reactivate-an-alert"></a>Per disabilitare o riattivare un avviso  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server che contiene l'avviso da disabilitare o riattivare.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server che contiene l'avviso da disabilitare o riattivare.  
   
 2.  Fare clic sul segno più per espandere **SQL Server Agent**.  
   
@@ -61,7 +61,7 @@ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadm
   
 #### <a name="to-disable-or-reactivate-an-alert"></a>Per disabilitare o riattivare un avviso  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

@@ -9,20 +9,20 @@ ms.author: davidph
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d0da76c639048e9479afd575b584275a9bb51c6
-ms.sourcegitcommit: d2dba862814c60f00b16d4e412bf673b2c0dee5f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: fdf9cb30fead518c36fef8de4e62db4cd56d9560
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94810511"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469992"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novità di SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
 Questo articolo descrive le nuove capacità e funzionalità incluse in ogni versione di [SQL Server Machine Learning Services](sql-server-machine-learning-services.md). In ogni versione di SQL Server vengono aggiunte funzionalità di Machine Learning man mano che l'integrazione tra piattaforma dati, analisi avanzata e data science viene espansa, estesa e approfondita. 
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 ## <a name="new-in-sql-server-2019"></a>Novità di SQL Server 2019
 
 In questa versione sono state aggiunte le funzionalità più richieste per le operazioni di Machine Learning R e Python in SQL Server. Per altre informazioni su tutte le funzionalità di questa versione, vedere [Novità di SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) e [Note sulla versione per SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
@@ -41,7 +41,7 @@ Di seguito sono elencate le nuove funzionalità di Machine Learning Services per
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="new-in-sql-server-2017"></a>Novità di SQL Server 2017
 
 In questa versione sono stati aggiunti il [supporto di Python e algoritmi di Machine Learning leader del settore](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Rinominato per riflettere il nuovo ambito, SQL Server 2017 vede l'introduzione di [SQL Server Machine Learning Services (In-Database)](sql-server-machine-learning-services.md), con supporto del linguaggio sia per Python che per R. 
@@ -90,7 +90,7 @@ Sono disponibili [**modelli con training preliminare**](install/sql-pretrained-m
 In questa versione viene aggiunto anche [SQL Server Machine Learning Server (Standalone)](r/r-server-standalone.md), un server di data science completamente indipendente che supporta l'analisi predittiva e statistica in R e Python. Come per R Services, questo server è la versione successiva di SQL Server 2016 R Server (Standalone). Con il server autonomo è possibile distribuire e ridimensionare soluzioni R o Python senza dipendenze in SQL Server.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016"
 ## <a name="new-in-sql-server-2016"></a>Novità di SQL Server 2016
 
 In questa versione sono state introdotte funzionalità di Machine Learning in SQL Server tramite **SQL Server 2016 R Services**, un motore di analisi nel database per l'elaborazione di script R sui dati residenti all'interno di un'istanza del motore di database.
@@ -106,7 +106,7 @@ Per informazioni complete sugli annunci di funzionalità, vedere [Novità di SQL
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 ## <a name="linux-support"></a>Supporto di Linux
 
 In SQL Server 2019 viene aggiunto il supporto di Linux per R e Python quando si installano i pacchetti di Machine Learning con un'istanza del motore di database. Per altre informazioni, vedere [Installare SQL Server Machine Learning Services in Linux](../linux/sql-server-linux-setup-machine-learning.md).

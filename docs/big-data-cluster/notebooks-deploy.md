@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bcf42d76f855e6fc722caa18f3c0d3c3672f9ec7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 24fef9f2290a85a8e87e8b3b3dd2098b31a9d792
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725842"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489618"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>Distribuire un cluster Big Data di SQL Server con un notebook di Azure Data Studio
 
@@ -37,7 +37,7 @@ Oltre ai prerequisiti precedenti, la distribuzione di un cluster Big Data di SQL
 
 * [azdata](../azdata/install/deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
-* [Interfaccia della riga di comando di Azure (in caso di distribuzione in Azure)](/cli/azure/install-azure-cli?view=azure-cli-latest)
+* [Interfaccia della riga di comando di Azure (in caso di distribuzione in Azure)](/cli/azure/install-azure-cli)
 
 ## <a name="launch-the-notebook"></a>Avviare il notebook
 

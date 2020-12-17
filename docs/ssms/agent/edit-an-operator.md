@@ -16,13 +16,13 @@ ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6a480e487254f0acc266f6295cee385be172f76e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 61e860575b5b8f4ed7d7c875ec804089b9b3800b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037401"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424196"
 ---
 # <a name="edit-an-operator"></a>Modifica di un operatore
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +51,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono modificare g
   
 #### <a name="to-edit-an-operator"></a>Per modificare un operatore  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server che contiene l'operatore da modificare.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server che contiene l'operatore da modificare.  
   
 2.  Fare clic sul segno più per espandere **SQL Server Agent**.  
   
@@ -73,7 +73,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono modificare g
   
 #### <a name="to-edit-an-operator"></a>Per modificare un operatore  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

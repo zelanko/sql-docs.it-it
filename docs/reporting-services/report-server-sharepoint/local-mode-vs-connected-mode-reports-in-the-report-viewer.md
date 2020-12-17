@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d21d06182f259451f53fed45ba77a5cbacbb382d
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 76d9f23cb32818c67c34e562b6b1f714a5666c72
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767002"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482262"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Report in modalità locale e con connessione in Visualizzatore di report
 
@@ -33,7 +33,7 @@ ms.locfileid: "83767002"
 
  **Modalità locale:** se è disponibile un'estensione dati che supporta la modalità locale, il Visualizzatore report esegue direttamente il rendering dei report da SharePoint. In *modalità locale* non è presente un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È necessario installare il componente aggiuntivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per prodotti SharePoint, ma non è richiesto alcun server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Con la modalità locale, gli utenti possono visualizzare report ma **non** potranno accedere alle funzionalità lato server quali sottoscrizioni e avvisi dati.  
   
- La**modalità connessa**, definita anche *modalità remota* , richiede un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint, connesso alla farm di SharePoint, in modo che il Visualizzatore report possa eseguire il rendering dei report.  
+ La **modalità connessa**, definita anche *modalità remota* , richiede un server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint, connesso alla farm di SharePoint, in modo che il Visualizzatore report possa eseguire il rendering dei report.  
   
  Di seguito è riportato un elenco delle estensioni per l'elaborazione dati che supportano la creazione di report in modalità locale:  
   

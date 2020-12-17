@@ -15,13 +15,13 @@ ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9ccc873742a2c2c8d547d3d0a8200e6fbf6beb90
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 50ea1739cda75e303e3f0d9f1d6ac50b8c876950
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034994"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423622"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadm
   
 4.  Fare clic con il pulsante destro del mouse sull'avviso da modificare e selezionare **Proprietà**.  
   
-5.  Aggiornare le proprietà dell'avviso nelle pagine **Generale**, **Risposta**e **Opzioni** .  
+5.  Aggiornare le proprietà dell'avviso nelle pagine **Generale**, **Risposta** e **Opzioni** .  
   
 6.  Al termine, fare clic su **OK**.  
   
@@ -58,7 +58,7 @@ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadm
   
 #### <a name="to-edit-an-alert"></a>Per modificare un avviso  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

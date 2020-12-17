@@ -9,24 +9,24 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e4c25f5fedb0671840406bcb2364fa918de1219a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: ef7dd974d77b60d3b03cf8799f7707481f32e91d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173392"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470372"
 ---
 # <a name="python-tutorial-train-a-linear-regression-model-with-sql-machine-learning"></a>Esercitazione su Python: Eseguire il training di un modello di regressione lineare con Machine Learning in SQL Server
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Nella terza parte di questa serie di esercitazioni in quattro parti verrà eseguito il training di un modello di regressione lineare in Python. Nella parte successiva della serie questo modello verrà distribuito in un database SQL Server con Machine Learning Services o in cluster Big Data.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Nella terza parte di questa serie di esercitazioni in quattro parti verrà eseguito il training di un modello di regressione lineare in Python. Nella parte successiva della serie questo modello verrà distribuito in un database di SQL Server con Machine Learning Services.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Nella terza parte di questa serie di esercitazioni in quattro parti verrà eseguito il training di un modello di regressione lineare in Python. Nella parte successiva di questa serie questo modello verrà distribuito in un database di Istanza gestita di SQL di Azure con Machine Learning Services.
 ::: moniker-end
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c38b184164109ee3e6fed18a439cd904119a3ec6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1dfc4a2c44b6ea8c23b9cb56b3a2e6d844e9ca77
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985662"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641333"
 ---
 # <a name="adox-objects"></a>Oggetti ADOX
 ## <a name="adox-object-summary"></a>Riepilogo oggetto ADOX  
@@ -33,7 +33,7 @@ ms.locfileid: "88985662"
 |[Chiave](./key-object-adox.md)|Rappresenta un campo chiave primaria, esterna o univoca di una tabella di database.|  
 |[Procedura](./procedure-object-adox.md)|Rappresenta un stored procedure.|  
 |[Tabella](./table-object-adox.md)|Rappresenta una tabella di database, inclusi colonne, indici e chiavi.|  
-|[User](./user-object-adox.md)|Rappresenta un account utente che dispone di autorizzazioni di accesso all'interno di un database protetto.|  
+|[Utente](./user-object-adox.md)|Rappresenta un account utente che dispone di autorizzazioni di accesso all'interno di un database protetto.|  
 |[Visualizzazione](./view-object-adox.md)|Rappresenta un set filtrato di record o una tabella virtuale.|  
   
  Le relazioni tra questi oggetti sono illustrate nel [modello a oggetti ADOX](./adox-object-model.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "88985662"
  Ogni oggetto può essere contenuto nella raccolta corrispondente. Un oggetto **Table** , ad esempio, può essere contenuto in una raccolta [Tables](./tables-collection-adox.md) . Per ulteriori informazioni, vedere [ADOX Collections](./adox-collections.md) o un argomento specifico della raccolta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sull'API ADOX](./adox-object-model.md?view=sql-server-ver15)   
+ [Informazioni di riferimento sull'API ADOX](./adox-object-model.md)   
  [Raccolte ADOX](./adox-collections.md)   
  [Modello a oggetti ADOX](./adox-object-model.md)   
  [ADO Extensions for Data Definition Language and Security (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

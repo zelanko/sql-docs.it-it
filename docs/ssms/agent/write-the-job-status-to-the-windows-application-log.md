@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6589593d7d040f4e2f9a2bf5a690dbb42d89d142
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: c85762cabe7b30c2873e5bbdfef5301f1fcefddf
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038127"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97482095"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Registrare lo stato del processo nel registro applicazioni di Windows
 
@@ -57,13 +57,13 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 3.  Scegliere la pagina **Notifiche** .  
   
-4.  Selezionare l'opzione **Scrivi nel registro eventi delle applicazioni di Windows**e quindi scegliere una delle opzioni seguenti:  
+4.  Selezionare l'opzione **Scrivi nel registro eventi delle applicazioni di Windows** e quindi scegliere una delle opzioni seguenti:  
   
-    -   Fare clic su**In caso di esito positivo processo**per registrare lo stato del processo quando questo viene completato correttamente.  
+    -   Fare clic su **In caso di esito positivo processo** per registrare lo stato del processo quando questo viene completato correttamente.  
   
-    -   Fare clic su**In caso di esito negativo processo**per registrare lo stato del processo quando questo non viene completato correttamente.  
+    -   Fare clic su **In caso di esito negativo processo** per registrare lo stato del processo quando questo non viene completato correttamente.  
   
-    -   Fare clic su**Al termine del processo** per registrare lo stato del processo indipendentemente dal suo completamento.  
+    -   Fare clic su **Al termine del processo** per registrare lo stato del processo indipendentemente dal suo completamento.  
   
 ## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Utilizzo di SQL Server Management Objects  
 **Per registrare lo stato del processo nel registro applicazioni di Windows**  

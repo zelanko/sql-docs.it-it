@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4f6f001aa71a5ae2fd397fae2d89bdd951956987
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 735176a4fbb92d91d446f47492b2ddaa11098b2e
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713829"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489351"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Lezione 1: Navigazione di base in Ottimizzazione guidata motore di database (DTA)
 
@@ -32,10 +32,10 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
 
 - Installare [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Scaricare i [database di esempio AdventureWorks2017](../../samples/adventureworks-install-configure.md?view=sql-server-2017).
+- Scaricare i [database di esempio AdventureWorks2017](../../samples/adventureworks-install-configure.md).
 
 
-Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017).
+Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
   >[!NOTE]
   > Questa esercitazione è destinata agli utenti che hanno familiarità con l'uso di SQL Server Management Studio e con attività semplici di amministrazione del database. 

@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: a8f3cfc9e47cc18df2728e7b6078cc355c488fa0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c5c908d8db988e83d682bbf636de08ef86a8223a
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440799"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644064"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
 
@@ -70,9 +70,9 @@ I contatori restituiti sono specifici per ogni operatore per ogni thread. I risu
 |actual_read_row_count|**bigint**|Numero di righe lette da un operatore prima dell'applicazione del predicato residuo.| 
 |estimated_read_row_count|**bigint**|**Si applica a:** A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Numero di righe stimate per la lettura da parte di un operatore prima dell'applicazione del predicato residuo.|  
   
-## <a name="remarks"></a>Commenti
+## <a name="remarks"></a>Osservazioni
 
-Si applicano le stesse osservazioni in [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) .  
+Si applicano le stesse osservazioni in [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md) .  
 
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `VIEW SERVER STATE` per il server.  

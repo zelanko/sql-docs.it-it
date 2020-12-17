@@ -16,13 +16,13 @@ ms.assetid: 5041261f-0c32-4d4a-8bee-59a6c16200dd
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c0a05ea8209ae22ef7408d29fe58cc2aca9985c7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f0e345b59e3bd625e65dcc9d4c28d063735c9c03
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037964"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423848"
 ---
 # <a name="disable-or-enable-a-job"></a>Abilitare o disabilitare un processo
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,11 +41,11 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-disable-or-enable-a-job"></a>Per disabilitare o abilitare un processo  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], quindi espandere questa istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], quindi espandere questa istanza.  
   
 2.  Espandere **SQL Server Agent**.  
   
-3.  Espandere **Processi**e fare clic con il pulsante destro del mouse sul processo da disabilitare o abilitare.  
+3.  Espandere **Processi** e fare clic con il pulsante destro del mouse sul processo da disabilitare o abilitare.  
   
 4.  Per disabilitare un processo fare clic su **Disabilita**. Per abilitare un processo fare clic su **Abilita**.  
   
@@ -53,7 +53,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-disable-or-enable-a-job"></a>Per disabilitare o abilitare un processo  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
