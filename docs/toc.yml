@@ -1836,7 +1836,7 @@
       items:
         - name: Gestione
           items:
-            - name: Creazione
+            - name: Create
               href: relational-databases/tables/create-tables-database-engine.md
             - name: Delete
               href: relational-databases/tables/delete-tables-database-engine.md
@@ -9728,15 +9728,28 @@
             - name: Commenti e suggerimenti >>
               href: 'https://aka.ms/sqlfeedback'
     - name: SqlPackage.exe
+      href: tools/sqlpackage/sqlpackage.md
       items:
         - name: Installare sqlpackage
-          href: tools/sqlpackage-download.md
+          href: tools/sqlpackage/sqlpackage-download.md
         - name: Note sulla versione
-          href: tools/release-notes-sqlpackage.md
-        - name: Informazioni di riferimento su sqlpackage
-          href: tools/sqlpackage.md
+          href: tools/sqlpackage/release-notes-sqlpackage.md
+        - name: Azioni SqlPackage
+          items:
+            - name: Extract SqlPackage
+              href: tools/sqlpackage/sqlpackage-extract.md
+            - name: Publish SqlPackage
+              href: tools/sqlpackage/sqlpackage-publish.md
+            - name: Export SqlPackage
+              href: tools/sqlpackage/sqlpackage-export.md
+            - name: Import SqlPackage
+              href: tools/sqlpackage/sqlpackage-import.md
+            - name: Deploy Report e Drift Report SqlPackage
+              href: tools/sqlpackage/sqlpackage-deploy-drift-report.md
+            - name: Script SqlPackage
+              href: tools/sqlpackage/sqlpackage-script.md
         - name: SqlPackage nelle pipeline di sviluppo
-          href: tools/sqlpackage-pipelines.md
+          href: tools/sqlpackage/sqlpackage-pipelines.md
     - name: SQL Server Profiler
       href: tools/sql-server-profiler/sql-server-profiler.md
       items:
