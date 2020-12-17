@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: b0cf5e6c46add1ce49b4d95f6eebe1feb2fb496f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 04b814eece5041851b932f19e9e1d4cd1b63e035
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987767"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559193"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilizzo di MSDeploy con il provider dbSqlPackage
 
@@ -29,7 +29,7 @@ ms.locfileid: "91987767"
   
 -   **Script**: crea uno script Transact\-SQL equivalente allo script eseguito dall'azione di pubblicazione.  
   
-Per altre informazioni su DACFx, vedere la documentazione dell'API gestita DACFx all'indirizzo [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) oppure [SqlPackage.exe](../tools/sqlpackage.md) (strumento della riga di comando di DACFx).  
+Per altre informazioni su DACFx, vedere la documentazione dell'API gestita DACFx all'indirizzo [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) oppure [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) (strumento della riga di comando di DACFx).  
   
 > [!IMPORTANT]  
 > La funzionalità del provider dbSqlPackage verrà rimossa a partire dalla prossima versione principale di Visual Studio. Per informazioni su come eseguire la pubblicazione del database con Distribuzione Web, vedere [dbDacFx Provider for Incremental Database publishing](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing) (Provider dbDacFx per la pubblicazione di database incrementale).  

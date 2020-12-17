@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/08/2019
-ms.openlocfilehash: 31ec98b4fa474ab97b3cac37f49ae885f04d1414
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc0463e49bf19c60cab94a12c10c4d8e8289e848
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418667"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402827"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Operazioni di backup e ripristino per Reporting Services
 
@@ -33,7 +33,7 @@ ms.locfileid: "88418667"
     - [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
     - [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+    ::: moniker range="=sql-server-2016"
   
     - [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
 
@@ -46,21 +46,21 @@ ms.locfileid: "88418667"
   
 -   Per il backup del database **reportservertempdb** usare il modello di recupero con registrazione minima.  
   
--   Per ogni database, è possibile utilizzare diverse pianificazioni di backup. È consigliabile eseguire il backup del database **reportservertempdb** solo per non doverlo ricreare nel caso in cui si verifichi un errore hardware. Nel caso di un errore hardware, non è necessario recuperare i dati di **reportservertempdb**, ma è necessaria la struttura della tabella. Se il database **reportservertempdb**viene perso, l'unico modo per recuperarlo consiste nel ricreare il database del server di report. Se si ricrea il database **reportservertempdb**, è importante assegnare lo stesso nome del database del server di report principale.  
+-   Per ogni database, è possibile utilizzare diverse pianificazioni di backup. È consigliabile eseguire il backup del database **reportservertempdb** solo per non doverlo ricreare nel caso in cui si verifichi un errore hardware. Nel caso di un errore hardware, non è necessario recuperare i dati di **reportservertempdb**, ma è necessaria la struttura della tabella. Se il database **reportservertempdb** viene perso, l'unico modo per recuperarlo consiste nel ricreare il database del server di report. Se si ricrea il database **reportservertempdb**, è importante assegnare lo stesso nome del database del server di report principale.  
   
  Per altre informazioni sul backup e il ripristino dei database relazionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"  
+::: moniker range="=sql-server-2016"
 
 > [!IMPORTANT]  
->  Se il server di report è in modalità SharePoint, è necessario occuparsi di altri database, tra cui i database di configurazione di SharePoint e il database di avvisi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In modalità SharePoint vengono creati tre database per ciascuna applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : **reportserver**, **reportservertempdb**e **dataalerting** . Per altre informazioni, vedere [Eseguire il backup e il ripristino di applicazioni di servizio SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md).  
+>  Se il server di report è in modalità SharePoint, è necessario occuparsi di altri database, tra cui i database di configurazione di SharePoint e il database di avvisi di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In modalità SharePoint vengono creati tre database per ciascuna applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] : **reportserver**, **reportservertempdb** e **dataalerting** . Per altre informazioni, vedere [Eseguire il backup e il ripristino di applicazioni di servizio SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md).  
 
 ::: moniker-end
   
 ## <a name="backing-up-the-encryption-keys"></a>Backup delle chiavi di crittografia  
  Quando si configura un'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per la prima volta, è consigliabile eseguire il backup delle chiavi di crittografia. È consigliabile eseguire il backup delle chiavi anche ogni volta che si modifica l'identità degli account di servizio o si rinomina il computer. Per altre informazioni, vedere [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 Per i server di report in modalità SharePoint, vedere la sezione "Gestione chiavi" in [Gestire un'applicazione di servizio SharePoint di Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
 

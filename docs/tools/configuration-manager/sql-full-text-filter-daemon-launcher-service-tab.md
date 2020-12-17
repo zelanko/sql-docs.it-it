@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1be2d280499ab73f7d71056a8c9f8882f1077896
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: c682e1e3598750cbbcc2e0e508b427ed88dc1e1f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901393"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463772"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Utilità di avvio del daemon filtri full-text di SQL (scheda Servizio)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], il servizio Utilità di avvio del daemon filtri full-text di SQL (FDHOST Launcher) viene utilizzato dalla ricerca full-text in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si utilizza la ricerca full-text, questo servizio deve essere in esecuzione. Per informazioni sui processi host del daemon di filtri, vedere "Architettura della ricerca full-text" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Usare la scheda **Servizio**della finestra di dialogo **Proprietà - Utilità di avvio del daemon filtri full-text di SQL** per visualizzare o specificare le opzioni seguenti.  
+ Usare la scheda **Servizio** della finestra di dialogo **Proprietà - Utilità di avvio del daemon filtri full-text di SQL** per visualizzare o specificare le opzioni seguenti.  
   
 ## <a name="options"></a>Opzioni  
  **Percorso binario**  

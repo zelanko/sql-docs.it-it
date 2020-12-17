@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 06bfaa994c2b29959f44cfc554122465db9e0394
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: e7a618ef92a9f4a4cc969112886a4246ad25adc6
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772227"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559203"
 ---
 # <a name="retrieve-data-by-a-datareader"></a>Recuperare dati tramite un DataReader
 
@@ -53,7 +53,7 @@ Chiamare sempre il metodo **Close** una volta terminato l'uso dell'oggetto **Dat
 > Mentre un oggetto **DataReader** è aperto, l'oggetto **Connection** viene usato esclusivamente da tale oggetto **DataReader**. Non sarà possibile eseguire alcun comando per l'oggetto **Connection** né creare un altro oggetto **DataReader** fino a quando l'oggetto **DataReader** originale non viene chiuso.  
 
 > [!NOTE]
-> Non chiamare **Close** o **Dispose** su un oggetto **Connection**, un oggetto **DataReader** o su qualsiasi altro oggetto gestito nel metodo **Finalize** della classe. Nei finalizzatori rilasciare solo le risorse non gestite che la classe controlla direttamente. Se nella classe non sono presenti risorse non gestite, non includere un metodo **Finalize** nella definizione della classe. Per altre informazioni, vedere [Garbage Collection](/dotnet/standard/garbage-collection/index.md).
+> Non chiamare **Close** o **Dispose** su un oggetto **Connection**, un oggetto **DataReader** o su qualsiasi altro oggetto gestito nel metodo **Finalize** della classe. Nei finalizzatori rilasciare solo le risorse non gestite che la classe controlla direttamente. Se nella classe non sono presenti risorse non gestite, non includere un metodo **Finalize** nella definizione della classe. Per altre informazioni, vedere [Garbage Collection](/dotnet/standard/garbage-collection/index).
  
 ## <a name="retrieve-multiple-result-sets-using-nextresult"></a>Recuperare più set di risultati usando NextResult
 

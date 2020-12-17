@@ -11,13 +11,13 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f142a872688d28befefcffebfcdeb75976072863
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current'
+ms.openlocfilehash: c59e142ec924a573e127d9caa0cd7d6ac9bf9e8f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987857"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440496"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Note sulla versione per SQL Server Data Tools (SSDT)
 
@@ -755,16 +755,16 @@ _Supporto fino a SQL Server 2017._
     - Aggiunta di colonne in base all'esempio in PowerQuery
     - Opzioni di accesso ai dati nei modelli 1400 (proprietà a livello di modello usate dal motore M)
         - Abilita combinazione rapida: il valore predefinito è false, se l'opzione è impostata su true, il motore di mashup ignora i livelli di privacy dell'origine dati quando si combinano i dati
-        - Abilita reindirizzamenti legacy: il valore predefinito è false, se l'opzione è impostata su true, il motore di mashup segue i reindirizzamenti HTTP potenzialmente non sicuri.  Ad esempio, un reindirizzamento da un HTTPS a un URI HTTP  
-        - Restituisci valori di errore come Null: il valore predefinito è false, se l'opzione è impostata su true, gli errori a livello di cella vengono restituiti come Null. Se è false, viene generata un'eccezione se una cella contiene un errore  
+        - Abilita reindirizzamenti legacy: il valore predefinito è false, se l'opzione è impostata su true, il motore di mashup segue i reindirizzamenti HTTP potenzialmente non sicuri.    Ad esempio, un reindirizzamento da un HTTPS a un URI HTTP  
+        - Restituisci valori di errore come Null: il valore predefinito è false, se l'opzione è impostata su true, gli errori a livello di cella vengono restituiti come Null. Se è false, viene generata un'eccezione se una cella contiene un errore  
     - Origini dati aggiuntive (origini dati di file) che usano PowerQuery
-        - Excel 
-        - Testo/CSV 
-        - Xml 
-        - Json 
-        - Cartella 
-        - Database di Access 
-        - Archiviazione BLOB di Azure 
+        - Excel 
+        - Testo/CSV 
+        - Xml 
+        - Json 
+        - Cartella 
+        - Database di Access 
+        - Archiviazione BLOB di Azure 
     - Interfaccia utente localizzata di PowerQuery
 - Finestra degli strumenti dell'editor DAX
     - Migliorata l'esperienza di editing DAX per misure, colonne calcolate ed espressioni di righe di dettaglio, disponibile dal menu Visualizza, Altre finestre in SSDT
@@ -873,24 +873,24 @@ Esempio di utilizzo:
 In DacFx sono state aggiunte due nuove API: DacServices.Publish() e DacServices.Script(). Le API supportano anche l'esecuzione di azioni di pubblicazione+scripting+creazione di report in un'unica operazione. Esempio di utilizzo:
 
 ```
-DacServices service = new DacServices(connectionString);
-using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
-var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+DacServices service = new DacServices(connectionString);
+using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
+var options = new PublishOptions() {
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
-// Call publish and receive deployment script & report in the results
-PublishResult result = service.Publish(package, "TargetDb", options);
+// Call publish and receive deployment script & report in the results
+PublishResult result = service.Publish(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
 
-// Call script and receive deployment script & report in results
-result = service.Script(package, "TargetDb", options);
+// Call script and receive deployment script & report in results
+result = service.Script(package, "TargetDb", options);
 Console.WriteLine(result.DatabaseScript);
 Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
@@ -925,7 +925,7 @@ Per altre informazioni, vedere il [post di blog su Analysis Services](/archive/b
 
 **Servizio di integrazione**
 
-* Correzione del bug Connect [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks): spostamento di più attività pacchetto del servizio di integrazione
+* È stato corretto il bug Connect [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks) relativo allo spostamento di più attività pacchetto del servizio di integrazione
 
 ## <a name="164-ssdt-for-vs-2015"></a>16.4, SSDT per VS 2015
 
@@ -935,7 +935,7 @@ _Per SQL Server 2016._
 
 **Novità**
 
-L'opzione Confronto schema è ora supportata in SqlPackage.exe e nell'API DacFx. Per informazioni dettagliate, vedere  [Schema Compare in SqlPackage and the Data-Tier Application Framework](/archive/blogs/ssdt/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx) (Confronto schema in SqlPackage e in DacFx).
+L'opzione Confronto schema è ora supportata in SqlPackage.exe e nell'API DacFx. Per informazioni dettagliate, vedere [Schema Compare in SqlPackage and the Data-Tier Application Framework](/archive/blogs/ssdt/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx) (Confronto schema in SqlPackage e in DacFx).
 
 **Analysis Services - Modalità area di lavoro integrata per SSDT tabulare (SSAS)**
 

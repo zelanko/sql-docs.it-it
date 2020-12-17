@@ -16,13 +16,13 @@ ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4bd4131d55022e494c54a4350d666615ac59493
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f603cebc7157aa57c7f72cf2017a898cb7c6d119
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035696"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440452"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Modificare l'appartenenza a una categoria di processi
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Per modificare l'appartenenza a una categoria di processi  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server in cui si desidera modificare una categoria di processi.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server in cui si desidera modificare una categoria di processi.  
   
 2.  Fare clic sul segno più per espandere **SQL Server Agent**.  
   
@@ -61,7 +61,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Per modificare l'appartenenza a una categoria di processi  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

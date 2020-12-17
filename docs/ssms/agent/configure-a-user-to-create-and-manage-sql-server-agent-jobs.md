@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cbe9bfd3727e90b330ea894ba3e2fdc590486a29
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 33a2a8e5eee76214f9d7fdf3cedd8baaf4eeaa8b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035672"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97440442"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
 
@@ -52,13 +52,13 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 1.  Espandere un server in **Esplora oggetti**.  
   
-2.  Espandere **Sicurezza**e quindi **Account di accesso**.  
+2.  Espandere **Sicurezza** e quindi **Account di accesso**.  
   
 3.  Fare clic con il pulsante destro del mouse sull'account di accesso che si vuole aggiungere al ruolo predefinito del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e scegliere **Proprietà**.  
   
 4.  Nella pagina **Mapping utenti** della finestra di dialogo **Proprietà account di accesso** selezionare la riga contenente **msdb**.  
   
-5.  Nell'area **Appartenenza a ruoli del database per: msdb**selezionare il ruolo predefinito del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+5.  Nell'area **Appartenenza a ruoli del database per: msdb** selezionare il ruolo predefinito del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 **Per configurare un account proxy per la creazione e la gestione dei passaggi di processo di SQL Server Agent**  
   

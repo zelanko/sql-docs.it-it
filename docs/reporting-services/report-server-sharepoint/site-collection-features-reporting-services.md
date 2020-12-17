@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 052a6893f28d86a7f966edfe2a4b953ccc442e27
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 75c1c49f70eb44fbffab50ef66a3785d97a3f9ec
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764752"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461452"
 ---
 # <a name="reporting-services-site-collection-features"></a>Funzionalità di raccolta siti di Reporting Services
 
@@ -35,7 +35,7 @@ La modalità SharePoint di Reporting Services offre tre funzionalità di raccolt
 |-------------|-----------------|  
 |**Funzionalità Amministrazione centrale del server di report**|Consente di abilitare le funzionalità per gestire l'integrazione con un server di report di Reporting Services. Questa funzionalità viene installata e utilizzata solo nella raccolta siti di Amministrazione centrale SharePoint.<br /><br /> La funzionalità di integrazione del server di report viene attivata automaticamente nella raccolta siti di Amministrazione centrale SharePoint dopo aver installato il componente aggiuntivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] per prodotti SharePoint. In alcune situazioni è necessario attivare la funzionalità manualmente. Per attivare la funzionalità del server di report usare le pagine di Reporting Services nella pagina Impostazioni sito di Amministrazione centrale SharePoint.<br /><br /> Con la versione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services e successive del componente aggiuntivo per prodotti SharePoint, la funzionalità di integrazione del server di report viene attivata per tutte le raccolte siti esistenti al momento dell'installazione del componente aggiuntivo. La funzionalità risulta inoltre attivata automaticamente per le nuove raccolte siti.|  
 |**Funzionalità di integrazione con il server di report**|Consente di generare report avanzati tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services<br /><br /> Questa funzionalità è attiva per impostazione predefinita.|  
-|**Funzionalità di integrazione di Power View**|Consente l'esplorazione dei dati interattiva e la presentazione visiva su cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e database tabulari di Analysis Services.<br /><br /> L'accesso alla funzionalità può essere eseguito dai menu di scelta rapida delle origini dati seguenti:<br /><br /> **rdlx**<br /><br /> **rsds**<br /><br /> File di connessione con estensione**bism**<br /><br /> <br /><br /> Se [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] non è visualizzato nei menu di scelta rapida, verificare che la **Funzionalità di integrazione Power View** sia attivata.<br /><br /> Questa funzionalità è disattivata per impostazione predefinita.|  
+|**Funzionalità di integrazione di Power View**|Consente l'esplorazione dei dati interattiva e la presentazione visiva su cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e database tabulari di Analysis Services.<br /><br /> L'accesso alla funzionalità può essere eseguito dai menu di scelta rapida delle origini dati seguenti:<br /><br /> **rdlx**<br /><br /> **rsds**<br /><br /> File di connessione con estensione **bism**<br /><br /> <br /><br /> Se [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] non è visualizzato nei menu di scelta rapida, verificare che la **Funzionalità di integrazione Power View** sia attivata.<br /><br /> Questa funzionalità è disattivata per impostazione predefinita.|  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

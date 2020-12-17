@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: stevestein
 ms.author: sstein
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c93a4023ebcdb9716d7e7790ea97c8df186081f9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016'
+ms.openlocfilehash: 8f12acd87a21cca6047621abfb985906295b58c1
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000425"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461442"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Configurare la raccolta di dati di diagnostica e utilizzo per gli strumenti di SQL Server (Analisi utilizzo software)
 
@@ -125,7 +125,7 @@ Valore = (DWORD)
   
 1.  Avviare lo strumento e aprire un progetto nuovo o esistente di Analysis Services o Integration Services.  
   
-2.  Scegliere **Opzioni commenti e suggerimenti utenti di Microsoft SQL Server**dal menu ?.  
+2.  Scegliere **Opzioni commenti e suggerimenti utenti di Microsoft SQL Server** dal menu ?.  
   
 3.  Per disattivare Analisi utilizzo software, fare clic su **No, non desidero partecipare**.  
   

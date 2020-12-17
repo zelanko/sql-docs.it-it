@@ -7,18 +7,18 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: ae3932611181f99b71d72bc2365967a19c968b9c
-ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
+ms.openlocfilehash: 95fd7ef6c605bdc03bba616eff47000a58d8684a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "96125018"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97402692"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Eseguire la migrazione di un'installazione di Reporting Services (modalità nativa)
 
 Questo argomento fornisce istruzioni dettagliate per la migrazione di una delle versioni supportate seguenti di una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa a una nuova istanza di SQL Server Reporting Services:  
   
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 * [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]
 
 * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -30,7 +30,7 @@ Questo argomento fornisce istruzioni dettagliate per la migrazione di una delle 
 * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 * [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -164,7 +164,7 @@ Per altre informazioni sulle modifiche apportate in SQL Server Reporting Service
   
 1. Scegliere l'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)] da utilizzare. SQL Server Reporting Services richiede l'uso di una delle versioni seguenti per ospitare il database del server di report:  
   
-    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+    ::: moniker range="=sql-server-2017"
     * [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]
 
     * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -176,7 +176,7 @@ Per altre informazioni sulle modifiche apportate in SQL Server Reporting Service
     * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
     ::: moniker-end
 
-    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+    ::: moniker range="=sql-server-2016"
     * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 
     * [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  

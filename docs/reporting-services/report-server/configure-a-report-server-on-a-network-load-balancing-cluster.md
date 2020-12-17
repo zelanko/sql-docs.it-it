@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
-ms.openlocfilehash: b5bf533e9b74edd11d6c39d10d97eeb385c9e1a9
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 674e549b48cdb96a6ecae1b8630353751195085f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933856"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461392"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurare un server di report in un cluster per il bilanciamento del carico di rete
 
@@ -43,11 +43,11 @@ ms.locfileid: "91933856"
   
 ## <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a> Come configurare la convalida dello stato di visualizzazione
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il bilanciamento del carico di rete, è necessario configurare la convalida dello stato di visualizzazione in modo che gli utenti possano visualizzare report HTML interattivi.  Questa operazione va eseguita per il servizio Web Server di report.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il bilanciamento del carico di rete, è necessario configurare la convalida dello stato di visualizzazione in modo che gli utenti possano visualizzare report HTML interattivi.
 ::: moniker-end
   
@@ -55,7 +55,7 @@ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il
   
  Per risolvere questo problema, è possibile generare una chiave di convalida arbitraria per supportare la convalida dello stato di visualizzazione e quindi configurare manualmente ciascun nodo del server di report per l'utilizzo della stessa chiave. È possibile utilizzare qualsiasi sequenza esadecimale generata casualmente. L'algoritmo di convalida, ad esempio SHA1, determina la lunghezza della sequenza esadecimale.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 1. Generare una chiave di convalida e una chiave di decrittografia mediante la funzionalità di generazione automatica disponibile in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Alla fine è necessario avere un'unica voce <`machineKey`> da incollare nel file Web.config per ogni istanza di Server di report presente nella distribuzione scale-out.  
   
@@ -75,7 +75,7 @@ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 1. Generare una chiave di convalida e una chiave di decrittografia mediante la funzionalità di generazione automatica disponibile in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Alla fine è necessario avere un'unica voce \<**MachineKey**> da incollare nel file RSReportServer.config per ogni istanza del server di report presente nella distribuzione con scalabilità orizzontale.
 

@@ -8,13 +8,13 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b698f7e3d566cd49a0106c0cdf834be894cb92f
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: 2f06c967c894092d8d89224948ed1772c9e70ed5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764799"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461472"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Impostare le opzioni di elaborazione (Reporting Services in modalità integrata SharePoint)
 
@@ -43,15 +43,15 @@ ms.locfileid: "83764799"
   
 2.  Fare clic sulla freccia in giù e selezionare **Gestisci opzioni elaborazione**.  
   
-3.  In **Opzioni aggiornamento dati**fare clic su **Usa dati snapshot**. Se viene visualizzato il messaggio "Impossibile eseguire questo report da uno snapshot perché non sono disponibili credenziali archiviate per una o più origini dati", significa che il report non è configurato per l'esecuzione automatica e, prima di impostare questa opzione, sarà necessario modificare le origini dati in modo che utilizzino credenziali archiviate.  
+3.  In **Opzioni aggiornamento dati** fare clic su **Usa dati snapshot**. Se viene visualizzato il messaggio "Impossibile eseguire questo report da uno snapshot perché non sono disponibili credenziali archiviate per una o più origini dati", significa che il report non è configurato per l'esecuzione automatica e, prima di impostare questa opzione, sarà necessario modificare le origini dati in modo che utilizzino credenziali archiviate.  
   
-4.  In **Opzioni snapshot dati**selezionare **Pianifica elaborazione dati**.  
+4.  In **Opzioni snapshot dati** selezionare **Pianifica elaborazione dati**.  
   
 5.  Se si desidera usare una pianificazione condivisa esistente, fare clic su **In base a una pianificazione condivisa** . In caso contrario, fare clic su **In base a una pianificazione personalizzata**, quindi su **Configura**.  
   
 6.  Selezionare la frequenza, la pianificazione, nonché le date di inizio e di fine e quindi fare clic su **OK**.  
   
-7.  Se si desidera creare immediatamente i dati dello snapshot da usare con il report, senza attendere l'elaborazione pianificata dei dati, in **Opzioni snapshot dati**selezionare **Crea o aggiorna lo snapshot al salvataggio della pagina** .  
+7.  Se si desidera creare immediatamente i dati dello snapshot da usare con il report, senza attendere l'elaborazione pianificata dei dati, in **Opzioni snapshot dati** selezionare **Crea o aggiorna lo snapshot al salvataggio della pagina** .  
   
 ## <a name="set-report-caching-options"></a>Impostazione delle opzioni relative alla memorizzazione dei report nella cache
   
@@ -59,9 +59,9 @@ ms.locfileid: "83764799"
   
 2.  Fare clic sulla freccia in giù e selezionare **Gestisci opzioni elaborazione**.  
   
-3.  In **Opzioni aggiornamento dati**fare clic su **Usa dati nella cache**. Se viene visualizzato il messaggio "Impossibile memorizzare il report nella cache perché le credenziali di una o più origini dati non sono archiviate", significa che il report non è configurato per l'esecuzione automatica e, prima di impostare questa opzione, sarà necessario modificare le origini dati in modo che utilizzino credenziali archiviate.  
+3.  In **Opzioni aggiornamento dati** fare clic su **Usa dati nella cache**. Se viene visualizzato il messaggio "Impossibile memorizzare il report nella cache perché le credenziali di una o più origini dati non sono archiviate", significa che il report non è configurato per l'esecuzione automatica e, prima di impostare questa opzione, sarà necessario modificare le origini dati in modo che utilizzino credenziali archiviate.  
   
-4.  In **Opzioni cache**specificare la modalità di scadenza della cache:  
+4.  In **Opzioni cache** specificare la modalità di scadenza della cache:  
   
     -   Immettere il numero di minuti dopo il quale la cache scadrà.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "83764799"
   
 2.  Fare clic sulla freccia in giù e selezionare **Gestisci opzioni elaborazione**.  
   
-3.  Se si desidera usare il valore specificato a livello del server di report, selezionare **Usa impostazione predefinita sito**in **Timeout elaborazione** . Se invece si desidera sostituire il valore in questione e non impostare alcun timeout o un valore di timeout diverso, selezionare **Nessun timeout per l'elaborazione del report** o **Limite elaborazione report (in secondi)** .  
+3.  Se si desidera usare il valore specificato a livello del server di report, selezionare **Usa impostazione predefinita sito** in **Timeout elaborazione** . Se invece si desidera sostituire il valore in questione e non impostare alcun timeout o un valore di timeout diverso, selezionare **Nessun timeout per l'elaborazione del report** o **Limite elaborazione report (in secondi)** .  
   
 ## <a name="set-report-history-options-and-limits"></a>Impostazione dei limiti e delle opzioni relative alla cronologia di un report
   
@@ -83,9 +83,9 @@ ms.locfileid: "83764799"
   
 2.  Fare clic sulla freccia in giù e selezionare **Gestisci opzioni elaborazione**.  
   
-3.  In **Opzioni snapshot cronologia**specificare la modalità e il momento dell'esecuzione e del salvataggio dell'elaborazione dei dati.  
+3.  In **Opzioni snapshot cronologia** specificare la modalità e il momento dell'esecuzione e del salvataggio dell'elaborazione dei dati.  
   
-4.  Se si desidera usare il valore specificato a livello del server di report, selezionare **Usa impostazione predefinita sito**in **Limiti snapshot cronologia** . In caso contrario, selezionare **Numero di snapshot illimitato** oppure **Numero massimo di snapshot** e specificare un valore personalizzato.  
+4.  Se si desidera usare il valore specificato a livello del server di report, selezionare **Usa impostazione predefinita sito** in **Limiti snapshot cronologia** . In caso contrario, selezionare **Numero di snapshot illimitato** oppure **Numero massimo di snapshot** e specificare un valore personalizzato.  
   
 ## <a name="set-database-timeout"></a>Impostare il timeout del database
   

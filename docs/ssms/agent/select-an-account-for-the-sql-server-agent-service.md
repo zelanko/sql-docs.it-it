@@ -22,13 +22,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/04/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4bcfa24368b913258b1e5538bae6c21da7330450
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 121799da3fe6d259c92deb900fe21833cbfceef2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037817"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464372"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selezionare un account per il servizio SQL Server Agent
 
@@ -41,7 +41,7 @@ L'account di avvio del servizio definisce l'account di [!INCLUDE[msCoName](../..
   
 -   **Account predefinito**. è possibile scegliere da un elenco di account di servizio Windows predefiniti riportati di seguito:  
   
-    -   Account di**sistema locale** . il nome di questo account è NT AUTHORITY\System. Si tratta di un account potente con accesso illimitato a tutte le risorse del sistema locale. Questo account è membro del gruppo **Administrators** di Windows nel computer locale e, di conseguenza, anche del ruolo predefinito del server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** di   
+    -   Account di **sistema locale** . il nome di questo account è NT AUTHORITY\System. Si tratta di un account potente con accesso illimitato a tutte le risorse del sistema locale. Questo account è membro del gruppo **Administrators** di Windows nel computer locale e, di conseguenza, anche del ruolo predefinito del server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** di   
   
         > [!IMPORTANT]  
         > L'opzione **Account di sistema locale** deve essere usata esclusivamente per garantire la compatibilità con le versioni precedenti. L'account di sistema locale dispone di autorizzazioni non necessarie per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Evitare di eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent con l'account di sistema locale. Per migliorare la sicurezza, utilizzare un account di dominio di Windows con le autorizzazioni elencate nella sezione seguente, "Autorizzazioni dell'account di dominio di Windows".  
@@ -49,7 +49,7 @@ L'account di avvio del servizio definisce l'account di [!INCLUDE[msCoName](../..
 -   **Account seguente**. Consente di specificare l'account di dominio di Windows utilizzato per l'esecuzione del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È consigliabile scegliere un account utente di Windows che non sia un membro del gruppo **Administrators** di Windows. Esistono tuttavia alcune limitazioni all'uso dell'amministrazione multiserver quando l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non è un membro del gruppo **Administrators** locale. Per ulteriori informazioni, vedere 'Tipi di account del servizio supportati' più avanti in questo argomento.  
   
 ## <a name="windows-domain-account-permissions"></a>Autorizzazioni dell'account di dominio di Windows  
-Per migliorare la sicurezza, selezionare l'opzione **Account seguente**che consente di specificare un account di dominio di Windows. L'account di dominio di Windows specificato deve disporre delle autorizzazioni seguenti:  
+Per migliorare la sicurezza, selezionare l'opzione **Account seguente** che consente di specificare un account di dominio di Windows. L'account di dominio di Windows specificato deve disporre delle autorizzazioni seguenti:  
   
 -   In tutte le versioni di Windows è necessario disporre dell'autorizzazione per l'accesso come servizio (SeServiceLogonRight).  
   

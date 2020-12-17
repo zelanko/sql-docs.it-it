@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e4cbb0942e3aead7b4150e788a5f064f6a240dbc
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+monikerRange: '>=sql-server-2016'
+ms.openlocfilehash: 19c218d9047d31145a7172628cc5e64d941cb645
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900463"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97463869"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>Creazione di una stringa di connessione valida con TCP/IP
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88900463"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supportano completamente sia IPv4 (protocollo IP versione 4) sia IPv6 (protocollo IP versione 6). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione accetta sia il formato IPv4 sia il formato IPv6 per gli indirizzi IP. Per informazioni su IPv6, vedere "Connessioni con IPv6" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="connecting-to-the-local-server"></a>Connessione al server locale  
- Quando si stabilisce una connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione nello stesso computer del client, è possibile utilizzare `(local)` come nome del server. Non si tratta di un'operazione consigliabile, in quanto genera ambiguità, ma può risultare utile se si è sicuri che il client viene eseguito nello stesso computer del server. Se, ad esempio, si crea un'applicazione per gli utenti mobili non connessi, ad esempio il personale di vendita, e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà eseguito su computer portatili e usato per archiviare dati di progetto, un client che si connette a `(local)` si connetterà sempre a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione sul portatile. In sostituzione di `localhost` è possibile usare la parola**o un punto (** . `(local)`).  
+ Quando si stabilisce una connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione nello stesso computer del client, è possibile utilizzare `(local)` come nome del server. Non si tratta di un'operazione consigliabile, in quanto genera ambiguità, ma può risultare utile se si è sicuri che il client viene eseguito nello stesso computer del server. Se, ad esempio, si crea un'applicazione per gli utenti mobili non connessi, ad esempio il personale di vendita, e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà eseguito su computer portatili e usato per archiviare dati di progetto, un client che si connette a `(local)` si connetterà sempre a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in esecuzione sul portatile. In sostituzione di `localhost` è possibile usare la parola **o un punto (** . `(local)`).  
   
 ## <a name="verifying-your-connection-protocol"></a>Verifica del protocollo di connessione  
  La query seguente restituisce il protocollo utilizzato per la connessione corrente.  

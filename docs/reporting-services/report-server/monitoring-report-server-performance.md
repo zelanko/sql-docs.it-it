@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67d9f59f1561ce844c3e6a1b6f3e20770e12db6b
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 12afa9794e4d48e2c7b16620ce845660f61801bc
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547948"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97461412"
 ---
 # <a name="monitoring-report-server-performance"></a>Monitoraggio delle prestazioni del server di report
   Con gli strumenti di monitoraggio delle prestazioni è possibile valutare l'attività del server di report, osservare le tendenze, diagnosticare i colli di bottiglia a livello di sistema e raccogliere dati che consentono di determinare più facilmente se la configurazione del sistema corrente è sufficiente. Per ottimizzare le prestazioni del server, è possibile specificare la frequenza di riciclo del dominio dell'applicazione del server di report. Per altre informazioni, vedere [Configurare la memoria disponibile per applicazioni del server di report](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "84547948"
   
 -   Convalidare le modifiche apportate alla configurazione del sistema per verificare che abbiano l'effetto desiderato sulle prestazioni.  
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
   
 ## <a name="reporting-services-performance-objects"></a>Oggetti prestazione di Reporting Services  
 SQL Server 2016 Reporting Services o versione successiva (SSRS) include gli oggetti prestazione seguenti:  
