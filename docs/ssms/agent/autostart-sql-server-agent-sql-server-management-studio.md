@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9916bd14969b7bf9065e98ecb07fc131d8391f30
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 32006b2ac6581e4f5bc3a303cc5f6475483708c8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035746"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472372"
 ---
 # <a name="autostart-sql-server-agent"></a>Avviare automaticamente SQL Server Agent
 
@@ -55,7 +55,7 @@ Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account 
   
 #### <a name="to-configure-sql-server-agent-to-automatically-restart"></a>Per configurare SQL Server Agent per il riavvio automatico  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server in cui si desidera configurare SQL Server Agent per il riavvio automatico.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server in cui si desidera configurare SQL Server Agent per il riavvio automatico.  
   
 2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, quindi scegliere **Proprietà**.  
   

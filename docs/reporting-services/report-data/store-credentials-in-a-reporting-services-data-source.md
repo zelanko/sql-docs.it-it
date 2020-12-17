@@ -10,22 +10,22 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
-ms.openlocfilehash: 2b9db41c61a0e50dffd6a31fffa25f02f1e8369e
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 18d9a5ad8c4df17525bad04f0b056e7f9c4f05ae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935228"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478852"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]
 
@@ -52,13 +52,13 @@ ms.locfileid: "91935228"
   
 4.  Nell'elenco **Tipo di origine dati** selezionare l'estensione per l'elaborazione dati usata per elaborare i dati dell'origine dati.  
   
-5.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. L'esempio seguente illustra una stringa di connessione usata per la connessione al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
+5.  Per **Stringa di connessione** specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. L'esempio seguente illustra una stringa di connessione usata per la connessione al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
     ```  
   
-6.  Per **Connetti tramite**selezionare **Credenziali archiviate in modo protetto nel server di report**.  
+6.  Per **Connetti tramite** selezionare **Credenziali archiviate in modo protetto nel server di report**.  
   
 7.  Digitare un nome utente e una password.  
   
@@ -80,13 +80,13 @@ ms.locfileid: "91935228"
   
 4.  Nell'elenco **Tipo di origine dati** selezionare l'estensione per l'elaborazione dati usata per elaborare i dati dell'origine dati.  
   
-5.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. L'esempio seguente illustra una stringa di connessione usata per la connessione al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
+5.  Per **Stringa di connessione** specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. L'esempio seguente illustra una stringa di connessione usata per la connessione al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]:  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
     ```  
   
-6.  Per **Credenziali**selezionare **Credenziali archiviate**.  
+6.  Per **Credenziali** selezionare **Credenziali archiviate**.  
   
 7.  Digitare un **nome utente** e una **password**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "91935228"
   
 3.  Nell'elenco **Tipo** specificare l'estensione per l'elaborazione dati usata per elaborare i dati dell'origine dati.  
   
-4.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di evitare di specificare credenziali nella stringa di connessione.  
+4.  Per **Stringa di connessione** specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di evitare di specificare credenziali nella stringa di connessione.  
   
      Nell'esempio riportato di seguito viene illustrata una stringa di connessione usata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] locale:  
   
@@ -134,7 +134,7 @@ ms.locfileid: "91935228"
   
 4.  Nell'elenco **Tipo di origine dati** specificare l'estensione per l'elaborazione dati usata per elaborare i dati dell'origine dati.  
   
-5.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di evitare di specificare credenziali nella stringa di connessione.  
+5.  Per **Stringa di connessione** specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di evitare di specificare credenziali nella stringa di connessione.  
   
      Nell'esempio riportato di seguito viene illustrata una stringa di connessione usata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] locale:  
   

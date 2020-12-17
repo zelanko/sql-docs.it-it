@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ffd13c07fad10d4b0386d342a6ddcbec37256da
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a32419db6e4dd04cc57b31b1d9267e80a30db41d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989332"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638131"
 ---
 # <a name="save-method"></a>Metodo Save
 Salva il [Recordset](./recordset-object-ado.md) in un oggetto file o [flusso](./stream-object-ado.md) .  
@@ -36,15 +36,15 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parametri  
  *Destinazione*  
- Facoltativa. **Variant** che rappresenta il nome percorso completo del file in cui deve essere salvato il **Recordset** o un riferimento a un oggetto **flusso** .  
+ Facoltativo. **Variant** che rappresenta il nome percorso completo del file in cui deve essere salvato il **Recordset** o un riferimento a un oggetto **flusso** .  
   
  *PersistFormat*  
- Facoltativa. Valore [PersistFormatEnum](./persistformatenum.md) che specifica il formato in cui deve essere salvato il **Recordset** (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
+ Facoltativo. Valore [PersistFormatEnum](./persistformatenum.md) che specifica il formato in cui deve essere salvato il **Recordset** (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il metodo [Save]() può essere richiamato solo su un **Recordset**aperto. Utilizzare il metodo [Open (recordset ADO)](./open-method-ado-recordset.md) per ripristinare successivamente il **Recordset** dalla *destinazione*.  
+ Il metodo **Save** può essere richiamato solo su un **Recordset** aperto. Utilizzare il metodo [Open (recordset ADO)](./open-method-ado-recordset.md) per ripristinare successivamente il **Recordset** dalla *destinazione*.  
   
- Se la proprietà [Filter Property](./filter-property.md) è attiva per il **Recordset**, verranno salvate solo le righe accessibili nel filtro. Se il **Recordset** è gerarchico, verranno salvati il **Recordset** figlio corrente e i relativi elementi figlio, incluso il **Recordset**padre. Se viene chiamato il metodo Save di un **Recordset** figlio, l'elemento figlio e tutti i relativi elementi figlio vengono salvati, ma l'elemento padre non lo è.  
+ Se la proprietà [Filter Property](./filter-property.md) è attiva per il **Recordset**, verranno salvate solo le righe accessibili nel filtro. Se il **Recordset** è gerarchico, verranno salvati il **Recordset** figlio corrente e i relativi elementi figlio, incluso il **Recordset** padre. Se viene chiamato il metodo Save di un **Recordset** figlio, l'elemento figlio e tutti i relativi elementi figlio vengono salvati, ma l'elemento padre non lo è.  
   
  La prima volta che si salva il **Recordset**, è facoltativo specificare la *destinazione*. Se si omette la *destinazione*, verrà creato un nuovo file con un nome impostato sul valore della proprietà Source del **Recordset**.  
   
@@ -63,9 +63,9 @@ recordset.Save Destination, PersistFormat
  Quando un **Recordset** viene reso permanente con la proprietà **CursorLocation** impostata su **adUseServer come**, la funzionalità di aggiornamento per il **Recordset** è limitata. In genere, sono consentiti solo aggiornamenti, inserimenti ed eliminazioni a tabella singola (dipendenti dalla funzionalità del provider). Anche il metodo di [Risincronizzazione](./resync-method.md) non è disponibile in questa configurazione.  
   
 > [!NOTE]
->  Il salvataggio di un **Recordset** con **campi** di tipo **adVariant**, **ADIDISPATCH**o **adIUnknown** non è supportato da ADO e può causare risultati imprevedibili.  
+>  Il salvataggio di un **Recordset** con **campi** di tipo **adVariant**, **ADIDISPATCH** o **adIUnknown** non è supportato da ADO e può causare risultati imprevedibili.  
   
- Solo i filtri sotto forma di stringhe di criteri (ad esempio, OrderDate >' 12/31/1999') influiscono sul contenuto di un **Recordset**permanente. I filtri creati con una matrice di **segnalibri** o con un valore di [FilterGroupEnum](./filtergroupenum.md) non influiscono sul contenuto del **Recordset**salvato in modo permanente. Queste regole si applicano ai **Recordset**creati con i cursori lato client o lato server.  
+ Solo i filtri sotto forma di stringhe di criteri (ad esempio, OrderDate >' 12/31/1999') influiscono sul contenuto di un **Recordset** permanente. I filtri creati con una matrice di **segnalibri** o con un valore di [FilterGroupEnum](./filtergroupenum.md) non influiscono sul contenuto del **Recordset** salvato in modo permanente. Queste regole si applicano ai **Recordset** creati con i cursori lato client o lato server.  
   
  Poiché il parametro di *destinazione* può accettare qualsiasi oggetto che supporti l'interfaccia IStream di OLE DB, è possibile salvare un **Recordset** direttamente nell'oggetto risposta ASP. Per altri dettagli, vedere lo **scenario di persistenza dei recordset XML**.  
   
@@ -84,7 +84,7 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 ```  
   
 > [!NOTE]
->  Quando si salvano recordset gerarchici (forme dati) in formato XML, si applicano due limitazioni. Non è possibile salvare in XML se il **Recordset** gerarchico contiene aggiornamenti in sospeso e non è possibile salvare un **Recordset**gerarchico con parametri.  
+>  Quando si salvano recordset gerarchici (forme dati) in formato XML, si applicano due limitazioni. Non è possibile salvare in XML se il **Recordset** gerarchico contiene aggiornamenti in sospeso e non è possibile salvare un **Recordset** gerarchico con parametri.  
   
  Un **Recordset** salvato in formato XML viene salvato utilizzando il formato UTF-8. Quando tale file viene caricato in un flusso ADO, l'oggetto flusso non tenterà di aprire un **Recordset** dal flusso, a meno che la proprietà charset del flusso non sia impostata sul valore appropriato per il formato UTF-8.  
   

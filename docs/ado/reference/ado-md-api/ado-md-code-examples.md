@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66e47d79ebbd9ec9e408db412c74d0c50916e711
-ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
+ms.openlocfilehash: f276aba45a4442e06a38c0a850b299ed47d993ac
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92098680"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637955"
 ---
 # <a name="ado-md-code-examples"></a>Esempi di codice ADO MD
 Usare gli esempi di codice seguenti per informazioni su come usare gli oggetti, i metodi e le proprietà ADO MD. Questi esempi sono un subset delle applicazioni di esempio installate con Microsoft SQL Server servizi OLAP per SQL Server 7,0.  
@@ -30,7 +30,7 @@ Usare gli esempi di codice seguenti per informazioni su come usare gli oggetti, 
 -   [Esempi di codice ADO MD in Visual Basic, Scripting Edition](./ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sull'API ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Informazioni di riferimento sull'API ADO MD](./ado-md-object-model.md)   
  [Raccolte di ADO MD](./ado-md-collections.md)   
  [ADO MD costanti enumerate](./ado-md-enumerated-constants.md)   
  [Metodi di ADO MD](./ado-md-methods.md)   

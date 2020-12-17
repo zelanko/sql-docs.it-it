@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a75672db242d5b7388eb625bc028728c8522b11c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c988c6a1bbe0d8d582af3ab8a355f1109906401c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987432"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97639648"
 ---
 # <a name="ado-md-objects"></a>Oggetti ADO MD
 
@@ -34,20 +34,20 @@ ms.locfileid: "88987432"
 |[Gerarchia](./hierarchy-object-ado-md.md)|Rappresenta un modo in cui i membri di una dimensione possono essere aggregati o sottoposti a rollup. Una dimensione può essere aggregata in una o più gerarchie.|  
 |[Level](./level-object-ado-md.md)|Contiene un set di membri, ognuno dei quali ha lo stesso rango all'interno di una gerarchia.|  
 |[Membro](./member-object-ado-md.md)|Rappresenta un membro di un livello in un cubo, gli elementi figlio di un membro di un livello o un membro di una posizione lungo un asse di un insieme di celle.|  
-|[Posizione](./position-object-ado-md.md)|Rappresenta un set di uno o più membri di dimensioni diverse che definiscono un punto lungo un asse.|  
+|[Position](./position-object-ado-md.md)|Rappresenta un set di uno o più membri di dimensioni diverse che definiscono un punto lungo un asse.|  
   
  Inoltre, l'oggetto **Catalogo** è connesso a un oggetto **connessione** ADO, incluso nella libreria ADO standard:  
   
 |Oggetto|Descrizione|  
 |------------|-----------------|  
-|[Connection](../ado-api/connection-object-ado.md)|Rappresenta una connessione aperta a un'origine dati.|  
+|[Connessione](../ado-api/connection-object-ado.md)|Rappresenta una connessione aperta a un'origine dati.|  
   
  Le relazioni tra questi oggetti sono illustrate nel [modello a oggetti ADO MD](./ado-md-object-model.md).  
   
  Molti oggetti ADO MD possono essere contenuti in una raccolta corrispondente. Un oggetto [CubeDef](./cubedef-object-ado-md.md) , ad esempio, può essere contenuto in una raccolta [CubeDefs](./cubedefs-collection-ado-md.md) di un **Catalogo**. Per ulteriori informazioni, vedere [ADO MD Collections](./ado-md-collections.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sull'API ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Informazioni di riferimento sull'API ADO MD](./ado-md-object-model.md)   
  [Esempi di codice ADO MD](./ado-md-code-examples.md)   
  [Raccolte di ADO MD](./ado-md-collections.md)   
  [ADO MD costanti enumerate](./ado-md-enumerated-constants.md)   

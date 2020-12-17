@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 922445116df06017b84aa84bf8dff8f924f2aeae
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935568"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474552"
 ---
 # <a name="create-a-report-server-database-report-server-configuration-manager"></a>Creare un database del server di report (Gestione configurazione del server di report)  
 
@@ -25,9 +25,9 @@ La modalità nativa di SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsno
 
 I database vengono creati assieme e associati in base al nome. Con un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinita, i database sono denominati **reportserver** e **reportservertempdb**. I due database vengono detti collettivamente **database del server di report** o **catalogo del server di report**.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
-La [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]modalità SharePoint**di SQL Server** include un terzo database usato per i metadati di avviso dei dati. Vengono creati tre database per ciascuna applicazione di servizio SSRS. I nomi dei database includono per impostazione predefinita un GUID che rappresenta l'applicazione di servizio. 
+La [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]modalità SharePoint **di SQL Server** include un terzo database usato per i metadati di avviso dei dati. Vengono creati tre database per ciascuna applicazione di servizio SSRS. I nomi dei database includono per impostazione predefinita un GUID che rappresenta l'applicazione di servizio. 
 
 Di seguito sono riportati nomi di esempio dei tre database della modalità SharePoint:
 
@@ -53,7 +53,7 @@ Di seguito sono riportati nomi di esempio dei tre database della modalità Share
   
 - **Manuale**. Usare Gestione configurazione SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Creare manualmente il database del server di report se per ospitare il database si usa un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] remoto. Per altre informazioni, vedere [Creare un database del server di report in modalità nativa](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ### <a name="sharepoint-mode"></a>Modalità SharePoint 
 Nella pagina delle **opzioni di installazione del server di report** è disponibile solo l'opzione **Solo installazione** per la modalità SharePoint. Questa opzione consente di installare tutti i file di SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e il servizio condiviso SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il passaggio successivo prevede la creazione di almeno un'applicazione di servizio SSRS in una delle modalità seguenti:  
@@ -67,14 +67,14 @@ Nella pagina delle **opzioni di installazione del server di report** è disponib
 ## <a name="database-server-version-requirements"></a>Requisiti relativi alla versione del server di database
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene usato per ospitare i database del server di report. L'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] può essere locale o remota. Le versioni supportate seguenti di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] possono ospitare i database del server di report:  
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 - Istanza gestita di SQL di Azure
 
 - SQL Server 2019
 
 ::: moniker-end
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 - SQL Server 2017  
 ::: moniker-end

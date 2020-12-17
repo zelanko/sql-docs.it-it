@@ -14,29 +14,29 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e94cb9bbd873c32e17f25c00da719c11c3260162
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1ffc556d5c4138f35b1831a8aebeb15622328d4c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987422"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637861"
 ---
 # <a name="ado-md-properties"></a>Proprietà ADO MD
 
 |Proprietà|Descrizione|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-ado-md.md)|Indica a quale oggetto della **connessione** ADO appartiene attualmente il Cell o il catalogo corrente.|  
-|[Sottotitolo](./caption-property-ado-md.md)|Indica la didascalia di testo da utilizzare per la visualizzazione di un oggetto **livello** o **membro** .|  
+|[Didascalia](./caption-property-ado-md.md)|Indica la didascalia di testo da utilizzare per la visualizzazione di un oggetto **livello** o **membro** .|  
 |[ChildCount](./childcount-property-ado-md.md)|Indica il numero di membri per i quali l'oggetto **membro** corrente è l'elemento padre in una gerarchia.|  
 |[Children](./children-property-ado-md.md)|Restituisce una raccolta di **membri** per cui il **membro** corrente è l'elemento padre nella gerarchia.|  
-|[Numero](../ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
-|[Depth](./depth-property-ado-md.md)|Indica il numero di livelli tra il **livello** e la radice del livello della gerarchia.|  
+|[Count](../ado-api/count-property-ado.md)|Indica il numero di oggetti in una raccolta.|  
+|[Livello nidificazione](./depth-property-ado-md.md)|Indica il numero di livelli tra il **livello** e la radice del livello della gerarchia.|  
 |[Descrizione](./description-property-ado-md.md)|Restituisce una spiegazione del testo dell'oggetto corrente.|  
 |[DimensionCount](./dimensioncount-property-ado-md.md)|Indica il numero di dimensioni su un asse.|  
 |[DrilledDown](./drilleddown-property-ado-md.md)|Indica se nessuno degli elementi figlio segue immediatamente il membro sull'asse.|  
 |[FilterAxis](./filteraxis-property-ado-md.md)|Indica le informazioni sul filtro per il cellt corrente.|  
-|[Elemento](./item-property-ado-md-cellset.md)|Recupera una cella da un oggetto Cell usando le coordinate.|  
-|[Elemento](../ado-api/item-property-ado.md)|Restituisce un membro specifico di una raccolta in base al nome o al numero ordinale.|  
+|[Item](./item-property-ado-md-cellset.md)|Recupera una cella da un oggetto Cell usando le coordinate.|  
+|[Item](../ado-api/item-property-ado.md)|Restituisce un membro specifico di una raccolta in base al nome o al numero ordinale.|  
 |[FormattedValue](./formattedvalue-property-ado-md.md)|Indica la visualizzazione formattata di un valore di cella.|  
 |[LevelDepth](./leveldepth-property-ado-md.md)|Indica il numero di livelli tra la radice della gerarchia e un membro.|  
 |[LevelName](./levelname-property-ado-md.md)|Indica il nome del livello di un membro.|  
@@ -52,7 +52,7 @@ ms.locfileid: "88987422"
 |[Valore](./value-property-ado-md.md)|Indica il valore della cella corrente.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sull'API ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Informazioni di riferimento sull'API ADO MD](./ado-md-object-model.md)   
  [Esempi di codice ADO MD](./ado-md-code-examples.md)   
  [Raccolte di ADO MD](./ado-md-collections.md)   
  [ADO MD costanti enumerate](./ado-md-enumerated-constants.md)   

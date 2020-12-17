@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ed72d25320caef7e946ffc317541665ca37c5b6d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 1dd9f995efad5f8e4209baf5827c7be8ccdd8886
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115362"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471352"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Monitorare l'esecuzione di script Python ed R tramite report personalizzati in SQL Server Management Studio
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -41,7 +41,7 @@ Per usare questi report, seguire questa procedura:
 
 1. Scaricare i [report personalizzati di SSMS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) per Machine Learning Services per SQL Server da GitHub.
 
-   ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+   ::: moniker range="=azuresqldb-mi-current"
    >[!NOTE]
    > Il report personalizzato **Machine Learning Services - Configure Instance** (Configura istanza) non è supportato in Istanza gestita di SQL di Azure.
    ::: moniker-end
@@ -60,11 +60,11 @@ Per usare questi report, seguire questa procedura:
 
     1. In Management Studio fare doppio clic sul nodo **Database** per l'istanza in cui si vogliono eseguire i report.
 
-    2. Fare clic su **Report** e quindi su **Report personalizzati** .
+    2. Fare clic su **Report** e quindi su **Report personalizzati**.
 
     3. Nella finestra di dialogo **Apri file** individuare la cartella dei report personalizzati.
 
-    4. Selezionare uno dei file RDL scaricati e fare clic su **Apri** .
+    4. Selezionare uno dei file RDL scaricati e fare clic su **Apri**.
 
 ## <a name="reports"></a>Report
 

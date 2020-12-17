@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cdaaaa55756860e4b62f90cb7e01c88c63ad4b61
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247540"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477062"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Pianificare la progettazione e la distribuzione di report | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono disponibili diversi approcci per la creazione e la distribuzione di report impaginati. Viene illustrato come pianificare un ambiente di creazione di report e un server di report che interagiscono.
@@ -53,7 +53,7 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
   
 -   **Portale Web:** caricare un report in un server di report in modalità nativa da [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 -   **SharePoint:** caricare un report in un sito di SharePoint configurato con un server di report in modalità SharePoint.  
 
@@ -73,7 +73,7 @@ In questo argomento viene fornita una panoramica del supporto delle definizioni 
   
  È possibile estrarre dal server di report una copia di sola lettura del file di definizione del report (con estensione RDL). In un server di report in modalità nativa, passare a [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], selezionare il report e fare clic su **Download**. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 In una distribuzione in modalità SharePoint, passare alla raccolta documenti, selezionare il report e fare clic su **Scarica una copia**.  
 

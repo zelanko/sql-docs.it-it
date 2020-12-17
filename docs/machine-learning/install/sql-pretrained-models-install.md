@@ -8,18 +8,18 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 8402ec9094b7e765764d5e650ac27a0b87b0e5d2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793748"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471122"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installare modelli di Machine Learning con training preliminare in SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Questo articolo illustra come usare PowerShell per aggiungere modelli di Machine Learning con training preliminare per l' *analisi del sentiment* e la *definizione delle caratteristiche di un'immagine* a un'istanza di SQL Server con l'integrazione di R o Python. I modelli con training preliminare creati da Microsoft sono pronti all'uso e vengono aggiunti a un'istanza come attività di post-installazione. Per altre informazioni su questi modelli, vedere la sezione [Risorse](#bkmk_resources) di questo articolo.
+Questo articolo illustra come usare PowerShell per aggiungere modelli di Machine Learning con training preliminare per l'*analisi del sentiment* e la *definizione delle caratteristiche di un'immagine* a un'istanza di SQL Server con l'integrazione di R o Python. I modelli con training preliminare creati da Microsoft sono pronti all'uso e vengono aggiunti a un'istanza come attività di post-installazione. Per altre informazioni su questi modelli, vedere la sezione [Risorse](#bkmk_resources) di questo articolo.
 
 Dopo l'installazione, i modelli con training preliminare sono considerati un dettaglio di implementazione che alimenta funzioni specifiche nelle librerie MicrosoftML (R) e microsoftml (Python). Non è consigliabile (né possibile) visualizzare, personalizzare o ripetere il training dei modelli e nemmeno trattarli come risorsa indipendente in codice personalizzato o altre funzioni associate. 
 
@@ -38,13 +38,13 @@ Per aggiungere modelli con training preliminare è necessario disporre dei dirit
 
 Gli script esterni devono essere abilitati e il servizio Launchpad di SQL Server deve essere in esecuzione. Nelle istruzioni di installazione sono descritti i passaggi per abilitare e verificare queste funzionalità. 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 I modelli con training preliminare sono inclusi nel [pacchetto MicrosoftML per R](/machine-learning-server/r-reference/microsoftml/microsoftml-package) o nel [pacchetto microsoftml per Python](/machine-learning-server/python-reference/microsoftml/microsoftml-package).
 
 [Machine Learning Services per SQL Server](sql-machine-learning-services-windows-install.md) include le versioni della libreria di Machine Learning per i due linguaggi e pertanto questo prerequisito viene soddisfatto senza che siano necessarie altre azioni da parte dell'utente. Poiché le librerie sono presenti, è possibile usare lo script di PowerShell descritto in questo articolo per aggiungere i modelli con training preliminare a queste librerie.
 ::: moniker-end
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 I modelli con training preliminare sono inclusi nel [pacchetto MicrosoftML per R](/machine-learning-server/r-reference/microsoftml/microsoftml-package).
 
 In [R Services per SQL Server](sql-r-services-windows-install.md), che include solo il supporto per R, non è integrato il [pacchetto MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package). Per aggiungere MicrosoftML, è necessario eseguire un [aggiornamento del componente](../install/upgrade-r-and-python.md). Questo aggiornamento offre il vantaggio di poter aggiungere contemporaneamente i modelli con training preliminare, evitando così di dover eseguire lo script di PowerShell. Se tuttavia l'aggiornamento è già stato eseguito, ma non sono stati subito aggiunti i modelli con training preliminare, è possibile eseguire lo script di PowerShell come descritto in questo articolo. Lo script funziona per entrambe le versioni di SQL Server. Prima di procedere, verificare che la libreria di MicrosoftML sia presente in `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
@@ -73,11 +73,11 @@ Se i modelli sono già installati, proseguire con il [passaggio di convalida](#v
 
 ## <a name="download-the-installation-script"></a>Scaricare lo script di installazione
 
-Fare clic su [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) per scaricare il file **Install-MLModels.ps1** .
+Fare clic su [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) per scaricare il file **Install-MLModels.ps1**.
 
 ## <a name="execute-with-elevated-privileges"></a>Eseguire con privilegi elevati
 
-1. Avviare PowerShell. Sulla barra delle applicazioni fare clic con il pulsante destro del mouse sull'icona del programma PowerShell e scegliere **Esegui come amministratore** .
+1. Avviare PowerShell. Sulla barra delle applicazioni fare clic con il pulsante destro del mouse sull'icona del programma PowerShell e scegliere **Esegui come amministratore**.
 2. Immettere il percorso completo del file dello script di installazione e includere il nome dell'istanza. Supponendo che vengano usate la cartella Downloads e un'istanza predefinita, il comando potrebbe essere simile al seguente:
 
    ```powershell
@@ -196,7 +196,7 @@ Il collegamento seguente include codice di esempio che richiama i modelli con tr
 
 ## <a name="research-and-resources"></a>Ricerca e risorse
 
-I modelli attualmente disponibili sono modelli di tipo DNN (Deep Neural Network) per l'analisi del sentiment e la classificazione delle immagini. Tutti i modelli sono stati sottoposti a training con il [Computation Network Toolkit](https://cntk.ai/Features/Index.html), o **CNTK** , di Microsoft.
+I modelli attualmente disponibili sono modelli di tipo DNN (Deep Neural Network) per l'analisi del sentiment e la classificazione delle immagini. Tutti i modelli sono stati sottoposti a training con il [Computation Network Toolkit](https://cntk.ai/Features/Index.html), o **CNTK**, di Microsoft.
 
 La configurazione di ogni rete neurale è stata basata sulle seguenti implementazioni di riferimento:
 

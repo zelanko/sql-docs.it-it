@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca718daf11f544120db3a17aed21f73b2e467c54
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 96f2987363fd52cc92127b6b54ffcd2a98b9ae10
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036252"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476882"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - Usare con variabili di scripting
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "92036252"
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  Per visualizzare le variabili di ambiente, nel **Pannello di controllo**aprire **Sistema**quindi fare clic sulla scheda **Avanzate** .  
+>  Per visualizzare le variabili di ambiente, nel **Pannello di controllo** aprire **Sistema** quindi fare clic sulla scheda **Avanzate** .  
   
 ## <a name="implicitly-setting-scripting-variables"></a>Impostazione implicita delle variabili di scripting  
  Quando si avvia **sqlcmd** con un'opzione cui è correlata una variabile **sqlcmd** , la variabile **sqlcmd** viene impostata in modo implicito sul valore specificato con l'opzione. Nell'esempio seguente `sqlcmd` viene avviato con l'opzione `-l` . La variabile SQLLOGINTIMEOUT viene quindi impostata in modo implicito.  
@@ -101,7 +101,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 -   Se le virgolette fanno parte del valore della variabile, è necessario utilizzare i caratteri di escape. Ad esempio, :`setvar MyVar "spac""e"`.  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>Linee guida relative ai valori e ai nomi delle variabili definite tramite SET in Cmd.exe  
- Le variabili definite con SET fanno parte dell'ambiente Cmd.exe e **sqlcmd**può farvi riferimento. Considerare le linee guida seguenti:  
+ Le variabili definite con SET fanno parte dell'ambiente Cmd.exe e **sqlcmd** può farvi riferimento. Considerare le linee guida seguenti:  
   
 -   I nomi delle variabili non devono contenere spazi vuoti o virgolette.  
   
@@ -190,7 +190,7 @@ C:\>sqlcmd -d AdventureWorks2012
 ```
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. Utilizzo di variabili di ambiente a livello di utente all'interno di sqlcmd  
- Nell'esempio seguente viene impostata al prompt dei comandi la variabile di ambiente a livello di utente `%Temp%` , che viene quindi passata al file di input `sqlcmd` . Per ottenere la variabile di ambiente a livello di utente, nel **Pannello di controllo**fare doppio clic su **Sistema**. Fare clic sulla scheda **Avanzate** e quindi fare clic sul pulsante **Variabili d'ambiente**.  
+ Nell'esempio seguente viene impostata al prompt dei comandi la variabile di ambiente a livello di utente `%Temp%` , che viene quindi passata al file di input `sqlcmd` . Per ottenere la variabile di ambiente a livello di utente, nel **Pannello di controllo** fare doppio clic su **Sistema**. Fare clic sulla scheda **Avanzate** e quindi fare clic sul pulsante **Variabili d'ambiente**.  
   
  Il codice seguente è presente nel file di input `c:\testscript.txt`:
 

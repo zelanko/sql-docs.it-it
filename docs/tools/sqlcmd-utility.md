@@ -27,13 +27,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: ff7316307676c15f96579631bdf2dd6eb9612acc
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
+ms.openlocfilehash: fcd184e195ce8c81e16ca4ceaaab03a1f156a812
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005943"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471832"
 ---
 # <a name="sqlcmd-utility"></a>Utilità sqlcmd
 
@@ -270,7 +270,7 @@ sessioni **sqlcmd** diverse.
 
 È consigliabile usare una password complessa.
 
-#### <a name="use-a-strong-password"></a>[**Usare una password complessa.** ](../relational-databases/security/strong-passwords.md)
+#### <a name="use-a-strong-password"></a>[**Usare una password complessa.**](../relational-databases/security/strong-passwords.md)
 
  La richiesta della password viene visualizzata mediante la stampa nella console, come indicato di seguito: `Password:`  
   
@@ -423,7 +423,7 @@ sessioni **sqlcmd** diverse.
 >  Il valore di timeout effettivo può variare di diversi secondi rispetto al valore specificato per *time_out* .  
   
  **-vvar =**  _value_[ **var =** _value_...]  
- Crea una variabile di scripting di **sqlcmd**che può essere usata in uno script **sqlcmd** . Se il valore contiene spazi, racchiuderlo tra virgolette. È possibile specificare più valori _**var**_= **"** _values_ **"** . Se in uno dei valori specificati è incluso un errore, l'utilità **sqlcmd** genera un messaggio di errore e viene chiusa.  
+ Crea una variabile di scripting di **sqlcmd** che può essere usata in uno script **sqlcmd** . Se il valore contiene spazi, racchiuderlo tra virgolette. È possibile specificare più valori _**var**_= **"** _values_ **"** . Se in uno dei valori specificati è incluso un errore, l'utilità **sqlcmd** genera un messaggio di errore e viene chiusa.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -505,7 +505,7 @@ sessioni **sqlcmd** diverse.
   
  **Opzioni varie**  
   **-a** _packet_size_  
- Richiede un pacchetto di dimensione diversa. Questa opzione imposta la variabile di scripting SQLCMDPACKETSIZE di **sqlcmd** . Il valore di*packet_size* deve essere compreso tra 512 e 32767. Il valore predefinito è 4096. Dimensioni più estese del pacchetto possono migliorare le prestazioni per l'esecuzione di script che dispongono di molte istruzioni SQL tra comandi GO. È possibile richiedere dimensioni di pacchetto superiori. Se tale richiesta viene negata, tuttavia, **sqlcmd** usa le dimensioni di pacchetto predefinite del server.  
+ Richiede un pacchetto di dimensione diversa. Questa opzione imposta la variabile di scripting SQLCMDPACKETSIZE di **sqlcmd** . Il valore di *packet_size* deve essere compreso tra 512 e 32767. Il valore predefinito è 4096. Dimensioni più estese del pacchetto possono migliorare le prestazioni per l'esecuzione di script che dispongono di molte istruzioni SQL tra comandi GO. È possibile richiedere dimensioni di pacchetto superiori. Se tale richiesta viene negata, tuttavia, **sqlcmd** usa le dimensioni di pacchetto predefinite del server.  
   
  **-c** _batch_terminator_  
  Specifica il carattere di terminazione di batch. Per impostazione predefinita, i comandi vengono terminati e inviati a SQL Server tramite l'immissione della parola "GO" su una riga a sé stante. Se il carattere di terminazione di batch viene reimpostato, non utilizzare parole chiave riservate Transact-SQL o caratteri con un significato speciale per il sistema operativo anche se sono preceduti da una barra rovesciata.  
@@ -581,7 +581,7 @@ Per usare **sqlcmd** in modo interattivo, digitare **sqlcmd** al prompt dei coma
 5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  Per visualizzare le variabili di ambiente, nel **Pannello di controllo**aprire **Sistema**quindi fare clic sulla scheda **Avanzate** .  
+>  Per visualizzare le variabili di ambiente, nel **Pannello di controllo** aprire **Sistema** quindi fare clic sulla scheda **Avanzate** .  
   
 ## <a name="sqlcmd-scripting-variables"></a>Variabili di scripting di sqlcmd  
   
@@ -633,7 +633,7 @@ Per usare **sqlcmd** in modo interattivo, digitare **sqlcmd** al prompt dei coma
     > [!IMPORTANT]  
     >  Per garantire la compatibilità con le versioni precedenti per gli script **osql** esistenti, alcuni comandi verranno riconosciuti anche senza i due punti, indicati da [ **:** ].
   
-- I comandi**sqlcmd** vengono riconosciuti solo se si trovano all'inizio di una riga.  
+- I comandi **sqlcmd** vengono riconosciuti solo se si trovano all'inizio di una riga.  
   
 - Tutti i comandi **sqlcmd** non fanno distinzione tra maiuscole e minuscole.  
   
@@ -684,7 +684,7 @@ Per usare **sqlcmd** in modo interattivo, digitare **sqlcmd** al prompt dei coma
  Visualizza l'elenco delle variabili di scripting impostate.  
   
 > [!NOTE]  
->  Verranno visualizzate solo le variabili di scripting impostate da **sqlcmd**e quelle impostate usando il comando **:Setvar** .  
+>  Verranno visualizzate solo le variabili di scripting impostate da **sqlcmd** e quelle impostate usando il comando **:Setvar** .  
   
  **Comandi di output**  
   **:Error**   
@@ -823,7 +823,7 @@ Per usare **sqlcmd** in modo interattivo, digitare **sqlcmd** al prompt dei coma
  Elenca i comandi di **sqlcmd** con una breve descrizione di ognuno.  
   
 ### <a name="sqlcmd-file-names"></a>Nomi di file per sqlcmd  
- È possibile specificare i file di input di**sqlcmd** con l'opzione **-i** o il comando **:r** . I file di output possono essere specificati con l'opzione **-o** oppure con i comandi **:Error**, **:Out** e **:Perftrace** . Di seguito vengono illustrate alcune linee guida per l'utilizzo di tali file:  
+ È possibile specificare i file di input di **sqlcmd** con l'opzione **-i** o il comando **:r** . I file di output possono essere specificati con l'opzione **-o** oppure con i comandi **:Error**, **:Out** e **:Perftrace** . Di seguito vengono illustrate alcune linee guida per l'utilizzo di tali file:  
   
 - **:Error**, **:Out** e **:Perftrace** devono usare valori **\<**_filename_**>** distinti. Se viene usato lo stesso valore **\<**_filename_**>** , è possibile che gli input di tali comandi vengano confusi.  
   

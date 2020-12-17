@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 01/04/2020
-ms.openlocfilehash: ee2e8a95155cd235210acecee2a5ca15b5ae79c8
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: c7739675f03e5c7d895939a286d4f262c8302586
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935275"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472512"
 ---
 # <a name="configure-a-report-server-database-connection-report-server-configuration-manager"></a>Configurare una connessione del database del server di report (Gestione configurazione del server di report)
 
@@ -91,7 +91,7 @@ In una connessione a un database del server di report è possibile utilizzare tr
   
 Se l'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è configurata per l'autenticazione di Windows e si trova nello stesso dominio o in un dominio trusted con il computer server di report, è possibile configurare la connessione per l'utilizzo dell'account del servizio o di un account utente di dominio da gestire come proprietà di connessione tramite lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se il server di database si trova in un dominio diverso o si utilizza la sicurezza dei gruppi di lavoro, è necessario configurare la connessione per l'utilizzo di un account di accesso al database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In questo caso, assicurarsi di crittografare la connessione.  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
 > Se si usa Istanza gestita di SQL di Azure per ospitare i database del server di report, l'autenticazione di SQL Server è l'unico tipo di credenziali supportato. È importante ricordare, inoltre, che Istanza gestita non può ospitare l'istanza del server di report.
@@ -118,9 +118,9 @@ Se si configura la connessione di database per l'utilizzo dell'account del servi
 
 Agli account utilizzati per connettersi al database del server di report vengono concessi i ruoli seguenti:  
 
-- Ruoli**public** e **RSExecRole** per il database **ReportServer** .  
+- Ruoli **public** e **RSExecRole** per il database **ReportServer** .  
 
-- Ruolo**RSExecRole** per i database **master**, **msdb**e **ReportServerTempDB** .  
+- Ruolo **RSExecRole** per i database **master**, **msdb** e **ReportServerTempDB** .  
 
 Quando si utilizza lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per creare o modificare la connessione, queste autorizzazioni vengono concesse automaticamente. Se si utilizza l'utilità rsconfig e si specifica un account diverso per la connessione, è necessario aggiornare l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il nuovo account. È possibile creare file script nello strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per aggiornare l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il server di report.  
 

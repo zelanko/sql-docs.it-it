@@ -9,13 +9,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d8f65baaec3038431455712d64803459a96e45c
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
+ms.openlocfilehash: 842daa6574dc660346733e7b74b539eba5c7f7b0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956962"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471032"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function-with-sql-machine-learning"></a>Assegnazione dei punteggi nativa tramite la funzione PREDICT T-SQL con Machine Learning in SQL
 
@@ -60,13 +60,13 @@ I formati di modello supportati dalla funzione `PREDICT` dipendono dalla piattaf
 | SQL Edge di Azure | Sì | No |
 | Azure Synapse Analytics | Sì | No |
 
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### <a name="onnx-models"></a>Modelli ONNX
 
 Il modello deve essere in un formato [ONNX (Open Neural Network Exchange)](https://onnx.ai/get-started.html).
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ### <a name="revoscale-models"></a>Modelli RevoScale
 
 Il training del modello deve essere eseguito in anticipo con uno degli algoritmi **rx** supportati elencati di seguito usando il pacchetto [RevoScaleR](../r/ref-r-revoscaler.md) o [revoscalepy](../python/ref-py-revoscalepy.md).
@@ -106,7 +106,7 @@ I tipi di modelli non supportati includono i seguenti:
 ::: moniker-end
 
 ## <a name="examples"></a>Esempi
-::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current||=azure-sqldw-latest"
 ### <a name="predict-with-an-onnx-model"></a>PREDICT con un modello ONNX
 
 Questo esempio mostra come usare un modello ONNX archiviato nella tabella `dbo.models` per l'assegnazione dei punteggi nativa.
@@ -145,7 +145,7 @@ FROM PREDICT(MODEL = @model, DATA = predict_input, RUNTIME=ONNX) WITH (variable1
 > Poiché le colonne e i valori restituiti da **PREDICT** possono variare in base al tipo di modello, è necessario definire lo schema dei dati restituiti usando una clausola **WITH**.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=azuresqldb-mi-current||>=sql-server-linux-2017"
 ### <a name="predict-with-revoscale-model"></a>PREDICT con il modello RevoScale
 
 In questo esempio viene creato un modello usando **RevoScaleR** in R e quindi viene chiamata la funzione di stima in tempo reale da T-SQL.

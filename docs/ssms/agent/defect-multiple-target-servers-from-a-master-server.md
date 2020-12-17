@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0397c22a479f911ebe5e070ece2d9cdf1fe6ab07
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: f047c57adc1c9cd660b38d7c72bc5dc3a00cc9e5
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036629"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477052"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Escludere più server di destinazione da un server master
 
@@ -39,17 +39,17 @@ In questo argomento viene illustrata la procedura per l'esclusione di più serve
   
 #### <a name="to-defect-multiple-target-servers-from-a-master-server"></a>Per escludere più server di destinazione da un server master  
   
-1.  In **Esplora oggetti**espandere un server configurato come server master.  
+1.  In **Esplora oggetti** espandere un server configurato come server master.  
   
-2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, scegliere **Amministrazione multiserver**e fare clic su **Gestione server di destinazione**.  
+2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, scegliere **Amministrazione multiserver** e fare clic su **Gestione server di destinazione**.  
   
-3.  Fare clic su **Invia istruzioni**e quindi selezionare **Escludi** nell'elenco **Tipo istruzione**.  
+3.  Fare clic su **Invia istruzioni** e quindi selezionare **Escludi** nell'elenco **Tipo istruzione**.  
   
-4.  In **Destinatari**eseguire una delle operazioni seguenti:  
+4.  In **Destinatari** eseguire una delle operazioni seguenti:  
   
     -   Fare clic su **Tutti i server di destinazione** per escludere tutti i server di destinazione di questo server master. Questa opzione consente di disinstallare completamente l'attuale configurazione di amministrazione multiserver.  
   
-    -   Fare clic su **Solo i server di destinazione seguenti**e quindi sulla casella **Seleziona** corrispondente per escludere solo alcuni server di destinazione di questo server master.  
+    -   Fare clic su **Solo i server di destinazione seguenti** e quindi sulla casella **Seleziona** corrispondente per escludere solo alcuni server di destinazione di questo server master.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Creazione di un ambiente multiserver](../../ssms/agent/create-a-multiserver-environment.md)  

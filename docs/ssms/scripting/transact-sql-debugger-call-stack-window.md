@@ -13,13 +13,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3df3d33392751bcdc98b2c9efd2ea7b6b24ed5ab
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bb3212755ce022e588b221d5e2da322a50c49012
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036184"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476812"
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Debugger Transact-SQL - Finestra Stack di chiamate
 
@@ -51,7 +51,7 @@ Per impostare il frame dello stack come frame corrente, è possibile utilizzare 
 
 Ogni riga nella finestra **Stack di chiamate** è denominata frame dello stack e rappresenta una chiamata da un file script [!INCLUDE[tsql](../../includes/tsql-md.md)] a un modulo o una chiamata da un modulo a un altro modulo. Il frame dello stack inferiore nella visualizzazione indica la riga nella finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito la prima chiamata nello stack. La riga superiore indica la riga in cui il debugger ha sospeso l'esecuzione ed è identificata da una freccia gialla nel margine sinistro della finestra. Ogni riga intermedia indica il modulo e il numero di riga del codice sorgente che ha chiamato il frame dello stack superiore successivo.  
 
-Tutte le espressioni incluse nelle finestre **Variabili locali**, **Espressione di controllo**e **Controllo immediato** vengono valutate in base al frame dello stack corrente. Nella finestra dell'editor di query viene visualizzato il codice per il frame corrente. Per impostazione predefinita, il frame dello stack corrente è il frame in cui il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] ha sospeso l'esecuzione. Quando si imposta il frame dello stack corrente su un altro frame, le espressioni incluse nelle finestre **Variabili locali**, **Espressione di controllo**e **Controllo immediato** vengono nuovamente valutate nel contesto del nuovo frame e il codice sorgente del nuovo frame viene visualizzato nella finestra dell'editor di query.  
+Tutte le espressioni incluse nelle finestre **Variabili locali**, **Espressione di controllo** e **Controllo immediato** vengono valutate in base al frame dello stack corrente. Nella finestra dell'editor di query viene visualizzato il codice per il frame corrente. Per impostazione predefinita, il frame dello stack corrente è il frame in cui il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] ha sospeso l'esecuzione. Quando si imposta il frame dello stack corrente su un altro frame, le espressioni incluse nelle finestre **Variabili locali**, **Espressione di controllo** e **Controllo immediato** vengono nuovamente valutate nel contesto del nuovo frame e il codice sorgente del nuovo frame viene visualizzato nella finestra dell'editor di query.  
   
 ## <a name="columns"></a>Colonne
 

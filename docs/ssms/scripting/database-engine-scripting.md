@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae4d356751aa466b6ca13455c514cea91cd95c21
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0972ef38fd5af52b1141e0b14b65b1d08e2c675b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039077"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476932"
 ---
 # <a name="database-engine-scripting"></a>Script del motore di database
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "92039077"
   
 -   Utilizzare i passaggi del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent per eseguire gli script a intervalli pianificati o in risposta a eventi di sistema.  
   
- È anche possibile usare la Generazione guidata script di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per generare script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Fare clic con il pulsante destro del mouse su Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , quindi selezionare la voce di menu **Genera script** . Con**Genera script** viene avviata la procedura guidata, che consente di eseguire in modo semplificato i passaggi necessari per creare uno script.  
+ È anche possibile usare la Generazione guidata script di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per generare script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Fare clic con il pulsante destro del mouse su Esplora oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , quindi selezionare la voce di menu **Genera script** . Con **Genera script** viene avviata la procedura guidata, che consente di eseguire in modo semplificato i passaggi necessari per creare uno script.  
   
 ## <a name="database-engine-scripting-tasks"></a>Attività di scripting del Motore di database  
   
