@@ -15,13 +15,13 @@ ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 493c6ad3ef82eb8f69356ea8698808eddb3bc02f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 6700f58b4e79f7b4421a6335c07b2bf775e97aaa
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035120"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464452"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Creazione di un processo master di SQL Server Agent
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +55,7 @@ Se si verificano errori nel download dei passaggi dei processi che usano account
   
 #### <a name="to-create-a-master-sql-server-agent-job"></a>Per creare un processo master di SQL Server Agent  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server in cui si desidera creare un processo di SQL Server Agent.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server in cui si desidera creare un processo di SQL Server Agent.  
   
 2.  Fare clic sul segno più per espandere **SQL Server Agent**.  
   
@@ -79,7 +79,7 @@ Se si verificano errori nel download dei passaggi dei processi che usano account
   
 #### <a name="to-create-a-master-sql-server-agent-job"></a>Per creare un processo master di SQL Server Agent  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

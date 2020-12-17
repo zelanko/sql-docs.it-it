@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2dab1d48ca2aa98e4a70a08bac492366f2632b79
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: 77bcd682aa8d58437421134a697bcb715efe595d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584959"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470472"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Dati demo NYC Taxi per le esercitazioni su Python e R in SQL Server
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -34,12 +34,12 @@ Il database di esempio è un file BAK di SQL Server 2016 ospitato da Microsoft. 
 
 Le dimensioni del file sono di circa 90 MB.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 >[!NOTE]
 >Per ripristinare il database di esempio in [cluster Big Data di SQL Server](../../big-data-cluster/big-data-cluster-overview.md), scaricare [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) e seguire le istruzioni in [Ripristinare un database nell'istanza master di un cluster Big Data di SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range=">=azuresqldb-mi-current"
 >[!NOTE]
 >Per ripristinare il database di esempio in [Machine Learning Services in Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview), seguire le istruzioni riportate in [Avvio rapido: Ripristinare un database in Istanza gestita di SQL di Azure](/azure/azure-sql/managed-instance/restore-sample-database-quickstart) usando il file con estensione bak del database demo di NYC Taxi: [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak).
 ::: moniker-end

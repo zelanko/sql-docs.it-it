@@ -22,13 +22,13 @@ ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c9d22743c0559c7b766595b24bbfaf02e54f6d9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 4618bcc2b35a258f24046b2d88ea407742e87b20
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038837"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97477002"
 ---
 # <a name="monitor-and-respond-to-events"></a>Monitoraggio e risposta agli eventi
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

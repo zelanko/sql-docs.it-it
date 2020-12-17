@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 966929c35df641a6a464c14481c03a11e45bc34a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 77c2134ee706b7cd86676501aec703f8468d6a5b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038129"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97476952"
 ---
 # <a name="view-sql-server-agent-error-log"></a>Visualizzare il log degli errori di SQL Server Agent
 
@@ -60,7 +60,7 @@ Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account 
   
 #### <a name="to-view-the-ssnoversion-agent-error-log"></a>Per visualizzare il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server che contiene il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent da visualizzare.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server che contiene il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent da visualizzare.  
   
 2.  Fare clic sul segno più per espandere **SQL Server Agent**.  
   
@@ -80,7 +80,7 @@ Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account 
     Consente di aggiornare la visualizzazione dei log selezionati. Il pulsante **Aggiorna** consente di leggere nuovamente i log selezionati dal server di destinazione applicando qualsiasi impostazione di filtro.  
   
     **Filter**  
-    Consente di aprire una finestra di dialogo in cui è possibile specificare le impostazioni usate per filtrare il file di log, ad esempio **Connessione**, **Data**o altri criteri di filtro **generali** .  
+    Consente di aprire una finestra di dialogo in cui è possibile specificare le impostazioni usate per filtrare il file di log, ad esempio **Connessione**, **Data** o altri criteri di filtro **generali** .  
   
     **Ricerca**  
     Consente di cercare testo specifico nel file di log. La ricerca con caratteri jolly non è supportata.  

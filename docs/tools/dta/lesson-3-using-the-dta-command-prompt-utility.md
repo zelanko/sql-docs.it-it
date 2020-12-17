@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3afc39516bc50a6a4f1a2fb7ad67d7b0c3602e7e
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 53eacd0177862b81d32b44616dc67cc0beb90f79
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88713739"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489181"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lezione 3: Uso dell'utilità del prompt dei comandi dta
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
 - Scaricare il [database di esempio AdventureWorks2017](../../samples/adventureworks-install-configure.md).
 
 
-Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017).
+Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
   >[!NOTE]
   > Questa esercitazione è destinata agli utenti che hanno familiarità con l'uso di SQL Server Management Studio e con attività semplici di amministrazione del database. 
@@ -56,7 +56,7 @@ Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripris
 ## <a name="access-dta-command-prompt-utility-help-menu"></a>Accedere al menu della Guida dell'utilità del prompt dei comandi di ottimizzazione guidata di database
   
   
-1.  Fare clic sul pulsante **Start** , scegliere **Tutti i programmi**, **Accessori**e quindi **Prompt dei comandi**.  
+1.  Fare clic sul pulsante **Start** , scegliere **Tutti i programmi**, **Accessori** e quindi **Prompt dei comandi**.  
   
 2.  Al prompt dei comandi digitare quanto segue e premere INVIO:  
   

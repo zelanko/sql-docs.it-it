@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 597cbdc270c902b6c13f17b6fe66a369357a539d
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: 3f9cd6dd00e45f89d178bad737b4bd958e07de7c
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870303"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470132"
 ---
 # <a name="tutorial-create-a-predictive-model-in-r-with-sql-machine-learning"></a>Esercitazione: Creare un modello predittivo in R con Machine Learning in SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Nella terza parte di questa serie di esercitazioni in quattro parti si eseguirà il training di un modello predittivo in R. Nella parte successiva di questa serie questo modello verrà distribuito in un database di SQL Server con Machine Learning Services oppure in cluster Big Data.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Nella terza parte di questa serie di esercitazioni in quattro parti si eseguirà il training di un modello predittivo in R. Nella parte successiva di questa serie questo modello verrà distribuito in un database di SQL Server con Machine Learning Services.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Nella terza parte di questa serie di esercitazioni in quattro parti si eseguirà il training di un modello predittivo in R. Nella parte successiva di questa serie questo modello verrà distribuito in un database con R Services per SQL Server.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Nella terza parte di questa serie di esercitazioni in quattro parti si eseguirà il training di un modello predittivo in R. Nella parte successiva di questa serie il modello verrà distribuito in un database di Istanza gestita di SQL di Azure con Machine Learning Services.
 ::: moniker-end
 

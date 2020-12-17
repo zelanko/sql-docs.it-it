@@ -18,13 +18,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 70fc5f62a4b9bfcda50d4d850a89b4c3ac93ad91
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: ad6556e856c9329d0fc324a77a2d74f655d18340
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92033851"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424833"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Assegnare un processo a una categoria di processi
 
@@ -46,7 +46,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Per assegnare un processo a una categoria di processi  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server in cui si desidera assegnare un processo a una categoria di processi.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server in cui si desidera assegnare un processo a una categoria di processi.  
   
 2.  Fare clic sul segno più per espandere **SQL Server Agent**.  
   
@@ -62,7 +62,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Per assegnare un processo a una categoria di processi  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

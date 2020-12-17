@@ -13,12 +13,12 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 8fd0bbad8ede056d1d35a9be62e82704575472bd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 839a1d906fcd7b6a4a980a7381b4f5fcdcf10d5d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482504"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644041"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,8 +29,8 @@ ms.locfileid: "97482504"
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id e step_index costituiscono la chiave per questa visualizzazione.<br /><br /> ID numerico univoco associato alla richiesta.|Vedere request_id in [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|request_id e step_index costituiscono la chiave per questa visualizzazione.<br /><br /> Posizione di questo passaggio nella sequenza di passaggi che costituiscono la richiesta.|da 0 a (n-1) per una richiesta con n passaggi.|  
-|plan_node_id|**int**|ID del nodo corrispondente all'ID dell'operatore del passaggio nel piano di esecuzione.|Nessuno|  
-|operation_type|**nvarchar(35)**|Tipo di operazione rappresentata da questo passaggio.|**Operazioni del piano di query DMS:** ' ReturnOperation ',' PartitionMoveOperation ',' MoveOperation ',' BroadcastMoveOperation ',' ShuffleMoveOperation ',' TrimMoveOperation ',' CopyOperation ',' DistributeReplicatedTableMoveOperation '<br /><br /> **Operazioni del piano di query SQL:** ' OnOperation ',' RemoteOperation '<br /><br /> **Altre operazioni del piano di query:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Operazioni esterne per le letture:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Operazioni esterne per MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Operazioni esterne per le Scritture:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Per ulteriori informazioni, vedere "informazioni sui piani di query" in [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] . <br /><br />  Un piano di query può inoltre essere influenzato dalle impostazioni del database.  Per informazioni dettagliate, vedere [Opzioni ALTER database set](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest) .|  
+|plan_node_id|**int**|ID del nodo corrispondente all'ID dell'operatore del passaggio nel piano di esecuzione.|nessuno|  
+|operation_type|**nvarchar(35)**|Tipo di operazione rappresentata da questo passaggio.|**Operazioni del piano di query DMS:** ' ReturnOperation ',' PartitionMoveOperation ',' MoveOperation ',' BroadcastMoveOperation ',' ShuffleMoveOperation ',' TrimMoveOperation ',' CopyOperation ',' DistributeReplicatedTableMoveOperation '<br /><br /> **Operazioni del piano di query SQL:** ' OnOperation ',' RemoteOperation '<br /><br /> **Altre operazioni del piano di query:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Operazioni esterne per le letture:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Operazioni esterne per MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Operazioni esterne per le Scritture:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Per ulteriori informazioni, vedere "informazioni sui piani di query" in [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] . <br /><br />  Un piano di query può inoltre essere influenzato dalle impostazioni del database.  Per informazioni dettagliate, vedere [Opzioni ALTER database set](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest&preserve-view=true) .|  
 |distribution_type|**nvarchar(32)**|Tipo di distribuzione che verrà sottoposta a questo passaggio.|' AllNodes ',' AllDistributions ',' AllComputeNodes ',' ComputeNode ',' Distribution ',' SubsetNodes ',' SubsetDistributions ',' Unspecified '|  
 |location_type|**nvarchar(32)**|Posizione in cui è in esecuzione il passaggio.|' Compute ',' Control ',' DMS '|  
 |status|**nvarchar(32)**|Stato di questo passaggio.|In sospeso, in esecuzione, completo, non riuscito, UndoFailed, PendingCancel, annullato, annullato, interrotto|  

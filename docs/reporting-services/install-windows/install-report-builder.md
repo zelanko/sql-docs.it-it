@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98134fb195b9184bb10905b4a4f8ddec48f3cb57
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: ca0071416491700254047b43056d32fc64ed1d9d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496980"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97425130"
 ---
 # <a name="install-report-builder"></a>Installare Generatore report
 
@@ -33,11 +33,11 @@ ms.locfileid: "92496980"
   
  È possibile avviare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] da un portale Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o da un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Per informazioni, vedere [Avviare Generatore report](../../reporting-services/report-builder/start-report-builder.md).  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ### <a name="sharepoint-site-integrated-with-ssrsnoversion"></a>Sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
- In un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se nel menu **Nuovo documento** non sono elencate le opzioni **Report di Generatore report** , **Modello di Generatore report** e **Origine dati report** , i relativi tipi di contenuto devono essere aggiunti alla raccolta di SharePoint. Per altre informazioni, vedere [Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+ In un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se nel menu **Nuovo documento** non sono elencate le opzioni **Report di Generatore report**, **Modello di Generatore report** e **Origine dati report**, i relativi tipi di contenuto devono essere aggiunti alla raccolta di SharePoint. Per altre informazioni, vedere [Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
 
 ::: moniker-end
  
@@ -113,7 +113,7 @@ ms.locfileid: "92496980"
   
 -   Fare clic su **Generatore report** .  
   
-     Se il server di report non è visibile nell'elenco dei server esistenti, chiudere la finestra di dialogo **Apri report** , quindi fare clic su **Connetti** nella parte inferiore di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per connettersi al server.  
+     Se il server di report non è visibile nell'elenco dei server esistenti, chiudere la finestra di dialogo **Apri report**, quindi fare clic su **Connetti** nella parte inferiore di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] per connettersi al server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare Generatore report](../../reporting-services/report-builder/start-report-builder.md)   

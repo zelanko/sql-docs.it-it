@@ -22,13 +22,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.date: 10/20/2016
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18ddcd8e2671416af4af22ee324caedd296b89bf
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b3b03ba4a8fae0114991cfb7556070b6a2266acd
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039083"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474292"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurare le regole del firewall prima di eseguire il debugger TSQL
 
@@ -50,7 +50,7 @@ Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] include componenti sia s
 
 Non esistono requisiti di configurazione per eseguire il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] se [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o or [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] viene eseguito nello stesso computer dell'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Per eseguire il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] quando si è connessi a un'istanza remota del [!INCLUDE[ssDE](../../includes/ssde-md.md)], è tuttavia necessario abilitare regole relative a programmi e porte in Windows Firewall in entrambi i computer. Tali regole possono essere create dall'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si verificano errori mentre si tenta di aprire una sessione di debug remoto, assicurarsi che nel computer siano definite le regole firewall indicate di seguito.
 
-Usare l'applicazione **Windows Firewall con protezione avanzata** per gestire le regole firewall. In [!INCLUDE[win7](../../includes/win7-md.md)] e [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]aprire **Pannello di controllo**, fare clic su **Windows Firewall**e scegliere **Impostazioni avanzate**. In [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] è anche possibile aprire **Service Manager**, espandere **Configurazione** nel riquadro sinistro e quindi **Windows Firewall con protezione avanzata**.
+Usare l'applicazione **Windows Firewall con protezione avanzata** per gestire le regole firewall. In [!INCLUDE[win7](../../includes/win7-md.md)] e [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]aprire **Pannello di controllo**, fare clic su **Windows Firewall** e scegliere **Impostazioni avanzate**. In [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] è anche possibile aprire **Service Manager**, espandere **Configurazione** nel riquadro sinistro e quindi **Windows Firewall con protezione avanzata**.
 
 > [!CAUTION]
 >  È possibile che l'abilitazione di regole in Windows Firewall esponga il computer a rischi per la sicurezza, per bloccare i quali è progettato il firewall. L'abilitazione di regole per il debug remoto determina lo sblocco delle porte e dei programmi elencati in questo argomento.
@@ -60,7 +60,7 @@ Nel computer in cui è in esecuzione l'istanza del [!INCLUDE[ssDE](../../include
 
 - Aggiungere una regola di programma in entrata per sqlservr.exe. È necessario disporre di una regola per ogni istanza che richiede il supporto di sessioni di debug remoto.
 
-   1. Nel riquadro sinistro di **Windows Firewall con protezione avanzata**fare clic con il pulsante destro del mouse su **Regole in entrata**, quindi scegliere **Nuova regola** nel riquadro azioni.
+   1. Nel riquadro sinistro di **Windows Firewall con protezione avanzata** fare clic con il pulsante destro del mouse su **Regole in entrata**, quindi scegliere **Nuova regola** nel riquadro azioni.
 
    2. Nella finestra di dialogo **Tipo di regola** selezionare **Programma**, quindi fare clic su **Avanti**.
 
@@ -76,11 +76,11 @@ Nel computer in cui è in esecuzione l'istanza del [!INCLUDE[ssDE](../../include
 
    8. Selezionare la scheda **Protocolli e porte** .
 
-   9. Selezionare **TCP** nel riquadro **Tipo di protocollo** , **Porte dinamiche RPC** nel riquadro **Porta locale** , quindi fare clic su **Applica**e **OK**.
+   9. Selezionare **TCP** nel riquadro **Tipo di protocollo** , **Porte dinamiche RPC** nel riquadro **Porta locale** , quindi fare clic su **Applica** e **OK**.
 
 - Aggiungere una regola di programma in entrata per svchost.exe per abilitare le comunicazioni DCOM dalle sessioni di debug remoto.
 
-   1. Nel riquadro sinistro di **Windows Firewall con protezione avanzata**fare clic con il pulsante destro del mouse su **Regole in entrata**, quindi scegliere **Nuova regola** nel riquadro azioni.
+   1. Nel riquadro sinistro di **Windows Firewall con protezione avanzata** fare clic con il pulsante destro del mouse su **Regole in entrata**, quindi scegliere **Nuova regola** nel riquadro azioni.
 
    2. Nella finestra di dialogo **Tipo di regola** selezionare **Programma**, quindi fare clic su **Avanti**.
 
@@ -96,7 +96,7 @@ Nel computer in cui è in esecuzione l'istanza del [!INCLUDE[ssDE](../../include
 
    8. Selezionare la scheda **Protocolli e porte** .
 
-   9. Selezionare **TCP** nel riquadro **Tipo di protocollo** , **Agente mapping endpoint RPC** nel riquadro **Porta locale** , quindi fare clic su **Applica**e **OK**.
+   9. Selezionare **TCP** nel riquadro **Tipo di protocollo** , **Agente mapping endpoint RPC** nel riquadro **Porta locale** , quindi fare clic su **Applica** e **OK**.
 
 - Se i criteri di dominio richiedono che le comunicazioni di rete vengano eseguite tramite IPSec, è necessario aggiungere anche regole in entrata per l'apertura delle porte UDP 4500 e UDP 500.
 
@@ -108,7 +108,7 @@ Se si verificano errori nel tentativo di aprire una sessione di debug remoto, è
 
 - Aggiungere una voce di programma per svchost:
 
-   1. Nel riquadro sinistro di **Windows Firewall con protezione avanzata**fare clic con il pulsante destro del mouse su **Regole in entrata**, quindi scegliere **Nuova regola** nel riquadro azioni.
+   1. Nel riquadro sinistro di **Windows Firewall con protezione avanzata** fare clic con il pulsante destro del mouse su **Regole in entrata**, quindi scegliere **Nuova regola** nel riquadro azioni.
 
    2. Nella finestra di dialogo **Tipo di regola** selezionare **Programma**, quindi fare clic su **Avanti**.
 
@@ -124,11 +124,11 @@ Se si verificano errori nel tentativo di aprire una sessione di debug remoto, è
 
    8. Selezionare la scheda **Protocolli e porte** .
 
-   9. Selezionare **TCP** nel riquadro **Tipo di protocollo** , **Agente mapping endpoint RPC** nel riquadro **Porta locale** , quindi fare clic su **Applica**e **OK**.
+   9. Selezionare **TCP** nel riquadro **Tipo di protocollo** , **Agente mapping endpoint RPC** nel riquadro **Porta locale** , quindi fare clic su **Applica** e **OK**.
 
 - Aggiungere una voce di programma per l'applicazione che ospita l'editor di query [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Se è necessario aprire le sessioni di debug remoto da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] nello stesso computer, è necessario aggiungere una regola di programma per entrambi:
 
-   1. Nel riquadro sinistro di **Windows Firewall con protezione avanzata**fare clic con il pulsante destro del mouse su **Regole in entrata**, quindi scegliere **Nuova regola** nel riquadro azioni.
+   1. Nel riquadro sinistro di **Windows Firewall con protezione avanzata** fare clic con il pulsante destro del mouse su **Regole in entrata**, quindi scegliere **Nuova regola** nel riquadro azioni.
 
    2. Nella finestra di dialogo **Tipo di regola** selezionare **Programma**, quindi fare clic su **Avanti**.
 
@@ -154,7 +154,7 @@ Se si verificano errori nel tentativo di aprire una sessione di debug remoto, è
 
    8. Selezionare la scheda **Protocolli e porte** .
 
-   9. Selezionare **TCP** nel riquadro **Tipo di protocollo** , **Porte dinamiche RPC** nel riquadro **Porta locale** , quindi fare clic su **Applica**e **OK**.
+   9. Selezionare **TCP** nel riquadro **Tipo di protocollo** , **Porte dinamiche RPC** nel riquadro **Porta locale** , quindi fare clic su **Applica** e **OK**.
 
 ## <a name="requirements-for-starting-the-debugger"></a>Requisiti per l'avvio del debugger
 

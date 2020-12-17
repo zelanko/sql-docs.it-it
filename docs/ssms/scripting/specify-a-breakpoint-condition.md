@@ -13,13 +13,13 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40e30f96de60e6d6bd404ca2b00099b7ac7b01a9
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c9e8343d1743d90472d10095e18e66294b9ea99b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036310"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466252"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Impostare una condizione del punto di interruzione
 
@@ -45,7 +45,7 @@ L'espressione specificata deve essere un'espressione Transact-SQL valida che res
   
 2. Nella finestra di dialogo **Condizione punto di interruzione** immettere un'espressione booleana valida nella casella **Condizione** .  
   
-3. Scegliere **È True** se si vuole interrompere l'esecuzione quando l'espressione restituisce **true**oppure scegliere **È stato modificato** se si vuole interrompere l'esecuzione quando viene modificato il valore dell'espressione.  
+3. Scegliere **È True** se si vuole interrompere l'esecuzione quando l'espressione restituisce **true** oppure scegliere **È stato modificato** se si vuole interrompere l'esecuzione quando viene modificato il valore dell'espressione.  
   
     > [!NOTE]  
     >  Il debugger non valuta l'espressione booleana fino a quando il primo il punto di interruzione non viene raggiunto. Se si sceglie **È stato modificato**, il debugger non considera la prima valutazione una modifica e quindi non interrompe l'esecuzione in corrispondenza della prima valutazione.  

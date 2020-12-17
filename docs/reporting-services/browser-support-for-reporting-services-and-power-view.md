@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8bae1b0ae40d9895cedc094cf4a31386199f5e1
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: aa8a9fbbcadfcdd3c266de4b1453ea7e5402e1af
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891231"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466652"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Supporto browser per Reporting Services e Power View
 
@@ -83,7 +83,7 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 
  **(+)** Ultima versione rilasciata pubblicamente
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  Se si usa un prodotto SharePoint integrato con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere  [Pianificare il supporto dei browser in SharePoint 2016](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 
@@ -147,7 +147,7 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 
  **(+)** Ultima versione rilasciata pubblicamente
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
  Per altre informazioni sul supporto browser per SharePoint 2016, vedere [Pianificare il supporto dei browser in SharePoint 2013](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
 

@@ -14,13 +14,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0270966cb84ee7fab587f92a5c84f9f52ad128f0
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 58d9f3921500e2fd7fd1fa02046d4f89d67ccbeb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036604"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478792"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 
@@ -115,10 +115,10 @@ Per inviare notifiche agli operatori usando la posta elettronica o i cercaperson
 È possibile definire un operatore come alias assegnato a un gruppo di utenti. In questo modo la notifica può raggiungere contemporaneamente tutti i membri dell'alias. Per altre informazioni, vedere [Operatori](../../ssms/agent/operators.md).  
   
 ## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>Sicurezza per l'amministrazione di SQL Server Agent  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza i ruoli predefiniti del database **SQLAgentUserRole**, **SQLAgentReaderRole**e **SQLAgentOperatorRole** nel database **msdb** per controllare l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per gli utenti che non sono membri del ruolo predefinito del server **sysadmin** . Sottosistemi e proxy consentono agli amministratori del database di garantire l'esecuzione di tutti i passaggi di processo con le autorizzazioni minime necessarie all'esecuzione della relativa attività.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza i ruoli predefiniti del database **SQLAgentUserRole**, **SQLAgentReaderRole** e **SQLAgentOperatorRole** nel database **msdb** per controllare l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per gli utenti che non sono membri del ruolo predefinito del server **sysadmin** . Sottosistemi e proxy consentono agli amministratori del database di garantire l'esecuzione di tutti i passaggi di processo con le autorizzazioni minime necessarie all'esecuzione della relativa attività.  
   
 ### <a name="roles"></a>Ruoli  
-I membri dei ruoli predefiniti del database **SQLAgentUserRole**, **SQLAgentReaderRole**e **SQLAgentOperatorRole** in **msdb**e i membri del ruolo predefinito del server **sysadmin** hanno accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un utente che non appartiene a nessuno di questi ruoli non può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per altre informazioni sui ruoli usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
+I membri dei ruoli predefiniti del database **SQLAgentUserRole**, **SQLAgentReaderRole** e **SQLAgentOperatorRole** in **msdb** e i membri del ruolo predefinito del server **sysadmin** hanno accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un utente che non appartiene a nessuno di questi ruoli non può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per altre informazioni sui ruoli usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Sottosistemi  
 Un sottosistema è un oggetto predefinito che rappresenta funzionalità disponibili per un passaggio di processo. Ogni proxy ha accesso a uno o più sottosistemi. I sottosistemi offrono sicurezza in quanto delimitano l'accesso alle funzionalità disponibili per un proxy. Ogni passaggio di processo viene eseguito nel contesto di un proxy, ad eccezione dei passaggi di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] . I passaggi di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] usano il comando EXECUTE AS per impostare il contesto di sicurezza sul proprietario del processo.  
@@ -147,7 +147,7 @@ Un sottosistema è un oggetto predefinito che rappresenta funzionalità disponib
 ### <a name="proxies"></a>Proxy  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza i proxy per la gestione dei contesti di sicurezza. È possibile utilizzare un proxy in più passaggi di processo. I membri del ruolo predefinito del server **sysadmin** sono autorizzati alla creazione di proxy.  
   
-Ogni proxy corrisponde a una credenziale di sicurezza e può essere associato a un set di sottosistemi e a un set di account di accesso. È possibile utilizzare il proxy solo per i passaggi di processo che utilizzano un sottosistema associato al proxy stesso. Per creare un passaggio di processo che utilizza un proxy specifico, il proprietario del processo deve utilizzare un account di accesso associato a tale proxy oppure essere un membro di un ruolo con accesso senza limitazioni ai proxy. I membri del ruolo predefinito del server **sysadmin** hanno privilegi di accesso senza limitazioni ai proxy. I membri del ruolo **SQLAgentUserRole**, **SQLAgentReaderRole**o **SQLAgentOperatorRole** possono utilizzare solo i proxy ai quali sono specificamente autorizzati ad accedere. È necessario concedere l'accesso a proxy specifici a ogni utente membro di uno di questi ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, in modo che possa creare passaggi di processo che utilizzano tali proxy.  
+Ogni proxy corrisponde a una credenziale di sicurezza e può essere associato a un set di sottosistemi e a un set di account di accesso. È possibile utilizzare il proxy solo per i passaggi di processo che utilizzano un sottosistema associato al proxy stesso. Per creare un passaggio di processo che utilizza un proxy specifico, il proprietario del processo deve utilizzare un account di accesso associato a tale proxy oppure essere un membro di un ruolo con accesso senza limitazioni ai proxy. I membri del ruolo predefinito del server **sysadmin** hanno privilegi di accesso senza limitazioni ai proxy. I membri del ruolo **SQLAgentUserRole**, **SQLAgentReaderRole** o **SQLAgentOperatorRole** possono utilizzare solo i proxy ai quali sono specificamente autorizzati ad accedere. È necessario concedere l'accesso a proxy specifici a ogni utente membro di uno di questi ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, in modo che possa creare passaggi di processo che utilizzano tali proxy.  
   
 ## <a name="related-tasks"></a>Attività correlate  
 Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per automatizzare l'amministrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedere come descritto di seguito:  

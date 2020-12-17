@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5585f26247ad360fa848a24109416a59c49c94a6
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: 412d1501344f5cdcb64ebd08cc9d328f4b7090c2
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793778"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97469982"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Distribuire il modello R e usarlo in SQL Server (procedura dettagliata)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -29,7 +29,7 @@ Questo articolo illustra i due modi più comuni per usare un modello per l'asseg
 
 ## <a name="batch-scoring"></a>Assegnazione dei punteggi batch
 
-Creare una stored procedure che genera più stime, *PredictTipBatchMode* , passando una query o una tabella SQL come input. Viene restituita una tabella di risultati, che è possibile inserire direttamente in una tabella o scrivere in un file.
+Creare una stored procedure che genera più stime, *PredictTipBatchMode*, passando una query o una tabella SQL come input. Viene restituita una tabella di risultati, che è possibile inserire direttamente in una tabella o scrivere in un file.
 
 - Ottiene un set di dati di input come query SQL
 - Chiama il modello di regressione logistica di cui è stato eseguito il training e che è stato salvato nella lezione precedente
@@ -74,11 +74,11 @@ Creare una stored procedure che genera più stime, *PredictTipBatchMode* , passa
 
     + Usare un'istruzione SELECT per chiamare il modello archiviato da una tabella SQL. Il modello viene recuperato dalla tabella sotto forma di dati **varbinary(max)** , archiviato nella variabile SQL _\@lmodel2_ e passato come parametro *mod* alla stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + I dati usati come input per il punteggio vengono definiti come query SQL e archiviati come stringa nella variabile SQL _\@input_ . I dati recuperati dal database vengono archiviati in un frame di dati denominato *InputDataSet* , che è semplicemente il nome predefinito per i dati di input della stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Se necessario, è possibile definire un altro nome di variabile usando il parametro _\@input_data_1_name_ .
+    + I dati usati come input per il punteggio vengono definiti come query SQL e archiviati come stringa nella variabile SQL _\@input_. I dati recuperati dal database vengono archiviati in un frame di dati denominato *InputDataSet*, che è semplicemente il nome predefinito per i dati di input della stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Se necessario, è possibile definire un altro nome di variabile usando il parametro _\@input_data_1_name_.
 
-    + Per generare i punteggi, la stored procedure chiama la funzione rxPredict dalla libreria **RevoScaleR** .
+    + Per generare i punteggi, la stored procedure chiama la funzione rxPredict dalla libreria **RevoScaleR**.
 
-    + Il valore restituito, *Score* , è la probabilità, dato il modello, che il conducente ottenga una mancia. Facoltativamente, si può applicare facilmente un filtro ai valori restituiti per suddividerli in gruppi "con mancia" o "senza mancia".  Ad esempio, una probabilità minore dello 0,5 indica che probabilmente non verrà data alcuna mancia.
+    + Il valore restituito, *Score*, è la probabilità, dato il modello, che il conducente ottenga una mancia. Facoltativamente, si può applicare facilmente un filtro ai valori restituiti per suddividerli in gruppi "con mancia" o "senza mancia".  Ad esempio, una probabilità minore dello 0,5 indica che probabilmente non verrà data alcuna mancia.
   
 2.  Per chiamare la stored procedure in modalità batch, è necessario definire la query necessaria come input per la stored procedure. Di seguito è riportata la query SQL, che è possibile eseguire in SSMS per verificarne il funzionamento.
 
@@ -192,13 +192,13 @@ La stored procedure *PredictTipSingleMode* dimostra questo approccio. Accetta co
     END
     ```
 
-2. In SQL Server Management Studio è possibile usare la procedura [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** (o **EXECUTE** ) per chiamare la stored procedure e passarle gli input necessari. Provare ad esempio a eseguire questa istruzione in Management Studio:
+2. In SQL Server Management Studio è possibile usare la procedura [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** (o **EXECUTE**) per chiamare la stored procedure e passarle gli input necessari. Provare ad esempio a eseguire questa istruzione in Management Studio:
 
     ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    Vengono passati i valori, rispettivamente, per le variabili _passenger\_count_ , _trip_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ e _dropoff\_longitude_ .
+    Vengono passati i valori, rispettivamente, per le variabili _passenger\_count_, _trip_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ e _dropoff\_longitude_.
 
 3. Per eseguire questa stessa chiamata dal codice R, è sufficiente definire una variabile R contenente l'intera chiamata alla stored procedure, come la seguente:
 
@@ -206,7 +206,7 @@ La stored procedure *PredictTipSingleMode* dimostra questo approccio. Accetta co
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    Vengono passati i valori, rispettivamente, per le variabili _passenger\_count_ , _trip\_distance_ , _trip\_time\_in\_secs_ , _pickup\_latitude_ , _pickup\_longitude_ , _dropoff\_latitude_ e _dropoff\_longitude_ .
+    Vengono passati i valori, rispettivamente, per le variabili _passenger\_count_, _trip\_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_ e _dropoff\_longitude_.
 
 4. Chiamare `sqlQuery` dal pacchetto **RODBC** e passare la stringa di connessione e la variabile di stringa contenente la chiamata alla stored procedure.
 

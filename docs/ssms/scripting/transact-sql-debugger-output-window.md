@@ -14,19 +14,19 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 744120ac17992b75f63e510414cdfc79e4527a8b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 66eda4d5c7cf3d5098eec0f00e4cb5dbf50cd0d7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036147"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478722"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Debugger Transact-SQL - Finestra Output
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Questa finestra visualizza i messaggi di stato per le diverse caratteristiche disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. L'output viene visualizzato in riquadri speciali della finestra **Output** dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] , usando caratteristiche di strumenti esterni oppure comandi eseguiti in **Finestra di comando**del debugger. È disponibile anche l'output visualizzato nella finestra del prompt dei comandi da strumenti esterni, ad esempio i file con estensione bat o com.
+Questa finestra visualizza i messaggi di stato per le diverse caratteristiche disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. L'output viene visualizzato in riquadri speciali della finestra **Output** dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] , usando caratteristiche di strumenti esterni oppure comandi eseguiti in **Finestra di comando** del debugger. È disponibile anche l'output visualizzato nella finestra del prompt dei comandi da strumenti esterni, ad esempio i file con estensione bat o com.
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   

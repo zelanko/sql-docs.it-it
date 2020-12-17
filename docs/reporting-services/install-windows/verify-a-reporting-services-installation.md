@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7f8b963f2b46ec68d0306e29e487f6c59f537ae
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 3359888ec94a9893dc018782f73827f876e95037
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934477"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472402"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono essere installati in modalità nativa o in modalità SharePoint. La procedura da seguire per verificare l'installazione dipende dalla modalità del server di report.  
@@ -28,7 +28,7 @@ ms.locfileid: "91934477"
 > [!NOTE]
 > L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> Verifica dell'installazione in modalità SharePoint  
   

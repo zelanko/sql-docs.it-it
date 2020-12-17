@@ -8,13 +8,13 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 11e051a87e0b5d051cf62c702c13f1189a21ca05
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2017'
+ms.openlocfilehash: 9df3f0d56e3d210389110cdf155bd79a32c7c978
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870497"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97471192"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installare SQL Server Machine Learning Services (Python e R) in Windows
 
@@ -39,7 +39,7 @@ Informazioni su come installare Machine Learning Services per SQL Server in Wind
   + L'uso di una libreria e di file eseguibili diversi creerà risultati incoerenti rispetto a quelli eseguiti in SQL Server.
   + Gli script R e Python in esecuzione in librerie esterne non possono essere gestiti da SQL Server, con conseguenti conflitti di risorse.
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 > [!NOTE]
 > Machine Learning Services viene installato per impostazione predefinita nei **cluster Big Data di SQL Server**. Non è necessario seguire la procedura descritta in questo articolo se si usa un **cluster Big Data**. Per altre informazioni, vedere [Usare Machine Learning Services (Python e R) in cluster Big Data](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
@@ -51,11 +51,11 @@ Informazioni su come installare Machine Learning Services per SQL Server in Wind
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Per altre informazioni su quali edizioni di SQL Server supportano l'integrazione di Python e R con Machine Learning Services, vedere [Edizioni e funzionalità supportate di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 Per altre informazioni su quali edizioni di SQL Server supportano l'integrazione di Python e R con Machine Learning Services, vedere [Edizioni e funzionalità supportate di SQL Server 2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 ::: moniker-end
 
@@ -67,17 +67,17 @@ Per le installazioni locali, è necessario eseguire il programma di installazion
   
 1. Nella scheda **Installazione** selezionare **Nuova installazione autonoma di SQL Server o aggiunta di funzionalità a un'installazione esistente**.
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Nuova installazione autonoma di SQL Server](media/2017setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Nuova installazione autonoma di SQL Server](media/2019setup-installation-page-mlsvcs.png)
    ::: moniker-end
 
 1. Nella pagina **Selezione funzionalità** selezionare queste opzioni:
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
 
    - **Servizi motore di database**
      
@@ -89,7 +89,7 @@ Per le installazioni locali, è necessario eseguire il programma di installazion
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
 
    - **Servizi motore di database**
      
@@ -109,15 +109,15 @@ Per le installazioni locali, è necessario eseguire il programma di installazion
      
      Selezionare questa opzione per aggiungere i pacchetti Microsoft Python, il file eseguibile di Python 3.5 e alcune librerie dalla distribuzione Anaconda.
      
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    Per informazioni sull'installazione e l'uso di Java, vedere [Installare le estensioni del linguaggio SQL Server in Windows](../../language-extensions/install/windows-java.md).
    ::: moniker-end
    
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-2017"
    ![Opzioni delle funzionalità per R e Python](media/2017setup-features-page-mls-rpy.PNG "Opzioni di installazione per R e Python")
    ::: moniker-end
    
-   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ::: moniker range="=sql-server-ver15"
    ![Opzioni delle funzionalità per R e Python](media/2019setup-features-page-mls-rpy.png "Opzioni di installazione per R e Python")
    ::: moniker-end
    
@@ -125,7 +125,7 @@ Per le installazioni locali, è necessario eseguire il programma di installazion
    > 
    > Non selezionare l'opzione per **Machine Learning Server (Standalone)** . L'opzione di installazione di Machine Learning Server inclusa in **Funzionalità condivise** è destinata all'uso in un computer separato.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 
 4. Nella pagina **Consenso per installare Microsoft R Open** selezionare **Accetta** e quindi **Avanti**. 
 
@@ -151,7 +151,7 @@ Il contratto di licenza copre:
 
 ::: moniker-end
 
-::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-ver15"
 
 1. Nella pagina **Consenso per installare Microsoft R Open** selezionare **Accetta** e quindi **Avanti**. Questo contratto di licenza disciplina l'uso di Microsoft R Open, che include una distribuzione di pacchetti e strumenti R open source di base, insieme a pacchetti R avanzati e a provider di connettività del team di sviluppo Microsoft.
 
@@ -272,7 +272,7 @@ Usare la procedura seguente per verificare che tutti i componenti usati per avvi
 >
 > È ad esempio possibile aggiungere la riga seguente per generare un nome di colonna arbitrario: `WITH RESULT SETS ((Col1 AS int))`
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 <!-- There are no updates yet available for 2019, and there's no 2019 update list site. When updates become available, add 2019 information to this section. -->
 
 <a name="apply-cu"></a>
@@ -313,7 +313,7 @@ A livello di istanza, la configurazione aggiuntiva può includere:
 * [Creare un account di accesso per SQLRUserGroup](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 * [Gestire le quote disco](/windows/desktop/fileio/managing-disk-quotas) per evitare che gli script esterni eseguano attività che esauriscono lo spazio su disco
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15"
 In SQL Server 2019 su Windows è stato modificato il meccanismo di isolamento. Questo meccanismo ha effetto su **SQLRUserGroup**, sulle regole del firewall, sulle autorizzazioni per i file e sull'autenticazione implicita. Per altre informazioni, vedere [Modifiche all'isolamento per Machine Learning Services](sql-server-machine-learning-services-2019.md).
 ::: moniker-end
 
@@ -331,7 +331,7 @@ Nel database potrebbero essere necessari gli aggiornamenti di configurazione seg
 
 Ora che tutto il sistema funziona, può essere necessario ottimizzare il server per supportare le funzionalità di Machine Learning o installare un modello di Machine Learning già sottoposto a un training preliminare.
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 ### <a name="add-more-worker-accounts"></a>Aggiungere altri account di lavoro
 
 Se si prevede che molti utenti eseguano script contemporaneamente, è possibile aumentare il numero di account di lavoro assegnati al servizio Launchpad. Per altre informazioni, vedere [Ridimensionare l'esecuzione simultanea di script esterni in SQL Server Machine Learning Services](../administration/scale-concurrent-execution-external-scripts.md).

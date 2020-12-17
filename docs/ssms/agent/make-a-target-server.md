@@ -20,13 +20,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dcb200c472eb0284af8ef829687b89b5ae0340b7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 20a6fb0b2f32c838290d113529661e34a805e4df
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036552"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472352"
 ---
 # <a name="make-a-target-server"></a>Configurare un server di destinazione
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impos
   
 1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)], quindi espandere questa istanza.  
   
-2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, scegliere **Amministrazione multiserver**e fare clic su **Imposta come server di destinazione**. **Configurazione guidata server di destinazione** consente di eseguire in modo semplificato i passaggi necessari per configurare un server di destinazione.  
+2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, scegliere **Amministrazione multiserver** e fare clic su **Imposta come server di destinazione**. **Configurazione guidata server di destinazione** consente di eseguire in modo semplificato i passaggi necessari per configurare un server di destinazione.  
   
 3.  Nella pagina **Selezione server master** selezionare il server master dal quale il server di destinazione corrente riceverà i processi.  
   

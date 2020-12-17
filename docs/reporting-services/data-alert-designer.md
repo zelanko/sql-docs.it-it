@@ -15,13 +15,13 @@ helpviewer_keywords:
 - creating, alerts
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0d166462c2a542d834e92da03735e6e8294290d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-2016 <=sql-server-2016'
+ms.openlocfilehash: e83db2f4ce3a049a6c285b36a2d6a611369ca7bb
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243302"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97484353"
 ---
 # <a name="data-alert-designer"></a>Finestra di progettazione Avviso dati
 
@@ -134,11 +134,11 @@ Le definizioni di avviso dati vengono create e modificate nella finestra di prog
   
  A seconda del tipo di dati del campo, tramite la finestra di progettazione Avviso dati vengono forniti tipi di confronto diversi. La finestra di progettazione Avviso dati offre tipi di confronto diversi in base al tipo di dati del campo per il quale i valori vengono confrontati. Di seguito sono elencati i tipi di confronto disponibili per i diversi tipi di dati. Il tipo di dati **Boolean** non è supportato nelle regole.  
   
--   I confronti per i dati di tipo datetime sono: **è**, **non è**, **è precedente a**ed **è successiva a**  
+-   I confronti per i dati di tipo datetime sono: **è**, **non è**, **è precedente a** ed **è successiva a**  
   
--   I confronti per i dati di tipo numerico sono: **è**, **non è**, **è minore di**, **è minore o uguale a**, **è maggiore di**ed **è maggiore o uguale a**  
+-   I confronti per i dati di tipo numerico sono: **è**, **non è**, **è minore di**, **è minore o uguale a**, **è maggiore di** ed **è maggiore o uguale a**  
   
--   I confronti per i dati di tipo stringa sono: **è**, **non è**e **contiene**  
+-   I confronti per i dati di tipo stringa sono: **è**, **non è** e **contiene**  
   
  Quando si crea una regola, si specifica se usare un valore o un campo nel confronto scegliendo **Modalità immissione valori** o **Modalità selezione campo**. Se si sceglie **Modalità immissione valori**, è necessario fornire un elenco di valori da confrontare. Un confronto che include più clausole OR è molto simile al confronto logico IN in [!INCLUDE[tsql](../includes/tsql-md.md)], che è costituito da un elenco di valori di cui verificare una corrispondenza. Per altre informazioni, vedere [IN &#40;Transact-SQL&#41;](../t-sql/language-elements/in-transact-sql.md).  
   

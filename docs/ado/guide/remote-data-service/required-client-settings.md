@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc3a7962855feb076faad1ffe26d21b9273354f7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 614f8f4444ab470530cea01133b34adffc505b78
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723162"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638029"
 ---
 # <a name="required-client-settings"></a>Impostazioni obbligatorie dei client
 > [!IMPORTANT]
@@ -81,6 +81,5 @@ rs.CursorLocation = adUseClient
  [Sezione SQL del file di personalizzazione](./customization-file-sql-section.md)   
  [Sezione utenti del file di personalizzazione](./customization-file-userlist-section.md)   
  [Personalizzazione di datafactory](./datafactory-customization.md)   
- [Impostazioni client obbligatorie]()   
  [Informazioni sul file di personalizzazione](./understanding-the-customization-file.md)   
  [Scrittura di un gestore personalizzato](./writing-your-own-customized-handler.md)

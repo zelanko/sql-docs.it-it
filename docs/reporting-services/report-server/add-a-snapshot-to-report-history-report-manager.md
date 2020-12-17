@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 18d1cc11b8ab4d4501e62ac5acfbffaeab32c892
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935324"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466582"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Aggiungere uno snapshot alla cronologia del report
 
@@ -24,7 +24,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
   
 ## <a name="to-manually-add-snapshots-to-report-history"></a>Per aggiungere manualmente snapshot alla cronologia del report
   
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 1. In Gestione report passare alla pagina **Contenuto** e posizionare il puntatore del mouse sull'elemento per il quale si vuole visualizzare la cronologia, quindi fare clic sulla freccia a discesa.
   
@@ -42,7 +42,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
   
 2. In Gestione report passare alla pagina **Contenuto** , posizionare il puntatore del mouse sull'elemento per il quale si vuole visualizzare la cronologia e quindi fare clic sulla freccia a discesa.  
   
-3. Scegliere **Gestisci**dal menu a discesa.  
+3. Scegliere **Gestisci** dal menu a discesa.  
   
 4. Fare clic su **Opzioni snapshot**.  
   
@@ -54,7 +54,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
   
 1. In Gestione report passare alla pagina **Contenuto** e posizionare il puntatore del mouse sull'elemento per il quale si vuole visualizzare la cronologia, quindi fare clic sulla freccia a discesa.  
   
-2. Scegliere **Gestisci**dal menu a discesa.  
+2. Scegliere **Gestisci** dal menu a discesa.  
   
 3. Fare clic su **Opzioni snapshot**.  
   
@@ -75,7 +75,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
 
 ## <a name="to-manually-add-snapshots-to-report-history"></a>Per aggiungere manualmente snapshot alla cronologia del report
   

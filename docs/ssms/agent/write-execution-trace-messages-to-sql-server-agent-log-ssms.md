@@ -17,13 +17,13 @@ ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f51138ef9e52a8bd44f160f0f9f2fa8366a290a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 79a7b516e7c108cc6e57eca4bf38f959f4ce779a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038126"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474332"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>Scrivere messaggi di traccia esecuzione nel log degli errori di SQL Server Agent
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account 
 ## <a name="SSMSProcedure"></a>  
 #### <a name="to-write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>Per scrivere messaggi di traccia esecuzione nel log degli errori di SQL Server Agent  
   
-1.  In **Esplora oggetti**fare clic sul segno più per espandere il server contenente il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in cui si desidera registrare i messaggi di traccia di esecuzione.  
+1.  In **Esplora oggetti** fare clic sul segno più per espandere il server contenente il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in cui si desidera registrare i messaggi di traccia di esecuzione.  
   
 2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent** e scegliere **Proprietà**.  
   

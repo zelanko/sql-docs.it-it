@@ -16,13 +16,13 @@ ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 139694d124788cc68aec005f3c35b2ee47a39ef4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 5e8774eeb1f0c13350e81a6cb5635695c80a3eb8
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037974"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97423432"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Impostazione di un operatore alternativo
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,10 +57,10 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono definire ope
   
 3.  Nella finestra di dialogo **Proprietà SQL Server Agent -**_nome\_server_ selezionare **Sistema avvisi** in **Selezione pagina**.  
   
-4.  In **Operatore alternativo**selezionare **Abilita operatore alternativo**.  
+4.  In **Operatore alternativo** selezionare **Abilita operatore alternativo**.  
   
 5.  Nell'elenco **Operatore** selezionare l'operatore che si vuole rendere alternativo.  
   
-6.  Selezionare tutte le caselle di controllo necessarie a specificare come l'operatore riceverà la notifica: **Posta elettronica**, **Cercapersone**o **Net Send**.  
+6.  Selezionare tutte le caselle di controllo necessarie a specificare come l'operatore riceverà la notifica: **Posta elettronica**, **Cercapersone** o **Net Send**.  
   
 7.  Al termine, fare clic su **OK**.  

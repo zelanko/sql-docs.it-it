@@ -19,13 +19,13 @@ ms.assetid: c982b208-e2d1-4d34-8cee-940b9baf6586
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: caaf933089a0c3bf12c14c8c5684a1404abb8c35
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 74b75256563ad55a5bb58c19abc503e8361af479
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92033770"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97424350"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -63,7 +63,7 @@ Per impostazione predefinita, solo i membri del ruolo predefinito del server **s
   
 #### <a name="to-delete-an-alert"></a>Per eliminare un avviso  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
