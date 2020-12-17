@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 429933e4491a7e0f7382e5ca8faa3b6ae26f3c82
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 78d7265398cab553a9378fecc54b25a32d36e84d
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891601"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489831"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Attestazioni per il servizio token Windows (C2WTS) e Reporting Services
 
@@ -31,7 +31,7 @@ La web part Visualizzatore di report può essere usata per incorporare i report 
 
 1. Per configurare l'istanza di Reporting Services (modalità nativa) per l'autenticazione Kerberos, determinare l'account del servizio SSRS, impostare un SPN e aggiornare il file rsreportserver.config per usare il tipo di autenticazione RSWindowsNegotiate. [Registrare un nome dell'entità servizio (SPN) per un server di report](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)
 
-2. Seguire la procedura in [Passaggi necessari per configurare c2WTS](?view=sql-server-2017#steps-needed-to-configure-c2wts)
+2. Seguire la procedura in [Passaggi necessari per configurare c2WTS](#steps-needed-to-configure-c2wts)
  
 
 ## <a name="sharepoint-mode-integration"></a>Integrazione della modalità SharePoint
@@ -84,7 +84,7 @@ Se l'ambiente utilizzerà la delega vincolata Kerberos, le origini dati esterne 
     * Selezionare **Users or Computers...&#42;** (Utenti o computer) e immettere l'account che ospita il servizio. Ad esempio, se SQL Server è in esecuzione con un account denominato *sqlservice*, immettere `sqlservice`. 
       Per la **Web part Visualizzatore di report** sarà l'account del servizio per l'istanza di Reporting Services (modalità nativa).
 
-    * Selezionare l'elenco del servizio. Verranno visualizzati i nomi SPN disponibili per tale account. Se non viene visualizzato, il servizio indicato per l'account può essere mancante o inserito in un altro account. è possibile usare l'utilità SetSPN per modificare i nomi SPN. Per la **Web part Visualizzatore di report**, verrà visualizzato il nome SPN http configurato in [Configurazione della web part (modalità nativa) di Visualizzatore di report](?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
+    * Selezionare l'elenco del servizio. Verranno visualizzati i nomi SPN disponibili per tale account. Se non viene visualizzato, il servizio indicato per l'account può essere mancante o inserito in un altro account. è possibile usare l'utilità SetSPN per modificare i nomi SPN. Per la **Web part Visualizzatore di report**, verrà visualizzato il nome SPN http configurato in [Configurazione della web part (modalità nativa) di Visualizzatore di report](#report-viewer-native-mode-web-part-configuration).
 
     * Selezionare OK per uscire dalle finestre di dialogo.
 

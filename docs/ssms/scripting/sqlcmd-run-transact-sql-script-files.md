@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1914ed4748a14bc7af7fc7113493e18c34604e8
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 21163660db53b31179420a2c1079c39319ee5be7
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036296"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466212"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - Eseguire file script Transact-SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "92036296"
 ## <a name="create-a-script-file"></a>Creare un file script  
  Per creare un file script Transact-SQL semplice in Blocco note, seguire questa procedura:  
   
-1.  Fare clic su **Start**, scegliere **Tutti i programmi**, **Accessori**e quindi fare clic su **Blocco note**.  
+1.  Fare clic su **Start**, scegliere **Tutti i programmi**, **Accessori** e quindi fare clic su **Blocco note**.  
   
 2.  Copiare e incollare il codice Transact-SQL seguente in Blocco note:  
   
