@@ -16,13 +16,13 @@ ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 56fb2ab9d8f7de8e6e2a143939b3c8007446ef8a
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 994faf31dd5cffac9c69fa996478baf539465b99
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035536"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472272"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,7 +53,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>Per impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo  
   
-1.  In **Esplora oggetti**espandere **SQL Server Agent**e quindi **Processi**.  
+1.  In **Esplora oggetti** espandere **SQL Server Agent** e quindi **Processi**.  
   
 2.  Fare clic con il pulsante destro del mouse sul processo da modificare e scegliere **Proprietà**.  
   
@@ -61,7 +61,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 4.  Nella finestra di dialogo **Proprietà passaggio processo** selezionare la pagina **Avanzate** .  
   
-5.  Nella finestra di dialogo **Azione in caso di esito positivo**fare clic sull'azione da eseguire se il passaggio del processo viene eseguito correttamente.  
+5.  Nella finestra di dialogo **Azione in caso di esito positivo** fare clic sull'azione da eseguire se il passaggio del processo viene eseguito correttamente.  
   
 6.  Nella casella **Numero tentativi** immettere un valore compreso tra 0 e 9999 per indicare il numero di ripetizioni desiderate del passaggio prima di stabilirne l'esito negativo. Se è stato immesso un valore maggiore di 0 nella casella **Numero tentativi** , immettere nella casella **Intervallo tra i tentativi (minuti)** un numero compreso tra 1 e 9999 per indicare i minuti che devono intercorrere tra due tentativi di esecuzione del passaggio del processo.  
   
@@ -81,7 +81,7 @@ Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Ser
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>Per impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

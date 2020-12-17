@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1c2094a4ee16d33c6e076440e56a55434b2347a
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6826e09f85e001e9932e2c6f85c400f722534c2a
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987187"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97409347"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>Creare, eliminare o modificare una cartella - Reporting Services
   È possibile creare cartelle per organizzare e gestire gli elementi pubblicati in un server di report. La creazione di cartelle consente agli utenti di individuare in modo semplice i report desiderati. Per gli utenti con ruolo di gestione del contenuto, le cartelle costituiscono una struttura per l'applicazione di autorizzazioni. È possibile creare assegnazioni di ruolo su cartelle specifiche per limitare l'accesso a report in fase di sviluppo o che non devono essere distribuiti su larga scala.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 
 ## <a name="to-create-a-folder"></a>Per creare una cartella  
   
@@ -43,7 +43,7 @@ ms.locfileid: "91987187"
   
 2.  Posizionare il puntatore del mouse sull'elemento, quindi fare clic sulla freccia a discesa.  
   
-3.  Scegliere **Elimina**dal menu a discesa.  
+3.  Scegliere **Elimina** dal menu a discesa.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -53,7 +53,7 @@ ms.locfileid: "91987187"
   
 2.  Posizionare il puntatore del mouse sull'elemento, quindi fare clic sulla freccia a discesa.  
   
-3.  Scegliere **Gestisci**dal menu a discesa. Verrà visualizzata la pagina Proprietà generali.  
+3.  Scegliere **Gestisci** dal menu a discesa. Verrà visualizzata la pagina Proprietà generali.  
   
 4.  Per modificare il percorso della cartella, fare clic su **Sposta**. Digitare il percorso della cartella di destinazione oppure scegliere la cartella di destinazione nell'albero e quindi fare clic su **OK**.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "91987187"
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017"
  
 ## <a name="to-create-a-folder"></a>Per creare una cartella  
   

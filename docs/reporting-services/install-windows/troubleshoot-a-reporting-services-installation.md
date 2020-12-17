@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c082a4dc31ffcbed20a4b5c855346dd8d52f2056
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1cc420302bb8d1610adcc1848fda226c4c55b492
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935097"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472472"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Risolvere i problemi di installazione di Reporting Services
 
@@ -49,7 +49,7 @@ ms.locfileid: "91935097"
   
  Il programma di impostazione non verifica più la presenza di Internet Information Services (IIS) o [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] richiede MDAC 2.0 e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versione 2.0, che verranno installati se non sono già presenti.  
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
   
 ##  <a name="troubleshoot-problems-with-sharepoint-mode-installations"></a><a name="bkmk_tshoot_sharepoint"></a> Risoluzione dei problemi relativi alle installazioni della modalità SharePoint  
   
@@ -222,13 +222,13 @@ ms.locfileid: "91935097"
   
 1.  Aprire l'editor del Registro di sistema.  
   
-    1.  Fare clic su **Start**e scegliere **Esegui**.  
+    1.  Fare clic su **Start** e scegliere **Esegui**.  
   
     2.  Nella finestra di dialogo **Esegui** digitare **regedit** nella casella **Apri**.  
   
 2.  Nell'editor del Registro di sistema, selezionare la seguente chiave del Registro di sistema: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance`  
   
-3.  Fare clic con il pulsante destro del mouse sul nodo **Prestazioni** , scegliere **Nuovo**e fare clic su **Valore multistringa**.  
+3.  Fare clic con il pulsante destro del mouse sul nodo **Prestazioni** , scegliere **Nuovo** e fare clic su **Valore multistringa**.  
   
 4.  Digitare **Counter Names** e quindi premere INVIO.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "91935097"
   
 6.  Passare alla chiave del Registro di sistema seguente: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance`  
   
-7.  Fare clic con il pulsante destro del mouse sul nodo **Prestazioni** , scegliere **Nuovo**e fare clic su **Valore multistringa**.  
+7.  Fare clic con il pulsante destro del mouse sul nodo **Prestazioni** , scegliere **Nuovo** e fare clic su **Valore multistringa**.  
   
 8.  Digitare **Counter Names** e quindi premere INVIO.  
   

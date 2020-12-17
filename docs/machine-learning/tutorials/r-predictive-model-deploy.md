@@ -10,27 +10,27 @@ ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: bed9217da00b7ca2cdd9bbb43e92d58c8f59b678
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: bc5cb5f0b5a79b7e9ff81171e0a1b7b31ad580db
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870271"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470162"
 ---
 # <a name="tutorial-deploy-a-predictive-model-in-r-with-sql-machine-learning"></a>Esercitazione: Distribuire un modello predittivo in R con Machine Learning in SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di Machine Learning, sviluppato in R, in Machine Learning Services per SQL Server oppure in cluster Big Data.
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà in SQL Server un modello di Machine Learning, sviluppato in R, usando Machine Learning Services.
 ::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016"
 Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà in SQL Server un modello di Machine Learning, sviluppato in R, usando R Services per SQL Server.
 ::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 Nell'ultima parte di questa serie di esercitazioni in quattro parti si distribuirà un modello di Machine Learning, sviluppato in R, in Istanza gestita di SQL di Azure con Machine Learning Services.
 ::: moniker-end
 

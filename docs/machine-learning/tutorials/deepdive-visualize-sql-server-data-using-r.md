@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5d38c5de712b5e2f770f0129d6657cd330921608
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
+ms.openlocfilehash: e9158976b1827eb32e807af1cc97279b0866ff97
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196269"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470482"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualizzare i dati di SQL Server con R (esercitazione su SQL Server e RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,7 +43,7 @@ Le statistiche di riepilogo calcolate nell'esercitazione precedente hanno restit
   
 2. Usare la variabile *ccColInfo* creata nell'esercitazione precedente per definire le colonne nell'origine dati.
   
-   Aggiungere nuove colonne calcolate (*numTrans*, *numIntlTrans*e *creditLine*) alla raccolta di colonne per eseguire l'override della definizione originale. Lo script seguente aggiunge fattori basati sui valori minimo e massimo, ottenuti da sumOut, che archivia l'output in memoria di **rxSummary**. 
+   Aggiungere nuove colonne calcolate (*numTrans*, *numIntlTrans* e *creditLine*) alla raccolta di colonne per eseguire l'override della definizione originale. Lo script seguente aggiunge fattori basati sui valori minimo e massimo, ottenuti da sumOut, che archivia l'output in memoria di **rxSummary**. 
   
     ```R 
     ccColInfo <- list(
@@ -116,7 +116,7 @@ I tracciati a dispersione vengono spesso usati durante l'esplorazione dei dati p
   
     Per specificare i gruppi usati per il calcolo delle medie, usare la notazione `F()` . In questo esempio, `F(numTrans):F(numIntlTrans)` indica che i numeri interi nelle variabili `numTrans` e `numIntlTrans` devono essere considerati come variabili di categoria, con un livello per ogni valore intero.
   
-    Il valore restituito predefinito di **rxCube** è un *oggetto rxCube*che rappresenta una tabulazione incrociata. 
+    Il valore restituito predefinito di **rxCube** è un *oggetto rxCube* che rappresenta una tabulazione incrociata. 
   
 2. Chiamare la funzione [rxResultsDF](/machine-learning-server/r-reference/revoscaler/rxresultsdf) per convertire i risultati in un frame di dati che può essere facilmente usato in una delle funzioni di tracciato standard di R.
   

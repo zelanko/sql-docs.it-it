@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b788a7f0996eaf8b6321caf9418d660deb08ac9c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: adf3998c70af1f13a4dc12c5a1b7c9b92ced9bb9
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92039065"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97466402"
 ---
 # <a name="find-and-replace"></a>Trova e sostituisci
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Usare la finestra di dialogo **Trova e sostituisci** per trovare testo all'interno di un file e facoltativamente sostituirlo con altro testo. Possono essere visualizzate versioni della finestra **Trova e sostituisci** con opzioni leggermente diverse, a seconda di come è stata aperta la finestra di dialogo. Scegliere **Trova e sostituisci** dal menu **Modifica**e quindi fare clic su **Ricerca veloce** per aprire la finestra di dialogo con le opzioni di ricerca ma senza le opzioni di sostituzione. Scegliere **Trova e sostituisci** dal menu **Modifica**e quindi fare clic su **Sostituzione veloce** per aprire la finestra di dialogo con le opzioni di ricerca e sostituzione.  
+  Usare la finestra di dialogo **Trova e sostituisci** per trovare testo all'interno di un file e facoltativamente sostituirlo con altro testo. Possono essere visualizzate versioni della finestra **Trova e sostituisci** con opzioni leggermente diverse, a seconda di come è stata aperta la finestra di dialogo. Scegliere **Trova e sostituisci** dal menu **Modifica** e quindi fare clic su **Ricerca veloce** per aprire la finestra di dialogo con le opzioni di ricerca ma senza le opzioni di sostituzione. Scegliere **Trova e sostituisci** dal menu **Modifica** e quindi fare clic su **Sostituzione veloce** per aprire la finestra di dialogo con le opzioni di ricerca e sostituzione.  
   
  Per visualizzare la finestra di dialogo **Cerca e sostituisci** , sono inoltre disponibili i pulsanti della barra degli strumenti e i tasti di scelta rapida.  
   
@@ -100,10 +100,10 @@ ms.locfileid: "92039065"
  Consente di iniziare la ricerca del testo all'interno della casella **Trova** .  
   
  **Replace**  
- Fare clic su questo pulsante per sostituire l'istanza corrente della stringa specificata nella casella **Trova** con la stringa specificata nella casella **Sostituisci con**e per trovare l'istanza successiva nell'ambito specificato nella casella **Cerca in**.  
+ Fare clic su questo pulsante per sostituire l'istanza corrente della stringa specificata nella casella **Trova** con la stringa specificata nella casella **Sostituisci con** e per trovare l'istanza successiva nell'ambito specificato nella casella **Cerca in**.  
   
  **Replace All**  
- Fare clic su questo pulsante per sostituire tutte le istanze della stringa specificata nella casella **Trova** con la stringa specificata nella casella **Sostituisci con**in tutti i file dell'ambito specificato nella casella **Cerca in**.  
+ Fare clic su questo pulsante per sostituire tutte le istanze della stringa specificata nella casella **Trova** con la stringa specificata nella casella **Sostituisci con** in tutti i file dell'ambito specificato nella casella **Cerca in**.  
   
 > [!CAUTION]  
 >  Verificare che la casella **Cerca in** sia impostata in modo da includere solo i file che si vogliono modificare.  

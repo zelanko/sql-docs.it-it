@@ -26,13 +26,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d85ba0589e239fc54280f3c418eaf011e69906b1
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 04adcfacb3a540a9275f445a71ee9813c1702246
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093408"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408442"
 ---
 # <a name="manage-code-formatting"></a>Gestione della formattazione del codice
 
@@ -109,13 +109,13 @@ L'editor consente di formattare il codice con rientri, testo nascosto, URL e cos
   
 1.  Selezionare il testo in cui si desidera convertire lo spazio vuoto in tabulazioni.  
   
-2.  Scegliere **Avanzate** dal menu **Modifica**e quindi fare clic su **Inserisci tabulazione**.  
+2.  Scegliere **Avanzate** dal menu **Modifica** e quindi fare clic su **Inserisci tabulazione**.  
   
 #### <a name="to-convert-tabs-to-spaces"></a>Per convertire le tabulazioni in spazi  
   
 1.  Selezionare il testo in cui si desidera convertire le tabulazioni in spazi.  
   
-2.  Scegliere **Avanzate** dal menu **Modifica**e quindi fare clic su **Rimuovi tabulazione**.  
+2.  Scegliere **Avanzate** dal menu **Modifica** e quindi fare clic su **Rimuovi tabulazione**.  
   
  Il comportamento di questi comandi dipende dalle impostazioni di tabulazione nella finestra di dialogo **Opzioni** . Se, ad esempio, l'impostazione di tabulazione è 4, **Inserisci tabulazione** comporta la creazione di una tabulazione ogni 4 spazi contigui, mentre **Rimuovi tabulazione** comporta la creazione di 4 spazi per ogni tabulazione.  
   

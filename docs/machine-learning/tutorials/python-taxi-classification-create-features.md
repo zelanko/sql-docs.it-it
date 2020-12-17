@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b50750368dd5c8b9d558a587699fde1e7d94af15
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
+ms.openlocfilehash: db28a38415d62abe9bab3540c47567a92df25104
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180352"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470352"
 ---
 # <a name="python-tutorial-create-data-features-using-t-sql"></a>Esercitazione su Python: Creare caratteristiche dei dati usando T-SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -49,7 +49,7 @@ Si userà una funzione T-SQL personalizzata, _fnCalculateDistance_, per calcolar
 1. La funzione _fnCalculateDistance_ è inclusa nel database di esempio. Dedicare un attimo di tempo a esaminare il codice.
   
 2. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]espandere **Programmabilità**, **Funzioni** e quindi **Funzioni a valori scalari**.
-   Fare clic con il pulsante destro del mouse su _fnCalculateDistance_e selezionare **Modifica** per aprire lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] in una nuova finestra Query.
+   Fare clic con il pulsante destro del mouse su _fnCalculateDistance_ e selezionare **Modifica** per aprire lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] in una nuova finestra Query.
   
    ```sql
    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
@@ -86,7 +86,7 @@ Per aggiungere il valore calcolato a una tabella da usare per il training del mo
 
 1. Esaminare il codice per la funzione T-SQL personalizzata, _fnEngineerFeatures_, incluso nel database di esempio.
   
-   È una funzione con valori di tabella che accetta come input più colonne e restituisce una tabella con più colonne di funzionalità.  Lo scopo della funzione è la creazione di un set di funzionalità da usare per la compilazione di un modello. La funzione _fnEngineerFeatures_ chiama la funzione T-SQL _fnCalculateDistance_creata in precedenza per ottenere la distanza diretta tra i punti di inizio e fine della corsa.
+   È una funzione con valori di tabella che accetta come input più colonne e restituisce una tabella con più colonne di funzionalità.  Lo scopo della funzione è la creazione di un set di funzionalità da usare per la compilazione di un modello. La funzione _fnEngineerFeatures_ chiama la funzione T-SQL _fnCalculateDistance_ creata in precedenza per ottenere la distanza diretta tra i punti di inizio e fine della corsa.
   
    ```sql
    CREATE FUNCTION [dbo].[fnEngineerFeatures] (

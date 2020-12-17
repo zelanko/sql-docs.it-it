@@ -16,13 +16,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f27c6d3fd4b82162d9d00f08b79ba37fe796ab06
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: e19cc59a87929a5195424b822b06e2370447910d
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038717"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474352"
 ---
 # <a name="view-a-job"></a>View a Job
 
@@ -44,7 +44,7 @@ Questo argomento descrive come visualizzare i processi di [!INCLUDE[msCoName](..
   
 1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]ed espandere tale istanza.  
   
-2.  Espandere **SQL Server Agent**e quindi espandere **Processi**.  
+2.  Espandere **SQL Server Agent** e quindi espandere **Processi**.  
   
 3.  Fare clic con il pulsante destro del mouse su un processo e scegliere **Proprietà**.  
   
@@ -52,7 +52,7 @@ Questo argomento descrive come visualizzare i processi di [!INCLUDE[msCoName](..
   
 #### <a name="to-view-a-job"></a>Per visualizzare un processo  
   
-1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   

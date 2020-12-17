@@ -10,13 +10,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d33b6442ef66a6be4d1ff600fe583947981a017f
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036484"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97474262"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Apertura di un editor (SQL Server Management Studio)
 
@@ -37,7 +37,7 @@ In questo argomento viene descritto come aprire gli editor di query del [!INCLUD
  In questa sezione viene illustrato come aprire i vari editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Utilizzo del menu File/Nuovo  
- Scegliere **Nuovo** dal menu **File**e quindi selezionare una delle opzioni dell'editor di query:  
+ Scegliere **Nuovo** dal menu **File** e quindi selezionare una delle opzioni dell'editor di query:  
   
 -   **Query con connessione corrente**: consente di aprire una nuova finestra dell'editor del tipo associato alla connessione corrente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La finestra dell'editor utilizza le stesse informazioni di autenticazione della connessione corrente. Se ad esempio si seleziona un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in Esplora oggetti e quindi si usa **Query con connessione corrente**, in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] viene aperto un editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] connesso alla stessa istanza usando le stesse informazioni di autenticazione.  
   
@@ -50,7 +50,7 @@ In questo argomento viene descritto come aprire gli editor di query del [!INCLUD
 -   **Query XML/A di Analysis Services** : consente di aprire un nuovo editor di query XML/A di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e una finestra di dialogo per ottenere le informazioni necessarie per connettersi a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ### <a name="using-the-fileopen-menu"></a>Utilizzo del menu File/Apri  
- Scegliere **Apri** dal menu **File**quindi selezionare un file e aprirlo. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] apre il tipo di editor appropriato per l'estensione del file, copia il contenuto del file nella finestra dell'editor e apre anche una finestra di dialogo di connessione, se necessario. Se ad esempio si apre un file con estensione sql, in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] viene aperta la finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , viene copiato il contenuto del file sql nella finestra dell'editor e viene inoltre aperta una finestra di dialogo di connessione. Se si apre un file con un'estensione non associata a un editor specifico, in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] viene aperta una finestra dell'editor di testo e viene copiato il contenuto del file nella finestra dell'editor.  
+ Scegliere **Apri** dal menu **File** quindi selezionare un file e aprirlo. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] apre il tipo di editor appropriato per l'estensione del file, copia il contenuto del file nella finestra dell'editor e apre anche una finestra di dialogo di connessione, se necessario. Se ad esempio si apre un file con estensione sql, in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] viene aperta la finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , viene copiato il contenuto del file sql nella finestra dell'editor e viene inoltre aperta una finestra di dialogo di connessione. Se si apre un file con un'estensione non associata a un editor specifico, in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] viene aperta una finestra dell'editor di testo e viene copiato il contenuto del file nella finestra dell'editor.  
   
  Per altre informazioni, vedere [Associazione di estensioni di file a un editor di codice](./associate-file-extensions-to-a-code-editor.md).  
   
@@ -75,7 +75,7 @@ In questo argomento viene descritto come aprire gli editor di query del [!INCLUD
 -   Fare clic con il pulsante destro del mouse su un nodo di database, quindi scegliere **Nuova query**. Verrà aperta una finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] connessa alla stessa istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e il contesto di database della finestra verrà impostato sullo stesso database.  
   
 ### <a name="using-solution-explorer"></a>Utilizzo di Esplora soluzioni  
- Da **Esplora soluzioni**espandere una cartella, fare clic con il pulsante destro del mouse su un elemento della cartella, quindi scegliere **Apri** o fare doppio clic sull'elemento o sul file.  
+ Da **Esplora soluzioni** espandere una cartella, fare clic con il pulsante destro del mouse su un elemento della cartella, quindi scegliere **Apri** o fare doppio clic sull'elemento o sul file.  
   
 ### <a name="using-template-browser-to-open-the-database-engine-query-editor"></a>Utilizzo del Visualizzatore modelli per aprire l'editor di query del Motore di database  
   

@@ -17,13 +17,13 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ab8d7167e81b5a7cdf665f1312b1b414d95d9f7b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016
+ms.openlocfilehash: 0fcfaa029005d9b45be6ce9c6e242e4e7cc0de42
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037791"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97472292"
 ---
 # <a name="set-cpu-idle-time-and-duration"></a>Impostare il tempo e l'intervallo di inattività della CPU
 
@@ -40,9 +40,9 @@ In questo argomento viene illustrato come definire la condizione di inattività 
   
 1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]ed espandere tale istanza.  
   
-2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, scegliere **Proprietà**e selezionare la pagina **Avanzate** .  
+2.  Fare clic con il pulsante destro del mouse su **SQL Server Agent**, scegliere **Proprietà** e selezionare la pagina **Avanzate** .  
   
-3.  In **Condizione di inattività CPU**eseguire le operazioni seguenti:  
+3.  In **Condizione di inattività CPU** eseguire le operazioni seguenti:  
   
     -   Selezionare la casella di controllo **Imposta condizione di inattività CPU**.  
   

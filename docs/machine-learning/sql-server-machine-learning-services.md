@@ -8,13 +8,13 @@ ms.date: 11/10/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7f25b832feeb54e622b364ccd715886ed90aae88
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
+ms.openlocfilehash: b73b8521593b81e38d5b0b3931da793f943c45a0
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94582603"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97470692"
 ---
 # <a name="what-is-sql-server-machine-learning-services-with-python-and-r"></a>Che cos'è Machine Learning Services per SQL Server con Python e R?
 [!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -23,7 +23,7 @@ Machine Learning Services è una funzionalità di SQL Server che offre la possib
 
 Per le funzioni di Machine Learning su altre piattaforme SQL, vedere la [documentazione per Machine Learning in SQL](index.yml).
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 > [!NOTE]
 > Per l'esecuzione di Java in SQL Server, vedere la [documentazione dell'estensione del linguaggio Java](../language-extensions/java-overview.md).
 ::: moniker-end
@@ -44,7 +44,7 @@ Machine Learning Services usa un framework di estendibilità per eseguire gli sc
 
 ## <a name="get-started-with-machine-learning-services"></a>Introduzione a Machine Learning Services
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 1. [Installare Machine Learning Services per SQL Server in Windows](install/sql-machine-learning-services-windows-install.md) o [in Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). È anche possibile usare [Machine Learning Services nei cluster Big Data](../big-data-cluster/machine-learning-services.md) e [Machine Learning Services in Istanza gestita di SQL di Azure ](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 1. Configurare gli strumenti di sviluppo. È possibile [eseguire script Python e R nei notebook di Azure Data Studio](install/sql-machine-learning-azure-data-studio.md). È anche possibile eseguire T-SQL in [Azure Data Studio](../azure-data-studio/what-is.md).
@@ -55,14 +55,14 @@ Machine Learning Services usa un framework di estendibilità per eseguire gli sc
    + [Esercitazioni di R per Machine Learning in SQL](tutorials/r-tutorials.md)
 ::: moniker-end
 
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-mi-current"
 + Scrivere il primo script Python o R.
 
    + [Esercitazioni di Python per Machine Learning in SQL](tutorials/python-tutorials.md)
    + [Esercitazioni di R per Machine Learning in SQL](tutorials/r-tutorials.md)
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 1. [Installare Machine Learning Services per SQL Server in Windows](install/sql-machine-learning-services-windows-install.md).
 
 1. Configurare gli strumenti di sviluppo. È possibile [eseguire script Python e R nei notebook di Azure Data Studio](install/sql-machine-learning-azure-data-studio.md). È anche possibile usare T-SQL in [Azure Data Studio](../azure-data-studio/what-is.md).
@@ -104,13 +104,13 @@ Per la versione di R in SQL Server 2016, vedere la sezione [Versione di R in Che
 
 Per altre informazioni sui pacchetti installati con Machine Learning Services e su come installare altri pacchetti, vedere:
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 + [Ottenere informazioni sui pacchetti Python](package-management/python-package-information.md)
 + [Installare pacchetti Python con sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md)
 + [Ottenere informazioni sui pacchetti R](package-management/r-package-information.md)
 + [Installare nuovi pacchetti R con sqlmlutils](package-management/install-additional-r-packages-on-sql-server.md)
 ::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2017"
 + [Ottenere informazioni sui pacchetti Python](package-management/python-package-information.md)
 + [Installare i pacchetti con gli strumenti Python in SQL Server](package-management/install-python-packages-standard-tools.md)
 + [Ottenere informazioni sui pacchetti R](package-management/r-package-information.md)
