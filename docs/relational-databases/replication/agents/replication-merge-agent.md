@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4f65282964494ba1fdb160b1e755922a60ad80d8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4053b827b51eda8f238e6cada863773d625d1f59
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394986"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999229"
 ---
 # <a name="replication-merge-agent"></a>Agente merge repliche
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -292,7 +292,12 @@ replmerg [-?]
  Specifica se l'output deve essere dettagliato. Se il livello di dettaglio è **0**, vengono stampati solo i messaggi di errore. Se il livello di dettaglio è **1**, vengono stampati tutti i messaggi di report di stato. Se il livello di dettaglio è **2** (impostazione predefinita), vengono stampati tutti i messaggi di errore e i messaggi di report di stato. Questa opzione è utile per l'esecuzione del debug.  
   
  **-ParallelUploadDownload** [**0**\|**1**]  
- Specifica se l'agente di merge deve elaborare in parallelo le modifiche caricate nel server di pubblicazione e quelle scaricate nel Sottoscrittore. Questa opzione è utile negli ambienti caratterizzati da volumi di traffico elevati con un'ampia larghezza di banda di rete. Se **ParallelUploadDownload** è **1**, l'elaborazione parallela è abilitata.  
+ Specifica se l'agente di merge deve elaborare in parallelo le modifiche caricate nel server di pubblicazione e quelle scaricate nel Sottoscrittore. Questa opzione è utile negli ambienti caratterizzati da volumi di traffico elevati con un'ampia larghezza di banda di rete. Si noti, tuttavia, l'avviso seguente nei casi in cui **ParallelUploadDownload** è impostato su **1**.
+ 
+Questo parametro è incluso nell'elenco per la possibile deprecazione a breve. È consigliabile impostare il parametro **ParallelUploadDownload** su 0 ed evitare l'uso del profilo dell'agente di merge "server-server per volumi elevati", perché **ParallelUploadDownload** è impostato su 1 in questo profilo.
+
+> [!WARNING]
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]
   
  **-PacketSize**  
  Dimensioni del pacchetto, in byte. Il valore predefinito è 4096 byte.  

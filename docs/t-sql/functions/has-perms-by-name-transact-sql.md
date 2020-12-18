@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c2240ad1cbc9bb8c9fd252eefd6633e81e4ab2f8
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 8574b99c65972f566817749f34d89e3f6d3ca3e5
+ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91115233"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96900965"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Espressione scalare facoltativa di tipo **sysname** che rappresenta il nome della sottoentità a protezione diretta in cui viene testata l'autorizzazione. Il valore predefinito è NULL.  
   
 > [!NOTE]  
->  Nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e successive, le sottoentità a protezione diretta non possono usare le parentesi nel formato **'[**_nome secondario_**]'**. È necessario usare invece **'** _nome secondario_ **'** .  
+>  Le sottoentità a protezione diretta non possono usare le parentesi quadre nella forma **'[** _nome secondario_ **]'** . È necessario usare invece **'** _nome secondario_ **'** .  
   
  *sub-securable_class*  
  Espressione scalare facoltativa di tipo **nvarchar(60)** che rappresenta la classe della sottoentità a protezione diretta in cui viene testata l'autorizzazione. Il valore predefinito è NULL.  

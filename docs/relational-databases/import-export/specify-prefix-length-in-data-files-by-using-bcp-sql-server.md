@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e6692984d0383a671ed66b9a7b36032e185aea0b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 81ac71e3e236209592087ffb0a11cde47cc6f18e
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003146"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481292"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Specificare la lunghezza del prefisso nei file di dati tramite bcp (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Per fornire il tipo di archiviazione file con la massima compressione durante l'esportazione in blocco dei dati in formato nativo in un file di dati, il comando **bcp** inserisce davanti a ogni campo uno o più caratteri che ne indicano la lunghezza. Tali caratteri sono denominati *caratteri per il prefisso di lunghezza*.  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>Richiesta della lunghezza del prefisso da parte di bcp  
- Se un comando interattivo **bcp** include l'opzione **in** o **out** senza l'opzione relativa al file di formato ( **-f**) o al formato dei dati ( **-n**, **-c**, **-w**o **-N**) viene richiesta la lunghezza del prefisso di ogni campo di dati, come illustrato di seguito:  
+ Se un comando interattivo **bcp** include l'opzione **in** o **out** senza l'opzione relativa al file di formato ( **-f**) o al formato dei dati ( **-n**, **-c**, **-w** o **-N**) viene richiesta la lunghezza del prefisso di ogni campo di dati, come illustrato di seguito:  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
@@ -59,12 +59,12 @@ ms.locfileid: "86003146"
 |**varchar**|2|2|2|2|  
 |**nchar**|2|2|2|2|  
 |**nvarchar**|2|2|2|2|  
-|**text***|4|4|4|4|  
-|**ntext***|4|4|4|4|  
-|**binary**|2|2|2|2|  
+|**text** _|4|4|4|4|  
+|_*ntext**_|4|4|4|4|  
+|_ *binary**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
-|**image***|4|4|4|4|  
-|**datetime**|0|1|0|1|  
+|**image** _|4|4|4|4|  
+|_ *datetime**|0|1|0|1|  
 |**smalldatetime**|0|1|0|1|  
 |**decimal**|1|1|1|1|  
 |**numeric**|1|1|1|1|  
@@ -85,7 +85,7 @@ ms.locfileid: "86003146"
 |**XML**|8|8|8|8|  
 |**sql_variant**|8|8|8|8|  
   
- \*I tipi di dati **ntext**, **text**e **image** verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa **nvarchar(max)** , **varchar(max)** e **varbinary(max)** .  
+ \*I tipi di dati **ntext**, **text** e **image** verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa **nvarchar(max)** , **varchar(max)** e **varbinary(max)** .  
   
 ##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Lunghezze del prefisso per il caricamento bulk  
  Quando si esegue l'importazione bulk di dati, la lunghezza del prefisso corrisponde al valore specificato al momento della creazione del file di dati. Se il file di dati non è stato creato da un comando **bcp** , i caratteri di prefisso di lunghezza probabilmente non esistono. In tal caso, specificare il valore 0 come lunghezza del prefisso.  

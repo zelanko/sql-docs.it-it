@@ -18,14 +18,14 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 399a09695b14fa3b3f55fcae8c3d88ba16324057
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 37e3914abd99f03fa441a2b6284bd43ea570e269
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868960"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97468632"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -200,7 +200,7 @@ GO
   
     1.  Per rimuovere una proprietà del documento, fare clic sull'intestazione di riga a sinistra della proprietà e preme CANC.  
   
-    2.  Per aggiungere una proprietà del documento, fare clic nella riga vuota nella parte inferiore dell'elenco, a destra di **\*** , quindi immette i valori per la nuova proprietà.  
+    2.  Per aggiungere una proprietà del documento, fare clic nella riga vuota nella parte inferiore dell'elenco, a destra di * *\** _ e immettere i valori per la nuova proprietà.  
   
          Per informazioni su questi valori, vedere [Editor dell'elenco delle proprietà di ricerca](../../t-sql/statements/create-search-property-list-transact-sql.md). Per informazioni su come ottenere questi valori per le proprietà definite da Microsoft, vedere [Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Per informazioni sulle proprietà definite da un fornitore di software indipendente (ISV, Independent Software Vendor), vedere la documentazione di tale fornitore.  
   
@@ -209,7 +209,7 @@ GO
 ###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a> Eliminazione di un elenco di proprietà di ricerca  
  Non è possibile eliminare un elenco di proprietà da un database se l'elenco è associato a un indice full-text.  
   
- **Per eliminare un elenco di proprietà di ricerca con Transact-SQL**  
+ _ *Per eliminare un elenco di proprietà di ricerca con Transact-SQL**  
   
  Usare l'istruzione [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md).  
   

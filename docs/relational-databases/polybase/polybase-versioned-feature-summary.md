@@ -10,13 +10,13 @@ ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce4c3624600741d900d51dc832ab4a685c28107a
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 2afdc0e62fdd725584c464bda516fc6284d20f01
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631747"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97489991"
 ---
 # <a name="polybase-features-and-limitations"></a>Funzionalità e limitazioni di PolyBase
 
@@ -28,18 +28,21 @@ Questo articolo rappresenta un riepilogo delle funzionalità di PolyBase disponi
 
 Questa tabella elenca le funzionalità principali per PolyBase e i prodotti in cui sono disponibili.  
 
-|**Funzionalità** |**SQL Server 2016** |**Database SQL di Azure** |**Azure Synapse Analytics** |**Parallel Data Warehouse** |
+|**Funzionalità** |**SQL Server** (a partire dalla versione 2016) |**Database SQL di Azure** |**Azure Synapse Analytics** |**Parallel Data Warehouse** |
 |---------|---------|---------|---------|---------|
 |Eseguire query sui dati di Hadoop con [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|No|No|Sì|
 |Importare dati da Hadoop|Sì|No|No|Sì|
 |Esportare dati in Hadoop  |Sì|No|No| Sì|
 |Eseguire query, importare da Azure HDInsight |No|No|No|No
 |Eseguire il push down dei calcoli delle query in Hadoop|Sì|No|No|Sì|  
-|Importare dati dall'archivio BLOB di Azure|Sì|No|Sì|Sì|
+|Importare dati dall'archivio BLOB di Azure|Sì|Sì<sup>*</sup>|Sì|Sì|
 |Esportare dati nell'archivio BLOB di Azure|Sì|No|Sì|Sì|  
 |Importare dati da Azure Data Lake Store|No|No|Sì|No|
 |Esportare dati in Azure Data Lake Store|No|No|Sì|No|
 |Eseguire query PolyBase da strumenti BI di Microsoft|Sì|No|Sì|Sì|
+
+<sup>*</sup> Introdotta in SQL Server 2017. Vedere [Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure](../import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>Calcolo della distribuzione dinamica supportata da operatori T-SQL
 
@@ -71,7 +74,7 @@ PolyBase include le limitazioni seguenti:
 - Se si usano tabelle Hive con transactional=true, PolyBase non può accedere ai dati nella directory della tabella Hive.
 
 <!--SQL Server 2016-->
-::: moniker range="= sql-server-2016 || =sqlallproducts-allversions"
+::: moniker range="= sql-server-2016 "
 
 - [PolyBase non viene installato quando si aggiunge un nodo a un cluster di failover di SQL Server 2016](https://support.microsoft.com/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster).
 

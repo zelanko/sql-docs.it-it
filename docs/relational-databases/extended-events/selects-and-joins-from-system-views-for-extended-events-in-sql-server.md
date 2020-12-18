@@ -11,13 +11,13 @@ ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 897ebac1fa9d73444daf97a3642edb573a4f1c69
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2dc811a3e3217c3aa6bf2d9a006cfd1ff0c7796b
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868791"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97481472"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Istruzioni SELECT e JOIN da viste di sistema per eventi estesi in SQL Server
 
@@ -114,7 +114,7 @@ La documentazione di riferimento sulle viste del catalogo per gli eventi estesi 
 ### <a name="b1-ssms-ui-perspective"></a>B.1 Punto di vista dell'interfaccia utente di SSMS
 
 
-In **Esplora oggetti**di SSMS è possibile avviare la finestra di dialogo **Nuova sessione** . A tale scopo espandere **Gestione** > **Eventi estesi**e quindi fare clic con il pulsante destro del mouse su **Sessioni** > **Nuova sessione**.
+In **Esplora oggetti** di SSMS è possibile avviare la finestra di dialogo **Nuova sessione** . A tale scopo espandere **Gestione** > **Eventi estesi** e quindi fare clic con il pulsante destro del mouse su **Sessioni** > **Nuova sessione**.
 
 Nella finestra di dialogo **Nuova sessione** , nella prima sezione, **Generale**, è selezionata l'opzione **Avviare la sessione eventi all'avvio del server**.
 
@@ -675,7 +675,7 @@ Di seguito è riportato un campione delle 153 righe effettive di output dell'ist
 
 
 ```
-/***  5 sampled rows from the actual 153 rows returned.
+/**_  5 sampled rows from the actual 153 rows returned.
     NOTE:  'resource_type' under 'Column'.
 
 Package     Object          Object-Type   O--C   Column          Column-Type-Name     Column-Type   Column-Value   C--M   Map-Value        Map-Key
@@ -689,7 +689,7 @@ sqlserver   lock_deadlock   event         o--c   resource_type   lock_resource_t
 Therefore, on your CREATE EVENT SESSION statement, in its ADD EVENT WHERE clause,
 you could put:
     WHERE( ... resource_type = 6 ...)  -- Meaning:  6 = PAGE.
-***/
+_*_/
 ```
 
 
@@ -700,7 +700,7 @@ you could put:
 
 L'istruzione SELECT seguente restituisce ogni parametro per la destinazione. Ogni parametro è contrassegnato come obbligatorio o meno. I valori assegnati ai parametri influiscono sul comportamento della destinazione.
 
-- Si noti l'elemento della clausola WHERE: *object_type = 'customizable'* .
+- Si noti l'elemento della clausola WHERE: _object_type = 'customizable'*.
 - È anche necessario modificare il valore della clausola WHERE in *o.name =* .
 
 
@@ -754,7 +754,7 @@ package0   event_file   lazy_create_blob     boolean              Not_mandatory 
 package0   event_file   max_file_size        uint64               Not_mandatory   Maximum file size in MB
 package0   event_file   max_rollover_files   uint32               Not_mandatory   Maximum number of files to retain
 package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory   Not used
-***/
+**_/
 ```
 
 
@@ -766,7 +766,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 Questa istruzione SELECT di DMV restituisce righe di dati provenienti dalla destinazione della sessione evento attiva. Viene eseguito il cast dei dati in XML. In questo modo è possibile fare clic sulla cella restituita per visualizzarla in modo semplice in SSMS.
 
 - Se la sessione evento viene arrestata, l'istruzione SELECT restituirà zero righe.
-- È necessario modificare il valore della clausola WHERE in *s.name =* .
+- È necessario modificare il valore della clausola WHERE per _s.name =*.
 
 
 ```sql

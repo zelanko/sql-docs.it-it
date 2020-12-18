@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 613546be790bac993f1242c6bfba470e95eb8685
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 6721d36159003077cf771fbff6a0e7a50a182ed2
+ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197043"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97490011"
 ---
 # <a name="install-integration-services-ssis"></a>Installare Integration Services (SSIS)
 
@@ -115,7 +115,7 @@ Per un'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnov
 
 - **SQL Server Data Tools (SSDT)** . Il programma di installazione autonomo di SSDT per Visual Studio 2019 è stato sospeso. Per Visual Studio 2019, è ora possibile ottenere l'estensione di Progettazione SSIS da [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview).
 
-- **Integration Services Feature Pack per Azure**. Per scaricare e installare il Feature Pack, vedere [Microsoft SQL Server 2017 Integration Services Feature Pack per Azure](../azure-feature-pack-for-integration-services-ssis.md?view=sql-server-2017). L'installazione del Feature Pack consente la connessione dei pacchetti ai servizi di archiviazione e analisi nel cloud di Azure, inclusi i servizi seguenti:
+- **Integration Services Feature Pack per Azure**. Per scaricare e installare il Feature Pack, vedere [Microsoft SQL Server Integration Services Feature Pack per Azure](../azure-feature-pack-for-integration-services-ssis.md). L'installazione del Feature Pack consente la connessione dei pacchetti ai servizi di archiviazione e analisi nel cloud di Azure, inclusi i servizi seguenti:
 
   - Archiviazione BLOB di Azure.
 

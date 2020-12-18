@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 00a34797c1253418230f5c40a57c2ce5e2948949
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: d92e83fd3bba6c5ee6ae6af3743de98000e05575
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866663"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97408165"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>Preparare i dati per l'importazione o l'esportazione bulk
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "91866663"
   
 -   Per importare dati da file di dati con campi a lunghezza o a larghezza fissa, usare un file di formato. Per altre informazioni, vedere [File in formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
--   I file con valori delimitati da virgole (CSV) non sono supportati nelle operazioni di importazione bulk di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In alcuni casi, tuttavia, è possibile usare un file CSV come file di dati per un'importazione bulk di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si noti che il carattere di terminazione del campo di un file CSV non può essere una virgola. Per poter essere usato come file di dati per l'importazione bulk, un file CSV deve essere conforme alle restrizioni seguenti:  
+-  A partire da SQL Server 2017, è possibile usare un file CSV come file di dati per un'importazione bulk di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si noti che il carattere di terminazione del campo di un file CSV non può essere una virgola. Per poter essere usato come file di dati per l'importazione bulk, un file CSV deve essere conforme alle restrizioni seguenti:  
   
     -   I campi dati non possono mai contenere il carattere di terminazione del campo.  
   

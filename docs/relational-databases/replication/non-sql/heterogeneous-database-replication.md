@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 199177f4df8c97bfaf651b1d4ad42d5d864b757d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5ea494a48932fac171eb4d9e8bc3e032001e55b
+ms.sourcegitcommit: 821e7039a342bf76306d66c61db247dc2caabc46
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465084"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "96999236"
 ---
 # <a name="heterogeneous-database-replication"></a>replica di database eterogenei  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88465084"
   |Scenario|2016 o versioni precedenti |2017 o versioni successive |
   |-------|-------|--------|
   |Replica da Oracle |Supporta solo Oracle 10g o versioni precedenti |Supporta solo Oracle 10g o versioni precedenti |
-  |Replica verso Oracle |Fino a Oracle 12c |Non supportate |
+  |Replica verso Oracle |Tutte le versioni precedenti a Oracle 12c |Non supportate |
 
 
  La replica eterogenea a Sottoscrittori non SQL Server è deprecata. La pubblicazione Oracle è deprecata. Per spostare dati, creare soluzioni utilizzando Change Data Capture e [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  

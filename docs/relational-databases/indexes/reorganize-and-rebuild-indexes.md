@@ -30,13 +30,13 @@ helpviewer_keywords:
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba0eb3c9907acfe02939c49ea253869adbfc992b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: eca1dbef6ff7d519200e46cff7879d7cb0a9b128
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867342"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97478252"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Risolvere la frammentazione degli indici tramite riorganizzazione o ricompilazione di questi
 
@@ -148,7 +148,7 @@ object_id   TableName    index_id    IndexName                                  
 
 Per altre informazioni, vedere [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
 
-### <a name="to-check-the-fragmentation-of-a-columnstore-index-using-tsql"></a>Per controllare la frammentazione di un indice columnstore usando [!INCLUDE[tsql](../../includes/tsql-md.md)]
+### <a name="to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql"></a>Per controllare la frammentazione di un indice columnstore usando Transact-SQL
 
 L'esempio seguente consente di trovare la percentuale di frammentazione media di tutti gli indici nella tabella `dbo.FactResellerSalesXL_CCI` del database `AdventureWorksDW2016`.
 
@@ -180,7 +180,7 @@ object_id   TableName                   index_id    IndexName                   
 ### <a name="check-index-fragmentation-using-sql-server-management-studio"></a>Controllare la frammentazione di un indice usando SQL Server Management Studio
 
 > [!NOTE]
-> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] non può essere usato per calcolare la frammentazione degli indici columnstore in SQL Server e non può essere usato per calcolare la frammentazione di nessun indice nel database SQL di Azure. Usare l'[esempio](#to-check-the-fragmentation-of-a-columnstore-index-using-) di [!INCLUDE[tsql](../../includes/tsql-md.md)] precedente per questi scenari.
+> [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] non può essere usato per calcolare la frammentazione degli indici columnstore in SQL Server e non può essere usato per calcolare la frammentazione di nessun indice nel database SQL di Azure. Usare l'[esempio](#to-check-the-fragmentation-of-a-columnstore-index-using-transact-sql) di [!INCLUDE[tsql](../../includes/tsql-md.md)] riportato in precedenza.
 
 1. In Esplora oggetti espandere il database contenente la tabella in cui si desidera controllare la frammentazione di un indice.
 2. Espandere la cartella **Tabelle** .

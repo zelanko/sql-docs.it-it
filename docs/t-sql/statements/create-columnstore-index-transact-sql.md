@@ -29,13 +29,13 @@ helpviewer_keywords:
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: markingmyname
 ms.author: maghan
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1421ba7d2f03ecdf6f8a687e4e6d662702fe464a
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f47f17c4391d548ff2e087afb12080a84660b832
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300441"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97464172"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -136,7 +136,7 @@ Specifica il nome del nuovo indice.
   
 Se la tabella ha già un indice columnstore cluster, è possibile specificare lo stesso nome dell'indice esistente oppure usare l'opzione DROP_EXISTING per specificare un nuovo nome.  
   
-ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 
 Specifica il nome composto da una, due o tre parti della tabella da archiviare come indice columnstore cluster. Se la tabella è un heap o un indice cluster, viene convertita da rowstore a columnstore. Se la tabella è già un columnstore, questa istruzione consente di ricompilare l'indice columnstore cluster. Per eseguire la conversione in un indice columnstore cluster ordinato, l'indice esistente deve essere un indice columnstore cluster.
   
@@ -219,11 +219,11 @@ Creare un indice columnstore non cluster in memoria in una tabella rowstore arch
 *index_name*  
    Specifica il nome dell'indice. *index_name* deve essere univoco all'interno della tabella, ma non è necessario che lo sia all'interno del database. Devono essere anche conformi alle regole degli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
- **(** _column_  [ **,** ... *n* ] **)**  
+ **(** _column_  [ **,** ...*n* ] **)**  
     Specifica le colonne da archiviare. Un indice columnstore non cluster è limitato a 1024 colonne.  
    Ogni colonna deve essere di un tipo di dati supportato per gli indici columnstore. Vedere [Limitazioni e restrizioni](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) per un elenco di tipi di dati supportati.  
 
-ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Specifica il nome composto da una, due o tre parti della tabella che contiene l'indice.  
 
 #### <a name="with-options"></a>Opzioni WITH
@@ -380,8 +380,8 @@ Se la tabella sottostante ha una colonna con un tipo di dati non supportato per 
 -   Non può includere più di 1024 colonne.
 -   Non può essere creato come indice basato su vincoli. Una tabella con un indice columnstore può includere vincoli univoci, vincoli di chiave primaria o vincoli di chiave esterna. I vincoli vengono applicati sempre con un indice rowstore. I vincoli non possono essere applicati con un indice columnstore (cluster o non cluster).
 -   Non può includere una colonna di tipo sparse.  
--   Non può essere modificato usando l'istruzione **ALTER INDEX** . Per modificare l'indice non cluster, è invece necessario eliminare e ricreare l'indice columnstore. È possibile usare **ALTER INDEX** per disabilitare e ricompilare un indice columnstore.  
--   Non può essere creato usando la parola chiave **INCLUDE** .  
+-   Non può essere modificato usando l'istruzione **ALTER INDEX**. Per modificare l'indice non cluster, è invece necessario eliminare e ricreare l'indice columnstore. È possibile usare **ALTER INDEX** per disabilitare e ricompilare un indice columnstore.  
+-   Non può essere creato usando la parola chiave **INCLUDE**.  
 -   Impossibile includere le parole chiave **ASC** o **DESC** per l'ordinamento dell'indice. Gli indici columnstore vengono ordinati in base agli algoritmi di compressione. L'ordinamento comporta molti dei vantaggi a livello di prestazioni.  
 -   Impossibile includere colonne LOB (Large Object) di tipo nvarchar(max), varchar(max) e varbinary(max) in indici columnstore non cluster. Solo gli indici columnstore cluster supportano i tipi LOB, a partire dalla versione [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e nel database SQL di Azure configurato ai livelli Premium e Standard (S3 e successive) e a tutti i livelli di offerte VCore. Si noti che le versioni precedenti non supportano i tipi LOB negli indici columnstore cluster e non cluster.
 
@@ -402,7 +402,7 @@ Non è possibile usare cursori o trigger in una tabella con un indice columnstor
 Le limitazioni seguenti si applicano solo a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. In questa versione sono stati introdotti gli indici columnstore cluster aggiornabili. Gli indici columnstore non cluster erano ancora di sola lettura.  
 
 -   Change Tracking. Non è possibile usare il rilevamento delle modifiche con gli indici columnstore.  
--   Change Data Capture. Non è possibile usare Change Data Capture per gli indici columnstore non cluster (NCCI) poiché sono di sola lettura. La soluzione funziona per gli indici columnstore cluster (CCI).  
+-   Change Data Capture. Change Data Capture non può essere abilitato per le tabelle con un indice columnstore cluster. A partire da SQL Server 2016, può essere abilitato per le tabelle con un indice columnstore non cluster.  
 -   Secondario leggibile. Non è possibile accedere a un indice columnstore cluster (CCI) da una replica secondaria leggibile di un gruppo di disponibilità Always On leggibile.  È possibile accedere a un indice columnstore non cluster (NCCI) da una replica secondaria leggibile.  
 -   MARS (Multiple Active Result Sets). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] usa MARS per le connessioni di sola lettura alle tabelle con un indice columnstore. Tuttavia, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] non supporta MARS per le operazioni simultanee di Data Manipulation Language (DML) su una tabella con indice columnstore. Quando questo si verifica,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] termina le connessioni e interrompe le transazioni.  
 -  Non è possibile creare gli indici columnstore non cluster in una vista o vista indicizzata.

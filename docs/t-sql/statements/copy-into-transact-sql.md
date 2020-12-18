@@ -17,13 +17,13 @@ dev_langs:
 - TSQL
 author: kevinvngo
 ms.author: kevin
-monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: a6cb58245e4128b58e237d61e2a278ea039afe9c
-ms.sourcegitcommit: dc858552f0c9314b3411e630bbd9bbce65f85913
+monikerRange: =azure-sqldw-latest
+ms.openlocfilehash: 9b480c90337017c77a0d05afe5861e85c89637d3
+ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96788000"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97460784"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -432,6 +432,18 @@ Non è necessario dividere i file Parquet e ORC perché il comando COPY divider�
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Sono previste limitazioni per il numero o le dimensioni dei file?
 Non sono previste limitazioni per il numero o le dimensioni dei file. Per assicurare prestazioni ottimali, tuttavia, è consigliabile usare file di almeno 4 MB.
+
+### <a name="are-there-any-known-issues-with-the-copy-statement"></a>Esistono problemi noti con l'istruzione COPY?
+Se si dispone di un'area di lavoro Synapse creata prima del 12/07/2020, è possibile che venga visualizzato un messaggio di errore simile quando si esegue l'autenticazione tramite identità gestita:
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: L'identità del servizio gestita non è stata abilitata in questo server. Abilitare l'identità del servizio gestita e riprovare.*
+
+Seguire questa procedura per risolvere il problema registrando di nuovo l'identità gestita dell'area di lavoro:
+
+1. Passare all'area di lavoro di Synapse nel portale di Azure
+2. Passare al riquadro Identità gestite 
+3. Se l'opzione "Consenti pipeline" è già selezionata, è necessario deselezionare questa impostazione e salvare
+4. Selezionare l'opzione "Consenti pipeline" e salvare
 
 
 ## <a name="see-also"></a>Vedere anche  
